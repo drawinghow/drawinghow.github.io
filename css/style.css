@@ -1,26 +1,31 @@
 html,body{width:100%;}
 body,div,ul,li{margin: 0; padding: 0;}   
-body {overflow-y: hidden;}
+/*body {overflow-y: hidden;}*/
 img {vertical-align:top;}
 ul{list-style: none;}
 a {text-decoration: none;}
 
 .wrap {min-width: 320px;}
-.logo {width: 110px; margin: 5px auto 0;}
+.logo {width: 110px; margin: 5px auto;}
 .logo img{width: 100%;}
-.menu-wrap {}
-.menu {text-align: center;  width: 315px ;margin: 0 auto;}
-.menu:after {display: block;clear: both;content:"";}
-.menu li {float: left;}
-.menu li a {display: block;padding:10px 0 5px; margin:0 10px 14px; color: #888;font-size:13px;font-weight: bold; }
-.menu li.active a {color: #D00000; border-bottom: 1px solid #D00000;}
+.margin {position: relative;} 
+.margin.m02 {}
+#menu {position: absolute; bottom:0; z-index: 100;text-align: center;  width:100% ;margin: 0 auto;}
+#menu:after {display: block;clear: both;content:"";}
+#menu a {display: block;float: left;width: 25%;border-top: 1px solid #ddd; padding:10px 0 12px;color: #fff;font-size:13px;background-color: rgba(0,0,0,0.5);}
+#menu a.active {color: #EC1E26; border-top: 1px solid #EC1E26;font-weight: bold;}
+.control { }
+.control a {position: absolute;top:50%; margin-top:-40px; z-index:30;color: #fff;}
+.control a.prev {left: 10px; }
+.control a.next {right: 10px; }
+.control a img {width: 50px;}
 
 #slider {position: relative;}
 .swipe { overflow: hidden; visibility: hidden;position: relative;}
 .swipe-wrap {overflow: hidden;position: relative;}
 .swipe-wrap .img-wrap {float:left; width:100%; position: relative;}
 .swipe img {width:100%;}
-.swipe .text {position: absolute;left:10%;top: 20%;font-size:20px; color: #fff;z-index:20; font-family:'arial';text-shadow: 2px 2px 4px #000000; }
+.swipe .text {position: absolute;left:13%;top: 15%;opacity:0;font-size:16px; color: #fff;z-index:20; font-family:'arial';text-shadow: 2px 2px 8px #000000; }
 
 .s2 {width:100%; margin-top:20px;}
 .s2 img{width:100%;}
@@ -32,10 +37,12 @@ a {text-decoration: none;}
 .logo {width: 160px; margin: 5px auto 0;}
 .section {float: left; width: 50%;}
 .section .margin {padding:5px;}
-.s1 .tablet {display: block; padding-top: 10px;}
+#menu {margin-bottom:5px;}
+#menu .p {padding: 0 10px 0 0 ;}
+.s1 .tablet {display: block;}
 .s1 .tablet img {width: 100%;}
 .s2 { margin:0;}
-
+.swipe .text {font-size: 20px;}
 
 }
 @media screen and (min-width:980px){
@@ -44,9 +51,11 @@ a {text-decoration: none;}
 .logo {width: 160px; margin: 5px auto 0;}
 .section {float: left; width: 50%;}
 .section .margin {padding:5px;}
-.s1 .tablet {display: block; padding-top: 10px;}
+#menu {margin-bottom:5px;}
+#menu .p {padding: 0 10px 0 0 ;}
+.s1 .tablet {display: block; }
 .s1 .tablet img {width: 100%;}
 .s2 { margin:0;}
-
+.swipe .text {font-size: 20px;}
 
 }
