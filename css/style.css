@@ -22,7 +22,7 @@ a {text-decoration: none;}
 .swipe img {width:100%;}
 .swipe .text {position: absolute;left:10%;top: 20%;font-size:20px; color: #fff;z-index:20; font-family:'arial';text-shadow: 2px 2px 4px #000000; }
 
-.s2 {width:100%; margin-top: 20px;}
+.s2 {width:100%; margin-top:20px;}
 .s2 img{width:100%;}
 .tablet {display: none;}
 
