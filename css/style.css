@@ -1,0 +1,38 @@
+html,body{width:100%;}
+body,div,ul,li{margin: 0; padding: 0;}   
+body {overflow-y: hidden;}
+img {vertical-align:top;}
+ul{list-style: none;}
+a {text-decoration: none;}
+
+.wrap {min-width: 320px;}
+.logo {width: 110px; margin: 5px auto 0;}
+.logo img{width: 100%;}
+.menu-wrap {}
+.menu {text-align: center;  width: 315px ;margin: 0 auto;}
+.menu:after {display: block;clear: both;content:"";}
+.menu li {float: left;}
+.menu li a {display: block;padding:10px 0 5px; margin:0 10px 14px; color: #888;font-size:13px;font-weight: bold; }
+.menu li.active a {color: #D00000; border-bottom: 1px solid #D00000;}
+
+.swipe { overflow: hidden; visibility: hidden;position: relative;}
+.swipe-wrap {overflow: hidden;position: relative;}
+.swipe-wrap .img-wrap {float:left; width:100%; position: relative;}
+.swipe img {width:100%;}
+
+.s2 {width:100%; margin-top: 20px;}
+.s2 img{width:100%;}
+.tablet {display: none;}
+
+@media screen and (min-width:767px){
+.wrap {padding: 5px;}
+.wrap:after{display: block;clear: both;content:"";}
+.logo {width: 160px; margin: 5px auto 0;}
+.section {float: left; width: 50%;}
+.section .margin {padding:5px;}
+.s1 .tablet {display: block; padding-top: 10px;}
+.s1 .tablet img {width: 100%;}
+.s2 { margin:0;}
+
+
+}

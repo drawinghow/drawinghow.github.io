@@ -1,11 +1,72 @@
+<!-- https://github.com/thebird/Swipe/blob/master/swipe.js -->
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>Joo Hong-kyung</title>
+	<meta name="viewport" content="width=device-width"/>
+	<title></title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="src/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="src/swipe.js"></script>
 </head>
 <body>
-	<h1>Joo Hong-kyung</h1>
-	<img src="images/c.jpg" alt="" />
+	<div class="wrap">
+		<div class="logo"><img src="images/logo.png" alt="logo"></div>
+		<div id="menu-wrap">
+		    <ul class="menu">
+			    <li class="active"><a href="#">캡틴아메리카</a></li>
+			    <li><a href="#">아이언맨</a></li>
+			    <li><a href="#">앤트맨</a></li>
+			    <li><a href="#">스파이더맨</a></li>
+		    </ul>
+		</div>
+		<div class="section s1">
+			<div class="margin">
+				<div id='slider' class='swipe'>
+					<div class='swipe-wrap'>
+						<div class="img-wrap"><img src="images/contents_captain-america.jpg" alt="" /></div>
+						<div class="img-wrap"><img src="images/contents_ironman.jpg" alt="" /></div>
+						<div class="img-wrap"><img src="images/contents_antman.jpg" alt="" /></div>
+						<div class="img-wrap"><img src="images/contents_spiderman.jpg" alt="" /></div>
+					</div>
+				</div>
+				<div class="tablet"><img src="images/CivilWar.jpg" alt=""></div>
+			</div>
+		</div>
+		<div class="section s2">
+			<div class="margin">
+				<img src="images/CivilWar_h.jpg"  alt="civil-war">
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+	var elem = document.getElementById('swipe');
+	window.mySwipe = new Swipe(document.getElementById('slider'), {
+	  startSlide: 0,
+	  speed: 400,
+	  auto: 3000,
+	  continuous: true,
+	  disableScroll: false,
+	  stopPropagation: false,
+	  callback: function(index, elem) {
+	  	$('#menu-wrap li').eq(index).addClass('active').siblings().removeClass('active');
+	  },
+	  transitionEnd: function(index, elem) {}
+	});
+
+	/*
+	$(function(){
+		currentSlides
+		$('#slider').Swipe().data('Swipe');
+	})*/
+
+	$('#menu-wrap li').on ('click', function () {
+    	window.mySwipe.slide($(this).index(), 200);
+    	$(this).addClass('active').siblings().removeClass('active')
+	});
+
+	</script>
 </body>
 </html>
