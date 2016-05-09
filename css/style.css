@@ -15,10 +15,12 @@ a {text-decoration: none;}
 .menu li a {display: block;padding:10px 0 5px; margin:0 10px 14px; color: #888;font-size:13px;font-weight: bold; }
 .menu li.active a {color: #D00000; border-bottom: 1px solid #D00000;}
 
+#slider {position: relative;}
 .swipe { overflow: hidden; visibility: hidden;position: relative;}
 .swipe-wrap {overflow: hidden;position: relative;}
 .swipe-wrap .img-wrap {float:left; width:100%; position: relative;}
 .swipe img {width:100%;}
+.swipe .text {position: absolute;left:10%;top: 20%;font-size:20px; color: #fff;z-index:20; font-family:'arial';text-shadow: 2px 2px 4px #000000; }
 
 .s2 {width:100%; margin-top: 20px;}
 .s2 img{width:100%;}
