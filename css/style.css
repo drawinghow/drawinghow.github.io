@@ -24,8 +24,20 @@ a {text-decoration: none;}
 .s2 img{width:100%;}
 .tablet {display: none;}
 
-@media screen and (min-width:767px){
+@media screen and (min-width:767px) and (max-width:979px ){
 .wrap {padding: 5px;}
+.wrap:after{display: block;clear: both;content:"";}
+.logo {width: 160px; margin: 5px auto 0;}
+.section {float: left; width: 50%;}
+.section .margin {padding:5px;}
+.s1 .tablet {display: block; padding-top: 10px;}
+.s1 .tablet img {width: 100%;}
+.s2 { margin:0;}
+
+
+}
+@media screen and (min-width:980px){
+.wrap {padding: 5px; width: 970px; margin:0 auto;}
 .wrap:after{display: block;clear: both;content:"";}
 .logo {width: 160px; margin: 5px auto 0;}
 .section {float: left; width: 50%;}
