@@ -1,9 +1,0 @@
-html,body{width:100%;}
-body,div{margin: 0; padding: 0;}   
-
-img {vertical-align:top;}
-.swipe { overflow: hidden; visibility: hidden;position: relative;}
-.swipe-wrap {overflow: hidden;position: relative;}
-.swipe-wrap .img-wrap {float:left; width:100%; position: relative;}
-.b {width:100%;}
-.b img{width:100%;}
