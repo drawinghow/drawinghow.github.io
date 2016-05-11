@@ -1,102 +1,11 @@
-<!-- https://github.com/thebird/Swipe/blob/master/swipe.js -->
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width"/>
-	<title>CIVIL WAR</title>
-	<link rel="stylesheet" href="css/style.css" />
-	<script type="text/javascript" src="src/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="src/swipe.js"></script>
+	<title>Document</title>
 </head>
 <body>
-	<div class="wrap">
-		<div class="logo"><img src="images/logo.png" alt="logo"></div>
-		<div class="section s1">
-			<div class="margin m01">
-				<div id="menu">
-					<div class="p">
-						<a href="#"  class="active">캡틴아메리카</a>
-						<a href="#">아이언맨</a>
-						<a href="#">앤트맨</a>
-						<a href="#">스파이더맨</a>
-					</div>
-				</div>
-				<div class="control">
-					<a href="#" class="prev"><img src="images/sl_prev.png" alt="이전"></a>
-					<a href="#" class="next"><img src="images/sl_next.png" alt="다음"></a>
-				</div>
-				<div id='slider' class='swipe'>
-					<div class='swipe-wrap'>
-						<div class="img-wrap"><img src="images/contents_captain-america.jpg" alt="captain-america" /><span class="text">CAPTAIN<br/>AMERICA</span></div>
-						<div class="img-wrap"><img src="images/contents_ironman.jpg" alt="ironman" /><span class="text">IRONMAN</span></div>
-						<div class="img-wrap"><img src="images/contents_antman.jpg" alt="antman" /><span class="text">ANTMAN</span></div>
-						<div class="img-wrap"><img src="images/contents_spiderman.jpg" alt="spiderman" /><span class="text">SPIDER<br />MAN</span></div>
-					</div>
-				</div>
-				
-			</div>
-			<div class="margin m02">
-				<div class="tablet"><img src="images/CivilWar.jpg" alt=""></div>
-			</div>
-		</div>
-		<div class="section s2">
-			<div class="margin m03">
-				<img src="images/CivilWar_h.jpg"  alt="civil-war">
-			</div>
-		</div>
-	</div>
-
-
-	<script>
-	/*
-	var elem = document.getElementById('slider');
-	window.mySwipe = new Swipe(elem, {
-	  startSlide: 0,
-	  speed: 400,
-	  auto: 3000,
-	  continuous: true,
-	  disableScroll: false,
-	  stopPropagation: false,
-	  callback: function(index, elem) {
-	  	$('#menu-wrap li').eq(index).addClass('active').siblings().removeClass('active');
-	  },
-	  transitionEnd: function(index, elem) {}
-	});
-	*/
-	$(function(){
-		$('#slider .text').eq(0).animate({left:'10%',opacity:10	});
-		window.mySwipe = $('#slider').Swipe({
-			startSlide: 0,
-			speed: 400,
-			auto: 3000,
-			continuous: true,
-			callback: function(index, elem) {
-				$('#menu a').eq(index).addClass('active').siblings().removeClass('active');
-				$('#slider .text').eq(index).css({left:'15%',opacity:0});
-			},
-			transitionEnd: function(index, elem) {
-				$('#slider .text').eq(index).animate({left:'10%',opacity:10	})
-			}
-		}).data('Swipe');
-
-		$('#menu a').on('click', function(){
-    		//window.mySwipe.slide($(this).index(), 200);
-			idx=$(this).index();
-			window.mySwipe.slide(idx,200);
-    		$(this).addClass('active').siblings().removeClass('active')
-		});
-		
-		$('.control a').eq(0).on('click',function(){
-			mySwipe.prev();
-		})
-		$('.control a').eq(1).on('click',function(){
-			mySwipe.next();
-		})
-		
-	})
+	<h1>HONG-KYUNG's GITHUB</h1>
 	
-
-	</script>
 </body>
 </html>
