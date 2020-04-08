@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!------------------------------------------------------------
+    Copyright (c) JHK / 이 페이지의 모든 저작권은 JHK 에게 있습니다.
+  -------------------------------------------------------------->
+  <title>코딩 가이드</title>
+
+  <meta charset="euc-kr" >
+  <meta name="robots" content="noindex,nofollow" >
+  <meta name="author" content="JHK" >
+  <meta name="copyright" content="http://drawinghow.github.io/" >
+  <meta http-equiv="imagetoolbar" content="no" >
+  <meta http-equiv="cache-control" content="no-chche" >
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
+
+  <!--<link rel="shortcut icon" href="guide.ico" >-->
+  <link rel="stylesheet" href="../css/font.css" >
+  <link rel="stylesheet" href="../css/ui.common.css" >
+  <link rel="stylesheet" href="guide.css" >
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script type="text/javascript" src="guide.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <style>
+    html, body {overflow-y: hidden;}
+  </style>
+
+  <div id="guideMenu" class="opened">
+    <ul>
+      <li><a href="guide.page.html">페이지</a></li>
+      <li><a href="#">스타일</a>
+        <ul>
+          <li><a href="guide.text.html">텍스트</a></li>
+          <li><a href="guide.title.html">타이틀</a></li>
+          <li><a href="guide.tab.html">탭</a></li>
+          <li><a href="guide.table.html">테이블</a></li>
+          <li><a href="guide.list.html">리스트</a></li>
+          <li><a href="guide.box.html">박스</a></li>
+          <li><a href="guide.bar.html">바</a></li>
+          <li><a href="guide.form.html">버튼/폼</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div>
+      <iframe id="frame0" name="frame0" src="about:blank" frameborder="0"></iframe>
+    </div>
+    <address>
+      for OOO<br />
+      <span>Coding Guide</span><br />
+      UI version 1.0<br />
+      by <a href="">JHK</a><br />
+      2020-05-01<br />
+    </address>
+  </div>
+
+
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+
+          $('pre.box1').each(function(i, block) {
+              hljs.highlightBlock(block);
+              hljs.lineNumbersBlock(block);
+          });
+
+          $('.viewarea').each(function(){
+              var source = $(this).html();
+              source = source.replaceAll("<","&lt;");
+              $(this).next('.source').find('pre').html(source);
+              $('pre.box2').each(function(i, block) {
+                  hljs.highlightBlock(block);
+                  hljs.lineNumbersBlock(block);
+              });
+          });
+
+
+      });
+  </script>
+  <script type="text/javascript">
+      //<![CDATA[
+      var frameCur  = 0;
+      var frameHref = new Array();
+      var frameTab  = $('#guideMenu > div > div > ul');
+      var tabHeight = $('#guideMenu > div > div').outerHeight();
+
+      /*
+      // 프레임 새로고침( .js로 옮기지 말것 )
+      function frameReload(){
+          var frame1 = document.getElementById('frame'+ frameCur );
+          var frame2 = frame1.contentWindow;
+          var scrTop = $(frame2).scrollTop();
+          frame2.location.reload();
+          frame1.onload = function(){ $(frame2).scrollTop( scrTop ); }
+      }*/
+
+      // 프레임탭 추가
+      function createTab( oThis ){
+          var iframeTotal = $('#guideMenu > div > iframe').length;
+          var iframe = document.createElement('iframe');
+
+          $(iframe)
+              .attr({
+                  'id':'frame'+ iframeTotal,
+                  'name':'frame'+ iframeTotal,
+                  'src':'about:blank',
+                  'frameborder':'0'
+              })
+              .height( $(this).height() - tabHeight )
+              .appendTo( $('#guideMenu > div') );
+
+          $(oThis).parent().before( "<li><a href='#'>빈 탭</a></li>" ); frameTab_init();
+          $(oThis).parent().prev().click();
+      }
+
+
+
+      var oItems = $('#guideMenu > ul a');
+      var oLis   = $('#guideMenu > ul li');
+      var isMobile = $(window).width() > 480 ? false: true;
+
+      $(window).resize( function(){
+          $('#guideMenu > div > iframe').height( $(window).height() - tabHeight );
+      }).trigger("resize");
+
+      $('#guideMenu > ul a')
+          .addClass( function(){
+                  return $(this).parent().find('ul').length ? 'arrow': null;
+              }
+          );
+
+
+      $('#guideMenu > ul > li')
+          .attr('data-min-height', function(){ return $(this).height(); } )
+          .addClass('on').attr('data-max-height', function(){ return $(this).height(); } )
+
+      $('#guideMenu > ul > li > ul > li')
+          .attr('data-min-height', function(){ return $(this).height(); } )
+          .addClass('on').attr('data-max-height', function(){ return $(this).height(); } )
+
+      $('#guideMenu > ul li')
+          .removeClass('on');
+
+      for( var i = 0; i < oItems.length; i++ ){
+          var obj = oItems[i];
+          obj.onclick = function(){
+              var buff  = new Array;
+              var tmp   = this.parentNode;
+              var cur   = $(this).parent(); // <li>
+              var items = $('#guideMenu > ul li');
+              this.target = 'frame'+ frameCur;
+
+              $(this).parent().addClass('fakeOn')
+                  .parent().parent().addClass( function(){ return $(this).is('li') ? 'fakeOn': null; } ) // 2 depth
+                  .parent().parent().addClass( function(){ return $(this).is('li') ? 'fakeOn': null; } ); // 1 depth
+
+              for( var j = 0; j < items.length; j++ ){
+                  var obj1 = $(items[j]);
+                  if( obj1.hasClass('on') && obj1.hasClass('fakeOn') == false ){
+                      var tmp1 = obj1.attr('data-min-height');
+                      var tmp2 = obj1.attr('data-max-height');
+                      obj1.stop(true,false).animate({
+                              height:tmp1 }, tmp2 * 2,
+                          function(){
+                              $(this).removeClass('on');
+                              $(this).css({ height:'auto' });
+                          }
+                      );
+                  }
+                  if( obj1.hasClass('on') == false && obj1.hasClass('fakeOn') ){
+                      var tmp1 = obj1.attr('data-min-height');
+                      var tmp2 = obj1.attr('data-max-height');
+                      obj1.height( tmp1 );
+                      obj1.addClass('on');
+                      obj1.stop(true,false).animate({
+                              height:tmp2 }, tmp2 * 2,
+                          function(){
+                              $(this).css({ height:'auto' });
+                          }
+                      );
+                  }
+                  if( obj1.hasClass('fakeOn') )
+                      obj1.removeClass('fakeOn');
+              }
+
+              if( this.href.match( /#$/ ) ){
+                  return false;
+              }
+              else {
+                  frameHref[frameCur] = $(this).attr('href');
+                  setCookie( 'guide_href', $(this).attr('href'), 0 );
+                  $(frameTab).find('li').eq(frameCur).find('a').html( $(this).html() );
+                  document.getElementById('frame'+ frameCur).onload = null;
+              }
+          }
+      }
+
+      var defHref = getCookie('guide_href');
+      defHref = defHref ? defHref: "guide.page.html";
+      document.getElementById("frame0").src = defHref;
+      $('#guideMenu > ul li').find( "a[href='"+ defHref +"']" ).click();
+      //]]>
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<!------------------------------------------------------------
+    Copyright (c) JHK / 이 페이지의 모든 저작권은 JHK 에게 있습니다.
+  -------------------------------------------------------------->
+	<title>코딩 가이드</title>
+
+	<meta charset="euc-kr" >
+	<meta name="robots" content="noindex,nofollow" >
+	<meta name="author" content="JHK" >
+	<meta name="copyright" content="http://drawinghow.github.io/" >
+	<meta http-equiv="imagetoolbar" content="no" >
+	<meta http-equiv="cache-control" content="no-chche" >
+	<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
+
+	<!--<link rel="shortcut icon" href="guide.ico" >-->
+	<link rel="stylesheet" href="../css/font.css" >
+	<link rel="stylesheet" href="../css/ui.common.css" >
+	<link rel="stylesheet" href="guide.css" >
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+	<script type="text/javascript" src="guide.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<div class="_floating">
+		<div class='_guidebox'>
+			<dl class='title'>
+				<dt>코딩 진행률<span>코딩이 완료되지 않은 파일명은 변경될 수 있습니다.</span></dt>
+				<dd><span id="oResultGrap" class="_guideGrap"><strong></strong><em></em></span></dd>
+				<dd id="oResultText" onmouseover="hint(this)"></dd>
+			</dl>
+		</div>
+	</div>
+
+	<style type="text/css">
+		@media all and (max-width:639px){
+			._floating dt span,
+			._guideTable col,
+			._guideTable thead { display:none !important; }
+			._guideTable tr > * { white-space:nowrap; }
+		}
+	</style>
+
+	<div class="_guideTab">
+		<ul onmouseover="gimaLib.tab(this)">
+			<li class="on"><a href="#all">모두</a></li>
+			<li><a href="#1">폴더</a></li>
+			<li><a href="#2">메뉴</a></li>
+			<li><a href="#3">회원&결제</a></li>
+			<li><a href="#4">푸시알림</a></li>
+		</ul>
+	</div>
+
+	<table id="codingTable1" class="_guideTable">
+		<col span="5" style="width:5%" />
+		<col span="1" />
+		<col span="1" style="width:60%" />
+		<thead><tr>
+			<th>1st</th>
+			<th>2nd</th>
+			<th>3rd</th>
+			<th>4th</th>
+			<th>5th</th>
+			<th></th>
+			<th>설명</th>
+		</tr></thead>
+	</table>
+
+	<table id="codingTable2" class="_guideTable">
+		<col span="5" style="width:5%" />
+		<col span="1" />
+		<col span="1" style="width:28%" />
+		<col span="3" style="width:8%" />
+		<thead><tr>
+			<th>1st</th>
+			<th>2nd</th>
+			<th>3rd</th>
+			<th>4th</th>
+			<th>5th</th>
+			<th></th>
+			<th>URL</th>
+			<th>코딩</th>
+			<th>검수</th>
+		</tr></thead>
+	</table>
+
+	<table id="codingTable3" class="_guideTable">
+		<col span="5" style="width:5%" />
+		<col span="1" />
+		<col span="1" style="width:28%" />
+		<col span="3" style="width:8%" />
+		<thead><tr>
+			<th>1st</th>
+			<th>2nd</th>
+			<th>3rd</th>
+			<th>4th</th>
+			<th>5th</th>
+			<th></th>
+			<th>URL</th>
+			<th>코딩</th>
+			<th>검수</th>
+		</tr></thead>
+	</table>
+
+	<table id="codingTable4" class="_guideTable">
+		<col span="5" style="width:5%" />
+		<col span="1" />
+		<col span="1" style="width:28%" />
+		<col span="3" style="width:8%" />
+		<thead>
+			<tr>
+				<th>1st</th>
+				<th>2nd</th>
+				<th>3rd</th>
+				<th>4th</th>
+				<th>5th</th>
+				<th></th>
+				<th>URL</th>
+				<th>코딩</th>
+				<th>검수</th>
+			</tr>
+		</thead>
+	</table>
+
+	<script type="text/javascript">
+	//<![CDATA[
+		var fw = _makeCodingTable;
+		var pageinfo = { total:0, clear:0, check:0 };
+
+		fw.baseElement = document.getElementById('codingTable1');
+		fw.add( 1,2,0,"[D] /"							,"","" );
+		fw.add(   2,2,0,"[D] guide"						,"","코딩가이드(지금 이 문서)//" );
+		fw.add(   2,2,0,"[D] common"					,"","" );
+		fw.add(     3,2,0,"[D] css"						,"","" );
+		fw.add(       4,2,0,"[F] common.css"			,"","범용 스타일//" );
+		fw.add(       4,2,0,"[F] layout.css"			,"","레이아웃 스타일//" );
+		fw.add(       4,2,0,"[F] layout.push.css"		,"","푸시알림 전용 스타일//" );
+		fw.add(       4,2,0,"[F] layout.index.css"		,"","메인페이지 전용 스타일//" );
+		fw.add(     3,2,0,"[D] js"						,"","" );
+		fw.add(       4,2,0,"[F] gimaLib.js"			,"","범용 스크립트//" );
+		fw.add(   2,2,0,"[D] images"					,"","이미지//" );
+
+		fw.baseElement = document.getElementById('codingTable2');
+		fw.add( 1,1,0,"공용 인클루드"					,"","/" );
+		fw.add(   2,1,0,"[INC] 헤더"					,"","../inc.header.asp" );
+		fw.add(   2,1,0,"[INC] 헤더(푸시알림용)"		,"","../inc.header.push.asp" );
+		fw.add(   2,1,0,"[INC] 풋터"					,"","../inc.footer.asp" );
+		fw.add(   2,1,0,"[INC] 풋터(팝업용)"			,"","../inc.footer.popup.asp" );
+		fw.add(   2,1,0,"[INC] GNB"						,"","../inc.gnb.asp" );
+		fw.add(   2,1,0,"[INC] LNB"						,"","../inc.lnb.asp" );
+		fw.add( 1,1,0,"로딩중"							,"","../loading.asp" );
+		fw.add( 1,1,0,"메인"							,"","../index.asp" );
+		fw.add( 1,1,0,"마이페이지"						,"","../page1.asp" );
+		fw.add(   2,1,0,"수강중인 강좌"					,"","../page1.ing.asp" );
+		fw.add(     3,1,0,"상세:바로수강"				,"","../page1.ing.view.asp" );
+		fw.add(     3,1,0,"상세:다운로드보기"			,"","../page1.ing.view2.asp" );
+		fw.add(     3,1,0,"[P] 수강기간 연장"			,"","../page1.extension.asp" );
+		fw.add(   2,1,0,"수강완료 강좌"					,"","../page1.done.asp" );
+		fw.add(   2,1,0,"교수Q&A"						,"","../page1.tqna.asp" );
+		fw.add(     3,1,0,"보기"						,"","교수소개 > Q&A > 보기와 동일//" );
+		fw.add(     3,1,0,"쓰기"						,"","교수소개 > Q&A > 쓰기와 동일//" );
+		fw.add(   2,1,0,"고객센터Q&A"					,"","../page1.qna.asp" );
+		fw.add(     3,1,0,"보기"						,"","고객센터 > 1:1상담 > 보기와 동일//" );
+		fw.add(     3,1,0,"쓰기"						,"","고객센터 > 1:1상담 > 쓰기와 동일//" );
+		fw.add(   2,1,0,"쪽지"							,"","../page1.paper.asp" );
+		fw.add(     3,1,0,"보기"						,"","../page1.paper.view.asp" );
+		fw.add( 1,1,0,"교수소개"						,"","../page2.asp" );
+		fw.add(   2,1,0,"[INC] 공통"					,"","../page2.inc.common.asp" );
+		fw.add(   2,1,0,"개설강좌"						,"","../page2.prof.asp" );
+		fw.add(     3,1,0,"학원강좌"					,"","../page2.prof.tab.asp" );
+		fw.add(   2,1,0,"공지사항"						,"","../page2.notice.asp" );
+		fw.add(     3,1,0,"보기"						,"","../page2.notice.view.asp" );
+		fw.add(   2,1,0,"Q&A"							,"","../page2.qna.asp" );
+		fw.add(     3,1,0,"보기"						,"","../page2.qna.view.asp" );
+		fw.add(     3,1,0,"쓰기"						,"","../page2.qna.write.asp" );
+		fw.add(   2,1,0,"수강후기"						,"","../page2.review.asp" );
+		fw.add(     3,1,0,"보기"						,"","../page2.review.view.asp" );
+		fw.add(     3,1,0,"쓰기"						,"","../page2.review.write.asp" );
+		fw.add( 1,1,0,"LEET인강"						,"","" );
+		fw.add(   2,1,0,"시즌인강"						,"","../page3.season.asp" );
+		fw.add(   2,1,0,"강좌찾기"						,"","" );
+		fw.add(     3,1,0,"과목별"						,"","../page3.search.asp" );
+		fw.add(     3,1,0,"단계별"						,"","../page3.search2.asp" );
+		fw.add(     3,1,0,"패키지"						,"","../page3.search3.asp" );
+		fw.add(     3,1,0,"무료특강"					,"","../page3.search4.asp" );
+		fw.add(   2,1,0,"강좌상세"						,"","" );
+		fw.add(     3,1,0,"[INC] 공통"					,"","../page3.detail.common.asp" );
+		fw.add(     3,1,0,"강좌정보"					,"","../page3.detail.asp" );
+		fw.add(     3,1,0,"교재정보"					,"","../page3.detail2.asp" );
+		fw.add(     3,1,0,"강의구성"					,"","../page3.detail3.asp" );
+		fw.add(     3,1,0,"수강후기"					,"","../page3.detail4.asp" );
+		fw.add( 1,1,0,"직영학원"						,"","" );
+		fw.add(   2,1,0,"학원시간표"					,"","../page4.asp" );
+		fw.add(   2,1,0,"공지사항"						,"","../page4.notice.asp" );
+		fw.add(     3,1,0,"보기"						,"","고객센터 > 공지사항 > 보기와 동일//" );
+		fw.add(   2,1,0,"오시는 길"						,"","../page4.roadmap.asp" );
+		fw.add( 1,1,0,"정보실"							,"","" );
+		fw.add(   2,1,0,"모집요강"						,"","../page5.asp" );
+		fw.add(     3,1,0,"보기"						,"","../page5.view.asp" );
+		fw.add(   2,1,0,"입시뉴스"						,"","../page5.news.asp" );
+		fw.add(     3,1,0,"보기"						,"","../page5.news.view.asp" );
+		fw.add(   2,1,0,"입시리포트"					,"","../page5.report.asp" );
+		fw.add( 1,1,0,"고객센터"						,"","" );
+		fw.add(   2,1,0,"공지사항"						,"","../page6.asp" );
+		fw.add(     3,1,0,"보기"						,"","../page6.notice.view.asp" );
+		fw.add(   2,1,0,"FAQ"							,"","../page6.faq.asp" );
+		fw.add(   2,1,0,"1:1상담"						,"","../page6.counsel.asp" );
+		fw.add(     3,1,0,"보기"						,"","../page6.counsel.view.asp" );
+		fw.add(     3,1,0,"쓰기"						,"","../page6.counsel.write.asp" );
+
+		fw.baseElement = document.getElementById('codingTable3');
+		fw.add( 1,1,0,"회원"							,"","" );
+		fw.add(   2,1,0,"로그인"						,"","../login.asp" );
+		fw.add(   2,1,0,"가입"							,"","" );
+		fw.add(     3,1,0,"본인인증"					,"","../join.asp" );
+		fw.add(     3,1,0,"약관동의"					,"","../join.step1.asp" );
+		fw.add(     3,1,0,"정보입력"					,"","../join.step2.asp" );
+		fw.add(     3,1,0,"가입완료"					,"","../join.step3.asp" );
+		fw.add(   2,1,0,"정보수정"						,"","" );
+		fw.add(     3,1,0,"비번확인"					,"","../modify.asp" );
+		fw.add(     3,1,0,"정보입력"					,"","../modify.step.asp" );
+		fw.add(   2,1,0,"아이디찾기"					,"","../find.id.asp" );
+		fw.add(     3,1,0,"결과"						,"","../find.id.result.asp" );
+		fw.add(   2,1,0,"비번찾기"						,"","../find.pw.asp" );
+		fw.add(     3,1,0,"결과"						,"","../find.pw.result.asp" );
+		fw.add(   2,1,0,"[P] 우편번호찾기"				,"","../find.address.asp" );
+		fw.add(   2,1,0,"[P] 학교찾기"					,"","../find.school.asp" );
+		fw.add( 1,1,0,"결제"							,"","" );
+		fw.add(   2,1,0,"장바구니"						,"","../shopping.asp" );
+		fw.add(   2,1,0,"주문하기"						,"","../shopping.step1.asp" );
+		fw.add(   2,1,0,"결제완료"						,"","../shopping.step2.asp" );
+		fw.add(   2,1,0,"주문배송조회"					,"","../payment.asp" );
+		fw.add(     3,1,0,"보기"						,"","../payment.view.asp" );
+		fw.add(   2,1,0,"[P] 메가머니 충전"				,"","../recharge.asp" );
+
+		fw.baseElement = document.getElementById('codingTable4');
+		fw.add( 1,1,0,"[INC] 헤더(푸시알림용)"			,"","../inc.header.push.asp" );
+		fw.add(   2,1,0,"[INC] 스타일쉬트"				,"","/common/css/layout.push.css//" );
+		fw.add( 1,1,0,"메인:푸시알림 레이어"			,"","../push.index.asp" );
+		fw.add( 1,1,0,"알림"							,"","../push.notif.asp" );
+		fw.add( 1,1,0,"설정"							,"","../push.setup.asp" );
+		fw.add(   2,1,0,"알림설정"						,"","../push.setup1.asp" );
+		fw.add(   2,1,0,"기기등록안내"					,"","../push.setup2.asp" );
+	//]]>
+	</script>
+
+	<script type="text/javascript">
+	//<![CDATA[
+		$(window).bind({
+			hashchange: function(){
+				var hash = location.hash ? location.hash.replace( /^.*#/, '' ): 'all';
+				if( hash == "all" ){
+					$('._guideTable').show();
+				} else {
+					$('._guideTable').hide();
+					$('#codingTable'+ hash).show();
+				}
+			}
+		}).trigger('hashchange');
+		$("._guideTable" )._tableTree();
+
+		var obj1 = document.getElementById('oResultGrap');
+		var obj2 = document.getElementById('oResultText');
+		var rating1 = Math.floor(pageinfo.clear / pageinfo.total * 100);
+		var rating2 = Math.floor(pageinfo.check / pageinfo.total * 100);
+
+		obj1.children[0].style.width = rating1 +'%';
+		obj1.children[1].style.width = rating2 +'%';
+		obj2.title = ""
+			+ "코딩 : "+ rating1 +"％ ("+ pageinfo.clear +"／"+ pageinfo.total +" pages);"
+			+ "검수 : "+ rating2 +"％ ("+ pageinfo.check +"／"+ pageinfo.total +" pages)";
+		obj2.innerHTML = "완료율 : "
+			+ rating1 +'％／'
+			+ rating2 +'％';
+	//]]>
+	</script>
+
+<div style="height:50px"></div>
+</body>
+</html>
