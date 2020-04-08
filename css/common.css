@@ -1,9 +1,9 @@
-@charset "euc-kr";
+@charset "utf-8";
 /* IE9 이상 지원 */
 
 
 /* Font  */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap&subset=korean'); 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap&subset=korean');
 /* font.css - 프로토콜 미표기함 :  로컬 테스트 안됨 */
 
 html, body {height: 100%; line-height: 1.5;}
@@ -93,16 +93,16 @@ input[type="submit"] {cursor: pointer;}
 .vmid {vertical-align: middle !important;}
 .vbottom {vertical-align: bottom !important;}
 .vbase {vertical-align: text-bottom !important;}
-.vbaseLine {vertical-align: baseline !important;} 
+.vbaseLine {vertical-align: baseline !important;}
 
 
 
 /*------------------------------------------------------------------------------
 | 폰트
 -------------------------------------*/
-.f12 { font-size:12px !important; } .f22 { font-size:22px !important; } 
-.f13 { font-size:13px !important; } .f23 { font-size:23px !important; } 
-.f14 { font-size:14px !important; } .f24 { font-size:24px !important; } 
+.f12 { font-size:12px !important; } .f22 { font-size:22px !important; }
+.f13 { font-size:13px !important; } .f23 { font-size:23px !important; }
+.f14 { font-size:14px !important; } .f24 { font-size:24px !important; }
 .f15 { font-size:15px !important; } .f25 { font-size:25px !important; }
 .f16 { font-size:16px !important; } .f26 { font-size:26px !important; }
 .f17 { font-size:17px !important; } .f27 { font-size:27px !important; }
