@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>메가엠디 퍼블리싱 가이드</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" href="./css/default.css" />
+	<!-- <script type="text/javascript" src="http://img.megamd.co.kr/common/js/jquery.min.js"></script> v1.3.2 -->
+	<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+	<script type="text/javascript" src="http://img.megaland.co.kr/common/js/jquery-1.11.1.min.js?ver=20181011"></script>
+	<!--<script type="text/javascript" src="http://www.megamd.co.kr/common/js/jquery.bxslider.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/commo./js/plugin/mega_bxslider_ui.js"></script>-->
+	<!--<script type="text/javascript" src="./js/bxslider.js"></script>-->
+	<script type="text/javascript" src="http://img.megaland.co.kr/common/js/jquery.bxslider.min.js?ver=20190329"></script>
+	<script type="text/javascript" src="./plugin/mega_bxslider_ui/mega_bxslider_ui.js"></script>
+
+	<script src="./plugin/highlight/highlight.pack.js"></script>
+	<script src="./plugin/highlight/highlightjs-line-numbers.min.js"></script>
+	<script src="./js/guide_ui.js"></script>
+	<link rel="stylesheet" href="./plugin/highlight/styles/atom-one-dark.css">
+	<style>
+		#bxslider{width:1050px;margin:0 auto;}
+		#bxslider h2{font-weight:bold;font-size:15px;background:#666;color:#fff;padding:10px;text-align:left;}
+		.bxslider-box-tb{background:#fff;border:1px solid #999;padding:20px;text-align:left;}
+		.bxslider-box-tb > strong{margin-bottom:20px;font-size:15px;background:#858585;color:#fff;display:block;padding:20px;}
+		.bxslider-box-tb li{font-size:14px;margin-bottom:5px;list-style:decimal;margin-left:20px;}
+		.bxslider-box-tb li::selection{background: #f00;color:#fff}
+		.bxslider-box-tb li strong::selection{background: #f00;color:#fff}
+		.bxslider-box-tb li strong{color:#000;}
+		.bxslider-box-tb table{width:100%;border-bottom:1px solid #e0e0e0;}
+		.bxslider-box-tb table th,
+		.bxslider-box-tb table td{font-size:13px;padding:7px 10px;border-left:1px solid #e0e0e0;}
+		.bxslider-box-tb table th{text-align:center;background:#666;color:#fff;border-top:1px solid #e0e0e0;}
+		.bxslider-box-tb table th:first-child,
+		.bxslider-box-tb table td:first-child{border-left:0;}
+		.bxslider-box-tb table td:first-child{background:#f9f9f9}
+		.bxslider-box-tb table td{border-top:1px solid #e0e0e0;}
+		.bxslider-box-tb .tc{text-align:center}
+		.bxslider-box .index-box{position:fixed;z-index:300;right:0;top:10px;width:300px;box-shadow:0 5px 7px 0 rgba(0, 0, 0, 0.2)}
+		.bxslider-box .index-box strong{font-size:14px;padding:10px;display:block;background:#221f1f;color:#fff}
+		.bxslider-box .index-box ul{background-color: #fff; padding: 4% 4%; width: 92%; vertical-align: middle; border: 1px solid #6b6b6b; font-size: 12px; text-align: left;  }
+		.bxslider-box .index-box ul li{font-size:14px;margin-bottom:10px;list-style:decimal;margin-left:20px;}
+		.bxslider-box .index-box li a {color:#333}
+		.bxslider-box .index-box li a:link {color:#333}
+		.bxslider-box .index-box li a:visited {color:#333}
+		.bxslider-box h5{margin-top:100px;background:#222;color:#fff;padding:10px;font-size:13px;display:block}
+		.bxslider-box .center_align{width:1200px;}
+
+		.bxslider-default .pager-paging ul{width:100%;overflow: hidden;}
+		.bxslider-default .pager-paging ul li {float: left;text-align:center;width: 33.3333%;}
+		.bxslider-default .pager-paging ul li a {font-size:13px;height: 50px;line-height: 50px;border-left:1px solid #999;background:#fff;display:block;color:#000;}
+		.bxslider-default .pager-paging ul li:first-child a{border-left:0;}
+		.bxslider-default .pager-paging ul li a:hover,
+		.bxslider-default .pager-paging ul li a.active {background:#000;color:#fff;font-weight: 600; }
+	</style>
+
+	<link rel="stylesheet" href="./css/guide.css" />
+	<link rel="stylesheet" href="./plugin/mega_bxslider_ui/mega_bxslider_ui.css" />
+	<!--<script type="text/javascript" src="./js/ui.js"></script>-->  <!-- ui.js -->
+
+	<style>
+		/* 화살표 버튼 */
+		.bxslider-default .bx-wrapper .bx-controls-direction a {text-indent: -9999px;width: 35px;height: 83px;}
+		.bxslider-default .bx-wrapper .bx-controls-direction .bx-prev,
+		.bxslider-default .bx-wrapper .bx-controls-direction .bx-next{top: 50%;margin-top: -42px;/* height의 반 */}
+		.bxslider-default .bx-wrapper .bx-controls-direction .bx-prev{left: 10px;background: url(http://design.megamd.co.kr/Design/publishing_guide/img/bx_prev.png) no-repeat 0 0;}
+		.bxslider-default .bx-wrapper .bx-controls-direction .bx-next{right: 10px;background: url(http://design.megamd.co.kr/Design/publishing_guide/img/bx_next.png) no-repeat 0 0;}
+		/* 페이징 */
+		.bxslider-default .bx-wrapper .bx-controls .bx-pager {left:0;bottom: 20px;text-align: center; }
+		.bxslider-default .bx-wrapper .bx-controls .bx-default-pager a {width: 12px;height: 12px;margin: 0 3px 0 3px;background: #979797;border-radius: 50%; }
+		.bxslider-default .bx-wrapper .bx-controls .bx-default-pager a:hover,
+		.bxslider-default .bx-wrapper .bx-controls .bx-default-pager a.active {background: #395CC1; }
+
+		.slide-select1 li {opacity: 0.4;filter: alpha(opacity=40); }
+		.slide-select1 li.on {opacity: 1;filter: alpha(opacity=100); }
+
+		.slide-select3 li {width: 400px !important;opacity: 0.4;filter: alpha(opacity=40); }
+		.slide-select3 li img {transform: scale(0.8); }
+		.slide-select3 li.on {opacity: 1;filter: alpha(opacity=100); }
+		.slide-select3 li.on img {transform: scale(1); }
+
+		.slide-select5 li {width: 250px !important;opacity: 0.4;filter: alpha(opacity=40); }
+		.slide-select5 li img {transform: scale(0.8); }
+		.slide-select5 li.on {opacity: 1;filter: alpha(opacity=100); }
+		.slide-select5 li.on img {transform: scale(1); }
+
+		.pager-paging{overflow:hidden;margin: 0 auto;width: 1000px;}
+		.pager-paging li{float: left;width: 25%;}
+		.pager-paging li a{display: block;height: 50px; background: url(http://design.megamd.co.kr/Design/publishing_guide/img/tab.jpg) no-repeat 0 0;font-size: 0;}
+		.pager-paging li [data-slide-index='0']{background-position: 0 0;}
+		.pager-paging li [data-slide-index='0'].active{background-position: 0 -50px;}
+		.pager-paging li [data-slide-index='1']{ background-position: -250px 0; }
+		.pager-paging li [data-slide-index='1'].active {background-position: -250px -50px;}
+		.pager-paging li [data-slide-index='2']{ background-position: -500px 0;}
+		.pager-paging li [data-slide-index='2'].active {background-position: -500px -50px;}
+		.pager-paging li [data-slide-index='3']{ background-position: -750px 0;}
+		.pager-paging li [data-slide-index='3'].active {background-position: -750px -50px;}
+
+		/* bxslider-default .pager-slider-paging */
+		.bxslider-default .pager-slider-paging {overflow: hidden;position: absolute;bottom: 0;left: 0;right: 0;z-index: 52;height: 50px;}
+		.bxslider-default .pager-slider-paging ul {width: 980px;margin: 0 auto; }
+		.bxslider-default .pager-slider-paging ul:before {display: block;content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+		.bxslider-default .pager-slider-paging li {position: relative;float: left;width: 33.3333%;}
+		.bxslider-default .pager-slider-paging li a {display: table;table-layout: fixed;position: relative;z-index: 2;width: 100%;height: 50px;box-sizing: border-box;text-align: center; }
+		.bxslider-default .pager-slider-paging li a:hover,
+		.bxslider-default .pager-slider-paging li a.active {font-weight: 600; }
+		.bxslider-default .pager-slider-paging li a span {display: table-cell;padding: 0 10px;color: #FFF;font-size: 15px;line-height: 1.2;vertical-align: middle;word-break: keep-all; }
+		.bxslider-default .pager-slider-paging li:before {content: '';position: absolute;top: 14px;left: 0;width: 1px;height: 22px;background: #FFF; }
+		.bxslider-default .pager-slider-paging li:first-child:before {display: none; }
+
+		#full_wrap{width:100%}
+		#container{width:100%;float:none;padding:0 !important;}
+	</style>
+
+</head>
+<body>
+
+<div id="full_wrap" class="clearfix">
+	<section id="header">
+		<div class="">
+			<h1>MD BX-테스트</h1>
+		</div>
+	</section>
+	<section id="container">
+
+	<div class="index-inner">
+		<h2>추가요구사항 (2019-02-28)</h2> <br><br>
+		<h3>1. pager에 마우스오버시 bxslider 이동</h3><br>
+<pre class="box1">
+//pager에 마우스오버시 bxslider 이동
+$('#btn_pager a').hover(function(){
+	$(this).trigger('click');
+	},function(){
+	slider1.startAuto();
+});
+</pre>
+
+		<br>
+		<h3>2.bxslider li 1개일때 bxslider 클래스삭제</h3><br>
+<pre class="box1">
+//bxslider li 1개일때 bxslider 클래스삭제
+$(document).ready(function(){
+	$('.bxslider-default .bxslider').each(function(){
+		if( $(this).find('li').length == 1 ){
+			$(this).removeClass('bxslider');
+		}
+	});
+});
+</pre>
+	</div>
+
+
+		<div style="width:1200px;margin:0 auto;">
+			<style>
+				.pager-paging{overflow:hidden;margin: 0 auto;width: 1000px;}
+				.pager-paging li{float: left;width: 25%;}
+				.pager-paging li a{display: block;height: 50px; background: url(http://design.megamd.co.kr/Design/publishing_guide/img/tab.jpg) no-repeat 0 0;font-size: 0;}
+				.pager-paging li [data-slide-index='0']{background-position: 0 0;}
+				.pager-paging li [data-slide-index='0'].active{background-position: 0 -50px;}
+				.pager-paging li [data-slide-index='1']{ background-position: -250px 0; }
+				.pager-paging li [data-slide-index='1'].active {background-position: -250px -50px;}
+				.pager-paging li [data-slide-index='2']{ background-position: -500px 0;}
+				.pager-paging li [data-slide-index='2'].active {background-position: -500px -50px;}
+				.pager-paging li [data-slide-index='3']{ background-position: -750px 0;}
+				.pager-paging li [data-slide-index='3'].active {background-position: -750px -50px;}
+			</style>
+			<div class="bxslider-default" data-mode="horizontal" data-startSlide="3" data-auto="true" data-pager="true" data-controls="false" data-pagercustom="pager-paging">
+				<ul class="pager-paging">
+					<li><a href="#" data-slide-index="0">tab1</a></li>
+					<li><a href="#" data-slide-index="1">tab2</a></li>
+					<li><a href="#" data-slide-index="2" class="active">tab3</a></li>
+					<li><a href="#" data-slide-index="3">tab4</a></li>
+				</ul>
+				<ul class="bxslider">
+					<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt="" /></li>
+					<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt="" /></li>
+					<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt="" /></li>
+					<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4.jpg" alt="" /></li>
+				</ul>
+			</div>
+
+
+
+			<div class="bxslider-default type2" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3">
+				<ul class="bxslider">
+					<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""></li>
+					<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
+					<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
+					<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
+					<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+
+		<br><br>
+
+		<style>
+			.bxslider-default .bx-wrapper{max-width:100% !important;}
+			.bxslider-default .bx-wrapper li{max-width:100% !important;}
+		</style>
+		<div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true" data-touch="true">
+			<ul class="bxslider">
+				<li style="background:#000"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""></li>
+				<li style="background:#666"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
+				<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
+				<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
+				<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
+				<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
+			</ul>
+		</div>
+
+		<div class="windowPop bxslider-box">
+			<div class="center_align">
+				<h2>공통 스크립트</h2>
+				<dl class="dl1">
+					<dt>
+						<h3>01_tab</h3>
+					</dt>
+					<dd>
+						<!--js_tab_type-->
+						<style>
+							.js_tab_type:after{content:'';display:block;clear:both}
+							.js_tab_type li{float:left;width:33.3%}
+							.js_tab_type li a{display:block;border:1px solid #000;height:50px;line-height:50px;text-align:center}
+							.js_tab_type li a.active{background:#000;color:#fff}
+							.js_tab_con_type{display:none}
+							.js_tab_con_type.active{display:block}
+						</style>
+						<script>
+							$(document).ready(function () {
+								$('.js_tab_type li a').on('click', function (e) {
+									var targetId = $(this).attr("href");
+									if ($(this).attr("target") !== "_blank") {
+										e.preventDefault();
+										$(this).parent('li').siblings().find("a").removeClass('active');
+										$(this).addClass('active');
+										$(targetId).addClass('active').siblings().removeClass('active');
+										if($(".bxslider-default").length > 0){
+											__globalBxslider.reloadSlider();
+										}
+									} else {
+										return true;
+									}
+								});
+							});
+						</script>
+						<div class="js_tab_wrap">
+							<ul class="js_tab_type">
+								<li><a href="#tab1" class="active">tab1</a></li>
+								<li><a href="#tab2">tab2</a></li>
+								<li><a href="#tab3">tab3</a></li>
+							</ul>
+							<div id="tab1" class="js_tab_con_type active">
+								<ul class="js_tab_type">
+									<li class="tab1"><a href="#tab1_1" class="active">tab1_1</a></li>
+									<li class="tab2"><a href="#tab1_2">tab1_2</a></li>
+									<li class="tab3"><a href="#tab1_3">tab1_3</a></li>
+								</ul>
+								<div id="tab1_1" class="js_tab_con_type active">
+									tab1_1
+								</div>
+								<div id="tab1_2" class="js_tab_con_type">
+									tab1_2
+								</div>
+								<div id="tab1_3" class="js_tab_con_type">
+									tab1_3
+								</div>
+							</div>
+							<div id="tab2" class="js_tab_con_type">
+								2
+							</div>
+							<div id="tab3" class="js_tab_con_type">
+								3
+							</div>
+						</div>
+<pre class="box1">
+&lt;style&gt;
+	.js_tab_type:after{content:'';display:block;clear:both}
+	.js_tab_type li{float:left;width:33.3%}
+	.js_tab_type li a{display:block;border:1px solid #000;height:50px;line-height:50px;text-align:center}
+	.js_tab_type li a.active{background:#000;color:#fff}
+	.js_tab_con_type{display:none}
+	.js_tab_con_type.active{display:block}
+&lt;/style&gt;
+&lt;script&gt;
+	$(document).ready(function () {
+		$('.js_tab_type li a').on('click', function (e) {
+			var targetId = $(this).attr("href");
+			if ($(this).attr("target") !== "_blank") {
+				e.preventDefault();
+				$(this).parent('li').siblings().find("a").removeClass('active');
+				$(this).addClass('active');
+				$(targetId).addClass('active').siblings().removeClass('active');
+				if($(".bxslider-default").length &gt; 0){
+					__globalBxslider.reloadSlider();
+				}
+			} else {
+				return true;
+			}
+		});
+	});
+&lt;/script&gt;
+&lt;div class="js_tab_wrap"&gt;
+	&lt;ul class="js_tab_type"&gt;
+		&lt;li&gt;&lt;a href="#tab1" class="active"&gt;tab1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab2"&gt;tab2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab3"&gt;tab3&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div id="tab1" class="js_tab_con_type active"&gt;
+		&lt;ul class="js_tab_type"&gt;
+			&lt;li class="tab1" &gt;&lt;a href="#tab1_1" class="active"&gt;tab1_1&lt;/a&gt;&lt;/li&gt;
+			&lt;li class="tab2" &gt;&lt;a href="#tab1_2"&gt;tab1_2&lt;/a&gt;&lt;/li&gt;
+			&lt;li class="tab3" &gt;&lt;a href="#tab1_3"&gt;tab1_3&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;div id="tab1_1" class="js_tab_con_type active"&gt;
+			tab1_1
+		&lt;/div&gt;
+		&lt;div id="tab1_2" class="js_tab_con_type"&gt;
+			tab1_2
+		&lt;/div&gt;
+		&lt;div id="tab1_3" class="js_tab_con_type"&gt;
+			tab1_3
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div id="tab2" class="js_tab_con_type"&gt;
+		2
+	&lt;/div&gt;
+	&lt;div id="tab3" class="js_tab_con_type"&gt;
+		3
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+					</dd>
+				</dl>
+				<br><br><br><br><br><br><br><br><br><br>
+
+				<dl class="dl1">
+					<dt>
+						<h3>01_FAQ</h3>
+					</dt>
+					<dd>
+						<style>
+							.js-faq dt{font-weight:bold;padding:10px;border-bottom:1px solid #CCC}
+							.js-faq dt a{color:#222;display:block}
+							.js-faq dd{display:none;padding:10px;border-top:1px dashed #CCC;background:#EFF3FF;}
+						</style>
+						<ul>
+							<li>
+								<dl class="js-faq">
+									<dt>
+										<a href="#;">Q : 문제</a>
+									</dt>
+									<dd>
+										A : 답변
+									</dd>
+								</dl>
+							</li>
+						</ul>
+
+					</dd>
+				</dl>
+
+				<div class="js_tab_wrap">
+					<ul class="js_tab_type">
+						<li><a href="#tab2_1" class="active">tab2_1</a></li>
+						<li><a href="#tab2_2">tab2_2</a></li>
+						<li><a href="#tab2_3">tab2_3</a></li>
+					</ul>
+					<div id="tab2_1" class="js_tab_con_type active">
+						<div class="pager-slider-wrap">
+							<div class="bxslider-default type1" data-randomStart="true" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true" data-minslides="3" data-pagercustom="pager-paging">
+								<ul class="bxslider">
+									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt="" /></li>
+									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt="" /></li>
+									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt="" /></li>
+								</ul>
+								<div class="pager-paging">
+									<ul>
+										<li><a href="#" data-slide-index="0" ><span>평생0원 프리패스1</span></a></li>
+										<li><a href="#" data-slide-index="1" ><span>평생0원 프리패스2</span></a></li>
+										<li><a href="#" data-slide-index="2" ><span>평생0원 프리패스3</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<br><br>
+						<style>
+							.bxslider-default.type2 .bx-wrapper .bx-viewport .bxslider li{width:400px !important;}
+						</style>
+						<div class="bxslider-default type2" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3">
+							<ul class="bxslider">
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
+							</ul>
+						</div>
+					</div>
+					<div id="tab2_2" class="js_tab_con_type">
+						<style>
+							.bxslider-default.type2 .bx-wrapper .bx-viewport .bxslider li{width:400px !important;}
+						</style>
+						<div class="bxslider-default type2" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3">
+							<ul class="bxslider">
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
+								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
+							</ul>
+						</div>
+					</div>
+					<div id="tab2_3" class="js_tab_con_type">
+					<div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true">
+						<ul class="bxslider">
+							<li style="background:#000 !important;"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt=""></li>
+							<li style="background:#666 !important;"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt=""></li>
+							<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				</div>
+				<!--//js_tab_type-->
+
+
+				<br><br>
+				<br><br>
+
+				<div class="bxslider-default slide-select1" data-mode="fade" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="1" data-minSlides="1">
+					<ul class="bxslider">
+						<li class="on"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
+					</ul>
+				</div>
+
+				<br><br>
+				<br><br>
+
+				<div class="bxslider-default slide-select3" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3">
+					<ul class="bxslider">
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""></li>
+						<li class="on"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
+					</ul>
+				</div>
+
+				<br><br>
+				<br><br>
+
+				<div class="bxslider-default slide-select5" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="5" data-minSlides="5">
+					<ul class="bxslider">
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
+						<li class="on"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
+						<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
+					</ul>
+				</div>
+		</div>
+	</div>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				__globalBxslider.init('.bxslider-default');
+			});
+		</script>
+	</section>
+</div>
+</body>
+</html>

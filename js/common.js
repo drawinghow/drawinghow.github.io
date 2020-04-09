@@ -6,20 +6,72 @@ String.prototype.replaceAll = function(org, dest) {
 
 $(document).ready(function() {
 
-	$('pre.box1').each(function(i, block) {
-		hljs.highlightBlock(block);
-		hljs.lineNumbersBlock(block);
-	});
+    /******************************************/
+    //LNB 1depth
+    $('.cd_nav>li>a').click(function () {
+        $(this).parent().addClass('open');
+    });
+    //LNB 2depth
+    $('.cd_nav>li>ul>li>a').click(function (e) {
+        e.preventDefault();
+        $('.cd_nav>li>ul>li').removeClass('on');
+        $(this).parent().addClass('on');
 
-	$('.viewarea').each(function(){
-		var source = $(this).html();
-		source = source.replaceAll("<","&lt;");
-		$(this).next('.source').find('pre').html(source);
-		$('pre.box2').each(function(i, block) {
-			hljs.highlightBlock(block);
-			hljs.lineNumbersBlock(block);
-		});
-	});
+        var href = $(this).attr('href');
+        $('#cd_container').attr('src', href );
+    });
+
+    //contents nav
+    $('#con_nav li a').click(function () {
+       $(this).parent().addClass('on').siblings().removeClass('on');
+    });
+
+
+    /******************************************/
+    //코드 viewer
+    $('pre.box1').each(function(i, block) {
+        hljs.highlightBlock(block);
+        hljs.lineNumbersBlock(block);
+    });
+
+    $('.viewarea').each(function(){
+        var source = $(this).html();
+        //source = source.replaceAll('<','&lt;');
+        source = source.replace(/</gi,'&lt;');
+        $(this).next('.source').find('pre').html(source);
+        $('pre.box2').each(function(i, block) {
+            hljs.highlightBlock(block);
+            hljs.lineNumbersBlock(block);
+        });
+    });
+
+
+    /******************************************/
+    //토글 버튼
+    $('.btnToggle').click(function (e) {
+        e.preventDefault();
+        if($(this).hasClass('off') || !$(this).hasClass('open')){
+            $(this).removeClass('off').addClass('open').next().slideDown(200);
+        }else{
+            $(this).addClass('off').removeClass('open').next().slideUp(200);
+        }
+    });
+
+    $('.btnToggle_left').click(function (e) {
+        e.preventDefault();
+        var width = $(this).parent().width();
+        if($(this).hasClass('off') || !$(this).hasClass('open')){
+            $(this).removeClass('off').addClass('open').parent().animate({left: -width});
+        }else{
+            $(this).addClass('off').removeClass('open').parent().animate({left: 0});
+        }
+    });
+
+
+
+
+
+
 
 	/*
 	$('.index-box ul li a').on('click', function(e) {

@@ -1,0 +1,385 @@
+
+		<div class="windowPop">
+			<div class="center_align">
+				<h2>BX Slider 사용법</h2>
+				<div class="contents">
+					<dl class="dl1">
+						<!-- <dt><h3>bx-slider.js</h3></dt> -->
+						<dd class="mt20">
+							<h4 class="mt0 pt0">bxslider 동작예시</h4>
+							<!-- bxslider 동작 -->
+							<style>
+								.slWrap {}
+								.slWrap #slider1 li{text-align:center;}
+								.slWrap .bx-viewport { position: relative; overflow: hidden; width: 100%; height: 300px !important; }
+								.slWrap .bx-controls-direction a{ display: block; position: absolute; top: 50%; z-index: 10; width: 56px; height: 56px; margin-top: -28px; background: url(http://img.megamd.co.kr/ls1/2018/1212_jsw/slider_bt.png) 0 0 no-repeat; text-align: left; text-indent: -9999px; }
+								.slWrap .bx-controls-direction a.bx-prev { left: 0; }
+								.slWrap .bx-controls-direction a.bx-next { right: 0; background-position: -56px 0; }
+								.slWrap .bx-pager {font-size:0;text-align:center;position:absolute;left:0;bottom:30px;width:100%;}
+								.slWrap .bx-pager .bx-pager-item{display:inline-block;}
+								.slWrap .bx-pager .bx-pager-item .bx-pager-link{margin:0 3px 0 3px;border-radius:50%;display:inline-block;width:12px;height:12px;background:#979797;}
+								.slWrap .bx-pager .bx-pager-item .bx-pager-link.active{background:#395CC1}
+							</style>
+
+
+							<!-- HTML -->
+							<div class="slWrap">
+								<ul id="slider1">
+									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt="슬라이드1"></li>
+									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt="슬라이드2"></li>
+									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt="슬라이드3"></li>
+								</ul>
+							</div>
+
+							<!-- JS -->
+							<script type="text/javascript">
+								var slider1;   //변수값 변경
+								$(document).ready(function () {
+									slider1 = $('#slider1').bxSlider({
+										speed : 500,
+										pause : 3000,
+										controls : true,
+										pager : true,
+										auto : true,
+										autoHover : true,
+										onSlideBefore : function (slide, oldIndex, newIndex){
+											slider1.startAuto();  //버튼 클릭 후 자동롤링(auto) 재실행
+										}
+									});
+								});
+								function go_slide1( bts ) {
+									if ( bts == 0 ) { slider1.goToPrevSlide(); }
+									if ( bts == 1 ) { slider1.goToNextSlide(); }
+								}
+							</script>
+							<!-- //bxslider 동작 -->
+
+
+
+<h4 class="mt30">동작시 필요한 JS</h4>
+<pre class="box1">
+<b class="color_red1">&lt;!-- head 에 있을 시 안가져와도 됨 ( jquery , bxslider ) --&gt; </b>
+&lt;script language="JavaScript" src="http://img.megamd.co.kr/common/js/jquery.min.js"&gt;&lt;/script&gt;  &lt;!-- 제이쿼리 : MD --&gt; 
+&lt;script language="JavaScript" src="http://www.megamd.co.kr/common/js/jquery.bxslider.js"&gt;&lt;/script&gt;  &lt;!-- bx-slider --&gt; 
+</pre>
+
+
+
+
+<!-- 심플형 -->
+<h4 class="mt30">HTML+CSS+JS // 자주쓰는 슬라이드(심플형)</h4>
+<pre class="box1">
+
+	//슬라이드 ( 이전,다음버튼+자동롤링 )
+
+	<b class="color_red1">&lt;style&gt;</b>
+	.slWrap {}
+	.slWrap #slider1 li{text-align:center;}
+	.slWrap .bx-viewport { position: relative; overflow: hidden; width: 100%; height: 300px !important; }
+	/* 화살표버튼 */
+	.slWrap .bx-controls-direction a{ display: block; position: absolute; top: 50%; z-index: 10; width: 56px; height: 56px; margin-top: -28px; background: url(http://img.megamd.co.kr/ls1/2018/1212_jsw/slider_bt.png) 0 0 no-repeat; text-align: left; text-indent: -9999px; }
+	.slWrap .bx-controls-direction a.bx-prev { left: 0; }
+	.slWrap .bx-controls-direction a.bx-next { right: 0; background-position: -56px 0; }
+	/* 네이게이션버튼 */
+	.slWrap .bx-pager {font-size:0;text-align:center;position:absolute;left:0;bottom:30px;width:100%;}
+	.slWrap .bx-pager .bx-pager-item{display:inline-block;}
+	.slWrap .bx-pager .bx-pager-item .bx-pager-link{margin:0 3px 0 3px;border-radius:50%;display:inline-block;width:12px;height:12px;background:#979797;}
+	.slWrap .bx-pager .bx-pager-item .bx-pager-link.active{background:#395CC1}
+	&lt;/style&gt; 
+
+	
+	<b class="color_red1">&lt;!-- HTML --&gt;</b>
+	&lt;div class="slWrap">
+		&lt;ul id="slider1">
+			&lt;li>&lt;img src="http://img.megamd.co.kr/ls1/2018/1212_jsw/jsw_slide_1.jpg" alt="">&lt;/li>
+			&lt;li>&lt;img src="http://img.megamd.co.kr/ls1/2018/1212_jsw/jsw_slide_1.jpg" alt="">&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+
+	
+	<b class="color_red1">&lt;!-- JS --&gt;</b>
+	&lt;script type="text/javascript"&gt;  
+		var slider1;   //변수값 변경
+		$(document).ready(function () {
+			slider1 = $('#slider1').bxSlider({         
+				speed : 500,                               
+				pause : 3000,                             
+				controls : true,
+				pager : true,
+				auto : true,                        
+				autoHover : true,
+				onSlideBefore : function (slide, oldIndex, newIndex){    
+					slider1.startAuto();  //버튼 클릭 후 자동롤링(auto) 재실행
+				}
+			});
+		});
+		function go_slide1( bts ) {
+			if ( bts == 0 ) { slider1.goToPrevSlide(); } 
+			if ( bts == 1 ) { slider1.goToNextSlide(); } 
+		}
+	&lt;/script&gt;  
+</pre>
+<!-- 심플형 -->
+
+
+
+
+<h4 class="mt30">bx-slide 기타옵션</h4>
+<pre class="box1">
+
+	//모드
+	mode : 'vertical',    //세로 롤링 	
+	mode : 'fade',       //페이드인-아웃 	
+
+	
+	//카드형 슬라이드
+	minSlides: 4,         //최소로 보여지는 li 갯수
+	maxSlides: 4,        //최대로 보여지는 li 갯수
+	moveSlides: 1,      //한개씩 이동
+	slideWidth: 200,   //li width
+
+
+	//랜덤 노출
+	randomStart: true,
+
+
+	//속도
+	easing : 'linear',     //속도변화 없을 시
+
+
+
+	//첫번째 li 에 on 클래스 주기 
+	slide1 = $('#slide1').bxSlider({
+		mode : 'vertical',    
+		auto : true, 
+		autoHover : true, 
+		pager : false, 
+		controls : false, 
+		pause : 3000, 
+		minSlides: 4, 
+		maxSlides: 4, 
+		moveSlides: 1,
+		onSlideAfter: function($slideElement, oldIndex, newIndex){
+			slide1.startAuto();
+		},
+		onSlideNext: function (el) {
+			$('.exam_rolling li').removeClass('on');
+			el.addClass('on').siblings().removeClass('on');  
+		},
+		onSlidePrev: function (el) {
+			$('.exam_rolling li').removeClass('on');
+			el.addClass('on').siblings().removeClass('on');
+		}
+	});
+
+	//마우스 오버시 슬라이드 이동 
+	$('#btn_pager a').hover(function(){  //pager에 마우스오버시 bxslider 이동
+		$(this).trigger('click');
+	},function(){
+		slider1.startAuto();
+	});
+
+
+
+
+
+</pre>
+
+
+<br><br><hr>
+
+<h4 class="mt0 pt0">bxslider 동작예시</h4>
+<!-- bxslider 동작 -->
+<style>
+	/* bxslider 구조 */
+	.slWrap { overflow: hidden; position: relative; width: 100%; margin: 0 auto; border: 1px solid #cecece; background-color: #fff; }
+	.slWrap ul#slider2 { margin: 0; padding: 0; vertical-align: top;}
+	.slWrap ul#slider2 li { background-color: #c7c7c7; text-align: center; }
+	.slWrap ul#slider2 .slide_01 { /* 첫번째 슬라이드 */ }
+	.slWrap ul#slider2 .slide_02 { /* 두번째 슬라이드 */ }
+	.slWrap ul#slider2 .slide_03 { /* 세번? 슬라이드 */ }
+
+	/* bxslider 이전-다음 버튼 */
+	.slWrap .btn { position: absolute; top: 50%; z-index: 10; margin-top: -42px; }
+	.slWrap .btn_prev { left: 70px; }
+	.slWrap .btn_next { right: 70px; }
+
+	/* bxslider 페이징 ( 직접만들때 사용 ) */
+	.slWrap #btn_pager {}
+	.slWrap #btn_pager a { font-size: 15px; color: #888; }
+	.slWrap #btn_pager a.active { color: #0473de; }
+
+	/* bxslider 페이징  ( 자동생성 될 때 사용 : pager : true )
+	.slWrap .bx-pager { position: absolute; left: 0; bottom: 20px; z-index: 10; width: 100%; text-align: center; }
+	.slWrap .bx-pager > div { display: inline-block; padding: 3px; }
+	.slWrap .bx-pager > div > a { display: block; width: 20px; height: 20px; background-color: #333; color: #fff; }
+	.slWrap .bx-pager > div > a.active { background-color: #0082ff; color: #fff; }
+	*/
+
+</style>
+<div class="slWrap">
+	<ul id="slider2">
+		<li class="slide_01"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt="슬라이드1"></li>
+		<li class="slide_02"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt="슬라이드2"></li>
+		<li class="slide_03"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt="슬라이드3"></li>
+	</ul>
+	<!-- 이전다음 버튼 : 사용안할시 삭제 -->
+	<div class="btn_prev btn"><a href="javascript:go_slide1(0);"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl_bt_prev.png" alt="이전"></a></div>
+	<div class="btn_next btn"><a href="javascript:go_slide1(1);"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl_bt_next.png" alt="다음"></a></div>
+	<!-- //이전다음 버튼 -->
+	<!-- pager : 사용안할시 삭제 -->
+	<div id="btn_pager">
+		<a data-slide-index="0" href="">1</a>
+		<a data-slide-index="1" href="">2</a>
+		<a data-slide-index="2" href="">3</a>
+	</div>
+	<!-- //pager -->
+</div><!-- //slWrap -->
+<script type="text/javascript">
+	var slider2;
+	$(document).ready(function () {
+		slider2 = $('#slider2').bxSlider({        // #slider1  : 아이디/클래스로 변경가능
+			//mode : 'fade',          // 슬라이드 동작방법
+			speed : 500,              // 이동속도
+			autoHover : true,        // 마우스 호버시 정지 여부
+			controls : false,         // 이전<->다음 버튼
+			//pager : true,           // 페이징 자동생성 여부
+			pagerCustom : '#btn_pager',      //페이징 직접생성&연결 : <div id="btn_pager">
+			auto : true,               // 자동플레이
+			onSlideBefore : function (slide, oldIndex, newIndex){
+				slider2.startAuto();
+			}
+		});
+	});
+	function go_slide1( bts ) {
+		if ( bts == 0 ) { slider2.goToPrevSlide(); } //이전 버튼
+		if ( bts == 1 ) { slider2.goToNextSlide(); } //다음 버튼
+		if ( bts == 2 ) { slider2.stopAuto(); }  //슬라이드 멈춤
+		if ( bts == 3 ) { slider2.startAuto(); }  //슬라이드 동작
+	}
+
+</script>
+<!-- //bxslider 동작 -->
+
+<h4 class="mt30">CSS</h4>
+<pre class="box1">
+&lt;style&gt; 
+	<b>/* bxslider 구조 */</b>
+	.slWrap { overflow: hidden; position: relative; width: 100%; margin: 0 auto; border: 1px solid #cecece; background-color: #fff; }
+	.slWrap ul#slider1 { margin: 0; padding: 0; vertical-align: top;}
+	.slWrap ul#slider1 li { background-color: #c7c7c7; text-align: center; }
+	.slWrap ul#slider1 .slide_01 { /* 첫번째 슬라이드 */ }
+	.slWrap ul#slider1 .slide_02 { /* 두번째 슬라이드 */ }
+	.slWrap ul#slider1 .slide_03 { /* 세번? 슬라이드 */ }
+
+	<b>/* bxslider 이전-다음 버튼 */</b>
+	.slWrap .btn { position: absolute; top: 50%; z-index: 1; margin-top: -42px; }
+	.slWrap .btn_prev { left: 70px; }
+	.slWrap .btn_next { right: 70px; }
+
+	<b>/* bxslider 페이징 ( 직접만들때 사용 ) */</b>
+	.slWrap #btn_pager {}
+	.slWrap #btn_pager a { font-size: 15px; color: #888; }
+	.slWrap #btn_pager a.active { color: #0473de; }
+
+	<b>/* bxslider 페이징 ( 자동생성 될 때 사용 : pager : true )</b>
+	.slWrap .bx-pager { position: absolute; left: 0; bottom: 20px; z-index: 10; width: 100%; text-align: center; }
+	.slWrap .bx-pager > div { display: inline-block; padding: 3px; }
+	.slWrap .bx-pager > div > a { display: block; width: 20px; height: 20px; background-color: #333; color: #fff; }
+	.slWrap .bx-pager > div > a.active { background-color: #0082ff; color: #fff; }   
+	*/
+
+&lt;/style&gt; 
+</pre>	
+
+
+
+
+<h4 class="mt15">HTML</h4>
+<pre class="box1">
+&lt;div class="slWrap"&gt; 
+
+	&lt;ul <b class="color_red1">id="slider1"</b>&gt; 
+		&lt;li&gt;&lt;img src="/Design/publishing_guide/img/sl1.jpg" alt="슬라이드1"&gt;&lt;/li&gt; 
+		&lt;li&gt;&lt;img src="/Design/publishing_guide/img/sl2.jpg" alt="슬라이드2"&gt;&lt;/li&gt; 
+		&lt;li&gt;&lt;img src="/Design/publishing_guide/img/sl3.jpg" alt="슬라이드3"&gt;&lt;/li&gt; 
+	&lt;/ul&gt; 
+
+	<b>&lt;!-- 이전다음 버튼 : 사용안할시 삭제 --&gt; </b>
+	&lt;div class="btn_prev btn"&gt;&lt;a href="javascript: <b class="color_blue1">go_slide1(0)</b> ;"&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl_bt_prev.png" alt="이전"&gt;&lt;/a&gt;&lt;/div&gt; 
+	&lt;div class="btn_next btn"&gt;&lt;a href="javascript: <b class="color_blue1">go_slide1(1)</b> ;"&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl_bt_next.png" alt="다음"&gt;&lt;/a&gt;&lt;/div&gt; 
+	&lt;!-- // 이전다음 버튼 --&gt; 
+
+	<b>&lt;!-- pager : 사용안할시 삭제 --&gt; </b>
+	&lt;div <b class="color_red1">id="btn_pager"</b>&gt; 
+		&lt;a data-slide-index="0" href=""&gt; 1 &lt;/a&gt; 
+		&lt;a data-slide-index="1" href=""&gt; 2 &lt;/a&gt; 
+		&lt;a data-slide-index="2" href=""&gt; 3 &lt;/a&gt; 
+	&lt;/div&gt; 
+	&lt;!-- //pager --&gt; 
+
+&lt;/div&gt; &lt;!-- //slWrap --&gt; 
+</pre>	
+
+
+
+<h4 class="mt15">JS</h4>
+<pre class="box1">
+&lt;script type="text/javascript"&gt; 
+	var <b class="color_blue1">slider1</b>;   //변수값 변경
+	$(document).ready(function () {
+		<b class="color_blue1">slider1</b> = $('<b class="color_red1">#slider1</b>').bxSlider({              //아이디/클래스명 변경
+			//mode : 'fade',                           // 슬라이드 동작방법 
+			speed : 500,                               // 슬라이드 이동속도
+			pause : 3000,                             // 슬라이드 멈춰있는 시간
+			controls : false,                          // 이전-다음 버튼  (직접 만들 시 false)
+			pager : true,                              // 페이징 자동생성 (직접 만들시 pagerCustom 사용)
+			//pagerCustom : <b class="color_red1">'#btn_pager'</b>,                            // 페이징 직접생성&연결 : (div id="btn_pager") : 아이디/클래스명 변경가능
+			auto : true,                               // 자동플레이
+			autoHover : true,                       // 마우스 호버시 auto 정지 여부
+			onSlideBefore : function (slide, oldIndex, newIndex){     
+				slider1.startAuto();    
+			}
+		});
+	});
+
+
+	function <b class="color_blue1">go_slide1( bts )</b> {
+		if ( <b>bts == 0</b> ) { <b class="color_blue1">slider1</b>.goToPrevSlide(); } //이전 버튼
+		if ( <b>bts == 1</b> ) { <b class="color_blue1">slider1</b>.goToNextSlide(); } //다음 버튼
+		if ( <b>bts == 2</b> ) { <b class="color_blue1">slider1</b>.stopAuto(); }  //슬라이드 멈춤 (사용 안할시 삭제)
+		if ( <b>bts == 3</b> ) { <b class="color_blue1">slider1</b>.startAuto(); }  //슬라이드 동작 (사용 안할시 삭제)
+	}
+	
+	//클릭시 auto 멈춤현상 해결 ( 이전다음/pager 버튼 클릭 후 auto 재실행하고 싶을때 )
+	$(document).on('click','.bx-next, .bx-prev',function() {       //  .bx-next   .bx-prev -> 상황에 따라 클래스 변경
+		slider1.stopAuto();                                                 //slider1  맞는지 확인 
+		slider1.startAuto();
+	});
+
+&lt;/script&gt; 
+</pre>
+
+
+							
+
+
+
+
+
+							<ul class="ul1 mt20">
+								<li class="fw_b">참고사이트</li>
+								<li>
+									<a class="btn02" href="https://bxslider.com/" target="_blank"> bxslider.com </a> 
+									<a class="btn02" style="margin-left: 10px;" href="https://github.com/demun/FrontEndStudy/blob/master/document/Jquery/docs/01_01_jquery_plugin_bxslider.md"  target="_blank"> 한글설명 </a>
+									<a class="btn02" style="margin-left: 10px;" href="http://godlvkhj.tistory.com/60"  target="_blank"> 한글설명2 </a>
+								</li>
+							</ul>
+
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		

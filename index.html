@@ -4,7 +4,7 @@
   <!------------------------------------------------------------
     Copyright (c) JHK / 이 페이지의 모든 저작권은 JHK 에게 있습니다.
   -------------------------------------------------------------->
-  <title>코딩 가이드</title>
+  <title>JHK</title>
   <meta charset="utf-8" >
   <meta name="robots" content="noindex,nofollow" >
   <meta name="author" content="JHK" >
@@ -15,106 +15,100 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
 
   <link rel="shortcut icon" href="jhk_ico.ico" >
-  <!--<link rel="stylesheet" href="css/font.css" >-->
-  <link rel="stylesheet" href="css/common.css" >
+  <link rel="stylesheet" href="./css/font.css" >
+  <link rel="stylesheet" href="./css/common.css" >
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+
+	<!--highlight-->
+	<link rel="stylesheet" href="./plugin/highlight/styles/atom-one-dark.css">
+	<script type="text/javascript" src="./plugin/highlight/highlight.pack.js"></script>
+	<script type="text/javascript" src="./plugin/highlight/highlightjs-line-numbers.min.js"></script>
+	<!--//highlight-->
 
   <!--[if lt IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   <![endif]-->
 
 </head>
-<body>
-
-  <!-- 
-  <h1>
-    <em>Copyright (c) JHK</em>
-    <span>이 페이지의 모든 저작권은 JHK 에게 있습니다.</span>
-  </h1> -->
+<body style="overflow-y: hidden;">
 
 	<div id="cd_guide_wrap" class="clearfix">
 		<!-- LNB -->
 		<section id="cd_guide_nav">
-			<div class="cd_nav">
-				<h1>
-					<em>JHK 코딩가이드</em>
-					<span>Copyright (c) JHK</span>
-					<span>이 페이지의 모든 저작권은 JHK 에게 있습니다.</span>
-				</h1>
-				<ul class="cd_nav_menu">
-					<li class="on"><a href="#;"  name="mdGuide">MD 코딩컨벤션</a></li>
-					<li class="sub_box">
-						<strong>스크립트</strong>
-						<ul class="sub">
-							<li><a href="script.html" target="_blank"><strong>스크립트 가이드</strong></a></li>
-							<li><a href="#;" name="winPop">윈도우팝업</a></li>
-							<li><a href="#;" name="layerPop">레이어팝업</a></li>
-							<li><a href="#;" name="movie">동영상/+팝업</a></li>
-						</ul>
-					</li>
-					<li class="sub_box">
-						<strong>애니메이션</strong>
-						<ul class="sub">
-							<li><a href="tweenmax.html" target="_blank">TWEENMAX</a></li>
-							<li><a href="animation.html" target="_blank">CSS</a></li>
-						</ul>
-					</li>
-					<li class="sub_box">
-						<strong>Bxslider</strong>
-						<ul class="sub">
-							<li><a href="#;" name="bxslider_ui">bx-slider_ui</a></li>
-							<li><a href="#;" name="bxslider"  style="color: #a0a0a0">bx-slider (ver. old)</a></li>
-							<li><a href="http://design.megamd.co.kr/Design/publishing_guide/bxslider_ui_test.html" target="_blank" style="color: #a0a0a0">bx-slider_ui (test)</a></li>
-						</ul>
-					</li>
-					 <li><a href="#;" name="tab">탭</a></li>
-					<!--<li><a href="#;" name="bxslider_bak">bx-slider_bak</a></li>-->
-					<!-- <li><a href="#;" name="headerHide">헤더숨김</a></li> -->
-					<!-- <li><a href="#;" name="floBnr">플로팅배너</a></li> -->
-					<!-- <li><a href="#;" name="offset">좌표구하기</a></li> -->
-					<!-- <li><a href="#;" name="etc">기타</a></li> -->
-					<!--<li><a href="#;" name="comment">MD 댓글영역(이동예정)</a></li>
-					<li><a href="#;" name="comment2">PSAT 댓글영역(이동예정)</a></li>-->
-					<!--<li><a href="#;" name="frame">+ 사이트별 정보</a></li>-->
-					<!-- <li><a href="#;"  name="delay">시간차 애니메이션</a></li>
-					<li><a href="#;"  name="scroll_ani">스크롤 애니메이션</a></li> -->
-				</ul>
-				<ol class="etc">
-					<li class="tt">[ 참고자료 ]</li>
-					<li><a href="/Design/publishing_guide/file/NHN_Coding_Conventions_v2.75.pdf" target="_blank">- 네이버 코딩가이드</a></li>
-					<li>
-						<a class="d_ib" href="/Design/publishing_guide/file/SOM_A3_CMYK.pdf" target="_blank">- 네이버 SOM</a> 
-						<a class="d_ib" style="padding-left: 5px;" href="/Design/publishing_guide/file/SOM_monitor.png" target="_blank">(모니터 배경화면)</a>
-					</li>
-				</ol>
-				<!-- <ol class="etc">
-					<li class="tt">[ 참고사이트 ]</li>
+			<h1>
+				<em>JHK CODE</em>
+				<span>Copyright (c) JHK</span>
+				<span>이 페이지의 모든 저작권은 JHK 에게 있습니다.</span>
+			</h1>
+			<ul class="cd_nav">
+				<li>
+					<a href="javascript:;">스크립트</a>
+					<ul>
+						<li><a href="./page/script_tab.html">탭</a></li>
+						<li><a href="./page/winPop.html">윈도우팝업</a></li>
+						<li><a href="./page/layerPop.html">레이어팝업</a></li>
+						<li><a href="./page/movie.html">동영상/+팝업</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">Bxslider</a>
+					<ul>
+						<li><a href="./page/bxslider_ui.html">bx-slider_ui</a></li>
+						<li><a href="./page/bxslider.html">bx-slider (ver. old)</a></li>
+						<li><a href="./page/bxslider_ui_test.html">bx-slider_ui (test)</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">애니메이션</a>
+					<ul>
+						<li><a href="./page/tweenmax.html">TWEENMAX</a></li>
+						<li><a href="./page/animation.html">CSS</a></li>
+					</ul>
+				</li>
+				<!--
+				<li><a href="#;" name="bxslider_bak">bx-slider_bak</a></li>
+				<li><a href="#;" name="floBnr">플로팅배너</a></li>
+				<li><a href="#;" name="offset">좌표구하기</a></li>
+				<li><a href="#;" name="etc">기타</a></li>
+				<li><a href="#;" name="frame">+ 사이트별 정보</a></li>
+				<li><a href="#;"  name="delay">시간차 애니메이션</a></li>
+				<li><a href="#;"  name="scroll_ani">스크롤 애니메이션</a></li>
+				-->
+			</ul>
+
+			<div class="etc_link">
+				<a href="javascript:;" class="tit btnToggle off">· 참고</a>
+				<ul style="display: none;">
+					<li><a href="https://validator.w3.org/unicorn/" target="_blank">- W3C : validator </a></li>
 					<li><a href="http://wah.or.kr/Participation/technique.asp" target="_blank">- 웹 콘텐츠 제작기법 (웹접근성 연구소)</a></li>
 					<li><a href="http://m.egovframe.go.kr/mguide3.5/" target="_blank">- 모바일 표준 코드 가이드 (행정자치부)</a></li>
 					<li><a href="http://ko.learnlayout.com/toc.html" target="_blank">- CSS 레이아웃 배우기</a></li>
-					<li><a href="http://naradesign.net/wp/category/css/" target="_blank">- CSS 레이아웃 (나라디자인)</a></li>
-					<li><a href="http://naradesign.net/css3/documentation.html" target="_blank">- CSS , 웹표준 (나라디자인)</a></li>
 					<li><a href="http://apps.eky.hk/css-triangle-generator/" target="_blank">- CSS triangle generator</a></li>
-					<li><a href="http://css3buttongenerator.com/" target="_blank">- CSS Button generator</a></li>
 					<li><a href="https://material.io/tools/icons//" target="_blank">- Material icons (구글아이콘)</a></li>
-					<li><a href="https://validator.w3.org/unicorn/" target="_blank">- W3C : validator </a></li>
 					<li><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">- Emmet_Cheat-sheet (단축키)</a></li>
-				</ol> -->
+					<li><a href="./file/NHN_Coding_Conventions_v2.75.pdf" target="_blank">- 네이버 코딩가이드</a></li>
+					<li>
+						<a class="d_ib" href="./file/SOM_A3_CMYK.pdf" target="_blank">- 네이버 SOM</a>
+						<a class="d_ib" href="./file/SOM_monitor.png" target="_blank">- SOM 배경화면</a>
+					</li>
+				</ul>
 			</div>
+
 		</section>
 		<!--// LNB -->
-		<section id="container">
-
+		<section id="cd_guide_container">
+			<iframe id="cd_container" src="./page/script_tab.html" frameborder="0"></iframe> <!-- ./page/_list.html -->
 		</section>
-	</div><!--//wrap  -->
+	</div><!--//wrap -->
 
 
 
+	<script>
+		$(document).ready(function () {
 
 
+		}); //$(document).ready
+	</script>
 
-</body>
-</html>

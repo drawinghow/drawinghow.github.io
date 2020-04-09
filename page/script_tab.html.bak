@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!------------------------------------------------------------
+    Copyright (c) JHK / 이 페이지의 모든 저작권은 JHK 에게 있습니다.
+  -------------------------------------------------------------->
+  <title>코딩 가이드</title>
+  <meta charset="utf-8" >
+  <meta name="robots" content="noindex,nofollow" >
+  <meta name="author" content="JHK" >
+  <meta name="copyright" content="http://drawinghow.github.io/" >
+  <meta http-equiv="imagetoolbar" content="no" >
+  <meta http-equiv="cache-control" content="no-chche" >
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
+
+  <link rel="shortcut icon" href="../jhk_ico.ico" >
+  <link rel="stylesheet" href="../css/font.css" >
+  <link rel="stylesheet" href="../css/common.css" >
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <div id="cd_contents">
+	<h2>Script 라이브러리</h2>
+
+	<!-- nav -->
+	<section id="navigation">
+		<div class="navi">
+			<ul class="menu">
+				<li class="sub_box">
+					<strong>앵커</strong>
+					<ul class="sub">
+						<li class="on"><a href="#anchor">앵커</a></li>
+					</ul>
+				</li>
+				<li class="sub_box">
+					<strong>tab</strong>
+					<ul class="sub">
+						<li><a href="#tab">기본 유형</a></li>
+						<li><a href="#tab_txt">텍스트 유형</a></li>
+						<li><a href="#tab_vertical">세로형</a></li>
+						<li><a href="#tab_type2">이미지 겹치는 유형</a></li>
+						<li><a href="#tab_background">background 유형</a></li>
+						<!--<li><a href="#tab_vertical">세로 유형</a></li>
+						<li><a href="#tab_mv">동영상있을 유형</a></li>-->
+						<li><a href="fixed_tab.html" target="_blank">고정 유형</a></li>
+					</ul>
+				</li>
+				<li class="sub_box">
+					<strong>toggle</strong>
+					<ul class="sub">
+						<li><a href="#toggle">기본 toggle</a></li>
+					</ul>
+				</li>
+				<li class="sub_box">
+					<strong>input</strong>
+					<ul class="sub">
+						<li><a href="#input_check">input-check (기본)</a></li>
+						<li><a href="#input_check2">input-check (한개만선택시)</a></li>
+						<li><a href="#input_radio">input-radio</a></li>
+					</ul>
+				</li>
+				<li class="sub_box">
+					<strong>깜빡이는효과</strong>
+					<ul class="sub">
+						<li><a href="#ex1">style 적용</a></li>
+						<li><a href="#ex2">이미지 적용</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!--// nav -->
+
+<section id="container">
+<div class="index-inner">
+
+<!-- 앵커 -->
+<h2 id="anchor">앵커 <a href="anchor.html" target="_blank" style="text-decoration:underline;font-size:13px;color:#0a46aa">예시 페이지 ></a></h2>
+<div class="viewarea">
+	&lt;a href="javascript:;" onclick="fnSetFocus(<strong style="color:red">'type'</strong>, <strong style="color:red">'type_nm'</strong>, 0)">&lt;/a> <br><br>
+
+	&lt;a href="javascript:;" onclick="fnSetFocus(<strong style="color:red">'id'</strong>, <strong style="color:red">'id명'</strong>, 0)">&lt;/a><br>
+	&lt;a href="javascript:;" onclick="fnSetFocus(<strong style="color:red">'class'</strong>, <strong style="color:red">'class명'</strong>, 0)">&lt;/a>
+
+	<br/><br/>
+
+	<strong style="color:red;font-size:14px">* [메가원격평생교육원]은 함수 넣어줘야함</strong>
+</div>
+<div class="viewarea">
+	<script>
+		//Focus 함수
+		function fnSetFocus(type, type_nm, add_top) {
+			if (type.toUpperCase() != 'ID') {
+				var focus_id = '.'+ type_nm;
+			} else {
+				var focus_id = '#'+ type_nm;
+			}
+
+			//Target 고정 처리 S
+			var intOffset = $(focus_id).offset();
+			var intOffsetTop = intOffset.top - add_top;
+			var intOffsetLeft = intOffset.left;
+
+			$('body, html').stop();
+			$('body, html').animate({ scrollTop: intOffsetTop }, "slow");
+			//Target 고정 처리 E
+		}
+	</script>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!-- //앵커 -->
+
+<!-- tab -->
+<h2 id="tab">tab</h2>
+<div class="viewarea">
+<style>
+	.js_tab_wrap{width:1100px;margin:0 auto;}
+	.js_tab_wrap .js_tab_type{width:100%;}
+	.js_tab_wrap .js_tab_type:after{content:'';display:block;clear:both}
+	.js_tab_wrap .js_tab_type li{width:273px;margin-left:2px;float:left;}
+	.js_tab_wrap .js_tab_type li:first-child{margin-left:0;}
+	.js_tab_wrap .js_tab_type li a{height:156px;background:url(http://img.megamd.co.kr/2019/0718_basic/basic_con05_tab.jpg) no-repeat 0 0;font-size:0;display:block;}
+	.js_tab_wrap .js_tab_type li.tab2 a{background-position-x:-275px}
+	.js_tab_wrap .js_tab_type li.tab3 a{background-position-x:-550px}
+	.js_tab_wrap .js_tab_type li.tab4 a{background-position-x:-825px}
+	.js_tab_wrap .js_tab_type li.on a{background-position-y:-156px}
+	.js_tab_wrap .js_tab_con_type{display:none}
+	.js_tab_wrap .js_tab_con_type.on{display:block}
+</style>
+<script>
+	$(document).ready(function () {
+		$('.js_tab_type li a').on('click', function (e) {
+			var targetId = $(this).attr("href");
+			e.preventDefault();
+			$(this).parent('li').siblings().removeClass('on');
+			$(this).parent('li').addClass('on');
+			$(targetId).addClass('on').siblings().removeClass('on');
+		});
+	});
+</script>
+<div class="js_tab_wrap">
+	<ul class="js_tab_type">
+		<li class="tab1 on"><a href="#basic_con0501">tab1</a></li>
+		<li class="tab2"><a href="#basic_con0502">tab2</a></li>
+		<li class="tab3"><a href="#basic_con0503">tab3</a></li>
+		<li class="tab4"><a href="#basic_con0504">tab3</a></li>
+	</ul>
+	<div id="basic_con0501" class="js_tab_con_type on">
+		<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0501.jpg" alt="" />
+	</div>
+	<div id="basic_con0502" class="js_tab_con_type">
+		<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0502.jpg" alt="" />
+	</div>
+	<div id="basic_con0503" class="js_tab_con_type">
+		<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0503.jpg" alt="" />
+	</div>
+	<div id="basic_con0504" class="js_tab_con_type">
+		<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0504.jpg" alt="" />
+	</div>
+</div>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//tab-->
+
+<!-- tab -->
+<h2 id="tab_txt">tab_텍스트</h2>
+<div class="viewarea">
+	<style>
+		.js_tab_wrap{width:1100px;margin:0 auto;}
+		.js_tab_wrap .js_tab_text{width:100%;}
+		.js_tab_wrap .js_tab_text:after{content:'';display:block;clear:both}
+		.js_tab_wrap .js_tab_text li{width:25%;float:left;}
+		.js_tab_wrap .js_tab_text li a{display: block; height: 60px; line-height: 58px; font-size: 20px; text-align: center; background: #ddd;  }
+		.js_tab_wrap .js_tab_text li.on a{background: #000; color:#fff;}
+		.js_tab_wrap .js_tab_con_type{display:none}
+		.js_tab_wrap .js_tab_con_type.on{display:block}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$('.js_tab_text li a').on('click', function (e) {
+				var targetId = $(this).attr("href");
+				e.preventDefault();
+				$(this).parent('li').siblings().removeClass('on');
+				$(this).parent('li').addClass('on');
+				$(targetId).addClass('on').siblings().removeClass('on');
+			});
+		});
+	</script>
+	<div class="js_tab_wrap">
+		<ul class="js_tab_text">
+			<li class="tab1 on"><a href="#js_tab_text1">tab1</a></li>
+			<li class="tab2"><a href="#js_tab_text2">tab2</a></li>
+			<li class="tab3"><a href="#js_tab_text3">tab3</a></li>
+			<li class="tab4"><a href="#js_tab_text4">tab3</a></li>
+		</ul>
+		<div id="js_tab_text1" class="js_tab_con_type on">
+			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0501.jpg" alt="" />
+		</div>
+		<div id="js_tab_text2" class="js_tab_con_type">
+			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0502.jpg" alt="" />
+		</div>
+		<div id="js_tab_text3" class="js_tab_con_type">
+			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0503.jpg" alt="" />
+		</div>
+		<div id="js_tab_text4" class="js_tab_con_type">
+			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0504.jpg" alt="" />
+		</div>
+	</div>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//tab-->
+
+<!-- tab 랜덤노출
+<h2 id="tab_random">tab _랜덤노출 ( ul class="randomview" 추가시 동작)</h2>
+<div class="viewarea">
+	<script>
+		$(document).ready(function () {
+			var random = Math.floor( Math.random()*4 ); //탭갯수 ( *4 = 0~3까지 )
+			var randomTargetID = $('.randomview li').eq(random).find('a').attr('href');
+			$('.randomview li').eq(random).addClass('on').siblings().removeClass('on');
+			$(randomTargetID).addClass('on').siblings().removeClass('on');
+		});
+	</script>
+	<div class="js_tab_wrap">
+		<ul class="js_tab_text randomview">
+			<li class="tab1 on"><a href="#js_tab_test1">tab1</a></li>
+			<li class="tab2"><a href="#js_tab_test2">tab2</a></li>
+			<li class="tab3"><a href="#js_tab_test3">tab3</a></li>
+			<li class="tab4"><a href="#js_tab_test4">tab3</a></li>
+		</ul>
+		<div id="js_tab_test1" class="js_tab_con_type on">
+			랜덤노출 tab1
+		</div>
+		<div id="js_tab_test2" class="js_tab_con_type">
+			랜덤노출 tab2
+		</div>
+		<div id="js_tab_test3" class="js_tab_con_type">
+			랜덤노출 tab3
+		</div>
+		<div id="js_tab_test4" class="js_tab_con_type">
+			랜덤노출 tab4
+		</div>
+	</div>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div> -->
+<!--//tab 랜덤노출-->
+
+
+<!-- tab_세로형 -->
+<h2 id="tab_vertical">tab_세로형</h2>
+<div class="viewarea">
+	<style>
+		.js_tab_wrap1 {position: relative;}
+		.js_tab_wrap1:after {clear: both;content: '';display: block;}
+		.js_tab_wrap1 .js_tab_type {float: left;width: 315px;}
+		.js_tab_wrap1 .js_tab_type li {/*margin-bottom: 1px; 버튼 위아래 간격 필요시*/}
+		.js_tab_wrap1 .js_tab_type li a{ display: block;width: 315px; height: 71px;font-size: 0;background: url(http://design.megamd.co.kr/Design/publishing_guide/img/jysmin_tab.jpg) 0 0 no-repeat;}
+		.js_tab_wrap1 .js_tab_type li.bt2 a{background-position-y: -71px;}
+		.js_tab_wrap1 .js_tab_type li.bt3 a{background-position-y: -142px;}
+		.js_tab_wrap1 .js_tab_type li.bt4 a{background-position-y: -213px;}
+		.js_tab_wrap1 .js_tab_type li.bt5 a{background-position-y: -284px;}
+		.js_tab_wrap1 .js_tab_type li.bt6 a{background-position-y: -355px;}
+		.js_tab_wrap1 .js_tab_type li.bt7 a{background-position-y: -426px;}
+		.js_tab_wrap1 .js_tab_type li.bt8 a{background-position-y: -497px;}
+		.js_tab_wrap1 .js_tab_type li.bt9 a{background-position-y: -568px;}
+		.js_tab_wrap1 .js_tab_type li.on a{background-position-x: -315px; }
+		.js_tab_wrap1 .js_tab_con_type{display:none;float: left;width: 345px;}
+		.js_tab_wrap1 .js_tab_con_type.on{display:block}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$('.js_tab_type1 li a').on('click', function (e) {
+				var targetId = $(this).attr("href");
+				e.preventDefault();
+				$(this).parent('li').siblings().removeClass('on');
+				$(this).parent('li').addClass('on');
+				$(targetId).addClass('on').siblings().removeClass('on');
+			});
+		});
+	</script>
+	<div class="js_tab_wrap1">
+		<ul class="js_tab_type">
+			<li class="bt1 on"><a href="#jyscurri_con0101">tab1</a></li> 
+			<li class="bt2"><a href="#jyscurri_con0102">tab2</a></li> 
+			<li class="bt3"><a href="#jyscurri_con0103">tab3</a></li> 
+			<li class="bt4"><a href="#jyscurri_con0104">tab4</a></li> 
+			<li class="bt5"><a href="#jyscurri_con0105">tab5</a></li> 
+			<li class="bt6"><a href="#jyscurri_con0106">tab6</a></li> 
+			<li class="bt7"><a href="#jyscurri_con0107">tab7</a></li> 
+			<li class="bt8"><a href="#jyscurri_con0108">tab8</a></li> 
+			<li class="bt9"><a href="#jyscurri_con0109">tab9</a></li> 
+		</ul> 							
+		<div id="jyscurri_con0101"  class="js_tab_con_type on">
+			<img src="http://image.megalawyers.co.kr/2019/1216_jyscurri/loadcon01.jpg" alt="">
+		</div>			
+		<div id="jyscurri_con0102"  class="js_tab_con_type">
+			<img src="http://image.megalawyers.co.kr/2019/1216_jyscurri/loadcon02.jpg" alt="">
+		</div>		
+		<div id="jyscurri_con0103"  class="js_tab_con_type">
+			<img src="http://image.megalawyers.co.kr/2019/1216_jyscurri/loadcon03.jpg" alt="">
+		</div>		
+		<div id="jyscurri_con0104"  class="js_tab_con_type">
+			<img src="http://image.megalawyers.co.kr/2019/1216_jyscurri/loadcon04.jpg" alt="">
+		</div>		
+		<div id="jyscurri_con0105"  class="js_tab_con_type">
+			<img src="http://image.megalawyers.co.kr/2019/1216_jyscurri/loadcon05.jpg" alt="">
+		</div>	
+		<div id="jyscurri_con0106"  class="js_tab_con_type">
+			<img src="http://image.megalawyers.co.kr/2019/1216_jyscurri/loadcon06.jpg" alt="">
+		</div>	
+		<div id="jyscurri_con0107"  class="js_tab_con_type">
+			<img src="http://image.megalawyers.co.kr/2019/1216_jyscurri/loadcon07.jpg" alt="">
+		</div>	
+		<div id="jyscurri_con0108"  class="js_tab_con_type">
+			<img src="http://image.megalawyers.co.kr/2019/1216_jyscurri/loadcon08.jpg" alt="">
+		</div>
+		<div id="jyscurri_con0109"  class="js_tab_con_type">
+			<img src="http://image.megalawyers.co.kr/2019/1216_jyscurri/loadcon09.jpg" alt="">
+		</div>
+	</div>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//tab_세로형 -->
+
+<!-- tab_type2 -->
+<h2 id="tab_type2">tab_tyep2</h2>
+<div class="viewarea">
+	<style>
+		.js_tab_type2{width:1020px;height:404px;margin:0 auto;background:url(http://img.megamd.co.kr/2019/0926_step2/step2_con05_tab_off.jpg) no-repeat 0 0;}
+		.js_tab_type2:after{content:'';display:block;clear:both}
+		.js_tab_type2 li{float:left;width:255px;height:404px;}
+		.js_tab_type2 li span{width:255px;height:404px;display:block;position:relative;cursor:pointer;}
+		.js_tab_type2 li span img{display:none;}
+		.js_tab_type2 li.on span img{display:block;position:absolute;top:0;}
+		.js_tab_type2 li.tab2 span img{left:-50px;}
+		.js_tab_type2 li.tab3 span img{left:-18px;}
+		.js_tab_type2 li.tab4 span img{left:-30px;}
+		.js_tab_con_type{display:none}
+		.js_tab_con_type.on{display:block}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$('.js_tab_type2 li span').on('click', function (e) {
+				var targetId = $(this).attr("class");
+				$(this).parent('li').siblings().removeClass('on');
+				$(this).parent('li').addClass('on');
+				$(targetId).addClass('on').siblings().removeClass('on');
+			});
+		});
+	</script>
+	<ul class="js_tab_type2">
+		<li class="tab1 on">
+			<span class="#step2_con0601">
+				<img src="http://img.megamd.co.kr/2019/0926_step2/step2_con05_tab1.png" alt="노용관 교수님" usemap="#step2_con05_tab1" border="0">
+				<map name="step2_con05_tab1">
+					<area shape="circle" coords="221,353,18" href="#" alt="교수카페">
+				</map>
+			</span>
+		</li>
+		<li class="tab2">
+			<span class="#step2_con0602">
+				<img src="http://img.megamd.co.kr/2019/0926_step2/step2_con05_tab2.png" alt="김홍영 교수님" usemap="#step2_con05_tab2" border="0">
+				<map name="step2_con05_tab2">
+					<area shape="circle" coords="224,354,18" href="#" alt="교수카페">
+				</map>
+			</span>
+		</li>
+		<li class="tab3">
+			<span class="#step2_con0603">
+				<img src="http://img.megamd.co.kr/2019/0926_step2/step2_con05_tab3.png" alt="박윤 교수님" usemap="#step2_con05_tab3" border="0">
+				<map name="step2_con05_tab3">
+					<area shape="circle" coords="183,353,18" href="#" alt="교수카페">
+				</map>
+			</span>
+		</li>
+		<li class="tab4">
+			<span class="#step2_con0604">
+				<img src="http://img.megamd.co.kr/2019/0926_step2/step2_con05_tab4.png" alt="김동훈 교수님" usemap="#step2_con05_tab4" border="0">
+				<map name="step2_con05_tab4">
+					<area shape="circle" coords="213,353,18" href="#" alt="교수카페">
+				</map>
+			</span>
+		</li>
+	</ul>
+	<div id="step2_con0601" class="js_tab_con_type on">
+		1
+	</div>
+	<div id="step2_con0602" class="js_tab_con_type">
+		2
+	</div>
+	<div id="step2_con0603" class="js_tab_con_type">
+		3
+	</div>
+	<div id="step2_con0604" class="js_tab_con_type">
+		4
+	</div>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//tab_type2-->
+
+<!-- tab -->
+<h2 id="tab_background">tab_background</h2>
+<div class="viewarea">
+	<style>
+		.tab_bg_img{cursor:pointer}
+		.tab_bg_box{position:relative;}
+		.tab_bg_on{cursor:pointer;position:absolute;bottom:82px;z-index:1;display:none}
+		.tab_bg_on.tab1{left:445px;}
+		.tab_bg_on.tab2{left:550px;}
+		.tab_bg_on.tab3{left:657px;}
+		.tab_bg_on.tab4{left:795px;}
+		.tab_bg_on.tab5{left:930px;}
+		.tab_bg_on.tab6{left:1042px;}
+		.tab_bg_on.on{display:block;}
+		.tab_bg_on.active{display:block;z-index:2;}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$(".tab_bg").mouseenter(function(e){
+				e.preventDefault();
+				var tabID = $(this).attr("href");
+				$(tabID).addClass('on').siblings().removeClass('on');
+			});
+			$(".tab_bg_box").mouseleave(function(){
+				$(this).find('.tab_bg_on').siblings().removeClass('on');
+			});
+		});
+	</script>
+	<div class="tab_bg_box">
+		<p class="tab_bg_on tab1 active" id="tab_bg_on1">
+			<img src="http://img.megaland.co.kr/2019/1002_hjm_new/promote_top_tab_on1.png" alt="고상철 교수님" />
+		</p>
+		<p class="tab_bg_on tab2" id="tab_bg_on2">
+			<img src="http://img.megaland.co.kr/2019/1002_hjm_new/promote_top_tab_on2.png" alt="이종호 교수님" />
+		</p>
+		<p class="tab_bg_on tab3" id="tab_bg_on3">
+			<img src="http://img.megaland.co.kr/2019/1002_hjm_new/promote_top_tab_on3.png" alt="채희대 교수님" />
+		</p>
+		<p class="tab_bg_on tab4" id="tab_bg_on4">
+			<img src="http://img.megaland.co.kr/2019/1002_hjm_new/promote_top_tab_on4.png" alt="한종민 교수님" />
+		</p>
+		<p class="tab_bg_on tab5" id="tab_bg_on5">
+			<img src="http://img.megaland.co.kr/2019/1002_hjm_new/promote_top_tab_on5.png" alt="황재원 교수님" />
+		</p>
+		<p class="tab_bg_on tab6" id="tab_bg_on6">
+			<img src="http://img.megaland.co.kr/2019/1002_hjm_new/promote_top_tab_on6.png" alt="황정선 교수님" />
+		</p>
+		<img src="http://img.megaland.co.kr/2019/1002_hjm_new/promote_top_tab.png" alt="교수님 입성 이벤트" usemap="#promote_top_tab" class="tab_bg_img"/>
+		<map name="promote_top_tab">
+			<area shape="rect" coords="1090,12,1225,200" class="tab_bg" href="#tab_bg_on6" alt="황정선 교수님">
+			<area shape="rect" coords="948,14,1088,197" class="tab_bg" href="#tab_bg_on5" alt="황재원 교수님">
+			<area shape="rect" coords="826,12,947,198" class="tab_bg" href="#tab_bg_on4" alt="한종민 교수님">
+			<area shape="rect" coords="711,11,823,198" class="tab_bg" href="#tab_bg_on3" alt="채희대 교수님">
+			<area shape="rect" coords="594,14,710,195" class="tab_bg" href="#tab_bg_on2" alt="이종호 교수님">
+			<area shape="rect" coords="456,13,594,196" class="tab_bg" href="#tab_bg_on1" alt="고상철 교수님">
+		</map>
+	</div>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//tab-->
+
+
+<!-- toggle -->
+<h2 id="toggle">toggle_btn</h2>
+<div class="viewarea">
+	<style>
+		.toggle_btn{width:790px;height:64px;background:url(http://img.megals.co.kr/academy/2019/0704_leetshow/btn_info_open.jpg) no-repeat 0 0;font-size:0;display:inline-block;}
+		.toggle_btn.on{background-image:url(http://img.megals.co.kr/academy/2019/0704_leetshow/btn_info_close.jpg);}
+		.toggle_con{display:none;padding:50px;border:1px solid #666}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$(".toggle_btn").on('click', function(e){
+				e.preventDefault();
+				var toggle_con = $(this).attr("href"),
+					toggle_btn = $(this);
+
+				if($(this).hasClass("on") === false){
+					$(toggle_btn).addClass("on");
+					$(toggle_con).slideDown();
+				}else if($(this).hasClass("on") === true){
+					$(toggle_btn).removeClass("on");
+					$(toggle_con).slideUp();
+				}
+			});
+		});
+	</script>
+	<div>
+		<a href="#toggle_con1" class="toggle_btn">열기</a>
+		<div class="toggle_con" id="toggle_con1">
+			유의사항내용1
+		</div>
+
+		<a href="#toggle_con2" class="toggle_btn">열기</a>
+		<div class="toggle_con" id="toggle_con2">
+			유의사항내용2
+		</div>
+	</div>
+</div>
+
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//toggle-->
+
+<!-- input_check (기본) -->
+<h2 id="input_check">input-check (기본)</h2>
+<div class="viewarea">
+	<style>
+		 label.checkbox input{width:0;height:0;-moz-appearance: none;-webkit-appearance: none;}
+		 label.checkbox{ width:20px;height:20px;background: url(http://img.megamd.co.kr/common/btn_input_check.png) 0 0 no-repeat; display:inline-block; cursor: pointer; font-size:0; text-align: left; text-indent: -9999px;}
+		 label.checkbox.on{background-image:url(http://img.megamd.co.kr/common/btn_input_check_on.png);}
+	</style>
+	<script>
+		$(document).ready(function () {
+			//체크박스-다중선택시
+			$('label.checkbox input').click(function(){
+				if( $(this).prop('checked') ){ //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
+					$(this).parent().addClass('on');
+				}else{
+					$(this).prop('checked',false).parent().removeClass('on'); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
+				}
+			});
+		});
+	</script>
+	<label class="checkbox"><input type="checkbox">값1</label>
+	<label class="checkbox"><input type="checkbox">값2</label>
+	<label class="checkbox"><input type="checkbox">값3</label>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//input_check (기본)-->
+
+<!-- input_check (한개만선택시) -->
+<h2 id="input_check2">input-check (한개만선택시)</h2>
+<div class="viewarea">
+	<style>
+		label.checkbox2 input{width:0;height:0;-moz-appearance: none;-webkit-appearance: none;}
+		label.checkbox2{ width:20px;height:20px;background: url(http://img.megamd.co.kr/common/btn_input_check.png) 0 0 no-repeat; display:inline-block; cursor: pointer; font-size:0; text-align: left; text-indent: -9999px;}
+		label.checkbox2.on{background-image:url(http://img.megamd.co.kr/common/btn_input_check_on.png);}
+	</style>
+	<script>
+		$(document).ready(function () {
+			//체크박스-한개만 선택시
+			$('label.checkbox2 input').click(function(){
+				if( $(this).prop('checked') ){ //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
+					$(this).parent().addClass('on').siblings().removeClass('on').find('input').prop('checked',false); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
+				}else{
+					$(this).prop('checked',false).parent().removeClass('on'); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
+				}
+			});
+
+		});
+	</script>
+	<label class="checkbox2"><input type="checkbox">값1</label>
+	<label class="checkbox2"><input type="checkbox">값2</label>
+	<label class="checkbox2"><input type="checkbox">값3</label>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//input_check (한개만선택시)-->
+
+<!-- input_radio -->
+<h2 id="input_radio">input-radio</h2>
+<div class="tip_box">
+
+</div>
+<div class="viewarea">
+	<style>
+		label.radio input{width:0;height:0;-moz-appearance: none;-webkit-appearance: none;}
+		label.radio{ width:18px;height:18px;background: url(http://img.megamd.co.kr/common/btn_input_radio.png) 0 0 no-repeat; display:inline-block; cursor: pointer; font-size:0; text-align: left; text-indent: -9999px;}
+		label.radio.on{background-image:url(http://img.megamd.co.kr/common/btn_input_radio_on.png);}
+	</style>
+	<script>
+		$(document).ready(function () {
+			//라디오 버튼
+			$('label.radio input').click(function(){
+				var name = $(this).attr("name");
+				var radio_input = $('label.radio input[name='+ name +']');
+				radio_input.parent().removeClass('on');
+				radio_input.prop('checked',false); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
+				$(this).parent().addClass('on');
+				$(this).prop('checked',true); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr] 로 변경하여 작업해주세요.
+			});
+		});
+	</script>
+	<!-- name="radio_name"으로 라디오버튼 묶어주기 -->
+	<label class="radio on"><input type="radio" name="radio_name" checked>값1</label>
+	<label class="radio"><input type="radio" name="radio_name">값2</label>
+	<label class="radio"><input type="radio" name="radio_name">값3</label>
+
+	<br><br>
+
+	<!-- name="radio_name1"으로 라디오버튼 묶어주기 -->
+	<label class="radio on"><input type="radio" name="radio_name1" checked>값1</label>
+	<label class="radio"><input type="radio" name="radio_name1">값2</label>
+	<label class="radio"><input type="radio" name="radio_name1">값3</label>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//input_radio-->
+
+
+<h2 id="ex1">style 적용</h2>
+<div class="viewarea">
+	<script>
+		$(document).ready(function() {
+			setInterval(function() {
+				if($(".d_day").hasClass("on") == false){
+					$(".d_day.active").addClass("on");
+				}else{
+					$(".d_day.active").removeClass("on");
+				}
+			},500);
+		});
+	</script>
+	<style>
+		.d_day{padding:45px 0 45px 45px;background:#ffad01}
+		.d_day span{margin-top:9px;font-weight:bold;color:#fff;font-family:'맑은고딕';width:140px;height:42px;line-height:40px;font-size:28px;display:block;background:#000;text-align:center;}
+		.d_day span em{color:#ffad01;}
+		.d_day.active.on span{background:#fff;color:#000;}
+		.d_day.active.on span em{color:#ff0000;}
+	</style>
+	<div class="d_day active"><!--d-day5이하일때 active : 깜빡이는 효과-->
+		<span>D-<em>14</em></span>
+	</div>
+</div>
+
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+
+
+<h2 id="ex2">이미지 여러개 적용</h2>
+<div class="viewarea">
+	<script>
+		function ani_img(){
+			var rolling_lyr = $(".rolling_lyr img"),
+				rolling_lyr_active = $(".rolling_lyr img.active");
+			if(rolling_lyr_active.index() == rolling_lyr.length-1 ){
+				rolling_lyr_active.removeClass("active");
+				rolling_lyr.eq(0).addClass("active");
+			}else{
+				rolling_lyr_active.removeClass("active").next().addClass("active");
+			}
+		}
+
+		setInterval(function(){
+			ani_img();
+		},2000);
+	</script>
+	<style>
+		.rolling_lyr img{display:none}
+		.rolling_lyr .active{display:block;}
+	</style>
+	<a href="" class="rolling_lyr">
+		<img src="img/lyr_01.png" alt="1" class="active">
+		<img src="img/lyr_02.png" alt="2">
+		<img src="img/lyr_03.png" alt="3">
+		<img src="img/lyr_04.png" alt="4">
+	</a>
+
+</div>
+
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+
+
+
+<!--
+<h2 id="input_radio">input-radio</h2>
+<div class="viewarea">
+
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>-->
+
+</div>
+</section>
+</div>
+</body>
+</html>

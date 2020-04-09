@@ -226,6 +226,20 @@ var __globalBxslider = {
 		});
 	},
 	reloadSlider: function () {
+		/*2019.10.30 추가*/
+		for (var i in this.bxList) {
+			if ($.isNumeric(i) === false)
+				continue;
+			try {
+				this.bxList[i].reloadSlider();
+			}
+			catch (e) {
+				console.warn('Should Remove Legacy Code in bxslider.js');
+				continue;
+			}
+		}
+		/*2019.10.30 추가*/
+		/*2019.10.30 삭제
 		var lThis = this;
 		var el = '.bxslider-default';
 		$(el).each(function (i, $this) {
@@ -234,7 +248,8 @@ var __globalBxslider = {
 			lThis.bxList[idx].reloadSlider();
 			__globalBxslider.setup(idx, $this);
 			//lThis.bxList[idx].resize();
-		});
+		});*/
+
 		$('.bxslider-default').find('li').hover(
 			function () {
 				$(this).addClass('on').siblings('li').removeClass('on');
@@ -369,4 +384,3 @@ $(function () {
 	};
 })(jQuery);
 // ⓐ $.fn.visible Jquery 사용자 함수 추가끝
-ddddd

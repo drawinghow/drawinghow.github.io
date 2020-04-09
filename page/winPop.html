@@ -1,0 +1,89 @@
+
+		<div class="windowPop">
+			<div class="center_align">
+				<h2>팝업 가이드</h2>
+				<div class="contents">
+					<dl class="dl1">
+						<dt><h3>1. 윈도우 팝업</h3></dt>
+						<dd>
+
+							<h4 class="pt0">HTML 예시</h4>
+<pre class="box1 mt5">
+	< a href="<b class="color_red1">guide.pop.asp</b>" onclick="window.open( this.href, '_blank', '<b class="color_red1">width</b>=850, <b class="color_red1">height</b>=740, top=0, left=0, <b class="color_red1">scrollbars</b>=yes' ); return false">버튼< /a>
+</pre>
+
+							<h4 class="d-ib">TEST</h4> 
+								
+								<a class="btn01" href="http://design.megals.co.kr/full_service_2019/full_service/guide.pop.asp"onclick="window.open(this.href,'_blank','width=850,height=740,top=0,left=0,scrollbars=yes');return false;">팝업띄우기 버튼</a>
+							
+							
+							<ul class="ul1 mt20">
+								<li class="color_red1 fw_b">* 사용법 :  href (팝업주소) 수정,  onclick="..."복사하여 옵션값 변경</li>
+								<li class="fw_b">* 주의 :  팝업창의 실제 width-height 값 잘보고 적용 ( border나 padding 포함 ) </li>
+								<li>&nbsp;&nbsp; - width-height 이 1px이라도 맞지 않으면 스크롤이 발생할 수 있음</li>
+								<li>&nbsp;&nbsp; - 개발자도구(F12) 로 border나 padding를 포함한 실제 width-height값 확인하기</li>
+								<li>* < area > 태그 에서도 동일하게 사용가능 </li>
+							</ul>
+							<ul class="ul1 mt20">
+								<li class="tit">옵션 설명</li>
+								<li><b>this.href</b> : 현재 a의 href (팝업창 주소)</li>
+								<li><b>_blank</b> : 새 창으로 로드</li>
+								<li><b>width, height</b> : 팝업창의 가로, 세로 값</li>
+								<li><b>top, left</b> : 팝업창 띄워질 위치(윈도우 왼쪽 상단 기준)</li>
+								<li><b>scrollbars</b>: 스크롤바 유무 (yes=생김, no=안생김) </li>
+								<li style="padding-left: 60px;">"scrollbars=no"로 하더라도 1px 안맞으면 스크롤 생길 수 있음</li>
+							</ul>
+							<ul class="ul1 mt20">
+								<li><a class="btn02" href="https://www.w3schools.com/jsref/met_win_open.asp"target="_blank">참고사이트 : w3</a></li>
+								<li class="mt5"><a class="btn02" href="https://www.hooni.net/xe/study/8576"target="_blank">참고사이트 : 옵션설명 및 Javascript 코드 예제</a></li>
+							</ul>
+							
+						</dd>
+						<dt><h3>2. 윈도우 팝업  "IE 여백 문제"해결 ( width/height 값을 .popup에 지정 후 아래 스크립트 사용)</h3></dt>
+						<dd>
+<pre class="box1 mt5">
+
+&lt;!-- 스크롤 없는 팝업 예시 --&gt;
+&lt;body&gt;	
+
+	<b>&lt;style&gt;
+		html,body { overflow: hidden !important; }
+	&lt;/style&gt;</b>
+	<strong>&lt;div <b class="color_red1">class="popup"</b> style="overflow: hidden; <b class="color_red1">width:</b> 600px; <b class="color_red1">height:</b> 500px;"&gt;</strong> &lt;!-- widt/height 값 지정 필수  --&gt;
+		&lt;!--  팝업내용  --&gt;
+	<b>&lt;/div&gt;</b>
+
+
+	&lt;script type="text/javascript"src="http://img.megamd.co.kr/common/js/jquery.min.js"&gt;&lt;/script&gt;
+	&lt;script&gt;
+		//팝업 리사이징 ( IE 팝업 사이즈 문제 해결 ) 
+		$(window).load(function() {
+			var popWidth = $('.popup').outerWidth() + (window.outerWidth - window.innerWidth);
+			var popHeight = $('.popup').outerHeight() + (window.outerHeight - window.innerHeight);
+			window.resizeTo( popWidth, popHeight ); //resize 
+		});
+	&lt;/script&gt;
+
+&lt;/body&gt;	
+&lt;!-- 스크롤 없는 팝업 예시 --&gt;
+
+</pre>							
+								<h4 class="d-ib">TEST</h4> 
+								<a class="btn01" href="http://design.megamd.co.kr/Design/publishing_guide/pop_ex2.html"onclick="window.open( this.href,'_blank',' width=600,height=560,top=0,left=0,scrollbars=no' ); return false">팝업띄우기 버튼2</a>
+
+							<ul class="ul1">
+								<li class="color_red1"><b>참고 사이트</b></li>
+								<li class="mt20"><a class="btn02" href="https://m.blog.naver.com/PostView.nhn?blogId=kwlsgy&logNo=70178648508&proxyReferer=https%3A%2F%2Fwww.google.com.hk%2F"target="_blank">팝업창 사이즈 조절</a></li>
+							</ul>	
+
+
+
+						
+						</dd>
+
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		
