@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 
     /******************************************/
-    //토글 버튼
+    //토글 버튼(세로형)
     $('.btnToggle').click(function (e) {
         e.preventDefault();
         if($(this).hasClass('off') || !$(this).hasClass('open')){
@@ -57,13 +57,14 @@ $(document).ready(function() {
         }
     });
 
+    //토글 버튼(가로형)
     $('.btnToggle_left').click(function (e) {
         e.preventDefault();
         var width = $(this).parent().width();
         if($(this).hasClass('off') || !$(this).hasClass('open')){
-            $(this).removeClass('off').addClass('open').parent().animate({left: -width});
+            $(this).removeClass('off').addClass('open').parent().animate({left: 0});
         }else{
-            $(this).addClass('off').removeClass('open').parent().animate({left: 0});
+            $(this).addClass('off').removeClass('open').parent().animate({left: -width});
         }
     });
 

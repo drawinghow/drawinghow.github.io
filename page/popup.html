@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!------------------------------------------------------------
+    Copyright (c) JHK / 이 페이지의 모든 저작권은 JHK 에게 있습니다.
+  -------------------------------------------------------------->
+  <title>코딩 가이드</title>
+  <meta charset="utf-8" >
+  <meta name="robots" content="noindex,nofollow" >
+  <meta name="author" content="JHK" >
+  <meta name="copyright" content="http://drawinghow.github.io/" >
+  <meta http-equiv="imagetoolbar" content="no" >
+  <meta http-equiv="cache-control" content="no-chche" >
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
+
+  <link rel="shortcut icon" href="../jhk_ico.ico" >
+  <link rel="stylesheet" href="../css/font.css" >
+  <link rel="stylesheet" href="../css/common.css" >
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <!--highlight-->
+  <link rel="stylesheet" href="../plugin/highlight/styles/atom-one-dark.css">
+  <script type="text/javascript" src="../plugin/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="../plugin/highlight/highlightjs-line-numbers.min.js"></script>
+  <!--//highlight-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+	<div id="cd_contents">
+
+		<!--contents-navi-->
+		<section id="con_nav">
+			<a href="javascript:;" class="arrow btnToggle_left"><span>토글</span></a>
+			<ul>
+				<li class="on"><a href="#popup_window">팝업-window</a></li>
+				<li><a href="#popup_layer_fixed">레이어팝업-fixed</a></li>
+				<li><a href="#popup_layer_absolute">레이어팝업-absolute</a></li>
+				<li><a href="#popup_layer_imgs">레이어팝업-imgs</a></li>
+			</ul>
+		</section>
+		<!--//contents-navi-->
+
+		<div class="index-inner">
+		<!--소스 Start-->
+
+
+
+<h2 id="popup_window">팝업(window)</h2>
+<div class="viewarea">
+	<a href="popup.html" onclick="window.open( this.href, '_blank', 'width=800, height=500, top=0, left=0, scrollbars=yes' ); return false" style="display: inline-block;padding: 8px 20px;font-size: 12px;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;background: #0f72cf;color: #fff;">윈도우 팝업 (새창)</a>
+
+  <!--팝업 리사이징 ( IE-크롬 팝업 사이즈 여백 해결 ) --><!--
+  <style>html,body { overflow: hidden !important; }</style>
+  <div class="popup" style="overflow: hidden; width: 600px; height: 500px;"> &lt;!&ndash; widt/height 값 지정 필수  &ndash;&gt;팝업내용</div>
+  <script type="text/javascript"src="http://img.megamd.co.kr/common/js/jquery.min.js"></script>
+  <script>
+    $(window).load(function() {
+      var popWidth = $('.popup').outerWidth() + (window.outerWidth - window.innerWidth);
+      var popHeight = $('.popup').outerHeight() + (window.outerHeight - window.innerHeight);
+      window.resizeTo( popWidth, popHeight ); //resize
+    });
+  </script>
+  <!--//팝업 리사이징-->
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//팝업(window)-->
+
+
+
+<h2 id="popup_layer_fixed">팝업(layer-fixed)</h2>
+<div class="viewarea">
+  <a class="btn01" href="javascript:;" onclick="$('#ly_fixed').fadeIn();" style="display: inline-block;padding: 8px 20px;font-size: 12px;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;background: #0f48a1;color: #fff;">fixed 레이어팝업</a>
+
+  <!-- fixed 레이어팝업 -->
+  <style>
+    .layerPopup {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 100; text-align: center;}
+    .layerPopup .ly_Inner { width: 550px; padding:50px; background: #fff;  margin: 150px auto 0; z-index: 999;  position: relative; text-align: left;}
+    .layerPopup .bt_popClose {  right: 25px; top: 25px; position: absolute; display: block; z-index: 1; text-align: left; text-}
+    .layerPopup .ly_dim { position: fixed; left: 0; top: 0; z-index: 990; width: 100%; height: 100%; background: rgba(0,0,0,.5); }
+  </style>
+  <div class="layerPopup" id="ly_fixed">
+    <div class="ly_Inner">
+      <!-- /// 팝업내용 /// -->
+      <a href="javascript:;" class="bt_popClose" onclick="$(this).parent().parent().fadeOut(100);">
+        <img src="http://img.megaland.co.kr/icon/btn_close.png" alt="닫기"> <!-- 각사이트 마다 이미지 주소 바꿔줘야함-->
+      </a>
+    </div>
+    <span class="ly_dim" onclick="$(this).parent().fadeOut(200);"></span>
+  </div>
+  <!-- //fixed 레이어팝업 -->
+
+</div><!-- //viewarea -->
+<div class="source">
+  <pre class="box2"></pre>
+</div>
+<!--//팝업(layer-fixed)-->
+
+
+
+<h2 id="popup_layer_absolute">팝업(layer-absolute)</h2>
+<div class="viewarea">
+  <a class="btn01" href="javascript:;" onclick="$('#ly_absolute').fadeIn();" style="display: inline-block;padding: 8px 20px;font-size: 12px;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;background: #0fb8ad;color: #fff;">absolute 레이어팝업</a>
+
+  <!-- absolute 레이어팝업 -->
+  <style>
+    .layerPopup_ab {display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 100; text-align: center;}
+    .layerPopup_ab .ly_Inner {position: relative; z-index: 999; display: inline-block;margin: 800px auto 0;width: 400px;height: 200px;padding: 20px;background: #fff;}
+    .layerPopup_ab .bt_popClose {top: 0; right: -44px;position: absolute; display: block; }
+    .layerPopup_ab .ly_dim { position: fixed; left: 0; top: 0; z-index: 990; width: 100%; height: 100%; background: rgba(0,0,0,.5); }
+  </style>
+  <div class="layerPopup_ab" id="ly_absolute">
+    <div class="ly_Inner">
+      <!-- /// 팝업내용 /// -->
+      <a href="javascript:;" class="bt_popClose" onclick="$(this).parent().parent().fadeOut(100);">
+        <img src="http://img.megaland.co.kr/icon/btn_close.png" alt="닫기"> <!-- 각사이트 마다 이미지 주소 바꿔줘야함-->
+      </a>
+    </div>
+    <span class="ly_dim" onclick="$(this).parent().fadeOut(200);"></span>
+  </div>
+  <!-- //absolute 레이어팝업 -->
+
+</div><!-- //viewarea -->
+<div class="source">
+  <pre class="box2"></pre>
+</div>
+<!--//팝업(layer-absolute)-->
+
+
+
+<h2 id="popup_layer_imgs">팝업(imgs)</h2>
+<div class="viewarea">
+  <a href="javascript:;" class="btn01" onclick="layerPopupOpen('http://img.megamd.co.kr/2019/0919_kj/pop01.jpg')" style="display: inline-block;padding: 8px 20px;font-size: 12px;background: #ff4e00;color: #fff;">이미지1 보기</a>
+  <a href="javascript:;" class="btn01" onclick="layerPopupOpen('http://img.megamd.co.kr/2019/0919_kj/pop02.jpg')" style="display: inline-block;padding: 8px 20px;font-size: 12px;background: #ff7c07;color: #fff;">이미지2 보기</a>
+
+  <!--imgs 팝업-->
+  <div id="layerPopImg" style="display: none; position: absolute; left: 0; top: 0; z-index: 50; width: 100%; text-align: center;">
+    <div style="position:relative;display: inline-block; z-index: 1;box-shadow: 26px 38px 26px 0 rgba(0, 0, 0, .3);">
+      <img id="imgs" src="" alt=".">
+      <a style="position: absolute; right: 10px; top: 10px; z-index: 2;" href="javascript:;" onclick="layerPopupOpen('no');">
+        <img src="http://img.megaland.co.kr/icon/btn_close.png" alt="닫기"><!-- 각사이트 마다 이미지 주소 바꿔줘야함-->
+      </a>
+    </div>
+  </div>
+  <script type="text/javascript">
+      function layerPopupOpen(imgurl){
+          var position_top = $(this).scrollTop()+100;   //레이어 top 위치
+          var imgsrc = imgurl
+
+          $('#layerPopImg').css({ top : position_top });
+          if( imgsrc == 'no' ){
+              //레이어 닫기
+              $('#layerPopImg').fadeOut(0);
+              $('#imgs').attr('src', '');
+          }else{
+              //레이어 열기
+              $('#layerPopImg').fadeIn(300);
+              $('#imgs').attr('src', imgsrc);
+          }
+      }
+  </script>
+  <!--//imgs 팝업-->
+
+</div><!-- //viewarea -->
+<div class="source">
+  <pre class="box2"></pre>
+</div>
+<!--//팝업(imgs)-->
+
+
+
+
+		<!--//소스 End-->
+		</div>
+	</div>
+
+</body>
+</html>

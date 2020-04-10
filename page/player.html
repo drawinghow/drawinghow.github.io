@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!------------------------------------------------------------
+    Copyright (c) JHK / 이 페이지의 모든 저작권은 JHK 에게 있습니다.
+  -------------------------------------------------------------->
+  <title>코딩 가이드</title>
+  <meta charset="utf-8" >
+  <meta name="robots" content="noindex,nofollow" >
+  <meta name="author" content="JHK" >
+  <meta name="copyright" content="http://drawinghow.github.io/" >
+  <meta http-equiv="imagetoolbar" content="no" >
+  <meta http-equiv="cache-control" content="no-chche" >
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
+
+  <link rel="shortcut icon" href="../jhk_ico.ico" >
+  <link rel="stylesheet" href="../css/font.css" >
+  <link rel="stylesheet" href="../css/common.css" >
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <!--highlight-->
+  <link rel="stylesheet" href="../plugin/highlight/styles/atom-one-dark.css">
+  <script type="text/javascript" src="../plugin/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="../plugin/highlight/highlightjs-line-numbers.min.js"></script>
+  <!--//highlight-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+	<div id="cd_contents">
+
+		<!--contents-navi-->
+		<section id="con_nav">
+			<a href="javascript:;" class="arrow btnToggle_left"><span>토글</span></a>
+			<ul>
+				<li class="on"><a href="#video1">동영상 (기본)</a></li>
+				<li><a href="#video2">Cover 있는 영상</a></li>
+				<li><a href="#video3">특정위치 영상재생</a></li>
+				<li><a href="#video4">레이어팝업-youtube</a></li>
+				<li><a href="#video5">레이어팝업-vimeo</a></li>
+			</ul>
+		</section>
+		<!--//contents-navi-->
+
+		<div class="index-inner">
+		<!--소스 Start-->
+
+
+<h2 id="video1">동영상 (기본)</h2>
+<div class="viewarea">
+	<iframe width="700" height="394" src="https://www.youtube.com/embed/rm8G75Tovvw?autohide=0&autoplay=0&rel=0&vq=hd720&wmode=opaque" frameborder="0" allowfullscreen="" > </iframe>
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//동영상 (기본)-->
+
+
+
+<h2 id="video2">Cover 영상</h2>
+<div class="viewarea">
+
+	<div class="movie1" style="cursor: pointer;"><img src="../img/movie_area.png" alt="동영상커버" style="width: 700px;"></div>
+
+	<script type="text/javascript">
+      $(document).ready(function () {
+          $(' .movie1 ').click(function(){
+              var url_text = '<iframe width="700" height="394" src="https://www.youtube.com/embed/rm8G75Tovvw?autohide=0&autoplay=0&rel=0&vq=hd720&wmode=opaque" frameborder="0" allowfullscreen="" > </iframe>';
+              $(this).html('');
+              $(this).html(url_text);
+          });
+      });
+	</script>
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//Cover 영상-->
+
+
+
+<h2 id="video3">특정위치 영상재생</h2>
+<div class="viewarea">
+
+	<div style="position: relative; width: 1040px; margin: 0 auto;">
+		<img src="http://img.mdnp.co.kr/2018/1213_ttibnr/ttibnr_on.jpg" alt="2019 PEET 백분위 수석, 고득점자 배출 그들이 엠디엔피를 선택한 이유와 시크릿 학습TIP 공개!" usemap="#ttibnr_on">
+		<map name="ttibnr_on">
+			<area shape="circle" coords="240,558,62" href="javascript:;" onclick="vod_play(1);" alt="공승현">
+			<area shape="circle" coords="379,558,62" href="javascript:;" onclick="vod_play(2);" alt="서은채">
+			<area shape="circle" coords="517,558,62" href="javascript:;" onclick="vod_play(3);" alt="유남규">
+			<area shape="circle" coords="655,558,62" href="javascript:;" onclick="vod_play(4);" alt="최수지">
+			<area shape="circle" coords="793,558,62" href="javascript:;" onclick="vod_play(5);" alt="차윤재">
+			<area shape="rect" coords="470,641,795,665" href="https://blog.naver.com/online_mdnp" target="_blank" alt="네이버블로그" onfocus="this.blur();">
+		</map>
+		<div id="vod_frame" style="position: absolute; left: 208px; top: 196px; z-index: 1; width: 618px; height: 276px; background: #1a1a1a;">
+			<img src="http://img.mdnp.co.kr/2018/1213_ttibnr/ttibnr_video.jpg" alt="영상">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//특정위치 동영상재생
+		function vod_play(no) {
+				$('#vod_frame').html('');
+				var vod_src = '';
+
+				if (no == 0){
+						vod_src = '<iframe id="vod_frame" width="618" height="276" src="https://www.youtube.com/embed/51AWAaTW-6I?autoplay=1&vq=hd1080&rel=0&start=0" frameborder="0" allowfullscreen></iframe>';
+				}else if (no == 1){
+						vod_src = '<iframe id="vod_frame" width="618" height="276" src="https://www.youtube.com/embed/51AWAaTW-6I?autoplay=1&vq=hd1080&rel=0&start=174&end=252" frameborder="0" allowfullscreen></iframe>';
+				}else if (no == 2){
+						vod_src = '<iframe id="vod_frame" width="618" height="276" src="https://www.youtube.com/embed/51AWAaTW-6I?autoplay=1&vq=hd1080&rel=0&start=253&end=302" frameborder="0" allowfullscreen></iframe>';
+				}else if (no == 3){
+						vod_src = '<iframe id="vod_frame" width="618" height="276" src="https://www.youtube.com/embed/51AWAaTW-6I?autoplay=1&vq=hd1080&rel=0&start=303&end=409" frameborder="0" allowfullscreen></iframe>';
+				}else if (no == 4){
+						vod_src = '<iframe id="vod_frame" width="618" height="276" src="https://www.youtube.com/embed/51AWAaTW-6I?autoplay=1&vq=hd1080&rel=0&start=410&end=535" frameborder="0" allowfullscreen></iframe>';
+				}else if (no == 5){
+						vod_src = '<iframe id="vod_frame" width="618" height="276" src="https://www.youtube.com/embed/51AWAaTW-6I?autoplay=1&vq=hd1080&rel=0&start=536&end=633" frameborder="0" allowfullscreen></iframe>';
+				}
+				$('#vod_frame').html(vod_src);
+		}
+</script>
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//특정위치 영상재생-->
+
+
+
+
+<h2 id="video4">레이어팝업-youtube</h2>
+<div class="viewarea">
+
+	<!-- 레이어팝업 실행 :   fnPlayMovie('강좌코드');  -->
+	<a class="" href="javascript:;" onclick="fnPlayMovie('RcWN4RdnxDQ');">
+		<img src="http://img.megaland.co.kr/2018/1008_pass3/prof3_08.png" alt="동영상 강좌보기">
+	</a>
+
+	<!-- 레이어팝업 : 영상 -->
+	<div id="layerPop" style="display: none; position: fixed; left: 50%; top: 200px; z-index: 9999; width: 600px; height: 300px; margin-left: -300px; ">
+		<div style="position: relative; z-index: 1;">
+			<iframe style="width: 600px; height: 500px; vertical-align: top;" src="" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="player_youtube" name="playerFrm"></iframe>
+			<a style="position: absolute; right: -50px; top: 0; z-index: 2;cursor: pointer;" onclick="fnPlayMovie('99');"><img src="http://img.megaland.co.kr/icon/layerPopClose.png" alt="닫기"></a>
+		</div>
+		<div id="dimLayer" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.5);" onclick="fnPlayMovie('99');"></div>
+	</div>
+	<!-- //레이어팝업 : 영상 -->
+
+	<script type="text/javascript">
+      //레이어팝업 : 영상
+      function fnPlayMovie(vod_code){
+          url_text = encodeURI('https://www.youtube.com/embed/'+vod_code+'?autoplay=1&vq=hd1080&rel=0&start=0');
+
+          if (vod_code == 99){
+              $('#layerPop').fadeOut();
+              $('#player_youtube').attr('src', '');
+          } else {
+              $('#layerPop').fadeIn();
+              $('#player_youtube').attr('src', url_text);
+          }
+      }
+	</script>
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//레이어팝업-유투브-->
+
+
+
+
+<h2 id="video5">레이어팝업-vimeo</h2>
+<div class="viewarea">
+
+	<!-- 레이어팝업 실행 : fnPlayMovie_vimeo('강좌코드');  -->
+	<a class="" href="javascript:;" onclick="fnPlayMovie_vimeo('259411563');">
+		<img src="http://img.megaland.co.kr/2018/1008_pass3/prof3_08.png" alt="동영상 강좌보기">
+	</a>
+
+	<!-- 레이어팝업 : 영상 -->
+	<div id="layerPop_vimeo" style="display: none; position: fixed; left: 50%; top: 200px; z-index: 9999; width: 500px; height: 300px; margin-left: -250px; ">
+		<div style="position: relative; z-index: 1;">
+			<iframe style="width: 500px; height: 300px; vertical-align: top;" src="" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="player_vimeo" name="playerFrm"></iframe>
+			<a style="position: absolute; right: -50px; top: 0; z-index: 2;cursor: pointer;" onclick="fnPlayMovie_vimeo('99');">
+				<img src="http://img.megaland.co.kr/icon/layerPopClose.png" alt="닫기">
+			</a>
+		</div>
+		<div id="dimLayer_vimeo" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.5);" onclick="fnPlayMovie_vimeo('99');"></div>
+	</div>
+	<!-- //레이어팝업 : 영상 -->
+
+	<script type="text/javascript">
+      //레이어팝업 : 영상
+      function fnPlayMovie_vimeo(vod_code){
+          url_text = encodeURI('https://player.vimeo.com/video/'+vod_code+'?quality=1080p&autoplay=1');
+
+          if (vod_code == 99){
+              $('#layerPop_vimeo').fadeOut();
+              $('#player_vimeo').attr('src', '');
+          } else {
+              $('#layerPop_vimeo').fadeIn();
+              $('#player_vimeo').attr('src', url_text);
+          }
+      }
+	</script>
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//레이어팝업-vimeo-->
+
+
+
+
+
+
+		<!--//소스 End-->
+		</div>
+	</div>
+
+</body>
+</html>
