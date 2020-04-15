@@ -1,0 +1,196 @@
+@charset "euc-kr";
+
+html { overflow:scroll; overflow-x:auto; }
+/* header ,footer */
+#head {overflow: hidden;/*height: 0;border-bottom: 0;*/}
+#footer {display: none;}
+
+/* fullpage */
+#full_wrap .section {overflow: hidden;}
+
+/* layout */
+#full_wrap {position: relative;text-align: center;}
+#full_wrap .inner {position: relative;width: 1800px;margin: 0 auto;}
+#full_wrap .inner:after {clear: both;content: '';display: block;}
+#full_wrap .top .inner{overflow: visible;}
+#full_wrap .confix {}	 /* 스크롤이 생성되는 섹션 */
+
+/* customizing */
+/*#full_wrap .shadow {display: block;position: absolute;z-index: 10;top: 0;left: 0;width: 100%;height: 15px;background: url(http://img.megalawyers.co.kr/thecampus/2018/0618_open/top_shadow.png) 0 0 repeat-x;}*/
+#full_wrap .overflow{width:0;overflow:hidden;z-index:2}
+#full_wrap .h2 {position: relative;z-index: 10;width: 1800px;height: 865px;}
+#full_wrap .h2 > div{position: absolute;z-index: 1;left: 50%;opacity:0}
+
+/* top */
+#full_wrap .top .h2 .t1 {top: 233px;margin-left: -400px;}
+#full_wrap .top .h2 .t2 {top: 400px;margin-left: -400px;}
+/* con2 (진료는 의사/ 약은 약사) */
+#full_wrap .con2 .h2 .t1 {top: 233px;margin-left: -300px;}
+#full_wrap .con2 .h2 .t2,
+#full_wrap .con2 .h2 .t3{top: 233px;margin-left: 25px;}
+#full_wrap .con2 .h2 .t4 {top:408px;margin-left: -200px;}
+#full_wrap .con2 .h2 .t5,
+#full_wrap .con2 .h2 .t6{top:408px;margin-left: 25px;}
+#full_wrap .con2 .h2 .t7 {top: 233px;margin-left: -390px;z-index:3}
+#full_wrap .con2 .h2 .t8 {top: 233px;margin-left: 25px;z-index:3}
+#full_wrap .con2 .h2 .t9 {font-size:0;top:408px;margin-left: -290px;z-index:3}
+#full_wrap .con2 .h2 .t10 {top:408px;margin-left: 25px;z-index:3}
+/* con3(이벤트 페이지이미지 / 코딩소스) */
+#full_wrap .con3 {background:#1d1f21;}
+#full_wrap .con3 .fp-scroller{height:100%;}
+#full_wrap .con3 .inner{width:100%;}
+#full_wrap .con3 .obj{width:100%;}
+#full_wrap .con3 .t1 {opacity:1 !important;left:0;}
+#full_wrap .con3 .t2 {background:#1d1f21;opacity:0;left:0;}
+/* con4(애로사항 + 핵심) */
+#full_wrap .con4 .h2{overflow:hidden;height:680px}
+#full_wrap .con4 .t1 {top: -100px;left:0;}
+#full_wrap .con4 .t2 {top: -105px;left:0;opacity:1}
+#full_wrap .con4 .t3,
+#full_wrap .con4 .t4,
+#full_wrap .con4 .t5,
+#full_wrap .con4 .t6,
+#full_wrap .con4 .t7{top: -105px;left:0;z-index:3;}
+/* con5(2019년 3월 이전/이후 / 업무프로세스) */
+#full_wrap .con5{}
+#full_wrap .con5 .bg1{left:-10000px;top:0;position:relative;z-index:0;background:#e6e6e6;width:100%;height:100%;opacity:1 !important}
+#full_wrap .con5 .obj{position:absolute;opacity:0;z-index:1}
+#full_wrap .con5 .t1{left:-300px;top:180px;}
+#full_wrap .con5 .t2{width:0;left:80px;top:470px;}
+#full_wrap .con5 .t3{left:200px;top:400px;}
+#full_wrap .con5 .t4{left:700px;top:400px;}
+#full_wrap .con5 .t5{left:1200px;top:400px;}
+#full_wrap .con5 .t6{left:1047px;top:167px;z-index:2}
+#full_wrap .con5 .t7{left:827px;top:353px;}
+/* con6(퍼블리싱 파트가 생긴후 / 어떤변화가?) */
+#full_wrap .con6{}
+#full_wrap .con6 .t1{left:670px;top:300px;}
+#full_wrap .con6 .t2{left:555px;top:270px;}
+/* con7(업무시간) */
+#full_wrap .con7 .bg1{left:-10000px;top:0;position:relative;z-index:0;background:#e6e6e6;width:100%;height:100%;opacity:1 !important}
+#full_wrap .con7 .obj{position:absolute;opacity:0;z-index:1}
+#full_wrap .con7 .t1{left:274px;top:200px;}
+#full_wrap .con7 .t2{left:200px;top:400px;}
+#full_wrap .con7 .t3{left:358px;top:600px;}
+#full_wrap .con7 .t4{left:1174px;top:200px;}
+#full_wrap .con7 .t5{left:1100px;top:400px;}
+#full_wrap .con7 .t6{left:1258px;top:600px;}
+#full_wrap .con7 .t7{left:800px;top:580px;}
+#full_wrap .con7 .set4 .t0{left:686px;top:180px;z-index:3}
+#full_wrap .con7 .set4 .t1{left:595px;top:180px;}
+#full_wrap .con7 .set4 .t4{left:1046px;top:180px;}
+#full_wrap .con7 .counter_box{opacity:0;vertical-align:bottom;font-family:Tahoma;font-size:160px;letter-spacing:-10px;font-weight:bold;color:#1d1f21;}
+#full_wrap .con7 .counter_box1{opacity:0;vertical-align:bottom;font-family:Tahoma;font-size:70px;letter-spacing:-5px;font-weight:bold;color:#1d1f21;}
+#full_wrap .con7 .counter,.counter1,.counter2{vertical-align:bottom;}
+#full_wrap .con7 .counter2{font-size:80px;}
+/* con8(업무시간 평균) */
+#full_wrap .con8{}
+#full_wrap .con8 .obj3{text-align:center;position:absolute;z-index:1;top:200px;left:300px;}
+#full_wrap .con8 .obj3 p{opacity:0;margin-bottom:50px;}
+#full_wrap .con8 .obj3 .t2{position:relative;top:-500px;}
+#full_wrap .con8 .obj3 .t4{position:relative;top:500px;}
+#full_wrap .con8 .box2{left:1050px;}
+/* con9(퍼블리싱 파트가 생긴 후 / 어째서?) */
+#full_wrap .con9{}
+#full_wrap .con9 .t1{left:673px;top:300px;}
+#full_wrap .con9 .t2{left:700px;top:270px;}
+/* con10(감소요인) */
+#full_wrap .con10{}
+#full_wrap .con10 .obj{text-align:center;position:absolute;z-index:1;}
+#full_wrap .con10 .obj1{width:100%;top:100px;left:0;text-align:center;position:absolute;z-index:1;}
+#full_wrap .con10 .obj1 p{position:relative;top:-200px;opacity:0;margin-bottom:30px;}
+#full_wrap .con10 .t1{top:0;left:0;width:100%;opacity:0}
+/* con11(증가요인) */
+#full_wrap .con11{}
+#full_wrap .con11 .obj{text-align:center;position:absolute;z-index:1;}
+#full_wrap .con11 .obj1{width:100%;top:100px;left:0;text-align:center;position:absolute;z-index:1;}
+#full_wrap .con11 .obj1 p{position:relative;top:450px;opacity:0;margin-bottom:20px;}
+#full_wrap .con11 .t1{top:0;left:0;width:100%;opacity:0}
+/* con12(퍼블리싱 파트가 생긴 후 / 개발 업무에 영향은?) */
+#full_wrap .con12 .obj{position:absolute;opacity:0;z-index:1}
+#full_wrap .con12 .obj1{position:absolute;z-index:3;left:369px;top:150px;text-align:left}
+#full_wrap .con12 .obj1 p{display:inline-block;margin-bottom:25px;}
+#full_wrap .con12 .t1{left:673px;top:430px;}
+#full_wrap .con12 .t2{left:369px;top:396px;}
+#full_wrap .con12 .t13{position:absolute;z-index:3;left:354px;top:814px;}
+#full_wrap .con12 .bg1{opacity:0;left:0;top:0;position:relative;z-index:2;background:#dbdbdb url(../img/section12/text03.png) no-repeat center 0;width:100%;height:100%;}
+/* con13(코딩은 퍼블리셔) */
+#full_wrap .con13 .h2 .t1{top: 233px;margin-left: -390px;}
+#full_wrap .con13 .h2 .t2,
+#full_wrap .con13 .h2 .t3{top: 233px;margin-left: 25px;}
+#full_wrap .con13 .h2 .t4{top:408px;margin-left: -300px;}
+#full_wrap .con13 .h2 .t5,
+#full_wrap .con13 .h2 .t6{top:408px;margin-left: 25px;}
+#full_wrap .con13 .h2 .t7 {top:408px;margin-left: -300px;}
+#full_wrap .con13 .h2 .t8 {top:408px;margin-left: 25px;}
+/* con14(감사합니다.) */
+#full_wrap .con14 .h2 .t1{top: 350px;left:600px;}
+
+/* 작업완료 */
+/* 애니메이션 시작전 투명도 */
+#full_wrap .top .h2 > div,
+#full_wrap .imgWrap,
+#full_wrap .imgWrap > li,
+#full_wrap .tWrap,
+#full_wrap .tWrap > li,
+#full_wrap .tt {opacity: 0;}
+@keyframes timg {
+	0%{
+		margin-top:0px;
+	}
+	100%{
+		margin-bottom:-20px;
+	}
+}
+.scroll_btn{display:none;opacity:0;position:absolute;left:0;bottom:100px;z-index:20;width:100%;text-align:center;animation: timg .6s alternate infinite 2s;}
+
+/* common */
+/*#full_wrap .contit {float: left;width: 300px;text-align: left;}
+#full_wrap .contit .num {position: relative;}
+#full_wrap .contit .num b{position: absolute;z-index: 1;left: 60px;bottom: 0;width: 1px;height: 1000px;background-color: #d7b937;}
+#full_wrap .contit .tt {padding-top: 48px;}
+#full_wrap .conr {float: right;width: 1000px;text-align: right;}
+#full_wrap .con1 .conr {padding: 160px 0;}
+#full_wrap .con2 .conr {padding: 130px 0;}
+#full_wrap .con3 .conr {padding: 120px 0;}
+#full_wrap .con4 .conr {padding: 120px 0;}*/
+
+/* customizing */
+/*#full_wrap .con4 .imgWrap {display: inline-block;position: relative;width: 753px;height: 686px;background: url(http://img.megalawyers.co.kr/thecampus/2018/0618_open/con4_img1.gif) 0 0 no-repeat;margin-right: 100px;}
+#full_wrap .con4 .imgWrap > li {position: absolute; }
+#full_wrap .con4 .imgWrap .img2 {left: 285px;top: 0;}
+#full_wrap .con4 .imgWrap .img3 {right: 0;top: 316px;}
+#full_wrap .con4 .imgWrap .img4 {left: 259px;bottom: 0;}
+#full_wrap .con4 .imgWrap .img5 {left: 0;top: 316px;}
+#full_wrap .con4 .imgWrap .img6 {left: 238px;top: 327px;}
+
+#full_wrap .con5 .inner {padding: 100px 0 80px;}!* 2018-06-12 css 추가 *!
+#full_wrap .con5 .tWrap {position: relative;right: 0;width: 592px;height: 464px;float: right; margin-right: 50px;}
+#full_wrap .con5 .tWrap > li {position: absolute;left: 0;z-index: 1; }
+#full_wrap .con5 .tWrap .t1{top: 0;}
+#full_wrap .con5 .tWrap .t2{top: 100px;}
+#full_wrap .con5 .tWrap .t3{top: 308px;}
+#full_wrap .con5 .tWrap .t4{top: 386px;}
+#full_wrap .con5 .tWrap .t5{top: 420px;}
+#full_wrap .con5 .tWrap .t5 a{display: block;}*/
+
+/*#full_wrap .confix {text-align: left;}
+#full_wrap .confix .f1 {position: relative;background-color: #f5f5f5;}
+#full_wrap .confix .f1 .bg_y{display: block;position: absolute;height: 100%;width: 100%;left: 50%;top: 0;z-index: 0;margin-left: -220px;background-color: #f5d237;width: 1000px;margin-left: -1220px;}
+#full_wrap .confix .f1 .inner{height: 100%;z-index: 10;}
+#full_wrap .confix .f1_left {float: left;width: 430px;}
+#full_wrap .confix .f1_right {float: right;width: 870px;}
+#full_wrap .confix .f1_right > div{width: 820px;margin: 70px 0 0 50px;overflow-x: hidden;}
+#full_wrap .confix .f1_right ul {}
+#full_wrap .confix .f1_right ul:after {clear: both;content: '';display: block;}
+#full_wrap .confix .f2 {padding: 80px 0 100px;background: url(http://img.megalawyers.co.kr/thecampus/2018/0618_open/bg_05.jpg) 0 0 no-repeat;-webkit-background-size: cover;background-size: cover;}
+#full_wrap .confix .f2 .inner{}
+#full_wrap .confix .f3 {background: url(http://img.megalawyers.co.kr/thecampus/2018/0618_open/bg_06.jpg) 0 0 repeat-x;}
+#full_wrap .confix .f4 {background: #f5d237;}*/
+
+#fp-nav.left {display: none;width: 22px !important;right: 50% !important;margin-right: -608px !important;top: 200px;}
+#fp-nav ul {}
+#fp-nav ul li a {display: block;width: 7px !important;height: 7px !important;margin: 7px;background: url(../img/common/full_nav.png) 0 0 no-repeat !important;}
+#fp-nav ul li a span {display: none;}
+#fp-nav ul li a.active {background-position: 0 -10px !important;}
+/*#fp-nav ul li:first-child, #fp-nav ul li:last-child, #fp-nav ul li:nth-child(6) {display: none;}*/

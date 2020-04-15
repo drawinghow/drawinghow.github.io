@@ -1,385 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!------------------------------------------------------------
+    Copyright (c) JHK / ì´ í˜ì´ì§€ì˜ ëª¨ë“  ì €ì‘ê¶Œì€ JHK ì—ê²Œ ìˆìŠµë‹ˆë‹¤.
+  -------------------------------------------------------------->
+  <title>ì½”ë”© ê°€ì´ë“œ</title>
+  <meta charset="utf-8" >
+  <meta name="robots" content="noindex,nofollow" >
+  <meta name="author" content="JHK" >
+  <meta name="copyright" content="http://drawinghow.github.io/" >
+  <meta http-equiv="imagetoolbar" content="no" >
+  <meta http-equiv="cache-control" content="no-chche" >
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
 
-		<div class="windowPop">
-			<div class="center_align">
-				<h2>BX Slider »ç¿ë¹ı</h2>
-				<div class="contents">
-					<dl class="dl1">
-						<!-- <dt><h3>bx-slider.js</h3></dt> -->
-						<dd class="mt20">
-							<h4 class="mt0 pt0">bxslider µ¿ÀÛ¿¹½Ã</h4>
-							<!-- bxslider µ¿ÀÛ -->
-							<style>
-								.slWrap {}
-								.slWrap #slider1 li{text-align:center;}
-								.slWrap .bx-viewport { position: relative; overflow: hidden; width: 100%; height: 300px !important; }
-								.slWrap .bx-controls-direction a{ display: block; position: absolute; top: 50%; z-index: 10; width: 56px; height: 56px; margin-top: -28px; background: url(http://img.megamd.co.kr/ls1/2018/1212_jsw/slider_bt.png) 0 0 no-repeat; text-align: left; text-indent: -9999px; }
-								.slWrap .bx-controls-direction a.bx-prev { left: 0; }
-								.slWrap .bx-controls-direction a.bx-next { right: 0; background-position: -56px 0; }
-								.slWrap .bx-pager {font-size:0;text-align:center;position:absolute;left:0;bottom:30px;width:100%;}
-								.slWrap .bx-pager .bx-pager-item{display:inline-block;}
-								.slWrap .bx-pager .bx-pager-item .bx-pager-link{margin:0 3px 0 3px;border-radius:50%;display:inline-block;width:12px;height:12px;background:#979797;}
-								.slWrap .bx-pager .bx-pager-item .bx-pager-link.active{background:#395CC1}
-							</style>
+  <link rel="shortcut icon" href="../jhk_ico.ico" >
+  <link rel="stylesheet" href="../css/font.css" >
+  <link rel="stylesheet" href="../css/common.css" >
 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
 
-							<!-- HTML -->
-							<div class="slWrap">
-								<ul id="slider1">
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt="½½¶óÀÌµå1"></li>
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt="½½¶óÀÌµå2"></li>
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt="½½¶óÀÌµå3"></li>
-								</ul>
-							</div>
+  <!--highlight-->
+  <link rel="stylesheet" href="../plugin/highlight/styles/atom-one-dark.css">
+  <script type="text/javascript" src="../plugin/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="../plugin/highlight/highlightjs-line-numbers.min.js"></script>
+  <!--//highlight-->
 
-							<!-- JS -->
-							<script type="text/javascript">
-								var slider1;   //º¯¼ö°ª º¯°æ
-								$(document).ready(function () {
-									slider1 = $('#slider1').bxSlider({
-										speed : 500,
-										pause : 3000,
-										controls : true,
-										pager : true,
-										auto : true,
-										autoHover : true,
-										onSlideBefore : function (slide, oldIndex, newIndex){
-											slider1.startAuto();  //¹öÆ° Å¬¸¯ ÈÄ ÀÚµ¿·Ñ¸µ(auto) Àç½ÇÇà
-										}
-									});
-								});
-								function go_slide1( bts ) {
-									if ( bts == 0 ) { slider1.goToPrevSlide(); }
-									if ( bts == 1 ) { slider1.goToNextSlide(); }
-								}
-							</script>
-							<!-- //bxslider µ¿ÀÛ -->
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+	<div id="cd_contents">
+
+		<!--contents-navi-->
+		<section id="con_nav">
+			<a href="javascript:;" class="arrow btnToggle_left"><span>í† ê¸€</span></a>
+			<ul>
+				<li class="on"><a href="#bx-slider1">bx-slider ê¸°ë³¸í˜•</a></li>
+				<li><a href="#bx-slider-option">Bx-Slider ì˜µì…˜</a></li>
+				<li><a href="#name3">name3</a></li>
+			</ul>
+		</section>
+		<!--//contents-navi-->
+
+		<div class="index-inner">
+		<!--ì†ŒìŠ¤ Start-->
 
 
+<h2 id="bx-slider1">bx-slider ê¸°ë³¸í˜•</h2>
+<div class="viewarea">
+	<style>
+		.slider_wrap {position: relative;overflow: hidden; height: 300px !important;/*height ì—†ì„ì‹œ ë†’ì´ í”ë“¤ë¦¼*/}
+		.slider_wrap .bx-viewport { position: relative; }
+		.slider_wrap #slider1:after {clear: both;content: '';display: block;}
+		.slider_wrap #slider1 li{text-align:center;}
 
-<h4 class="mt30">µ¿ÀÛ½Ã ÇÊ¿äÇÑ JS</h4>
-<pre class="box1">
-<b class="color_red1">&lt;!-- head ¿¡ ÀÖÀ» ½Ã ¾È°¡Á®¿Íµµ µÊ ( jquery , bxslider ) --&gt; </b>
-&lt;script language="JavaScript" src="http://img.megamd.co.kr/common/js/jquery.min.js"&gt;&lt;/script&gt;  &lt;!-- Á¦ÀÌÄõ¸® : MD --&gt; 
-&lt;script language="JavaScript" src="http://www.megamd.co.kr/common/js/jquery.bxslider.js"&gt;&lt;/script&gt;  &lt;!-- bx-slider --&gt; 
-</pre>
+		/*ì´ì „-ë‹¤ìŒ ë²„íŠ¼(ìë™ìƒì„±)*/
+		.slider_wrap .bx-controls-direction a{ display: block; position: absolute; top: 50%; z-index: 10; width: 56px; height: 56px; margin-top: -28px; background: url(../img/slider_bt.png) 0 0 no-repeat; text-align: left; text-indent: -9999px; }
+		.slider_wrap .bx-controls-direction a.bx-prev { left: 0; }
+		.slider_wrap .bx-controls-direction a.bx-next { right: 0; background-position: -56px 0; }
 
+		/*í˜ì´ì§• ë²„íŠ¼(ìë™ìƒì„±)*/
+		.slider_wrap .bx-pager {font-size:0;text-align:center;position:absolute;left:0;bottom:30px;width:100%;}
+		.slider_wrap .bx-pager .bx-pager-item{display:inline-block;}
+		.slider_wrap .bx-pager .bx-pager-item .bx-pager-link{margin:0 3px 0 3px;border-radius:50%;display:inline-block;width:12px;height:12px;background:#979797;}
+		.slider_wrap .bx-pager .bx-pager-item .bx-pager-link.active{background:#395CC1}
+	</style>
 
+	<div class="slider_wrap">
+		<ul id="slider1">
+			<li><img src="../img/sl1.jpg" alt="ìŠ¬ë¼ì´ë“œ1"></li>
+			<li><img src="../img/sl2.jpg" alt="ìŠ¬ë¼ì´ë“œ2"></li>
+			<li><img src="../img/sl3.jpg" alt="ìŠ¬ë¼ì´ë“œ3"></li>
+		</ul>
+	</div>
 
+	<a href="javascript:go_slide1(0);">ì´ì „</a>
+	<a href="javascript:go_slide1(1);">ë‹¤ìŒ</a>
 
-<!-- ½ÉÇÃÇü -->
-<h4 class="mt30">HTML+CSS+JS // ÀÚÁÖ¾²´Â ½½¶óÀÌµå(½ÉÇÃÇü)</h4>
-<pre class="box1">
+	<div id="slider1_pager">
+		<a data-slide-index="0" href="javascript:;">1</a>
+		<a data-slide-index="1" href="javascript:;">2</a>
+		<a data-slide-index="2" href="javascript:;">3</a>
+	</div>
 
-	//½½¶óÀÌµå ( ÀÌÀü,´ÙÀ½¹öÆ°+ÀÚµ¿·Ñ¸µ )
-
-	<b class="color_red1">&lt;style&gt;</b>
-	.slWrap {}
-	.slWrap #slider1 li{text-align:center;}
-	.slWrap .bx-viewport { position: relative; overflow: hidden; width: 100%; height: 300px !important; }
-	/* È­»ìÇ¥¹öÆ° */
-	.slWrap .bx-controls-direction a{ display: block; position: absolute; top: 50%; z-index: 10; width: 56px; height: 56px; margin-top: -28px; background: url(http://img.megamd.co.kr/ls1/2018/1212_jsw/slider_bt.png) 0 0 no-repeat; text-align: left; text-indent: -9999px; }
-	.slWrap .bx-controls-direction a.bx-prev { left: 0; }
-	.slWrap .bx-controls-direction a.bx-next { right: 0; background-position: -56px 0; }
-	/* ³×ÀÌ°ÔÀÌ¼Ç¹öÆ° */
-	.slWrap .bx-pager {font-size:0;text-align:center;position:absolute;left:0;bottom:30px;width:100%;}
-	.slWrap .bx-pager .bx-pager-item{display:inline-block;}
-	.slWrap .bx-pager .bx-pager-item .bx-pager-link{margin:0 3px 0 3px;border-radius:50%;display:inline-block;width:12px;height:12px;background:#979797;}
-	.slWrap .bx-pager .bx-pager-item .bx-pager-link.active{background:#395CC1}
-	&lt;/style&gt; 
-
-	
-	<b class="color_red1">&lt;!-- HTML --&gt;</b>
-	&lt;div class="slWrap">
-		&lt;ul id="slider1">
-			&lt;li>&lt;img src="http://img.megamd.co.kr/ls1/2018/1212_jsw/jsw_slide_1.jpg" alt="">&lt;/li>
-			&lt;li>&lt;img src="http://img.megamd.co.kr/ls1/2018/1212_jsw/jsw_slide_1.jpg" alt="">&lt;/li>
-		&lt;/ul>
-	&lt;/div>
-
-	
-	<b class="color_red1">&lt;!-- JS --&gt;</b>
-	&lt;script type="text/javascript"&gt;  
-		var slider1;   //º¯¼ö°ª º¯°æ
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/vendor/jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+		var slider1;
 		$(document).ready(function () {
-			slider1 = $('#slider1').bxSlider({         
-				speed : 500,                               
-				pause : 3000,                             
-				controls : true,
-				pager : true,
-				auto : true,                        
-				autoHover : true,
-				onSlideBefore : function (slide, oldIndex, newIndex){    
-					slider1.startAuto();  //¹öÆ° Å¬¸¯ ÈÄ ÀÚµ¿·Ñ¸µ(auto) Àç½ÇÇà
-				}
+			slider1 = $('#slider1').bxSlider({
+					speed : 400,
+					pause : 3000,
+					controls : true,
+					pager : true,
+					pagerCustom : '#slider1_pager',
+					auto : true,
+					autoHover : true,
+					onSlideBefore : function (slide, oldIndex, newIndex){
+							slider1.startAuto();  //ìë™ë¡¤ë§(auto)ì¬ì‹¤í–‰
+					}
 			});
 		});
+
+		//ì„¤ê³„í•œ ë²„íŠ¼
 		function go_slide1( bts ) {
-			if ( bts == 0 ) { slider1.goToPrevSlide(); } 
-			if ( bts == 1 ) { slider1.goToNextSlide(); } 
+			if ( bts == 0 ) { slider1.goToPrevSlide(); } //ì´ì „ ë²„íŠ¼
+			if ( bts == 1 ) { slider1.goToNextSlide(); } //ë‹¤ìŒ ë²„íŠ¼
+			if ( bts == 2 ) { slider1.stopAuto(); }  //ìŠ¬ë¼ì´ë“œ ë©ˆì¶¤
+			if ( bts == 3 ) { slider1.startAuto(); }  //ìŠ¬ë¼ì´ë“œ ë™ì‘
 		}
-	&lt;/script&gt;  
-</pre>
-<!-- ½ÉÇÃÇü -->
+	</script>
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//bx-slider ê¸°ë³¸í˜•-->
 
 
 
+<!-- Bx-Slider ì˜µì…˜ -->
+<h2 id="bx-slider-option">Bx-Slider ì˜µì…˜</h2>
+<div class="viewarea" style="font-size: 0;">
 
-<h4 class="mt30">bx-slide ±âÅ¸¿É¼Ç</h4>
-<pre class="box1">
+	- ëª¨ë“œ
+	mode : 'vertical',    //ì„¸ë¡œ ë¡¤ë§
+	mode : 'fade',       //í˜ì´ë“œì¸-ì•„ì›ƒ
 
-	//¸ğµå
-	mode : 'vertical',    //¼¼·Î ·Ñ¸µ 	
-	mode : 'fade',       //ÆäÀÌµåÀÎ-¾Æ¿ô 	
-
-	
-	//Ä«µåÇü ½½¶óÀÌµå
-	minSlides: 4,         //ÃÖ¼Ò·Î º¸¿©Áö´Â li °¹¼ö
-	maxSlides: 4,        //ÃÖ´ë·Î º¸¿©Áö´Â li °¹¼ö
-	moveSlides: 1,      //ÇÑ°³¾¿ ÀÌµ¿
+	- ì¹´ë“œí˜• ìŠ¬ë¼ì´ë“œ
+	minSlides: 4,         //ìµœì†Œë¡œ ë³´ì—¬ì§€ëŠ” li ê°¯ìˆ˜
+	maxSlides: 4,        //ìµœëŒ€ë¡œ ë³´ì—¬ì§€ëŠ” li ê°¯ìˆ˜
+	moveSlides: 1,      //í•œê°œì”© ì´ë™
 	slideWidth: 200,   //li width
 
-
-	//·£´ı ³ëÃâ
+	- ëœë¤ ë…¸ì¶œ
 	randomStart: true,
 
-
-	//¼Óµµ
-	easing : 'linear',     //¼Óµµº¯È­ ¾øÀ» ½Ã
-
+	- ì†ë„
+	easing : 'linear',     //ì†ë„ë³€í™” ì—†ì„ ì‹œ
 
 
-	//Ã¹¹øÂ° li ¿¡ on Å¬·¡½º ÁÖ±â 
-	slide1 = $('#slide1').bxSlider({
-		mode : 'vertical',    
-		auto : true, 
-		autoHover : true, 
-		pager : false, 
-		controls : false, 
-		pause : 3000, 
-		minSlides: 4, 
-		maxSlides: 4, 
-		moveSlides: 1,
-		onSlideAfter: function($slideElement, oldIndex, newIndex){
-			slide1.startAuto();
-		},
-		onSlideNext: function (el) {
-			$('.exam_rolling li').removeClass('on');
-			el.addClass('on').siblings().removeClass('on');  
-		},
-		onSlidePrev: function (el) {
-			$('.exam_rolling li').removeClass('on');
-			el.addClass('on').siblings().removeClass('on');
-		}
-	});
+	<script type="text/javascript">
+		//ì²«ë²ˆì§¸ li ì— on í´ë˜ìŠ¤ ì£¼ê¸°
+    var slider2;
+    $(document).ready(function () {
+			slide2 = $('#slide2').bxSlider({
+				mode : 'vertical',
+				auto : true,
+				autoHover : true,
+				pager : false,
+				controls : false,
+				pause : 3000,
+				minSlides: 4,
+				maxSlides: 4,
+				moveSlides: 1,
+				onSlideAfter: function($slideElement, oldIndex, newIndex){
+						slide2.startAuto();
+				},
+				onSlideNext: function (el) {
+						$('.exam_rolling li').removeClass('on');
+						el.addClass('on').siblings().removeClass('on');
+				},
+				onSlidePrev: function (el) {
+						$('.exam_rolling li').removeClass('on');
+						el.addClass('on').siblings().removeClass('on');
+				}
+			});
 
-	//¸¶¿ì½º ¿À¹ö½Ã ½½¶óÀÌµå ÀÌµ¿ 
-	$('#btn_pager a').hover(function(){  //pager¿¡ ¸¶¿ì½º¿À¹ö½Ã bxslider ÀÌµ¿
-		$(this).trigger('click');
-	},function(){
-		slider1.startAuto();
-	});
+			//ë§ˆìš°ìŠ¤ ì˜¤ë²„ì‹œ ìŠ¬ë¼ì´ë“œ ì´ë™ (íƒ­-í˜•ì‹)
+			$('#btn_pager a').hover(function(){  //pagerì— 'ë§ˆìš°ìŠ¤ì˜¤ë²„'ì‹œ slider ì´ë™
+				$(this).trigger('click');
+			},function(){
+					slide2.startAuto();
+			});
+    });
+	</script>
 
-
-
-
-
-</pre>
-
-
-<br><br><hr>
-
-<h4 class="mt0 pt0">bxslider µ¿ÀÛ¿¹½Ã</h4>
-<!-- bxslider µ¿ÀÛ -->
-<style>
-	/* bxslider ±¸Á¶ */
-	.slWrap { overflow: hidden; position: relative; width: 100%; margin: 0 auto; border: 1px solid #cecece; background-color: #fff; }
-	.slWrap ul#slider2 { margin: 0; padding: 0; vertical-align: top;}
-	.slWrap ul#slider2 li { background-color: #c7c7c7; text-align: center; }
-	.slWrap ul#slider2 .slide_01 { /* Ã¹¹øÂ° ½½¶óÀÌµå */ }
-	.slWrap ul#slider2 .slide_02 { /* µÎ¹øÂ° ½½¶óÀÌµå */ }
-	.slWrap ul#slider2 .slide_03 { /* ¼¼¹ø? ½½¶óÀÌµå */ }
-
-	/* bxslider ÀÌÀü-´ÙÀ½ ¹öÆ° */
-	.slWrap .btn { position: absolute; top: 50%; z-index: 10; margin-top: -42px; }
-	.slWrap .btn_prev { left: 70px; }
-	.slWrap .btn_next { right: 70px; }
-
-	/* bxslider ÆäÀÌÂ¡ ( Á÷Á¢¸¸µé¶§ »ç¿ë ) */
-	.slWrap #btn_pager {}
-	.slWrap #btn_pager a { font-size: 15px; color: #888; }
-	.slWrap #btn_pager a.active { color: #0473de; }
-
-	/* bxslider ÆäÀÌÂ¡  ( ÀÚµ¿»ı¼º µÉ ¶§ »ç¿ë : pager : true )
-	.slWrap .bx-pager { position: absolute; left: 0; bottom: 20px; z-index: 10; width: 100%; text-align: center; }
-	.slWrap .bx-pager > div { display: inline-block; padding: 3px; }
-	.slWrap .bx-pager > div > a { display: block; width: 20px; height: 20px; background-color: #333; color: #fff; }
-	.slWrap .bx-pager > div > a.active { background-color: #0082ff; color: #fff; }
-	*/
-
-</style>
-<div class="slWrap">
-	<ul id="slider2">
-		<li class="slide_01"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt="½½¶óÀÌµå1"></li>
-		<li class="slide_02"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt="½½¶óÀÌµå2"></li>
-		<li class="slide_03"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt="½½¶óÀÌµå3"></li>
-	</ul>
-	<!-- ÀÌÀü´ÙÀ½ ¹öÆ° : »ç¿ë¾ÈÇÒ½Ã »èÁ¦ -->
-	<div class="btn_prev btn"><a href="javascript:go_slide1(0);"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl_bt_prev.png" alt="ÀÌÀü"></a></div>
-	<div class="btn_next btn"><a href="javascript:go_slide1(1);"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl_bt_next.png" alt="´ÙÀ½"></a></div>
-	<!-- //ÀÌÀü´ÙÀ½ ¹öÆ° -->
-	<!-- pager : »ç¿ë¾ÈÇÒ½Ã »èÁ¦ -->
-	<div id="btn_pager">
-		<a data-slide-index="0" href="">1</a>
-		<a data-slide-index="1" href="">2</a>
-		<a data-slide-index="2" href="">3</a>
-	</div>
-	<!-- //pager -->
-</div><!-- //slWrap -->
-<script type="text/javascript">
-	var slider2;
-	$(document).ready(function () {
-		slider2 = $('#slider2').bxSlider({        // #slider1  : ¾ÆÀÌµğ/Å¬·¡½º·Î º¯°æ°¡´É
-			//mode : 'fade',          // ½½¶óÀÌµå µ¿ÀÛ¹æ¹ı
-			speed : 500,              // ÀÌµ¿¼Óµµ
-			autoHover : true,        // ¸¶¿ì½º È£¹ö½Ã Á¤Áö ¿©ºÎ
-			controls : false,         // ÀÌÀü<->´ÙÀ½ ¹öÆ°
-			//pager : true,           // ÆäÀÌÂ¡ ÀÚµ¿»ı¼º ¿©ºÎ
-			pagerCustom : '#btn_pager',      //ÆäÀÌÂ¡ Á÷Á¢»ı¼º&¿¬°á : <div id="btn_pager">
-			auto : true,               // ÀÚµ¿ÇÃ·¹ÀÌ
-			onSlideBefore : function (slide, oldIndex, newIndex){
-				slider2.startAuto();
-			}
-		});
-	});
-	function go_slide1( bts ) {
-		if ( bts == 0 ) { slider2.goToPrevSlide(); } //ÀÌÀü ¹öÆ°
-		if ( bts == 1 ) { slider2.goToNextSlide(); } //´ÙÀ½ ¹öÆ°
-		if ( bts == 2 ) { slider2.stopAuto(); }  //½½¶óÀÌµå ¸ØÃã
-		if ( bts == 3 ) { slider2.startAuto(); }  //½½¶óÀÌµå µ¿ÀÛ
-	}
-
-</script>
-<!-- //bxslider µ¿ÀÛ -->
-
-<h4 class="mt30">CSS</h4>
-<pre class="box1">
-&lt;style&gt; 
-	<b>/* bxslider ±¸Á¶ */</b>
-	.slWrap { overflow: hidden; position: relative; width: 100%; margin: 0 auto; border: 1px solid #cecece; background-color: #fff; }
-	.slWrap ul#slider1 { margin: 0; padding: 0; vertical-align: top;}
-	.slWrap ul#slider1 li { background-color: #c7c7c7; text-align: center; }
-	.slWrap ul#slider1 .slide_01 { /* Ã¹¹øÂ° ½½¶óÀÌµå */ }
-	.slWrap ul#slider1 .slide_02 { /* µÎ¹øÂ° ½½¶óÀÌµå */ }
-	.slWrap ul#slider1 .slide_03 { /* ¼¼¹ø? ½½¶óÀÌµå */ }
-
-	<b>/* bxslider ÀÌÀü-´ÙÀ½ ¹öÆ° */</b>
-	.slWrap .btn { position: absolute; top: 50%; z-index: 1; margin-top: -42px; }
-	.slWrap .btn_prev { left: 70px; }
-	.slWrap .btn_next { right: 70px; }
-
-	<b>/* bxslider ÆäÀÌÂ¡ ( Á÷Á¢¸¸µé¶§ »ç¿ë ) */</b>
-	.slWrap #btn_pager {}
-	.slWrap #btn_pager a { font-size: 15px; color: #888; }
-	.slWrap #btn_pager a.active { color: #0473de; }
-
-	<b>/* bxslider ÆäÀÌÂ¡ ( ÀÚµ¿»ı¼º µÉ ¶§ »ç¿ë : pager : true )</b>
-	.slWrap .bx-pager { position: absolute; left: 0; bottom: 20px; z-index: 10; width: 100%; text-align: center; }
-	.slWrap .bx-pager > div { display: inline-block; padding: 3px; }
-	.slWrap .bx-pager > div > a { display: block; width: 20px; height: 20px; background-color: #333; color: #fff; }
-	.slWrap .bx-pager > div > a.active { background-color: #0082ff; color: #fff; }   
-	*/
-
-&lt;/style&gt; 
-</pre>	
-
-
-
-
-<h4 class="mt15">HTML</h4>
-<pre class="box1">
-&lt;div class="slWrap"&gt; 
-
-	&lt;ul <b class="color_red1">id="slider1"</b>&gt; 
-		&lt;li&gt;&lt;img src="/Design/publishing_guide/img/sl1.jpg" alt="½½¶óÀÌµå1"&gt;&lt;/li&gt; 
-		&lt;li&gt;&lt;img src="/Design/publishing_guide/img/sl2.jpg" alt="½½¶óÀÌµå2"&gt;&lt;/li&gt; 
-		&lt;li&gt;&lt;img src="/Design/publishing_guide/img/sl3.jpg" alt="½½¶óÀÌµå3"&gt;&lt;/li&gt; 
-	&lt;/ul&gt; 
-
-	<b>&lt;!-- ÀÌÀü´ÙÀ½ ¹öÆ° : »ç¿ë¾ÈÇÒ½Ã »èÁ¦ --&gt; </b>
-	&lt;div class="btn_prev btn"&gt;&lt;a href="javascript: <b class="color_blue1">go_slide1(0)</b> ;"&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl_bt_prev.png" alt="ÀÌÀü"&gt;&lt;/a&gt;&lt;/div&gt; 
-	&lt;div class="btn_next btn"&gt;&lt;a href="javascript: <b class="color_blue1">go_slide1(1)</b> ;"&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl_bt_next.png" alt="´ÙÀ½"&gt;&lt;/a&gt;&lt;/div&gt; 
-	&lt;!-- // ÀÌÀü´ÙÀ½ ¹öÆ° --&gt; 
-
-	<b>&lt;!-- pager : »ç¿ë¾ÈÇÒ½Ã »èÁ¦ --&gt; </b>
-	&lt;div <b class="color_red1">id="btn_pager"</b>&gt; 
-		&lt;a data-slide-index="0" href=""&gt; 1 &lt;/a&gt; 
-		&lt;a data-slide-index="1" href=""&gt; 2 &lt;/a&gt; 
-		&lt;a data-slide-index="2" href=""&gt; 3 &lt;/a&gt; 
-	&lt;/div&gt; 
-	&lt;!-- //pager --&gt; 
-
-&lt;/div&gt; &lt;!-- //slWrap --&gt; 
-</pre>	
-
-
-
-<h4 class="mt15">JS</h4>
-<pre class="box1">
-&lt;script type="text/javascript"&gt; 
-	var <b class="color_blue1">slider1</b>;   //º¯¼ö°ª º¯°æ
-	$(document).ready(function () {
-		<b class="color_blue1">slider1</b> = $('<b class="color_red1">#slider1</b>').bxSlider({              //¾ÆÀÌµğ/Å¬·¡½º¸í º¯°æ
-			//mode : 'fade',                           // ½½¶óÀÌµå µ¿ÀÛ¹æ¹ı 
-			speed : 500,                               // ½½¶óÀÌµå ÀÌµ¿¼Óµµ
-			pause : 3000,                             // ½½¶óÀÌµå ¸ØÃçÀÖ´Â ½Ã°£
-			controls : false,                          // ÀÌÀü-´ÙÀ½ ¹öÆ°  (Á÷Á¢ ¸¸µé ½Ã false)
-			pager : true,                              // ÆäÀÌÂ¡ ÀÚµ¿»ı¼º (Á÷Á¢ ¸¸µé½Ã pagerCustom »ç¿ë)
-			//pagerCustom : <b class="color_red1">'#btn_pager'</b>,                            // ÆäÀÌÂ¡ Á÷Á¢»ı¼º&¿¬°á : (div id="btn_pager") : ¾ÆÀÌµğ/Å¬·¡½º¸í º¯°æ°¡´É
-			auto : true,                               // ÀÚµ¿ÇÃ·¹ÀÌ
-			autoHover : true,                       // ¸¶¿ì½º È£¹ö½Ã auto Á¤Áö ¿©ºÎ
-			onSlideBefore : function (slide, oldIndex, newIndex){     
-				slider1.startAuto();    
-			}
-		});
-	});
-
-
-	function <b class="color_blue1">go_slide1( bts )</b> {
-		if ( <b>bts == 0</b> ) { <b class="color_blue1">slider1</b>.goToPrevSlide(); } //ÀÌÀü ¹öÆ°
-		if ( <b>bts == 1</b> ) { <b class="color_blue1">slider1</b>.goToNextSlide(); } //´ÙÀ½ ¹öÆ°
-		if ( <b>bts == 2</b> ) { <b class="color_blue1">slider1</b>.stopAuto(); }  //½½¶óÀÌµå ¸ØÃã (»ç¿ë ¾ÈÇÒ½Ã »èÁ¦)
-		if ( <b>bts == 3</b> ) { <b class="color_blue1">slider1</b>.startAuto(); }  //½½¶óÀÌµå µ¿ÀÛ (»ç¿ë ¾ÈÇÒ½Ã »èÁ¦)
-	}
-	
-	//Å¬¸¯½Ã auto ¸ØÃãÇö»ó ÇØ°á ( ÀÌÀü´ÙÀ½/pager ¹öÆ° Å¬¸¯ ÈÄ auto Àç½ÇÇàÇÏ°í ½ÍÀ»¶§ )
-	$(document).on('click','.bx-next, .bx-prev',function() {       //  .bx-next   .bx-prev -> »óÈ²¿¡ µû¶ó Å¬·¡½º º¯°æ
-		slider1.stopAuto();                                                 //slider1  ¸Â´ÂÁö È®ÀÎ 
-		slider1.startAuto();
-	});
-
-&lt;/script&gt; 
-</pre>
-
-
-							
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//Bx-Slider ì˜µì…˜-->
 
 
 
 
 
-							<ul class="ul1 mt20">
-								<li class="fw_b">Âü°í»çÀÌÆ®</li>
-								<li>
-									<a class="btn02" href="https://bxslider.com/" target="_blank"> bxslider.com </a> 
-									<a class="btn02" style="margin-left: 10px;" href="https://github.com/demun/FrontEndStudy/blob/master/document/Jquery/docs/01_01_jquery_plugin_bxslider.md"  target="_blank"> ÇÑ±Û¼³¸í </a>
-									<a class="btn02" style="margin-left: 10px;" href="http://godlvkhj.tistory.com/60"  target="_blank"> ÇÑ±Û¼³¸í2 </a>
-								</li>
-							</ul>
 
-						</dd>
-					</dl>
-				</div>
-			</div>
+
+		<!--//ì†ŒìŠ¤ End-->
 		</div>
+	</div>
 
-		
+</body>
+</html>

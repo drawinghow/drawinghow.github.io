@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<title>test</title>
+	<link rel="stylesheet"  type="text/css" href="https://www.hackersut.com/common/css/common_.css?date=20180412133136" />
+	<link rel="stylesheet"  type="text/css" href="https://www.hackersut.com/common/css/sub_.css?date=20180412133136" />
+	<script type="text/javascript" src="https://www.hackersut.com/common/js/reMain/jquery-1.11.2.min.js"></script>
+	<style>
+		.popup-wrap{width:100%}
+		.popup-wrap *{font-family: 'Malgun Gothic','맑은고딕','맑은 고딕',sans-serif;letter-spacing:-1px}
+		.popup-header{position:relative;margin-bottom:50px;padding:25px;background:url(' https://www.hackersut.com/images/event/2018/041202/bg_popup_header.jpg') 50% 0 repeat-y;background-size:cover}
+		.popup-header h1{margin-bottom:20px;font-size:22px;color:#2c2c2c}
+		.popup-header h1 strong{font-size:20px;color:#2ba28e}
+		.popup-header:after{content:'';display:block;position:absolute;bottom:-20px;left:0;right:0;height:20px;background:url(' https://www.hackersut.com/images/event/2018/041202/bt_popup_header.jpg') 50% 0 no-repeat}
+		.tbl-user-info{width:100%;table-layout:fixed}
+		.tbl-user-info th,
+		.tbl-user-info td{padding:5px 0;font-size:16px;text-align:left;font-weight:700;vertical-align:top}
+		.tbl-user-info th{color:#2ba28e}
+		.tbl-user-info td{color:#585858}
+		.review-content{padding:0 25px 35px}
+		.review-box{margin-bottom:34px;padding:36px 22px;background:#f4f4f4}
+		.review-box h2{margin-bottom:26px;font-size:20px;color:#20c6af}
+		.review-box p{font-size:15px;color:#575757;line-height:26px}
+		.mov-box{width:650px;margin:0 auto 30px;background:#000}
+	</style>
+</head>
+<body>
+	<div class="popup-wrap">
+		<div class="popup-layout">
+			<div class="popup-header">
+				<h1><span class="user_title"></span> <strong><span class="user_name"></span></strong></h1>
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl-user-info">
+					<caption>합격후기</caption>
+					<colgroup>
+						<col style="width:18%">
+						<col style="width:40%">
+						<col style="width:15%">
+						<col style="*">
+					</colgroup>
+					
+					<tbody>
+					<tr>
+						<th scope="col">· 합격한대학교</th>
+						<td><span class="user_university"></span></td>
+						<th scope="col">· 수강방법</th>
+						<td><span class="user_way"></span></td>
+					</tr>
+					<tr>
+						<th scope="col">· 주제</th>
+						<td colspan="3"><span class="user_subject"></span></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="mov-box"><span class="user_mov"></span></div>
+			
+			<div class="review-content">
+				<!--후기내용-->
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			js_list_set();
+		});
+		
+		function js_list_set(){
+			//var idx = $(location).attr('href').split("?no=")[1];
+			var idx = 1
+			var $cont=$(".review-content");
+
+			$.getJSON("data.html", function(data) {
+				/*
+				비동기식 서버와 접속해 json타입의 데이터를 불러옴 ajax() 메소드의 dataType: 'json' 과 동일한 역할을 수행
+				문법은 .post()와 비슷하다. .ajax()메서드의 단축표기이며, 몇 가지 매개변수가 셋팅된 것이다.
+				
+				$.getJSON(url_to_load, function(json){ ... });
+				위에가 축약형
+				$.ajax({
+					url: url_to_load,
+					dataType: 'json',
+					data: json,
+					success: function(json){
+					...
+					};
+				});
+				*/
+
+				var person=[];//데이터를 저장할 info 배열 선언
+				var title=[];//데이터를 저장할 info 배열 선언
+				var i=0;
+				var k=0;
+
+
+				$.each(data, function(index, item){//each() 반복문을 사용하여 전달된 콜백함수의 값들을 미리선언한 배열 info에 각각 추가
+					person[index] = item;
+				});
+
+				$.each(person[0], function(key,value){
+					if(key.match("review")) {
+						title[i] = value;
+						i++;
+					}
+				});
+
+				$.each(person[idx], function(key,value){
+					if(key.match("review")){
+						if(value){
+							value = value.replace("\n", "<br/>");
+							/*value = value.replace("[", "<strong>");
+							value = value.replace("]", "</strong>");*/
+							k=key.slice(-2)-1;
+							$cont.append("<div class="+"review-box"+">"+"<h2>"+title[k]+"</h2>"+"<p>"+value+"</p>");
+						}
+					}
+				});
+
+				var mov_url = person[idx].movie;
+				var mov = null;
+				if(mov_url){
+					var iframe=$("<iframe></iframe>");
+					mov = iframe;
+					iframe.attr({
+						'src':mov_url,
+						'width':650,
+						'height':380,
+						'frameborder':0
+					});
+				}
+
+				$(".user_title").text(person[idx].title);
+				$(".user_name").text(person[idx].name);
+				$(".user_university").text(person[idx].university);
+				$(".user_way").text(person[idx].term);
+				$(".user_subject").text(person[idx].subject);
+				$(".user_mov").append(mov);
+			});
+		}
+		
+	</script>
+</body>
+</html>
+

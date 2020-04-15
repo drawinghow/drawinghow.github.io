@@ -1,7 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<!------------------------------------------------------------
+    Copyright (c) JHK / ì´ í˜ì´ì§€ì˜ ëª¨ë“  ì €ì‘ê¶Œì€ JHK ì—ê²Œ ìˆìŠµë‹ˆë‹¤.
+  -------------------------------------------------------------->
+	<title>ì½”ë”© ê°€ì´ë“œ</title>
+	<meta charset="utf-8" >
+	<meta name="robots" content="noindex,nofollow" >
+	<meta name="author" content="JHK" >
+	<meta name="copyright" content="http://drawinghow.github.io/" >
+	<meta http-equiv="imagetoolbar" content="no" >
+	<meta http-equiv="cache-control" content="no-chche" >
+	<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
+
+	<link rel="shortcut icon" href="../jhk_ico.ico" >
+	<link rel="stylesheet" href="../css/font.css" >
+	<link rel="stylesheet" href="../css/common.css" >
+
+	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+
+	<!--highlight-->
+	<link rel="stylesheet" href="../plugin/highlight/styles/atom-one-dark.css">
+	<script type="text/javascript" src="../plugin/highlight/highlight.pack.js"></script>
+	<script type="text/javascript" src="../plugin/highlight/highlightjs-line-numbers.min.js"></script>
+	<!--//highlight-->
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+<div id="cd_contents">
+
+	<!--contents-navi-->
+	<section id="con_nav">
+		<a href="javascript:;" class="arrow btnToggle_left"><span>í† ê¸€</span></a>
+		<ul>
+			<li class="on"><a href="#bx-src">ë™ì‘ì‹œ í•„ìš”í•œ JS + CSS</a></li>
+			<li><a href="#bxslider-default">bxslider-default</a></li>
+			<li><a href="#bxslider-option">bx-option</a></li>
+		</ul>
+	</section>
+	<!--//contents-navi-->
+
+	<div class="index-inner">
+		<!--ì†ŒìŠ¤ Start-->
+
+
+
+<h2 id="bx-src">ë™ì‘ì‹œ í•„ìš”í•œ JS + CSS</h2>
+<div class="viewarea">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script> <!--ê¸°ë³¸ bxslider-->
+
+	<link rel="stylesheet" href="../plugin/bxslider_ui/mega_bxslider_ui.css">
+	<script type="text/javascript" src="../plugin/bxslider_ui/mega_bxslider_ui.js"></script><!--ì‹¤í–‰ì•ˆë ë•Œ ì œì´ì¿¼ë¦¬-ë²„ì ¼ í™•ì¸ -->
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//ë™ì‘ì‹œ í•„ìš”í•œ JS + CSS-->
+
+
+
+<!-- bxslider-default -->
+<h2 id="bxslider-default">bxslider-default</h2>
+<div class="viewarea">
+	<style>
+		/* í™”ì‚´í‘œ ë²„íŠ¼ */
+		.bxslider-default .bx-controls-direction a {top: 50%;margin-top: -42px;width: 35px;height: 83px;text-indent: -9999px;}
+		.bxslider-default .bx-controls-direction .bx-prev{left: 10px;background: url(../img/bx_prev.png) no-repeat 0 0;}
+		.bxslider-default .bx-controls-direction .bx-next{right: 10px;background: url(../img/bx_next.png) no-repeat 0 0;}
+
+		/* í˜ì´ì§• */
+		.bxslider-default .bx-controls .bx-pager {width:100%;left:0;bottom: 20px;text-align: center; }
+		.bxslider-default .bx-controls .bx-default-pager a {width: 12px;height: 12px;margin: 0 3px 0 3px;background: #979797;border-radius: 50%; }
+		.bxslider-default .bx-controls .bx-default-pager a:hover,
+		.bxslider-default .bx-controls .bx-default-pager a.active {background: #395CC1; }
+	</style>
+
+	<div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true" data-delay="3000">
+		<ul class="bxslider">
+			<li><img src="../img/sl1.jpg" alt="1"></li>
+			<li><img src="../img/sl2.jpg" alt="2"></li>
+			<li><img src="../img/sl3.jpg" alt="3"></li>
+		</ul>
+	</div>
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//bxslider-default-->
+
+
+
+
+<h2 id="bx-option">ì˜µì…˜ê°’ ì„¤ëª…</h2>
 <style>
-	#bxslider{width:1050px;margin:0 auto;}
-	#bxslider h2{font-weight:bold;font-size:15px;background:#666;color:#fff;padding:10px;text-align:left;}
-	.bxslider-box-tb{background:#fff;border:1px solid #999;padding:20px;text-align:left;}
+	.bxslider-box-tb{margin-top: 10px;background:#fff;border:1px solid #999;padding:20px;text-align:left;}
 	.bxslider-box-tb > strong{margin-bottom:20px;font-size:15px;background:#858585;color:#fff;display:block;padding:20px;}
 	.bxslider-box-tb li{font-size:14px;margin-bottom:5px;list-style:decimal;margin-left:20px;}
 	.bxslider-box-tb li::selection{background: #f00;color:#fff}
@@ -15,998 +117,214 @@
 	.bxslider-box-tb table td:first-child{border-left:0;}
 	.bxslider-box-tb table td:first-child{background:#f9f9f9}
 	.bxslider-box-tb table td{border-top:1px solid #e0e0e0;}
-	.bxslider-box-tb .tc{text-align:center}
-	/*.bxslider-box .index-box{position:fixed;z-index:300;right:0;top:10px;width:300px;box-shadow:0 5px 7px 0 rgba(0, 0, 0, 0.2)}
-	.bxslider-box .index-box strong{font-size:14px;padding:10px;display:block;background:#221f1f;color:#fff}
-	.bxslider-box .index-box ul{background-color: #fff; padding: 4% 4%; width: 92%; vertical-align: middle; border: 1px solid #6b6b6b; font-size: 12px; text-align: left;  }
-	.bxslider-box .index-box ul li{font-size:14px;margin-bottom:10px;list-style:decimal;margin-left:20px;}
-	.bxslider-box .index-box li a {color:#333}
-	.bxslider-box .index-box li a:link {color:#333}
-	.bxslider-box .index-box li a:visited {color:#333}*/
-	.bxslider-box h5{background:#fff;margin-top:70px;padding:10px;font-size:13px;display:block;border:2px dotted #c4c4c4;/*background:#222;color:#fff;*/}
-	.bxslider-box .center_align{width:1200px;}
-	.box1{margin-top:30px;}
-	h4 + .box1{margin-top:0 !important}
-	ul.ul1{margin-top:10px;background:#fff;padding-bottom:20px;border:1px solid #999}
-
-	.index-list {background-color: #000; padding: 2% 2%; font-size: 12px; text-align: left;  }
-	.index-list li{color:#fff;font-size:14px;margin-bottom:10px;list-style:decimal;margin-left:20px;}
-	.index-list li a {color:#fff}
-	.index-list li a:link {color:#fff}
-	.index-list li a:visited {color:#fff}
-
-	dl.dl1>dt{margin-top:20px;}
-
-	/* bxslider-default .pager-slider-paging */
-	.bxslider-default .pager-slider-paging {overflow: hidden;position: absolute;bottom: 0;left: 0;right: 0;z-index: 52;height: 50px;}
-	.bxslider-default .pager-slider-paging ul {width: 980px;margin: 0 auto; }
-	.bxslider-default .pager-slider-paging ul:before {display: block;content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
-	.bxslider-default .pager-slider-paging li {position: relative;float: left;width: 33.3333%;}
-	.bxslider-default .pager-slider-paging li a {display: table;table-layout: fixed;position: relative;z-index: 2;width: 100%;height: 50px;box-sizing: border-box;text-align: center; }
-	.bxslider-default .pager-slider-paging li a:hover,
-	.bxslider-default .pager-slider-paging li a.active {font-weight: 600; }
-	.bxslider-default .pager-slider-paging li a span {display: table-cell;padding: 0 10px;color: #FFF;font-size: 15px;line-height: 1.2;vertical-align: middle;word-break: keep-all; }
-	.bxslider-default .pager-slider-paging li:before {content: '';position: absolute;top: 14px;left: 0;width: 1px;height: 22px;background: #FFF; }
-	.bxslider-default .pager-slider-paging li:first-child:before {display: none; }
+	.bxslider-box-tb table .tc{text-align:center}
+	.bxslider-box-tb table .emphasis td {padding: 10px 15px;background: #333;color: #fff;}
+	.bxslider-box-tb table .emphasis td .disc {font-weight: 100;margin-top: 5px;color: #ddd;}
 </style>
 
-<link rel="stylesheet" href="./css/guide.css" />
-<link rel="stylesheet" href="./plugin/mega_bxslider_ui/mega_bxslider_ui.css" />
-
-		<div class="windowPop bxslider-box">
-			<div class="center_align">
-				<h2>BX Slider ui</h2>
-				<div class="index-box">
-					<strong>bx-slider Àû¿ë</strong>
-					<ul>
-						<li>
-							<a href="#con0">bx-slider »ç¿ë¹æ¹ı</a>
-						</li>
-						<li>
-							<a href="#con5">¿É¼Ç°ª ¼³¸í</a>
-						</li>
-						<li>
-							<a href="#function">ÇÔ¼ö</a>
-						</li>
-						<li>
-							<a href="#tab">tab¾È¿¡ bx-slider</a>
-						</li>
-					</ul>
-					<strong>¿¹½Ã</strong>
-					<ul>
-						<li>
-							<a href="#bx2">ÆäÀÌÂ¡ Á÷Á¢»ı¼º&¿¬°á</a>
-						</li>
-						<li>
-							<a href="#bx2_2">ÆäÀÌÂ¡ Á÷Á¢»ı¼º(¹öÆ° °ãÄ¡´Â °æ¿ì)</a>
-						</li>
-						<li>
-							<a href="#bx3">¿©·¯°³ ·Ñ¸µ</a>
-						</li>
-						<li>
-							<a href="#bx4">Èå¸£´Â ½½¶óÀÌµå</a>
-						</li>
-					</ul>
-				</div>
-				<div class="contents">
-					<dl class="dl1 index-tit-s" id="con0">
-						<dt>
-							<h3>0. Àû¿ë»çÀÌÆ®</h3>
-						</dt>
-						<dd>
-							<strong>
-								<a href="http://design.megamd.co.kr/Design/publishing_guide/guide/MegaMD/" target="_blank" class="color_red1">
-									- ¸Ş°¡MD (Àû¿ë) / ¸ğ¹ÙÀÏ(X)
-								</a> <br><br>
-								<a href="http://design.megamd.co.kr/Design/publishing_guide/guide/MegaLS/" target="_blank" class="color_red1">
-									- ¸Ş°¡·Î½ºÄğ (Àû¿ë) / ¸ğ¹ÙÀÏ(X)
-								</a> <br><br>
-								<a href="http://design.megamd.co.kr/Design/publishing_guide/guide/MegaLaw/" target="_blank" class="color_red1">
-									- ¸Ş°¡·ÎÀÌ¾î½º (X) / ¸ğ¹ÙÀÏ(X)
-								</a> <br><br>
-								<a href="http://design.megamd.co.kr/Design/publishing_guide/guide/Mdnp/" target="_blank" class="color_red1">
-									- MD&P (Àû¿ë) / ¸ğ¹ÙÀÏ(X)
-								</a> <br><br>
-								<a href="http://design.megamd.co.kr/Design/publishing_guide/guide/MegaPSAT/" target="_blank" class="color_red1">
-									- ¸Ş°¡ÇÇ¼Â (Àû¿ë) / ¸ğ¹ÙÀÏ(X)
-								</a><br><br>
-								<a href="http://design.megamd.co.kr/Design/publishing_guide/guide/MegaLAND/" target="_blank" class="color_red1">
-									- ¸Ş°¡·£µå (Àû¿ë) / ¸ğ¹ÙÀÏ(X)
-								</a>
-							</strong>
-						</dd>
-					 	<dt>
-							<h3>1. bx-slider »ç¿ë¹æ¹ı</h3>
-						</dt>
-						<dd>
-							<h4 class="mt0 pt0 color_red1" id="con1">1. bxslider µ¿ÀÛ¿¹½Ã</h4>
-							<style>
-								/* È­»ìÇ¥ ¹öÆ° */
-								.bxslider-default .bx-wrapper .bx-controls-direction a {text-indent: -9999px;width: 35px;height: 83px;}
-								.bxslider-default .bx-wrapper .bx-controls-direction .bx-prev,
-								.bxslider-default .bx-wrapper .bx-controls-direction .bx-next{top: 50%;margin-top: -42px;/* heightÀÇ ¹İ */}
-								.bxslider-default .bx-wrapper .bx-controls-direction .bx-prev{left: 10px;background: url(http://design.megamd.co.kr/Design/publishing_guide/img/bx_prev.png) no-repeat 0 0;}
-								.bxslider-default .bx-wrapper .bx-controls-direction .bx-next{right: 10px;background: url(http://design.megamd.co.kr/Design/publishing_guide/img/bx_next.png) no-repeat 0 0;}
-								/* ÆäÀÌÂ¡ */
-								.bxslider-default .bx-wrapper .bx-controls .bx-pager {width:100%;left:0;bottom: 20px;text-align: center; }
-								.bxslider-default .bx-wrapper .bx-controls .bx-default-pager a {width: 12px;height: 12px;margin: 0 3px 0 3px;background: #979797;border-radius: 50%; }
-								.bxslider-default .bx-wrapper .bx-controls .bx-default-pager a:hover,
-								.bxslider-default .bx-wrapper .bx-controls .bx-default-pager a.active {background: #395CC1; }
-							</style>
-							<!-- bxslider µ¿ÀÛ -->
-							<div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true" data-delay="3000">
-								<ul class="bxslider">
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt=""></li>
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt=""></li>
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt=""></li>
-								</ul>
-							</div>
-							<!-- //bxslider µ¿ÀÛ -->
-
-<h4 class="mt30 color_red1" id="con2">2. µ¿ÀÛ½Ã ÇÊ¿äÇÑ JS + CSS</h4>
-<pre class="box1">
-<b class="color_red1">&lt;!-- head ¿¡ ÀÖÀ» ½Ã ¾È°¡Á®¿Íµµ µÊ ( jquery , bxslider ) --&gt; </b>
-<b class="color_red1">&lt;link rel="stylesheet" href="http://img.megamd.co.kr/common/css/mega_bxslider_ui.css" /&gt;  &lt;!-- bx-slider_ui_css --&gt;</b>
-
-&lt;script language="JavaScript" src="http://img.megamd.co.kr/common/js/jquery.min.js"&gt;&lt;/script&gt;  &lt;!-- Á¦ÀÌÄõ¸® : MD --&gt;
-&lt;script language="JavaScript" src="http://www.megamd.co.kr/common/js/jquery.bxslider.js"&gt;&lt;/script&gt;  &lt;!-- bx-slider --&gt;
-<b class="color_red1">&lt;script type="text/javascript" src="http://img.megamd.co.kr/commo./js/plugin/mega_bxslider_ui.js"&gt;&lt;/script&gt;  &lt;!-- bx-slider_ui_js --&gt;</b>
-</pre>
-
-
-
-
-<h4 class="mt30 color_red1" id="con3">3. CSS</h4>
-<pre class="box1">
-&lt;style&gt;
-/* È­»ìÇ¥ ¹öÆ° */
-.bxslider-default .bx-wrapper .bx-controls-direction a {text-indent: -9999px;width: 35px;height: 83px;}
-.bxslider-default .bx-wrapper .bx-controls-direction .bx-prev,
-.bxslider-default .bx-wrapper .bx-controls-direction .bx-next{top: 50%;margin-top: -42px;/* heightÀÇ ¹İ */}
-.bxslider-default .bx-wrapper .bx-controls-direction .bx-prev{left: 10px;background: url(http://design.megamd.co.kr/Design/publishing_guide/img/bx_prev.png) no-repeat 0 0;}
-.bxslider-default .bx-wrapper .bx-controls-direction .bx-next{right: 10px;background: url(http://design.megamd.co.kr/Design/publishing_guide/img/bx_next.png) no-repeat 0 0;}
-/* ÆäÀÌÂ¡ */
-.bxslider-default .bx-wrapper .bx-controls .bx-pager {width:100%;left:0;bottom: 20px;text-align: center; }
-.bxslider-default .bx-wrapper .bx-controls .bx-default-pager a {width: 12px;height: 12px;margin: 0 3px 0 3px;background: #979797;border-radius: 50%; }
-.bxslider-default .bx-wrapper .bx-controls .bx-default-pager a:hover,
-.bxslider-default .bx-wrapper .bx-controls .bx-default-pager a.active {background: #395CC1; }
-&lt;/style&gt;
-</pre>
-
-
-
-
-<h4 class="mt15 color_red1" id="con4">4. HTML</h4>
-<pre class="box1">
-&lt;div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-delay="3000"&gt;
-	&lt;ul class="bxslider"&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt=""&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-						</dd>
-						<dt>
-							<h3 class="index-tit-s" id="con5">2. ¿É¼Ç°ª ¼³¸í</h3>
-						</dt>
-						<dd>
-							<div class="bxslider-box-tb">
-								<table>
-									<colgroup>
-										<col width="*"><col width="30%">
-										<col width="25%"><col width="25%">
-									</colgroup>
-									<tr>
-										<th scope="col">Name</th>
-										<th scope="col">Description</th>
-										<th scope="col">Option / Value</th>
-										<th scope="col">Default</th>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-mode</strong>
-										</td>
-										<td>½½¶óÀÌµå µ¿ÀÛ¹æ¹ı</td>
-										<td class="tc">
-											[horizontal,vertical,fade]
-										</td>
-										<td class="tc">
-											horizontal
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-maxSlides</strong>
-										</td>
-										<td>ÃÖ´ë º¸¿©Áö´Â °¹¼ö</td>
-										<td class="tc">
-											[1]
-										</td>
-										<td class="tc">1</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-minSlides</strong>
-										</td>
-										<td>ÃÖ¼Ò º¸¿©Áö´Â °¹¼ö</td>
-										<td class="tc">
-											[1]
-										</td>
-										<td class="tc">1</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-slideMargin</strong>
-										</td>
-										<td>½½¶óÀÌµå »çÀÌ margin °ª</td>
-										<td class="tc">
-											[0]
-										</td>
-										<td class="tc">0</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-delay</strong>
-										</td>
-										<td>½½¶óÀÌµå µô·¹ÀÌ ¼³Á¤</td>
-										<td class="tc">
-											[4000]
-										</td>
-										<td class="tc">4000</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-speed</strong>
-										</td>
-										<td>½½¶óÀÌµå ¼Óµµ ¼³Á¤</td>
-										<td class="tc">
-											[400]
-										</td>
-										<td class="tc">400</td>
-									</tr>
-									<!--<tr>
-										<td>
-											<strong>data-autoBtn</strong>
-											</td>
-										<td class="tc">
-											[play / stop / puase]
-										</td>
-										<td class="tc">false</td>
-										<td></td>
-									</tr>-->
-									<tr>
-									<tr>
-										<td>
-											<strong>data-auto</strong>
-										</td>
-										<td>ÀÚµ¿½½¶óÀÌµå ¿©ºÎ</td>
-										<td class="tc">
-											[true,false]
-										</td>
-										<td class="tc">false</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-pager</strong>
-										</td>
-										<td>ÆäÀÌÁö µ¿±×¶õ ¹öÆ° ¼³Á¤ ¿©ºÎ</td>
-										<td class="tc">
-											[true,false]
-										</td>
-										<td class="tc">false</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-pagercustom</strong>
-										</td>
-										<td>ÆäÀÌÂ¡ Á÷Á¢»ı¼º&¿¬°á </td>
-										<td class="tc">
-											[class¸í]
-										</td>
-										<td class="tc">false</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-controls</strong>
-										</td>
-										<td>ÀÚµ¿ ½½¶óÀÌµå ÄÁÆ®·Ñ ¹öÆ° ¼³Á¤ ¿©ºÎ(È­»ìÇ¥)</td>
-										<td class="tc">
-											[true,false]
-										</td>
-										<td class="tc">false</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-moves</strong>
-										</td>
-										<td>½½¶óÀÌµå ¸î°³¾¿ ¿òÁ÷ÀÏÁö</td>
-										<td class="tc">
-											[1]
-										</td>
-										<td class="tc">1</td>
-									</tr>
-									<!--<tr>
-										<td>
-											<strong>data-touch</strong>
-										</td>
-										<td>¸¶¿ì½º ÅÍÄ¡ ½½¶óÀÌµå »ç¿ë¿©ºÎ</td>
-										<td class="tc">
-											[true,false]
-										</td>
-										<td class="tc">false</td>
-									</tr>-->
-									<tr>
-										<td>
-											<strong>data-loop</strong>
-										</td>
-										<td>¹«ÇÑ ·çÇÁ</td>
-										<td class="tc">
-											[true,false]
-										</td>
-										<td class="tc">true</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-ticker</strong>
-										</td>
-										<td>Èå¸£´Â ½½¶óÀÌµå</td>
-										<td class="tc">
-											[true,false]
-										</td>
-										<td class="tc">false</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-tickerHover</strong>
-										</td>
-										<td>Èå¸£´Â ½½¶óÀÌµå hover½Ã ¸ØÃã</td>
-										<td class="tc">
-											[true,false]
-										</td>
-										<td class="tc">false</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>data-randomStart</strong>
-										</td>
-										<td>·£´ı°ª</td>
-										<td class="tc">
-											[true,false]
-										</td>
-										<td class="tc">false</td>
-									</tr>
-									<!--	<tr>
-											<td> data-cutLimit="3"</td>
-										</tr>-->
-								</table>
-							</div>
-						</dd>
-						<dt>
-							<h3 class="index-tit-s" id="function">3. ÇÔ¼ö</h3>
-						</dt>
-						<dd>
-<pre class="box1">
-__globalBxslider.reloadSlider();
-</pre>
-							<ul class="ul1">
-								<li class="color_red1"><b>±âÅ¸ ¼³¸í</b></li>
-								<li>ÅÇ¾È¿¡ bx½½¶óÀÌµå¸¦ »ç¿ëÇÒ¶§ bx½½¶óÀÌµå ÇÔ¼ö Àç½ÇÇà</li>
-							</ul>
-						</dd>
-						<dt>
-							<h3 class="index-tit-s" id="tab">4. tab¾È¿¡ bx-slider (À¯Çü1)</h3>
-						</dt>
-						<dd>
-							<style>
-								.js_tab_type:after{content:'';display:block;clear:both}
-								.js_tab_type li{float:left;width:33.3%}
-								.js_tab_type li a{display:block;height:50px;border:1px solid #000;line-height:50px;text-align:center}
-								.js_tab_type li.on a{background:#000;color:#fff}
-								.js_tab_type_con{display:none}
-								.js_tab_type_con.on{display:block}
-							</style>
-							<script>
-								$(document).ready(function () {
-									$('.js_tab_type li a').on('click', function (e) {
-										var targetId = $(this).attr("href");
-										if ($(this).attr("target") !== "_blank") {
-											e.preventDefault();
-											$(this).parent('li').addClass('on').siblings().removeClass('on');
-											$(targetId).addClass('on').siblings().removeClass('on');
-											__globalBxslider.reloadSlider();
-										} else {
-											return true;
-										}
-									});
-								});
-							</script>
-							<ul class="js_tab_type">
-								<li class="on"><a href="#tab1_1">tab1_1</a></li>
-								<li><a href="#tab1_2">tab1_2</a></li>
-								<li><a href="#tab1_3">tab1_3</a></li>
-							</ul>
-							<style>
-								.bxslider-default.type2 .bx-wrapper .bx-viewport .bxslider li{width:380px !important;}
-							</style>
-							<div id="tab1_1" class="js_tab_type_con on">
-								<div class="bxslider-default type2" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3">
-									<ul class="bxslider">
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
-									</ul>
-								</div>
-							</div>
-							<div id="tab1_2" class="js_tab_type_con">
-								<div class="bxslider-default type2" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3">
-									<ul class="bxslider">
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
-									</ul>
-								</div>
-							</div>
-							<div id="tab1_3" class="js_tab_type_con">
-								<div class="bxslider-default type2" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3">
-									<ul class="bxslider">
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
-									</ul>
-								</div>
-							</div>
-<pre class="box1">
-&lt;style&gt;
-	.js_tab_type:after{content:'';display:block;clear:both}
-	.js_tab_type li{float:left;width:33.3%}
-	.js_tab_type li a{display:block;height:50px;border:1px solid #000;line-height:50px;text-align:center}
-	.js_tab_type li.on a{background:#000;color:#fff}
-	.js_tab_type_con{display:none}
-	.js_tab_type_con.on{display:block}
-
-	<span class="color_red1">.bxslider-default.type2 .bx-wrapper .bx-viewport .bxslider li{width:380px !important;}</span>
-&lt;/style&gt;
-&lt;script&gt;
-	$(document).ready(function () {
-		$('.js_tab_type li a').on('click', function (e) {
-			var targetId = $(this).attr("href");
-			if ($(this).attr("target") !== "_blank") {
-				e.preventDefault();
-				$(this).parent('li').addClass('on').siblings().removeClass('on');
-				$(targetId).addClass('on').siblings().removeClass('on');
-				<span class="color_red1">__globalBxslider.reloadSlider();</span>
-			} else {
-				return true;
-			}
-		});
-	});
-&lt;/script&gt;
-&lt;ul class="js_tab_type"&gt;
-	&lt;li class="on"&gt;&lt;a href="#tab1_1"&gt;tab1_1&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href="#tab1_2"&gt;tab1_2&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href="#tab1_3"&gt;tab1_3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id="tab1_1" class="js_tab_type_con on"&gt;
-	&lt;div class="bxslider-default type2" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3"&gt;
-		&lt;ul class="bxslider"&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="tab1_2" class="js_tab_type_con"&gt;
-	&lt;div class="bxslider-default type2" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3"&gt;
-		&lt;ul class="bxslider"&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="tab1_3" class="js_tab_type_con"&gt;
-	&lt;div class="bxslider-default type2" data-mode="horizontal" data-auto="true" data-pager="false" data-controls="true" data-maxSlides="3" data-minSlides="3"&gt;
-		&lt;ul class="bxslider"&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-						</dd>
-						<dt>
-							<h3>4. tab¾È¿¡ bx-slider (À¯Çü2)</h3>
-						</dt>
-						<dd>
-							<style>
-								.js_tab_type:after{content:'';display:block;clear:both}
-								.js_tab_type li{float:left;width:33.3%}
-								.js_tab_type li a{display:block;height:50px;border:1px solid #000;line-height:50px;text-align:center}
-								.js_tab_type li.on a{background:#000;color:#fff}
-								.js_tab_type_con{display:none}
-								.js_tab_type_con.on{display:block}
-							</style>
-							<script>
-								$(document).ready(function () {
-									$('.js_tab_type li a').on('click', function (e) {
-										var targetId = $(this).attr("href");
-										if ($(this).attr("target") !== "_blank") {
-											e.preventDefault();
-											$(this).parent('li').addClass('on').siblings().removeClass('on');
-											$(targetId).addClass('on').siblings().removeClass('on');
-											__globalBxslider.reloadSlider();
-										} else {
-											return true;
-										}
-									});
-								});
-							</script>
-							<ul class="js_tab_type">
-								<li class="on"><a href="#tab2_1">tab2_1</a></li>
-								<li><a href="#tab2_2">tab2_2</a></li>
-								<li><a href="#tab2_3">tab2_3</a></li>
-							</ul>
-							<div id="tab2_1" class="js_tab_type_con on">
-								<div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true">
-									<ul class="bxslider">
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt=""></li>
-									</ul>
-								</div>
-							</div>
-							<div id="tab2_2" class="js_tab_type_con">
-								<div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true">
-									<ul class="bxslider">
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6.jpg" alt=""></li>
-									</ul>
-								</div>
-							</div>
-							<div id="tab2_3" class="js_tab_type_con">
-								<div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true">
-									<ul class="bxslider">
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5.jpg" alt=""></li>
-										<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6.jpg" alt=""></li>
-									</ul>
-								</div>
-							</div>
-							
-							<pre class="box1">
-&lt;style&gt;
-	.js_tab_type:after{content:'';display:block;clear:both}
-	.js_tab_type li{float:left;width:33.3%}
-	.js_tab_type li a{display:block;height:50px;border:1px solid #000;line-height:50px;text-align:center}
-	.js_tab_type li.on a{background:#000;color:#fff}
-	.js_tab_type_con{display:none}
-	.js_tab_type_con.on{display:block}
-&lt;/style&gt;
-&lt;script&gt;
-	$(document).ready(function () {
-		$('.js_tab_type li a').on('click', function (e) {
-			var targetId = $(this).attr("href");
-			if ($(this).attr("target") !== "_blank") {
-				e.preventDefault();
-				$(this).parent('li').addClass('on').siblings().removeClass('on');
-				$(targetId).addClass('on').siblings().removeClass('on');
-				<span class="color_red1">__globalBxslider.reloadSlider();</span>
-			} else {
-				return true;
-			}
-		});
-	});
-&lt;/script&gt;
-&lt;ul class="js_tab_type"&gt;
-	&lt;li class="on"&gt;&lt;a href="#tab2_1"&gt;tab2_1&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href="#tab2_2"&gt;tab2_2&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href="#tab2_3"&gt;tab2_3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id="tab2_1" class="js_tab_type_con on"&gt;
-	&lt;div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true"&gt;
-		&lt;ul class="bxslider"&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="tab2_2" class="js_tab_type_con"&gt;
-	&lt;div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true"&gt;
-		&lt;ul class="bxslider"&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id="tab2_3" class="js_tab_type_con"&gt;
-	&lt;div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="true"&gt;
-		&lt;ul class="bxslider"&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5.jpg" alt=""&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-						</dd>
-
-						<dt>
-							<h3 class="index-tit-s" id="bx2">¿¹½Ã 2) ÆäÀÌÂ¡ Á÷Á¢»ı¼º&¿¬°á (data-pagerCustom ) [data-pagercustom="Á÷Á¢»ı¼ºÇÑ Å¬·¡½º¸í"]</h3>
-						</dt>
-						<dd>
-							<style>
-								.pager-paging{overflow:hidden;margin: 0 auto;width: 1000px;}
-								.pager-paging li{float: left;width: 25%;}
-								.pager-paging li a{display: block;height: 50px; background: url(http://design.megamd.co.kr/Design/publishing_guide/img/tab.jpg) no-repeat 0 0;font-size: 0;}
-								.pager-paging li [data-slide-index='0']{background-position: 0 0;}
-								.pager-paging li [data-slide-index='0'].active{background-position: 0 -50px;}
-								.pager-paging li [data-slide-index='1']{ background-position: -250px 0; }
-								.pager-paging li [data-slide-index='1'].active {background-position: -250px -50px;}
-								.pager-paging li [data-slide-index='2']{ background-position: -500px 0;}
-								.pager-paging li [data-slide-index='2'].active {background-position: -500px -50px;}
-								.pager-paging li [data-slide-index='3']{ background-position: -750px 0;}
-								.pager-paging li [data-slide-index='3'].active {background-position: -750px -50px;}
-							</style>
-
-							<div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="false" data-minslides="4" data-pagercustom="pager-paging">
-								<ul class="pager-paging">
-									<li><a href="#" data-slide-index="0" class="active">tab1</a></li>
-									<li><a href="#" data-slide-index="1">tab2</a></li>
-									<li><a href="#" data-slide-index="2">tab3</a></li>
-									<li><a href="#" data-slide-index="3">tab4</a></li>
-								</ul>
-								<ul class="bxslider">
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt="" /></li>
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt="" /></li>
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt="" /></li>
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4.jpg" alt="" /></li>
-								</ul>
-							</div>
-
-<pre class="box1">
-&lt;style&gt;
-	.pager-paging{overflow:hidden;margin: 0 auto;width: 1000px;}
-	.pager-paging li{float: left;width: 25%;}
-	.pager-paging li a{display: block;height: 50px; background: url(http://design.megamd.co.kr/Design/publishing_guide/img/tab.jpg) no-repeat 0 0;font-size: 0;}
-	.pager-paging li [data-slide-index='0']{background-position: 0 0;}
-	.pager-paging li [data-slide-index='0'].active{background-position: 0 -50px;}
-	.pager-paging li [data-slide-index='1']{ background-position: -250px 0; }
-	.pager-paging li [data-slide-index='1'].active {background-position: -250px -50px;}
-	.pager-paging li [data-slide-index='2']{ background-position: -500px 0;}
-	.pager-paging li [data-slide-index='2'].active {background-position: -500px -50px;}
-	.pager-paging li [data-slide-index='3']{ background-position: -750px 0;}
-	.pager-paging li [data-slide-index='3'].active {background-position: -750px -50px;}
-&lt;/style&gt;
-&lt;div class="bxslider-default" data-mode="horizontal" data-auto="true" data-pager="true" data-controls="false" data-minslides="4" data-pagercustom="pager-paging"&gt;
-	&lt;ul class="pager-paging"&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="0" class="active"&gt;tab1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="1"&gt;tab2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="2"&gt;tab3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="3"&gt;tab4&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;ul class="bxslider"&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4.jpg" alt="" /&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-						</dd>
-
-
-							
-						<dt>
-							<h3 class="index-tit-s" id="bx2_2">¿¹½Ã 2_2) ÆäÀÌÂ¡ Á÷Á¢»ı¼º (¹öÆ°ÀÌ¹ÌÁö °ãÄ¡´Â °æ¿ì)</h3>
-						</dt>
-						<dd>
-							<style>
-								.bxslider-default.type5 {position: relative;width: 1256px;overflow: visible;border: 12px solid #1d2161;border-top: none;}
-								.slide_pager {position: relative;overflow:hidden;width: 1280px;height: 244px;background: url(http://img.megaland.co.kr/2019/1105_pass/tab_off.jpg) no-repeat 0 0;}
-								.slide_pager li {float:left;height:244px;}
-								.slide_pager li:first-child a {margin-left: 125px;}
-								.slide_pager li a {width:142px;height:244px;display:block;cursor:pointer; font-size: 0; }
-								.slide_pager li a img{display:none;position:absolute;bottom:0;}
-								.slide_pager li a.active img{display:block;}
-								.slide_pager li a[data-slide-index="0" ] img{left: 121px;}
-								.slide_pager li a[data-slide-index="1"] img{left: 252px;}
-								.slide_pager li a[data-slide-index="2"] img{left: 378px;}
-								.slide_pager li a[data-slide-index="3"] img{left: 530px;}
-								.slide_pager li a[data-slide-index="4"] img{left: 675px;}
-								.slide_pager li a[data-slide-index="5"] img{left: 808px;}
-								.slide_pager li a[data-slide-index="6"] img{left: 966px;}
-							</style>
-							<div class="bxslider-default type5"  data-mode="horizontal" data-auto="true" data-delay="3000" data-pager="true" data-controls="false" data-pagercustom="slide_pager">
-								<ul class="slide_pager">
-									<li><a href="#" data-slide-index="0" class="active"><img src="http://img.megaland.co.kr/2019/1105_pass/tab1.png" alt=" ±³¼ö´Ô" ></a></li>
-									<li><a href="#" data-slide-index="1"><img src="http://img.megaland.co.kr/2019/1105_pass/tab2.png" alt=" ±³¼ö´Ô" ></a></li>
-									<li><a href="#" data-slide-index="2"><img src="http://img.megaland.co.kr/2019/1105_pass/tab3.png" alt=" ±³¼ö´Ô" ></a></li>
-									<li><a href="#" data-slide-index="3"><img src="http://img.megaland.co.kr/2019/1105_pass/tab4.png" alt=" ±³¼ö´Ô" ></a></li>
-									<li><a href="#" data-slide-index="4"><img src="http://img.megaland.co.kr/2019/1105_pass/tab5.png" alt=" ±³¼ö´Ô" ></a></li>
-									<li><a href="#" data-slide-index="5"><img src="http://img.megaland.co.kr/2019/1105_pass/tab6.png" alt=" ±³¼ö´Ô" ></a></li>
-									<li><a href="#" data-slide-index="6"><img src="http://img.megaland.co.kr/2019/1105_pass/tab7.png" alt=" ±³¼ö´Ô" ></a></li>
-								</ul>
-								<ul class="bxslider">
-									<li><img src="http://img.megaland.co.kr/2019/1105_pass/tab1con.jpg" alt=""></li>
-									<li><img src="http://img.megaland.co.kr/2019/1105_pass/tab2con.jpg" alt=""></li>
-									<li><img src="http://img.megaland.co.kr/2019/1105_pass/tab3con.jpg" alt=""></li>
-									<li><img src="http://img.megaland.co.kr/2019/1105_pass/tab4con.jpg" alt=""></li>
-									<li><img src="http://img.megaland.co.kr/2019/1105_pass/tab5con.jpg" alt=""></li>
-									<li><img src="http://img.megaland.co.kr/2019/1105_pass/tab6con.jpg" alt=""></li>
-									<li><img src="http://img.megaland.co.kr/2019/1105_pass/tab7con.jpg" alt=""></li>
-								</ul>
-							</div>
-<pre class="box1">
-&lt;style&gt;
-	.bxslider-default.type5 {position: relative;width: 1256px;overflow: visible;border: 12px solid #1d2161;border-top: none;}
-	.slide_pager {position: relative;overflow:hidden;width: 1280px;height: 244px;background: url(http://img.megaland.co.kr/2019/1105_pass/tab_off.jpg) no-repeat 0 0;}
-	.slide_pager li {float:left;height:244px;}
-	.slide_pager li:first-child a {margin-left: 125px;}
-	.slide_pager li a {width:142px;height:244px;display:block;cursor:pointer; font-size: 0; }
-	.slide_pager li a img{display:none;position:absolute;bottom:0;}
-	.slide_pager li a.active img{display:block;}
-	.slide_pager li a[data-slide-index="0" ] img{left: 121px;}
-	.slide_pager li a[data-slide-index="1"] img{left: 252px;}
-	.slide_pager li a[data-slide-index="2"] img{left: 378px;}
-	.slide_pager li a[data-slide-index="3"] img{left: 530px;}
-	.slide_pager li a[data-slide-index="4"] img{left: 675px;}
-	.slide_pager li a[data-slide-index="5"] img{left: 808px;}
-	.slide_pager li a[data-slide-index="6"] img{left: 966px;}
-&lt;/style&gt;
-&lt;div class="bxslider-default type5"  data-mode="horizontal" data-auto="true" data-delay="3000" data-pager="true" data-controls="false" data-pagercustom="slide_pager"&gt;
-	&lt;ul class="slide_pager"&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="0" class="active"&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab1.png" alt=" ±³¼ö´Ô" &gt;&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="1"&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab2.png" alt=" ±³¼ö´Ô" &gt;&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="2"&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab3.png" alt=" ±³¼ö´Ô" &gt;&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="3"&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab4.png" alt=" ±³¼ö´Ô" &gt;&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="4"&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab5.png" alt=" ±³¼ö´Ô" &gt;&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="5"&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab6.png" alt=" ±³¼ö´Ô" &gt;&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#" data-slide-index="6"&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab7.png" alt=" ±³¼ö´Ô" &gt;&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;ul class="bxslider"&gt;
-		&lt;li&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab1con.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab2con.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab3con.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab4con.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab5con.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab6con.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://img.megaland.co.kr/2019/1105_pass/tab7con.jpg" alt=""&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-							<ul class="ul1">
-								<li class="color_red1"><b>±âÅ¸ ¼³¸í</b></li>
-								<li>1. img´Â ul ±âÁØÀ¸·Î left °ª ¼³Á¤ÇÔ. but »óÈ²¿¡ µû¶ó li ³ª a ±âÁØÀ¸·Î º¯°æÇÏ¿© »ç¿ë °¡´É</li>
-							</ul>
-						</dd>
+<div class="bxslider-box-tb">
+	<table>
+		<colgroup>
+			<col width="*"><col width="30%">
+			<col width="25%"><col width="25%">
+		</colgroup>
+		<tr>
+			<th scope="col">Name</th>
+			<th scope="col">Description</th>
+			<th scope="col">Option / Value</th>
+			<th scope="col">Default</th>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-mode</strong>
+			</td>
+			<td>ìŠ¬ë¼ì´ë“œ ë™ì‘ë°©ë²•</td>
+			<td class="tc">
+				[horizontal,vertical,fade]
+			</td>
+			<td class="tc">
+				horizontal
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-maxSlides</strong>
+			</td>
+			<td>ìµœëŒ€ ë³´ì—¬ì§€ëŠ” ê°¯ìˆ˜</td>
+			<td class="tc">
+				[1]
+			</td>
+			<td class="tc">1</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-minSlides</strong>
+			</td>
+			<td>ìµœì†Œ ë³´ì—¬ì§€ëŠ” ê°¯ìˆ˜</td>
+			<td class="tc">
+				[1]
+			</td>
+			<td class="tc">1</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-slideMargin</strong>
+			</td>
+			<td>ìŠ¬ë¼ì´ë“œ ì‚¬ì´ margin ê°’</td>
+			<td class="tc">
+				[0]
+			</td>
+			<td class="tc">0</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-delay</strong>
+			</td>
+			<td>ìŠ¬ë¼ì´ë“œ ë”œë ˆì´ ì„¤ì •</td>
+			<td class="tc">
+				[4000]
+			</td>
+			<td class="tc">4000</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-speed</strong>
+			</td>
+			<td>ìŠ¬ë¼ì´ë“œ ì†ë„ ì„¤ì •</td>
+			<td class="tc">
+				[400]
+			</td>
+			<td class="tc">400</td>
+		</tr>
+		<!--<tr>
+			<td>
+				<strong>data-autoBtn</strong>
+				</td>
+			<td class="tc">
+				[play / stop / puase]
+			</td>
+			<td class="tc">false</td>
+			<td></td>
+		</tr>-->
+		<tr>
+		<tr>
+			<td>
+				<strong>data-auto</strong>
+			</td>
+			<td>ìë™ìŠ¬ë¼ì´ë“œ ì—¬ë¶€</td>
+			<td class="tc">
+				[true,false]
+			</td>
+			<td class="tc">false</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-pager</strong>
+			</td>
+			<td>í˜ì´ì§€ ë™ê·¸ë€ ë²„íŠ¼ ì„¤ì • ì—¬ë¶€</td>
+			<td class="tc">
+				[true,false]
+			</td>
+			<td class="tc">false</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-pagercustom</strong>
+			</td>
+			<td>í˜ì´ì§• ì§ì ‘ìƒì„±&ì—°ê²° </td>
+			<td class="tc">
+				[classëª…]
+			</td>
+			<td class="tc">false</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-controls</strong>
+			</td>
+			<td>ìë™ ìŠ¬ë¼ì´ë“œ ì»¨íŠ¸ë¡¤ ë²„íŠ¼ ì„¤ì • ì—¬ë¶€(í™”ì‚´í‘œ)</td>
+			<td class="tc">
+				[true,false]
+			</td>
+			<td class="tc">false</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-moves</strong>
+			</td>
+			<td>ìŠ¬ë¼ì´ë“œ ëª‡ê°œì”© ì›€ì§ì¼ì§€</td>
+			<td class="tc">
+				[1]
+			</td>
+			<td class="tc">1</td>
+		</tr>
+		<!--<tr>
+			<td>
+				<strong>data-touch</strong>
+			</td>
+			<td>ë§ˆìš°ìŠ¤ í„°ì¹˜ ìŠ¬ë¼ì´ë“œ ì‚¬ìš©ì—¬ë¶€</td>
+			<td class="tc">
+				[true,false]
+			</td>
+			<td class="tc">false</td>
+		</tr>-->
+		<tr>
+			<td>
+				<strong>data-loop</strong>
+			</td>
+			<td>ë¬´í•œ ë£¨í”„</td>
+			<td class="tc">
+				[true,false]
+			</td>
+			<td class="tc">true</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-ticker</strong>
+			</td>
+			<td>íë¥´ëŠ” ìŠ¬ë¼ì´ë“œ</td>
+			<td class="tc">
+				[true,false]
+			</td>
+			<td class="tc">false</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-tickerHover</strong>
+			</td>
+			<td>íë¥´ëŠ” ìŠ¬ë¼ì´ë“œ hoverì‹œ ë©ˆì¶¤</td>
+			<td class="tc">
+				[true,false]
+			</td>
+			<td class="tc">false</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>data-randomStart</strong>
+			</td>
+			<td>ëœë¤ê°’</td>
+			<td class="tc">
+				[true,false]
+			</td>
+			<td class="tc">false</td>
+		</tr>
+		<tr class="emphasis">
+			<td colspan="4">
+				<p>í•¨ìˆ˜ :&nbsp;&nbsp;   __globalBxslider.reloadSlider();</p>
+				<p class="disc">íƒ­ì•ˆì— bxìŠ¬ë¼ì´ë“œë¥¼ ì‚¬ìš©í• ë•Œ bxìŠ¬ë¼ì´ë“œ í•¨ìˆ˜ ì¬ì‹¤í–‰</p>
+			</td>
+		</tr>
+		<!--<tr>
+				<td> data-cutLimit="3"</td>
+			</tr>-->
+	</table>
+</div>
+<!--//ì˜µì…˜ê°’ ì„¤ëª…-->
 
 
 
-						<dt>
-							<h3 class="index-tit-s" id="bx3">¿¹½Ã 3) ¿©·¯°³ ·Ñ¸µ [data-maxSlides + data-minSlides + data-pager="false"]</h3>
-						</dt>
-						<dd>
-						<style>
-							.bxslider-default.type3 .bx-wrapper .bx-viewport .bxslider li{width:350px !important;}
-						</style>
-						<div class="bxslider-default type3" data-mode="horizontal" data-auto="true" data-controls="true" data-pager="false" data-maxSlides="3" data-minSlides="3">
-							<ul class="bxslider">
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""></li>
-							</ul>
-						</div>
-
-<pre class="box1">
-&lt;style&gt;
-	.bxslider-default.type3 .bx-wrapper .bx-viewport .bxslider li{width:350px !important;}
-&lt;/style&gt;
-&lt;div class="bxslider-default type3" data-mode="horizontal" data-auto="true" data-controls="true" <b class="color_red1"> data-pager="false" data-maxSlides="3" data-minSlides="3"</b>&gt;
-	&lt;ul class="bxslider"&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt=""&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt=""&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-						<ul class="ul1">
-							<li class="color_red1"><b>±âÅ¸ ¼³¸í</b></li>
-							<li>1. data-maxSlides="½½¶óÀÌµå°¹¼ö" + data-minSlides="½½¶óÀÌµå°¹¼ö"</li>
-							<li>2. data-pager="false" : ÆäÀÌÂ¡Àº ÇØ´ç ¿¹Á¦¿¡¼± ÇÊ¿ä¾øÀ½. (data-pager="true"´Â ¿À·ù)</li>
-						</ul>
-					</dd>
-
-					<dt>
-						<h3 class="index-tit-s" id="bx4">¿¹½Ã 4) Èå¸£´Â ½½¶óÀÌµå (ticker)</h3>
-					</dt>
-					<dd>
-						<style>
-							.bxslider-default.type4 .bx-wrapper .bx-viewport .bxslider li{width:350px !important;}
-						</style>
-						<div class="bxslider-default type4" data-ticker="true" data-tickerHover="true" data-speed="20000" data-maxslides="7" data-minSlides="4">
-							<ul class="bxslider">
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl7_s.jpg" alt="" /></li>
-							</ul>
-						</div>
-<pre class="box1">
-&lt;style&gt;
-	.bxslider-default.type4 .bx-wrapper .bx-viewport .bxslider li{width:350px !important;}
-&lt;/style&gt;
-&lt;div class="bxslider-default" <b class="color_red1">data-ticker="true" data-tickerHover="true" data-speed="20000" data-maxslides="7" data-minSlides="4"</b>&gt;
-	&lt;ul class="bxslider"&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg alt="" /&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-
-						<ul class="ul1">
-							<li class="color_red1"><b>±âÅ¸ ¼³¸í</b></li>
-							<li>1. data-speed="¼Óµµ" data-maxslides="½½¶óÀÌµå ÃÑ °¹¼ö" data-minSlides="ÇÑÈ­¸é¿¡ º¸ÀÌ´Â ½½¶óÀÌµå °¹¼ö"</li>
-							<li>2. ½½¶óÀÌµå hover½Ã ¸ØÃßÁö ¾ÊÀ¸·Á¸é data-tickerHover="true" »èÁ¦</li>
-						</ul>
-					</dd>
-
-
-
-
-
-
-						<dt>
-							<h3 class="index-tit-s" id="bx4-1">¿¹½Ã 4-1) À§¾Æ·¡·Î Èå¸£´Â ½½¶óÀÌµå (ticker)</h3>
-						</dt>
-						<dd>
-							<style>
-								.bxslider-default.type5{height:268px;overflow:hidden !important;}
-								.bxslider-default.type5 .bx-wrapper .bx-viewport .bxslider li{width:350px !important;}
-							</style>
-							<div class="bxslider-default type5" data-mode="vertical" data-ticker="true" data-tickerHover="true" data-speed="20000" data-maxslides="1" data-minSlides="4">
-								<ul class="bxslider">
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt="" /></li>
-									<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt="" /></li>
-								</ul>
-							</div>
-						</dd>
-
-
-
-
-
-
-
-					<!--<style>
-						.slide-select1 li {opacity: 0.4;filter: alpha(opacity=40); }
-						.slide-select1 li.on {opacity: 1;filter: alpha(opacity=100); }
-
-						.slide-select3 li {width: 350px;opacity: 0.4;filter: alpha(opacity=40); }
-						.slide-select3 li img {transform: scale(0.8); }
-						.slide-select3 li.on {opacity: 1;filter: alpha(opacity=100); }
-						.slide-select3 li.on img {transform: scale(1); }
-					</style>
-					<dt>
-						<h3><span class="color_red1">li¿¡ Å¬·¡½º on È°¼ºÈ­</span> [slide-select1]</h3>
-					</dt>
-					<dd>
-						<div class="bxslider-default slide-select1" data-select="1" data-mode="horizontal" data-auto="true" data-controls="true" data-maxSlides="1" data-minSlides="1" data-moves="1" data-pager="false">
-							<ul class="bxslider">
-								<li class="on"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt="" /></li>
-							</ul>
-						</div>
-
-						<pre class="box1">
-&lt;div class="bxslider-default slide-select1" data-select="1" data-mode="horizontal" data-auto="true" data-controls="true" data-maxSlides="1" data-minSlides="1" data-moves="1" data-pager="false"&gt;
-	&lt;ul class="bxslider"&gt;
-		&lt;li class="on"&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl7_s.jpg" alt="" /&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-					</dd>
-				</dl>
-					<dt>
-						<h3><span class="color_red1">li¿¡ Å¬·¡½º on È°¼ºÈ­</span> [slide-select3]</h3>
-					</dt>
-					<dd>
-						<div class="bxslider-default slide-select3" data-select="3" data-mode="horizontal" data-auto="true" data-controls="true" data-maxSlides="3" data-minSlides="3" data-moves="1" data-pager="false">
-							<ul class="bxslider">
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt="" /></li>
-								<li class="on"><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt="" /></li>
-								<li><img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt="" /></li>
-							</ul>
-						</div>
-
-<pre class="box1">
-&lt;div class="bxslider-default slide-select3" data-select="3" data-mode="horizontal" data-auto="true" data-controls="true" data-maxSlides="3" data-minSlides="3" data-moves="1" data-pager="false"&gt;
-	&lt;ul class="bxslider"&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl1_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li class="on"&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl2_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl3_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl4_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl5_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl6_s.jpg" alt="" /&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;img src="http://design.megamd.co.kr/Design/publishing_guide/img/sl7_s.jpg" alt="" /&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-				</dd>-->
-
-
-
-			</dl>
-
-			<ul class="ul1 mt20">
-				<li class="fw_b">Âü°í»çÀÌÆ®</li>
-				<li>
-					<a class="btn02" href="https://bxslider.com/" target="_blank"> bxslider.com </a>
-					<a class="btn02" style="margin-left: 10px;" href="https://github.com/demun/FrontEndStudy/blob/master/document/Jquery/docs/01_01_jquery_plugin_bxslider.md"  target="_blank"> ÇÑ±Û¼³¸í </a>
-					<a class="btn02" style="margin-left: 10px;" href="http://godlvkhj.tistory.com/60"  target="_blank"> ÇÑ±Û¼³¸í2 </a>
-				</li>
-			</ul>
-		</div>
+		<!--//ì†ŒìŠ¤ End-->
 	</div>
 </div>
 
-<script type="text/javascript">
-	$(document).ready(function () {
-		__globalBxslider.init('.bxslider-default');
-		$('.box1').each(function(i, block) {
-			hljs.highlightBlock(block);
-			hljs.lineNumbersBlock(block);
-		});
-		$(".btn_toggle").on("click",function(){
-			$(this).next('.box1').toggle();
-		});
-	});
-</script>
+</body>
+</html>

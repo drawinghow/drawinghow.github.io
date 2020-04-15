@@ -1,0 +1,1529 @@
+@charset "euc-kr";
+/*=============================================================================+
+| Copyright (c) 2015. http://gima.pe.kr. All rights reserved.                  |
++------------------------------------------------------------------------------+
+| 타이틀: 메가 변호사시험                                                      |
+| 작업일: 2015-03-02                                                           |
+| 작성자: 이정세 <http://gima.pe.kr>                                           |
++------------------------------------------------------------------------------+
+| IE8부터 지원                            |
++-----------------------------------------------------------------------------*/
+html { overflow:scroll; overflow-x:auto; }
+/* 나눔고딕 웹폰트 Nanum Gothic (Korean) http://www.google.com/webfonts/earlyaccess */
+/* 2015.07.27 폰트 경로 업그레이드*/
+/*@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+}*/
+
+/* 2015.07.27 폰트 경로 업그레이드*/
+
+/* 기본세팅 */
+html,body { height:100%; border:0; }
+body,p,table,input,select,button,textarea { color:#888; font:13px/20px 'Malgun Gothic'; word-break-:break-all; }
+body,p,form,ol,ul,li,dl,dd,input,select,textarea,blockquote { margin:0; padding:0; }
+h1,h2,h3,h4,h5,h6 { margin:0; padding:0; *font-size:0; }
+caption { position:absolute; left: 0; top:-5000px; font:0/0 Dotum; }
+table { border:0; border-spacing:0; border-collapse:separate; *border-collapse:collapse; }
+table th { text-align:center; }
+th,td { word-break:break-all; }
+em,i { font-style:normal; }
+ul { list-style:none; }
+img { border:0; vertical-align:middle; }
+del { color:#bbb; }
+samp { font-family:'Malgun Gothic'; }
+strong { font-weight:bold; }
+a { color:#888; text-decoration:none; }
+a:focus,a:active { outline:none; }
+a:hover { color:#e12c22; }
+
+
+
+/*------------------------------------------------------------------------------
+| 자주쓰는 스타일
+|.............................................................................*/
+
+.absolute { position:absolute !important; }
+.relative { position:relative !important; }
+.hand     { cursor:pointer; }
+.hide     { display:none; }
+.inblock  { display:inline-block; }
+.alpha10  { opacity:0.1; filter:alpha(opacity:10); }
+.alpha50  { opacity:0.5; filter:alpha(opacity:50); }
+.alpha100 { opacity:1; filter:alpha(opacity:100); }
+.scroll   { *position:relative; overflow:auto; overflow-x:hidden; }
+.loading  { width:100%; height:100%; background:url("http://img.megalawyers.co.kr/icon/loading.gif") center center no-repeat; }
+.clearfix { *zoom: 1; } /* 2018.07.17 */
+.clearfix:after { display: block; clear: both; content: ''; } /* 2018.07.17 */
+
+
+/*------------------------------------------------------------------------------
+| 여백
+|.............................................................................*/
+
+.m0   { margin:0 !important; }			.mt-1 { margin-top:-1px !important; }
+.mt0  { margin-top : 0   !important; }	.mt1  { margin-top: 1px !important; }
+/*2015.06.16추가 S*/
+._mt0  { margin-top: -10px !important;}
+/*2015.06.16추가 E*/
+.mt2  { margin-top : 2px !important; }	.mb0  { margin-bottom: 0px !important; }
+.mt5  { margin-top : 5px !important; }	.mb5  { margin-bottom: 5px !important; }
+.mt10 { margin-top :10px !important; }	.mb10 { margin-bottom:10px !important; }
+.mt15 { margin-top :15px !important; }	.mb15 { margin-bottom:15px !important; }
+.mt20 { margin-top :20px !important; }	.mb20 { margin-bottom:20px !important; }
+.mt25 { margin-top :25px !important; }	.mb25 { margin-bottom:25px !important; }
+.mt30 { margin-top :30px !important; }	.mb30 { margin-bottom:30px !important; }
+.mt35 { margin-top :35px !important; }	.mb35 { margin-bottom:35px !important; }
+.mt40 { margin-top :40px !important; }	.mb40 { margin-bottom:40px !important; }
+.mt45 { margin-top :45px !important; }	.mb45 { margin-bottom:45px !important; }
+.mt50 { margin-top :50px !important; }	.mb50 { margin-bottom:50px !important; }
+.mb80 { margin-bottom:80px !important; }
+.ml3  { margin-left: 3px !important; }	.mr3  { margin-right : 3px !important; }
+.ml5  { margin-left: 5px !important; }	.mr5  { margin-right : 5px !important; }
+.ml10 { margin-left:10px !important; }	.mr10 { margin-right :10px !important; }
+.ml15 { margin-left:15px !important; }	.mr15 { margin-right :15px !important; }
+.ml20 { margin-left:20px !important; }	.mr20 { margin-right :20px !important; }
+.ml25 { margin-left:25px !important; }	.mr25 { margin-right :25px !important; }
+.ml30 { margin-left:30px !important; }	.mr30 { margin-right :30px !important; }
+.ml40 { margin-left:40px !important; }	.mr40 { margin-right :40px !important; }
+
+._mt5 { margin-top :-5px !important; }
+._mt10 { margin-top :-10px !important; }
+._mt20 { margin-top :-20px !important; }
+._mt30 { margin-top :-30px !important; }
+
+.p0 { padding:0 !important; }
+.p10 { padding:10px !important; }
+.ptb15 { padding-top:15px !important; padding-bottom:15px !important; }
+
+.lstmt > li + li { margin-top:.38em; }
+
+
+
+/*------------------------------------------------------------------------------
+| 정렬
+|.............................................................................*/
+
+.fleft  { float:left; }
+.fright { float:right; }
+.fclear { clear:both; }
+.fgroup { *zoom:1; }
+.fgroup:after { content:" "; display:block; clear:both; }
+
+.tleft { text-align:left !important; }
+.tright { text-align:right !important; }
+.tcenter { text-align:center !important; }
+.tjustify { text-align:justify !important; }
+.bcenter { margin-left:auto; margin-right:auto; }
+
+.v0 { vertical-align:0 !important; }
+.v1 { vertical-align:-1px !important; }
+.v2 { vertical-align:-2px !important; }
+.v3 { vertical-align:-3px !important; }
+.v4 { vertical-align:-4px !important; }
+.v5 { vertical-align:-5px !important; }
+.v6 { vertical-align:-6px !important; }
+.v7 { vertical-align:-7px !important; }
+.v8 { vertical-align:-8px !important; }
+.vtop { vertical-align:top !important; }
+.vmid { vertical-align:middle !important; }
+.vmiddle { vertical-align:middle !important; margin-bottom:2px; }
+.vbottom { vertical-align:bottom !important; }
+.vbase { vertical-align:text-bottom !important; }
+.vcenter { #position:relative; height:100%; display:table; overflow:hidden; }
+.vcenter > div { #position:absolute; #top:50%; display:table-cell; vertical-align:middle; }
+.vcenter > div > div { #position:relative; #top:-50%; }
+
+
+
+/*------------------------------------------------------------------------------
+| 글꼴
+|.............................................................................*/
+
+.f12 { font-size:12px !important; } .f17 { font-size:17px !important; }
+.f13 { font-size:13px !important; } .f18 { font-size:18px !important; }
+.f14 { font-size:14px !important; } .f20 { font-size:20px !important; }
+.f15 { font-size:15px !important; }	.f22 { font-size:22px !important; }
+.f16 { font-size:16px !important; } .f25 { font-size:25px !important; }
+.f11 { font:11px/16px Dotum !important; }
+.f11h20 { font-size:11px !important; font-family:Dotum !important; line-height:20px !important; }
+
+.bold    { font-weight:bold !important; }
+.bold2   { font-weight:800 !important; }
+.fNormal { font-weight:normal !important; }
+.fDotum  { font-family:Dotum !important; }
+.fVerda  { font-family:Verdana,Dotum !important; }
+.fNanum  { font-family:'Malgun Gothic',Dotum; }
+.fSmall  { color:#888; font:11px Dotum; }
+.fNew    { color:#e12c22; font:bold 10px Verdana; vertical-align:text-top; }
+/*2015.08.06 추가*/
+.fNew12  { color:#e12c22; font:italic bold 12px Verdana; vertical-align:text-top; }
+/*2015.08.06 추가*/
+.fTop    { color:#e12c22; font:italic bold 9px Verdana; vertical-align:text-top; }
+.ls-1    { letter-spacing:-1px; }
+.nowrap  { white-space:nowrap; }
+
+.mark0 { color:#bbb !important; 999 }
+.mark1 { color:#2a75ca !important; }
+.mark2 { color:#e12c22 !important; }
+.mark3 { color:#8d776a !important; }
+.mark8 { color:#888 !important; }
+.mark9 { color:#333 !important; }
+
+
+/*2015.07.17추가 S*/
+.mark9 > a { color:#333; text-decoration:none; !important; }
+.mark9 > a:focus,a:active { outline:none; }
+.mark9 > a:hover { color:#e12c22; }
+.mark10{ padding-left:50px;!important; }
+/*2015.07.17추가 E*/
+.mark11 { color:#2a75ca; background:#e5f0fa; }
+.underline { border-bottom:1px solid #333; }
+.underline.f11 { border-bottom:0; text-decoration:underline; }
+.underline.mark1 { border-color:#2a75ca; }
+.underline.mark2 { border-color:#e12c22; }
+.underline.mark3 { border-color:#8d776a; }
+.underline.mark8 { border-color:#888; }
+
+.strcut { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block; }
+.txtHelp1 { padding:3px 0 0 1.5em; background:url('http://img.megalawyers.co.kr/icon/help1.png') left center no-repeat; color:#888; font:11px/14px Verdana,Dotum; *font-family:Dotum; display:inline-block; }
+.txtHelp2 { padding:3px 1.5em 0 0; background:url('http://img.megalawyers.co.kr/icon/help2.png') right center no-repeat; color:#888; font:11px/14px Verdana,Dotum; *font-family:Dotum; display:inline-block; cursor:pointer; }
+
+.w1em { width:1em; text-align:center; display:inline-block; }
+.w2em { width:2em; text-align:center; display:inline-block; }
+.w3em { width:3em; text-align:center; display:inline-block; }
+.w4em { width:4em; text-align:center; display:inline-block; }
+.w3left { width:3em; display:inline-block; }
+.w4left { width:4em; display:inline-block; }
+.w5left { width:5em; text-indent:0; display:inline-block; }
+.w6left { width:6em; display:inline-block; }
+.w7left { width:7em; display:inline-block; }
+.indent5em { padding-left:5.33em; text-indent:-5.33em; }
+
+a[class^= 'mark']:hover,
+a[class*=' mark']:hover { color:#e12c22 !important; }
+a.underline:hover { border-color:#e12c22; }
+
+
+
+/*------------------------------------------------------------------------------
+| 블릿/아이콘
+|.............................................................................*/
+
+.motionControl { cursor:pointer; }
+.motionControl dt,
+.motionControl dd {width: 12px;height:14px;background:url('http://img.megalawyers.co.kr/css/motion.control.png') no-repeat;display:inline-block;} /*수정 2017-11-08*/
+.motionControl dt { margin-right:3px; background-position:left top; }
+.motionControl dd { background-position:right top; }
+.motionControl dd.on { background-position:right bottom; }
+.motionControl dt.stoped { background-position:left bottom; }
+
+ul.lstNemo > li,dl.lstNemo > dt,p.bltNemo,div.bltNemo { padding-left:9px; text-indent:-9px; }
+ul.lstNemo > li,dl.lstNemo > dt,.bltNemo { *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = "<i class='ie7before'></i>" + this.innerHTML); }
+ul.lstNemo > li > i.ie7before,.bltNemo > i.ie7before,
+ul.lstNemo > li:before,dl.lstNemo > dt:before,.bltNemo:before { content:' '; width:3px; height:3px; margin:0 5px 2px 0; background:#c7b9b0; vertical-align:middle; display:inline-block; *margin-bottom:0; }
+
+ul.lstKome > li,p.bltKome,div.bltKome { padding-left:16px; text-indent:-16px; }
+ul.lstKome > li,.bltKome { *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = "<i class='ie7before'>※&nbsp;</i>" + this.innerHTML); }
+ul.lstKome > li > i.ie7before,.bltKome > i.ie7before,
+ul.lstKome > li:before,.bltKome:before { content:'※ '; font:12px Dotum; }
+
+.bltVbar { *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = "<i class='ie7before'>|</i> " + this.innerHTML); }
+.bltVbar > i.ie7before,
+.bltVbar:before { content:'|'; margin:0 .5em 0 .2em; color:#ccc; font-weight:normal; font-family:Dotum; }
+.bltRbar { *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML =  this.innerHTML + " <i class='ie7after'>|</i> "); }
+.bltRbar > i.ie7after,
+.bltRbar:after { content:'|'; margin:0 .2em 0 .5em; color:#ccc; font-weight:normal; font-family:Dotum; }
+.bltDown { color:#e12c22; font:11px/1em Dotum; }
+.bltDown:after { margin:0 0 0 2px; content:url('http://img.megalawyers.co.kr/css/blt.down.png'); }
+.bltDrop:after { margin:0 .2em 0 .5em; border-width:4px 4px 0 4px; border-color:#888 transparent; border-style:solid; content:' '; vertical-align:middle; display:inline-block; }
+.bltDrop:hover:after { border-color:#e12c22 transparent; }
+.bltDrop.on:after { border-width:0 4px 4px 4px; }
+.bltPlay { padding-left:15px; background:url('http://img.megalawyers.co.kr/icon/vod.play.png') left center no-repeat; }
+/* 2015-07-09 추가 S */
+.brtPlay { padding-right:15px; background:url('http://img.megalawyers.co.kr/icon/vod.play2.png') right center no-repeat; }
+/* 2015-07-09 추가 */
+
+[class^= 'icoNemo'],
+[class*=' icoNemo'] { width:9px; height:9px; margin-bottom:2px; border:1px solid #ddd; vertical-align:middle; display:inline-block; }
+.IE [class^= 'icoNemo'],
+.IE [class*=' icoNemo'] { margin-bottom:1px; }
+.icoNemo0 { background:#eee; }
+.icoNemo1 { background:#2a75ca; }
+.icoNemo2 { background:#e12c22; }
+.icoNemo9 { background:#333; }
+.icoMore2 { width:13px; height:13px; background:url('http://img.megalawyers.co.kr/button/more2.png') no-repeat; vertical-align:middle; display:inline-block; }
+
+.pfix1 { height:16px; margin-bottom:2px; padding:0 4px; border:1px solid #3a87d0; background:#589ee0; color:#fff; font-size:13px; line-height:16px; vertical-align:middle; display:inline-block; }
+.pfix2 { height:16px; margin-bottom:2px; padding:0 4px; border:1px solid #e12c22; background:#e9645d; color:#fff; font-size:13px; line-height:16px; vertical-align:middle; display:inline-block; }
+.IE9 .pfix1 { line-height:15px; }
+.IE9 .pfix2 { line-height:15px; }
+ 
+/* 2015-07-09 추가 S */
+.pre_btn {width:25px; height:13px; vertical-align:middle; display:inline-block;}
+.pre_btn .pre {width:12px; height:13px; float:left; background:url('http://img.megalawyers.co.kr/css/btn08.png') no-repeat left top; display:inline-block; font-size:0px; }
+.pre_btn .next {width:13px; height:13px; float:left; background:url('http://img.megalawyers.co.kr/css/btn08.png') no-repeat right top; display:inline-block; font-size:0px; }
+/* 2015-07-09 추가 E */
+
+
+/*------------------------------------------------------------------------------
+| 타이틀
+|.............................................................................*/
+
+.tit10 { position:relative; padding:0 0 2px 5px; color:#333; font-size:18px; line-height:40px; font-weight:bold; text-align:left; }
+.tit10.type1 { margin:0 0 20px 0; border-bottom:1px solid #8d776a;}
+.tit10.type2 { margin:0 0 0px 0; border-bottom:2px solid #8d776a;}
+.tit10 > em { position:absolute; right:0; bottom:5px; font-weight:normal; }
+.tit11 { position:relative; margin:0 0 10px 0; padding:0 0 0 10px; border-bottom:2px solid #777; color:#333; font-weight:bold; font-size:24px; line-height:40px; }
+.tit11.type1 { margin:0; padding:0 0 0 20px; background:url('http://img.megalawyers.co.kr/css/tit11.png') left center no-repeat; }
+.tit11 > em { position:absolute; right:0; top:0; font:13px/1.5em 'Nanum Gothic'; }
+
+.tit20 { position:relative; margin:30px 0 0 0; padding:10px 0; color:#333; font-weight:bold; font-size:16px; line-height:1em; }
+.tit20 > em { position:absolute; right:0; bottom:10px; font-weight:normal; }
+.tit20.type1 { border-bottom:1px solid #e2e2e2; }
+.tit21 { position:relative; margin:30px 0 10px 0; color:#333; font-weight:bold; font-size:15px; line-height:1em; }
+.tit21 > strong { color:#2a75ca; }
+.tit21 > em { position:absolute; right:0; bottom:0; font-weight:normal; }
+.tit22 { position:relative; margin:40px 0 0; padding:0 0 0 18px; background:url('http://img.megalawyers.co.kr/css/tit22.png') left center no-repeat; color:#333; font-weight:bold; font-size:16px; }
+.tit23 { position:relative; color:#333; font-weight:bold; font-size:16px; line-height:1em; }
+
+.tit30 { position:relative; margin:20px 0 10px; padding:0 0 0 18px; background:url('http://img.megalawyers.co.kr/css/tit30.png') left center no-repeat; color:#333; font-weight:bold; font-size:14px; }
+.tit31 { position:relative; margin:0 0 10px 0; padding:0 0 7px 5px; border-bottom:1px solid #888; color:#333; font-size:17px; font-weight:bold; line-height:22px; }
+.tit32 { position:relative; margin:40px 0 10px 0; padding-left:10px; color:#333; font-weight:bold; font-size:16px; line-height:1em; }
+.tit33 { position:relative; height:44px; margin:40px 0 5px 0; padding:0 0 0 30px; background:#555; color:#fff; font:bold 16px/44px 'Nanum Gothic'; }
+.tit34 { position:relative; height:54px; padding:0 0 0 25px; background:url('http://img.megalawyers.co.kr/css/tit34.png') no-repeat; color:#fff; font:bold 16px/54px 'Nanum Gothic'; }
+.tit31 > em { position:absolute; right:0; bottom:7px; font:13px/1.5em 'Nanum Gothic'; }
+.tit32 > em { position:absolute; right:0; bottom:0; font-weight:normal; }
+.tit33 > em { position:absolute; right:0; bottom:0; font-weight:normal; }
+.tit34 > em { position:absolute; right:0; bottom:0; font-weight:normal; }
+
+/* 수정 151020 */
+.tit40 { padding-left:10px; background:url('http://img.megalawyers.co.kr/css/tit40.png') left center no-repeat; color:#333; }
+
+.tit41 { position:relative; padding:0 0 7px 5px; border-bottom:1px solid #ccc; color:#333; font-size:16px; font-weight:bold; line-height:22px;}
+.tit41 > em { position:absolute; right:0; bottom:7px; font:13px/1.5em 'Nanum Gothic'; }
+
+.tit42 { position:relative; padding:10px 0; color:#333; font-weight:bold; font-size:16px; line-height:1em; }
+.tit42 > em { position:absolute; right:0; bottom:10px; font-weight:normal; }
+.tit42.type1 { border-bottom:1px solid #e2e2e2; }
+
+
+/*------------------------------------------------------------------------------
+| 테이블
+|.............................................................................*/
+
+.tbl01 { width:100%; border-top:2px solid #e12c22; border-bottom:1px solid #777; color:#333; font-size:12px; line-height:18px; }
+.tbl01 th { background:#f4f4f4; color:#333; }
+.tbl01 th,
+.tbl01 td { height:22px; padding:10px 0; border-right:1px solid #ededed; border-top:1px solid #cfcfcf; text-align:center; }
+.tbl01 th { padding-left:0; padding-right:0; }
+.tbl01 th:last-child,
+.tbl01 td:last-child { border-right-width:0; }
+.tbl01 thead th { height:20px; padding:10px 0; border-top:0; border-bottom:1px solid #777; background:url('http://img.megalawyers.co.kr/css/tbl01.png') left bottom repeat-x; font-size:12px; line-height:14px; }
+.tbl01 thead + tbody tr:first-child th,
+.tbl01 thead + tbody tr:first-child td { border-top:0; }
+.tbl01 tbody.type1 { background:#fff; }
+.tbl01 tbody.type1 tr + tr td { border-top-color:transparent; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; }
+.tbl01 tbody.type1 tr + tr td.bt0 { background:none; }
+.tbl01.type1 { border-top:1px solid #777; }
+.tbl01.type1 tr:first-child th,
+.tbl01.type1 tr:first-child td { border-top:0; }
+
+.tbl01 .td_padd_zero { padding-top:0; padding-bottom:0; *padding-top:2px; }
+.tbl01 .td_line_left { border-left-width:1px !important; }
+.tbl01 .td_line_right { border-right-width:1px !important; }
+.tbl01 .td_line1_left { border-left:1px solid #96969e !important; }
+
+/*BIG 상품 강좌리스트 추가 160414 */
+.tbl02 { width:100%; border-top:1px solid #666; border-bottom:1px solid #777; color:#333; font-size:12px; line-height:18px; }
+.tbl02 th { background:#f4f4f4; color:#333; }
+.tbl02 th,
+.tbl02 td { height:18px; padding:10px 0; border-right:1px solid #ededed; border-top:1px solid #cfcfcf; text-align:center; }
+.tbl02 th { padding-left:0; padding-right:0; }
+.tbl02 th:last-child,
+.tbl02 td:last-child { border-right-width:0; }
+.tbl02 thead th { height:16px; padding:10px 0; border-top:0; border-bottom:1px solid #b0b0b0; background:url('http://img.megalawyers.co.kr/css/tbl01.png') left bottom repeat-x; font-size:12px; line-height:14px; }
+.tbl02 thead + tbody tr:first-child th,
+.tbl02 thead + tbody tr:first-child td { border-top:0; }
+.tbl02 tbody.type1 { background:#fff; }
+.tbl02 tbody.type1 tr + tr td { border-top-color:transparent; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; }
+.tbl02 tbody.type1 tr + tr td.bt0 { background:none; }
+.tbl02.type1 { border-top:1px solid #777; }
+.tbl02.type1 tr:first-child th,
+.tbl02.type1 tr:first-child td { border-top:0; }
+
+.IE8 .tbl01 th,
+.IE8 .tbl01 td { border-right:0; border-left:1px solid #ededed; }
+.IE8 .tbl01 th:first-child,
+.IE8 .tbl01 td:first-child { border-left-width:0; }
+*+html .tbl01 th,
+*+html .tbl01 td { border-right:0; border-left:1px solid #ededed; }
+*+html .tbl01 th:first-child,
+*+html .tbl01 td:first-child { border-left-width:0; }
+
+/* 게시판 글쓰기 */
+.tbl21 { width:100%; border-top:1px solid #8d776a; font-size:15px; }
+.tbl21 th { padding:15px 40px; border-bottom:1px solid #e0e0e0; background:#efefef; color:#888; text-align:left; vertical-align:top; }
+.tbl21 td { height:30px; padding:10px 30px; border-bottom:1px solid #e0e0e0; }
+.tbl21 table { width:100%; }
+.tbl21 table th { padding:10px 0 0 10px; border:0; background:none; color:#333; font-size:14px; }
+.tbl21 table td { padding:5px 0; border:0; font-size:14px; }
+.tbl21 .require { position:relative; display:inline-block; }
+.tbl21 .require:after { content:'*'; position:absolute; left:-10px; top:-5px; color:#e12c22; }
+.tbl21.type1 { font-size:13px; }
+.tbl21.type1 th { height:20px; padding:10px 20px; }
+.tbl21.type1 td { height:20px; padding:10px 20px; color:#333; }
+
+.tbl51 { width:100%; }
+.tbl51 th,
+.tbl51 td { height:25px; padding:9px 0; border-top:1px solid #e0e0e0; }
+.tbl51 td:first-child { padding-left:10px; }
+.tbl51 td:last-child { padding-right:10px; }
+.tbl51 th { padding-left:10px; color:#888; font-weight:normal; text-align:left; }
+.tbl51 tr:first-child th,
+.tbl51 tr:first-child td { border-top:0; }
+
+.tbl52 { width:100%; border-top:2px solid #8d776a; border-bottom:1px solid #8d776a; font-size:13px; line-height:20px; }
+.tbl52 th { background:#f1edeb; }
+.tbl52 td blockquote { margin:0; text-align:left; display:inline-block; }
+
+
+
+/* 회사소개 오시는길 2017-02-01 */
+.tbl_map { width:100%; border-top:2px solid #8d776a; border-bottom:1px solid #8d776a; font-size:13px; line-height:20px; }
+.tbl_map th {background:#f1edeb; color:#333; font-size:14px; font-weight:bold; width:20%; padding-left:35px; text-align:left; border-bottom:1px solid #d1beb3; }
+.tbl_map td { color:#333; font-size:13px; text-align:left; line-height:220%; padding:15px 0; border-bottom:1px solid #d1beb3;}
+.tbl_map th.finished { border-bottom:0px;}
+.tbl_map th.finished { border-bottom:0px;}
+.tbl_map td span.fblue {color:#3556a6; font-weight:bold; padding-right:10px;}
+.tbl_map td span.fgreen {color:#50a232; font-weight:bold; padding-right:10px;}
+.tbl_map td span.fred {color:#dc1219; font-weight:bold; padding-right:10px;}
+
+
+
+.tbl53 { width:100%; border:1px solid #373737; line-height:17px; }
+.tbl53 td { padding:15px 0; border:1px solid; border-color:#8e8e8e #373737 transparent #676767; background:#505050; color:#fff; text-align:center; }
+
+.tbl54 { margin:0 auto; font:11px/1.5 Verdana,Dotum; border-collapse:collapse; }
+.tbl54 thead th { height:25px; border:1px solid #777; background:#555; color:#fff; font-weight:normal; }
+.tbl54 tbody th { width:25px; border:1px solid #c7dbeb; background:#9ebbd8; color:#fff; font-weight:normal; text-align:center; }
+.tbl54 tbody tr:last-child td { border-bottom-color:#ccc; }
+.tbl54 td { width:140px; height:42px; border:1px solid #eee; color:#333; word-spacing:-1px; min-height:43px; }
+.tbl54 td i { color:#8d776a; vertical-align:top;}
+.tbl54 td.deadline { color:#e12c22; }
+.tbl54 td.finished,
+.tbl54 td.finished i { color:#bbb; }
+.tbl54 td.checked { background:#e0edf4; }
+.tbl54 td strong { letter-spacing:-1px; }
+.tbl54 td div {padding-left:2em; text-indent:-1.5em; margin-top:-1px; margin-right:-1px; padding-top:5px; padding-bottom:4px; border-bottom:1px solid #e1e1e1;}
+.tbl54 td div.last { border-bottom:none;}
+*+html .tbl54 { font-family:Dotum; }
+*+html .tbl54 td { width:140px; }
+
+/* 테이블 공용 */
+.tdTiny th,
+.tdTiny td { height:auto; padding:3px 0; }
+.IE9 .tdTiny th,
+.IE9 .tdTiny td { height:auto; padding:4px 0 2px; }
+*+html .tdTiny th,
+*+html .tdTiny td { height:auto; padding:4px 0 2px; }
+
+th.tleft, th.tright,
+td.tleft, td.tright { padding-left:15px; padding-right:15px; }/* 2016-11-24 */
+td.tleft2 { padding-left:40px; text-align:left; }
+th.td10,td.td10 { background:#edf4f8; }
+tr.td10 td { background:#edf4f8; }
+tr.td11 td { background:#f4f4f4; }
+td.td_plus { padding-left:20px; padding-right:20px; background:url('http://img.megalawyers.co.kr/icon/num_plus.png') 20px center no-repeat; color:#333; font-weight:bold; text-align:right; }
+td.td_minus { padding-left:20px; padding-right:20px; background:url('http://img.megalawyers.co.kr/icon/num_minus.png') 20px center no-repeat; color:#333; font-weight:bold; text-align:right; }
+tr.tdDotline td { border-top-color:transparent; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; }
+
+td.tdPayResult { padding-left:20px; padding-right:20px; background:#efecea; }
+td.tdPayResult dl { line-height:22px; }
+td.tdPayResult dl dt { float:left; color:#888; font-size:13px; }
+td.tdPayResult dl dd { color:#333; font-size:14px; text-align:right; }
+td.tdPayResult dl dd strong { font-size:17px; color:#e12c22; }
+
+table table,
+table table th,
+table table td { padding:0; border:0; background:none; }
+
+
+
+/*------------------------------------------------------------------------------
+| 리스트
+|.............................................................................*/
+
+.lst01 li { padding-left:1.33em; text-indent:-1.33em; }
+
+.lst05 { border:1px solid #e3e3e3; background:#fff; }
+.lst05 li { padding:30px; }
+.lst05 li + li { background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; }
+
+.lst10 { font-weight:bold; }
+
+/*<!-- 2015-06-11 수강일시정지 --> */
+.lst10 dt { float:left; width:6em; padding:7px 1.2em; color:#888; }
+/*<!-- //2015-06-11 수강일시정지 --> */
+
+.lst10 dd { padding:7px 0; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; color:#333; text-align:right } /*2017-01-05*/
+.lst10 dt:first-child + dd { background:none; }
+
+
+/*<!-- 추가 151021 --> */
+.lst10_2 { font-weight:bold; }
+
+/*<!-- 2015-06-11 수강일시정지 --> */
+.lst10_2 dt { float:left; width:18em; padding:7px 1.2em; color:#888; }
+/*<!-- //2015-06-11 수강일시정지 --> */
+
+.lst10_2 dd { padding:7px 0; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; color:#333; }
+.lst10_2 dt:first-child + dd { background:none; }
+
+
+
+.lst11 { line-height:20px; }
+.lst11 dt { float:left; width:4em; height:25px; padding:15px 5px 0 0; color:#333; font-weight:bold; font-size:14px; text-align:left; white-space:nowrap; }
+.lst11 dd { min-height:30px; padding-top:10px; margin-left:5em; color:#333; line-height:30px; }
+.lst11 dd.submit { margin-top:-41px; text-align:right; }
+.lst11 dt:first-child { padding-top:5px; }
+.lst11 dt:first-child + dd { padding-top:0; }
+.lst11.lst2em dt { width:2em; } .lst11.lst2em dd { margin-left:3em; }
+.lst11.lst5em dt { width:5em; } .lst11.lst5em dd { margin-left:6em; }
+.lst11.lst6em dt { width:6em; } .lst11.lst6em dd { margin-left:7em; }
+
+.lst12 dt { margin-top:25px; padding:0 0 5px 0; background:url('http://img.megalawyers.co.kr/css/dotline1.png') left bottom repeat-x; color:#333; font-weight:bold; font-size:13px; }
+.lst12 dd { padding-top:10px; }
+.lst12 dt:first-child { margin-top:0; }
+
+.lst13 dt { float:left; width:6em; color:#333; }
+.lst13 dd { padding-left:7em; }
+.lst13.lst4em dt { width:4em; }
+.lst13.lst4em dd { padding-left:5em; }
+
+.lst14 dt { float:left; margin-top:7px; padding-left:.5em; text-indent:-.5em; font-size:13px; font-weight:bold; line-height:30px; }
+.lst14 dd { margin:7px 0 0 6.5em; text-align:left; }
+.lst14 dt:first-child,
+.lst14 dt:first-child + dd { margin-top:0; }
+.lst14 dt:before { content:' '; width:3px; height:3px; margin:0 5px 2px 0; background:#c7b9b0; vertical-align:middle; display:inline-block; }
+
+.lst51 { line-height:25px; }
+.lst51 dl { padding:10px; }
+.lst51 dl dt { float:left; width:70px; padding-left:25px; color:#888; }
+.lst51 dl dt.bonus { width:80px; }
+.lst51 dl dd.float { float:left; width:70px; }
+.lst51 dl dt.plus { background:url('http://img.megalawyers.co.kr/icon/num_plus.png') 0 center no-repeat; }
+.lst51 dl dt.minus { background:url('http://img.megalawyers.co.kr/icon/num_minus.png') 0 center no-repeat; }
+.lst51 dl.type1 dt { width:95px; padding-left:0; }
+.lst51 dl.type2 { background:#f4f4f4; }
+
+.lst_fgroup { *zoom:1; }
+.lst_fgroup li { float:left; }
+.lst_fgroup:after { content:" "; display:block; clear:both; }
+
+
+
+/*------------------------------------------------------------------------------
+| 박스
+|.............................................................................*/
+
+.b0   { border: 0 !important; }
+.bt0  { border-top:0 !important; }
+.bb0  { border-bottom:0 !important; }
+.btb0 { border-bottom:0 !important; border-top:0 !important; }
+.brl0 { border-right:0 !important; border-left:0 !important; }
+
+/*<!-- 2015-06-11 신촌캠퍼스 조건검색 -->*/
+.box0m { padding:20px; background:#ece7e4; clear:both; }
+/*<!-- //2015-06-11 -->*/
+.box0s { padding:20px; background:#f8f8f8; }
+
+.box01 { padding:20px; border:1px solid #e2e2e2; background:#fff; }
+.box01.type1 { border-width:1px 0; }
+.box02 { padding:20px; border:1px solid #e2e2e2; background:#f9f9f9; }
+.box03 { padding:20px; border:1px solid #e2e2e2; background:#f4f4f4; }
+.box04 { padding:20px; border:1px solid #cee0eb; background:#f3fcff; }
+.box05 { padding:20px; border-top:1px solid #777; background:#f4f4f4; }
+.box06 { padding:30px 30px 20px; border-top:1px solid #8d776a; border-bottom:1px solid #bababa; background:#edf4f8; }
+.box07 { padding:25px 20px; border:4px solid #cae1f1; background:#f0fbff; }
+
+/* 추가 151020 */
+.box08 { padding:20px 30px 24px 30px; border:1px solid #e2e2e2; background:#fff; }
+.box08.type1 { border-width:1px 0; }
+
+.boxRead1 { padding:15px 20px 10px 20px; border-top:1px solid #8d776a; border-bottom:1px solid #cfcbc8; background:#ece7e4; color:#888; }
+.boxRead1 > div { padding:0 0 15px 45px; line-height:25px; text-indent:-45px; }
+.boxRead1 > div h6 { width:45px; color:#2a75ca; font-size:16px; font-weight:bold; text-indent:0; display:inline-block; }
+.boxRead1 > div em { margin-top:-16px; font:11px/1 Dotum; text-align:right; display:block; }
+.boxRead1 .justify { padding-top:10px; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; text-align:right; *zoom:1; }
+.boxRead1 .justify dt { padding-left:45px; }
+.boxRead1.type1 { padding:10px 20px; background:#ece7e4 url('http://img.megalawyers.co.kr/icon/qna_q.png') 10px center no-repeat; }
+.boxRead1.type1 > div { height:45px; padding:0 0 0 45px; line-height:45px; text-indent:0; }
+.boxRead2 { padding:25px 65px 45px; color:#888; line-height:22px; }
+.boxRead2 .hline { height:1px; margin:25px -45px; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; }
+.boxRead2.type1 { background:url('http://img.megalawyers.co.kr/icon/qna_a.png') 10px 25px no-repeat; }
+.boxRead3 { padding:15px 20px 10px 20px; border-top:2px solid #777; border-bottom:1px solid #d3d3d3; background:#f0f0f0; color:#888; }
+.boxRead3 > div { padding:0 0 15px 45px; line-height:25px; text-indent:-45px; }
+.boxRead3 > div h6 { width:45px; color:#2a75ca; font-size:16px; font-weight:bold; text-indent:0; display:inline-block; }
+.boxRead3 > div h6.icon { margin:-5px 5px 0 -10px; }
+.boxRead3 > div em { margin-top:-16px; font:11px/1 Dotum; text-align:right; display:block; }
+.boxRead3 .justify { padding-top:10px; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; text-align:right; *zoom:1; }
+.boxRead3 .justify dt { padding-left:45px; }
+
+.boxBook1 { width:105px; padding-top:1px; background:url('http://img.megalawyers.co.kr/css/box.book1.png') no-repeat; margin-right: 15px; }/* 2016-09-09 */
+.boxBook1 p { padding:0 4px 8px 1px; background:url('http://img.megalawyers.co.kr/css/box.book1.png') left bottom no-repeat; }
+.boxBook1 p img { width:100px; }
+.boxBook1.type1 { background-position:-105px top; }
+.boxBook1.type1 p { background-position:-105px bottom; }
+
+.boxBook2 { width:149px; padding-top:1px; background:url('http://img.megalawyers.co.kr/css/box_book1_2.png')no-repeat;}
+.boxBook2 p { padding::0; background:url('') left bottom no-repeat; }
+.boxBook2 p img { width:144px; border-left:1px solid #ccc; border-bottom:1px solid #ccc; }
+.boxBook2.type1 { background-position:-5px top; }
+.boxBook2.type1 p { background-position:-15px bottom; }
+
+.tcPhoto1 { width:78px; height:78px; border:1px solid #888; background:#999; text-indent:0; display:inline-block; overflow:hidden; }
+.tcPhoto1 img { width:125px; margin-left:-22px; }
+.tcPhoto1.main img { width:100%; margin:0; }
+
+.tcPhoto2 { position:relative; width:200px; display:inline-block; }
+.tcPhoto2 > em { width:200px; display:block; overflow:hidden; }
+.tcPhoto2 > em img { width:250px; margin-left:-50px; }
+.tcPhoto2 > samp { position:absolute; right:7px; top:90px; color:#333; font-size:16px; text-align:right; }
+.tcPhoto2.type1 > em img { margin-left:-40px; }
+
+.tcPhoto3 { position:relative; width:170px; display:inline-block; }
+.tcPhoto3 > em { width:170px; display:block; overflow:hidden; }
+.tcPhoto3 > em img { width:200px; margin-left:-15px; }
+.tcPhoto3 > samp { position:absolute; right:7px; top:65px; color:#333; font-size:14px; text-align:right; }
+.tcPhoto3.type1 > em img { margin-left:-40px; }
+
+.tcPhoto4 { width:70px; height:60px; text-indent:0; display:inline-block; overflow:hidden; }
+.tcPhoto4 img { width:100px; margin-left:-13px; }
+
+.tcPhoto5 { position:relative; width:230px; height:120px; display:inline-block; }
+.tcPhoto5 > em { width:160px; height:120px; margin-left:10px; display:block; overflow:hidden; }
+.tcPhoto5 > em img { width:150px; }
+.tcPhoto5 > samp { position:absolute; left:110px; bottom:50px; width:120px; color:#888; font-size:14px; font-weight:bold; text-align:center; }
+.tcPhoto5 > samp strong { color:#333; font-size:15px; }
+
+.tcPhoto6 { width:50px; height:50px; background:#909090; text-indent:0; display:inline-block; overflow:hidden; }
+.tcPhoto6 img { width:80px; margin-left:-13px; }
+.tcPhoto6.main img { width:100%; margin:0; }
+
+/* 추가 151020 */
+.tcPhoto7 { width:65px; height:58px; text-indent:0; display:inline-block; overflow:hidden; }
+.tcPhoto7 img { width:92px; margin-left:-13px;}
+
+
+
+/*------------------------------------------------------------------------------
+| 바/라인
+|.............................................................................*/
+
+.barGo1 { padding:2px 0; border:solid #e3e3e6; border-width:1px 0; background:#fff; font-weight:bold; font-size:12px; line-height:24px; *zoom:1; }
+.barGo1 dt { float:left; margin-right:1em; padding:0 1.2em; background:#d5cac2; color:#fff; }
+.barGo1 dd { float:left; padding:0 .5em 0 1em; }
+.barGo1 dd a { padding-right:10px; background:url('http://img.megalawyers.co.kr/css/bar.go1.png') right center no-repeat; }
+.barGo1:after { content:" "; display:block; clear:both; }
+
+.barSearch { position:relative; padding:10px 30px; border-top:1px solid #8d776a; border-bottom:1px solid #dfd7d1; background:#e8e2de; }
+.barSearch ul { margin-left:-15px; color:#333; font-size:15px; font-weight:bold; line-height:30px; *zoom:1; }
+.barSearch ul li { float:left; padding:0 15px; color:#333; }
+.barSearch ul li + li { background:url('http://img.megalawyers.co.kr/css/barsearch.vline.png') left center no-repeat; }
+.barSearch ul li a { color:#333; }
+.barSearch ul li a:hover { color:#e12c22; }
+.barSearch ul li strong { color:#e12c22; }
+.barSearch ul:after { content:" "; display:block; clear:both; }
+.barSearch .vline { width:50px; height:30px; background:url('http://img.megalawyers.co.kr/css/barsearch.vline.png') 40% center no-repeat; vertical-align:middle; display:inline-block; }
+.barSearch .dotline { margin:10px -10px 0; padding:10px 10px 0; background:url('http://img.megalawyers.co.kr/css/dotline1.png') left top repeat-x; }
+.barSearch .right { position:absolute; right:30px; top:15px; }
+
+.barSearch2 { padding:15px 20px; border:1px solid #e2e2e2; background:#e9e9e9; }
+.barSearch2 dl { *zoom:1; }
+.barSearch2 dl dt { float:left; clear:both; margin-right:1em; color:#333; font-weight:bold; }
+.barSearch2 dl dd { float:left; margin-right:2em; }
+.barSearch2 dl dd i { color:#e12c22 }
+.barSearch2 dl dd.on a { padding-left:12px; background:url('http://img.megalawyers.co.kr/css/barsearch2.png') left center no-repeat; color:#333; font-weight:bold; }
+.barSearch2 dl:after { content:" "; display:block; clear:both; }
+.barSearch2 .dotline1 { margin:12px -5px; }
+.barSearch2.type1 { border-color:#dfd7d1; background:#f1eeec; }
+
+/* 2015-07-10 S */
+.barSearch3 { padding:15px 20px; border:1px solid #e2e2e2; background:#e9e9e9; }
+.barSearch3 dl { *zoom:1;  text-align:right;}
+.barSearch3 dl dt { float:left; clear:both; margin-right:1em; color:#333; font-weight:bold; }
+.barSearch3 dl dd { margin-left:2em; display:inline-block; }
+.barSearch3 dl dd i { color:#e12c22 }
+.barSearch3 dl dd.on a { padding-left:12px; background:url('http://img.megalawyers.co.kr/css/barsearch2.png') left center no-repeat; color:#333; font-weight:bold; }
+.barSearch3 dl:after { content:" "; display:block; clear:both; }
+.barSearch3 .dotline1 { margin:12px -5px; }
+.barSearch3.type1 { border-color:#dfd7d1; background:#f1eeec; }
+/* 2015-07-10 E */
+
+.barSort { padding:10px 0; text-align:right; *zoom:1; }
+.barSort ul { float:right; font:11px/1em Verdana,Dotum; *font-family:Dotum; *zoom:1; }
+.barSort ul li { float:left; *padding-top:1px; }
+.barSort ul li a { padding:0 10px; border-left:1px solid #e1e1e1; color:#888; }
+.barSort ul li a:hover { color:#e12c22; }
+.barSort ul li.on a { color:#8d776a; font-weight:bold; }
+.barSort ul li.on a i:after { height:0; margin:0 0 2px 5px; border-top:4px solid #8d776a; border-left:4px solid transparent; border-right:4px solid transparent; vertical-align:middle; display:inline-block; content:''; }
+.barSort ul li:first-child a { border:0; }
+.barSort ul li:last-child a { padding-right:0; }
+.barSort ul:after { content:" "; display:block; clear:both; }
+.barSort:after { content:" "; display:block; clear:both; }
+.barSort.type1 { padding:0; }
+.barSort.type1 ul li.on a { color:#666; }
+.barSort.type1 ul li.on a i:after { height:0; margin:0 0 2px 5px; border-top:4px solid #666; border-left:4px solid transparent; border-right:4px solid transparent; vertical-align:middle; display:inline-block; content:''; }
+.barSort + .tit33 { margin-top:0; }
+
+.barState1 { height:54px; padding:4px; border:1px solid #d0e1ec; background:#fff; }
+.barState1 h6 { float:left; width:156px; height:100%; padding-left:17px; background:url('http://img.megalawyers.co.kr/css/barstate1.png') no-repeat; color:#333; font-size:14px; line-height:54px; }
+.barState1 > div { margin-left:173px; height:100%; }
+.barState1 > div table { width:100%; height:100%; font-size:13px; }
+.barState1 > div table td { font-weight:bold; white-space:nowrap; }
+.barState1 > div table td a { padding:0 25px; border-left:1px solid #d0e1ec; display:block; }
+.barState1 > div table td a:hover { color:#888; }
+.barState1 > div table td span { color:#333; }
+.barState1 > div table td strong { margin:0 2px 0 0; font-size:16px; color:#e12c22; letter-spacing:-1px; }
+.barState1 > div table td:first-child a { border:0; }
+.barState1.type1 { height:63px; padding:0; border:0; background:transparent; }
+.barState1.type1 h6 { width:166px; background-position:0 -54px; line-height:63px; }
+.barState1.type1 > div { margin-left:183px; }
+.barState1.type2 { height:54px; }
+.barState1.type2 h6 { width:92px; background-position:0 -117px; font-size:15px; line-height:54px; }
+.barState1.type2 > div { margin-left:110px; }
+
+.barState2 { padding:20px 20px; border:1px solid #dfd7d1; border-top:0; background:#e8e2de; }
+.barState2 table { width:100%; height:35px; font-weight:bold; font-size:14px; }
+.barState2 table td { text-align:center; }
+.barState2 table td.submit { width:100px; padding-right:10px; text-align:right; }
+
+.barCalcu1 { padding:20px 0; border:4px solid #cae1f1; background:#fff; }
+.barCalcu1 ul { font-weight:bold; *zoom:1; }
+.barCalcu1 ul li { float:left; position:relative; width:33.33%; text-align:center; }
+.barCalcu1 ul li strong { font-size:18px; }
+.barCalcu1 ul li > span { text-align:left; display:inline-block; }
+.barCalcu1 ul li .symbol { position:absolute; right:-13px; top:50%; width:27px; height:27px; margin-top:-13px; }
+.barCalcu1 ul:after { content:" "; display:block; clear:both; }
+
+.paging1 { padding:2px 0 2px 3px; font-size:11px; line-height:14px; text-align:center; *zoom:1; }
+.paging1 a { min-width:1.5em; padding:0 .5em; color:#888; vertical-align:middle; display:inline-block; }
+.paging1 a.arr { margin-left:-2px; padding:0 3px; }
+.paging1 a:hover { color:#F64; text-decoration:none; }
+.paging1 > span { margin-left:-1px; margin-top:2px; vertical-align:middle; display:inline-block; }
+.paging1 > span a { float:left; margin-right:1px; border-left:1px solid #c5cad0; }
+.paging1 > span a.on { color:#F64; font-weight:800; }
+.paging1 > span a:first-child { border:0; }
+
+.justify { *zoom:1; }
+.justify dt { float:left; margin-right:5px; white-space:nowrap; }
+.justify dd { float:right; margin-left:5px; white-space:nowrap; text-align:right; }
+.justify dd.center { float:none; margin:0; text-align:center; }
+.justify:after { content:" "; display:block; clear:both; }
+
+.grap1 { width:169px; height:16px; background:url('http://img.megalawyers.co.kr/css/grap1.png') no-repeat; display:inline-block; }
+.grap1 em { height:100%; background:url('http://img.megalawyers.co.kr/css/grap1.png') left bottom no-repeat; display:block; }
+
+.dottop { background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; }
+.dotbottom { background:url('http://img.megalawyers.co.kr/css/dotline1.png') left bottom repeat-x; }
+.dotline1 { margin:20px 0; height:1px; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; }
+.dotline2 { margin:10px 0; height:1px; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x; }
+
+
+
+/*------------------------------------------------------------------------------
+| 탭
+|.............................................................................*/
+
+.tab0 { *zoom:1; }
+.tab0 .tab36px li { height:36px; }
+.tab0 .tab36px li.on img { margin-top:-36px; }
+.tab0 .tab41px li { height:41px; }
+.tab0 .tab41px li.on img { margin-top:-41px; }
+.tab0 li { float:left; overflow:hidden; }
+.tab0:after { content:" "; display:block; clear:both; }
+
+.tab01 { position:relative; height:42px; border-bottom:2px solid #444; font-weight:bold; font-size:14px; line-height:40px; }
+.tab01 ul { *zoom:1; }
+.tab01 ul li { float:left; border:solid #d8d8d8; border-width:1px 1px 0 1px; background:url('http://img.megalawyers.co.kr/css/tab01.png') left bottom repeat-x; }
+.tab01 ul li a { height:41px; padding:0 20px; color:#333; text-align:center; display:block; }
+.tab01 ul li a strong { color:#e12c22; }
+.tab01 ul li a:hover { color:#e12c22; }
+.tab01 ul li + li { margin-left:2px; }
+.tab01 ul li.on { position:relative; height:42px; border-color:#555; background:#555; }
+.tab01 ul li.on a { color:#fff; }
+.tab01 ul li.on a strong { color:#fff; }
+.tab01 ul:after { content:" "; display:block; clear:both; }
+.tab01 .right { position:absolute; right:0; bottom:1px; }
+.tab01.type1 { height:37px; line-height:35px; }
+.tab01.type1 ul li a { height:36px; }
+.tab01.type1 ul li.on { height:37px; }
+
+/* 회사소개 오시는길 - 탭 20170131 */
+.tab01 ul li a.law { padding:0 10px;}
+
+
+/*2015.06.08 css추가*/
+.tab_prof { position:relative; height:42px; border-bottom:2px solid #444; font-weight:bold; font-size:14px; line-height:40px; }
+.tab_prof ul { *zoom:1; }
+.tab_prof ul li { float:left; border:solid #d8d8d8; border-width:1px 1px 0 1px; background:url('http://img.megalawyers.co.kr/css/tab01.png') left bottom repeat-x; }
+.tab_prof ul li a { height:41px; padding:0 12px; color:#333; text-align:center; display:block; }
+.tab_prof ul li a strong { color:#e12c22; }
+.tab_prof ul li a:hover { color:#e12c22; }
+.tab_prof ul li + li { margin-left:2px; }
+.tab_prof ul li.on { position:relative; height:42px; border-color:#555; background:#555; }
+.tab_prof ul li.on a { color:#fff; }
+.tab_prof ul li.on a strong { color:#fff; }
+.tab_prof ul:after { content:" "; display:block; clear:both; }
+.tab_prof .right { position:absolute; right:0; bottom:1px; }
+.tab_prof.type1 { height:37px; line-height:35px; }
+.tab_prof.type1 ul li a { height:36px; }
+.tab_prof.type1 ul li.on { height:37px; }
+
+.tab02 { position:relative; font-size:14px; font-weight:bold; line-height:50px; overflow:hidden; }
+.tab02 ul { margin-right:-1px; *zoom:1; }
+.tab02 ul li { float:left; background:url('http://img.megalawyers.co.kr/css/tab02.png') left top no-repeat; }
+.tab02 ul li a { height:53px; margin-left:2px; padding:0 20px 0 18px; background:url('http://img.megalawyers.co.kr/css/tab02.png') right top no-repeat; color:#333; text-shadow:1px 1px #fff; text-align:center; display:block; }
+.tab02 ul li a:hover { color:#e12c22; }
+.tab02 ul li.on { background-position:left bottom; }
+.tab02 ul li.on a { background-position:right bottom; color:#fff; font-size:16px; text-shadow:none; }
+.tab02 ul li.last a { background-position:-2px top; }
+.tab02 ul:after { content:" "; display:block; clear:both; }
+
+.tab03 { position:relative; border-bottom:2px solid #333; font-size:15px; font-weight:bold; line-height:42px; }
+.tab03 ul { text-align:center; *zoom:1; }
+.tab03 ul li { float:left; }
+.tab03 ul li a { height:42px; padding:0 20px; background:url('http://img.megalawyers.co.kr/css/tab03.png') repeat-x; display:block; }
+.tab03 ul li + li a { border-left:1px solid #cfcfcf; }
+.tab03 ul li.on a { padding:0 21px; background-position:left bottom; color:#fff; }
+.tab03 ul:after { content:" "; display:block; clear:both; }
+
+.tab04 { position:relative; font-weight:bold; line-height:28px; }
+.tab04 ul { border:solid #d8d8d8; border-width:1px 0 0 1px; text-align:center; *zoom:1; }
+.tab04 ul li { float:left; background:#f7f7f7; }
+.tab04 ul li a { border:solid #d8d8d8; border-width:0 1px 1px 0; color:#333; display:block; }
+.tab04 ul li a i { height:30px; border-top:1px solid #fff; display:block; }
+.tab04 ul li.on a { background:#555; color:#fff !important; }
+.tab04 ul li.on a i { border-color:transparent; }
+.tab04 ul:after { content:" "; display:block; clear:both; }
+.tab04.type1 { background:#f9f9f9 url('http://img.megalawyers.co.kr/css/tab04.type1.png') right bottom no-repeat; }
+.tab04.type1 ul li { background:#fff; }
+.tab04.type1 ul li a { color:#888; font-weight:normal; }
+.tab04.type2 { background:#f9f9f9 url('http://img.megalawyers.co.kr/css/tab04.type1.png') right bottom no-repeat; }
+.tab04.type2 ul li { background:#fff; }
+.tab04.type2 ul li a { color:#888; font-weight:normal; }
+.tab04.type2 ul li.on a { background:#888; }
+.tab04 ul li a:hover { color:#e12c22; }
+
+.tab05 { position:relative; background:#fff; font:11px/16px Verdana,Dotum; *zoom:1; }
+.tab05 li { float:left; padding:1px 4px 0; border:1px solid #e3e3e6; letter-spacing:-0.1em; }/* 2017-08-31 */
+.tab05 li + li { margin-left:-1px; }
+.tab05 li a:after { content:" "; }
+.tab05 li.on a { color:#555555; font-weight:bold; letter-spacing:-1px;}
+.tab05:after { content:" "; display:block; clear:both; }
+
+.tab21 { *zoom:1; }
+.tab21 li { float:left; padding:0 7px 0 0; *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = "<i class='ie7before'>|</i> " + this.innerHTML); }
+.tab21 li > i.ie7before,
+.tab21 li:before { content:'|'; margin:0 8px 0 0; color:#ccc; font-family:Dotum; font-weight:normal; }
+.tab21 li:first-child > i.ie7before { display:none; }
+.tab21 li:first-child:before { content:none; }
+.tab21 li a { color:#333; font-weight-:bold; }
+.tab21 li.on a { color:#e12c22; }
+.tab21 li.nobar { padding-left:5px; }
+.tab21 li.nobar > i.ie7before { display:none; }
+.tab21 li.nobar:before { content:none; }
+.tab21.box01 { padding:10px 20px; }
+.tab21.type1 li a { color:#888; }
+.tab21.type1 li.on a { color:#333; font-weight:bold; }
+.tab21:after { content:" "; display:block; clear:both; }
+.tab21 li a:hover { color:#e12c22; }
+
+.tab51 { width:100%; margin-top:25px; height:84px; border-bottom:2px solid #333; font-size:15px; font-weight:bold; }
+.tab51 th { width:17%; background:url('http://img.megalawyers.co.kr/css/tab51.png') left top repeat-x; font-weight:bold; }
+.tab51 th a { color:#fff; }
+.tab51 th:first-child { background-position:left bottom; }
+.tab51 td { height:39px; border-top:1px solid #ccc; text-align:center; }
+.tab51 td + td { border-left:1px solid #ccc; }
+.tab51 td.sub1 { background:#ece7e4; color:#333; }
+
+.tabStep1 { color:#2a75ca; font-weight:bold; font-size:15px; text-align:center; *zoom:1; }
+.tabStep1 li { float:left; width:107px; height:87px; padding-top:20px; background:url('http://img.megalawyers.co.kr/css/step1.png') no-repeat; }
+.tabStep1 li i { color:#a4d0e9; font-size:13px; }
+.tabStep1 li strong { color:#a4d0e9; font-size:19px; }
+.tabStep1 li + li { margin-left:10px; }
+.tabStep1 li.on { background-position:0 -107px; }
+.tabStep1 li.on i { color:#2a75ca; }
+.tabStep1 li.on strong { color:#2a75ca; }
+.tabStep1:after { content:" "; display:block; clear:both; }
+
+.tabStep2 { color:#333; font-size:14px; font-weight:bold; *zoom:1; }
+.tabStep2 li { float:left; }
+.tabStep2 li i { width:36px; height:36px; margin:0 7px 0 0; background-repeat:no-repeat; vertical-align:-13px; display:inline-block; }
+.tabStep2 li i.num1 { background-image:url('http://img.megalawyers.co.kr/member/step1.01.png'); }
+.tabStep2 li i.num2 { background-image:url('http://img.megalawyers.co.kr/member/step1.02.png'); }
+.tabStep2 li i.num3 { background-image:url('http://img.megalawyers.co.kr/member/step1.03.png'); }
+.tabStep2 li i.num4 { background-image:url('http://img.megalawyers.co.kr/member/step1.04.png'); }
+.tabStep2 li + li { margin-left:17px; }
+.tabStep2 li.on i { background-position:0 -36px; }
+.tabStep2:after { content:" "; display:block; clear:both; }
+
+.divi2 li { width:50%; *width:49.99%; }		.divi2 li a { padding-left:0; padding-right:0; }
+.divi3 li { width:33.33%; *width:33.3%; }	.divi3 li a { padding-left:0; padding-right:0; }
+.divi4 li { width:25%; *width:24.9%; }		.divi4 li a { padding-left:0; padding-right:0; }
+.divi5 li { width:20%; *width:19.9%; }		.divi5 li a { padding-left:0; padding-right:0; }
+.divi6 li { width:16.66%; *width:16.5% }	.divi6 li a { padding-left:0; padding-right:0; }
+
+[class^= 'tab'] li > a,
+[class*=' tab'] li > a { text-decoration:none; }
+
+/* 2015.10 추가 (하나) */
+.bookslist {position:relative; height:188px; margin:0px 20px 0px 36px;}
+.bookslist li {text-decoration:none;}
+
+.booksbox1 {position:relative; width:100%; height:258px; background-color:#eeeeee; margin-top:0px; border-left:1px solid #cccccc; border-bottom:1px solid #cccccc; border-right:1px solid #cccccc; padding:30px 35px 30px 40px; float:left;} /*수정160217*/
+
+.relativelist {position:relative; width:240px; height:180px;background-color:#fff; border: solid 1px #e2e2e2;line-height:14px;} /*수정160217*/
+.relativelist li {text-decoration:none;}
+.relativelist li p {margin-left:60px;}
+
+.bookpay {position:relative; width:258px; height:38px;}
+.bookpay li{ width:258px; height:38px; background:url('http://img.megalawyers.co.kr/css/dotline_ub.png') repeat-x; padding-top:6px; margin-bottom:8px;}
+
+.bookpay2 {position:relative; width:210px; height:38px;}
+.bookpay2 li{ width:210px; height:38px; background:url('http://img.megalawyers.co.kr/css/dotline_ub.png') repeat-x; padding-top:6px; margin-bottom:8px;}
+
+
+
+.recombook {position:relative; height:136px; padding:30px 30px 10px 30px;}
+
+.book_tab {position:relative; width:100%; font-size:12px; font-weight:bold; letter-spacing:-1px;}
+.book_tab ul {width:100%; margin-right:-1px; *zoom:1;}
+.book_tab ul li {height:35px; float:left; background:url('http://img.megalawyers.co.kr/css/booktab_img1.png') left top no-repeat; }
+.book_tab ul li a {height:31px; margin-left:2px; padding:4px 27px 0 18px; background:url('http://img.megalawyers.co.kr/css/booktab_img1.png') right top no-repeat; color:#333; text-shadow:1px 1px #fff; text-align:center; display:block; }
+.book_tab ul li a:hover { color:#2a75ca; }
+.book_tab ul li.on { background-position:left bottom;}
+.book_tab ul li.on a { background-position:right bottom; color:#2a75ca; font-size:12px; text-shadow:none; }
+.book_tab ul li.last a { background-position:-2px top; }
+/*.book_tab ul:after { content:" "; display:block; clear:both; }*/
+
+.tab22 { *zoom:1; height:36px; }
+.tab22 li { float:left; padding:8px 7px 0 0; *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = "<i class='ie7before'>|</i> " + this.innerHTML); font-size:11px;}
+.tab22 li > i.ie7before,
+.tab22 li:before { content:'|'; margin:0 8px 0 0; color:#ccc; font-family:Dotum; font-weight:normal;}
+.tab22 li:first-child > i.ie7before { display:none; }
+.tab22 li:first-child:before { content:none; }
+.tab22 li a { color:#333; font-weight-:bold; }
+.tab22 li.on a { color:#e12c22; }
+.tab22 li.nobar { padding-left:5px; }
+.tab22 li.nobar > i.ie7before { display:none; }
+.tab22 li.nobar:before { content:none; }
+.tab22.box01 { padding:10px 20px; }
+.tab22.type1 li a { color:#888; }
+.tab22.type1 li.on a { color:#333; font-weight:bold; }
+.tab22:after { content:" "; display:block; clear:both; }
+.tab22 li a:hover { color:#e12c22; }
+
+/* 추가 151022 */
+.tab23 { *zoom:1; height:36px; margin-top:-20px;}
+.tab23 li { float:left; padding:8px 7px 0 0; *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = "<i class='ie7before'>|</i> " + this.innerHTML); font-size:11px;}
+.tab23 li > i.ie7before,
+.tab23 li:before { content:'|'; margin:0 8px 0 0; color:#ccc; font-family:Dotum; font-weight:normal;}
+.tab23 li:first-child > i.ie7before { display:none; }
+.tab23 li:first-child:before { content:none; }
+.tab23 li a { color:#333; font-weight-:bold; }
+.tab23 li.on a { color:#e12c22; }
+.tab23 li.nobar { padding-left:5px; }
+.tab23 li.nobar > i.ie7before { display:none; }
+.tab23 li.nobar:before { content:none; }
+.tab23.box01 { padding:0px 0px; }
+.tab23.type1 li a { color:#888; }
+.tab23.type1 li.on a { color:#333; font-weight:bold; }
+.tab23:after { content:" "; display:block; clear:both; }
+.tab23 li a:hover { color:#e12c22; }
+
+
+.tab24 { *zoom:1; height:36px; }
+.tab24 li { float:left; padding:8px 7px 0 0; *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = "<i class='ie7before'>|</i> " + this.innerHTML); font-size:11px;}
+.tab24 li > i.ie7before,
+.tab24 li:before { content:'|'; margin:0 8px 0 0; color:#ccc; font-family:Dotum; font-weight:normal;}
+.tab24 li:first-child > i.ie7before { display:none; }
+.tab24 li:first-child:before { content:none; }
+.tab24li a { color:#333; font-weight-:bold; }
+.tab24 li.on a { color:#888; }
+.tab24 li.nobar { padding-left:5px; }
+.tab24 li.nobar > i.ie7before { display:none; }
+.tab24 li.nobar:before { content:none; }
+.tab24.box01 { padding:10px 20px; }
+.tab24.type1 li a { color:#888; }
+.tab24.type1 li.on a { color:#333; font-weight:bold; }
+.tab24:after { content:" "; display:block; clear:both; }
+.tab24 li a:hover { color:#888; }
+
+
+.listbox { position:relative; float:left; clear:both;}
+.listbox > div { float:left; position:relative; width:302px; height:40px; padding:12px 20px 8px 12px; margin-left:30px; margin-right:30px; background:#f2f0ee;}
+
+.linebg_gr {width:790px; height:250px; background-image:url('http://img.megalawyers.co.kr/css/linebg_gr.gif'); border-bottom:solid 1px #ccc;}
+.dbline {height:116px; background-image:url('http://img.megalawyers.co.kr/css/dbline.gif'); background-position:center;}
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 버튼
+|.............................................................................*/
+
+a[class^= 'btn'],
+a[class*=' btn'] { text-indent:0; text-decoration:none; }
+
+/* height 33px 30px */
+[class^= 'btn01'],
+[class*=' btn01'] { height:31px; border:1px solid #b5b5b5; background:#ededed; color:#333; vertical-align:middle; display:inline-block; }
+[class^= 'btn01'] i,
+[class*=' btn01'] i { height:30px; padding:0 20px; border-top:1px solid #fff; border-bottom:1px solid transparent; font-size:14px; font-weight:bold; line-height:29px; text-align:center; display:block; *cursor:pointer; }
+[class^= 'btn01']:hover { color:#333; }
+[class^= 'btn01'].h30 { height:28px; }
+[class^= 'btn01'].h30 i { height:27px; line-height:26px; }
+.btn01b { border-color:#373737; background-color:#505050; color:#fff; } /* black */
+.btn01r { border-color:#b90000; background-color:#e12c22; color:#fff; } /* red */
+.btn01m { border-color:#8d776a; background-color:#aa9588; color:#fff; } /* maroon */
+.btn01a { border-color:#3a87d0; background-color:#589ee0; color:#fff; } /* aqua blue */
+.btn01s { border-color:#0c5ab3; background-color:#2a75ca; color:#fff; } /* sky blue */
+.btn01x { border-color:#a9a9a9; background-color:#bdbdbd; color:#fff; } /* gray */
+.btn01z { border-color:#a9a9a9; } /* gray extra */
+.btn01b i { border-top-color:#8e8e8e; }
+.btn01r i { border-top-color:#fb3b32; }
+.btn01m i { border-top-color:#c8bab2; }
+.btn01a i { border-top-color:#93c0eb; }
+.btn01s i { border-top-color:#75a6dd; }
+.btn01x i { border-top-color:#bdbdbd; }
+.btn01z i { height:28px; padding-top:1px; border-color:transparent; background:#bdbdbd; color:#fff; font-size:12px; line-height:13px; }
+.btn01b:hover { color:#fff; }
+.btn01r:hover { color:#fff; }
+.btn01m:hover { color:#fff; }
+.btn01a:hover { color:#fff; }
+.btn01s:hover { color:#fff; }
+.btn01x:hover { color:#fff; }
+
+/* height 24px 25px */
+[class^= 'btn02'],
+[class*=' btn02'] { height:22px; border:1px solid #b5b5b5; background:#ededed; color:#333; vertical-align:middle; display:inline-block; }
+[class^= 'btn02'] i,
+[class*=' btn02'] i { height:20px; padding:0 10px; border-top:1px solid #fff; border-bottom:1px solid transparent; font:11px/20px Verdana,Dotum; text-align:center; display:block; *cursor:pointer; }
+[class^= 'btn02'].h25 { height:23px; }
+[class^= 'btn02'].h25 i { height:21px; line-height:21px; }
+[class^= 'btn02'].tight i { padding:0 5px; }
+[class^= 'btn02']:hover { color:#333; }
+.IE [class^= 'btn02'] i,
+.IE [class*=' btn02'] i { height:20px; padding-top:1px; }
+.btn02b { border-color:#373737; background-color:#505050; color:#fff; } /* black */
+.btn02r { border-color:#b90000; background-color:#e12c22; color:#fff; } /* red */
+.btn02m { border-color:#8d776a; background-color:#aa9588; color:#fff; } /* maroon */
+.btn02w,
+.btn02a { border-color:#c7c7c7 #b4b4b4 #a9a9a9 #c7c7c7; background:url('http://img.megalawyers.co.kr/css/btn02.png') repeat-x; } /* white */
+.btn02b i { border-top-color:#8e8e8e; }
+.btn02r i { border-top-color:#fb3b32; }
+.btn02m i { border-top-color:#c8bab2; }
+.btn02a i:after { content:''; padding-right:11px; background:url('http://img.megalawyers.co.kr/css/btn05.png') right center no-repeat; }
+.btn02b:hover { color:#fff; }
+.btn02r:hover { color:#fff; }
+.btn02m:hover { color:#fff; }
+
+/* height 22px */
+[class^= 'btn03'],
+[class*=' btn03'] { height:22px; border:0; background:left top no-repeat; font:11px/24px Dotum; vertical-align:middle; overflow:hidden; display:inline-block; }
+[class^= 'btn03'] i,
+[class*=' btn03'] i { height:22px; margin:0 0 0 5px; padding:0 12px 0 7px; background:right top no-repeat; text-align:center; display:block; *cursor:pointer; }
+.IE [class^= 'btn03'] i:after,
+.IE [class*=' btn03'] i:after { content:' '; font-family:Verdana; vertical-align:middle; /* height:21px; padding-top:1px; */ }
+
+.btn03 { background-image:url('http://img.megalawyers.co.kr/css/btn03.png'); color:#333; } /* default */
+.btn03 i { background-image:url('http://img.megalawyers.co.kr/css/btn03.png'); }
+.btn03:hover { color:#3a3e4d; }
+
+/* free height blue button */
+[class^= 'btn04'],
+[class*=' btn04'] { border:1px solid; border-color:#d3e2f1 #a6c4e2 #9ebedf #c3d8eb; background:#e5f0fa; color:#3d8edb; vertical-align:middle; display:inline-block; }
+[class^= 'btn04'] i,
+[class*=' btn04'] i { padding:2px 5px 0; border-top:1px solid #f4f9fd; border-bottom:1px solid transparent; font:11px/15px Dotum; word-spacing:-2px; text-align:center; display:block; *cursor:pointer; }
+[class^= 'btn04']:hover { color:#3d8edb; }
+.IE [class^= 'btn04'] i,
+.IE [class*=' btn04'] i { padding-top:5px; line-height:12px; }
+
+.btn04e { color:#333; } /* extra */
+.btn04e:hover { color:#333; }
+
+/* arrow text button */
+[class^= 'btn05'],
+[class*=' btn05'] { padding-right:11px; background:url('http://img.megalawyers.co.kr/css/btn05.png') right center no-repeat; color:#333; font-size:13px; word-spacing:-1px; }
+[class^= 'btn05'] i,
+[class*=' btn05'] i { border-bottom:1px solid #333; }
+[class^= 'btn05']:hover i,
+[class*=' btn05']:hover i { border-color:#e12c22; }
+
+.btn05e { font-weight:bold; }
+.btn05g { background-image:url('http://img.megalawyers.co.kr/css/btn05g.png'); color:#333; }
+
+/* height image 33px */
+[class^= 'btn06'],
+[class*=' btn06'] { height:33px; border:0; background:left top no-repeat; font-weight:bold; font-size:13px; line-height:33px; vertical-align:middle; overflow:hidden; display:inline-block; }
+[class^= 'btn06'] i,
+[class*=' btn06'] i { height:33px; margin:0 0 0 5px; padding:0 30px 0 10px; background:right top no-repeat; text-align:left; display:block; *cursor:pointer; }
+
+.btn06 { background-image:url('http://img.megalawyers.co.kr/css/btn06.png'); color:#333; } /* default */
+.btn06 i { background-image:url('http://img.megalawyers.co.kr/css/btn06.png'); }
+.btn06:hover { color:#333; }
+
+.btn07 > i.ie7after,
+.btn07:after { height:0; margin:0 0 2px 5px; border-left:3px solid #888; border-top:3px solid transparent; border-bottom:3px solid transparent; vertical-align:middle; display:inline-block; content:''; }
+.btn07:hover:after { border-left-color:#e12c22; }
+.btn07 { color:#888; font-size:11px; font-family:Verdana,Dotum; *font-family:Dotum; *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = this.innerHTML + "<i class='ie7after'></i>"); }
+
+/* height 33px 30px  추가 2015.10 */ 
+[class^= 'btn08'],
+[class*=' btn08'] { height:31px; border:1px solid #b5b5b5; background:#fff; color:#333; vertical-align:middle; display:inline-block; }
+[class^= 'btn08'] i,
+[class*=' btn08'] i { height:30px; padding:0 20px; border-top:1px solid #fff; border-bottom:1px solid transparent; font-size:14px; font-weight:bold; line-height:29px; text-align:center; display:block; *cursor:pointer; }
+[class^= 'btn08']:hover { color:#333; }
+[class^= 'btn08'].h30 { height:28px; }
+[class^= 'btn08'].h30 i { height:27px; line-height:26px; }
+.btn08b { border-color:#373737; background-color:#505050; color:#fff; } /* black */
+.btn08r { border-color:#b90000; background-color:#e12c22; color:#fff; } /* red */
+.btn08m { border-color:#8d776a; background-color:#aa9588; color:#fff; } /* maroon */
+.btn08a { border-color:#3a87d0; background-color:#589ee0; color:#fff; } /* aqua blue */
+.btn08s { border-color:#0c5ab3; background-color:#2a75ca; color:#fff; } /* sky blue */
+.btn08x { border-color:#a9a9a9; background-color:#bdbdbd; color:#fff; } /* gray */
+.btn08z { border-color:#a9a9a9; } /* gray extra */
+.btn08b i { border-top-color:#8e8e8e; }
+.btn08r i { border-top-color:#fb3b32; }
+.btn08m i { border-top-color:#c8bab2; }
+.btn08a i { border-top-color:#93c0eb; }
+.btn08s i { border-top-color:#75a6dd; }
+.btn08x i { border-top-color:#bdbdbd; }
+.btn08z i { height:28px; padding-top:1px; border-color:transparent; background:#bdbdbd; color:#fff; font-size:12px; line-height:13px; }
+.btn08b:hover { color:#fff; }
+.btn08r:hover { color:#fff; }
+.btn08m:hover { color:#fff; }
+.btn08a:hover { color:#fff; }
+.btn08s:hover { color:#fff; }
+.btn08x:hover { color:#fff; }
+
+
+
+
+/*------------------------------------------------------------------------------
+| 폼
+|.............................................................................*/
+
+input { margin:0; vertical-align:middle; }
+input[type='radio'],
+input[type='checkbox'] { margin:0 2px; *margin-right:0; vertical-align:-2px; }
+.IE8 input[type='radio'],
+.IE9 input[type='radio'] { vertical-align:-1px; }
+*+html input[type='checkbox'] { vertical-align:-3px; }
+
+input[type='text'],
+input[type='password'] { height:28px; padding:0 9px; border:1px solid #ccc; color:#666; line-height:28px; }
+.IE9 input[type='text'],
+.IE9 input[type='password'] { /*line-height:21px;*/ }
+
+select { height:30px; border:1px solid #ccc; color:#666; font-size:12px; vertical-align:middle; }
+textarea { padding:9px; border:1px solid #ccc; color:#666; vertical-align:top; overflow:auto; resize:none; }
+.IE8 select { padding-:4px 0; }
+*+html select { height:auto; }
+
+[readonly] { border-color:#ccc !important; background:#f8f8f8; }
+[readonly]:focus { border-color:#ccc !important; }
+
+select:focus,
+textarea:focus,
+input[type='text']:focus,
+input[type='password']:focus { border-color:#53a6f3; }
+
+[class^='fmDivi'] { *zoom:1; }
+[class^='fmDivi'] label { float:left; font:11px/25px Dotum; white-space:nowrap; display:inline-block; }
+[class^='fmDivi'] label.free { width:auto !important; }
+[class^='fmDivi']:after { content:" "; display:block; clear:both; }
+
+.fmDivi0 label { padding-right:2em; }
+.fmDivi2 label { width:50%; }
+.fmDivi3 label { width:33.33%; }
+.fmDivi4 label { width:25%; }
+.fmDivi5 label { width:20%; }
+.fmAdjust0 label { padding-right:2em; }
+
+.wfull { padding-right:20px; display:block; }
+.wfull textarea,
+.wfull input[type='text'],
+.wfull input[type='password'] { width:100%; }
+.wfullSelect { display:block; }
+.wfullSelect select { width:100%; }
+.placeholder { color:#888; }
+
+.fmTxt { margin-right:5px; color:#333; font-weight:bold; font-size:14px; line-height:30px; vertical-align:middle; display:inline-block; }
+.fmRadio { margin-top:1px; color:#333; font-size:13px; line-height:29px; vertical-align:middle; display:inline-block; }
+.fmRadio label { padding:0 .8em; }
+.fmShort { height:20px !important; line-height:20px !important; }
+
+.attachfile div { height:28px; padding:0 9px; margin-right:92px; border:1px solid #ccc; background:#fff; color:#888; line-height:28px }
+.attachfile span { float:right; position:relative; width:87px; height:30px; }
+.attachfile span input { position:absolute; top:0; left:0; width:60px; height:100%; opacity:0; filter:alpha(opacity:0); }
+
+
+
+/*------------------------------------------------------------------------------
+| 레이아웃
+|.............................................................................*/
+
+.layerbox1 { position:absolute; border:solid #8d776a; border-width:0 1px 1px 1px; background:#fff; color:#888; font:13px/20px 'Malgun Gothic'; text-align:left; }
+.layerbox1 h5 { height:51px; margin:0 -1px; padding:0 0 0 25px; background:url('http://img.megalawyers.co.kr/layout/popup_title.png') repeat-x; color:#fff; font-weight:bold; font-size:18px; line-height:51px; }
+.layerbox1 > div { padding:20px; }
+.layerbox1 .close { position:absolute; right:25px; top:13px; width:27px; height:27px; background:url('http://img.megalawyers.co.kr/layout/popup_close.png') repeat-x; display:block; }
+
+.layerbox2 { position:absolute; border:solid #48474d; border-width:0 1px 1px 1px; background:#fff; color:#888; font:13px/20px 'Malgun Gothic'; text-align:left; }
+.layerbox2 h5 { height:48px; margin:0 -1px; padding:0 0 0 25px; border-top:3px solid #e12c22; background:#48474d; color:#fff; font-weight:bold; font-size:18px; line-height:45px; text-align:left; }
+.layerbox2 > div { padding:20px; }
+.layerbox2 .close { position:absolute; right:25px; top:13px; width:27px; height:27px; background:url('http://img.megalawyers.co.kr/layout/popup_close.png') repeat-x; display:block; }
+
+/* 2015.07.15 */
+.layerbox3 { position:absolute; border:solid #8d776a; border-width:0 1px 1px 1px; background:#fff; color:#888; font:13px/20px 'Malgun Gothic'; text-align:left; min-height:100%;}
+.layerbox3 h5 { height:51px; margin:0 -1px; padding:0 0 0 25px; background:url('http://img.megalawyers.co.kr/layout/popup_title.png') repeat-x; color:#fff; font-weight:bold; font-size:18px; line-height:51px; }
+.layerbox3 > div { padding:20px; }
+.layerbox3 .close { position:absolute; right:25px; top:13px; width:27px; height:27px; background:url('http://img.megalawyers.co.kr/layout/popup_close.png') repeat-x; display:block; }
+/* 2015.07.15 */
+
+.layer4screen { position:fixed; left:0; top:0; width:100%; height:100%; background:url('http://img.megalawyers.co.kr/css/film.black.40.png'); z-index:9 }
+.layer4screen .layerbox1 { position:relative; margin:0 auto; }
+.layer4screen .on {background:#e0edf4;}
+.layer4screen td {vertical-align:text-top;}
+
+/* 팝업 */
+#wrap_pop1 { position:relative; height:auto; min-height:100%; border:solid #8d776a; border-width:0 1px; background:url('http://img.megalawyers.co.kr/layout/popup_bline.png') left bottom repeat-x; }
+#wrap_pop1 > h1 { height:51px; margin:0 -1px; padding:0 0 0 25px; background:url('http://img.megalawyers.co.kr/layout/popup_title.png') repeat-x; color:#fff; font-weight:bold; font-size:18px; line-height:51px; }
+#wrap_pop1 #main { padding:20px; }
+#wrap_pop1 .close { position:absolute; right:25px; top:13px; width:27px; height:27px; background:url('http://img.megalawyers.co.kr/layout/popup_close.png') repeat-x; display:block; }
+
+/* 팝업: 주소,학교찾기 등 */
+#wrap_pop2 { position:relative; height:auto; min-height:100%; border:solid #48474d; border-width:0 1px; background:url('http://img.megalawyers.co.kr/layout/popup_bline2.png') left bottom repeat-x; }
+#wrap_pop2 > h1 { height:48px; margin:0 -1px; padding:0 0 0 25px; border-top:3px solid #e12c22; background:#48474d; color:#fff; font-weight:bold; font-size:18px; line-height:45px; }
+#wrap_pop2 #main { padding:20px; }
+#wrap_pop2 .close { position:absolute; right:25px; top:13px; width:27px; height:27px; background:url('http://img.megalawyers.co.kr/layout/popup_close.png') repeat-x; display:block; }
+
+/* 팝업: 회원정보 */
+#wrap_pop11 .h1_for_image { border-top:3px solid #e12c22; background:#48474d; color:#fff; }
+#wrap_pop11 #main { padding:20px; }
+#wrap_pop11 #main .box04 { background:#f4fcff; border-color:#dfebf2; }
+#wrap_pop11 #main .box05 { background:#f8f8f8; }
+#wrap_pop11 #main .tbl21 { border-top-color:#777; font-size:14px; }
+#wrap_pop11 #main .tbl21 th { padding:15px 25px; background:#f5f5f5; }
+#wrap_pop11 #main .tbl21 td { padding:10px 15px; color:#333; font-size:13px; font-weight:bold; }
+#wrap_pop11 #main .fmTxt { font-size:13px; }
+#wrap_pop11 #main [class^='fmDivi'] label { font:bold 13px/2em 'Nanum Gothic'; }
+
+/* 인터넷강좌_강좌상세 */
+.book_list li {min-height:130px;}
+
+
+/* 메인 배너 추가 2015-10-29 S */
+#oBanner8th .rbnr {float:left; margin-left:-10px;}
+#oBanner8th .rbnr li {float:left; *padding-top:1px; font-size:16px;}
+#oBanner8th .rbnr li a {padding:0 10px; border-left:1px solid #e1e1e1; color:#333; font-weight:bold; }
+#oBanner8th .rbnr li a:hover {color:#2b75ca; }
+#oBanner8th .rbnr li.on a {color:#2b75ca; font-weight:bold;}
+#oBanner8th .rbnr li.on a i:after {height:0; margin:0 0 2px 5px; border-top:4px solid #2b75ca; border-left:4px solid transparent; border-right:4px solid transparent; vertical-align:middle; display:inline-block; content:''; }
+#oBanner8th .rbnr li:first-child a {border:0;}
+#oBanner8th .rbnr li:last-child a {padding-right:0;}
+#oBanner8th .rbnr ul:after {content:" "; display:block; clear:both;}
+#oBanner8th .rbnr:after { content:" "; display:block; clear:both; } 		  
+/* 메인 배너 추가 2015-10-29 E*/
+
+
+/* 댓글 2016-03-28 */
+.reply {position:relative;clear:both;width:728px; margin:40px auto 20px; background-color:#edf4f8}
+.reply_in { overflow:hidden;width:728px; padding:23px 0 0; border:1px solid #cee0eb; border-bottom:none;background-color:#edf4f8}
+.reply_in dt {float:left; padding:0 11px 0 30px; font-size:14px; line-height:30px;color:#333; font-weight:600; } 
+.reply_in dd {float:left; font-size:11px; color:#888; font-family:dotum; } 
+.reply_in dd .txt_num {display:block ; margin:9px 0 12px 0; font-size:11px; color:#888; font-family:dotum; text-align:right;}
+.reply_in dd .dt_save { position:absolute; top:24px; right:30px;}
+.reply2 {clear:both;width:670px; margin:18px auto 0; }
+.reply2 ul {overflow:hidden; display:block;  border-top:1px solid #ddd}
+.reply2 li {display:block; padding:16px 7px 10px; font-size:12px; color:#666; line-height:20px; background:url('http://img.megalawyers.co.kr/css/dotline1.png') repeat-x left bottom;}
+.reply2 li .writer {display:block;margin:5px 0 0 0;  font-size:11px; color:#888; font-family:dotum;  line-height:14px;}
+
+
+/*커리큘럼*/
+.curri_bg{ width:790px; background:#f9f9f9;}
+.curri_bg h2 {position:relative; margin:10px 0 0 0; color:#333; font-weight:bold; font-size:15px; line-height:1em; }
+.curri_bg p {padding:6px 0;}
+
+.bg_b { background:#ecf4f7;}
+.bg_y { background:#f3f2ee;}
+.bg_t { background:#8fbde1;}
+.bg_n { background:#e1e5e6;}
+.bg_w { background:#fff;}/*160621 추가*/
+
+.ctbl { width:790px;}
+.ctbl h2 {position:relative; margin:10px 0 0 0; padding:10px 0; color:#333; font-weight:bold; font-size:15px; line-height:5em; }
+.ctbl h3 {position:relative; margin:10px 0 30px 0; padding:10px 0; color:#333; font-weight:bold; font-size:15px; line-height:1.5em; }
+.ctbl h4 {position:relative; margin:10px 0 30px 0; padding:10px 0; color:#333; font-weight:bold; font-size:15px; line-height:1em;  }
+
+/*바로가기 링크*/
+.ctbl1 td u { font-size:11px}
+.ctbl2 td u { font-size:11px}
+.ctbl3 td u { font-size:11px; line-height:14px;}
+
+
+/*커리큘럼 테이블 유형1*/
+.ctbl1 { position:relative; width:790px; margin-top:-30px; border-bottom:1px solid #ded1c9; line-height:18px; letter-spacing:-0.005em; }
+.ctbl1 thead th {height:35px; color:#fff; background:#ab9588; border-right:1px solid #ded1c9;}
+.ctbl1 tbody th {color:#3e3634; background:#ded1c9; font-weight:normal;border-right:1px solid #ded1c9; border-top:1px solid #e1e5e6;}
+.ctbl1 tbody td {padding:10px 10px; color:#373938; font-weight:bold;  border-right:1px solid #e1e5e6; border-top:1px solid #e1e5e6;}
+.ctbl1 th:last-child,
+.ctbl1 td:last-child { border-right-width:0; }
+
+/*커리큘럼 테이블 유형2*/
+.ctbl2 { position:relative; width:790px; margin-top:-30px; border-bottom:1px solid #ded1c9; line-height:18px; letter-spacing:-0.005em; }
+.ctbl2 thead th:first-child {background:#ab9588;}
+.ctbl2 thead th {height:35px; color:#fff; background:#8fbde1; border-right:1px solid #cfeef4;}
+.ctbl2 tbody th {color:#3e3634; background:#f6f6f6; font-weight:normal;border-right:1px solid #ded1c9; border-top:1px solid #e1e5e6;}
+.ctbl2 tbody td {padding:10px 10px; color:#373938; font-weight:bold;  border-right:1px solid #e1e5e6; border-top:1px solid #e1e5e6;}
+.ctbl2 th:last-child,
+.ctbl2 td:last-child { border-right-width:0; }
+
+/*커리큘럼 테이블 유형3*/ /*160621 수정*/
+.ctbl3 { position:relative; width:790px; margin-top:-30px;border-bottom:0px solid #ded1c9; line-height:18px; letter-spacing:-0.005em; }
+.ctbl3 thead th:first-child {background:#f9f9f9;}
+.ctbl3 thead th {height:35px; color:#fff; background:#8fbde1; border-right:1px solid #cfeef4;}
+.ctbl3 tbody th {color:#fff; background:#ab9588; font-weight:bold; border-right:1px solid #f9f9f9; border-top:1px solid #f9f9f9;}
+.ctbl3 tbody td {padding:10px 10px; color:#373938; font-weight:bold;border-right:1px solid #e1e5e6; border-top:1px solid #e1e5e6;}
+/*.ctbl3 tbody td+td+td {border-right:0px solid #f9f9f9; border-top:0px solid #f9f9f9; background:#e1e5e6;}*/ 
+.ctbl3 th:last-child,
+.ctbl3 td:last-child { border-right-width:0; }
+
+
+/*커리큘럼 다이어그램 유형1*/
+.diagram1 { position:relative; color:#fff; width:790px; height:150px;}
+.diagram1 h2 {line-height:1em;  }
+.diagram1 dl { display:inline-block; float:left; width:193px;  margin-right:5px;}
+.diagram1 dl:last-child {margin-right:0px;}
+.diagram1 dd { border-top:1px #bbd6e9 dashed;}
+.diagram1 .a { background:#8dbde1; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1 .b { background:#68a6d5; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1 .c { background:#4798d0; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1 .d { background:#3387c7; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1 .e { background:#1a75ba; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}/* 2018-06-22 */
+
+
+/*커리큘럼 다이어그램 유형1_1*/  /* 2016-12-02 */
+.diagram1_1 { position:relative; color:#fff; width:790px; height:150px;}
+.diagram1_1 h2 {line-height:1em;  }
+.diagram1_1 .division { float: left; display:inline-block; margin-right:5px; background:#ab9588; padding:14px 10px 14px 7px; letter-spacing:-0.05em; text-align:center; font-weight:bold; line-height: 16px;}
+.diagram1_1 dl { float: left; display:inline-block; float:left; width:185px;  margin-right:5px;}
+.diagram1_1 dl:last-child {margin-right:0px;}
+.diagram1_1 dd { line-height: 18px;}
+.diagram1_1 .a { background:#8dbde1; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_1 .b { background:#68a6d5; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_1 .c { background:#4798d0; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_1 .d { background:#3387c7; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_1 .e { background:#1a75ba; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}/* 2018-06-22 */
+
+
+/*커리큘럼 다이어그램 유형1_2*/  /* 2016-12-02 */
+.diagram1_2 { position:relative; color:#fff; width:790px; height:100px;}
+.diagram1_2 h2 {line-height:1em;  }
+.diagram1_2 .division { float: left; display:inline-block; margin-right:5px; background:#ab9588; padding:14px 10px 14px 7px; letter-spacing:-0.05em; text-align:center; font-weight:bold; line-height: 16px;}
+.diagram1_2 dl { float: left; display:inline-block; float:left; width:185px;  margin-right:5px;}
+.diagram1_2 dl:last-child {margin-right:0px;}
+.diagram1_2 dd { line-height: 18px;}
+.diagram1_2 .a { background:#e4d7cd; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_2 .b { background:#d0bbaa; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_2 .c { background:#b99d88; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_2 .d { background:#ab9588; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+
+.diagram_txt dl { display:inline-block; width:165px; font-size:12px; color:666; margin-bottom: 30px; }
+.diagram_txt dl dt { font-weight:600; color:#555; }
+.diagram_txt dl dd { line-height:17px; margin-top: 3px;  }
+
+
+/*커리큘럼 다이어그램 유형1_3*/  /* 2016-12-02 */
+.diagram1_3 { position:relative; color:#fff; width:790px; height:100px;}
+.diagram1_3 h2 {line-height:1em;  }
+.diagram1_3 .division { float: left; display:inline-block; margin-right:5px; background:#ab9588; padding:14px 10px 14px 7px; letter-spacing:-0.05em; text-align:center; font-weight:bold; line-height: 16px;}
+.diagram1_3 dl { float: left; display:inline-block; float:left; width:193px;  margin-right:5px;}
+.diagram1_3 dl:last-child {margin-right:0px;}
+.diagram1_3 dd { line-height: 18px;}
+.diagram1_3 .a { background:#e4d7cd; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_3 .b { background:#d0bbaa; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_3 .c { background:#b99d88; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram1_3 .d { background:#ab9588; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+
+
+/*커리큘럼 다이어그램 유형2*/ /*160621 추가*/
+.diagram2 { position:relative; color:#fff; width:790px; height:150px;}
+.diagram2 h2 {line-height:1em;  }
+.diagram2 dl { display:inline-block; float:left; width:196px; margin-right:2px;}
+.diagram2 dl:last-child {margin-right:0px;}
+.diagram2 dd { border-top:1px #bbd6e9 dashed;}
+.diagram2 .a { background:#8dbde1; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram2 .b { background:#68a6d5; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram2 .c { background:#4798d0; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+.diagram2 .d { background:#3387c7; padding:10px 10px; letter-spacing:-0.05em; text-align:center; font-weight:bold;}
+
+
+/* 커리큘럼 테이블 유형1 20160805 */
+.ctable { width:790px; letter-spacing:-1px;}
+.ctable thead {background-color:#3c4252; color:#fff; font-size:13px; text-align:center; height:30px;}
+.ctable thead th {border-right:1px solid #636773;}
+.ctable thead th:last-child {border-right:0px;}
+.ctable tbody th {background-color:#717b85; border-bottom:1px solid #fff; color:#fff; font-size:13px;}
+.ctable tbody td {background-color:#fff; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font-size:13px; padding:10px 10px; text-align:center}
+.ctable tbody td p {font-weight:bold; color:#333; text-align:center !important;}
+.ctable tbody td span { text-align:left !important; letter-spacing:-1px;}
+
+span.lstdot > td,span.bltdot,div.bltdot { padding-left:0px; text-indent:0px; }
+span.lstdot > td,.bltdot { *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = "<i class='ie7before'>·&nbsp;</i>" + this.innerHTML); }
+span.lstdot > td > i.ie7before,.bltdot > i.ie7before,
+span.lstdot > te:before,.bltdot:before { content:'· '; font:12px Dotum; }
+
+
+
+/* 온라인 서점 개선작업 추가 2016-08-02 */
+
+.bookpay3 {position:relative; width:282px; height:38px;}
+.bookpay3 li{ width:282px; height:38px; background:url('http://img.megalawyers.co.kr/css/dotline_ub.png') repeat-x; padding-top:6px; margin-bottom:8px;}
+
+.bookpay4 {position:relative; width:148px; height:25px;}
+.bookpay4 li{ width:148px; height:25px; background:url('http://img.megalawyers.co.kr/css/dotline_ub2.png') repeat-x; padding-top:4px; margin-bottom:8px;}
+
+.bookpay5 {position:relative; width:342px; height:38px;}
+.bookpay5 li{ width:342px; height:38px; background:url('http://img.megalawyers.co.kr/css/dotline_ub.png') repeat-x; padding-top:8px; margin-bottom:8px; padding-left:10px;}
+
+.addBook { width:790px; height:300px; display:inline-block; float:left; position:relative; padding-top:30px;}
+.addBook1 { position:absolute; padding: 30px 20px 30px 24px; width:461px; height:191px; border: 1px solid #e2e2e2; background: #fff;}
+.addBook1 h2{ position: absolute; top:-30px; left:4px; color: #333; font-size: 16px; font-weight: bold; line-height: 22px;}
+.addBook1 dt {height:72px;} /* 추가 20160811 */
+.addBook1 a:hover em {color:#e12c22 !important;}
+.addBook2 { position:absolute; left:505px; padding:20px 24px 28px 24px; width:235px; height:203px; border: 1px solid #e2e2e2; background: #eee;} /*수정 20160811*/
+.addBook2 h2{ position: absolute; top:-30px; left:4px; color: #333; font-size: 16px; font-weight: bold; line-height: 22px;}
+.addBook2 dl {float:left; margin-top:4px;}
+.addBook2 dl+dl {margin-top:14px;} /*수정 20160811*/
+.addBook2 dt {margin-rignt:10px;}
+.addBook2 dd { line-height:13px; letter-spacing:-0.5px;}
+.addBook2 dd a:hover em {color:#e12c22 !important;}
+
+.booksum { margin-top:10px; float:left}
+.booksum li {width:47px; height:60px; display:inline-block; border:0; float:left; margin-right:11px;}
+.booksum li.last {border:0; margin-right:0px;}
+
+/* 수정2 20160811 */
+.booksum li a {width:47px; height:60px; display:inline-block;  border:2px solid #eee;}
+.booksum li.on a {width:47px; height:60px; display:inline-block;  border:2px solid #e12c22;}
+
+
+
+.boxBook3 { width:80px; padding-top:1px; background:url('http://img.megalawyers.co.kr/css/box_book1_2.png')no-repeat;}
+.boxBook3 p { padding::0; background:url('') left bottom no-repeat; }
+.boxBook3 p img { width:70px; border-left:1px solid #ccc; border-bottom:1px solid #ccc; }
+.boxBook3.type1 { background-position:-80px top; }
+.boxBook3.type1 p { background-position:-80px bottom; }
+
+
+/*교재 크게보기 팝업 */
+.boxBook4 { width:500px; padding-top:1px; background:url('http://img.megalawyers.co.kr/css/box_book1_3.png')no-repeat;}
+.boxBook4 p { padding::0; background:url('') left bottom no-repeat; }
+.boxBook4 p img { width:350px; height:455px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;}
+.boxBook4.type1 { background-position:0px top; }
+.boxBook4.type1 p { background-position:-11px bottom; }
+
+/* Lawyers Book 리스트 */
+.lbook_box { display:inline-block; width:730px; height:98px; position:relative; padding:17px 30px 15px 30px; border-top:1px solid #e2e2e2; border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2; background:#f9f9f9;}
+.lbook_box dt {float:left; position:relative;}
+.lbook_box dd { line-height:160%; display:inline-block; margin-left:20px;}
+.lbook_box dd a { color:#888;}
+.lbook_box dd a:hover { color:#888 !important;}
+.lbook_box dd a:hover em { color:#e12c22 !important;}
+.lbook_box dd em { display:inline-block; width:630px;font-weight:bold;}
+.lbook_box dd span {float:right; position:relative; color:#888; font-size:12px;  top:-28px;}
+
+.lbook_last {border-bottom:1px solid #e2e2e2;}
+
+.lbook_box_on{ display:inline-block; width:730px; height:98px; position:relative; padding:17px 30px 15px 30px; border-top:1px solid #e2e2e2; border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2; background:#fff !important;}
+.lbook_box_on dt {float:left; position:relative;}
+.lbook_box_on dd { line-height:160%; display:inline-block; margin-left:20px;}
+.lbook_box_on dd a { color:#888;}
+.lbook_box_on dd a:hover { color:#888 !important;}
+.lbook_box_on dd a:hover em { color:#e12c22 !important;}
+.lbook_box_on dd em { display:inline-block; width:630px;font-weight:bold;}
+.lbook_box_on dd span {float:right; position:relative; color:#888; font-size:12px;  top:-28px;}
+
+/* 학원수강강좌 교재구매 기능 2019-03-04 추가 */
+.lbook_box_on.type2 dd,
+.lbook_box.type2 dd{width:440px;}
+.lbook_box_on.type2 dd em,
+.lbook_box.type2 dd em{width:auto;}
+.lbook_box_on.type2 dd.btn,
+.lbook_box.type2 dd.btn{width:140px;text-align:right}
+.lbook_box_on.type2 dd.btn a,
+.lbook_box.type2 dd.btn a{color:#fff}
+.lbook_box_on.type2 dd.btn span,
+.lbook_box.type2 dd.btn span{display:block;}
+.receipt_box{font-size:14px;margin:0 20px;padding-top:12px;height:53px;text-align:center;border:1px solid #eee;background:#fff;color:#333}
+.receipt_box.type2{padding-top:22px;height:43px;border-color:#a9a9a9;background:#bdbdbd;color:#fff;}
+/*.lbook_box.type2 dd{width:440px;}
+.lbook_box.type2 dd em{width:auto;}
+.lbook_box.type2 dd.btn{width:140px;text-align:right}
+.lbook_box.type2 dd.btn a{color:#fff}*/
+.lbook_box.type2.last{border-bottom:1px solid #e2e2e2}
+/* //학원수강강좌 교재구매 기능 2019-03-04 추가 */
+
+/* 북시리즈 탭 2016-08-02 */
+p.top_bg {position:relative;}
+.book_series {width:350px; position:absolute; top:27px; left:570px; z-index:2;}
+.book_series {float:left;}
+.book_series .prenex {float:left; width:80px; position:absolute; top:-10px; left:290px;  z-index:2;}  /*2017-08-09 수정*/
+.book_series .prenex li {float:left}
+.book_series .prenex li span { margin-right:10px; color:#ccc}
+.book_series .prenex li span a {color:#888}
+.book_series .prenex li span a:hover {color:#e12c22}
+.book_series dl {float:left; width:175px;}
+.book_series dt {float:left; width:60px;}
+.book_series dd {float:left; width:115px; line-height:18px;}
+
+.book_series .title { position:absolute; color:#333; font-size:15px; font-weight:bold; text-align:center; line-height:120%; left:-110px;}
+
+
+.book_sell {height:342px;}
+.book_sell ul {position:absolute; top:560px; left:172px; width:650px;}
+.book_sell ul li {width:307px; float:left;}
+.book_sell p {position:absolute; top:730px; left:757px;}
+
+/* 온라인서점 교재 크게보기*/
+.bookview { position:absolute; top:148px; left:87px;}
+
+/* 방문수령 추가 2019-03-04 */
+.visit_map{width:348px;margin-left:20px;}
+.visit_map .visit_map_img{width:318px;height:141px;overflow:hidden}
+.visit_map .visit_map_img img{width:130%;margin-left:-100px;margin-top:-95px;}
+.visit_map_tit{overflow:hidden;margin-bottom:5px;}
+.visit_map_tit > strong{float:left;width:60px;color:#4e4e56}
+.visit_map_tit .visit_map_info{color:#333;width:278px;font-size:12px;letter-spacing:-1px;float:right;}
+/* 방문수령 추가 2019-03-04 */

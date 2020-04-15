@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-eqiv="Content-Type" content="text/html" charset="euc-kr">
+	<meta name="viewport" content="width=1400, maximum-scale=1.5">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>1등의 책임감 - megaMD</title>
+	<link rel="stylesheet" href="http://img.megamd.co.kr/common/css/md_common.css" />
+	<link rel="stylesheet" href="http://img.megamd.co.kr/common/css/vod_style.css" />
+
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/jquery.min.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/jquery-relation.min.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/jquery-latest.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/jquery.bxslider.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/common.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/lecture/lecture.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/common_action.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/xml2json.js"></script>
+	<script type="text/javascript" src="http://img.megamd.co.kr/common/js/json2.js"></script>
+
+</head>
+<body>
+<div class="wrap sub">
+	<!-- header// -->
+	<div class="header" style="height: 183px; background:#f3f3f5;">HEADER</div>
+	<!-- //header -->
+
+	<div class="containerAreaBox">
+
+		<!-- 노용관P 기본이론 및 커리큘럼 홍보 -->
+		<style>
+			#nyg { position: relative; overflow: hidden; }
+			#nyg > [class^="stn_"] { position: relative; }
+			#nyg .inner { position: relative; width: 1300px; margin: 0 auto; text-align: center; }
+			#nyg .stn_01,#nyg .stn_02,#nyg .stn_03{ background: url(http://img.megamd.co.kr/2019/0910_nyg/bg_stn_top.jpg) 0 0 repeat; }
+			#nyg .stn_06{background:#ffe56f;padding-bottom:100px;}
+			#nyg .stn_06:before{content:"";position:absolute;left:0;top:0;width:260px;height:153px;background:url(http://img.megamd.co.kr/2019/0910_nyg/bg_stn_06_l.jpg) 0 0 repeat;}
+			#nyg .stn_06:after{content:"";position:absolute;right:0;top:0;width:260px;height:153px;background:url(http://img.megamd.co.kr/2019/0910_nyg/bg_stn_06_r.jpg) 0 0 repeat;}
+			#nyg .stn_06 .inner:after{content:"";position:absolute;right:-50%;top:387px;width:50%;height:295px;background:url(http://img.megamd.co.kr/2019/0910_nyg/bg_nyg_con06.jpg) 0 0 repeat;}
+
+			/* tab_area_css */
+			#nyg .tab_area { left: 0; top: 0; width: 100%; height: 130px; z-index: 20; background: #07101f;  }
+			#nyg .tab_area.fixed{position: fixed;}
+			#nyg .tab_area .inner:after{content:"";z-index:1;position:absolute;right:0;bottom:0;width:114px;height:20px;background: url(http://img.megamd.co.kr/2019/0910_nyg/nyg_tab_tip.jpg) 0 0 no-repeat;}
+			#nyg .tab_area ul{overflow:hidden;width:1200px;margin:0 auto;}
+			#nyg .tab_area ul li{float:left;width:300px;}
+			#nyg .tab_area ul li a{display:block;height:130px;background: url(http://img.megamd.co.kr/2019/0910_nyg/nyg_tab.jpg) 0 0 no-repeat;}
+			#nyg .tab_area ul li.bt2 a{background-position-x:-300px;}
+			#nyg .tab_area ul li.bt3 a{background-position-x:-600px;}
+			#nyg .tab_area ul li.bt4 a{background-position-x:-900px;}
+			#nyg .tab_area ul li.on a,
+			#nyg .tab_area ul li a:hover{background-position-y:-130px;}
+			/* tab_area_css */
+		</style>
+		<script type="text/javascript">
+			////////////// tab_area_js //////////////
+			$(window).load(function(){
+				var section1 = $('#con1').offset().top-230;
+				var section2 = $('#con2').offset().top-230;
+				var section3 = $('#con3').offset().top-230;
+				var section4 = $('#con4').offset().top-230;
+				var winTop ;
+
+				//탭 hide-view
+				$(window).scroll(function(){
+					var winTop = $(window).scrollTop();
+					if( winTop < section1 ){
+						$('.tab_area').removeClass("fixed");
+					}else{
+						$('.tab_area').addClass("fixed");
+					}
+				});
+
+				$(window).scroll(function(){
+					var winTop = $(window).scrollTop();
+					if( winTop < section1 ){
+						$('.tab_area ul li').removeClass('on');
+					}else if( winTop >= section1 && winTop < section2 ){
+						$('.tab_area ul li.bt1').addClass('on').siblings().removeClass('on');
+					}else if( winTop >= section2 && winTop < section3 ){
+						$('.tab_area ul li.bt2').addClass('on').siblings().removeClass('on');
+					}else if( winTop >= section3 && winTop < section4 ){
+						$('.tab_area ul li.bt3').addClass('on').siblings().removeClass('on');
+					}else if( winTop >= section4 ){
+						$('.tab_area ul li.bt4').addClass('on').siblings().removeClass('on');
+					}
+				});
+
+				//탭 클릭 모션
+				$('.tab_area ul li a').click(function(){
+					var tabIdx = $(this).parent().index();
+					if( tabIdx == 0 ){
+						$('html,body').animate({scrollTop :  section1 });
+					}else if( tabIdx == 1 ){
+						$('html,body').animate({scrollTop :  section2 });
+					}else if( tabIdx == 2 ){
+						$('html,body').animate({scrollTop :  section3 });
+					}else if( tabIdx == 3 ){
+						$('html,body').animate({scrollTop :  section4 });
+					}
+				});
+
+			}); //$(window).load ////
+		</script>
+		<div id="nyg">
+			<div class="tab_area">
+				<div class="inner">
+					<ul>
+						<li class="bt1 on"><a href="javascript:;">반박불가 1위</a></li>
+						<li class="bt2"><a href="javascript:;">커리큘럼</a></li>
+						<li class="bt3"><a href="javascript:;">신규강좌</a></li>
+						<li class="bt4"><a href="javascript:;">뿌링클먹자</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="con1" class="stn_01">
+				<div class="inner">
+					<img src="http://img.megamd.co.kr/2019/0910_nyg/nyg_con01.jpg" alt="시작부터 가장 최고의 선택이 필요합니다." usemap="#nyg_con01" border="0" />
+				</div>
+			</div>
+			<div id="con2" class="stn_02">
+				<div class="inner">
+					<img src="http://img.megamd.co.kr/2019/0910_nyg/nyg_con02.jpg" alt="NEW 2021 커리큘럼" />
+				</div>
+			</div>
+			<div id="con3" class="stn_03">
+				<div class="inner">
+					<img src="http://img.megamd.co.kr/2019/0910_nyg/nyg_con03.jpg" alt="난이도가 올라가도, 낯선 소재가 출제 되어도 고득점을 위한 근본은 단 하나!" usemap="#nyg_con03" border="0" />
+				</div>
+			</div>
+			<div id="con4" class="stn_06">
+				<div class="inner">
+					<img src="http://img.megamd.co.kr/2019/0910_nyg/nyg_con06.jpg" alt="와글와글 기대평 작성하고 뿌링뿌링 뿌링클 먹자!" usemap="#nyg_con06" border="0" />
+				</div>
+			</div>
+		</div>
+		
+		<!-- //노용관P 기본이론 및 커리큘럼 홍보 -->
+
+	</div>
+
+	<!-- footer// -->
+	<div class="footer" style="height: 159px; background:#f3f3f5;">FOOTER</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

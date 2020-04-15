@@ -40,11 +40,12 @@
 		<section id="con_nav">
 			<a href="javascript:;" class="arrow btnToggle_left"><span>토글</span></a>
 			<ul>
-				<li class="on"><a href="#tab">기본형</a></li>
-				<li><a href="#tab_txt">텍스트 버튼</a></li>
+				<li class="on"><a href="#tab">가로형</a></li>
 				<li><a href="#tab_vertical">세로형</a></li>
-				<li><a href="#tab_type2">겹치는이미지 버튼</a></li>
-				<li><a href="#tab_background">background 유형</a></li>
+				<li><a href="#tab_random">tab 랜덤 노출</a></li>
+				<li><a href="#tab_txt">텍스트 버튼</a></li>
+				<li><a href="#tab_type2">겹치는 버튼</a></li>
+				<li><a href="#tab_background">BG+IMG 유형</a></li>
 				<!--
 				<li><a href="#tab_mv">동영상 탭</a></li>
 				<li><a href="fixed_tab.html" target="_blank">고정 탭</a></li>-->
@@ -56,8 +57,9 @@
 		<!--소스 Start-->
 
 
+
 <!-- tab (이미지 버튼) -->
-<h2 id="tab">Tab 기본형</h2>
+<h2 id="tab">Tab 가로형</h2>
 <div class="viewarea">
 	<style>
 		.js_tab_wrap{width:1100px;margin:0 auto;}
@@ -110,94 +112,6 @@
 </div>
 <!--//tab (이미지 버튼)-->
 
-
-<!-- tab (텍스트 버튼) -->
-<h2 id="tab_txt">Tab 텍스트 버튼</h2>
-<div class="viewarea">
-	<style>
-		.js_tab_wrap{width:1100px;margin:0 auto;}
-		.js_tab_wrap .js_tab_text{width:100%;}
-		.js_tab_wrap .js_tab_text:after{content:'';display:block;clear:both}
-		.js_tab_wrap .js_tab_text li{width:25%;float:left;}
-		.js_tab_wrap .js_tab_text li a{display: block; height: 60px; line-height: 58px; font-size: 20px; text-align: center; background: #ddd;  }
-		.js_tab_wrap .js_tab_text li.on a{background: #000; color:#fff;}
-		.js_tab_wrap .js_tab_con_type{display:none}
-		.js_tab_wrap .js_tab_con_type.on{display:block}
-	</style>
-	<script>
-		$(document).ready(function () {
-			$('.js_tab_text li a').on('click', function (e) {
-				var targetId = $(this).attr("href");
-				e.preventDefault();
-				$(this).parent('li').siblings().removeClass('on');
-				$(this).parent('li').addClass('on');
-				$(targetId).addClass('on').siblings().removeClass('on');
-			});
-		});
-	</script>
-	<div class="js_tab_wrap">
-		<ul class="js_tab_text">
-			<li class="tab1 on"><a href="#js_tab_text1">tab1</a></li>
-			<li class="tab2"><a href="#js_tab_text2">tab2</a></li>
-			<li class="tab3"><a href="#js_tab_text3">tab3</a></li>
-			<li class="tab4"><a href="#js_tab_text4">tab3</a></li>
-		</ul>
-		<div id="js_tab_text1" class="js_tab_con_type on">
-			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0501.jpg" alt="" />
-		</div>
-		<div id="js_tab_text2" class="js_tab_con_type">
-			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0502.jpg" alt="" />
-		</div>
-		<div id="js_tab_text3" class="js_tab_con_type">
-			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0503.jpg" alt="" />
-		</div>
-		<div id="js_tab_text4" class="js_tab_con_type">
-			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0504.jpg" alt="" />
-		</div>
-	</div>
-</div>
-<div class="source">
-	<pre class="box2"></pre>
-</div>
-<!--//tab (텍스트 버튼)-->
-
-
-<!-- tab 랜덤노출
-<h2 id="tab_random">tab _랜덤노출 ( ul class="randomview" 추가시 동작)</h2>
-<div class="viewarea">
-	<script>
-		$(document).ready(function () {
-			var random = Math.floor( Math.random()*4 ); //탭갯수 ( *4 = 0~3까지 )
-			var randomTargetID = $('.randomview li').eq(random).find('a').attr('href');
-			$('.randomview li').eq(random).addClass('on').siblings().removeClass('on');
-			$(randomTargetID).addClass('on').siblings().removeClass('on');
-		});
-	</script>
-	<div class="js_tab_wrap">
-		<ul class="js_tab_text randomview">
-			<li class="tab1 on"><a href="#js_tab_test1">tab1</a></li>
-			<li class="tab2"><a href="#js_tab_test2">tab2</a></li>
-			<li class="tab3"><a href="#js_tab_test3">tab3</a></li>
-			<li class="tab4"><a href="#js_tab_test4">tab3</a></li>
-		</ul>
-		<div id="js_tab_test1" class="js_tab_con_type on">
-			랜덤노출 tab1
-		</div>
-		<div id="js_tab_test2" class="js_tab_con_type">
-			랜덤노출 tab2
-		</div>
-		<div id="js_tab_test3" class="js_tab_con_type">
-			랜덤노출 tab3
-		</div>
-		<div id="js_tab_test4" class="js_tab_con_type">
-			랜덤노출 tab4
-		</div>
-	</div>
-</div>
-<div class="source">
-	<pre class="box2"></pre>
-</div>-->
-<!--//tab 랜덤노출-->
 
 
 <!-- tab_세로형 -->
@@ -279,8 +193,100 @@
 <!--//tab_세로형 -->
 
 
-<!-- Tab 겹치는 이미지 버튼  -->
-<h2 id="tab_type2">Tab 겹치는 이미지 버튼</h2>
+
+<!-- tab 랜덤노출-->
+<h2 id="tab_random">tab 랜덤 노출 ( ul class="randomview" 추가시 동작)</h2>
+<div class="viewarea">
+	<script>
+		$(document).ready(function () {
+			var random = Math.floor( Math.random()*4 ); //탭갯수 ( *4 = 0~3 )
+			var randomTargetID = $('.randomview li').eq(random).find('a').attr('href');
+			$('.randomview li').eq(random).addClass('on').siblings().removeClass('on');
+			$(randomTargetID).addClass('on').siblings().removeClass('on');
+		});
+	</script>
+	<div class="js_tab_wrap">
+		<ul class="js_tab_text randomview">
+			<li class="tab1 on"><a href="#js_tab_test1">tab1</a></li>
+			<li class="tab2"><a href="#js_tab_test2">tab2</a></li>
+			<li class="tab3"><a href="#js_tab_test3">tab3</a></li>
+			<li class="tab4"><a href="#js_tab_test4">tab3</a></li>
+		</ul>
+		<div id="js_tab_test1" class="js_tab_con_type on">
+			<br>tab1 내용 영역<br><br>
+		</div>
+		<div id="js_tab_test2" class="js_tab_con_type">
+			<br>tab2 내용 영역<br><br>
+		</div>
+		<div id="js_tab_test3" class="js_tab_con_type">
+			<br>tab3 내용 영역<br><br>
+		</div>
+		<div id="js_tab_test4" class="js_tab_con_type">
+			<br>tab4 내용 영역<br><br>
+		</div>
+	</div>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//tab 랜덤노출-->
+
+
+
+<!-- tab (텍스트 버튼) -->
+<h2 id="tab_txt">Tab 텍스트 버튼</h2>
+<div class="viewarea">
+	<style>
+		.js_tab_wrap{width:1100px;margin:0 auto;}
+		.js_tab_wrap .js_tab_text{width:100%;}
+		.js_tab_wrap .js_tab_text:after{content:'';display:block;clear:both}
+		.js_tab_wrap .js_tab_text li{width:25%;float:left;}
+		.js_tab_wrap .js_tab_text li a{display: block; height: 60px; line-height: 58px; font-size: 20px; text-align: center; background: #ddd;  }
+		.js_tab_wrap .js_tab_text li.on a{background: #000; color:#fff;}
+		.js_tab_wrap .js_tab_con_type{display:none}
+		.js_tab_wrap .js_tab_con_type.on{display:block}
+	</style>
+	<script>
+			$(document).ready(function () {
+					$('.js_tab_text li a').on('click', function (e) {
+							var targetId = $(this).attr("href");
+							e.preventDefault();
+							$(this).parent('li').siblings().removeClass('on');
+							$(this).parent('li').addClass('on');
+							$(targetId).addClass('on').siblings().removeClass('on');
+					});
+			});
+	</script>
+	<div class="js_tab_wrap">
+		<ul class="js_tab_text">
+			<li class="tab1 on"><a href="#js_tab_text1">tab1</a></li>
+			<li class="tab2"><a href="#js_tab_text2">tab2</a></li>
+			<li class="tab3"><a href="#js_tab_text3">tab3</a></li>
+			<li class="tab4"><a href="#js_tab_text4">tab3</a></li>
+		</ul>
+		<div id="js_tab_text1" class="js_tab_con_type on">
+			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0501.jpg" alt="" />
+		</div>
+		<div id="js_tab_text2" class="js_tab_con_type">
+			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0502.jpg" alt="" />
+		</div>
+		<div id="js_tab_text3" class="js_tab_con_type">
+			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0503.jpg" alt="" />
+		</div>
+		<div id="js_tab_text4" class="js_tab_con_type">
+			<img src="http://img.megamd.co.kr/2019/0718_basic/basic_con0504.jpg" alt="" />
+		</div>
+	</div>
+</div>
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//tab (텍스트 버튼)-->
+
+
+
+<!-- 겹치는 버튼탭 -->
+<h2 id="tab_type2">겹치는 버튼 탭</h2>
 <div class="viewarea">
 	<style>
 		.js_tab_type2{width:1020px;height:404px;margin:0 auto;background:url(http://img.megamd.co.kr/2019/0926_step2/step2_con05_tab_off.jpg) no-repeat 0 0;}
@@ -355,11 +361,11 @@
 <div class="source">
 	<pre class="box2"></pre>
 </div>
-<!--//Tab 겹치는 이미지 버튼-->
+<!--//겹치는 버튼탭-->
 
 
 <!-- tab background  -->
-<h2 id="tab_background">Tab Background Type</h2>
+<h2 id="tab_background">BG+IMG 탭</h2>
 <div class="viewarea">
 	<style>
 		.tab_bg_img{cursor:pointer}
