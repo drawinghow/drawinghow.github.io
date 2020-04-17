@@ -1,183 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-	<title>∏ﬁ∞°ø•µ ∆€∫Ì∏ÆΩÃ ∞°¿ÃµÂ</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<link rel="stylesheet" href="./css/default.css" />
-	<!--md--><!--<script type="text/javascript" src="http://img.megamd.co.kr/common/js/jquery.min.js?version=20190805_1"></script>-->
-	<!--land--><script type="text/javascript" src="http://img.megaland.co.kr/common/js/jquery-1.11.1.min.js?ver=20181011"></script>
-	<script type="text/javascript" src="http://img.megaland.co.kr/common/js/jquery.bxslider.min.js?ver=20190329"></script>
-	<script type="text/javascript" src="./plugin/mega_bxslider_ui/mega_bxslider_ui.js"></script>
-	<script src="./plugin/highlight/highlight.pack.js"></script>
-	<script src="./plugin/highlight/highlightjs-line-numbers.min.js"></script>
-	<script src="./js/guide_ui.js"></script>
-	<link rel="stylesheet" href="./plugin/highlight/styles/atom-one-dark.css">
-	<link rel="stylesheet" href="./css/guide.css" />
-	<link rel="stylesheet" href="./plugin/mega_bxslider_ui/mega_bxslider_ui.css" />
-	<style>
-		#full_wrap #container{width:80%;}
-		#full_wrap #container h2{background:#E3E3E3;padding:10px 20px;color:#000000;}
-		.viewarea{margin-bottom:30px;border:1px solid #E3E3E3;padding:30px;font-size:14px;color:#000;line-height:1.5;}
-		.viewarea a{text-decoration:underline;color:#d4505a}
-		.index-inner .box1, .index-inner .box2{max-height:400px;width:100%;}
-	</style>
-	<script>
-		$(document).ready(function () {
-			$(".menu li").click(function(){
-				$(this).siblings("li").removeClass("on");
-				$(this).addClass("on");
-			});
-		});
-	</script>
-	<!--<script>
-		$(document).ready(function () {
-			$('.viewarea').each(function(){
-				var source = $(this).html();
-				source = source.replaceAll("<","&lt;");
-				$(this).next('.source').find('pre').html(source);
-				$('pre.box2').each(function(i, block) {
-					hljs.highlightBlock(block);
-					hljs.lineNumbersBlock(block);
-				});
-			});
-		});
-	</script>-->
+	<!------------------------------------------------------------
+    Copyright (c) JHK / Ïù¥ ÌéòÏù¥ÏßÄÏùò Î™®Îì† Ï†ÄÏûëÍ∂åÏùÄ JHK ÏóêÍ≤å ÏûàÏäµÎãàÎã§.
+  -------------------------------------------------------------->
+	<title>ÏΩîÎî© Í∞ÄÏù¥Îìú</title>
+	<meta charset="utf-8" >
+	<meta name="robots" content="noindex,nofollow" >
+	<meta name="author" content="JHK" >
+	<meta name="copyright" content="http://drawinghow.github.io/" >
+	<meta http-equiv="imagetoolbar" content="no" >
+	<meta http-equiv="cache-control" content="no-chche" >
+	<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
+
+	<link rel="shortcut icon" href="../jhk_ico.ico" >
+	<link rel="stylesheet" href="../css/font.css" >
+	<link rel="stylesheet" href="../css/common.css" >
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+
+	<!--highlight-->
+	<link rel="stylesheet" href="../plugin/highlight/styles/atom-one-dark.css">
+	<script type="text/javascript" src="../plugin/highlight/highlight.pack.js"></script>
+	<script type="text/javascript" src="../plugin/highlight/highlightjs-line-numbers.min.js"></script>
+	<!--//highlight-->
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
 </head>
 <body>
 
-<div id="full_wrap" class="clearfix">
-	<section id="header">
-		<h1>æ÷¥œ∏ﬁ¿Ãº« TWEENMAX</h1>
+<div id="cd_contents">
+
+	<!--contents-navi-->
+	<section id="con_nav">
+		<a href="javascript:;" class="arrow btnToggle_left"><span>ÌÜ†Í∏Ä</span></a>
+		<ul>
+			<li class="on"><a href="#tw_info">ÏÑ§Î™Ö & Ï∞∏Í≥†ÏÇ¨Ïù¥Ìä∏</a></li>
+			<li><a href="#tw_cdn">CDN ÎßÅÌÅ¨</a></li>
+			<li><a href="#tw_use">Í∏∞Î≥∏ Î¨∏Î≤ï</a></li>
+			<li><a href="#tw_attr">ÏÜçÏÑ±</a></li>
+			<li><a href="#tw_ex">ÏÇ¨Ïö© Î¨∏Î≤ï Î™®Ïùå</a></li>
+			<li><a href="#tw_ex1">ÏòàÏãú1)-staggerTo</a></li>
+			<li><a href="#tw_ex2">ÏòàÏãú2)-staggerTo/set</a></li>
+			<li><a href="#tw_ex3">ÏòàÏãú3)-TimelineLite/from</a></li>
+			<li><a href="#tw_ex1">ÏòàÏãú4)-TimelineLite/rotationY</a></li>
+			<li><a href="#ex5">ÏòàÏãú5)</a></li>
+			<li><a href="#ex6">ÏòàÏãú6)</a></li>
+		</ul>
 	</section>
+	<!--//contents-navi-->
 
-	<!-- nav -->
-	<section id="navigation">
-		<div class="navi">
-			<ul class="menu">
-				<li class="on"><a href="#con0">º≥∏Ì</a></li>
-				<li><a href="#con1">¬¸∞ÌªÁ¿Ã∆Æ</a></li>
-				<li><a href="#con2">CDN ∏µ≈©</a></li>
-				<li><a href="#con3">±‚∫ª πÆπ˝</a></li>
-				<li><a href="#con4">Ω««‡ ±‚¥…</a></li>
-				<li><a href="#con5">ªÁøÎ øπΩ√</a></li>
+	<div class="index-inner">
+		<!--ÏÜåÏä§ Start-->
 
-				<li><a href="#ex1">øπΩ√1)-staggerTo</a></li>
-				<li><a href="#ex2">øπΩ√2)-staggerTo/set</a></li>
-				<li><a href="#ex3">øπΩ√3)-TimelineLite/from</a></li>
-				<li><a href="#ex4">øπΩ√4)-TimelineLite/rotationY</a></li>
-				<li><a href="#ex5">øπΩ√5)</a></li>
-				<li><a href="#ex6">øπΩ√6)</a></li>
-			</ul>
-		</div>
-	</section>
-	<!--// nav -->
 
-<section id="container">
-<div class="index-inner">
 
-<h2 id="con0">º≥∏Ì</h2>
-<div class="viewarea">
-	<a href="tweenmax_info.html" target="_blank">º≥∏Ì</a>
+
+<h2 id="tw_info">ÏÑ§Î™Ö & Ï∞∏Í≥†ÏÇ¨Ïù¥Ìä∏</h2>
+<div class="code_info">
+	<ul>
+		<li><a href="ani_tweenmax_info.html" target="_blank">- TweenMax ÏÜåÍ∞ú</a></li>
+		<li><a href="http://302chanwoo.com/lab/tween/" target="_blank">- GSAP(GreenSock Animation Platform) ÎùºÏù¥Î∏åÎü¨Î¶¨ÎûÄ?</a></li>
+		<li><a href="https://greensock.com/docs/Easing" target="_blank">- Easing</a></li>
+	</ul>
 </div>
+<!--//ÏÑ§Î™Ö-->
 
-<h2 id="con1">¬¸∞ÌªÁ¿Ã∆Æ</h2>
-<div class="viewarea">
-	<a href="http://302chanwoo.com/lab/tween/" target="_blank">http://302chanwoo.com/lab/tween/</a>
-	<br>
-	<a href="https://greensock.com/docs/Easing" target="_blank">https://greensock.com/docs/Easing</a>
-</div>
 
-<h2 id="con2">CDN ∏µ≈©</h2>
+
+<h2 id="tw_cdn">CDN ÎßÅÌÅ¨</h2>
+<div class="viewarea pt0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" ></script>
+
+</div><!-- //viewarea -->
 <div class="source">
-	<pre class="box2">
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js">&lt;/script>
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" >&lt;/script>
-	</pre>
+	<pre class="box2"></pre>
 </div>
+<!--//CDN ÎßÅÌÅ¨-->
 
-<h2 id="con3">±‚∫ª πÆπ˝</h2>
+
+
+<h2 id="tw_use">Í∏∞Î≥∏ Î¨∏Î≤ï</h2>
+<div class="viewarea no_act">
+	1. TweenMax.to( $('ÏÑ†ÌÉùÏûê'), Ïã§ÌñâÏÜçÎèÑ, { Ïã§ÌñâÏöîÏÜå });
+	2. TweenMax.set( $('ÏÑ†ÌÉùÏûê'), { Ïã§ÌñâÏöîÏÜå , onComplete:function(){
+	//ÏÑ∏ÌåÖ ÌõÑ Ïã§ÌñâÎê† ÎÇ¥Ïö©
+	}});
+	3. TweenMax.staggerTo( $('ÏÑ†ÌÉùÏûêÎì§'), Ïã§ÌñâÏÜçÎèÑ, { Ïã§ÌñâÏöîÏÜå }, Ïã§ÌñâÍ∞ÑÍ≤© );
+
+</div><!-- //viewarea -->
 <div class="source">
-	<pre class="box2">
-1. TweenMax.to( $('º±≈√¿⁄'), Ω««‡º”µµ, { Ω««‡ø‰º“ });
-2. TweenMax.set( $('º±≈√¿⁄'), { Ω««‡ø‰º“ , onComplete:function(){
-	//ºº∆√ »ƒ Ω««‡µ… ≥ªøÎ
-}});
-3. TweenMax.staggerTo( $('º±≈√¿⁄µÈ'), Ω««‡º”µµ, { Ω««‡ø‰º“ }, Ω««‡∞£∞› );
-	</pre>
+	<pre class="box2"></pre>
 </div>
+<!--//Í∏∞Î≥∏ Î¨∏Î≤ï-->
 
 
-<h2 id="con4">Ω««‡ ±‚¥…</h2>
-<div class="viewarea">
-width, height <br>
-backgroundColor <br>
-left, top <br>
-opacity, <br>
-delay, <br>
-scale, scaleX, scaleY <br>
-rotation, transformOrigin <br>
-repeat (repeat:-1 π´«—π›∫π), repeatDelay, yoyo<br>
-ease: Power3.easeInOut, <br>
-onComplete: endFunction
-</div>
 
-<h2 id="con5">ªÁøÎ øπΩ√)</h2>
-<div class="viewarea">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" ></script>
-<script type="text/javascript">
-	$(document).ready(function () {
-		TweenMax.set($('.bigt'), { scale: 8 , transformOrigin:"center center", onComplete:function(){
-			//≥ªøÎ
-			//TweenMax.to($('.bigt'), .25, {  scale: 1 });
-		}});
-		TweenMax.set($('.min_hand'), { rotation: 80, transformOrigin: "center top", ease:Linear.easeNone });
-		TweenMax.staggerTo($('.texts'), .8, {width : 400, ease: Linear.easeNone }, .3);
+<h2 id="tw_attr">ÏÜçÏÑ± & Ìï®Ïàò</h2>
+<div class="viewarea no_act">
+	width, height
+	backgroundColor
+	left, top
+	opacity,
+	delay,
+	scale, scaleX, scaleY
+	rotation, transformOrigin
+	repeat (repeat:-1 Î¨¥ÌïúÎ∞òÎ≥µ), repeatDelay, yoyo
+	ease: Power3.easeInOut,
+	onComplete: endFunction
 
-		TweenMax.to($('.t1'), .25, { delay: .2, scale: 1, transformOrigin: "center center", ease: Back.easeOut.config(1)  });
-		TweenMax.to($('.t2'), .6, { delay: .9, opacity: 1, ease: Power4.easeOut   });
-		TweenMax.to($('.t3'), .6, { delay: 3.5, opacity: 1, ease: Elastic.easeOut.config(1, 0.3) });
-		TweenMax.to($('.a1_2'), 2, { rotationX: 360, transformOrigin:"center right" });
-		TweenMax.to($('.t4'), .1, { top: 246, ease: Bounce, repeat: 1, yoyo: true })
-		TweenMax.to($('.t5'), .2, { delay: .5, opacity:1, repeat: -1, repeatDelay: 1.5, yoyo: true });
-	});
-</script>
-<!--<style>
-	#event_ex { position: relative; overflow: hidden; }
-	#event_ex > [class^="stn_"] { position: relative; }
-	#event_ex .inner { position: relative; z-index: 1; width: 1400px; margin: 0 auto; text-align: center; }
-	/* ∫Ø∞Êµ… css */
-	#event_ex .stn_top{background: #000;height:500px;}
-	#event_ex .stn_top .ani{position:absolute;}
-	#event_ex .stn_top .ani.bigt{left:590px;top:18px;}
-	#event_ex .stn_top .ani.txt2{left:490px;top:280px;}
-	#event_ex .stn_top .ani.txt3{left:457px;top:400px;}
-</style>
-<div id="event_ex">
-	<div class="stn_top">
-		<div class="inner">
-			<p class="ani bigt">
-				<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_txt1.jpg" alt="">
-			</p>
-		</div>
-	</div>
-</div>-->
-</div>
-
+</div><!-- //viewarea -->
 <div class="source">
-<pre class="box2">
-</pre>
+	<pre class="box2"></pre>
 </div>
+<!--//ÏÜçÏÑ± & Ìï®Ïàò-->
 
-<!--ªÁøÎ øπΩ√1-->
-<h2 id="ex1">ªÁøÎ øπΩ√1) - staggerTo</h2>
+
+
+<h2 id="tw_ex">ÏÇ¨Ïö© ÏòàÏãú Î™®Ïùå</h2>
+<div class="viewarea no_act">
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			TweenMax.set($('.ex_t1'), { rotation: 80, transformOrigin: "center top", ease:Linear.easeNone });
+
+			TweenMax.set($('.ex_txts'), { scale: 8 , transformOrigin:"center center", onComplete:function(){
+							//TweenMax.to($('.bigt'), .25, {  scale: 1 });
+					}});
+
+			TweenMax.staggerTo($('.ex_txts'), .8, {width : 400, ease: Linear.easeNone }, .3);
+
+			TweenMax.to($('.ex_t2'), .25, { delay: .2, scale: 1, transformOrigin: "center center", ease: Back.easeOut.config(1)  });
+
+			TweenMax.to($('.ex_t3'), .6, { delay: .9, opacity: 1, ease: Power4.easeOut   });
+
+			TweenMax.to($('.ex_t4'), .6, { delay: 3.5, opacity: 1, ease: Elastic.easeOut.config(1, 0.3) });
+
+			TweenMax.to($('.ex_t5'), 2, { rotationX: 360, transformOrigin:"center right" });
+
+			TweenMax.to($('.ex_t6'), .1, { top: 246, ease: Bounce, repeat: 1, yoyo: true });
+
+			TweenMax.to($('.ex_t7'), .2, { delay: .5, opacity:1, repeat: -1, repeatDelay: 1.5, yoyo: true });
+
+		});
+	</script>
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//ÏÇ¨Ïö© ÏòàÏãú-->
+
+
+
+<h2 id="tw_ex1">ÏÇ¨Ïö© ÏòàÏãú1) - staggerTo</h2>
 <div class="viewarea">
 	<style>
 		#event1 { position: relative; overflow: hidden; }
 		#event1 > [class^="stn_"] { position: relative; }
 		#event1 .inner { position: relative; z-index: 1; width: 1400px; margin: 0 auto; text-align: center; }
-		/* ∫Ø∞Êµ… css */
+		/* Î≥ÄÍ≤ΩÎê† css */
 		#event1 .stn_top{background: #000;height:500px;}
 		#event1 .stn_top .ani{position:absolute;opacity: 0;}
 		#event1 .stn_top .ani.txt1{left:590px;top:18px;}
@@ -185,9 +172,9 @@ onComplete: endFunction
 		#event1 .stn_top .ani.txt3{left:457px;top:400px;}
 	</style>
 	<script>
-		$(document).ready(function () {
-			TweenMax.staggerTo('#event1 .ani', .6, {opacity: 1}, 0.8);
-		});
+      $(document).ready(function () {
+          TweenMax.staggerTo('#event1 .ani', .6, {opacity: 1}, 0.8);
+      });
 	</script>
 	<div id="event1">
 		<div class="stn_top">
@@ -205,64 +192,64 @@ onComplete: endFunction
 		</div>
 	</div>
 
-</div>
+</div><!-- //viewarea -->
 <div class="source">
-<pre class="box2">
-</pre>
+	<pre class="box2"></pre>
 </div>
-</div>
-<!--//ªÁøÎ øπΩ√1-->
+<!--//ÏòàÏãú1-->
 
-<!--ªÁøÎ øπΩ√2-->
-<h2 id="ex2">ªÁøÎ øπΩ√2) - set / staggerTo</h2>
+
+
+<h2 id="tw_ex2">ÏÇ¨Ïö© ÏòàÏãú2) - set / staggerTo</h2>
 <div class="viewarea">
-<style>
-	#event { position: relative; overflow: hidden; }
-	#event > [class^="stn_"] { position: relative; }
-	#event .inner { position: relative; z-index: 1; width: 1400px; margin: 0 auto; text-align: center; }
-	/* ∫Ø∞Êµ… css */
-	#event .stn_top{background: #000;height:500px;}
-	#event .stn_top .ani{position:absolute;opacity: 0;}
-	#event .stn_top .ani.txt1{left:590px;top:18px;}
-	#event .stn_top .ani.txt2{left:490px;top:280px;}
-	#event .stn_top .ani.txt3{left:457px;top:400px;}
-</style>
-<script>
-	$(document).ready(function () {
-		TweenMax.set('#event .ani', {y: -120});
-		TweenMax.staggerTo('#event .ani', .6, {y: 0, opacity: 1}, 0.8);
-	});
-</script>
-<div id="event">
-	<div class="stn_top">
-		<div class="inner">
-			<p class="ani txt1">
-				<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_txt1.jpg" alt="text1">
-			</p>
-			<p class="ani txt2">
-				<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_txt2.png" alt="text2">
-			</p>
-			<p class="ani txt3">
-				<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_txt3.png" alt="text3">
-			</p>
+	<style>
+		#event { position: relative; overflow: hidden; }
+		#event > [class^="stn_"] { position: relative; }
+		#event .inner { position: relative; z-index: 1; width: 1400px; margin: 0 auto; text-align: center; }
+		/* Î≥ÄÍ≤ΩÎê† css */
+		#event .stn_top{background: #000;height:500px;}
+		#event .stn_top .ani{position:absolute;opacity: 0;}
+		#event .stn_top .ani.txt1{left:590px;top:18px;}
+		#event .stn_top .ani.txt2{left:490px;top:280px;}
+		#event .stn_top .ani.txt3{left:457px;top:400px;}
+	</style>
+	<script>
+      $(document).ready(function () {
+          TweenMax.set('#event .ani', {y: -120});
+          TweenMax.staggerTo('#event .ani', .6, {y: 0, opacity: 1}, 0.8);
+      });
+	</script>
+	<div id="event">
+		<div class="stn_top">
+			<div class="inner">
+				<p class="ani txt1">
+					<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_txt1.jpg" alt="text1">
+				</p>
+				<p class="ani txt2">
+					<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_txt2.png" alt="text2">
+				</p>
+				<p class="ani txt3">
+					<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_txt3.png" alt="text3">
+				</p>
+			</div>
 		</div>
 	</div>
-</div>
-</div>
-<div class="source">
-<pre class="box2">
-</pre>
-</div>
-<!--//ªÁøÎ øπΩ√2-->
 
-<!--ªÁøÎ øπΩ√3-->
-<h2 id="ex3">ªÁøÎ øπΩ√3) - from / TimelineLite</h2>
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//ÏòàÏãú2-->
+
+
+
+<h2 id="tw_ex3">ÏÇ¨Ïö© ÏòàÏãú3) - from / TimelineLite</h2>
 <div class="viewarea">
 	<style>
 		#event2 { position: relative; overflow: hidden; }
 		#event2 > [class^="stn_"] { position: relative; }
 		#event2 .inner { position: relative; z-index: 1; width: 1400px; margin: 0 auto; text-align: center; }
-		/* ∫Ø∞Êµ… css */
+		/* Î≥ÄÍ≤ΩÎê† css */
 		#event2 .stn_top { height:400px;background: url(http://img.megamd.co.kr/2019/0813_ygs/bg_stn_top.jpg) center 0 repeat; }
 		#event2 .stn_top .ani{position:absolute;z-index:2;opacity: 0}
 		#event2 .stn_top .txt1{width:0;height:55px;left:140px;top:70px;overflow:hidden;}
@@ -271,15 +258,15 @@ onComplete: endFunction
 		#event2 .stn_top .txt4{left:190px;top:266px;}
 	</style>
 	<script>
-		$(document).ready(function () {
-			var tl = new TimelineLite();
-			tl.to('#event2 .txt1', .5, { width:932,opacity:1}, 1)
-				.to('#event2 .txt2', .5, { opacity:1}, 1.1)
-				.from('#event2 .txt3', .3, { x:1000}, 1.7)
-				.to('#event2 .txt3', .3, { x:0,opacity:1}, 1.7)
-				.from('#event2 .txt4', .3, { x:-1000}, 1.7)
-				.to('#event2 .txt4', .3, { x:0,opacity:1}, 1.7)
-		});
+      $(document).ready(function () {
+          var tl = new TimelineLite();
+          tl.to('#event2 .txt1', .5, { width:932,opacity:1}, 1)
+              .to('#event2 .txt2', .5, { opacity:1}, 1.1)
+              .from('#event2 .txt3', .3, { x:1000}, 1.7)
+              .to('#event2 .txt3', .3, { x:0,opacity:1}, 1.7)
+              .from('#event2 .txt4', .3, { x:-1000}, 1.7)
+              .to('#event2 .txt4', .3, { x:0,opacity:1}, 1.7)
+      });
 	</script>
 	<div id="event2">
 		<div class="stn_top">
@@ -298,24 +285,25 @@ onComplete: endFunction
 				</p>
 			</div>
 		</div>
-
 	</div>
-</div>
-<div class="source">
-<pre class="box2">
-</pre>
-</div>
-<!--//ªÁøÎ øπΩ√3-->
 
-<!--ªÁøÎ øπΩ√4-->
-<h2 id="ex4">ªÁøÎ øπΩ√4) - TimelineLite / rotationY</h2>
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//ÏòàÏãú3-->
+
+
+
+
+<h2 id="tw_ex4">ÏÇ¨Ïö© ÏòàÏãú4) - TimelineLite / rotationY</h2>
 <div class="viewarea">
 	<style>
 		#basicpack { position: relative; overflow: hidden; background: url(http://img.megals.co.kr/2019/0923_basicpack/basicpack_bg.jpg) repeat; }
 		#basicpack > [class^="stn_"] { position: relative; max-width: 2000px;margin: 0 auto;}
 		#basicpack .inner { position: relative; width: 1200px; margin: 0 auto; text-align: center; }
 
-		/* ∫Ø∞Êµ… css */
+		/* Î≥ÄÍ≤ΩÎê† css */
 		#basicpack .stn_top { background: url(http://img.megals.co.kr/2019/0923_basicpack/basicpack_top_bg.jpg) center 0 no-repeat; }
 		#basicpack .stn_top .inner {height: 810px;}
 		#basicpack .stn_top .gift {position: absolute;left: 0;bottom: 0;}
@@ -331,51 +319,54 @@ onComplete: endFunction
 		#basicpack .ani.bling2 {left: 886px;top: 339px;}
 	</style>
 	<script>
-		$(document).ready(function () {
-			var t2 = new TimelineLite();
-			t2.to('#basicpack .t1', .3, { opacity: 1})
-				.to('#basicpack .t2', .5, { width: 385, ease: Power4.easeOut  }, .6)
-				.to('#basicpack .t3_1', .5, { opacity:1, rotationY: 360, transformOrigin: "center center", ease: Power4.easeOut   }, 1)
-				.to('#basicpack .t3_2', .5, { opacity:1, rotationY: 360, transformOrigin: "center center", ease: Power4.easeOut  }, 1.4)
-				.to('#basicpack .t3_3', .5, { opacity:1, rotationY: 360, transformOrigin: "center center", ease: Power4.easeOut  }, 1.8)
-				.to('#basicpack .t4', .5, { opacity:1}, 2.2)
-				.to('#basicpack .bling1', .9, { opacity: 1, repeat: -1}, 2.6)
-				.to('#basicpack .bling2', .9, { opacity: 1, repeat: -1}, 2.6)
-		});
+      $(document).ready(function () {
+          var t2 = new TimelineLite();
+          t2.to('#basicpack .t1', .3, { opacity: 1})
+              .to('#basicpack .t2', .5, { width: 385, ease: Power4.easeOut  }, .6)
+              .to('#basicpack .t3_1', .5, { opacity:1, rotationY: 360, transformOrigin: "center center", ease: Power4.easeOut   }, 1)
+              .to('#basicpack .t3_2', .5, { opacity:1, rotationY: 360, transformOrigin: "center center", ease: Power4.easeOut  }, 1.4)
+              .to('#basicpack .t3_3', .5, { opacity:1, rotationY: 360, transformOrigin: "center center", ease: Power4.easeOut  }, 1.8)
+              .to('#basicpack .t4', .5, { opacity:1}, 2.2)
+              .to('#basicpack .bling1', .9, { opacity: 1, repeat: -1}, 2.6)
+              .to('#basicpack .bling2', .9, { opacity: 1, repeat: -1}, 2.6)
+      });
 	</script>
 	<div id="basicpack">
 		<div class="stn_top">
 			<div class="inner">
-				<p class="gift"><img src="http://img.megals.co.kr/2019/0923_basicpack/basicpack_top_gift.jpg" alt="«˝≈√" ></p>
+				<p class="gift"><img src="http://img.megals.co.kr/2019/0923_basicpack/basicpack_top_gift.jpg" alt="ÌòúÌÉù" ></p>
 				<!--animation-->
-				<span class="ani t1"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t1.png" alt="¡ˆ±› LEET∏¶ Ω√¿€«œ¥¬ °Æ±‚∆Ø«—°Ø ºˆ«Ëª˝¿ª ¿ß«— ±‚√ /±‚∫ª ≥ª ∏æ¥Î∑Œ PICK"></span>
-				<span class="ani t2"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t2.png" alt="±‚√ ∫Œ≈Õ ∆Ø∫∞«—"></span>
-				<span class="ani t3 t3_1"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t3_1.png" alt="±‚ "></span>
-				<span class="ani t3 t3_2"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t3_2.png" alt="∆Ø"></span>
-				<span class="ani t3 t3_3"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t3_3.png" alt="«—"></span>
-				<span class="ani t4"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t4.png" alt="∆–≈∞¡ˆ"></span>
+				<span class="ani t1"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t1.png" alt="ÏßÄÍ∏à LEETÎ•º ÏãúÏûëÌïòÎäî ‚ÄòÍ∏∞ÌäπÌïú‚Äô ÏàòÌóòÏÉùÏùÑ ÏúÑÌïú Í∏∞Ï¥à/Í∏∞Î≥∏ ÎÇ¥ ÎßòÎåÄÎ°ú PICK"></span>
+				<span class="ani t2"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t2.png" alt="Í∏∞Ï¥àÎ∂ÄÌÑ∞ ÌäπÎ≥ÑÌïú"></span>
+				<span class="ani t3 t3_1"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t3_1.png" alt="Í∏∞ "></span>
+				<span class="ani t3 t3_2"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t3_2.png" alt="Ìäπ"></span>
+				<span class="ani t3 t3_3"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t3_3.png" alt="Ìïú"></span>
+				<span class="ani t4"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_t4.png" alt="Ìå®ÌÇ§ÏßÄ"></span>
 				<span class="ani bling1"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_bling1.png" alt="."></span>
 				<span class="ani bling2"><img src="http://img.megals.co.kr/2019/0923_basicpack/ani_bling2.png" alt="."></span>
 				<!--//animation-->
 			</div>
 		</div>
 	</div>
-</div>
-<div class="source">
-<pre class="box2">
-</pre>
-</div>
-<!--//ªÁøÎ øπΩ√4-->
 
-<!--ªÁøÎ øπΩ√5-->
-<h2 id="ex5">ªÁøÎ øπΩ√5)</h2>
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//ÏòàÏãú4-->
+
+
+
+
+
+<h2 id="tw_ex5">ÏÇ¨Ïö© ÏòàÏãú5)</h2>
 <div class="viewarea">
 	<style>
 		#mock { position: relative; overflow: hidden; background: url(http://img.megals.co.kr/2019/0923_basicpack/basicpack_bg.jpg) repeat; }
 		#mock > [class^="stn_"] { position: relative; max-width: 2000px;margin: 0 auto;}
 		#mock .inner { position: relative; width: 1200px; margin: 0 auto; text-align: center; }
 
-		/* ∫Ø∞Êµ… css */
+		/* Î≥ÄÍ≤ΩÎê† css */
 		#mock .stn_top { height:813px;background: url(http://img.megamd.co.kr/2019/1105_mock/bg_stn_top.jpg) center 0 repeat; }
 		#mock .stn_top .inner{height:813px;}
 		#mock .stn_top .ani{position:absolute;opacity: 0;}
@@ -390,17 +381,17 @@ onComplete: endFunction
 		#mock .stn_top .ani.bg{width:2000px;height:813px;left:-110px;top:240px;background:url(http://img.megamd.co.kr/2019/1105_mock/bg_stn_bubble.png) no-repeat 0 0}
 	</style>
 	<script>
-		$(document).ready(function () {
-			var tl = new TimelineLite();
-			tl.to('#mock .txt1', .5, { opacity:1})
-				.to('#mock .txt2', .5, { opacity:1})
-				.to('#mock .txt3', .6, { opacity:1,rotationX: 360, transformOrigin: "center center", ease: Power4.easeOut})
-				.to('#mock .txt4', .5, { width:449,opacity:1})
-				.to('#mock .txt5', .8, {opacity:1,ease:  Bounce.easeOut,y:240})
-				.to('#mock .txt6 , #mock .txt6_1', .1, {opacity:1})
-				.to('#mock .txt7', .9, {opacity:1,height:434})
-				.to('#mock .bg', 3, { opacity:1,ease:  Power4.easeOut,y:-240})
-		});
+      $(document).ready(function () {
+          var tl = new TimelineLite();
+          tl.to('#mock .txt1', .5, { opacity:1})
+              .to('#mock .txt2', .5, { opacity:1})
+              .to('#mock .txt3', .6, { opacity:1,rotationX: 360, transformOrigin: "center center", ease: Power4.easeOut})
+              .to('#mock .txt4', .5, { width:449,opacity:1})
+              .to('#mock .txt5', .8, {opacity:1,ease:  Bounce.easeOut,y:240})
+              .to('#mock .txt6 , #mock .txt6_1', .1, {opacity:1})
+              .to('#mock .txt7', .9, {opacity:1,height:434})
+              .to('#mock .bg', 3, { opacity:1,ease:  Power4.easeOut,y:-240})
+      });
 	</script>
 	<div id="mock">
 		<div class="stn_top">
@@ -431,22 +422,24 @@ onComplete: endFunction
 			</div>
 		</div>
 	</div>
-</div>
-<div class="source">
-<pre class="box2">
-</pre>
-</div>
-<!--//ªÁøÎ øπΩ√5-->
 
-	<!--ªÁøÎ øπΩ√6-->
-<h2 id="ex6">ªÁøÎ øπΩ√6)</h2>
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//ÏòàÏãú5-->
+
+
+
+
+<h2 id="tw_ex6">ÏÇ¨Ïö© ÏòàÏãú6)</h2>
 <div class="viewarea">
 	<style>
 		#nyg { position: relative; overflow: hidden; background: url(http://img.megals.co.kr/2019/0923_basicpack/basicpack_bg.jpg) repeat; }
 		#nyg > [class^="stn_"] { position: relative; max-width: 2000px;margin: 0 auto;}
 		#nyg .inner { position: relative; width: 1200px; margin: 0 auto; text-align: center; }
 
-		/* ∫Ø∞Êµ… css */
+		/* Î≥ÄÍ≤ΩÎê† css */
 		#nyg .stn_top { background: url(http://img.megamd.co.kr/2020/0109_nyg/bg_stn_top.jpg) 0 0 repeat; }
 		#nyg .stn_top .inner{height:862px}
 		#nyg .stn_top .ani{z-index:0;position:absolute;opacity: 0;}
@@ -463,19 +456,19 @@ onComplete: endFunction
 		#nyg .stn_top .ani.txt8{z-index:2;left:992px;top:649px;}
 	</style>
 	<script>
-		$(document).ready(function () {
-			var tl = new TimelineLite();
-			tl.to('#nyg .txt1', .5, { opacity:1})
-				.to('#nyg .txt2', .5, { opacity:1,rotationX: 360, transformOrigin: "center center", ease: Power4.easeOut})
-				.to('#nyg .txt4', .5, { opacity:1,width:304})
-				.to('#nyg .txt4_1', .5, { opacity:1,width:344,delay:-.5})
-				.to('#nyg .txt5', .5, { opacity:1,width:420})
-				.to('#nyg .txt5_1', .5, { opacity:1,width:449,delay:-.5})
-				.to('#nyg .txt3', .5, { opacity:1,width:292,delay:-1})
-				.fromTo('#nyg .txt6', .8, { opacity:0,x:300,delay:.3},{ opacity:1,x:0, transformOrigin: "center center", ease: Power4.easeOut,delay:.3})
-				.fromTo('#nyg .txt7', .8, { opacity:0,x:-300,delay:-.8},{ opacity:1,x:0, transformOrigin: "center center", ease: Power4.easeOut,delay:-.8})
-				.to('#nyg .txt8', .5, { opacity:1,delay:-.8})
-		});
+      $(document).ready(function () {
+          var tl = new TimelineLite();
+          tl.to('#nyg .txt1', .5, { opacity:1})
+              .to('#nyg .txt2', .5, { opacity:1,rotationX: 360, transformOrigin: "center center", ease: Power4.easeOut})
+              .to('#nyg .txt4', .5, { opacity:1,width:304})
+              .to('#nyg .txt4_1', .5, { opacity:1,width:344,delay:-.5})
+              .to('#nyg .txt5', .5, { opacity:1,width:420})
+              .to('#nyg .txt5_1', .5, { opacity:1,width:449,delay:-.5})
+              .to('#nyg .txt3', .5, { opacity:1,width:292,delay:-1})
+              .fromTo('#nyg .txt6', .8, { opacity:0,x:300,delay:.3},{ opacity:1,x:0, transformOrigin: "center center", ease: Power4.easeOut,delay:.3})
+              .fromTo('#nyg .txt7', .8, { opacity:0,x:-300,delay:-.8},{ opacity:1,x:0, transformOrigin: "center center", ease: Power4.easeOut,delay:-.8})
+              .to('#nyg .txt8', .5, { opacity:1,delay:-.8})
+      });
 	</script>
 	<div id="nyg">
 		<div class="stn_top">
@@ -515,15 +508,22 @@ onComplete: endFunction
 			</div>
 		</div>
 	</div>
-</div>
+
+</div><!-- //viewarea -->
 <div class="source">
-<pre class="box2">
-</pre>
+	<pre class="box2"></pre>
 </div>
-<!--//ªÁøÎ øπΩ√6-->
+<!--//ÏòàÏãú6-->
 
 
-</section>
+
+
+
+
+
+		<!--//ÏÜåÏä§ End-->
+	</div>
 </div>
+
 </body>
 </html>

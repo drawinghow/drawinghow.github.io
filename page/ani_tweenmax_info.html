@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<!--[if IE 7]> <html class="ie7" lang="ko"> <![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="google-site-verification" content="SRXcZ0POsYwswzvw5MSdrvNIQmpufo1clOF7amAWuhk" />
+
+	<link rel="shortcut icon" href="http://www.hackers.ac/favicon.ico" />
+
+	<title>[트윈맥스(TweenMax)] 소개</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="http://kingkdh.cafe24.com/kdh/css/reset.css">
+	<!-- //css -->
+
+
+	<style type="text/css">
+		body{background:#000;line-height:28px;font-size:14px;}
+		h1{margin-bottom:100px;font-size:50px;text-align:center;margin-bottom:50px;}
+		h2{margin:100px 0 20px 0;font-size:30px;text-align:center;}
+		h3{margin:200px 0 20px 0;font-size:25px;text-align:left;}
+
+		.wrap{margin:0 auto;width:800px;padding:100px;background:#fff;color:#555;}
+		hr{margin:50px 0;border:none;border-top:1px solid red;}
+		.zone{padding:20px;border:3px dotted #6d6969;}
+
+		strong{font-weight:bold;color:#000;}
+		div.box{margin:50px 0;padding:20px;border:2px dashed yellow;background:#1d1a1a;color:#fff;}
+		div.box li{margin-left:13px;text-indent:-13px;}
+	</style>
+
+	<script>
+		$(document).ready(function(){
+
+		});
+	</script>
+
+
+</head>
+<body>
+
+<div class="wrap">
+	<h1>트윈맥스(TweenMax)</h1>
+	<hr>
+
+
+	<h2>TweenMax 소개</h2>
+	<div class="zone">
+		트윈맥스는 <strong>그랜트 스키너가 만든 애니메이션 라이브러리</strong>입니다.<br>GreenSock이라는 그룹을 통해서 오픈소스로 공개되고 있습니다. (상용 사용에 대해 일부 제한이 있을 수 있으니 라이센스를 확인하십시오.)<br>
+		트윈맥스는 처음 플래시 플랫폼의 액션 스크립트를 대상으로 만들어졌습니다.<br>액션 스크립트 개발자에게는 가장 많이 알려진 애니메이션 라이브러리 중 하나이기도 합니다.<br>지금은 JS용으로도 공개가 되었고, 지속적으로 업데이트가 되고 있습니다.<br>
+		저는 애니메이션이 사용되는 대부분의 프로젝트에 트윈맥스를 사용하고 있습니다.<br>제가 가장 능숙하게 다루는 라이브러리이기도 하면서 장점도 굉장히 많기 때문입니다.<br>제가 가끔 트윈맥스에 대해서 이야기를 하면 대부분의 개발자들은 들어본 적이 없거나, 들어본 적은 있지만 사용하지 않은 경우가 많습니다.<br>
+		<br>
+		<p style="text-align:center;font-size:30px;color:#000;line-height:40px;">
+			들어본 적은 있지만 왜 사용하지 않는가?<br>
+			대략적으로 의견을 들어보면 다음과 같습니다.
+		</p>
+		<div class="box">
+			<ul>
+				<li>1. jQuery.animate()로 작업이 충분히 가능하다.<br>
+				<li>2. 플래시 플랫폼 출신의 라이브러리라 신뢰가 가지 않는다.<br>
+				<li>3. CSS3 애니메이팅을 지원하는 라이브러리로 알고 있다. (IE 대응이 불완전 할 것으로 예상된다.)
+			</ul>
+		</div>
+		<div class="box">
+			<ul>
+				<li>1. jQuery는 훌륭한 DOM 제어도구이자 JS 유틸리티이지만 애니메이션에 관해서는 지원 수준이지 뛰어나다고 할 순 없습니다. 수준 높은 UI를 구현하고 거기에 애니메이션이 필요하다면 애니메이션 전문 라이브러리를 사용해 보는 것은 강력히 추천할만합니다.<br>
+				<li>2. 플래시 플랫폼은 웹 UI에 있어서 사양 기술이 맞습니다. 하지만 UI/UX에 있어서 플래시가 그 동안 공헌을 했던 것 또한 사실입니다. 플래시 개발자들의 UI/UX 경험은 JS 개발자에게 많은 도움이 될 것이고, 서로 도움을 주고 협력해 시너지를 만들어낼 수 있을 것입니다. (플래시 까지마! ㅜㅜ)<br>
+				<li>3. 트윈맥스는 CSS3 애니메이션을 지원하면서 크로스 브라우징과 하위 브라우저 대응을 모두 커버하는 라이브러리입니다.
+			</ul>
+		</div>
+
+		<div class="box">
+			[기본 문법]<br>
+			(트윈맥스)<br>TweenLite.to( '#box', 1.5, { left:100, width:200 } );<br>
+			<br>
+			(제이쿼리)<br>jQuery = $("#box").animate( { left:100, width:200 }, 1500 );
+		</div>
+
+
+	</div>
+
+	<hr>
+
+	<h2>트윈맥스의 철학</h2>
+	<div class="zone">
+		트윈맥스는 쓰기 편한 라이브러리를 지향하고 있습니다. 편리하고 유연하게 코드를 짤 수 있도록 도와줍니다. 자체적으로 메모리 관리를 하고 있어 개발자가 크게 신경쓰지 않을 수 있도록 해줍니다. 원한다면 애니메이션 객체를 직접 제어할 수도 있습니다. 물론 찾아보면 트윈맥스보다 더 빠르고 가벼운 라이브러리도 있습니다. 하지만 성능과 편리성을 모두 고려한다면 저는 트윈맥스가 아주 우수하다고 생각합니다.
+	</div>
+
+	<hr>
+
+	<h2>트윈맥스의 장점</h2>
+	<div class="zone">
+		<ul>
+			<li>1. 퍼포먼스가 뛰어납니다. 참고 : HTML5 Animation Speed Test</li>
+			<li>2. 애니메이션 효과에 관련한 브라우저 호환성을 쉽게 해결해줍니다.<br>벤더 프리픽스를 신경쓰지 않고 코드를 작성할 수 있고, IE 구버전에서 지원하지 않는 효과들도 최대한 구현해줍니다.</li>
+			<li>3. matrix를 이용해 복잡하게 구현해야 하는 scale, rotate, skew 등을 쉽게 구현할 수 있습니다.</li>
+			<li>4. 단순히 일회성으로 애니메이션 효과만 주는 것이 아니라, 생성된 애니메이션을 제어하기 수월합니다.</li>
+			<li>5. jQuery등의 자주 사용되는 라이브러리와 쉽게 호환됩니다. jQuery는 플러그인 방식으로도 제공되고 있습니다.</li>
+			<li>6. 다양한 easing을 제공합니다.
+		</ul>
+	</div>
+
+	<hr>
+
+	<h2>준비물</h2>
+	<div class="zone">
+		TweenMax의 최신 버전은 http://www.greensock.com/에서 받을 수 있습니다.
+		여느 라이브러리와 같이 head 태그 안에 script 태그를 넣어줍니다.
+		CDN으로 제공되는 js를 사용하셔도 됩니다.<br>
+		<div class="box">
+			&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"&gt;&lt;/script&gt;
+		</div>
+	</div>
+
+	<hr>
+
+	<h2>트윈맥스와 애니메이트 비교</h2>
+	<div class="zone area02">
+		<style>
+			.area02 .animate .ani_box{padding:15px 0;border:1px solid red;}
+			.area02 .animate .ani_box img{position:relative;left:0;width:70px;}
+		</style>
+		<div class="animate">
+			<div class="ani_box">
+				<img src="img/ball.png" alt="">
+			</div>
+			<div class="ani_box">
+				<img src="img/ball.png" alt="">
+			</div>
+		</div>
+		<div class="box">
+			TweenMax.to(".area02 .ani_box:eq(0) img", 1, { left:682, ease:Linear.easeNone } );<br>
+			$(".area02 .ani_box:eq(1) img").animate( { left:0 }, 1000, "linear");
+		</div>
+		<script>
+			$('.area02 .animate').click(function(){
+				TweenMax.to(".area02 .ani_box:eq(0) img", 1, { left:682, ease:Linear.easeNone,repeat:-1,yoyo:true } );
+				function banban(){
+					$(".area02 .ani_box:eq(1) img").animate( { left:682 }, 1000, "linear",function(){
+						$(".area02 .ani_box:eq(1) img").animate( { left:0 }, 1000, "linear",function(){ banban() });
+					});
+				};
+				banban();
+			});
+		</script>
+	</div>
+
+	<hr>
+
+	<h2>TweenMax 사용방법</h2>
+	<div class="zone area03">
+		아직까지 ie 사용자가 많음에 따라 html5 와 css3를 활용한 애니메이션 효과에는 제한이 많으므로 트윈맥스를 써봅시다~<br>
+		우선 트윈맥스에는 TweenLite/TweenMax 두가지 함수를 활용하게 되는데~<br>
+		<br>
+		우선, TweenLite는 TweenMax에 비해 더 많은 기능이 추가된 부분이고, 그에 비해 TweenLite는 훨씬 가볍다는 차이가 있습니다.<br>
+		또한 .to방식과 .form방식 이있는데 이두가지방식은 크게 어려운 차이는 없고<br>
+		<br>
+		- TweenMax.to : 현재 해당 요소가 내가 준 효과 로 가는거<br>
+		- TweenMax.from : .to와 반대로 효과 준거부터 원래 기본 css로 작성 해둔 지점으로 돌아가는거
+		<br>
+		.to() 는 제이쿼리의 .animate() 라고 생각하시면 조금은 접근하기 쉬울꺼 같아요.<br>
+		.to 는 총 3개가지의 파라미터를 가지고 있습니다.<br>
+		TweenLite.to([Selector], [Duration], {Properties:end values})<br>
+		<br>
+		처음 Selector 은 대상을 뜻합니다. 어떤걸?,
+		<br>
+		두번째 Duration 는 지속시간 입니다. 몇초동안?
+		<br>
+		세번째 {Properties:end values} 는 객체의 키와 값입니다. 뭘? 어떻게?
+		<br>
+		<br>
+
+		<h3>.to</h3>
+		<style>
+			.area03 .animate .ani_box{padding:15px 0;border:1px solid red;background:#000;}
+			.area03 .animate .ani_box span{display:block;width:50px;height:50px;}
+		</style>
+		<div class="animate">
+			<div class="ani_box">
+				<span></span>
+			</div>
+		</div>
+		<div class="box">
+			TweenLite.to($('.area03 .animate .ani_box span'), 3, {backgroundColor:"#00ff00"});
+		</div>
+		<script>
+			$('.area03 .ani_box').click(function(){
+				TweenLite.to('.area03 .ani_box', 3, {backgroundColor:"#00ff00"});
+			});
+		</script>
+		이와같이 트윈맥스는 [어떤걸?] [몇초동안?] [뭘?어떻게?] 만 잘활용하면 사용하는데 어려움이 적어요~<br>
+		이 세개만 기억하고 있다면 간단하게 활용할 수 있습니다.<br>
+		또, [뭘?어떻게?] 부분은 제이쿼리 animate 쓸때 처럼 옵션을 여러가지 붙힐 수 있습니다.<br>
+		아래 예제는 width, height, backgroundColor 값 3가지를 3초동안 변환시켜 줍니다.<br>
+		<style>
+			.area03 .animate .ani_box2{padding:15px 0;border:1px solid red;}
+			.area03 .animate .ani_box2 span{display:block;width:50px;height:50px;background:#000;}
+		</style>
+		<div class="animate">
+			<div class="ani_box2">
+				<span></span>
+			</div>
+		</div>
+		<script>
+			$('.area03 .ani_box2').click(function(){
+				TweenLite.to('.area03 .ani_box2 span', 3, {width:100, height:100, backgroundColor:"#00ff00"});
+			});
+		</script>
+		<br>
+		<br>
+		<br>
+		또 선택자의 종류는 제이쿼리를 사용해도 되고 제이쿼리를 사용 안해도 됩니다.<br>
+		트윈맥스가 jQuery의 엔진을 의존하지 않기 때문에 유연하게 선택자를 써도 됩니다.
+		<div class="box">
+			TweenLite.to( '.box' , 3, {width:100});<br>
+			TweenLite.to($(".box"), 3, {width:100});
+		</div>
+
+		<h3>.from()</h3>
+		.form() 은 .to와 반대개념인데 예제를 통해 확인 하도록 합시다.
+		<style>
+			.area03 .animate .ani_box3{padding:15px 0;border:1px solid red;}
+			.area03 .animate .ani_box3 span{display:block;width:100px;height:100px;background:#000;}
+		</style>
+		<div class="animate">
+			<div class="ani_box3">
+				<span></span>
+			</div>
+		</div>
+		<script>
+			$('.area03 .ani_box3').click(function(){
+				TweenLite.from('.area03 .ani_box3 span', 1.5, {width:0, height:0});
+			});
+		</script>
+		<div class="box">
+			TweenLite.from('.area03 .ani_box3 span', 1.5, {width:0, height:0});
+		</div>
+
+		<h3>.fromTo()</h3>
+		.fromTo는 애니메이션의 시작지점과 종료지점을 지정할 수 있습니다.<br>
+		<style>
+			.area03 .animate .ani_box4{padding:15px 0;border:1px solid red;}
+			.area03 .animate .ani_box4 span{display:block;width:100px;height:100px;background:#000;}
+		</style>
+		<div class="animate">
+			<div class="ani_box4">
+				<span></span>
+			</div>
+		</div>
+		<script>
+			$('.area03 .ani_box4').click(function(){
+				TweenLite.fromTo('.area03 .ani_box4 span', 1.5, {width:0, height:0}, {width:100, height:100});
+			});
+		</script>
+		<div class="box">
+			TweenLite.fromTo('.area03 .ani_box4 span', 1.5, {width:0, height:0}, {width:100, height:100});
+		</div>
+
+
+		<h3>Tween을 변수화</h3>
+		Tween을 변수로 만들어 사용할 수 있습니다.<br>
+		객체 지향 접근 방식을 선호하는분들은 이런식으로 작성한다고 하네요
+		<style>
+			.area03 .animate .ani_box5{padding:15px 0;border:1px solid red;}
+			.area03 .animate .ani_box5 span{display:block;width:50px;height:50px;background-color:#000;}
+		</style>
+		<div class="animate">
+			<div class="ani_box5">
+				<span></span>
+			</div>
+		</div>
+		<script>
+			$('.area03 .ani_box5').click(function(){
+				var myTween = new TweenLite.to('.area03 .ani_box5 span', 1.5, {width:200, height:200});
+			});
+		</script>
+		<div class="box">
+			var myTween = new TweenLite.to('.area03 .ani_box5 span', 1.5, {width:200, height:200});
+		</div>
+
+		<h3>옵션주기</h3>
+		애니메이션을 제어하려면 옵션을 작성해줘야 합니다.<br>예를 들면, 멈춤, 재생, 반전, 재시작 등을 하려면요.<br>
+		한가지 옵션을 더 넣어주면 됩니다.<br>
+		변수명.resume(); 시작<br>
+		변수명.pause(); 멈춤<br>
+		변수명.reverse(); 반전<br>
+		변수명.restart(); 재시작
+		<style>
+			.area03 .animate .ani_box6{padding:15px 0;border:1px solid red;}
+			.area03 .animate .ani_box6 span{position:relative;display:block;width:50px;height:50px;background-color:#000;}
+		</style>
+		<div class="animate">
+			<div class="ani_box6">
+				<span></span>
+			</div>
+		</div>
+		<button class="bt_star">시작</button>
+		<button class="bt_stop">멈춤</button>
+		<button class="bt_reverse">반전</button>
+		<button class="bt_restar">재시작</button>
+		<br>
+		<button class="bt_speed_up">속도 업</button>
+		<button class="bt_speed_down">속도 감소</button>
+		<script>
+			var myTween_ani = new TweenLite.to('.area03 .ani_box6 span', 3, {left:702,paused:true});
+			$('.bt_star').on('click',function(){
+				myTween_ani.resume();
+				//시작
+			});
+			$('.bt_stop').on('click',function(){
+				myTween_ani.pause();
+				//멈춤
+			});
+			$('.bt_reverse').on('click',function(){
+				myTween_ani.reverse();
+				//반전.
+			});
+			$('.bt_restar').on('click',function(){
+				myTween_ani.restart();
+				//재시작
+			});
+			$('.bt_speed_up').on('click',function(){
+				myTween_ani.timeScale(3);
+				//증가
+			});
+			$('.bt_speed_down').on('click',function(){
+				myTween_ani.timeScale(0.5);
+				//감소
+			});
+		</script>
+		<div class="box">
+			var myTween_ani = new TweenLite.to('.area03 .ani_box6 span', 3, {left:702,paused:true});<br>
+			$('.bt_star').on('click',function(){<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;myTween_ani<span style="color:red;">.resume();</span><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;//시작<br>
+			});<br>
+			$('.bt_stop').on('click',function(){<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;myTween_ani<span style="color:red;">.pause();</span><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;//멈춤<br>
+			});<br>
+			$('.bt_reverse').on('click',function(){<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;myTween_ani<span style="color:red;">.reverse();</span><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;//반전<br>
+			});<br>
+			$('.bt_restar').on('click',function(){<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;myTween_ani<span style="color:red;">.restart();</span><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;//재시작<br>
+			});<br>
+			$('.bt_speed_up').on('click',function(){<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;myTween_ani.<span style="color:red;">timeScale(3);</span><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;//증가<br>
+			});
+			$('.bt_speed_down').on('click',function(){<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;myTween_ani.<span style="color:red;">timeScale(0.5);</span><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;//감소<br>
+			});
+		</div>
+
+		<h3>Special properties (delay)</h3>
+		트윈맥스는 특별한 속성을 지원합니다. 그중 하나는 "delay(지연)" 입니다.<br>
+		jQuery 에서도 이런 메소드가 있습니다. 트윈맥스에서 사용하는 방법하고는 조금 차이가 있으나 개념은 똑같은거 같습니다.<br>
+		이 애니메이션은 버튼을 누르면 <strong style="font-size:16px;">3초 후에 애니메이션이 시작</strong>됩니다.<br>
+		<style>
+			.area03 .animate .ani_box7{padding:15px 0;border:1px solid red;}
+			.area03 .animate .ani_box7 span{position:relative;display:block;left:0;width:50px;height:50px;line-height:50px;background:#000;color:#fff;font-size:30px;text-align:center;}
+		</style>
+		<div class="animate">
+			<div class="ani_box7">
+				<span>3</span>
+			</div>
+		</div>
+		<script>
+			var num=2;
+			$('.area03 .ani_box7').click(function(){
+				if(num != 2){ return }
+				setTimeout(function(){
+					$('.ani_box7 span').html(num);
+					num=1;
+					setTimeout(function(){
+						$('.ani_box7 span').html(num);
+						num=0;
+						setTimeout(function(){
+							$('.ani_box7 span').html(num);
+						},1000);
+					},1000);
+				},1000);
+				TweenLite.to('.area03 .ani_box7 span', 2, {left:702, delay:3});
+			});
+		</script>
+		<br>
+		<div class="box">
+			TweenLite.to('.area03 .ani_box7 span', 2, {left:702, <span style="color:red;">delay:3</span>});
+		</div>
+
+
+
+		<h3>Special properties (onComplete)</h3>
+		두번째 특별한 속성은 onComplete 입니다.<br>
+		onComplete 는 애니메이션이 완료 될 때 함수를 호출 합니다. (통칭 "콜백")
+		<div class="box">
+			jQuery 를 예로 들어서 아래 코드를 보시면<br>
+			$("Selector").animate({<br>
+			&nbsp;&nbsp;&nbsp;left: 100<br>
+			}, <span style="color:red;">function(){<br>
+			&nbsp;&nbsp;&nbsp;$(this).css("color", "#00ff00");<br>
+		});<span>
+		</div>
+
+		트윈맥스에도 Jquery처럼 콜백기능이 존재합니다.
+		<style>
+			.area03 .animate .ani_box8{padding:15px 0;border:1px solid red;}
+			.area03 .animate .ani_box8 span{position:relative;display:block;left:0;width:50px;height:50px;line-height:50px;background:#000;}
+		</style>
+		<div class="animate">
+			<div class="ani_box8">
+				<span></span>
+			</div>
+		</div>
+		<script>
+			$('.area03 .animate .ani_box8').on('click',function(){
+				TweenLite.to('.area03 .ani_box8 span', 3, {left:702, onComplete:myFunction});
+				function myFunction() {
+					alert("동작성공 콜백 알럿 발동!!!!!!");
+				};
+			});
+		</script>
+		<br>
+		<div class="box">
+			TweenLite.to('.area03 .ani_box8 span', 3, {left:702, <span style="color:red;">onComplete :&nbsp;&nbsp;myFunction</span>});<br>
+			function myFunction() {<br>
+			alert("동작성공 콜백 알럿 발동!!!!!!");<br>
+			};
+		</div>
+
+		<h3>Easing</h3>
+		또 Easing 기능을 사용할 수 있습니다.<br>
+		Easing 는 애니메이션에 변화율을 줘서 좀더 유동적인 동작들을 수행하는데요.<br>
+		jQuery 에서는 jQuery UI 인가.. 뭔가... 하는 플러그인 하나를 더 추가시켜 줘서 사용해야 하는거로 기억하고 있습니다.<br>
+		하지만 트윈맥스는 이 Easing 기능을 이미 가지고 있어서 따로 해당 스크립트를 가져올 필요는 없습니다.<br>
+		<br>
+		참고 URL: <a href="https://greensock.com/ease-visualizer" target="_blank">https://greensock.com/ease-visualizer</a>
+		<br>
+		<style>
+			.area03 .animate .ani_box9{height:600px;border:1px solid red;text-align:center;}
+			.area03 .animate .ani_box9 img{position:relative;top:10px;}
+		</style>
+		<div class="animate">
+			<div class="ani_box9">
+				<img src="img/ball.png" alt="">
+			</div>
+		</div>
+		<script>
+			$('.area03 .animate .ani_box9').on('click',function(){
+				TweenLite.to('.area03 .ani_box9 img', 2, { rotation:100,ease: Bounce.easeOut, y: 402 });
+			});
+		</script>
+		<br>
+		<div class="box">
+			TweenLite.to('.area03 .ani_box9 img', 2, { ease: Bounce.easeOut, y: 402 });
+		</div>
+
+		<h3>repeat(반복)/repeat(무한반복)</h3>
+		트윈맥스는 반복 옵션을 설정할 수 있습니다. repeat 이 바로 그 속성 입니다.<br>
+		이 반복 속성은 원래 하려고 했던 애니메이션에 몇번 더 반복할 껀지 넣어주면 됩니다.<br>
+		자바스크립트 코드를 보면 이렇습니다.<br>
+		<style>
+			.area03 .animate .ani_box10{padding:50px 0;border:1px solid red;}
+			.area03 .animate .ani_box10 img{position:relative;left:0;width:100px;}
+			.area03 .animate .ani_box11{padding:50px 0;border:1px solid red;}
+			.area03 .animate .ani_box11 img{position:relative;left:0;width:100px;}
+		</style>
+		<div class="animate">
+			<div class="ani_box10">
+				<p>repeat:1(숫자만큼 반복)</p>
+				<img src="img/ball.png" alt="">
+			</div>
+			<div class="ani_box11">
+				<p>repeat:-1(무한반복)</p>
+				<img src="img/ball.png" alt="">
+			</div>
+		</div>
+		<script>
+			$('.area03 .animate .ani_box10,.area03 .animate .ani_box11').on('click',function(){
+				TweenMax.to('.area03 .ani_box10 img', 2, {left:652,repeat:1});
+				TweenMax.to('.area03 .ani_box11 img', 2, {left:652,repeat:-1});
+			});
+		</script>
+		<br>
+		<div class="box">
+			TweenMax.to('.area03 .ani_box10 img', 2, {left:700,<span style="color:red;">repeat:1</span>});
+			<br>
+			TweenMax.to('.area03 .ani_box11 img', 2, {left:700,<span style="color:red;">repeat:-1</span>});
+		</div>
+
+		<h3>repeatDelay(반복 지연)</h3>
+		repeat 동작이 있을 경우 반복이 실행될 시간을 지연시켜 줍니다.
+		당연한 이야기지만 이 속성을 쓰기위해 repeat 속성이 반드시 들어가야 합니다.
+		이 예제는 2초가 지난 후 다시 반복을 수행시킵니다.
+		<style>
+			.area03 .animate .ani_box12{padding:50px 0;border:1px solid red;}
+			.area03 .animate .ani_box12 img{position:relative;left:0;width:100px;}
+		</style>
+		<div class="animate">
+			<div class="ani_box12">
+				<img src="img/ball.png" alt="">
+			</div>
+		</div>
+		<script>
+			$('.area03 .animate .ani_box12').on('click',function(){
+				TweenMax.to('.area03 .ani_box12 img', 2, {left:652,repeat:-1,repeatDelay:2});
+			});
+		</script>
+		<div class="box">
+			TweenMax.to('.area03 .ani_box12 img', 2, {left:652,repeat:-1,<span style="color:red;">repeatDelay:2</span>});
+		</div>
+
+
+		<h3>yoyo</h3>
+		장난감 요요를 떠올리시면 될꺼 같습니다.<br>
+		장난감 요요는 내려갔다가 다시 올라오는데요. 중요한건 내려간 경로와 똑같이 위로 올라온다는 것입니다.<br>
+		요요는 repeat 속성이 반드시 필요한거 같습니다.<br>
+		<style>
+			.area03 .animate .ani_box13{padding:50px 0;border:1px solid red;}
+			.area03 .animate .ani_box13 img{position:relative;left:0;width:100px;}
+		</style>
+		<div class="animate">
+			<div class="ani_box13">
+				<img src="img/ball.png" alt="">
+			</div>
+		</div>
+		<script>
+			$('.area03 .animate .ani_box13').on('click',function(){
+				TweenMax.to('.area03 .ani_box13 img', 2, {left:652,repeat:-1,yoyo:true});
+			});
+		</script>
+		<div class="box">
+			TweenMax.to('.area03 .ani_box13 img', 2, {left:652,repeat:-1,<span style="color:red;">yoyo:true</span>});
+		</div>
+
+
+
+		<h3>이미지 회전</h3>
+		<style>
+			.area03 .animate .ani_box14{padding:50px 0;border:1px solid red;}
+			.area03 .animate .ani_box14 img{position:relative;left:20px;width:100px;}
+		</style>
+		<div class="animate">
+			<div class="ani_box14">
+				<img src="img/ball.png" alt="">
+			</div>
+		</div>
+		<script>
+			$('.area03 .animate .ani_box14').on('click',function(){
+				TweenMax.to( '.animate .ani_box14 img', 3, {left:400,width:200,rotation:360})
+			});
+		</script>
+		<div class="box">
+			TweenMax.to( '.animate .ani_box14 img', 3, {left:400,width:200,<span style="color:red;">rotation:360</span>})
+		</div>
+
+
+
+		<h3>배열에 넣어 순차적 애니메이션 재생</h3>
+		<style>
+			.area03 .animate .ani_box15{padding:50px 0;border:1px solid red;}
+			.area03 .animate .ani_box15 img{position:relative;left:0;width:100px;}
+		</style>
+		<div class="animate">
+			<div class="ani_box15">
+				<img src="img/ball.png" id="e0" alt="">
+				<img src="img/ball.png" id="e1" alt="">
+				<img src="img/ball.png" id="e2" alt="">
+				<img src="img/ball.png" id="e3" alt="">
+				<img src="img/ball.png" id="e4" alt="">
+			</div>
+		</div>
+		<script>
+			$('.area03 .animate .ani_box15').on('click',function(){
+				var t2 = new TimelineLite()
+				t2.staggerTo( ['#e0', '#e1', '#e2','#e3','#e4'], 1, {rotation:180}, 0.5 );
+			});
+		</script>
+		<div class="box">
+			var t2 = new TimelineLite();<br>
+			t2.staggerTo( ['#e0', '#e1', '#e2','#e3','#e4'], 1, {rotation:180}, 0.5 );
+		</div>
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- //wrap -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<style>
+.intro_wrap{position:absolute;top:0;left:0;width:100%;height:100%;}
+.intro_wrap .bg_black{width:100%;height:100%;background:#333;opacity:0.5;filter:alpha(opacity=0);}
+.intro_wrap .start_zone{position:fixed;left:50%;top:50%;margin-left:-254px;margin-top:-113px;width:508px;height:226px;z-index:9999;}
+.intro_wrap .start_box{position:relative;width:508px;height:226px;}
+.intro_wrap .line_zone div{position:absolute;width:7px;height:7px;background:#fff;}
+.intro_wrap .line_zone div.line01{top:0;left:0;}
+.intro_wrap .line_zone div.line02{top:0;right:0;}
+.intro_wrap .line_zone div.line03{bottom:0;right:0;}
+.intro_wrap .line_zone div.line04{bottom:0;left:0;}
+</style>
+<div class="intro_wrap">
+	<div class="bg_black"></div>
+	<div class="start_zone">
+		<div class="start_box">
+			<div class="line_zone">
+				<div class="line01"></div>
+				<div class="line02"></div>
+				<div class="line03"></div>
+				<div class="line04"></div>
+			</div>
+		</div>
+	</div>
+</div>
+-->
+
+</body>
+</html>

@@ -34,6 +34,10 @@
 </head>
 <body>
 
+	<style>
+		html,body {overflow-y: hidden;/*index만 적용*/}
+	</style>
+
 	<div id="cd_guide_wrap" class="clearfix">
 		<!-- LNB -->
 		<section id="cd_guide_nav">
@@ -46,28 +50,29 @@
 				<li>
 					<a href="javascript:;">Script</a>
 					<ul>
-						<li><a href="./page/popup.html" data-nm="popup">Popup</a></li>
-						<li><a href="./page/player.html" data-nm="player">Video</a></li>
-						<li><a href="./page/script_tab.html" data-nm="script_tab">Tab</a></li>
-						<li><a href="./page/script_etc.html" data-nm="script_etc">toggle input roll</a></li>
-						<li><a href="" name="floBnr">플로팅배너</a></li>
-						<li><a href="" name="offset">좌표구하기</a></li>
+						<li><a href="page/popup.html" data-nm="popup">Popup</a></li>
+						<li><a href="page/player.html" data-nm="player">Video</a></li>
+						<li><a href="page/script_tab.html" data-nm="script_tab">Tab</a></li>
+						<li><a href="page/script_form.html" data-nm="script_form">Form</a></li>
+						<li><a href="page/script_etc.html" data-nm="script_etc">anchor · on-off</a></li>
+						<li><a href="page/script_offset.html" data-nm="script_offset">Offset 좌표</a></li>
+						<li><a href="page/script_floBnr.html" data-nm="script_floBnr">플로팅배너</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">Bxslider</a>
 					<ul>
-						<li><a href="./page/bxslider.html" data-nm="bxslider">bx-slider</a></li>
-						<li><a href="./page/bxslider_ui.html" data-nm="bxslider_ui">bx-slider_ui</a></li>
-						<li><a href="./page/bxslider_ui_ex.html" data-nm="slider_ui_ex">bx-slider_ui_ex</a></li>
+						<li><a href="page/bxslider.html" data-nm="bxslider">bx-slider</a></li>
+						<li><a href="page/bxslider_ui.html" data-nm="bxslider_ui">bx-slider_ui</a></li>
+						<li><a href="page/bxslider_ui_ex.html" data-nm="slider_ui_ex">bx-slider_ui_ex</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">Animate</a>
 					<ul>
-						<li><a href="./page/ani_tweenmax.html" data-nm="ani_tweenmax">TWEENMAX</a></li>
-						<li><a href="./page/ani_css.html" data-nm="ani_css">CSS Ani</a></li>
-						<li><a href="./page/ani_css_info.html" data-nm="ani_css_info">CSS Ani 활용</a></li>
+						<li><a href="page/ani_css.html" data-nm="ani_css">CSS Ani</a></li>
+						<li><a href="page/ani_css_info.html" data-nm="ani_css_info">CSS Ani 활용</a></li>
+						<li><a href="page/ani_tweenmax.html" data-nm="ani_tweenmax">TWEENMAX</a></li>
 						<li><a href=""  name="delay">시간차 Ani</a></li>
 						<li><a href=""  name="scroll_ani">스크롤 Ani</a></li>
 					</ul>
@@ -75,17 +80,17 @@
 				<li>
 					<a href="javascript:;">JSON</a>
 					<ul>
-						<li><a href="./page/json_test/" data-nm="json_test">json_test</a></li>
+						<li><a href="page/json_test/" data-nm="json_test">json_test</a></li>
 						<li><a href=""></a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">ETC</a>
 					<ul>
-						<li><a href="./page/presentation/" data-nm="presentation">디자인팀 PT</a></li>
-						<li><a href="./page/_gallery(slide+layerpop).html" data-nm="_gallery(slide+layerpop)">슬라이드 사진 갤러리</a></li>
-						<li><a href="./page/turnjs/" data-nm="turnjs">책넘김 효과</a></li>
-						<li><a href="./page/_bg_effect.html" data-nm="_bg_effect">특이한 배경효과</a></li>
+						<li><a href="page/presentation/" data-nm="presentation">디자인팀 PT</a></li>
+						<li><a href="page/_gallery(slide+layerpop).html" data-nm="_gallery(slide+layerpop)">슬라이드 사진 갤러리</a></li>
+						<li><a href="page/turnjs/" data-nm="turnjs">책넘김 효과</a></li>
+						<li><a href="page/_bg_effect.html" data-nm="_bg_effect">특이한 배경효과</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -111,14 +116,13 @@
 		</section>
 		<!--// LNB -->
 		<section id="cd_guide_container">
-			<iframe id="cd_container" src="./page/__list.html" frameborder="0"></iframe> <!-- ./page/_list.html -->
+			<iframe id="cd_container" src="page/script_floBnr.html" frameborder="0"></iframe> <!-- ./page/_list.html -->
 			<script>
 				$(document).ready(function () {
 			    //Nav - li 활성화
 				  var pageHtml = $('#cd_container').attr('src').split('/');
 				  var pageOn = pageHtml[1].split('.');
-          $('.cd_nav li a[data-nm="'+pageOn[0]+'"]').parent().addClass('on');
-
+          $('.cd_nav a[data-nm="'+pageOn[0]+'"]').parent().addClass('on');
 				}); //$(document).ready
 			</script>
 		</section>

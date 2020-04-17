@@ -1,121 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-	<title>¸Ş°¡¿¥µğ ÆÛºí¸®½Ì °¡ÀÌµå</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<link rel="stylesheet" href="./css/default.css" />
-	<!--md--><!--<script type="text/javascript" src="http://img.megamd.co.kr/common/js/jquery.min.js?version=20190805_1"></script>-->
-	<!--land--><script type="text/javascript" src="http://img.megaland.co.kr/common/js/jquery-1.11.1.min.js?ver=20181011"></script>
-	<script type="text/javascript" src="http://img.megaland.co.kr/common/js/jquery.bxslider.min.js?ver=20190329"></script>
-	<script type="text/javascript" src="./plugin/mega_bxslider_ui/mega_bxslider_ui.js"></script>
-	<script src="./plugin/highlight/highlight.pack.js"></script>
-	<script src="./plugin/highlight/highlightjs-line-numbers.min.js"></script>
-	<script src="./js/guide_ui.js"></script>
-	<link rel="stylesheet" href="./plugin/highlight/styles/atom-one-dark.css">
-	<link rel="stylesheet" href="./css/guide.css" />
-	<link rel="stylesheet" href="./plugin/mega_bxslider_ui/mega_bxslider_ui.css" />
-	<style>
-		#full_wrap #container{width:80%;}
-		#full_wrap #container h2{background:#E3E3E3;padding:10px 20px;color:#000000;}
-		.viewarea{margin-bottom:30px;border:1px solid #E3E3E3;padding:30px;font-size:14px;color:#000;line-height:1.5;}
-		.viewarea a{text-decoration:underline;color:#d4505a}
-		.index-inner .box1, .index-inner .box2{max-height:400px;width:100%;}
-	</style>
-	<script>
-		$(document).ready(function () {
-			$(".menu li").click(function(){
-				$(this).siblings("li").removeClass("on");
-				$(this).addClass("on");
-			});
-		});
-	</script>
+	<!------------------------------------------------------------
+    Copyright (c) JHK / ì´ í˜ì´ì§€ì˜ ëª¨ë“  ì €ì‘ê¶Œì€ JHK ì—ê²Œ ìˆìŠµë‹ˆë‹¤.
+  -------------------------------------------------------------->
+	<title>ì½”ë”© ê°€ì´ë“œ</title>
+	<meta charset="utf-8" >
+	<meta name="robots" content="noindex,nofollow" >
+	<meta name="author" content="JHK" >
+	<meta name="copyright" content="http://drawinghow.github.io/" >
+	<meta http-equiv="imagetoolbar" content="no" >
+	<meta http-equiv="cache-control" content="no-chche" >
+	<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
+
+	<link rel="shortcut icon" href="../jhk_ico.ico" >
+	<link rel="stylesheet" href="../css/font.css" >
+	<link rel="stylesheet" href="../css/common.css" >
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+
+	<!--highlight-->
+	<link rel="stylesheet" href="../plugin/highlight/styles/atom-one-dark.css">
+	<script type="text/javascript" src="../plugin/highlight/highlight.pack.js"></script>
+	<script type="text/javascript" src="../plugin/highlight/highlightjs-line-numbers.min.js"></script>
+	<!--//highlight-->
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
 </head>
 <body>
 
-<div id="full_wrap" class="clearfix">
-	<section id="header">
-		<h1>¾Ö´Ï¸ŞÀÌ¼Ç css</h1>
+<div id="cd_contents">
+
+	<!--contents-navi-->
+	<section id="con_nav">
+		<a href="javascript:;" class="arrow btnToggle_left"><span>í† ê¸€</span></a>
+		<ul>
+			<li class="on"><a href="#reference_link">ì°¸ê³  ì‚¬ì´íŠ¸</a></li>
+			<li><a href="#light">Light íš¨ê³¼</a></li>
+			<li><a href="#dung">ë‘¥ë‘¥ íš¨ê³¼</a></li>
+		</ul>
 	</section>
+	<!--//contents-navi-->
 
-	<!-- nav -->
-	<section id="navigation">
-		<div class="navi">
-			<ul class="menu">
-				<li class="on"><a href="#con0">¼³¸í</a></li>
-				<li><a href="#con1">Âü°í»çÀÌÆ®</a></li>
-				<!--<li><a href="#con2">CDN ¸µÅ©</a></li>
-				<li><a href="#con3">±âº» ¹®¹ı</a></li>
-				<li><a href="#con4">½ÇÇà ±â´É</a></li>
-				<li><a href="#con5">»ç¿ë ¿¹½Ã</a></li>-->
+	<div class="index-inner">
+		<!--ì†ŒìŠ¤ Start-->
 
-				<li><a href="#ex1">¹İÂ¦ÀÌ´Â È¿°ú</a></li>
-				<li><a href="#ex2">µÕµÕ È¿°ú</a></li>
-			</ul>
-		</div>
-	</section>
-	<!--// nav -->
 
-<section id="container">
-<div class="index-inner">
 
-<h2 id="con0">¼³¸í</h2>
-<div class="viewarea">
-	<a href="animation_info.html" target="_blank">¼³¸í</a> <br>
-	<a href="https://leehyemimi.github.io/study/etc/kjy_work/animation.html" target="_blank">animation »ç¿ë ½Ã ºê¶ó¿ìÀú ÃÖÀûÈ­</a>
+<h2 id="reference_link">ì°¸ê³  ì‚¬ì´íŠ¸</h2>
+<div class="code_info">
+	<a href="https://leehyemimi.github.io/study/etc/kjy_work/animation.html" target="_blank">1. animation ì‚¬ìš© ì‹œ ë¸Œë¼ìš°ì € ìµœì í™”</a>
+	<br>
+	<a href="http://animista.net/play/basic" target="_blank">2. animista</a>
+	<br>
+	<a href="https://daneden.github.io/animate.css" target="_blank">3. animate.css</a>
 </div>
-
-<h2 id="con1">Âü°í»çÀÌÆ®</h2>
-<div class="viewarea">
-	<a href="http://animista.net/play/basic" target="_blank">http://animista.net/play/basic</a><br>
-	<a href="https://daneden.github.io/animate.css/?source=post_page---------------------------" target="_blank">https://daneden.github.io/animate.css/?source=post_page</a>
-</div>
-
-<!--<h2 id="con2">CDN ¸µÅ©</h2>
-<div class="source">
-	<pre class="box2">
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js">&lt;/script>
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" >&lt;/script>
-	</pre>
-</div>
-
-<h2 id="con3">±âº» ¹®¹ı</h2>
-<div class="source">
-	<pre class="box2">
-1. TweenMax.to( $('¼±ÅÃÀÚ'), ½ÇÇà¼Óµµ, { ½ÇÇà¿ä¼Ò });
-2. TweenMax.set( $('¼±ÅÃÀÚ'), { ½ÇÇà¿ä¼Ò , onComplete:function(){
-	//¼¼ÆÃ ÈÄ ½ÇÇàµÉ ³»¿ë
-}});
-3. TweenMax.staggerTo( $('¼±ÅÃÀÚµé'), ½ÇÇà¼Óµµ, { ½ÇÇà¿ä¼Ò }, ½ÇÇà°£°İ );
-	</pre>
-</div>
-
-
-<h2 id="con4">½ÇÇà ±â´É</h2>
-<div class="viewarea">
-width, height <br>
-backgroundColor <br>
-left, top <br>
-opacity, <br>
-delay, <br>
-scale, scaleX, scaleY <br>
-rotation, transformOrigin <br>
-repeat (repeat:-1 ¹«ÇÑ¹İº¹), yoyo, <br>
-ease: Power3.easeInOut, <br>
-onComplete: endFunction
-</div>-->
+<!--//name1-->
 
 
 
-<!--¹İÂ¦ÀÌ´Â È¿°ú-->
-<h2 id="ex1">¹İÂ¦ÀÌ´Â È¿°ú</h2>
+<h2 id="light">Light íš¨ê³¼</h2>
 <div class="viewarea">
 	<style>
-		#event1 { position: relative; overflow: hidden; }
-		#event1 > [class^="stn_"] { position: relative; }
-		#event1 .inner { position: relative; z-index: 1; width: 1400px; margin: 0 auto; text-align: center; }
+		#event1 .inner { position: relative; z-index: 1; /*width: 1400px; */margin: 0 auto; text-align: center; }
 
-		/* º¯°æµÉ css */
+		/* ë³€ê²½ë  css */
 		.stn_01_tit{overflow:hidden}
 		@keyframes light{
 			from{
@@ -127,44 +81,31 @@ onComplete: endFunction
 		}
 		.light{position:absolute;animation:light 5s linear .5s infinite;}
 	</style>
+
 	<div id="event1">
-		<div class="stn_top">
-			<div class="inner">
-				<p class="stn_01_tit">
-					<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_light.png" alt="" class="light">
-					<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_con01_tit.jpg" alt="¼¼»ó¿¡ ¾ø´ø,»õ·Î¿î °ü¸®Çü °øÀÎÁß°³»ç ÇĞ¿øÀÌ ¿É´Ï´Ù!">
-				</p>
-			</div>
+		<div class="inner">
+			<p class="stn_01_tit">
+				<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_light.png" alt="" class="light">
+				<img src="http://img.megaland.co.kr/2019/0812_jongcam/jongcam_con01_tit.jpg" alt="ì„¸ìƒì— ì—†ë˜,ìƒˆë¡œìš´ ê´€ë¦¬í˜• ê³µì¸ì¤‘ê°œì‚¬ í•™ì›ì´ ì˜µë‹ˆë‹¤!">
+			</p>
 		</div>
 	</div>
 
-</div>
+</div><!-- //viewarea -->
 <div class="source">
-<pre class="box2">
-</pre>
+	<pre class="box2"></pre>
 </div>
-</div>
-<!--//¹İÂ¦ÀÌ´Â È¿°ú-->
+<!--//Light íš¨ê³¼-->
 
-<!--µÕµÕ È¿°ú-->
-<h2 id="ex2">µÕµÕ È¿°ú</h2>
-<div class="viewarea">
-	¿¹Á¦ <br>
-	<a href="http://design.megamd.co.kr/design/2019/0821_transfer/page.html" target="_blank">
-		http://design.megamd.co.kr/design/2019/0821_transfer/page.html
-	</a> <br>
 
-	<a href="http://design.megamd.co.kr/design/2019/0801_khy/page.html" target="_blank">
-		http://design.megamd.co.kr/design/2019/0801_khy/page.html
-	</a>
-</div>
+
+
+<h2 id="dung">ë‘¥ë‘¥ íš¨ê³¼</h2>
 <div class="viewarea">
 	<style>
-		#event2 { position: relative; overflow: hidden; }
-		#event2 > [class^="stn_"] { position: relative; }
-		#event2 .inner { position: relative; z-index: 1; width: 1400px; margin: 0 auto; text-align: center; }
+		#event2 .inner { position: relative; height: 600px;text-align: center; }
 		#event2 .stn_top { height:700px;background: url(http://img.megamd.co.kr/2019/0801_khy/bg_stn_top.jpg) center 0 repeat-x; }
-		/* º¯°æµÉ css */
+		/* ë³€ê²½ë  css */
 		@keyframes timg {
 			from{
 				transform: translateY(0);
@@ -175,23 +116,28 @@ onComplete: endFunction
 		}
 		#event2 .khy_man{position:absolute;left:0;top:100px;animation: timg 1.5s alternate infinite 0s ;}
 	</style>
+
 	<div id="event2">
-		<div class="stn_top">
-			<div class="inner">
-				<p class="khy_man"><img src="http://img.megamd.co.kr/2019/0801_khy/khy_man.png" alt=""></p>
-			</div>
+		<div class="inner">
+			<p class="khy_man"><img src="http://img.megamd.co.kr/2019/0801_khy/khy_man.png" alt=""></p>
 		</div>
 	</div>
-</div>
+
+</div><!-- //viewarea -->
 <div class="source">
-<pre class="box2">
-</pre>
+	<pre class="box2"></pre>
+</div>
+<!--//ë‘¥ë‘¥ íš¨ê³¼-->
+
+
+
+
+
+
+
+		<!--//ì†ŒìŠ¤ End-->
+	</div>
 </div>
 
-<!--//µÕµÕ È¿°ú-->
-
-
-</section>
-</div>
 </body>
 </html>

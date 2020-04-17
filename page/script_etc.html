@@ -40,19 +40,50 @@
 		<section id="con_nav">
 			<a href="javascript:;" class="arrow btnToggle_left"><span>토글</span></a>
 			<ul>
+        <li><a href="#setFocus">Set Focus (앵커이동)</a></li>
 				<li class="on"><a href="#toggle">toggle_btn</a></li>
-				<li><a href="#input_check">input Check</a></li>
-				<li><a href="#input_check2">input Check2</a></li>
-				<li><a href="#input_radio">input Radio</a></li>
 				<li><a href="#onOff_roll_1">onOff 롤링 1개</a></li>
 				<li><a href="#onOff_roll_n">onOff 롤링 imgs</a></li>
-        <li><a href="#setFocus">Set Focus (앵커이동)</a></li>
 			</ul>
 		</section>
 		<!--//contents-navi-->
 
 		<div class="index-inner">
 		<!--소스 Start-->
+
+
+
+
+<h2 id="setFocus">Set Focus (페이지 내 앵커이동)</h2>
+<div class="viewarea">
+  <a href="javascript:;" onclick="fnSetFocus('id', 'setFocusTest', 0)" style="display: inline-block;padding: 10px 20px;background: #0fb8ad;color: #fff;">버튼</a>
+
+  <script>
+      //Focus 함수
+      function fnSetFocus(type, type_nm, add_top) {
+          if (type.toUpperCase() != 'ID') {
+              var focus_id = '.'+ type_nm;
+          } else {
+              var focus_id = '#'+ type_nm;
+          }
+
+          //Target 고정 처리 S
+          var intOffset = $(focus_id).offset();
+          var intOffsetTop = intOffset.top - add_top;
+          var intOffsetLeft = intOffset.left;
+
+          $('body, html').stop();
+          $('body, html').animate({ scrollTop: intOffsetTop }, "fast");
+          //Target 고정 처리 E
+      }
+  </script>
+
+</div><!-- //viewarea -->
+<div class="source">
+  <pre class="box2"></pre>
+</div>
+<div id="setFocusTest"></div>
+<!--//Set Focus-->
 
 
 
@@ -100,110 +131,7 @@
 
 
 
-<h2 id="input_check">input-check (기본)</h2>
-<div class="viewarea">
-  <style>
-    label.checkbox input{width:0;height:0;-moz-appearance: none;-webkit-appearance: none;}
-    label.checkbox{ width:20px;height:20px;background: url(http://img.megamd.co.kr/common/btn_input_check.png) 0 0 no-repeat; display:inline-block; cursor: pointer; font-size:0; text-align: left; text-indent: -9999px;}
-    label.checkbox.on{background-image:url(http://img.megamd.co.kr/common/btn_input_check_on.png);}
-  </style>
-  <script>
-      $(document).ready(function () {
-          //체크박스-다중선택시
-          $('label.checkbox input').click(function(){
-              if( $(this).prop('checked') ){ //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
-                  $(this).parent().addClass('on');
-              }else{
-                  $(this).prop('checked',false).parent().removeClass('on'); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
-              }
-          });
-      });
-  </script>
-  <label class="checkbox"><input type="checkbox">값1</label>
-  <label class="checkbox"><input type="checkbox">값2</label>
-  <label class="checkbox"><input type="checkbox">값3</label>
-</div>
-<div class="source">
-  <pre class="box2"></pre>
-</div>
-<!--//input_check (기본)-->
-
-
-
-
-<h2 id="input_check2">input-check (한개만 선택)</h2>
-<div class="viewarea">
-  <style>
-    label.checkbox2 input{width:0;height:0;-moz-appearance: none;-webkit-appearance: none;}
-    label.checkbox2{ width:20px;height:20px;background: url(http://img.megamd.co.kr/common/btn_input_check.png) 0 0 no-repeat; display:inline-block; cursor: pointer; font-size:0; text-align: left; text-indent: -9999px;}
-    label.checkbox2.on{background-image:url(http://img.megamd.co.kr/common/btn_input_check_on.png);}
-  </style>
-  <script>
-      $(document).ready(function () {
-          //체크박스-한개만 선택시
-          $('label.checkbox2 input').click(function(){
-              if( $(this).prop('checked') ){ //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
-                  $(this).parent().addClass('on').siblings().removeClass('on').find('input').prop('checked',false); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
-              }else{
-                  $(this).prop('checked',false).parent().removeClass('on'); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
-              }
-          });
-
-      });
-  </script>
-  <label class="checkbox2"><input type="checkbox">값1</label>
-  <label class="checkbox2"><input type="checkbox">값2</label>
-  <label class="checkbox2"><input type="checkbox">값3</label>
-</div>
-<div class="source">
-  <pre class="box2"></pre>
-</div>
-<!--//input_check (한개만 선택)-->
-
-
-
-
-<h2 id="input_radio">input-radio</h2>
-<div class="viewarea">
-  <style>
-    label.radio input{width:0;height:0;-moz-appearance: none;-webkit-appearance: none;}
-    label.radio{ width:18px;height:18px;background: url(http://img.megamd.co.kr/common/btn_input_radio.png) 0 0 no-repeat; display:inline-block; cursor: pointer; font-size:0; text-align: left; text-indent: -9999px;}
-    label.radio.on{background-image:url(http://img.megamd.co.kr/common/btn_input_radio_on.png);}
-  </style>
-  <script>
-      $(document).ready(function () {
-          //라디오 버튼
-          $('label.radio input').click(function(){
-              var name = $(this).attr("name");
-              var radio_input = $('label.radio input[name='+ name +']');
-              radio_input.parent().removeClass('on');
-              radio_input.prop('checked',false); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr]로 변경하여 작업해주세요.
-              $(this).parent().addClass('on');
-              $(this).prop('checked',true); //개발중 [input:checked]값이 제대로 넘어 오지 않을경우 [prop->attr] 로 변경하여 작업해주세요.
-          });
-      });
-  </script>
-  <!-- name="radio_name"으로 라디오버튼 묶어주기 -->
-  <label class="radio on"><input type="radio" name="radio_name" checked>값1</label>
-  <label class="radio"><input type="radio" name="radio_name">값2</label>
-  <label class="radio"><input type="radio" name="radio_name">값3</label>
-
-  <br><br>
-
-  <!-- name="radio_name1"으로 라디오버튼 묶어주기 -->
-  <label class="radio on"><input type="radio" name="radio_name1" checked>값1</label>
-  <label class="radio"><input type="radio" name="radio_name1">값2</label>
-  <label class="radio"><input type="radio" name="radio_name1">값3</label>
-</div>
-<div class="source">
-  <pre class="box2"></pre>
-</div>
-<!--//input_radio-->
-
-
-
-
-<h2 id="onOff_roll_1">onOff_roll 1개</h2>
+<h2 id="onOff_roll_1">On-Off_반복</h2>
 <div class="viewarea">
   <script>
       $(document).ready(function() {
@@ -230,11 +158,11 @@
 <div class="source">
   <pre class="box2"></pre>
 </div>
+<!--//On-Off_반복-->
 
 
 
-
-<h2 id="onOff_roll_n">onOff_roll n개 (이미지 여러개)</h2>
+<h2 id="onOff_roll_n">onOff_rolling n개 (이미지 여러개)</h2>
 <div class="viewarea">
   <script>
       function ani_img(){
@@ -257,49 +185,18 @@
     .rolling_lyr .active{display:block;}
   </style>
   <a href="" class="rolling_lyr">
-    <img src="img/lyr_01.png" alt="1" class="active">
-    <img src="img/lyr_02.png" alt="2">
-    <img src="img/lyr_03.png" alt="3">
-    <img src="img/lyr_04.png" alt="4">
+    <img src="../img/lyr_01.png" alt="1" class="active">
+    <img src="../img/lyr_02.png" alt="2">
+    <img src="../img/lyr_03.png" alt="3">
+    <img src="../img/lyr_04.png" alt="4">
   </a>
 
 </div>
 <div class="source">
   <pre class="box2"></pre>
 </div>
+<!--//onOff_rolling-->
 
-
-
-
-<h2 id="setFocus">Set Focus (페이지 내 앵커이동)</h2>
-<div class="viewarea">
-  <a href="javascript:;" onclick="fnSetFocus('id', 'setFocus', 0)" style="display: inline-block;padding: 10px 20px;background: #0fb8ad;color: #fff;">버튼</a>
-
-  <script>
-      //Focus 함수
-      function fnSetFocus(type, type_nm, add_top) {
-          if (type.toUpperCase() != 'ID') {
-              var focus_id = '.'+ type_nm;
-          } else {
-              var focus_id = '#'+ type_nm;
-          }
-
-          //Target 고정 처리 S
-          var intOffset = $(focus_id).offset();
-          var intOffsetTop = intOffset.top - add_top;
-          var intOffsetLeft = intOffset.left;
-
-          $('body, html').stop();
-          $('body, html').animate({ scrollTop: intOffsetTop }, "fast");
-          //Target 고정 처리 E
-      }
-  </script>
-
-</div><!-- //viewarea -->
-<div class="source">
-	<pre class="box2"></pre>
-</div>
-<!--//Set Focus-->
 
 
 

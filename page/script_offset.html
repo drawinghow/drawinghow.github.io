@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!------------------------------------------------------------
+    Copyright (c) JHK / 이 페이지의 모든 저작권은 JHK 에게 있습니다.
+  -------------------------------------------------------------->
+  <title>코딩 가이드</title>
+  <meta charset="utf-8" >
+  <meta name="robots" content="noindex,nofollow" >
+  <meta name="author" content="JHK" >
+  <meta name="copyright" content="http://drawinghow.github.io/" >
+  <meta http-equiv="imagetoolbar" content="no" >
+  <meta http-equiv="cache-control" content="no-chche" >
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" >
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes" >
+
+  <link rel="shortcut icon" href="../jhk_ico.ico" >
+  <link rel="stylesheet" href="../css/font.css" >
+  <link rel="stylesheet" href="../css/common.css" >
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <!--highlight-->
+  <link rel="stylesheet" href="../plugin/highlight/styles/atom-one-dark.css">
+  <script type="text/javascript" src="../plugin/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="../plugin/highlight/highlightjs-line-numbers.min.js"></script>
+  <!--//highlight-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+	<div id="cd_contents">
+
+		<!--contents-navi-->
+		<section id="con_nav">
+			<a href="javascript:;" class="arrow btnToggle_left"><span>토글</span></a>
+			<ul>
+				<li class="on"><a href="#offset">절대좌표 offset()</a></li>
+				<li><a href="#position">상대좌표 position()</a></li>
+			</ul>
+		</section>
+		<!--//contents-navi-->
+
+		<div class="index-inner">
+		<!--소스 Start-->
+
+
+
+<h2 id="offset">절대좌표 offset() : 윈도우 최상단부터 섹션까지의 높이값을 구하고 싶을때
+</h2>
+<div class="viewarea">
+
+  <script type="text/javascript">
+
+    $(window).load(function(){
+        var height1 = $('#id.class').offset().top;
+        //alert( Height );
+    });
+
+  </script>
+
+</div><!-- //viewarea -->
+<div class="source">
+	<pre class="box2"></pre>
+</div>
+<!--//절대좌표-->
+
+
+
+
+<h2 id="position">상대좌표 position() : 부모 요소의 위치를 기준으로 값을 얻는 상대좌표(상대위치)
+</h2>
+<div class="viewarea">
+
+  <script type="text/javascript">
+
+      $(window).load(function(){
+          var height2 = $('#id.class').position().top;
+          //alert( Height );
+      });
+
+  </script>
+
+</div><!-- //viewarea -->
+<div class="source">
+  <pre class="box2"></pre>
+</div>
+<!--//절대좌표-->
+
+
+
+
+		<!--//소스 End-->
+		</div>
+	</div>
+
+</body>
+</html>
