@@ -201,23 +201,33 @@ input[type="submit"] {cursor: pointer;}
 #cd_guide_wrap {display: table;width: 100%;height: 100%;}
 #cd_guide_nav, #cd_guide_container {display: table-cell;height: 100%;vertical-align: top;}
 
-/*lnb*/
+/*LNB*/
 #cd_guide_nav {width: 150px;/*position: relative;height: 100%;*/ z-index: 200;background-color: #333;}
 #cd_guide_nav h1 {padding: 15px 15px;background: #000;color: #fff;}
 #cd_guide_nav h1 em {display: block;margin-bottom: 5px;font-size: 28px;font-family: 'montsrt';line-height: 1;font-weight: 200;}
 #cd_guide_nav h1 span {display: block;font-size: 10px;font-weight: 100;color: #888;}
 #cd_guide_nav .cd_nav {position: relative;overflow-y: auto;}
 #cd_guide_nav .cd_nav a {display: block;}
+
+/*LNB_1depth*/
 #cd_guide_nav .cd_nav>li {}
-#cd_guide_nav .cd_nav>li>a {display: block;border-top: 1px solid #454545;padding: 6px 14px;font-size: 14px;color: #fff;font-weight:400;}
-#cd_guide_nav .cd_nav>li>a:hover {cursor: default;}
+#cd_guide_nav .cd_nav>li>a {position: relative;display: block;border-top: 1px solid #454545;padding: 6px 14px;font-size: 14px;color: #fff;font-weight:200;}
+#cd_guide_nav .cd_nav>li>a:after {content: '';position: absolute;right: 15px;top: 50%;margin-top: -4px;display: inline-block;height: 0;margin-left: 5px;border-top: 6px solid #fff;border-left: 5px solid transparent;border-right: 5px solid transparent;vertical-align: middle;opacity: .2;}
+#cd_guide_nav .cd_nav>li>a:hover {}
+#cd_guide_nav .cd_nav>li>a:hover:after {opacity: 1;}
 #cd_guide_nav .cd_nav>li.open>a {}
-#cd_guide_nav .cd_nav>li>ul {}
+#cd_guide_nav .cd_nav>li.open>a:after {transform: rotate(180deg)}
+#cd_guide_nav .cd_nav>li.on>a {background: #111;}
+
+/*LNB_2depth*/
+#cd_guide_nav .cd_nav>li.open>ul {display: block;}
+#cd_guide_nav .cd_nav>li>ul {display: none;}
 #cd_guide_nav .cd_nav>li>ul li a {border-top:1px dashed #555;padding: 6px 6px 6px 22px;background:#474747;text-indent: -9px;color:#aaa;font-size: 12px;line-height: 1.3;}
 #cd_guide_nav .cd_nav>li>ul li a:before {content:"-";margin-right: 5px;}
 #cd_guide_nav .cd_nav>li>ul li a:hover {background: #555;color:#fff;}
 #cd_guide_nav .cd_nav>li>ul li.on a {background: #e06c75;color: #fff;border-top: 1px solid #e06c75;}
 
+/*LNB_etc*/
 #cd_guide_nav .etc_link {padding-top: 15px;}
 #cd_guide_nav .etc_link+ .etc_link {padding-top: 5px;}
 #cd_guide_nav .etc_link li a {display: block;padding: 2px 10px 2px 20px;text-indent: -6px;color: #666;font-size: 11px;letter-spacing: -0.6px;}

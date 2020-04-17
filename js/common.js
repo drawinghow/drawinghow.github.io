@@ -9,13 +9,21 @@ $(document).ready(function() {
     /******************************************/
     //LNB 1depth
     $('.cd_nav>li>a').click(function () {
-        $(this).parent().addClass('open');
+        if($(this).parent().hasClass('open')){
+          $(this).next().slideUp(function () {
+              $(this).parent().removeClass('open');
+          });
+        }else{
+          $(this).next().slideDown(function () {
+            $(this).parent().addClass('open');
+          });
+        }
     });
     //LNB 2depth
     $('.cd_nav>li>ul>li>a').click(function (e) {
         e.preventDefault();
         $('.cd_nav>li>ul>li').removeClass('on');
-        $(this).parent().addClass('on');
+        $(this).parent().addClass('on').parent().parent().addClass('on').siblings().removeClass('on');
 
         var href = $(this).attr('href');
         $('#cd_container').attr('src', href );

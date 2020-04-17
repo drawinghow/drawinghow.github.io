@@ -47,7 +47,7 @@
 				<span>이 페이지의 모든 저작권은 JHK 에게 있습니다.</span>
 			</h1>
 			<ul class="cd_nav">
-				<li>
+				<li class="open">
 					<a href="javascript:;">Script</a>
 					<ul>
 						<li><a href="page/popup.html" data-nm="popup">Popup</a></li>
@@ -59,7 +59,7 @@
 						<li><a href="page/script_floBnr.html" data-nm="script_floBnr">Floating</a></li>
 					</ul>
 				</li>
-				<li>
+				<li class="open">
 					<a href="javascript:;">Bxslider</a>
 					<ul>
 						<li><a href="page/bxslider.html" data-nm="bxslider">bx-slider</a></li>
@@ -67,7 +67,7 @@
 						<li><a href="page/bxslider_ui_ex.html" data-nm="slider_ui_ex">bx-slider_ui_ex</a></li>
 					</ul>
 				</li>
-				<li>
+				<li class="open">
 					<a href="javascript:;">Animate</a>
 					<ul>
 						<li><a href="page/ani_css.html" data-nm="ani_css">CSS Ani</a></li>
@@ -79,15 +79,15 @@
 						<!--<li><a href="page/presentation/" data-nm="presentation">디자인팀 PT</a></li>-->
 					</ul>
 				</li>
-				<li>
+				<li class="open">
 					<a href="javascript:;">JSON</a>
 					<ul>
 						<li><a href="page/json_test/" data-nm="json_test">json_test</a></li>
 						<li><a href=""></a></li>
 					</ul>
 				</li>
-				<li>
-					<a href="javascript:;">ETC</a>
+				<li class="open">
+					<a href="javascript:;">etc</a>
 					<ul>
 						<li><a href="page/_gallery(slide+layerpop).html" data-nm="_gallery(slide+layerpop)">슬라이드 사진 갤러리</a></li>
 						<li><a href="page/turnjs/" data-nm="turnjs">책넘김 효과</a></li>
@@ -117,13 +117,14 @@
 		</section>
 		<!--// LNB -->
 		<section id="cd_guide_container">
-			<iframe id="cd_container" src="page/script_floBnr.html" frameborder="0"></iframe> <!-- ./page/_list.html -->
+			<iframe id="cd_container" src="page/_list.html" frameborder="0"></iframe> <!-- ./page/_list.html -->
 			<script>
 				$(document).ready(function () {
 			    //Nav - li 활성화
 				  var pageHtml = $('#cd_container').attr('src').split('/');
 				  var pageOn = pageHtml[1].split('.');
-          $('.cd_nav a[data-nm="'+pageOn[0]+'"]').parent().addClass('on');
+          $('.cd_nav a[data-nm="'+pageOn[0]+'"]').parent().addClass('on').parent().parent().addClass('on').siblings().removeClass('on');
+
 				}); //$(document).ready
 			</script>
 		</section>
