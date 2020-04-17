@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="../css/font.css" >
   <link rel="stylesheet" href="../css/common.css" >
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="../js/common.js"></script>
 
   <!--highlight-->
@@ -40,8 +40,9 @@
 		<section id="con_nav">
 			<a href="javascript:;" class="arrow btnToggle_left"><span>토글</span></a>
 			<ul>
-				<li class="on"><a href="#flobnr_1">Scroll Fixed</a></li>
-				<li><a href="#flobnr_2">Scroll Animate</a></li>
+				<li class="on"><a href="#flobnr_1">Scroll 될때 Fixed</a></li>
+				<li><a href="#flobnr_2">Scroll 될때 Animate</a></li>
+				<li><a href="#quickmenu_type">Quick_menu</a></li>
 			</ul>
 		</section>
 		<!--//contents-navi-->
@@ -52,25 +53,283 @@
 
 
 
-<h2 id="flobnr_1">플로팅배너 - type1 (scroll fixed)</h2>
+
+
+<h2 id="flobnr_1-1" class="quick_anchor">플로팅배너 type1-1 (scroll fixed stop)</h2>
 <div class="viewarea">
+  <style>
+    #floatingBnr1 { position: absolute; /*left: 50%;margin-left: 10px;*/right: 30px; top: 100px;/* 초기 top값*/ width: 128px;/*배너size*/ z-index: 10; }
+    #floatingBnr1 .floBnr { position: absolute;}
+    #floatingBnr1 .floBnr.fixed { position: fixed;top: 0;}
+    #floatingBnr1 .floBnr li+li { margin-top: 10px; }
+  </style>
+
+  <div class="floBnrWrap" id="floatingBnr1">
+    <ul class="floBnr" data-fixedTop="300">
+      <li><a href="javascript:;"><img src="http://img.megamd.co.kr/2018/1120_time/time_floBnr1.png" alt="배너"></a></li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+    $(window).load(function(){
+      var startTop = $('#flobnr_1-1+.viewarea').offset().top;  //배너의 부모중 relative
+      var stopTop = $('#flobnr_1-1+.viewarea').offset().top+400;   //배너 Stop 영역 - 필요시 수정하여 사용
+      var $flobnr = $('#floatingBnr1 .floBnr');
+      var bnrWrapperTop = $flobnr.parent().position().top;
+      var bnrTop = stopTop-bnrWrapperTop;
+
+      $(window).on('load scroll', function(){
+
+          var winTop = $(this).scrollTop();
+          if( winTop <= startTop ){
+              $flobnr.removeClass('fixed').css({ top: 0});
+          }
+          else if( winTop > startTop && winTop <= stopTop ){
+              $flobnr.addClass('fixed').css({ top: bnrWrapperTop});
+          }//fixed
+          else if( winTop > stopTop ){
+              $flobnr.removeClass('fixed').css({ top : bnrTop });
+          }//stop
+       });
+    });
+  </script>
+
+  <!--<script>
+    /* 플로팅배너 높이값 TEST */
+    $(window).scroll(function () {
+      $bnr.attr({'data-scrollTop': $(window).scrollTop();});
+      $bnr.attr({'data-offsetTop': $bnr.offset().top});
+    });
+  </script>-->
+
 
 </div><!-- //viewarea -->
 <div class="source">
 	<pre class="box2"></pre>
 </div>
-<!--//type1-->
+<!--//type1-1-->
 
 
 
-<h2 id="flobnr_2">플로팅배너 - type2 (Scroll Animate)</h2>
+
+<h2 id="flobnr_1-2">플로팅배너 type1-2 (scroll fixed)</h2>
 <div class="viewarea">
+
+  <style>
+    #floatingBnr2 { position: absolute; /*left: 50%;margin-left: 10px;*/right: 30px; top: 100px;/* 초기 top값*/ width: 128px;/*배너size*/ z-index: 10; }
+    #floatingBnr2 .floBnr { position: absolute;}
+    #floatingBnr2 .floBnr.fixed { position: fixed;top: 100px;}
+    #floatingBnr2 .floBnr li+li { margin-top: 10px; }
+  </style>
+
+  <div class="floBnrWrap" id="floatingBnr2">
+    <ul class="floBnr">
+      <li><a href="javascript:;"><img src="http://img.megamd.co.kr/2018/1120_time/time_floBnr1.png" alt="배너"></a></li>
+    </ul>
+  </div>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      var containerTop = $('#flobnr_1-2+.viewarea').offset().top; //배너의 relative 부모
+      var $flobnr = $('#floatingBnr2 .floBnr');
+      $(window).scroll(function(){
+          if( $(this).scrollTop() >= containerTop ){  $flobnr.addClass('fixed');  }
+          else{  $flobnr.removeClass('fixed');  }
+      });
+    });
+  </script>
+
+</div><!-- //viewarea -->
+<div class="source">
+  <pre class="box2"></pre>
+</div>
+<!--//type1-2-->
+
+
+
+
+
+<h2 id="flobnr_2" class="quick_anchor">플로팅배너 type2 (Scroll Animate) - 늦게 따라오는 배너</h2>
+<div class="viewarea">
+
+  <!-- 이벤트 전체를 싸는 div -->
+  <div id="testwrap" style="position: relative; height: 1000px; background-color: #ddd;">
+
+    <!-- 플로팅배너 -->
+    <div class="floBnr_scroll" style="position: absolute; right: 100px; top: 100px; z-index: 10;"> <!-- 배너의 top 값을 flobnrTop 에 입력 -->
+      <a href=""><img src="http://image.mdnp.co.kr/academy/2018/0709_welcome/layerbnr.png" alt="바로가기" ></a>
+    </div>
+    <!--// 플로팅배너 -->
+    <div class="section1"></div>
+
+  </div>
+  <!-- //이벤트 전체를 싸는 div -->
+
+
+  <script type="text/javascript">
+    /* 컬러가 들어간부분 변경하여 사용 */
+
+    $(window).load(function(){
+
+      topTop = $('#testwrap').offset().top+1 ;            // #wrap = #wrap 의 상단을 지나면 배너가 움직임( ex.  .top , .stn_con1 , .con1 .. 등 각 클래스명, 아이디에 맞게 변경 )
+      // +1 : 스크롤시 이동하는 배너의 top값을 조절 ( - 사용가능 )
+
+      $floBnr = $('.floBnr_scroll');                        //배너 = 클래스명/아이디 변경가능
+      flobnrTop = 100 ;                                   //배너 초기 top값
+      t_m = 0;                                                //변수
+
+      $floBnr.stop().animate({ 'top': flobnrTop }, 200);
+      $(window).scroll(function () {
+          t_m = $(window).scrollTop();
+          if (t_m < topTop ){     //배너 고정 영역
+              $floBnr.stop().animate({ 'top': flobnrTop }, 200);
+          }else{                      //배너 움직이는 영역
+              t_m = $(window).scrollTop() - topTop + flobnrTop;
+              t_m = t_m + 1;
+              $floBnr.stop().animate({ 'top': t_m }, 200);
+          }
+      });
+    }); //$(window).load()
+
+  </script>
 
 </div><!-- //viewarea -->
 <div class="source">
   <pre class="box2"></pre>
 </div>
 <!--//type2-->
+
+
+
+
+
+<h2 id="quickmenu_type" class="quick_anchor">flo_navi / quick_menu</h2>
+<pre class="code_info">
+  1. 클릭시 이동할 "섹션"에 ( class="quick_anchor" ) 추가하기
+  2. 스크립트 수정하기(필수) -> scrollBnr( '.scrollBnr', 300, '.container_full', '#scrollnavi' ); //300(=배너fixed-top값), .container_full(=최상단), #scrollnavi(=배너멈출곳)
+
+  * li.scroll_bt 와 .anchor 갯수 동일해야 함 (ex. li.scroll_bt 가 3개면 컨텐츠 내에 .anchor 3개여야함)
+  * .scroll_bt 와 .anchor "순서대로" 자동 매칭됨
+  * li에 scroll_bt 없을시 : 클릭시 이동없음 (다른기능으로 사용가능 ex.레이어팝업)
+
+</pre>
+<div class="viewarea">
+  <!-- 스크립트 삽입위치 : 내용 하단에 위치 필수!!! ( 내용 위쪽으로 상단에 있을시 anchor 위치(offset top) 인식못함) -->
+
+  <!--/////////////// Quick 메뉴(navi) /////////////// -->
+  <style>
+    /*퀵메뉴 (scroll navi)*/
+    .scrollBnr_wrap {/*<!-고정*/position: absolute;top: 0;/*고정->*/  /*left: 50%;margin-left: 200px;*/ right: 200px; width: 140px; z-index: 100;}
+    .scrollBnr_wrap .scrollBnr { /*<!-고정*/position: absolute;top: 0;/*고정->*/ width: 140px; }
+    .scrollBnr_wrap .scrollBnr ul { width: 130px;border: 5px solid #19284b;border-top: none;}
+    .scrollBnr_wrap .scrollBnr li a { display: block; padding: 13px 0; background: #fff; font-size: 12px; line-height: 18px; color: #222; text-align: center; letter-spacing: -.8px;}
+    .scrollBnr_wrap .scrollBnr li a strong { font-size: 13px; letter-spacing: -.8px;}
+    .scrollBnr_wrap .scrollBnr li+li a { background: #fff url(http://img.megamd.co.kr/2019/0619_kj/quickbnr_line_dot.png) 0 0 repeat-x; }
+    .scrollBnr_wrap .scrollBnr li.on a { background: #19284b; color: #ff923b;} /*활성화*/
+    .scrollBnr_wrap .scrollBnr li.on+li a { background-image: none;}
+  </style>
+
+  <div class="scrollBnr_wrap">
+    <div class="scrollBnr">
+      <p><img src="http://img.megamd.co.kr/2019/0619_kj/kj_quickbnr_top.png" alt="quickbnr_top"></p>
+      <ul>
+        <li class="scroll_bt on"><a href="javascript:;">최상의 퀄리티<br><strong>시그니처 모의고사</strong></a></li>
+        <li class="scroll_bt"><a href="javascript:;">상위 3%를 위한<br><strong>B.O.B & 필수 기출</strong></a></li>
+        <li class="scroll_bt"><a href="javascript:;">문항 오아시스<br><strong>득템 EVENT</strong></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+      //퀵메뉴 - 스크롤 실행 (페이지에 맞게 수정 필수!!!!)
+      scrollBnr( '.scrollBnr', 200, '#quickmenu_type', '#quickmenu_stop' );   //scrollBnr( '퀵배너Id/class',  '배너fixed일때-top값',  '컨테이너id/class',  '배너멈출곳id/class);
+
+      //퀵메뉴 - 버튼 연결 및 on-off 실행 (수정없이 사용가능) ** .scroll_bt(버튼) 와 anchor(이동섹션) 갯수 동일해야 함
+      scrollOnOff( '.scrollBnr', '.scroll_bt', '.quick_anchor');   //scrollOnOff( '퀵배너Id/class', '퀵버튼class', '이동할섹션class' )
+
+      /**************** 스크롤navi 함수 S ******************/
+      //스크롤navi (start-stop기능)
+      function scrollBnr( bnrID, fixedTop, startSection, stopSection ){
+          $bnr = $(bnrID);
+          var startTop;
+          var bnrWrapperTop = $bnr.parent().position().top;
+          var stopH;
+          var bnrTop2;
+
+
+          $(window).on('load scroll', function(){
+              startTop = $(startSection).offset().top + fixedTop;
+              winTop = $(window).scrollTop();
+              stopH = $(stopSection).offset().top;
+              bnrTop2 = stopH - startTop - bnrWrapperTop + fixedTop;
+
+              if( winTop <= startTop ){
+                  $bnr.css({ position: 'absolute', top: fixedTop });
+              }else if( winTop > startTop  &&  winTop<stopH  ){      //start ~ stop 사이
+                  $bnr.css({position: 'fixed', top: fixedTop });
+              }else if( winTop>=stopH ){                                   //stop 지점 이후
+                  $bnr.css({ position: 'absolute', top: bnrTop2 });
+              }
+          });
+      }
+
+      //스크롤시 해당 위치에 버튼 on-off
+      function scrollOnOff( bnrID, btnClass, anchorClass ){
+          $bnr = $(bnrID);
+          $anchor = $(anchorClass);
+          var btn = btnClass;
+          var anchorTop;
+          var arrNumber = new Array();
+          var anchorLength = $anchor.length;
+
+          //top 값
+          function offsetTopSetting(){
+              $anchor.each(function(i) {
+                  arrNumber[i] = $anchor.eq(i).offset().top;
+                  winTop = $(window).scrollTop();
+
+                  if( winTop >= arrNumber[i]  &&  winTop < arrNumber[i+1] ){
+                      $bnr.find(btn).eq(i).addClass('on').siblings().removeClass('on');
+                  }else if( winTop >= arrNumber[ anchorLength-1 ]  ){
+                      $bnr.find(btn).eq( anchorLength-1 ).addClass('on').siblings().removeClass('on');
+                  }else if( winTop < arrNumber[0] ) {
+                      $bnr.find(btn).eq(0).removeClass('on');
+                  }
+              });
+          } //top 값
+
+          //Click on-off
+          $bnr.find(btn).click(function(){
+              offsetTopSetting();
+              var btidx = $(this).index();
+              $thisbtn = $(this);
+              $('html,body').stop().animate({ scrollTop : arrNumber[btidx] }, function () {
+                  $thisbtn.addClass('on').siblings().removeClass('on');
+              });
+          });
+
+          //Scroll on-off
+          $(window).on('load scroll', function(){
+              offsetTopSetting();
+          });
+
+      }
+      /**************** //스크롤navi 함수 E ******************/
+  </script>
+  <!--/////////////// Quick 메뉴(navi) /////////////// -->
+
+</div><!-- //viewarea -->
+<div class="source">
+  <pre class="box2"></pre>
+</div>
+<!--퀵메뉴 Stop test-->
+<div style="background: #ededed;margin: 10px 0;padding: 10px 0 0;">
+  <p id="quickmenu_stop" style="min-height: 1500px;padding: 30px 30px;margin-top: 500px;background: #0fb8ad;color: #fff;">Quick Menu Stop<!--퀵메뉴 멈춤 위치--></p>
+</div>
+<!--//퀵메뉴 Stop test-->
+<!--//quickmen-->
+
+
+
 
 
 

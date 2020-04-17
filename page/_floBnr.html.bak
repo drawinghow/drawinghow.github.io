@@ -73,7 +73,7 @@
 	<b  class="color_red1">CSS + HTML</b>
 	&lt;style&gt;
 	.floBnrWrap { position: absolute; left: 50%; <b class="color_red1">top: 100px;</b> margin-left: 10px; z-index: 10; } /*배너위치 margin-left/top 값 조절*/
-	.floBnrWrap .floBnr { position: absolute; -webkit-transition: all .5s;-moz-transition: all .5s;-ms-transition: all .5s;-o-transition: all .5s;transition: aqll .5s; } 
+	.floBnrWrap .floBnr { position: absolute; -webkit-transition: all .5s;-moz-transition: all .5s;-ms-transition: all .5s;-o-transition: all .5s;transition: all .5s; } 
 	.floBnrWrap .floBnr.fixed { position: fixed; <b class="color_red1">top: 100px;</b> /* fixed top값*/ }  
 	.floBnrWrap .floBnr li+li { margin-top: 10px; }
 	&lt;/style&gt;

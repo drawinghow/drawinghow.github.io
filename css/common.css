@@ -248,8 +248,8 @@ input[type="submit"] {cursor: pointer;}
 #con_nav ul li.on a {color: #fff;text-decoration: underline;opacity: 1;}
 
 
-#cd_contents .viewarea {padding: 10px 0;}
-#cd_contents .viewarea.no_act {font-size: 0;padding-top: 0;}
+#cd_contents .viewarea {position: relative;padding: 10px 0 10px;}
+#cd_contents .viewarea.no_act {font-size: 0;padding-top: 0;} /*실행X 코드만 보일때*/
 #cd_contents .code_info {border: 1px solid #000;padding: 12px 15px;margin-top: 10px;font-size: 12px;}
 #cd_contents pre.code_info {padding: 12px 0;}
 #cd_contents .code_info a:hover {color: #e06c75;}
