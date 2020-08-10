@@ -1,0 +1,40 @@
+/*ÀÎÆ®·Î*/
+#intro_wrap .left{width:710px;}
+#intro_wrap .list li a{height:50px}
+#intro_wrap .right > div > div{padding-top:30px}
+#intro_Con .ban > a{width:120px}
+
+/*pc*/
+#nav .gnb > ul > li > a.a{width:68px;}
+#nav .gnb > ul > li > a.b{width:100px;}
+#nav .gnb > ul > li > a.c{width:66px}
+#nav .gnb > ul > li > a.d{width:55px}
+#nav .gnb > ul > li > a.e{width:103px}
+#nav .gnb > ul > li > a.f{width:66px}
+#nav .gnb > ul > li > a.g{width:94px}
+#nav .gnb > ul > li > a.i{width:75px}
+#nav .gnb > ul > li > a.i{width:105px}
+#nav .gnb > ul > li > a.j{width:137px}
+#nav .gnb > ul > li > a.k{width:98px;}
+#header{z-index:20;}
+#header .global span{font-size:0;position:absolute;top:0;color:#fff}
+#header .global{float:left;}
+#header .global > div{float:left;}
+#header .box > *{float:left;}
+#nav{z-index:10;}
+#mainVisual .mojip .hj li:first-child{width:97px;}
+#mainVisual .mojip .hj li{width:97px}
+#mainVisual{height:627px;}
+#mainVisual .roll .txt .txtBox div{width:165px}
+#subMenu{background:url(../img/sub/sub_depbg.png) no-repeat left top;}
+#subMenu .dep{width:465px;}
+#subMenu .dep p button{width:453px;}
+
+#content h2{background-position:0 0}
+
+.gisuksa h3{margin-bottom:7px;}
+
+.jgTab ul{width:100%;overflow:hidden;}
+.jgTab ul li{float:left;width:141px}
+
+.jgTab{margin:20px 0 !important}

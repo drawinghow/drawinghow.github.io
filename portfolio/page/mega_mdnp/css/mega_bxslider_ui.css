@@ -1,0 +1,37 @@
+/* RESET AND LAYOUT */
+.bxslider-default {overflow: hidden; }
+.bxslider-default .bx-wrapper {position: relative;margin: 0 auto; padding: 0; }
+.bxslider-default .bx-wrapper img {display: inline-block; max-width: 100%; }
+
+/* THEME */
+.bxslider-default .bx-wrapper .bx-viewport {-webkit-transform: translatez(0);-moz-transform: translatez(0);-ms-transform: translatez(0);-o-transform: translatez(0);transform: translatez(0); }
+.bxslider-default .bx-wrapper .bx-viewport .bxslider li { left: 0;text-align: center }
+.bxslider-default .bx-wrapper .bx-pager,
+.bxslider-default .bx-wrapper .bx-controls-auto { position: absolute; }
+.bxslider-default .bx-wrapper .bx-pager,
+.bxslider-default .bx-wrapper .bx-controls-direction { display:block; z-index: 9; } /* z-index : 9로 수정 2019-02-27*/
+
+/* LOADER !!SettingNoneCustomUse*/
+.bxslider-default .bx-wrapper .bx-loading {position: absolute;top: 0;left: 0;z-index: 9;min-height: 50px;height: 100%;width: 100%; }/* z-index : 9로 수정 2019-02-27*/
+
+/* PAGER */
+.bxslider-default .bx-controls{width:auto;position:static;}
+.bxslider-default .bx-wrapper .bx-controls .bx-pager{font-size:0;}
+.bxslider-default .bx-wrapper .bx-controls .bx-pager-item,
+.bxslider-default .bx-wrapper .bx-controls-auto-item { margin:0;display: inline-block; float:none;}
+.bxslider-default .bx-wrapper .bx-default-pager a {display: block;font-size: 0;text-indent: -9999px; }
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bxslider-default .bx-wrapper .bx-controls-direction a {position: absolute;z-index: 9;}
+.bxslider-default .bx-wrapper .bx-prev {position: absolute;}
+.bxslider-default .bx-wrapper .bx-next {position: absolute;}
+
+/* AUTO CONTROLS (START / STOP) !!SettingNoneCustomUse */
+.bxslider-default .bx-wrapper .bx-controls-auto { right: 0; }
+
+/* IMAGE CAPTIONS !!SettingNoneCustomUse*/
+.bxslider-default .bx-wrapper .bx-caption {position: absolute;bottom: 0;left: 0;background: #666 \9;background: rgba(80, 80, 80, 0.75);width: 100%;}
+.bxslider-default .bx-wrapper .bx-caption span {color: #FFF;font-family: Arial sans-serif;display: block;font-size: .85em;padding: 10px;}
+
+.pager-slider-wrap {position: relative; }
+.pager-slider-wrap .bxslider-default .bx-wrapper .bx-controls-direction a {z-index: 9;}/* z-index : 9로 수정 2019-02-27*/

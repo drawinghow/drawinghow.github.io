@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>고교정보 관리시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="../css/default.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="../js/default.js"></script>
+	<!--[if lt IE 10]>
+		<script type="text/javascript" src="./js/respond.js_html5shiv.js"></script>
+		<script type="text/javascript" src="./js/jquery.backgroundSize.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/ie.css" />
+	<![endif]-->
+</head>
+<body>
+
+
+	<div id="header">
+		<div class="center_align" class="clearfix">
+			<h1 class="logo">
+				<a class="pc" href="#"><img src="../img/common/logo_top.png" alt="중앙대학교 고교정보"></a>
+				<a class="mobile" href="#"><img src="../img/common/logo_m.png" alt="중앙대학교 고교정보"></a>
+			</h1>
+			<div class="rightBt" class="clearfix">
+				<ul class="clearfix">
+					<li class="name"><a href="#">홍길동 님</a></li>
+					<li class="mypage"><a href="#">MYPAGE</a></li>
+					<li><a href="#">LOGOUT</a></li>
+				</ul>
+				<div id="allMenu"><a href="#"><span>전체메뉴</span></a></div>
+			</div>
+		</div>
+	</div><!-- //header -->
+	<div id="nav">
+		<div>
+			<div class="tit">SITEMAP</div>
+			<div class="bt_close"><a href="#">닫기</a></div>
+			<ul class="gnb clearfix">
+				<li>
+					<div>
+						<a href="#">서비스소개<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">서비스 소개</a></li>
+							<li><a href="#">서비스 안내</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">학사일정 관리<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">고교정보 관리<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">고교 기본정보</a></li>
+							<li><a href="#">통합 비교검색</a></li>
+							<li><a href="#">지원자 현황</a></li>
+							<li><a href="#">합격자 현황</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">교육활동 관리<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">입학전형 설명회</a></li>
+							<li><a href="#">고교방문 상담</a></li>
+							<li><a href="#">고교 대학연계</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">자료실<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+
+
+
+	<!-- 서브 시작 -->
+	<div id="sub" class="s3">
+		<div id="topV"><div class="center_align"><h3><em>고교정보관리</em></h3></div></div>
+		<div class="center_align clearfix">
+
+
+			<!-- 왼쪽메뉴(Left Menu) -->
+			<div id="lnb">
+				<h3><span>고교정보관리</span></h3>
+				<ul>
+					<li><a href="#">고교 공시정보</a></li>
+					<li ><a href="#">통합 비교검색</a></li>
+					<li class="on"><a href="#">지원자 현황</a></li>
+					<li><a href="#">합격자 통계</a></li>
+				</ul>
+			</div>
+
+
+			<!-- 내용시작 -->
+			<div id="con">
+				<h4 class="top">지원자 현황</h4>
+				<div id="breadcrumb">
+					<ul class="clearfix">
+						<li><a href="#"><img src="../img/common/breadcrumb_home.png" alt="home"></a></li>
+						<li><a href="#">고교정보관리</a></li>
+						<li><a href="#">지원자 현황</a></li>
+					</ul>
+				</div>
+				<ul class="info2 mt0">
+					<li>현재 우리 대학교의 지원한 학생들 현황을 확인할 수 있습니다. </li>
+					<li>항목별(고교/지역, 고교 졸업년도, 일자별, 전형/모집단위, 연령+성별, 지역/성별 )로 지원자 통계를 확인할 수 있습니다.</li>
+				</ul>
+
+
+				<form action="">
+					<div class="table3 mt20 bdTop">
+						<table>
+							<colgroup>
+								<col class="co1" style="width:100px;" />
+								<col class="co2" />
+							</colgroup>
+							<tr>
+								<th>통계별 기준 </th>
+								<td>
+									<select class="sel2" name="gogyo" id="gogyo">
+										<option value="">고교/지역 통계 </option>
+										<option value="">고교 졸업년도</option>
+										<option value="">일자별</option>
+										<option value="">전형/모집단위</option>
+										<option value="">연령+성별</option>
+										<option value="">지역/성별 </option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>기간설정</th>
+								<td>
+									<div class="d_ib"><input class="input w120" type="text" value="2017-03-01"><a href="#" class="btn_calendar">날짜선택</a></div>
+									<span class="hyphen"> ~ </span>
+									<div class="d_ib"><input class="input w120" type="text"><a href="#" class="btn_calendar">날짜선택</a></div>
+								</td>
+							</tr>
+							<tr>
+								<th>지원사항</th>
+								<td>
+									<select class="sel3" name="jh" id="jh">
+										<option value="">모든전형</option>
+										<option value="">정시</option>
+										<option value="">수시</option>
+										<option value="">재외국민</option>
+										<option value="">편입학</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</div>		
+					
+					<div class="btnStyle1">
+						<a class="bgPurple" href="#">결과보기</a>
+					</div>
+			
+					<div class="table1 mt30">
+						<div class="ov_h">
+							<table>
+								<tr>
+									<th rowspan="2">지역</th>
+									<th rowspan="2">출신학교</th>
+									<th colspan="3">2016년</th>
+									<th rowspan="2">계</th>
+									<th rowspan="2">비율(%</th>
+								</tr>
+								<tr>
+									<th>09월 19일</th>
+									<th>09월 20일</th>
+									<th>09월 21일</th>
+								</tr>
+								<tr>
+									<td>서울특별시</td>
+									<td>가락고등학교 -  일반고등학교</td>
+									<td>17</td>
+									<td>0</td>
+									<td>16</td>
+									<td>33</td>
+									<td>0.40%</td>
+								</tr>
+								<tr>
+									<td>서울특별시</td>
+									<td>가락고등학교 -  일반고등학교</td>
+									<td>17</td>
+									<td>0</td>
+									<td>16</td>
+									<td>33</td>
+									<td>0.40%</td>
+								</tr>
+								<tr>
+									<td>서울특별시</td>
+									<td>가락고등학교 -  일반고등학교</td>
+									<td>17</td>
+									<td>0</td>
+									<td>16</td>
+									<td>33</td>
+									<td>0.40%</td>
+								</tr>
+								<tr>
+									<td>서울특별시</td>
+									<td>가락고등학교 -  일반고등학교</td>
+									<td>17</td>
+									<td>0</td>
+									<td>16</td>
+									<td>33</td>
+									<td>0.40%</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+				</form>
+				
+
+
+
+			</div>
+			<!-- //내용끝 //sCon -->
+		</div>
+
+
+
+
+
+	</div>
+	<!-- //서브 -->
+
+
+
+
+
+	<div id="footer">
+		<div class="fo1">
+			<div class="center_align">
+				<p>06974 서울특별시 동작구 흑석로 84   TEL. (02)813-8158</p>
+				<div class="bt_adm"><a href="#">관리자화면</a></div>
+			</div>
+		</div>
+		<div class="fo2">
+			<div class="center_align clearfix">
+				<ul class="clearfix">
+					<li><a href="">찾아오시는 길</a></li>
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="">이메일무단수집금지</a></li>
+					<li><a href="">전공안내</a></li>
+				</ul>
+				<p class="copy">COPYRIGHT 2017. CHUNG-ANG UNIVERSITY. ALL RIGHTS RESERVED</p>
+			</div>
+		</div>
+	</div><!-- footer -->
+	
+
+
+
+	<script type="text/javascript" src="../js/init.js"></script>
+
+
+</body>
+</html>

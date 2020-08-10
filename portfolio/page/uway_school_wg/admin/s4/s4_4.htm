@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>고교정보 관리시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<!--<meta name="viewport" content="user-scalable=no, width=device-width" />	-->
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="../js/respond.js_html5shiv.js" ></script>
+	<script type="text/javascript" src="../js/jquery.backgroundSize.js" ></script>
+	<script type="text/javascript" src="../js/jquery.matchHeight-min.js" ></script>
+	<script type="text/javascript" src="../js/jquery.tm.horizon.min.js" ></script>
+	<script type="text/javascript" src="../js/default.js" ></script>
+	<!--[if lt IE 9]>
+		<script>
+			window.open('ie.html','iePop','width=588,height=281,left=0,top=0')
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+
+	<!-- header -->
+	<div id="top">
+		<div class="center_align clearfix">
+			<h2><img src="../img/top_h2.png" alt="고교정보 관리 시스템"></h2>
+			<div class="search">
+				<ul class="clearfix">
+					<li><a href="#">LOGOUT</a></li>
+					<li><a href="#">SITEMAP</a></li>
+					<li><a href="#">MY PAGE</a></li>
+				</ul>
+				<input type="text" />
+				<a class="btnSearchM" href="#"><!-- mobile에서만 보임 --></a>
+				<a class="btnSearch" href="#">검색하기</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="gnb">
+		<div class="center_align clearfix">
+			<h1><img src="../img/logo.png" alt="logo"></h1>
+			<ul class="menu celarfix">
+				<li class="m1">
+					<a href="#">기본정보관리</a>
+					<ul>
+						<li><a href="#">화면설정</a></li>
+						<li><a href="#">코드관리</a></li>
+						<li><a href="#">계정관리</a></li>
+					</ul>
+				</li>
+				<li class="m2">
+					<a href="#">학사일정 관리</a>
+					<ul>
+						<li><a href="#">학사일정 관리</a></li>
+					</ul>
+				</li>
+				<li class="m3">
+					<a href="#">고교 정보관리</a>
+					<ul>
+						<li><a href="#">지원자 통계</a></li>
+						<li><a href="#">합격자 통계</a></li>
+					</ul>
+				</li>
+				<li class="m4">
+					<a href="#">교육활동 관리</a>
+					<ul>
+						<li><a href="#">입학전형 설명회 </a></li>
+						<li><a href="#">고교방문상담</a></li>
+						<li><a href="#">고교-대학연계</a></li>
+					</ul>
+				</li>
+				<li class="m5">
+					<a href="#">커뮤니티</a>
+					<ul>
+						<li><a href="#">공지사항 </a></li>
+						<li><a href="#">모집요강</a></li>
+						<li><a href="#">자료실</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<div id="btnMenu">
+				<a href="#">모바일 메뉴</a>
+				<ul class="celarfix">
+					<li class="m1">
+						<a href="#">기본정보관리</a>
+						<ul>
+							<li><a href="#">화면설정</a></li>
+							<li><a href="#">코드관리</a></li>
+							<li><a href="#">계정관리</a></li>
+						</ul>
+					</li>
+					<li class="m2">
+						<a href="#">학사일정 관리</a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</li>
+					<li class="m3">
+						<a href="#">고교 정보관리</a>
+						<ul>
+							<li><a href="#">지원자 통계</a></li>
+							<li><a href="#">합격자 통계</a></li>
+						</ul>
+					</li>
+					<li class="m4">
+						<a href="#">교육활동 관리</a>
+						<ul>
+							<li><a href="#">입학전형 설명회 </a></li>
+							<li><a href="#">고교방문상담</a></li>
+							<li><a href="#">고교-대학연계</a></li>
+						</ul>
+					</li>
+					<li class="m5">
+						<a href="#">커뮤니티</a>
+						<ul>
+							<li><a href="#">공지사항 </a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="gnbBg"></div>
+	</div>
+	<!--// header -->
+
+
+
+
+	<!-- 서브 시작 -->
+	<div id="sub" >
+		<div id="topV"><div class="center_align"><h4>온라인 신청현황</h4></div></div>
+		<div class="center_align clearfix">
+
+
+			<!-- 왼쪽메뉴(Left Menu) -->
+			<div id="lnb">
+				<h3>교육활동 관리</h3>
+				<ul>
+					<li><a href="#">입학전형 설명회</a></li>
+					<li><a href="#">고교 방문상담</a></li>
+					<li><a href="#">고교-대학연계</a></li>
+					<li class="on"><a href="#">온라인 신청현황</a></li>
+				</ul>
+			</div>
+
+
+
+			<!-- 내용시작 -->
+			<div id="con">
+					<div class="table3 mt0 bdTop">
+						<table>
+							<colgroup>
+								<col style="width:100px;" />
+								<col style="width:200px;" />
+								<col style="width:75px;"  />
+								<col />
+							</colgroup>
+							<tr>
+								<th>구분</th>
+								<td colspan="3">
+									<select name="" id="" class="sel1" style="width:227px;">
+										<option value="">모든처리상태</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>기간</th>
+								<td colspan="3">
+									<div class="d_ib"><input class="input w120" type="text" ><a href="#" class="btn_calendar">날짜선택</a></div> 
+									<span class="hyphen"> ~ </span>
+									<div class="d_ib"><input class="input w120" type="text"><a href="#" class="btn_calendar">날짜선택</a></div>
+								</td>
+							</tr>
+							<tr>
+								<th>고등학교명</th>
+								<td colspan="3">
+									<div class="formSch">
+										<input class="input sch" type="text" />	
+										<a class="btn_sch" href="#">검색</a>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>		
+					
+					<div class="btnStyle1">
+						<a class="btnBg w145" href="#">검색</a>
+						<a class="w145" href="#">전체리스트보기</a>
+					</div>
+			
+
+
+					<h6 class="mt60">고교-대학연계 프로그램 리스트 </h6>
+					<div class="table1">
+						<div class="ov_h">
+							<table class="fz12 lh-06">
+								<colgruop>
+									<col style="width:40px;">
+									<col  >
+									<col style="width:104px;">
+									<col>
+									<col style="width:50px;">
+									<col style="width:50px;">
+									<col style="width:67px;">
+									<col style="width:67px;">
+									<col style="width:67px;">
+									<col>
+									<col>
+								</colgruop>
+								<tr>
+									<th><div class="chk"><input type="checkbox" id="ch1" /><label for="ch1"></label></div></th>
+									<th>고등학교명</th>
+									<th>일시</th>
+									<th>주제</th>
+									<th>배정자</th>
+									<th>확인자</th>
+									<th class="thEm">장소</th>
+									<th class="thEm">신청인원</th>
+									<th class="thEm">처리상태</th>
+									<th>배정인원</th>
+									<th>설명회<br />유형</th>
+								</tr>
+								<tr>
+									<td><div class="chk"><input type="checkbox" id="ch2" /><label for="ch2"></label></div></td>
+									<td><a href="#" class="underline">경기고등학교</a></td>
+									<td>2016-12-18 ~ 2016-12-31</td>
+									<td>제 1회 인성교육 프로그램</td>
+									<td>손희정</td>
+									<td>박용우</td>
+									<td class="tdEm"><a href="#">선경빌딩</a></td>
+									<td class="tdEm"><a href="#">100명</a></td>
+									<td class="tdEm"><a href="#">신청대기</a></td>
+									<td>50명</td>
+									<td>캠퍼스투어</td>
+								</tr>
+								<tr>
+									<td><div class="chk"><input type="checkbox" id="ch2" /><label for="ch2"></label></div></td>
+									<td><a href="#" class="underline">경기고등학교</a></td>
+									<td>2016-12-18 ~ 2016-12-31</td>
+									<td>원대로 진로탐색 및 직업체험</td>
+									<td>손희정</td>
+									<td>박용우</td>
+									<td class="tdEm"><a href="#">미도</a></td>
+									<td class="tdEm"><a href="#">100명</a></td>
+									<td class="tdEm"><a href="#">신청완료</a></td>
+									<td>10명</td>
+									<td>전공체험</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+				
+		
+					<div class="btnStyle1 right">
+						<a class="" href="#">삭제</a>
+						<a class="" href="#">엑셀 다운로드</a>
+						<a class="btnBg" href="#">일정등록하기</a>
+					</div>
+
+
+			
+
+
+			</div>
+			<!-- //내용끝 //sCon -->
+		</div>
+	</div>
+	<!-- //서브 -->
+
+
+
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="center_align">
+			<ul class="f_menu clearfix">
+				<li>
+					<div>
+						<a href="#">기본정보관리</a>
+						<ul>
+							<li><a href="#">화면설정</a></li>
+							<li><a href="#">코드관리</a></li>
+							<li><a href="#">계정관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">학사일정 관리</a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</div>				
+				</li>
+				<li>
+					<div>
+						<a href="#">고교 정보관리</a>
+						<ul>
+							<li><a href="#">지원자 통계</a></li>
+							<li><a href="#">합격자 통계</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">교육활동 관리</a>
+						<ul>
+							<li><a href="#">입학전형 설명회 </a></li>
+							<li><a href="#">고교방문상담</a></li>
+							<li><a href="#">고교-대학연계</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">커뮤니티</a>
+						<ul>
+							<li><a href="#">공지사항 </a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="bottom">
+			<div class="center_align clearfix">
+				<p class="add">우)54538 전북 익산시 익산대로 460. TEL : 063-850-5114  FAX : 063-850-6666</p>
+				<p class="copy">&copy; 2013 WONKWANG UNIVERSITY. All rights reserved</p>
+			</div>
+		</div>
+
+	</div>
+	<!-- //footer -->
+
+
+</body>
+</html>

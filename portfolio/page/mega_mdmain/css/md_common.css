@@ -1,0 +1,636 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; font-size: 100%; line-height: inherit; color: inherit; font-family: inherit; font-style:normal; -webkit-text-size-adjust:none; letter-spacing: normal; word-break:normal;}
+td	{ margin: 0; font-size: 100%; line-height: inherit; color: inherit; font-family: inherit; font-style:normal; -webkit-text-size-adjust:none; letter-spacing: normal; word-break:normal;}
+table { font-size: 100%; line-height: inherit; color: inherit; font-family: inherit; font-style:normal; -webkit-text-size-adjust:none; word-break:normal; border-color:#ccc;}
+th, td { word-wrap:break-word; word-break:normal; }
+fieldset, iframe { border:0; vertical-align:top; }
+img { border:0; font-size:0; vertical-align:middle; -ms-interpolation-mode: bicubic; }
+html>body>img   {-ms-interpolation-mode: nearest-neighbor;}
+address,cite,code,dfn,em,var { font-style:normal; font-weight:normal; }
+ol, ul, li, dd { list-style:none; word-break:normal; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+hr { display:none; }
+caption { overflow:hidden;width:100%;height:1px;font-size:1px;line-height:0;text-indent:-9999px; margin-top:-1px; }
+legend {  overflow:hidden;width:100%;height:1px;font-size:1px;line-height:0;text-indent:-9999px; margin-top:-1px; }
+button { padding:0; border:0; cursor:pointer; background:none; vertical-align:middle; font-size:12px; appearance: none; moz-appearance: none; }
+table { border-collapse:separate; /*table-layout:fixed;*/ *border-collapse:collapse;}
+i, em { font-style: normal; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+a, a code { color:#222; text-decoration:none; cursor:pointer; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; }
+a:focus, a:focus code, a:active, a:active code,
+a:focus strong, a:active, a:active strong,
+a:focus em, a:active, a:active em,
+a:focus small, a:active, a:active small,
+a,area { blr:expression(this.onFocus=this.blur()); outline:none; selector-dummy: expression(this.hideFocus=true);}
+:focus { -moz-outline-style: none; }
+a:hover, a:hover code, 
+a:hover strong, 
+a:hover em, 
+a:hover small, 
+a:hover span { text-decoration:none; border:none;}
+map	{ border:none;}
+sup,sub { font-size:0.9em; font-style:italic; }
+select { padding:5px 4px; font-size:1em; color:#444; line-height:22px; vertical-align:middle; border:1px solid #c4c4c4; }
+select:focus, select:hover { color:#444; }
+select.seldesign { height:31px; *height:auto; }
+input[type="radio"] { width:12px; height:12px; font-size:12px; vertical-align:-2px; *vertical-align:2px; margin-right:2px; }
+input[type="checkbox"] { width:13px; height:13px; font-size:13px; vertical-align:-2px; *vertical-align:2px; margin-right:2px; }
+textarea { border:1px solid #e7e7e7; padding:10px; overflow-y:auto; font-size:12px; }
+input, button, select, textarea { font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; color:#333; }
+body { position:relative; font-size:12px; line-height:18px; background-color:#fff; word-break: normal; white-space:normal; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; color:#666; }
+
+/* Align Style */
+.left { text-align:left !important; }
+.center { text-align:center !important; }
+.right { text-align:right !important; }
+.fL { float:left !important; }
+.fR { float:right !important; }
+.both { clear:both !important; }
+.top { vertical-align:top !important; }
+.middle { vertical-align:middle !important; }
+.fLighter { font-weight:lighter !important; }
+.fB { font-weight:bold !important; }
+.clearfix { *zoom: 1; } /* 2018.07.17 */
+.clearfix:after { display: block; clear: both; content: ''; } /* 2018.07.17 */
+
+/* 2018.10.25 Ãß°¡~ */
+.ov_visible { overflow: visible !important; }
+.ov_hidden { overflow: hidden !important; }
+.ov_auto { overflow: auto !important; }
+.relative { position: relative; }
+.ellipsis { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.containerAreaBox { overflow: hidden; }
+.containerAreaBox+.footer { margin-top: 0; }
+.content2 { position: relative; }
+.content_align { position: relative; width: 1020px; margin: 0 auto; }
+
+.rightSky2 { position: absolute; left: 50%; top: 0; margin-left: 525px; width: 100px; }
+.rightSky2 .banner { margin-top: 5px; }
+.rightSky2 .banner:first-child { margin-top: 0; }
+/* ~2018.10.25 Ãß°¡ */
+
+/* bxslider */
+.bx-controls { position:absolute; top:0; left:0; z-index:10; }
+.bx-controls .bx-pager { position:absolute; overflow:hidden; }
+.bx-controls .bx-pager-item { width:11px; display:inline-block; float:left; margin-right:5px; }
+.bx-controls .bx-pager-item a { display:block; width:11px; height:10px; overflow:hidden; text-indent:-999em; background:url("http://img.megamd.co.kr/lec_n/common/slider_dot.png") -15px 0 no-repeat; }
+.bx-controls .bx-pager-item a.active { background-position:0 0; }
+.bx-controls .bx-controls-direction { display:none; }/*0421*/
+.bx-controls-auto { display:none; }
+.bx-viewport { z-index:1; }
+.slideArea { position:absolute; top:0; right:0; }
+.slidePrev, .slideNext, .bx-prev, .bx-next { display:block; float:left; width:25px; height:21px; background:url("http://img.megamd.co.kr/lec_n/common/btn_arrow.png") 0 0 no-repeat; text-indent:-9999px; cursor:pointer; z-index:100; }
+.slidePrev, .bx-prev { background-position:0 0; }
+.slideNext, .bx-next { background-position:-25px 0; }
+.numberArea { position:absolute; top:3px; right:58px; width:100px; text-align:right; }
+.numberArea span { color:#aaa; font-size:10px; font-family: Tahoma, '¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; font-weight:bold; }
+.thisNum { color:#7887a4 !important; }
+
+/* layout */
+.wrap { text-align:left; }
+.wrap table	{ border-spacing:0}
+.wrap td	{ padding:0}
+.header table	{ border-spacing:0}
+.header td	{ padding:0}
+.container table	{ border-spacing:0}
+.container td	{ padding:0}
+.footer table	{ border-spacing:0}
+.footer td	{ padding:0}
+.wrap.sub .container { float:left; overflow:hidden; margin:30px 0 30px 115px; width:1020px;}
+.wrap.sub .content { width:800px; text-align:left !important; }
+.wrap.sub .content .con_700px { position:relative; width:700px; text-align:left !important; }
+.header { position:relative; width:100%; min-width:1250px; z-index:100; }/*0600*/
+.containerArea { position:relative; overflow:hidden; margin:0 auto; width:1250px; z-index:1; *zoom:1; }/*2018.10.25*/
+.containerArea:after { display: block; clear: both; content: ''; }/*2018.10.25*/
+.containerAreaBox { position:relative; width:100%; min-width:1250px; text-align:center; overflow:hidden; *zoom:1; } /*2018.10.25*/
+.containerAreaBox:after { display: block; clear: both; content: ''; }/*2018.10.25*/
+.leftSky { float:left; margin-top:30px; margin-right:15px; width:100px; }
+.leftSky_main { position:absolute; top:30px; left:50%; margin-left:-665px; z-index:2; width:140px;}/*1111*/
+.rightSky { float:left; margin-top:30px; margin-left:15px; width:100px; }
+.rightSky_main { position:absolute; top:30px; right:50%; margin-right:-665px; z-index:2; width:140px;}/*1111*/
+.textC	{text-align:center}
+.containerT	{ width:100%;}
+.container { float:left; overflow:hidden; margin-top:30px; width:1020px; }
+.container_main { overflow:hidden; margin:30px auto 0; width:1020px; }
+.content { position:relative; float:left; margin:0; width:1020px; text-align:left !important; }
+.footer { width:100%; min-width:1250px; margin-top:30px; padding-top:1px; padding-bottom:50px; height:159px; background:url("http://img.megamd.co.kr/lec_n/common/sub_footer_bg.png") 0 0 repeat-x; }
+.footer .family { overflow:hidden; margin:0 auto; *margin-left:2px; width:1020px; height:56px; }
+/*0704//*/
+.footer .family li { float:left; width:91px; height:56px; padding-left:1px; background:url("http://img.megamd.co.kr/lec_n/common/bar2.png") 0 50% no-repeat;}
+.footer .family li a { display:block; overflow:hidden; height:56px; text-align:center}
+.footer .family li:first-child	{ background:none; padding:none;}
+.footer .arrFl	{ position:absolute; left:-20px; top:20px; z-index:2}
+.footer .arrFr	{ position:absolute; right:-20px; top:20px; z-index:2}
+/*//0704*/
+.footer .policy { overflow:hidden; margin:0; width:607px; font-size:11px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; }
+.footer .add { overflow:hidden; float:left; margin-top:14px; width:800px; font-size:11px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important;}
+.footer .add td { height:22px; line-height:19px; color:#999; }
+.footer .add td span { margin-right:5px; }
+.footer .add td a { margin-left:5px; }
+
+
+.footer .policy { overflow:hidden; width:1020px; font-size:11px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; }
+.footer .policy li { float:left; padding:5px 11px 0; height:22px; background:url("http://img.megamd.co.kr/lec_n/common/bar1.png") 0 50% no-repeat; }
+.footer .policy li.f1 { background:none; }
+.footer .policy li a { color:#666; font-size:11px; line-height:14px; font-family: '¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; }
+.footer .policy li a:hover { text-decoration:none; color:#222; }
+
+.footer .bannerArea { margin-top:11px; float:right; }
+
+
+/* FOOTER renewal 2018.11.21 */
+.w1020 { width:1020px; margin:0 auto; position: relative; }
+#footer { position: relative; z-index: 10; min-width: 1250px; padding-bottom: 40px; background: #fff; clear: both; border-top: 1px solid #bebfc0;  }
+#footer .fleft {float: left;}
+#footer .foot_info1 { position: relative; overflow: visible; height: 56px; }
+#footer ul.infoCo { }
+#footer ul.infoCo>li { float: left; overflow: hidden; margin-right: 18px; }
+#footer ul.infoCo>li>a { display: block; height: 56px; font-size: 13px; color: #969798; line-height: 53px; }
+#footer ul.infoCo>li>a:hover { color:#333; }
+
+#footer .family { position: absolute; top: 13px; right: 0; z-index: 1000; overflow: hidden; width: 170px; height: 28px; border: 1px solid #ddd; border-radius: 15px; background: #fff; }
+#footer .family.open { overflow:visible; background: #f5f5f5; }
+#footer .family .formnav { display: block; position: relative; overflow: hidden; height: 28px; line-height:26px; text-indent: 18px; color: #666; text-align: left;  cursor: pointer; }
+#footer .family .formnav:after { content:""; position: absolute; top: 13px; right: 20px; display: block; width:0; border-top: 4px solid #969798; border-right: 4px solid transparent; border-left: 4px solid transparent; vertical-align:-1px; }
+#footer .family.open .formnav { color: #333; }
+#footer .family.open .formnav:after  { top: 8px; border-top: 4px solid transparent; border-bottom: 4px solid #969798; }
+#footer .family ul {}
+#footer .family ul li { overflow: hidden; }
+#footer .family ul li a { display:block; width:100%; height:24px; padding:0 13px; color:#666; line-height:20px; text-align:left;  }
+#footer .family ul li a:hover { color:#333; background: #f5f5f5; }
+#footer .family ul.list { position:absolute; left:-1px; bottom:30px; display:none; width:170px; height:0; padding:10px 0; border:1px solid #ddd; border-radius:15px; background:#fff; font-size:12px; }
+#footer .family ul.list.open { bottom:28px; display:block; overflow:visible; height:auto; }
+
+#footer .foot_info2 { position: relative; border-top: 1px solid #bebfc0; padding-top: 23px; }
+#footer .connect { max-width: 730px; }
+#footer .connect dl:after, #footer .connect:after { clear: both; content: ''; display: block; }
+#footer .connect dl { float: left;  height: 22px; }
+#footer .connect dl dt { float: left; margin-right: 4px; color: #969798; font-size: 12px; }
+#footer .connect dl dd { float: left; margin-right: 16px; color: #969798; font-size: 12px; }
+#footer .connect .btn_line_small { width: 52px; padding: 0;color: #969798; font-size: 11px; margin-top: -1px; margin-left: 5px; line-height: 15px !important; border: 1px solid #bbb; }
+#footer .copy { position: relative; top: -2px; font-size: 12px; color: #969798; text-align: left; }
+#footer .bannerArea { position: absolute; right: 0; top: 0; }
+/* //FOOTER renewal 2018.11.21 */
+
+
+/*0421//*/
+.navW { width: 100%; height: 30px; border-bottom: 1px solid #e5e5e5;}
+.nav { position:relative; margin:0 auto; width:1020px; height:30px; font-size:11px; line-height:29px; color:#888; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; text-align:left; letter-spacing:-0.5px;}
+.nav > a { vertical-align:top; }
+.nav > a:first-child { margin-left:4px; }
+.nav > a img { vertical-align:top; margin-top: 7px; }
+.nav ul { position:absolute; top:1px; right:-10px; overflow:hidden; }
+.nav ul li { float:left; padding:0 10px; background:url("http://img.megamd.co.kr/lec_n/common/bar1.png") 0 50% no-repeat; }
+.nav ul li.f1 { background:none; }
+.nav ul li a { display:inline-block; color:#888; font-size:11px; line-height:29px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; text-decoration:none; letter-spacing:-0.5px;}
+.nav ul li a:hover { color:#222; }
+/*//0421*/
+
+/*170526//*/
+.logoArea { /*overflow:hidden;*/ position:relative; margin:0 auto; width:1020px; height:91px; z-index:10; }
+.logoArea h1 { float:left; display:inline-block; padding-top:30px; }
+.logoArea ul.myList { overflow:hidden; float:left; margin-top:40px; margin-left:25px; font-size:13px; }/*0421*/
+.logoArea ul.myList li { float:left; padding:0 11px; background:url("http://img.megamd.co.kr/lec_n/common/bar1.png") 0 50% no-repeat; }
+.logoArea ul.myList li.f1 { padding-left:0; background:none; }
+.logoArea ul.myList li a { display:inline-block; padding:5px 0; color:#888; font-size:13px; line-height:17px; text-decoration:none; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; letter-spacing:-1px;}
+.logoArea ul.myList li a:hover { color:#222; }
+.logoArea ul.myList .mypage { padding-left:18px; background:url("http://img.megamd.co.kr/lec_n/common/icon_mypage_1.png") 0 50% no-repeat; }
+.logoArea ul.myList .sch { padding-left: 25px; background:url("http://img.megamd.co.kr/2018/1121_main_renewal//icon_sch.png") 0 50% no-repeat; } /*2018.11.21*/
+.logoArea ul.myList .evtpick_bt { padding-left:22px; background:url("http://img.megamd.co.kr/2018/1121_main_renewal/icon_evtpick.png") 0 50% no-repeat; color: #333; font-weight: bold;}/*2018.11.21*/
+.logoArea ul.myList li a.my, .logoArea ul.myList li a.myP { padding-right:13px; background:url("http://img.megamd.co.kr/lec_n/common/arrow_my.png") right 13px no-repeat; }
+.logoArea ul.myList li a.my.on, .logoArea ul.myList li a.myP.on {background-position:right -33px; }
+.logoArea ul.myList li a.my, .logoArea ul.myList li a.myP, .logoArea ul.myList li a strong { text-decoration:none !important; }
+.logoArea ul.myList li a.my strong, .logoArea ul.myList li a.myP strong { color:#333; }
+.infoBox { display:none; position:absolute; top:65px; left:50%; margin-left:-300px; padding:11px 0 0 16px; width:170px; height:153px; background:url("http://img.megamd.co.kr/lec/2017/0615/myinfo_layer_bg_170615.png") 0 0 no-repeat; z-index:999; text-align:left; }
+.infoBox.on { display:block; }
+.infoBox.Ty1 { height:208px; background:url("http://img.megamd.co.kr/lec_n/common/myinfo_layer_bg1.png") 0 0 no-repeat; }
+.infoBox .info { padding-left:9px; font-size:11px; color:#666; background:url("http://img.megamd.co.kr/lec_n/common/dot3.png") 0 50% no-repeat; }
+.infoBox .info.longTy1 { display:block; line-height:27px; }
+.infoBox .info.longTy2 { display:block; line-height:26px; }
+.infoBox .info.longTy2 a { color: #333; font-size: 12px; font-weight: bold}
+.infoBox .info.longTy2 a:hover { color:#2187e9; }
+.infoBox .info.shortTy1 { display:inline-block; width:64px; line-height:27px; }
+.infoBox .info em { margin-left:7px; color:#408dd8; font-family:tahoma, dotum, gulim,'µ¸¿ò', '±¼¸²' !important;}
+.infoBox .info a {  font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; color:#666; line-height:27px; font-size:11px;}
+.infoBox .info.ty1 a { line-height:16px;}
+.infoBox .preBox { overflow:hidden; padding-top:4px; }
+.infoBox .preBox span { display:block; margin-bottom:0px; font-size:11px; font-family: Tahoma, '¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; line-height:16px; letter-spacing:0.05em; }
+.infoBox .preBox strong { display:block; color:#0082ff; font-weight:bold; letter-spacing:0.02em; }
+.infoBox .preBox .info { margin-bottom:0; line-height:15px; }
+.infoBox .preBanner { width:138px; position:absolute; bottom:28px; left:15px;}
+.infoBox .preBanner ul li { width:138px !important; }
+.infoBox .preBanner ul li:first-child { margin-left:-138px; *margin-left:0; margin-left:0; }
+.infoBox .preBanner .bx-wrapper { position:relative; }
+.infoBox .preBanner .bx-viewport { padding-top:15px; height:35px !important; }
+.infoBox .preBanner .bx-controls { top:0; left:auto; right:0; width:100%; }
+.infoBox .preBanner .bx-controls .bx-pager { right:0; }
+.infoBox .preBanner .bx-controls .bx-pager-item a { width:8px; height:8px; background-position:-39px -1px; }
+.infoBox .preBanner .bx-controls .bx-pager-item a.active { background-position:-29px -1px; }
+.logoArea .search { position:relative; float:right; margin-top:40px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; }
+.logoArea .search input[type="text"] { padding:0 11px; width:151px; height:29px; line-height:29px; margin:0; font-size:inherit; color:#333; vertical-align:middle; -webkit-border-radius:0; border:1px solid #cfcfcf; box-sizing:inherit !important;}
+.logoArea .search label { position:absolute; top:5px; left:10px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; line-height:17px; letter-spacing:-0.5px;}
+.logoArea .promotionBnr { position:relative; float:right; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; overflow: hidden; height: 91px;}
+.logoArea .promotionBnr .bnr { position: relative; padding-right: 15px; height: 91px; overflow: hidden;}
+.logoArea .promotionBnr .arrBox { position: absolute; bottom: 30px; right: 0; z-index: 1; width: 15px; height: 29px;}
+.logoArea .promotionBnr .arrBox img, .logoArea .promotionBnr .arrBox a {vertical-align: top; float: left;}
+
+/*ÀÌº¥Æ®ÇÈ*/
+/* 2017.11.16 */
+.evtPick_wrap { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 999;}
+.evtPick_BG { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #000; opacity:0.90; filter: alpha(opacity=90); z-index: 9999; background-attachment: fixed}
+.evtPick { position: fixed; z-index: 99999; top: 0; left: 50%; margin-left: -510px; width: 1020px; height: 100%; min-height: 600px; overflow-y: scroll; background: #fff;}
+.evtPick .evtPick_box { position: relative; width: 840px; margin: 40px auto;}
+.evtPick .bt_close { position: absolute; top: 20px; right: 20px;}
+
+.evtPick .evtPick_tit {width: 840px; height: 94px;}
+.evtPick .evtPick_tit h3 { float: left; font-size: 23px; color: #000; letter-spacing: -1px;}
+.evtPick .evtPick_tit h3 strong {font-size: 28px; color: #000; font-weight: bold; font-family:tahoma;}
+.evtPick .evtPick_tit h3 p { font-size: 14px; font-weight: normal; color: #888; letter-spacing: -0.5px; line-height: 52px;} 
+.evtPick .evtPick_tit .evtPickbn { float: right; margin-top: -13px; overflow: visible;}
+
+.evtPick .evtPick_stit {height: 30px; overflow: hidden; margin-top: -10px;}
+.evtPick .evtPick_stit .alink { float: left}
+.evtPick .evtPick_stit .alink ul { overflow: hidden}
+
+.evtPick .evtPick_stit .alink .ty1 { width: 59px;}
+.evtPick .evtPick_stit .alink .ty1 li a { display: inline-block; float: left; background: url(http://img.megamd.co.kr/lec/2017/0615/bt1_evtpick.gif) no-repeat; height: 30px;}
+.evtPick .evtPick_stit .alink .ty1 .slidePrev { background-position: 0 0; width: 30px;}
+.evtPick .evtPick_stit .alink .ty1 .slideNext { background-position: -30px 0; width: 29px;}
+.evtPick .evtPick_stit .alink .ty1 .slidePrev:hover { background-position: 0 -30px;}
+.evtPick .evtPick_stit .alink .ty1 .slideNext:hover { background-position: -30px -30px;}
+.evtPick .evtPick_stit .alink .ty2 { overflow: hidden; border-left: 1px solid #d4d4d4;}
+.evtPick .evtPick_stit .alink .ty2 li { position: relative; float: left; width: 57px; height: 28px; border: 1px solid #d4d4d4; border-left: none;}
+.evtPick .evtPick_stit .alink .ty2 li a { width: 57px; height: 28px; text-align: center; display: inline-block; line-height: 26px; color: #666;}
+.evtPick .evtPick_stit .alink .ty2 li a:hover { color: #222; font-weight: bold;}
+.evtPick .evtPick_stit .alink .ty2 li .on { position: absolute; top: -1px; left: -1px; width: 57px; height: 28px; z-index: 3; color: #222; font-weight: bold; border: 1px solid #222;}
+.evtPick .evtPick_stit .alink .ty2 li:first-child .on { border-left: 1px solid #222; width: 56px; left: 0;}
+
+.evtPick .evtPickBn_li { overflow: hidden; margin-top: 10px;}
+.evtPick .evtPickBn_li ul { overflow: hidden; margin-top: 10px; width: 855px; /*! height: 120px; */margin-left: -8px;}
+.evtPick .evtPickBn_li li { float: left; width: 270px; height: 120px; /*! margin-left: 15px; */margin: 10px 7px 0 8px;}
+.evtPick .evtPickBn_li li:first-child {/*! margin-left: 0; */}
+.evtPick .evtPickBn_li li a { display: block; width: 270px; height: 120px; text-align: center;}
+.evtPick .evtPickBn_li .txt1 { font-size: 14px; display: inline-block; width: 100%; margin-top: 25px; line-height: 16px; overflow: hidden;}
+.evtPick .evtPickBn_li .txt2 { font-size: 20px; font-weight: bold; display: inline-block; width: 100%; line-height: 33px; overflow: hidden}
+.evtPick .evtPickBn_li .txt3 { font-size: 13px; display: inline-block; width: 100%; line-height: 16px; overflow: hidden; color:rgba(0, 0, 0, 0.5); }
+.evtPick .evtPickBn_li li a:hover .txt2 { text-decoration: underline;}
+
+.evtPick .evtPickBn_li .bnTy1_1 a, .evtPick .evtPickBn_li .bnTy1_2 a, .evtPick .evtPickBn_li .bnTy1_3 a, .evtPick .evtPickBn_li .bnTy1_4 a, { color: #142c43;}
+.evtPick .evtPickBn_li .bnTy1_1 { background: #e9e4de;}
+.evtPick .evtPickBn_li .bnTy1_2 { background: #f7e1e0;}
+.evtPick .evtPickBn_li .bnTy1_3 { background: #f1d4bc;}
+.evtPick .evtPickBn_li .bnTy1_4 { background: #dee8ee;}
+/*// 2017.11.16 */
+/*//170526*/
+
+/*0600//*/
+.gnbW_md	{ position:relative; background:url(http://img.megamd.co.kr/lec_n/common/bg_gnb_1.gif) repeat-x; height:58px;}/*0421*/
+.gnb_md { margin:0 auto; *margin-left:0px; padding:0; width:1020px; height:58px; text-align:left; }/*0421*/
+.gnb_md li { position: relative; float:left; margin-left:58px; }
+.gnb_md li.g1 { margin-left:0; }
+.gnb_md li a { display:block; height:54px; background:url("http://img.megamd.co.kr/lec_n/common/gnb_menu_0607.png") 0 0 no-repeat; text-indent:-9999px; }
+.gnb_md .g1 a { width:56px; background-position:0 0; }
+.gnb_md .g1 a:hover, .gnb_md .g1.on a { background-position:0 -56px; }
+.gnb_md .g1 a.menu { position: absolute; top:22px; right:-20px; width: 16px; height: 12px; background:url(http://img.megamd.co.kr/lec_n/common/icon_prof_menu.png) no-repeat; }
+.gnb_md .g1 a.menu.on,.gnb_md .g1 a.menu:hover { background-position:-16px 0; }
+.gnb_md .g2 { width:72px; }
+.gnb_md .g2 a { background-position:-118px 0; }	
+.gnb_md .g2 a:hover, .gnb_md .g2.on a { background-position:-118px -56px; }
+.gnb_md .g3 { width:84px; }
+.gnb_md .g3 a { background-position:-247px 0; }	
+.gnb_md .g3 a:hover, .gnb_md .g3.on a { background-position:-247px -56px; }
+.gnb_md .g4 { width:56px; }
+.gnb_md .g4 a { background-position:-387px 0; }
+.gnb_md .g4 a:hover, .gnb_md .g4.on a { background-position:-387px -56px; }	 
+.gnb_md .g5 { width:69px; }
+.gnb_md .g5 a { background-position:-506px 0; }	
+.gnb_md .g5 a:hover, .gnb_md .g5.on a { background-position:-506px -56px; } 
+.gnb_md .g6 { width:68px; }
+.gnb_md .g6 a { background-position:-635px 0; }
+.gnb_md .g6 a:hover, .gnb_md .g6.on a { background-position:-635px -56px; }	
+.gnb_md .g7 { width:70px; }
+.gnb_md .g7 a { background-position:-759px 0; }	
+.gnb_md .g7 a:hover, .gnb_md .g7.on a { background-position:-759px -56px; } 
+.gnb_md .g8 { width:138px; }
+.gnb_md .g8 a { background-position:-882px 0; }
+.gnb_md .g8 a:hover, .gnb_md .g8.on a { background-position:-882px -56px; }
+
+.profMinfo_gnb {position:absolute; left: 50%; overflow: hidden; margin-left:-510px; width: 1018px; height: 320px; z-index:2; border: 1px solid #0082ff; border-top:0; background: #fff; text-align:left}
+.profMinfo_gnb .subLnb_box .lecSet { float: left; width: auto; overflow: hidden; margin: 25px 0 0 10px; border-left: 1px solid #ebebeb; padding-left: 10px; overflow: hidden}
+.profMinfo_gnb .f1 { padding-left:0; border-left: none !important; margin-left: 12px;}
+.profMinfo_gnb .subLnb_box .lecSet p { padding-left: 15px; margin-bottom: 15px;}
+.profMinfo_gnb .subLnb_box .lecSet ul { float: left; height:210px; width:90px; margin-right: 5px; }
+.profMinfo_gnb .subLnb_box .lecSet .lecT { color:#0082ff; font-size: 11px; padding-left: 15px;}
+.profMinfo_gnb .lecSet ul li { padding-left: 15px; height: 26px; position: relative;}
+.profMinfo_gnb .lecSet ul li a { color: #666; width: 60px; height: 24px;}
+.profMinfo_gnb .lecSet ul li a:hover { color: #0082ff;}
+.profMinfo_gnb .lecSet .icoN { margin-left:3px; }
+.profMinfo_gnb .subLnb_box .bt_X { position: absolute; bottom: 0px; right: 0px; width: 28px; height: 28px;}
+/*//0600*/
+
+.leftSky .banner, .rightSky .banner { margin-top:5px; }
+.leftSky .banner:first-child, .rightSky .banner:first-child { margin-top:0; }
+.leftSky .banner.Ty1 { position:relative; width:100px; height:158px; background:url("http://img.megamd.co.kr/lec_n/common/left_sky_banner1_bg.jpg") 0 0 no-repeat; }
+.leftSky .banner.Ty1 .btnArea { position:absolute; bottom:10px; left:10px; }
+.leftSky .banner.Ty2 { position:relative; width:100px; height:112px; background:url("http://img.megamd.co.kr/lec_n/common/left_sky_banner3_bg.jpg") 0 0 no-repeat; }
+.leftSky .banner.Ty2 .btnArea { position:absolute; bottom:0; left:0; height:22px; }
+.leftSky .banner.Ty2 .btnArea a { float:left; }
+
+.lnb { float:left; margin:0 20px 0 0; width:200px; text-align:left; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; }
+.lnb.Ty160 { width:160px !important; }
+.lnb h1 { margin-bottom:20px;}
+.lnb ul.lnbUl { margin-top:20px; border-top:1px solid #006fd6; border-bottom:1px solid #cbccd1; }
+.lnb .dep1 { overflow:hidden; padding:10px 23px 10px 2px; min-height:20px; height:auto; line-height:18px; font-size:13px; font-weight:bold;  border-top:1px solid #cbccd1; background:url("http://img.megamd.co.kr/lec_n/common/lnb_arrow1.png") right -77px no-repeat; cursor:pointer; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; color:#222; letter-spacing:-0.05em; }
+.lnb .dep1 img { margin-top:4px; vertical-align:top; }
+.lnb .iconNew { display:inline-block; padding-right:23px; background:url("http://img.megamd.co.kr/lec_n/common/icon_new3.png") right 51% no-repeat; vertical-align:middle; }
+.lnb .dep2 { overflow:hidden; border-top:1px solid #cbccd1; cursor:pointer; }
+.lnb ul li:first-child .dep2 { border-top:none; }
+.lnb .dep2 a { display:block; padding:10px 0 10px 2px; min-height:20px; height:auto; line-height:18px; font-size:13px; font-weight:bold; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important;color:#333; letter-spacing:-0.05em;}/* 2015-09-20 : Ãß°¡ */
+/* ÀÌÀü¹öÀü
+.lnb .dep2 { overflow:hidden; padding:10px 0 10px 2px; min-height:20px; height:auto; line-height:18px; font-size:13px; font-weight:bold;  border-top:1px solid #cbccd1; cursor:pointer; }
+.lnb .dep2 a { line-height:18px; font-size:13px; font-weight:bold; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important; color:#333; } */
+.lnb ul li { background-color:#fff; }
+.lnb ul li.f1 .dep1 { border-top:none; }
+.lnb ul li.current .dep1 { background-position:right 18px; border-bottom:1px solid #cbccd1; }
+.lnb ul li ul { margin:10px 0 5px; }
+.lnb ul li ul li { position:relative; padding:0 0 5px 7px; background:url("http://img.megamd.co.kr/lec_n/common/dot2.png") 0 8px no-repeat; }
+/*.lnb ul li ul li .iconNew { position:absolute; top:50%; right:8px; margin-top:-5px; overflow:hidden; display:inline-block; width:12px; height:11px; background:#f4f3f7 url("http://img.megamd.co.kr/lec_n/common/icon_new2.png") 0 0 no-repeat; text-indent:-9999px; vertical-align:middle; }*/
+.lnb ul li ul li a { color:#888; line-height:19px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; letter-spacing:-0.06em; }
+.lnb ul li ul li.on a, .lnb ul li ul li a:hover { text-decoration:none; color:#006fd6; letter-spacing:-0.06em;}
+.lnb ul li ul li.on a { font-weight:bold;}
+
+#lnbTab { overflow:hidden; margin-top:20px; width:200px; }
+#lnbTab li { float:left; }
+#lnbTab a { display:block; padding-top:8px; border-top:1px solid #eeedf1; border-right:1px solid #eeedf1; border-left:1px solid #eeedf1; border-bottom:1px solid #006fd6; background-color:#fff; width:98px; height:35px; background-color:#eeedf1; font-size:11px; font-weight:bold;  font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; text-align:center; line-height:14px; }
+#lnbTab a:hover, 
+#lnbTab a.active { border-top:1px solid #006fd6; border-left:1px solid #006fd6; border-right:1px solid #006fd6; border-bottom:1px solid #fff; background-color:#fff; }
+.subDep span a { font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; letter-spacing:-0.06em; color:#888; }
+.lnb .col2 .lnbUl { margin-top:0; border-top:none; }
+.lnb .subDep .subTit { padding:0 10px; height:31px; border-top:none;  background-color:#f9f9f9; color:#7f8ca5; font-weight:bold; font-size:11px; line-height:30px; }
+.lnb .subDep .subTit.f2 { border-top:1px solid #efeff0; }
+.lnb .subDep .name { overflow:hidden; margin:8px 0; }
+.lnb .subDep .name span { display:inline-block; float:left; padding:0 5px 0 7px; width:75px; height:25px; background:url("http://img.megamd.co.kr/lec_n/common/dot2.png") 0 8px no-repeat; } 
+.lnb .subDep .name .on a, .lnb .subDep .name span a:hover { text-decoration:none; color:#006fd6; letter-spacing:-0.06em; }
+.lnb .subDep .name .on a { font-weight:bold; }
+.lnb .subDep .name span.long { width:185px; }
+
+.lnb.Ty160 #lnbTab { width:160px !important; }
+.lnb.Ty160 #lnbTab a { width:78px; }
+.lnb.Ty160 .subDep .name span { width:68px !important; }
+.lnb.Ty160 .subDep .name span.long { width:145px !important; }
+
+.lnb ul li.on .dep1, .lnb ul li.on .dep2 a, .lnb ul li .dep1:hover, .lnb ul li .dep2:hover a { color:#006fd6; }
+
+.leftSky .banner, .rightSky .banner { margin-top:5px; }
+.leftSky .banner:first-child, .rightSky .banner:first-child { margin-top:0; }
+.leftSky .banner.Ty1 { position:relative; width:100px; height:158px; background:url("http://img.megamd.co.kr/lec_n/common/left_sky_banner1_bg.jpg") 0 0 no-repeat; }
+.leftSky .banner.Ty1 .btnArea { position:absolute; bottom:10px; left:10px; }
+.leftSky .banner.Ty2 { position:relative; width:100px; height:112px; background:url("http://img.megamd.co.kr/lec_n/common/left_sky_banner3_bg.jpg") 0 0 no-repeat; }
+.leftSky .banner.Ty2 .btnArea { position:absolute; bottom:0; left:0; height:22px; }
+.leftSky .banner.Ty2 .btnArea a { float:left; }
+
+/********************************************************************************************************/
+
+/* bbs °øÅë */
+.vodBBSbox	{ position:relative; width:800px; margin-top:20px;}
+.vodBBSbox table img	{ vertical-align:middle; margin-bottom:1px;}
+.vodBBSbox table td a	{ color:#666;}
+.vodBBSbox table td a:hover	{ color:#222;}
+.vodBBSbox table td .icoN	{ margin-left:5px;}
+.vodBBSbox .bbsPage	{ margin:20px auto; text-align:center;}
+.vodBBSbox .bbsPage .num	{ padding:0 5px; font-family:tahoma; color:#a0a4ac; font-size:11px;}
+.vodBBSbox .bbsPage .on	{ font-weight:bold; color:#4a89ff;}
+.vodBBSbox .bbsPage .off:hover	{ color:#4a89ff;}
+.vodBBSbox .bbsPage .bt	{ width:17px; height:17px; overflow:hidden}
+.vodBBSbox .bbsSrh	{ position:relative; width:100%; padding:15px 0; background:#f9f9f9; text-align:center}
+.vodBBSbox .bbsSrh select	{ margin:0;	height:30px; font-size:12px; color:#707070; vertical-align:top;}
+.vodBBSbox .bbsSrh input	{ width:200px; height: 28px;	padding: 0 4px;	border: 1px solid #cbcbcb; background:#fff; font-size: 12px; vertical-align:top}
+.vodBBSbox .vodBBSlist .alignL	{ text-align:left}
+.vodBBSbox .vodBBSlist .alignC	{ text-align:center}
+.vodBBSbox .vodBBSlist .trlink	{ cursor:pointer;}
+
+/* tab */
+.bbsTab1	{ position:relative; width:100%; overflow:hidden; border-top:1px solid #333; border-bottom:1px solid #cbccd1; padding:10px 0;}
+.bbsTab1 li	{ float:left; width:11%; line-height:30px;}
+.bbsTab1 li a	{ color:#666; text-align:center; display:block; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; font-size:12px;}
+.bbsTab1 li a:hover	{ color:#222;}
+.bbsTab1 .on, .bbsTab1 .on:hover	{ width:100%; background:#365189; border-radius:2px; color:#fff; font-weight:bold;}
+
+.bbsTab2	{ position:relative; width:100%; overflow:hidden; height:41px; background:url(http://img.megamd.co.kr/lec_n/data/bg_bbstab.gif) repeat-x 0 100%;}
+.bbsTab2 li	{ position:relative;  background:#f9f9f9; float:left; border:1px solid #c4c4c4; border-bottom:0px; height:38px; margin-left:-2px;}
+.bbsTab2 li:first-child	{ margin:0;}
+.bbsTab2 li a	{ font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; display:block; position:relative; padding:9px 0 9px; border:1px solid #fff;color:#747474; text-align:center; border-top:1px solid transparent; height:18px; letter-spacing:-0.5px;}
+.bbsTab2 li a:hover	{ color:#222;}
+.bbsTab2 li.on	{ z-index:50; position:relative; height:40px; border:1px solid #7887a4; border-bottom:0;}
+.bbsTab2 li.on a	{ font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; overflow:hidden;position:relative;padding:9px 0 12px; border:1px solid #7887a4;border-bottom:0;background:#fff;color:#1a3e87;font-weight:bold;}
+
+.bbsTab3	{ position:relative; overflow:hidden; border-bottom:1px solid #7887a4; padding:10px 0;}
+.bbsTab3, .bbsTab3 a	{ font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; letter-spacing:-0.5px;}
+.bbsTab3 dt, .bbsTab3 dd	{ float:left; margin-right:25px; line-height:28px;}
+.bbsTab3 dt	{ font-weight:bold;}
+.bbsTab3 dd a	{ color:#999; display:inline-block; padding-right:13px; background:url(http://img.megamd.co.kr/lec_n/common/arrtype1_anchor_off.gif) no-repeat right 14px;}
+.bbsTab3 dd a:hover	{ color:#2187e9; background:url(http://img.megamd.co.kr/lec_n/common/arrtype1_anchor_on.gif) no-repeat right 14px;}
+
+.tabnum2 li	{ width:49.8%}
+.tabnum3 li	{ width:33.2%}
+.tabnum4 li	{ width:24.9%}
+.tabnum5 li	{ width:19.9%}
+.tabnum6 li	{ width:16.6%}
+.tabnum7 li	{ width:14.2%}
+
+.tabnum8 li	{ width:12.4%}
+
+/* btn */
+.vodBBSbox .btType1	{ height:30px; padding:0 10px; vertical-align:top; display:inline-block; background:#adb0b7; border-radius:2px; line-height:30px; vertical-align:middle; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; font-size:11px; letter-spacing:-1px; color:#fff;}
+.vodBBSbox .btType1:hover	{ background:#a4a9b3; color:#fff;}
+.vodBBSbox .bbsBTNset	{ position:relative; overflow:hidden; margin-top:10px;}
+.vodBBSbox .bbsBTNset .rightBTN	{ float:right; text-align:left}
+.vodBBSbox .bbsBTNset .leftBTN	{ float:left; text-align:left}
+.vodBBSbox .bbsBTNset .rightBTN a, .vodBBSbox .bbsBTNset .leftBTN a	{ display:inline-block; padding:6px 20px 8px; background:#fafafa; border:1px solid #ddd; border-radius:2px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important; font-size:12px; font-weight:bold; color:#666;}
+.vodBBSbox .bbsBTNset .rightBTN a:hover, .vodBBSbox .bbsBTNset .leftBTN a:hover	{ color:#222;}
+.vodBBSbox .bbsBTNset a.type1, .vodBBSbox .bbsBTNset a.type2	{ padding:6px 18px 8px; font-size:12px; color:#fff; border:0px;}
+.vodBBSbox .bbsBTNset a.type1	{ background:#90949c;}
+.vodBBSbox .bbsBTNset a.type1:hover	{ color:#fff; background:#868b94;}
+.vodBBSbox .bbsBTNset a.type2	{ background:#365189;}
+.vodBBSbox .bbsBTNset a.type2:hover	{ color:#fff; background:#2e4983;}
+
+/* list */
+.vodBBSbox .vodBBSlist	{ position:relative; width:800px; border-top:1px solid #333; padding:0;margin-top:20px;}
+.vodBBSbox .vodBBSlist th	{ height:34px; border-bottom:1px solid #e8e8e8; line-height:35px; background:#f9f9f9; text-align:center; font-size:11px; }
+.vodBBSbox .vodBBSlist.pds td:nth-child(2) { padding-right:5px !important; }/*171100*/
+.vodBBSbox .vodBBSlist.pds td:nth-child(3) { padding-left:5px !important; }/*171100*/
+.vodBBSbox .vodBBSlist td	{ position:relative; padding:15px 10px; border-bottom:1px solid #e8e8e8; text-align:center; vertical-align:middle;}
+.vodBBSbox .vodBBSlist .bbsT	{ display:block;}
+.vodBBSbox .vodBBSlist .bbsT_text	{ font-size:11px; color:#aaa; display:block; text-overflow:ellipsis; white-space:nowrap; width:480px; overflow:hidden}
+
+/* notice : ±¸ºÐ ¾ÆÀÌÄÜ */
+.vodBBSbox .icoBBStype1	{ display:block; width:100%; padding:0px 0 1px; border-radius:2px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; font-size:11px; letter-spacing:-1px;}
+.vodBBSbox .icoBBStype2	{ display:inline-block; padding:0px 0 1px; width:40px; margin-right:2px; border-radius:2px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; font-size:11px; letter-spacing:-1px;}/*171100*/
+.vodBBSbox .icoBBStype3	{ display:inline-block; width:100%; padding:0 2px 1px 2px; text-align:center; line-height:18px; border-radius:2px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; font-size:11px; letter-spacing:-1px;}/*171100*/
+.vodBBSbox .icoColor1	{ border:1px solid #b5bac4; color:#fff; background:#b5bac4;}
+.vodBBSbox .icoColor2	{ border:1px solid #3299f8; color:#fff; background:#3299f8;}
+.vodBBSbox .icoColor3	{ border:1px solid #3299f8; color:#2187e9; background:#fff;}
+.vodBBSbox .icoColor4	{ border:1px solid #596f9d; color:#1d5381; background:#fff;}
+.vodBBSbox .icoColor5	{ border:1px solid #365189; color:#fff; background:#365189;}/*171100*/
+.vodBBSbox .icoColor6	{ border:1px solid #28d5b6; color:#fff; background:#28d5b6;}/*171100*/
+.vodBBSbox .icoColor7	{ border:1px solid #f4993f; color:#fff; background:#f4993f;}/*171100*/
+.vodBBSbox .icoColor8	{ border:1px solid #7983a3; color:#fff; background:#7983a3;}/*171100*/
+.vodBBSbox .icoColor9	{ border:1px solid #f24443; color:#fff; background:#f24443;}/*171100*/
+
+/* view */
+.vodBBSbox .vodBBSview	{ position:relative; width:800px; border-top:1px solid #333; padding:0;margin-top:20px;}
+.vodBBSbox .vodBBSview .vodBBSviewTit	{ position:relative; width:100%; background:#f9f9f9; font-family: '³ª´®¹Ù¸¥°íµñ',NanumBarunGothic, '¸¼Àº°íµñ', 'Malgun Gothic', ³ª´®°íµñ, NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim, 'Apple SD Gothic Neo', sans-serif !important; padding:12px 0 15px; border-bottom:1px solid #e8e8e8;}
+.vodBBSbox .vodBBSview .vodBBSviewTit .inputWrite	{ padding-bottom:0; position:relative;}
+.vodBBSbox .vodBBSview .vodBBSviewTit .inputWrite input	{ height:28px; width:765px; border:1px solid #adb0b7}
+.vodBBSbox .vodBBSview .vodBBSviewTit .inputWrite .inputLayer	{ position:absolute; top:6px; left:23px; font-size:11px; color:#999}
+.vodBBSbox .vodBBSview .vodBBSviewTit dt	{ position:relative; display:block; width:700px; font-size:16px; line-height:24px; padding:0 15px 10px 15px;}
+.vodBBSbox .vodBBSview .vodBBSviewTit dt span	{ font-size:12px; color:#999; position:absolute; right:15px; font-weight:normal}
+.vodBBSbox .vodBBSview .vodBBSviewTit dd	{ display:inline-block;}
+.vodBBSbox .vodBBSview .bbsdate	{ position:absolute; top:15px; right:15px; color:#999;}
+.vodBBSbox .vodBBSview .bbsIco	{ margin-left:15px; width:80px; text-align:center}
+.vodBBSbox .vodBBSview .bbsIco2	{ margin-left:2px; text-align:center}/*171100*/
+.vodBBSbox .vodBBSview .bbsTit	{ margin:2px 2px 0 15px; color:#bbb;}/*171100*/
+.vodBBSbox .vodBBSview .bbsname			{ text-align:left; font-size:12px; letter-spacing:normal; color:#999; }/*171100*/
+.vodBBSbox .vodBBSview .bbsHits			{ position:absolute; bottom:10px; right:15px; z-index:10; color:#bbb; }/*171228 ¼öÁ¤*/
+.vodBBSbox .vodBBSview .bbsFile	{ float:right; margin-right:20px;}
+.vodBBSbox .vodBBSview .bbsNum	{ float:right; margin-right:20px; color:#bbb;}
+.vodBBSbox .vodBBSview .bbsNum em	{ color:#999; padding-left:7px;}
+.vodBBSbox .vodBBSview .viewContants	{ width:800px; padding:20px 0 25px; line-height:22px; border-bottom:1px solid #333; }
+.vodBBSbox .vodBBSview .viewList	{ margin-top:20px; border-top:1px solid #e8e8e8;}
+.vodBBSbox .vodBBSview .viewList li	{ position:relative; height:40px; border-bottom:1px solid #e8e8e8;}
+.vodBBSbox .vodBBSview .viewList li dl	{ overflow:hidden;}
+.vodBBSbox .vodBBSview .viewList li dl dt	{ float:left; width:40px; margin-right:20px; line-height:40px;}
+.vodBBSbox .vodBBSview .viewList li dl dd	{ float:left; line-height:40px; overflow:hidden}
+.vodBBSbox .vodBBSview .viewList li dl dt.pre	{ background:url(http://img.megamd.co.kr/lec_n/common/ico_arrbbsup.png) no-repeat right 17px;}
+.vodBBSbox .vodBBSview .viewList li dl dt.next	{ background:url(http://img.megamd.co.kr/lec_n/common/ico_arrbbsdown.png) no-repeat right 17px;}
+.vodBBSbox .vodBBSview .viewList li dl dd.date	{ float:right; font-size:11px; color:#999;}
+.vodBBSbox .vodBBSview .viewList li dl dd .ellipsis	{ display:inline-block; overflow:hidden; width:auto; max-width:670px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
+
+/* reveiw */
+.vodBBSbox .viewContants .reviewBox	{ position:relative; margin-top:20px; border-top:1px solid #e8e8e8; padding-top:20px}
+.vodBBSbox .viewContants .reviewBox .tit	{ position:relative; overflow:hidden;}
+.vodBBSbox .viewContants .reviewBox .tit dt	{ float:left; background:url(http://img.megamd.co.kr/lec_n/common/ico_review.png) no-repeat left 4px; display:inline-block; overflow:hidden; width:auto; max-width:670px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; padding-left:17px; font-weight:bold; color:#1a3e87}
+.vodBBSbox .viewContants .reviewBox .tit dd	{ float:right; margin-left:4px;}
+.vodBBSbox .viewContants .contents	{ margin-top:10px;}
+.vodBBSbox .viewContants .contents textarea	{ width:778px; #width:800px; height:150px; overflow-y:scroll}
+.vodBBSbox .viewContants .contents .inputReview	{ overflow:hidden; position:relative; padding-top:7px; width:800px;}
+.vodBBSbox .viewContants .contents .inputReview .inputFile	{ float:left; width:710px; height:24px; #height:28px; display:inline-block; }
+.vodBBSbox .viewContants .contents .inputReview .inputFile input	{ height:24px; #height:28px; width:710px; vertical-align:top; border:1px solid #adb0b7}
+.vodBBSbox .viewContants .contents .inputReview .btFile	{ float:right; width:80px; height:28px; line-height:26px; display:inline-block; background:#adb0b7; color:#fff; border-radius:2px; text-align:center; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; vertical-align:middle}
+.vodBBSbox .viewContants .contents .inputReview .btFile:hover	{ background:#a4a9b3; color:#fff;}
+.vodBBSbox .viewContants .contents .inputReview .inputLayer	{ position:absolute; top:11px; left:8px; font-size:11px; color:#999;}
+
+/* comment */
+.commentBox	{ position:relative; width:100%;}
+.commentBox, .commentBox a	{ font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important; vertical-align:middle}
+.commTy1	{ border-bottom:1px solid #333;} /*bbs*/
+.commTy1 .commNum	{ margin-top:20px;}
+.commTy1 .commWrite	{ position:relative; overflow:hidden; margin-top:10px;}
+.commTy1 .commWrite textarea	{ width:88%; height:50px; padding:5px 1%; float:left}
+.commTy1 .commWrite a	{ display:inline-block; width:9.5%; height:62px; text-align:center; line-height:60px; background:#365189; float:right; color:#fff;}
+.commTy1 .commWrite a:hover	{ background:#294076;}
+.commTy1 .commLi	{ position:relative;}
+.commTy1 .commLi li	{ position:relative; overflow:hidden; padding:15px 0; border-bottom:1px solid #e8e8e8;}
+.commTy1 .commLi .nm	{ float:left; width:8%;}
+.commTy1 .commLi .con	{ float:left; width:82%;}
+.commTy1 .commLi .con a	{ margin-left:3px;}
+.commTy1 .commLi .con a img	{ vertical-align:-1px;}
+.commTy1 .commLi .date	{ float:right; width:10%; text-align:right; font-family:tahoma; color:#999;}
+
+/*common style*/
+.mt0	{ margin-top:0 !important}
+.mt5	{ margin-top:5px !important}
+.mt10	{ margin-top:10px !important}
+.mt15	{ margin-top:15px !important}
+.mt20	{ margin-top:20px !important}
+.mt25	{ margin-top:25px !important}
+.mt30	{ margin-top:30px !important}
+.mt40	{ margin-top:40px !important}
+.mt50	{ margin-top:50px !important}
+.mt60	{ margin-top:60px !important}
+.mt70	{ margin-top:70px !important}
+
+.pt0	{ padding-top:0px !important}
+.pt10	{ padding-top:10px !important}
+.pt20	{ padding-top:20px !important}
+.pt30	{ padding-top:30px !important}
+.pt40	{ padding-top:40px !important}
+.pt50	{ padding-top:50px !important}
+.pt60	{ padding-top:60px !important}
+.pt70	{ padding-top:70px !important}
+
+.p0		{ padding:0px !important}
+.p10	{ padding:10px !important}
+.p20	{ padding:20px !important}
+.p30	{ padding:30px !important}
+.p40	{ padding:40px !important}
+
+.f11	{ font-size: 11px !important;}
+.f12	{ font-size: 12px !important;}
+.f13	{ font-size: 13px !important;}
+.f14	{ font-size: 14px !important;}
+.f15	{ font-size: 15px !important;}
+
+.displayN	{ display:none !important;}
+
+/*comment//*/
+.w800 {	width: 800px !important;}
+.commWrap {	position: relative;	width: 1020px;	margin: 0 auto;}
+.commWrap, .commWrap a { font-family: '¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, Helvetica,'Apple SD Gothic Neo', 'µ¸¿ò', dotum, '±¼¸²', gulim, Sans-serif !important;}
+.commWrap .commtit {	position: relative;	font-size: 25px;	padding-bottom: 7px;	letter-spacing: -1px;	text-align: left;	color: #222;}
+.commWrap .commWrt {	position: relative;	width: 100%;	margin-top: 20px;	border-top: 2px solid #5e6f7f;}
+.commWrap .commWrt th, .commWrap .commWrt td {	border-bottom: 1px solid #acb2b4;}
+.commWrap .commWrt td {	padding: 15px 0;	text-align: left;	padding-left: 15px;	font-size: 13px;	color: #434f5b;}
+.commWrap .commWrt th {	font-size: 14px;	background: #f9f9f9;	color: #434f5b;	text-align: center;}
+.commWrap .commWrt th strong {	letter-spacing: -0.5px;}
+.commWrap .commWrt td label {	margin-right: 20px;}
+.commWrap .commWrt a.btnTy1 { display: inline-block; width: 100px; height: 72px; background: #5e6f7f; color: #fff; text-align: center; border-radius: 2px; float: left;}
+.commWrap .commWrt a.btnTy1:hover {	background: #4c5c6c;}
+.commWrap .commWrt a.btnTy1 em {	margin-top: 20px;	display: inline-block;	font-weight: bold;}
+.commWrap .commWrt a.btnTy1 span {	font-size: 11px;	color: #abb3ba;	font-weight: normal;}
+.commWrap .commWrt td textarea {	width: 80%;	height: 50px;	float: left;}
+.commWrap .commList {	position: relative;}
+.commWrap .commList .tit {	border-bottom: 1px solid #d9d9d9;	padding-bottom: 15px;}
+.commWrap .commList dl {	position: relative;	overflow: hidden;	border-bottom: 1px solid #d9d9d9;	padding: 10px;}
+.commWrap .commList dl.commListTy1 dd {	float: left;	position: relative;	text-align: left;	margin-right: 25px;	line-height: 23px;}
+.commWrap .commList dl.commListTy1 dd:last-of-type, .commWrap .commList dl.commListTy2 dd:last-child {	margin-right: 0 !important;}
+.commWrap .commList dl.commListTy1 .item1 {	background: url(http://img.megamd.co.kr/lec/mpm/2016/bg_pimg1.gif) no-repeat;	width: 66px;	height: 66px;	overflow: hidden;}
+.commWrap .commList dl.commListTy1 .item1 .imgBG {	position: absolute;	left: 0;	bottom: 0;	z-index: 2}
+.commWrap .commList dl.commListTy1 .item1 .pIMG img {	position: absolute;	top: 5px;	left: 50%;	margin-left: -50px;	width: 100px;}
+.commWrap .commList dl.commListTy1 .item2 {	color: #333;	float: left}
+.commWrap .commList dl.commListTy1 .item3 {	width: 64.5%;}
+.commWrap .commList dl.commListTy1 .item3 .btDel, .commWrap .commList dl.commListTy2 .btDel {	margin-left: 8px;}
+.commWrap .commList dl.commListTy2 dd {	float: left;	position: relative;	text-align: left;	margin-right: 25px;	line-height: 23px;}
+.commWrap .commList dl.commListTy2 dd.nm {	width: 60px;}
+.commWrap .commList dl.commListTy2 dd.nm span {	text-align: center}
+.commWrap .commList dl.commListTy1 dd.date, .commWrap .commList dl.commListTy2 dd.date {	float: right;	color: #999;}
+.commWrap .commList dl.commListTy2 dd.txt {	width: 65%; word-wrap:break-word; word-break:break-word;}/*0907*/
+/*//comment*/
+
+/*pagenum//*/
+.containerAreaBox .pageNumTy1 {	position: relative;	text-align: center}
+.containerAreaBox .pageNumTy1 a {
+	width: 30px;
+	height: 30px;
+	border: 1px solid #e6e6e6;
+	display: inline-block;
+	vertical-align: top;
+	font-family: "verdana", '¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important;
+	line-height: 30px;
+	color: #666;
+	font-size: 11px;
+	text-align: center;
+}
+.containerAreaBox .pageNumTy1 a:hover {	border: 1px solid #bbb;}
+.containerAreaBox .pageNumTy1 a.on {	border-color: #0082ff;	color: #0082ff;	font-weight: bold;}
+.containerAreaBox .pageNumTy1 a img {	vertical-align: -1px;}
+.containerAreaBox .schBOX { clear: both; width: 100%; background: #f9f9f9; border-radius: 2px; text-align: center; padding:20px; margin-top: 50px;}
+.containerAreaBox .schBOX select { height: 30px; vertical-align: top;}
+.containerAreaBox .schBOX input { height: 24px; vertical-align: top}
+.containerAreaBox .schBOX a { border-radius: 2px; margin-right: 2px; height: 30px; line-height: 28px; background: #aaa; display: inline-block; color: #fff; padding: 0 15px;}
+/*//pagenum*/
+
+
+
+

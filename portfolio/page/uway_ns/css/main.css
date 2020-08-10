@@ -1,0 +1,175 @@
+@charset "euc-kr";
+
+#mainR {height: 768px;position: relative;}
+
+	/* 메인 비주얼 _배경 */
+	#mainR #mVisual {position: absolute;/**/width: 100%;height: 100%;}
+	#mVisual {}
+	#mVisual ul {}
+	#mVisual ul li {height: 768px;-webkit-background-size: cover;background-size: cover;background-position: 0 center;background-color: #0b0c1e;}
+	#mVisual ul li .lineBox {position: relative;left: 50%;top: 75px;margin-left: -540px;width: 540px;height: 612px;border-top: 4px solid #ebebeb;border-right: 4px solid #ebebeb;border-bottom: 4px solid #ebebeb;background:  url(../images/main/lineBox_bdl.png) 0 bottom no-repeat;overflow: hidden;}
+		#mVisual ul li .lineBox>div {padding: 50px 45px;}
+		#mVisual ul li .lineBox .title {width: 194px;}
+		#mVisual ul li .lineBox .title span {display: block;font-size: 36px;padding: 16px 0 14px 13px;color: #fff;}
+		#mVisual ul li .lineBox .title .p1 {background-color: #084897;font-weight: lighter;}
+		#mVisual ul li .lineBox .title .p2 {background-color: #00a3b4;}
+		#mVisual ul li .lineBox .title .p3 {background-color: #4dbfb2;}
+		#mVisual ul li .lineBox .text {padding-top: 40px;color: #fff;font-size: 16px;line-height: 1.6em;font-weight: lighter;}
+		#mVisual ul li .lineBox .btn_go {padding-top: 70px;}
+		#mVisual ul li .lineBox .btn_go a {width: 200px;padding: 13px 0;background: url(../images/main/linBox_bt_go.png) 0 bottom no-repeat;color: #fff;font-size: 23px;}
+		#mVisual ul li.sl1 {background-image: url(../images/main/visual_bg1.jpg) ;}
+		#mVisual ul li.sl2 {background-image: url(../images/main/visual_bg2.jpg) ;}
+		#mVisual ul li.sl3 {background-image: url(../images/main/visual_bg3.jpg) ;}
+		#mVisual ul li.sl4 {background-image: url(../images/main/visual_bg4.jpg) ;}
+
+	
+
+
+
+#mainR #mBox {position: relative;z-index: 100;top: 75px;left: 50%;width: 522px;margin-left: 22px;height: 620px;}
+
+	/* 메인비주얼 컨트롤러 */
+	.visual_Bts {position: absolute;right: -38px;bottom: 0;width: 10px;}
+		#controls {margin-bottom: 15px;}
+		#controls a {color: #fff;width: 10px;text-indent: -9999px;margin-top: 10px;}
+		#controls a.bx-start {height: 17px;background: url(../images/main/visual_controls.png) 0 0 no-repeat;}
+		#controls a.bx-start.active {background: url(../images/main/visual_controls.png) -20px 0 no-repeat;}
+		#controls a.bx-stop {height: 12px;background: url(../images/main/visual_controls.png) 0 -30px no-repeat;}
+		#controls a.bx-stop.active {background: url(../images/main/visual_controls.png) -20px -30px no-repeat;}
+		#visualPager {}
+		#visualPager a {display: block;background-color: #fff;margin-top: 5px;height: 12px;color: #fff;text-indent: -9999;text-align: left;}
+			#visualPager a.active {background-color: #faa653;height: 50px;}
+
+	/* 메인컨텐츠 */
+	#mBox .box1 {position: relative;height: 190px;}
+		#mBox .box1 .textBox {position: relative;z-index: 1;float: left;width: 50%;height: 100%;background-color: #fff;text-align: center;}
+		#mBox .box1 .textBox p {width: 75%;margin: 40px auto 0;font-size: 20px;color: #161616;line-height: 1.4em;letter-spacing: -0.03em;}
+		#mBox .box1 .textBox a {display: inline-block;margin-top: 18px;}
+		#mBox .box1 .textBox .arr {position: absolute;right: -12px;top: 50%;margin-top: -8px;width: 0px;height: 0px; border-top:14px solid transparent;border-bottom:14px solid transparent;border-right: 14px solid none;border-left: 14px solid  #fff; }
+		#mBox .box1 .bg {position: absolute;top: 0;right: 0;width: 50%;height: 100%;background: url(../images/main/mBox_box1_right.jpg) right 0 no-repeat;-webkit-background-size: cover;
+	background-size: cover;}
+	#mBox .box2 {position: relative;height: 284px;margin-top: 10px;background-color: #fff;}
+		#mBox .box2  .cont {}
+		#mBox .box2  .cont>div {/*display: none;*/position: relative;padding: 0 25px;} /* qna , susi  , jeon , jungsi , pyeon  */
+		#mBox .box2  .cont>div.on {display: block;}
+		#mBox .box2  .cont .qna {}
+		#mBox .box2  .cont .susi {}
+		#mBox .box2  .cont .jeon {}
+		#mBox .box2  .cont .jungsi {}
+		#mBox .box2  .cont .pyeon {}
+			#mBox .box2  .cont .tit {position: relative;padding-top: 30px;font-size: 22px;color: #161616;}
+			#mBox .box2  .cont .tit a.bt_more {display: block;position: absolute;top: 28px;right: 0;font-size: 12px;color: #525252;border: 1px solid #acacac;padding: 7px 12px 4px;}
+			#mBox .box2  .cont ul {margin-top: 22px;}
+			#mBox .box2  .cont ul li {position: relative;padding: 6px 0;height: 15px;line-height: 15px;overflow: hidden;}
+			#mBox .box2  .cont ul li:after {clear: both;content: '';display: block;}
+			#mBox .box2  .cont ul li img {position: absolute;top: 5px;}
+			#mBox .box2  .cont ul li .i_notice {left: 0;}
+			#mBox .box2  .cont ul li .i_new {left: 38px;}
+			#mBox .box2  .cont ul li a {}
+			#mBox .box2  .cont ul li a span {padding-left: 80px;font-size: 15px;color: #515050;line-height: 1.3em;}
+			#mBox .box2  .cont ul li .day {position: absolute;right: 0;top: 7px;font-size: 15px;color: #515050;height: 17px;line-height: 17px;}
+		#mBox .box2 .tab {position: absolute;width: 100%;bottom: 0;background-color: #084897;}
+		#mBox .box2 .tab table {height: 60px;}
+		#mBox .box2 .tab table td {min-width: 76px;text-align: center;vertical-align: middle;background: url(../images/main/tab_lbar.png) 0 center no-repeat;}
+		#mBox .box2 .tab table td a {display: block;color: #fff;}
+		#mBox .box2 .tab table td.on {background-color: #093974;}
+		#mBox .box2 .tab table td.on {}
+		#mBox .box2 .tab table td.on+td {background: url(../images/main/tab_arr.png) 0 center no-repeat;}
+	#mBox .box3 {height: 125px;margin-top: 10px;}
+	#mBox .box3 ul {height: 100%;}
+	#mBox .box3 ul li {float: left;width: 33.3333%;height: 100%;}
+	#mBox .box3 ul li>div {position: relative;height: 100%;margin-right: 10px;text-align: center;}
+	#mBox .box3 ul li>div a {display: block;height: 100%;}
+	#mBox .box3 ul li>div img {padding-top: 25px;}
+	#mBox .box3 ul li.sb2 img {padding-top: 22px;}
+	#mBox .box3 ul li>div span {display: block;position: absolute;top: 87px;width: 100%;text-align: center;font-size: 16px;color: #fff;/*font-family: 'NanumSquare';*/}
+	#mBox .box3 ul li.sb1>div {background-color: #254151;}
+	#mBox .box3 ul li.sb2>div {background-color: #32ab94;}
+	#mBox .box3 ul li.sb3>div {margin-right: 0;background-color: #e27a3f;}
+
+
+
+
+
+
+@media screen and (max-width : 1090px ){
+	#mainR {height: auto;}
+	#mainR #mVisual {position: relative}
+		#mVisual ul li .lineBox {margin-left: -272px;}
+
+	#mainR #mBox {width: auto;height: auto;padding: 20px 8px;left: 0;top: 0;background-color: #efefef;margin-left: 0;}
+	#mainR #mBox {}
+	.visual_Bts {display: none;}
+
+
+
+
+
+
+
+}
+@media screen and (max-width : 980px ){
+
+
+
+
+
+
+
+}
+@media screen and (max-width : 500px ){
+
+	/**/
+	#mVisual ul li {height: auto;}
+	#mVisual ul li .lineBox {width: auto;height: auto;border: none;top: 0;left: 0;margin-left: 0;background: none;}
+	#mVisual ul li .lineBox>div {padding: 70px 30px;}
+	#mVisual ul li .lineBox .btn_go {display: none;}
+	
+	#mBox .box1 .textBox p {width: 80%;font-size: 16px;}
+	#mBox .box2  .cont .tit {font-size: 20px;}
+	#mBox .box2  .cont .tit a.bt_more {padding: 10px 20px 8px;top: 20px;}
+	#mBox .box2  .cont>div {}
+	#mBox .box2  .cont ul li a {}
+	#mBox .box2 .tab table td {min-width: 35px;}
+	#mBox .box2 .tab table td a {font-size: 13px;}
+	#mBox .box3 ul li>div span {font-size: 13px;	line-height: 1.3em;}
+
+
+
+
+
+
+}
+@media screen and (max-width : 400px ){
+	#mVisual ul li .lineBox>div {padding: 50px 30px 45px;}
+	#mVisual ul li .lineBox .title {width: 180px;}
+	#mVisual ul li .lineBox .title .p1 {}
+	#mVisual ul li .lineBox .title span {padding-top:  10px;padding-bottom: 8px;}
+	#mVisual ul li .lineBox .text {font-size: 14px;padding-top: 28px;}
+	#mVisual ul li .lineBox .text br {display: none;}
+
+	#mBox .box1 {height: 150px;}
+	#mBox .box1 .textBox p {margin-top: 30px;font-size: 15px;}
+	#mBox .box1 .textBox a {margin-top: 13px;}
+	#mBox .box1 .textBox a img {width: 100px;}
+	#mBox .box2 {height: 220px;}
+	#mBox .box2  .cont ul {margin-top: 16px;}
+	#mBox .box2  .cont ul li:last-child {display: none;}
+	#mBox .box2  .cont ul li img {width: 27px;top: 7px;}
+	#mBox .box2  .cont ul li .i_new {left: 32px;}
+	#mBox .box2  .cont ul li a span {font-size: 14px;padding-left: 66px;}
+	#mBox .box2  .cont ul li .day {font-size: 14px;}
+	#mBox .box2 .tab table td.on+td {background: none;}
+	#mBox .box2 .tab table {height: 44px;}
+	#mBox .box3 {height: 95px;}
+	#mBox .box3 ul li>div span {font-size: 12px;}
+	#mBox .box3 ul li>div img {height: 36px;padding-top: 17px;}
+	#mBox .box3 ul li.sb2 img {padding-top: 15px;}
+	#mBox .box3 ul li>div span {top: 66px;}
+
+}
+@media screen and (max-width : 360px ){
+	#mBox .box2  .cont ul li a span {}
+	#mBox .box2  .cont ul li .day {display: none;}
+
+}

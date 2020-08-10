@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>IE 최적화안내</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<style>
+	* {margin: 0;padding: 0;}
+	img {border: 0 none;vertical-align: top;}
+	.iePop {position: relative;}
+	.iePop .check {height: 30px;background-color: #ccc;width: 588px;text-align: right;}
+	.iePop .check input {margin-right: 5px;vertical-align: middle;}
+	.iePop .check label {font-size: 12px;color: #333;margin-right: 15px;}
+	.iePop .check .btnClose {font-size: 12px;color: #333;}
+	</style>
+</head>
+<body>
+
+	<div class="iePop">
+		<img src="./img/common/ie_low.png" alt="인터넷 익스플로러(IE)최적화 안내" usemap="#iePop">
+		<map name="iePop" id="iePop">
+			<area shape="rect" coords="156,198,430,247" href="https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads" target="_blank" alt="Internet Explorer 업그레이드">
+			<area shape="rect" coords="551,2,585,35" href="javascript:window.open('','_parent','');window.close();" alt="닫기">
+		</map>
+		<div class="check">
+			<label for="chkb"  onclick="closeWin('pop',1)"><input type="checkbox" id="chkb" />오늘하루 보지않기</label>
+		</div>
+	</div>
+
+</body>
+</html>

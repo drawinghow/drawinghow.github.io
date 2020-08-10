@@ -1,0 +1,37 @@
+
+/******************************************************************************************************/
+/* window POPUP : 고등학교 검색창 */
+#popup {width: 385px;}
+#popup .wrap {padding: 30px 26px;border: 1px solid #c0c0c0;color: #2d77b2;font-size: 16px;letter-spacing:-0.02em;}
+#popup .tt {color: #0066b3;background: url(../img/common/sub_h6.png) 0 8px no-repeat;font-size: 23px;    font-weight: normal;padding-left: 22px;}
+#popup .sc {padding-top: 22px;}
+#popup .sc:after {display: block;clear: both;content: '';}
+#popup .sc>div {float: left;font-size: 16px;}
+#popup .sc .s1 {width: 50px;padding-top: 11px;}
+#popup .sc .s2 {width: 155px;}
+#popup .sc .s3 {width: 70px;}
+#popup .sc input {width: 100%;}
+#popup input[type="text"] {border-color: #73a4cc;height: 39px;}
+#popup input[type="submit"] {background-color: #0066b3;color: #fff;height: 43px;font-size: 16px;}
+#popup p.ex {padding-left: 50px;padding-top: 12px;font-size: 16px;letter-spacing: inherit;}
+#popup ul.desc {padding-top: 22px;}
+#popup ul.desc li {color: #e04545;font-size: 14px;}
+#popup table {margin-top: 20px;}
+#popup table th {font-size: 16px; padding: 8px 5px; font-weight: normal; color: #0066b3; border: 1px solid #aec4d9; background-color: #d7eeff; color: #2c7ab9; }
+#popup table td { text-align: center; font-size: 16px; /*padding: 13px 5px;*/padding:5px; border: 1px solid #aec4d9; color: #2c7ab9; }
+#popup table td a {font-size: inherit;color: inherit;}
+#popup table td a:hover {text-decoration: underline;}
+#popup .btnStyle1 {margin-top: 18px;}
+#popup .btnStyle1 input[type="submit"] {width: 85px;height: 36px;color: #0066b3;font-size: 14px;background-color: #fff;border: 1px solid #89a9c7;}
+
+#popup.pop_sh1 {} /* 고등학교 검색*/
+#popup.pop_sh2 {} /* 담당자 검색 */
+#popup.pop_sh2 .sc .s1 {padding-top: 0;width: 60px;}
+
+
+
+@media screen and (max-width :385px ){
+#popup {width: 100%;}
+#popup .wrap {padding: 20px 15px;}
+
+}

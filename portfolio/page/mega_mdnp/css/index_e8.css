@@ -1,0 +1,47 @@
+@charset "euc-kr";
+
+#head { /*height:480px;*/ } /*2019.04.10*/
+.stn_bi h1 a { background:url(http://image.mdnp.co.kr/academy/2017/0619/mdnp_e8.png) no-repeat; }
+.stn_gnb { background:#fff; }
+.stn_gnb .gnbtop { background:#f5f5f5; font-size:11px; }
+.stn_gnb .gnbtop .inner .mdnpsns { color:#777; }
+.stn_gnb .gnbtop .inner .mdnpsns a { background:url(http://image.mdnp.co.kr/academy/2017/0619/ic_sns_e8.png); }
+.stn_gnb .gnb .gnbtop .inner .mdnpsns,.stn_gnb .gnb .gnbtop .inner .mdnpnav a { color:#777; }
+.stn_gnb .gnb .gnbtop .inner .mdnpnav a:hover{ color:#f07800; }
+.stn_gnb .gnb .mdnpspot .inner .textbnrarea a{ color:#777; }
+.stn_gnb .gnb .mdnpspot .inner .textbnrarea a:hover{ color:#333; }
+.stn_gnb .mdnpspot .inner .spotbnrarea { background:#5a6478; }
+.stn_gnb .gnb .mainnav li a { color:#333; }
+.stn_gnb .gnb .mainnav li a:hover,.stn_gnb .gnb .mainnav li a.on{ color:#f07800; }
+.bx-wrapper .bx-pager .bx-pager-item a { background:#000; opacity:.2; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)" }
+.bx-wrapper .bx-pager .bx-pager-item a.active {  opacity:.75; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)" }
+.stn_gnb .gnbtop .inner .mdnpnav a span{ background:url(http://image.mdnp.co.kr/academy/2017/0619/ic_new_e8.png) no-repeat; }
+.stn_gnb .gnb .subnav { background:#fafafa; }
+.stn_gnb .gnb .subnav .inner ul li ul li a span { background:url(http://image.mdnp.co.kr/academy/2017/0619/ic_new_e8.png) no-repeat; }
+.stn_mainside,.stn_personal { background:url(http://image.mdnp.co.kr/academy/2017/0619/bg_black15.png); }
+.stnmain_campus .grp_customer .customernumber { background:url(http://image.mdnp.co.kr/academy/2017/0619/customernumber_e8.png) no-repeat; }
+.stnmain_campus .grp_customer ul li span { color:#d1beb7; }
+.gnbtop .inner .mdnpsns,.gnbtop .inner .mdnpnav a,.gnbtop .inner .mdnpnav span { color:#777 !important; }
+.mdnpspot .inner .textbnrarea a{ color:#777 !important; }
+
+.bigbnr_nav ul li a { background-image:url(http://image.mdnp.co.kr/academy/2017/0915/bul_bnrnav_off.png); color:#fff; opacity:0.3; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; }
+.bigbnr_nav ul li a:hover { color:#fff; opacity:1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+.bigbnr_nav ul li.on { background:url(http://image.mdnp.co.kr/academy/2017/0915/bg_bnrnav_on.png) repeat; }
+.bigbnr_nav ul li.on a { color:#f07800; opacity:1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+
+#wrap.sub #head *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
+#wrap.sub #head { height:auto; overflow:visible; border-bottom:1px solid #bbb; }
+#wrap.sub .stn_bi h1 a { background:url(http://image.mdnp.co.kr/academy/2017/0619/mdnp_e8.png) no-repeat; }
+#wrap.sub .stn_gnb { position:relative; }
+#wrap.sub .gnb { position:relative; background:rgba(255,255,255,1); }
+#wrap.sub .gnb h1 a { background:url(http://image.mdnp.co.kr/academy/2017/0619/mdnp.png) no-repeat; background-size:122px 36px; }
+#wrap.sub #head .gnbtop .inner .mdnpsns,#wrap.sub .gnbtop .inner .mdnpnav a { color:rgba(0,0,0,.5); }
+#wrap.sub .gnbtop .inner .mdnpnav a:hover{ color:#f07800 !important; }
+#wrap.sub .mdnpspot .inner .textbnrarea a{ color:rgba(0,0,0,.5); }
+#wrap.sub .mdnpspot .inner .textbnrarea a:hover{ color:#333 !important; }
+#wrap.sub .mdnpspot .inner .spotbnrarea { background:rgba(90,100,120,.75); }
+#wrap.sub .gnb .mainnav li a { color:#333; }
+#wrap.sub .gnb .mainnav li a:hover,#head.sub .gnb .gnb .mainnav li a.on{ color:#f07800 !important; }
+#wrap.sub .stn_gnb .gnb .subnav { background:rgba(250,250,250,1); }
+#wrap.sub #container  { padding:0; background:#fff; }
+#wrap.sub #body { margin-top:30px; }

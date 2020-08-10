@@ -1,0 +1,51 @@
+.lnb { float:left; margin:0 20px 0 0; width:200px; text-align:left; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important; }
+.lnb.Ty160 { width:160px !important; }
+.lnb h1 { margin-bottom:20px;}
+.lnb ul.lnbUl { margin-top:20px; border-top:1px solid #006fd6; border-bottom:1px solid #cbccd1; }
+.lnb .dep1 { overflow:hidden; padding:10px 23px 10px 2px; min-height:20px; height:auto; line-height:18px; font-size:13px; font-weight:bold;  border-top:1px solid #cbccd1; background:url("//img.megamd.co.kr/lec_n/common/lnb_arrow1.png") right -77px no-repeat; cursor:pointer; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important; color:#222; letter-spacing:-0.05em; }
+.lnb .dep1 img { margin-top:4px; vertical-align:top; }
+.lnb .iconNew { display:inline-block; padding-right:23px; background:url("//img.megamd.co.kr/lec_n/common/icon_new3.png") right 51% no-repeat; vertical-align:middle; }
+.lnb .dep2 { overflow:hidden; border-top:1px solid #cbccd1; cursor:pointer; }
+.lnb ul li:first-child .dep2 { border-top:none; }
+.lnb .dep2 a { display:block; padding:10px 0 10px 2px; min-height:20px; height:auto; line-height:18px; font-size:13px; font-weight:bold; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important; color:#333; letter-spacing:-0.05em;}/* 2015-09-20 : Ãß°¡ */
+/* ÀÌÀü¹öÀü
+.lnb .dep2 { overflow:hidden; padding:10px 0 10px 2px; min-height:20px; height:auto; line-height:18px; font-size:13px; font-weight:bold;  border-top:1px solid #cbccd1; cursor:pointer; }
+.lnb .dep2 a { line-height:18px; font-size:13px; font-weight:bold; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important; color:#333; } */
+.lnb ul li { background-color:#fff; }
+.lnb ul li.f1 .dep1 { border-top:none; }
+.lnb ul li.current .dep1 { background-position:right 18px; border-bottom:1px solid #cbccd1; }
+.lnb ul li ul { margin:10px 0 5px; }
+.lnb ul li ul li { position:relative; padding:0 0 5px 7px; background:url("//img.megamd.co.kr/lec_n/common/dot2.png") 0 8px no-repeat; }
+/*.lnb ul li ul li .iconNew { position:absolute; top:50%; right:8px; margin-top:-5px; overflow:hidden; display:inline-block; width:12px; height:11px; background:#f4f3f7 url("//img.megamd.co.kr/lec_n/common/icon_new2.png") 0 0 no-repeat; text-indent:-9999px; vertical-align:middle; }*/
+.lnb ul li ul li a { color:#888; line-height:19px; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important; letter-spacing:-0.06em; }
+.lnb ul li ul li.on a, .lnb ul li ul li a:hover { text-decoration:none; color:#006fd6; letter-spacing:-0.06em;}
+.lnb ul li ul li.on a { font-weight:bold;}
+/*171100//*/
+#lnbTab { overflow:visible; margin-top:20px; width:200px; height:43px; border-bottom:1px solid #006fd6; }
+#lnbTab li { float:left; }
+#lnbTab a { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+#lnbTab a { display:block; width:100px; height:43px; padding-top:8px; border:0 none; background-color:#eeedf1; font-size:11px; font-weight:bold; font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important; text-align:center; line-height:14px; }
+#lnbTab a:hover, 
+#lnbTab a.active { height:44px; padding-top:7px; border:1px solid #006fd6; border-bottom:0 none; background-color:#fff; }
+.subDep span a { font-family:'¸¼Àº°íµñ', Malgun Gothic, '³ª´®°íµñ', NanumGothic, 'µ¸¿ò', '±¼¸²', dotum, gulim !important; letter-spacing:-0.06em; color:#888; }
+.lnb .col2 { clear:both; }
+.lnb .col2 .lnbUl { margin-top:0; border-top:none; }
+.lnb .subDep .subTit { padding:0 10px; height:31px; border-top:none;  background-color:#f9f9f9; color:#7f8ca5; font-weight:bold; font-size:11px; line-height:30px; }
+.lnb .subDep .subTit.f2 { border-top:1px solid #efeff0; }
+.lnb .subDep .name { overflow:hidden; margin:8px 0; }
+.lnb .subDep .name span { display:inline-block; float:left; padding:0 5px 0 7px; width:75px; height:25px; background:url("//img.megamd.co.kr/lec_n/common/dot2.png") 0 8px no-repeat; } 
+.lnb .subDep .name .on a, .lnb .subDep .name span a:hover { text-decoration:none; color:#006fd6; letter-spacing:-0.06em; }
+.lnb .subDep .name .on a { font-weight:bold; }
+.lnb .subDep .name span.long { width:185px; }
+/*//171100*/
+.lnb.Ty160 #lnbTab { width:160px !important; }
+.lnb.Ty160 #lnbTab a { width:78px; }
+.lnb.Ty160 .subDep .name span { width:68px !important; }
+.lnb.Ty160 .subDep .name span.long { width:145px !important; }
+
+.lnb ul li.on .dep1, .lnb ul li.on .dep2 a, .lnb ul li .dep1:hover, .lnb ul li .dep2:hover a { color:#006fd6; }
+
+/*TAB */
+a.roll img.on { display:none; }
+a.roll:hover img { display:none; }
+a.roll:hover img.on { display:inline; }

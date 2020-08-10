@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>pms</title>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery1.8.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/front_nav.js"></script>
+<script src="js/front_select.js"></script>
+<script src="js/front_checkbox.js"></script>
+<script src="js/front_common.js"></script>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/ie.css">
+	<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+
+
+
+
+<header id="header">
+	<h1><img src="img/logo.png" alt="유웨이어플라이"></h1>
+	<div class="txt">
+		<p>· 2016년 04월 18일 (월요일) <span class="s1">000 팀 000 사원</span></p>
+		<p>· 최종접속일시 : 2016-00-00 14:00:00 </p>
+	</div>
+	<div class="btn">
+		<a href="" class="on">Log_out</a>
+		<a href="" class="modify">Modify</a>
+	</div>
+</header>
+
+
+
+
+<!-- Modify 버튼 클릭시 나오는 레이어팝업 -->
+<section class="geinLayer">
+	<form class="box">
+		<h1>개인정보 수정</h1>
+		<div class="tb2">
+			<table>
+				<colgroup>
+					<col style="width:150px;">
+					<col>
+				</colgroup>				
+				<tbody>
+					<tr>
+						<th>성명</th>
+						<td><input type="text" class="text" style="width:350px"></td>
+					</tr>
+					<tr>
+						<th>아이디</th>
+						<td>uway3369</td>
+					</tr>
+					<tr>
+						<th>비밀번호</th>
+						<td><input type="text" class="text" style="width:350px"></td>
+					</tr>
+					<tr>
+						<th>연락처</th>
+						<td>
+							<select class="sel2" name="tel" id="sel_tel">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="019">019</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+							</select>
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+						</td>
+					</tr>
+					<tr>
+						<th>휴대폰</th>
+						<td>
+							<select class="sel2" name="tel" id="sel_tel">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="019">019</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+							</select>
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+						</td>
+					</tr>
+					<tr>
+						<th>이메일</th>
+						<td>
+							<input class="text" type="text" id="EMAIL1" name="EMAIL1" title="이메일 아이디" class="text "  maxlength="20" style="width:200px;" />
+							<span>@</span>
+							<input class="text " type="text" id="EMAIL2" name="EMAIL2" title="이메일 주소"  maxlength="25" style="width:200px;" />
+							<select class="sel" id="EMAIL3" onchange='$("#EMAIL2").val($(this).val())'>
+								<option value="">직접입력</option>
+								<option value="naver.com">네이버</option> 
+								<option value="nate.com">네이트</option>
+								<option value="daum.net">다음</option> 
+								<option value="gmail.com">Gmail</option> 
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>주소</th>
+						<td>
+							<input type="text" class="text" style="width:350px">
+							<a class="button" href="#">주소검색</a>
+							<input type="text" class="text" style="width:350px;margin-top:12px;">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="btn">
+			<input type="submit" class="submit" value="수정">
+			<a href="" class="close">취소</a>
+		</div>
+		<p class="close"><a href="">닫기</a></p>
+	</form>
+</section>
+<!-- // Modify 버튼 클릭시 나오는 레이어팝업 -->
+
+
+
+
+
+<!-- 등록 : 프로젝트 등록 레이어팝업 -->
+<section class="projectLayer">
+	<form class="box">
+		<h1>프로젝트 등록</h1>
+		<div class="tb2">
+			<table>
+				<colgroup>
+					<col style="width:200px;">
+					<col>
+				</colgroup>				
+				<tbody>
+					<tr>
+						<th>상태</th>
+						<td>
+							<div class="radioWrap">
+								<input type="radio" name="state" value="" id="r1"><label for="r1">신규제작</label>
+								<input type="radio" name="state" value="" id="r2"><label for="r2">유지보수</label>
+								<input type="radio" name="state" value="" id="r3"><label for="r3">완료</label>
+							</div>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>대학선택</th>
+						<td>
+							<select class="sel2" name="" id="" style="width:200px;">
+								<option value="">선택</option>
+								<option value="">중앙대학교</option>
+								<option value="">성균관대학교</option>
+								<option value="">서울여자대학교</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>프로젝트명</th>
+						<td><input type="text" class="text" style="width:100%"></td>
+					</tr>
+					<tr>
+						<th>URL</th>
+						<td><input type="text" class="text" style="width:100%" value="http://"></td>
+					</tr>
+					<tr>
+						<th>기간</th>
+						<td>
+							<div class="calendarWrap">
+								<input type="text" id="from" class="text" style="width:120px" value="" >
+								<span style="padding: 0 10px;"> ~ </span>
+								<input type="text" id="to" class="text" style="width:120px" value="" >
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>비고사항</th>
+						<td><textarea class="textarea" name="" id="" cols="90" rows="3"></textarea></td>
+					</tr>
+					<tr>
+						<th>개발 및 유지보수정보</th>
+						<td><textarea class="textarea" name="" id="" cols="90" rows="6"></textarea></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="btn">
+			<input type="submit" class="submit" value="등록하기">
+			<a href="" class="close">닫기</a>
+		</div>
+		<p class="close"><a href="">닫기</a></p>
+	</form>
+</section>
+<!--// 등록 : 웹관리자 등록 레이어팝업 -->
+
+
+
+
+
+
+
+
+<!-- 상단메뉴 :  GNB -->
+<div id="s_menu">
+
+	<div class="list">
+		<ul>
+			<li><a href="">웹관리자 관리</a></li>
+			<li><a href="">대학/업체관리</a></li>
+			<li class="on"><a href="">프로젝트관리</a></li>
+			<li><a href="">협력업체 전용게시판</a></li>
+			<li><a href="">신규제작</a></li>
+			<li><a href="">유지보수</a></li>
+			<li><a href="">완료</a></li>
+			<li class="standby"><a href="">|<span>승인대기회원</span></a></li>
+		</ul>
+	</div>	
+
+	<!-- <div class="name">중앙대학교 입학</div>  -->
+
+	<div class="box">
+		<div class="show"><span>화면표시</span>
+			<ul>
+				<li class="big"><a href="">넓게</a></li>
+				<li class="normal"><a href="">보통</a></li>
+				<li class="small"><a href="">좁게</a></li>
+			</ul>
+		</div>
+		<div class="admin">Admin</div>
+	</div>
+
+</div>
+<!-- // 상단메뉴 :  GNB -->
+
+
+
+
+
+
+
+
+<div id="wrap">
+
+
+	<!--  왼쪽메뉴 : LNB -->
+	<nav id="nav">
+		<ul class="u1">
+			<li class="on noneSub"><a href="">프로젝트 관리</a>
+				<!--<ul class="u2">
+					<li class="on"><a href="">웹관리자 현황</a></li>
+					<li><a href="">부서관리</a></li>
+					<li><a href="">직급관리</a></li>
+					<li><a href="">직원관리</a></li>
+				</ul>-->
+			</li>
+		</ul>
+	</nav>
+	<!-- // 왼쪽메뉴 : LNB -->
+
+
+
+
+
+	<!-- 내용 : 컨텐츠 보여지는 부분 -->
+	<section id="content">
+
+		<!-- 타이틀 -->
+		<h1>프로젝트 관리</h1>
+		
+
+
+
+		<div class="search">
+			<div class="del grayLine">
+				<a href="">삭제</a>
+			</div>
+
+			<form class="filter">
+				<select class="sel" id="" name="">
+					<option value="" >전체보기</option>
+					<option value="">신규제작</option>
+					<option value="">유지보수</option>
+					<option value="">완료</option>
+				</select>
+			</form>
+
+			<!-- 검색-->
+			<form class="frm">
+				<select class="sel" id="" name="" style="width:105px;">
+					<option value="contents">프로젝트명</option>
+					<option value="contents">대학교</option>
+				</select>
+				<input type="text" class="text">
+				<input type="submit" class="submit" value="검색하기">
+			</form>
+			
+			<div class="list">
+				<p class="num"><b>278</b> 개 중  <b>1</b> - <b>10</b></p>
+				<div class="btn">
+					<a href="" class="prev">이전</a>
+					<a href="" class="next">다음</a>
+				</div>
+				<p class="project_btn"><a href="#">프로젝트 등록</a></p>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="tb1">
+			<table>
+				<colgroup>
+					<col style="width:50px;">
+					<col style="width:70px;">
+					<col style="width:100px;">
+					<col style="">
+					<col style="width:80px;">
+					<col style="width:120px;">
+					<col style="width:120px;">
+					<col style="width:160px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>선택</th>
+						<th>NO</th>
+						<th>상태</th>
+						<th>프로젝트명</th>
+						<th>URL</th>
+						<th>등록일</th>
+						<th>마감일</th>
+						<th>관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!--<tr class="jupsu notice">
+						<td> </td>
+						<td class="num"></td>
+						<td><div class="noti">공지</div></td>
+						<td class="tit"><a class="end" href="">Apply 플로팅 배너 액션 스크립트 정의서</a></td>
+						<td><div class="master">웹마스터</div></td>
+						<td> </td>
+						<td class="left"> </td>
+					</tr>-->
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">10</td>
+						<td><div class="going">신규제작</div></td>
+						<td class="tit name_going">여주대학교  전체 홈페이지 유지보수</td>
+						<td>
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox"></td>
+						<td class="num">9</td>
+						<td><div class="going">유지보수</div></td>
+						<td class="tit name_going">여주대학교  전체 홈페이지 유지보수</td>
+						<td>							
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox"></td>
+						<td class="num">8</td>
+						<td><div class="end">완료</div></td>
+						<td class="tit end">여주대학교  전체 홈페이지 유지보수</td>
+						<td>
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox"></td>
+						<td class="num">7</td>
+						<td><div class="end">완료</div></td>
+						<td class="tit end">여주대학교  전체 홈페이지 유지보수</td>
+						<td>
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox"></td>
+						<td class="num">6</td>
+						<td><div class="end">완료</div></td>
+						<td class="tit end">여주대학교  전체 홈페이지 유지보수</td>
+						<td>
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox"></td>
+						<td class="num">5</td>
+						<td><div class="going">신규제작</div></td>
+						<td class="tit name_going">여주대학교  전체 홈페이지 유지보수</td>
+						<td>
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox"></td>
+						<td class="num">4</td>
+						<td><div class="end">완료</div></td>
+						<td class="tit end">여주대학교  전체 홈페이지 유지보수</td>
+						<td>
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox"></td>
+						<td class="num">3</td>
+						<td><div class="end">완료</div></td>
+						<td class="tit end">여주대학교  전체 홈페이지 유지보수</td>
+						<td>
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox"></td>
+						<td class="num">2</td>
+						<td><div class="end">완료</div></td>
+						<td class="tit end">여주대학교  전체 홈페이지 유지보수</td>
+						<td>
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox"></td>
+						<td class="num">1</td>
+						<td><div class="end">완료</div></td>
+						<td class="tit end">여주대학교  전체 홈페이지 유지보수</td>
+						<td>
+							<a href="" class="barogagi" target="_blank">바로가기</a>
+						</td>
+						<td>16.03.22 18:00</td>
+						<td>16.03.22 18:00</td>
+						<td>
+							<div class="gwanri">
+								<a class="person" href="">참여인원</a>
+								<a class="view"  href="">보기</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+	</section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

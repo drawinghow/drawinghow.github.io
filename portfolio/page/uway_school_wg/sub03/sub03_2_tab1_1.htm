@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>고교정보 관리시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<!--<meta name="viewport" content="user-scalable=no, width=device-width" />	-->
+	<link rel="stylesheet" type="text/css" href="../css/default.css" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="../js/respond.js_html5shiv.js" ></script>
+	<script type="text/javascript" src="../js/jquery.backgroundSize.js" ></script>
+	<script type="text/javascript" src="../js/jquery.matchHeight-min.js" ></script>
+	<script type="text/javascript" src="../js/jquery.bxslider.min.js" ></script>
+	<script type="text/javascript" src="../js/jquery.tm.horizon.min.js" ></script>
+	<script type="text/javascript" src="../js/default.js" ></script>
+	<!--[if lt IE 9]>
+		<script>
+			window.open('ie.html','iePop','width=588,height=281,left=0,top=0')
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+
+	<!-- header -->
+	<div id="top">
+		<div class="center_align clearfix">
+			<h2><img src="../img/common/top_h2.png" alt="고교정보 관리 시스템"></h2>
+			<div class="search">
+				<ul class="clearfix">
+					<li><a href="#">LOGOUT</a></li>
+					<li><a href="#">SITEMAP</a></li>
+					<li><a href="#">MY PAGE</a></li>
+				</ul>
+				<input type="text" />
+				<a class="btnSearchM" href="#"><!-- mobile에서만 보임 --></a>
+				<a class="btnSearch" href="#">검색하기</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="gnb">
+		<div class="center_align clearfix">
+			<h1><img src="../img/common/logo.png" alt="경북대학교"></h1>
+			<ul class="menu celarfix">
+				<li class="m1">
+					<a href="#">서비스 소개</a>
+					<ul>
+						<li><a href="#">서비스 소개</a></li>
+						<li><a href="#">서비스 안내</a></li>
+						<li><a href="#">고교 리스트</a></li>
+					</ul>
+				</li>
+				<li class="m2">
+					<a href="#">학사일정 관리</a>
+					<ul>
+						<li><a href="#">학사일정 관리</a></li>
+					</ul>
+				</li>
+				<li class="m3">
+					<a href="#">고교 정보관리</a>
+					<ul>
+						<li><a href="#">고교 기본정보</a></li>
+						<li><a href="#">통합 비교검색</a></li>
+						<li><a href="#">학업성취도 통계</a></li>
+						<li><a href="#">지원자 통계</a></li>
+						<li><a href="#">합격자 통계</a></li>
+					</ul>
+				</li>
+				<li class="m4">
+					<a href="#">교육활동 관리</a>
+					<ul>
+						<li><a href="#">입학전형 설명회</a></li>
+						<li><a href="#">고교 방문상담</a></li>
+						<li><a href="#">고교 대학연계</a></li>
+					</ul>
+				</li>
+				<li class="m5">
+					<a href="#">자료실</a>
+					<ul>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">모집요강</a></li>
+						<li><a href="#">자료실</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<div id="btnMenu">
+				<a href="#">모바일 메뉴</a>
+				<ul class="celarfix">
+					<li class="m1">
+						<a href="#">서비스 소개</a>
+						<ul>
+							<li><a href="#">서비스 소개</a></li>
+							<li><a href="#">서비스 안내</a></li>
+							<li><a href="#">고교 리스트</a></li>
+						</ul>
+					</li>
+					<li class="m2">
+						<a href="#">학사일정 관리</a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</li>
+					<li class="m3">
+						<a href="#">고교 정보관리</a>
+						<ul>
+							<li><a href="#">고교 기본정보</a></li>
+							<li><a href="#">통합 비교검색</a></li>
+							<li><a href="#">학업성취도 통계</a></li>
+							<li><a href="#">지원자 통계</a></li>
+							<li><a href="#">합격자 통계</a></li>
+						</ul>
+					</li>
+					<li class="m4">
+						<a href="#">교육활동 관리</a>
+						<ul>
+							<li><a href="#">입학전형 설명회</a></li>
+							<li><a href="#">고교 방문상담</a></li>
+							<li><a href="#">고교 대학연계</a></li>
+						</ul>
+					</li>
+					<li class="m5">
+						<a href="#">자료실</a>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="gnbBg"></div>
+	</div>
+	<!--// header -->
+
+
+
+
+	<!-- 서브 시작 -->
+	<div id="sub" class="s3">
+		<div id="topV"><div class="center_align"><h4>통합 비교검색</h4></div></div>
+		<div class="center_align clearfix">
+
+
+			<!-- 왼쪽메뉴(Left Menu) -->
+			<div id="lnb">
+				<h3>고교정보관리</h3>
+				<ul>
+					<li><a href="#">고교 공시정보</a></li>
+					<li class="on"><a href="#">통합 비교검색</a></li>
+					<li><a href="#">학업성취도 현황</a></li>
+					<li><a href="#">지원자 현황</a></li>
+					<li><a href="#">합격자 현황</a></li>
+					<li><a href="#">대학별 정보 관리</a></li>
+				</ul>
+			</div>
+
+
+
+
+			<!-- 내용시작 -->
+			<div id="con">
+				
+
+
+				<!-- 탭 -->
+				<ul class="tab t2 clearfix mt0">
+					<li class="on"><div><a href="#">지표검색결과 </a></div></li>
+					<li><div><a href="#">학교별 비교</a></div></li>
+				</ul>
+
+				<p class="topt mt20">
+					자료기준년월일 : <span>2016년 04월</span> | 학교 급 : <span>일반고등학교</span> | 설립 구분 : <span>국립</span>    
+				</p>
+				
+
+				
+				<div class="gph mt30">
+					<div>
+						<h6>성별 학생수</h6>
+						<div class="graph">
+							<!-- 그래프 영역 -->
+							<img src="../img/ex/g6.png" alt="임시이미지" />
+						</div>
+					</div>
+				</div>
+				
+				
+
+				<div class="table1 mt70">
+					<div class="ov_h">
+						<table>
+							<colgroup>
+								<col style="width:20%;" />
+								<col />
+								<col style="width:20%;" />
+								<col style="width:20%;" />
+							</colgroup>
+							<tr>
+								<th>학교</th>
+								<th>설립구분</th>
+								<th>남학생 비율(%)</th>
+								<th>여학생 비율(%)</th>
+							</tr>
+							<tr>
+								<td>갑천고등학교</td>
+								<td>공립</td>
+								<td>56.1</td>
+								<td>43.9</td>
+							</tr>
+							<tr>
+								<td>둔내고등학교</td>
+								<td>공립</td>
+								<td>56.1</td>
+								<td>43.9</td>
+							</tr>
+							<tr>
+								<td>안흥고등학교</td>
+								<td>공립</td>
+								<td>56.1</td>
+								<td>43.9</td>
+							</tr>
+							<tr class="bgGray">
+								<td>평균(횡성군)</td>
+								<td></td>
+								<td>52.7</td>
+								<td>43.7</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				
+				
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+			</div>
+			<!-- //내용끝 //sCon -->
+		</div>
+
+
+
+
+
+	</div>
+	<!-- //서브 -->
+
+
+
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="center_align">
+			<ul class="f_menu clearfix">
+				<li>
+					<div>
+						<a href="#">서비스 소개</a>
+						<ul>
+							<li><a href="#">서비스 소개</a></li>
+							<li><a href="#">서비스 안내</a></li>
+							<li><a href="#">고교 리스트</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">학사일정 관리</a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</div>				
+				</li>
+				<li>
+					<div>
+						<a href="#">고교 정보관리</a>
+						<ul>
+							<li><a href="#">고교 기본정보</a></li>
+							<li><a href="#">통합 비교검색</a></li>
+							<li><a href="#">학업성취도 통계</a></li>
+							<li><a href="#">지원자 통계</a></li>
+							<li><a href="#">합격자 통계</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">교육활동 관리</a>
+						<ul>
+							<li><a href="#">입학전형 설명회</a></li>
+							<li><a href="#">고교 방문상담</a></li>
+							<li><a href="#">고교 대학연계</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">자료실</a>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="bottom">
+			<div class="center_align clearfix">
+				<p class="add">우)54538 전북 익산시 익산대로 460. TEL : 063-850-5114  FAX : 063-850-6666</p>
+				<p class="copy">&copy; 2013 WONKWANG UNIVERSITY. All rights reserved</p>
+			</div>
+		</div>
+
+	</div>
+	<!-- //footer -->
+
+	<script type="text/javascript" src="../js/init.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>김민우♥주홍경</title>
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>    
+	<style>
+		*{padding: 0;margin: 0;}
+
+	</style>
+</head>
+<body>
+
+	<!--kakao map-->
+	<div id="map" style="width:80%;height:300px;margin:0 auto;background: #ddd;"></div>
+
+	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=29808f19f155170aab862f6df5470d0f&libraries=services,clusterer,drawing"></script> -->
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aad02fa7581cce0851336108477f7cf9"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.553819, 126.920526),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+        
+        
+        /*
+        네이티브 앱 키
+        29808f19f155170aab862f6df5470d0f
+        REST API 키
+        f449b63fea711500a135f6e986079fac
+        JavaScript 키
+        aad02fa7581cce0851336108477f7cf9
+        Admin 키
+        d31b63247e7feb7f282981c9b7c39efa
+        */
+    </script>
+	
+</body>
+</html>

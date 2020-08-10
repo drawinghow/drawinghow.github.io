@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>pms</title>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery1.8.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/front_nav.js"></script>
+<script src="js/front_select.js"></script>
+<script src="js/front_checkbox.js"></script>
+<script src="js/front_common.js"></script>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/ie.css">
+	<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+
+
+
+
+<div style="height:129px;background:url(./img/_test_header.png) no-repeat"></div>
+
+
+
+
+
+
+
+<div id="wrap">
+
+
+
+
+
+
+	<div style="width:223px;background:url(./img/_test_nav.png) no-repeat;position:absolute;left:0;top:129px;bottom:0;"></div>
+
+
+
+
+
+
+	<!-- 내용 : 컨텐츠 보여지는 부분 -->
+	<section id="content">
+		<h1>작업요청 게시판</h1>
+		
+
+
+
+		<div class="search">
+			<div class="del">
+				<a href="">삭제</a>
+			</div>
+			<form class="frm">
+				<select class="sel" id="" name="">
+					<option value="title">제목</option>
+					<option value="contents">내용</option>
+					<option value="name">작성자</option>
+				</select>
+				<input type="text" class="text">
+				<input type="submit" class="submit" value="검색하기">
+			</form>
+			<div class="list">
+				<p class="num"><b>278</b> 개 중  <b>1</b> - <b>50</b></p>
+				<div class="btn">
+					<a href="" class="prev">이전</a>
+					<a href="" class="next">다음</a>
+				</div>
+				<p class="write"><a href=""  >글쓰기</a></p>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<form action="">
+			<div class="tb2 view">
+				<table>
+					<colgroup>
+						<col style="width:110px">
+						<col>
+						<col style="width:110px">
+						<col style="width:150px;">
+					</colgroup>				
+					<tbody>
+						<tr>
+							<th>제목</th>
+							<td colspan="3">2016학년도 정시 농어촌학생, 특성화고교출신자 전형 확인서</td>
+						</tr>
+						<tr>
+							<th>작성자</th>
+							<td>입학처</td>
+							<th class="topLine">작성일</th>
+							<td>2016-11-09</td>
+						</tr>
+						<tr>
+							<th>요청일<!--<span style="display:block;font-size:12px;line-height: 1.2em;">(완료날짜)</span>--></th>
+							<td colspan="3">2016-11-15</td>
+						</tr>
+						<tr>
+							<th>내용</th>
+							<td class="con" colspan="3">2016학년도 정시모집 가군 농어촌학생 전형(정원외), 특성화고출신자 전형(정원외) 확인서를 게시하오니 지원자는 참고하시기 바랍니다. </td>
+						</tr>
+						<tr>
+							<th>첨부화일</th>
+							<td colspan="3"> <a href="">팝업요청.pptx</a>
+								<!--<div class="inputFileWrap">
+									<input type="text" class="text" id="fileName1" readonly>
+									<div class="fileBtn">
+										<span>파일첨부</span>
+										<input type="file" class="file" style="width:708px;" onchange="document.getElementById('fileName1').value=this.value;">
+									</div>
+									<div class="del"><a href="">파일삭제</a></div>
+								</div>	-->						
+							</td>
+						</tr>
+						
+					</tbody>
+				</table> 
+			</div>
+
+			
+			<form action="">
+			<div class="tb2 view">
+				<table>
+					<colgroup>
+						<col style="width:110px">
+						<col>
+						<col style="width:110px">
+						<col >
+					</colgroup>				
+					<tbody>
+						<tr>
+							<th rowspan="2">처리상태</th>
+							<td colspan="3">
+								<div class="inputFileWrap">
+									<select class="sel" id="" name="" style="width:120px;">
+										<option value="1">접수중</option>
+										<option value="2">처리중</option>
+										<option value="3">처리완료</option>
+										<option value="0">표시안함</option>
+									</select>
+									<input type="text" class="text" id="fileName2" readonly style="width:468px;margin-left:8px;">
+									<div class="fileBtn">
+										<span>파일첨부</span>
+										<input type="file" class="file" style="left:130px;width:577px;" onchange="document.getElementById('fileName2').value=this.value;">
+									</div>
+									<div class="del"><a href="">파일삭제</a></div>
+								</div>	
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3"><textarea class="textarea" cols="30" rows="8"></textarea></td>
+						</tr>
+						<tr>
+							<th class="topLine">작업자</th>
+							<td  colspan="3" class="left">
+								<select class="sel" id="" name="" style="width:120px;">
+									<option value="design">디자이너</option>
+									<option value="dev">개발자</option>
+									<option value="dev2">퍼블리셔</option>
+									<option value="con">기획자</option>
+								</select>
+								<input type="text" class="text" id="fileName2" style="width:200px;margin-left:8px;" placeholder="이름">
+							</td>
+						</tr>
+					</tbody>
+				</table> 
+			</div>
+
+
+
+			<div class="boardBtn">
+				<input type="submit" value="저장" class="submit">
+				<a href="" class="c2">취소</a>
+				<a href="" class="c1">목록</a>
+			</div>
+
+		</form>
+
+
+
+
+
+	</section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>pms</title>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery1.8.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/front_nav.js"></script>
+<script src="js/front_select.js"></script>
+<script src="js/front_checkbox.js"></script>
+<script src="js/front_common.js"></script>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/ie.css">
+	<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+
+
+
+
+<header id="header">
+	<h1><img src="img/logo.png" alt="유웨이어플라이"></h1>
+	<div class="txt">
+		<p>· 2016년 04월 18일 (월요일) <span class="s1">000 팀 000 사원</span></p>
+		<p>· 최종접속일시 : 2016-00-00 14:00:00 </p>
+	</div>
+	<div class="btn">
+		<a href="" class="on">Log_out</a>
+		<a href="" class="modify">Modify</a>
+	</div>
+</header>
+
+
+
+
+<!-- Modify 버튼 클릭시 나오는 레이어팝업 -->
+<section class="geinLayer">
+	<form class="box">
+		<h1>개인정보 수정</h1>
+		<div class="tb2">
+			<table>
+				<colgroup>
+					<col style="width:150px;">
+					<col>
+				</colgroup>				
+				<tbody>
+					<tr>
+						<th>성명</th>
+						<td><input type="text" class="text" style="width:350px"></td>
+					</tr>
+					<tr>
+						<th>아이디</th>
+						<td>uway3369</td>
+					</tr>
+					<tr>
+						<th>비밀번호</th>
+						<td><input type="text" class="text" style="width:350px"></td>
+					</tr>
+					<tr>
+						<th>연락처</th>
+						<td>
+							<select class="sel2" name="tel" id="sel_tel">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="019">019</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+							</select>
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+						</td>
+					</tr>
+					<tr>
+						<th>휴대폰</th>
+						<td>
+							<select class="sel2" name="tel" id="sel_tel">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="019">019</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+							</select>
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+						</td>
+					</tr>
+					<tr>
+						<th>이메일</th>
+						<td>
+							<input class="text" type="text" id="EMAIL1" name="EMAIL1" title="이메일 아이디" class="small"  maxlength="20" style="width:200px;" />
+							<span>@</span>
+							<input class="text" type="text" id="EMAIL2" name="EMAIL2" title="이메일 주소"  maxlength="25" style="width:200px;" />
+							<select class="sel" id="EMAIL3" onchange='$("#EMAIL2").val($(this).val())'>
+								<option value="">직접입력</option>
+								<option value="naver.com">네이버</option> 
+								<option value="nate.com">네이트</option>
+								<option value="daum.net">다음</option> 
+								<option value="gmail.com">Gmail</option> 
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>주소</th>
+						<td>
+							<input type="text" class="text" style="width:350px">
+							<a class="button" href="#">주소검색</a>
+							<input type="text" class="text" style="width:350px;margin-top:12px;">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="btn">
+			<input type="submit" class="submit" value="수정">
+			<a href="" class="close">취소</a>
+		</div>
+		<p class="close"><a href="">닫기</a></p>
+	</form>
+</section>
+<!-- // Modify 버튼 클릭시 나오는 레이어팝업 -->
+
+
+
+
+
+
+<!-- 등록 레이어팝업 -->
+<section class="registerLayer">
+	<form class="box">
+		<h1>대학 추가</h1>
+		<div class="tb2">
+			<table>
+				<colgroup>
+					<col style="width:150px;">
+					<col>
+				</colgroup>				
+				<tbody>
+					<tr>
+						<th>대학교명</th>
+						<td><input type="text" class="text" style="width:350px"></td>
+					</tr>
+					<tr>
+						<th>대표 URL</th>
+						<td><input type="text" class="text" style="width:350px" value="http://"></td>
+					</tr>
+					<tr>
+						<th>대표 연락처</th>
+						<td>
+							<select class="sel2" name="tel" id="sel_tel">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="019">019</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+							</select>
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+						</td>
+					</tr>
+					<tr>
+						<th>대표 팩스</th>
+						<td>
+							<select class="sel2" name="tel" id="sel_tel">
+								<option value="02">02</option>
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="019">019</option>
+								<option value="018">018</option>
+							</select>
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+							<span> - </span>
+							<input type="text" class="text" style="width:80px">
+						</td>
+					</tr>
+					<tr>
+						<th>주소</th>
+						<td>
+							<input type="text" class="text" style="width:350px">
+							<a class="button" href="#">주소검색</a>
+							<input type="text" class="text" style="width:350px;margin-top:12px;">
+						</td>
+					</tr>
+					<tr>
+						<th>비고사항</th>
+						<td>
+							<textarea class="textarea" name="" id="" cols="90" rows="5"></textarea>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="btn">
+			<input type="submit" class="submit" value="추가">
+			<a href="" class="close">닫기</a>
+		</div>
+		<p class="close"><a href="">닫기</a></p>
+	</form>
+</section>
+<!--// 등록  레이어팝업 -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 담당자관리 레이어팝업 -->
+<section class="chargeLayer" >
+	<form class="box">
+		<h1>담당자 관리</h1>
+		<div class="tb1">
+			<table>
+				<colgroup>
+					
+					<col style="width:70px;">
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col style="width:150px;">
+				</colgroup>		
+				<thead>
+					
+					<th>번호</th>
+					<th>아이디</th>
+					<th>이름</th>
+					<th>부서</th>
+					<th>직급</th>
+					<th>연락처</th>
+					<th>관리</th>
+				</thead>		
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>sky7pjk</td>
+						<td>박제균</td>
+						<td>입학팀</td>
+						<td>선생님</td>
+						<td>010-0000-0000</td>
+						<td>
+							<div class="gwanri">
+								<a href="">보기</a>
+								<a href="">삭제</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>sky7pjk</td>
+						<td>박제균</td>
+						<td>입학팀</td>
+						<td>선생님</td>
+						<td>010-0000-0000</td>
+						<td>
+							<div class="gwanri">
+								<a href="">보기</a>
+								<a href="">삭제</a>
+							</div>
+						</td>
+					</tr>
+
+
+				</tbody>
+			</table>
+		</div>
+		<div class="btn">
+			<input type="submit" class="submit" value="담당자 추가">
+			<a href="" class="close">취소</a>
+		</div>
+		<p class="close"><a href="">닫기</a></p>
+	</form>
+</section>
+<!-- // 담당자관리 레이어팝업 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 상단메뉴 :  GNB -->
+<div id="s_menu">
+
+	<div class="list">
+		<ul>
+			<li><a href="">웹관리자 관리</a></li>
+			<li class="on"><a href="">대학/업체관리</a></li>
+			<li><a href="">프로젝트관리</a></li>
+			<li><a href="">협력업체 전용게시판</a></li>
+			<li><a href="">신규제작</a></li>
+			<li><a href="">유지보수</a></li>
+			<li><a href="">완료</a></li>
+			<li class="standby"><a href="">|<span>승인대기회원</span></a></li>
+		</ul>
+	</div>	
+
+	<!-- <div class="name">중앙대학교 입학</div>  -->
+
+	<div class="box">
+		<div class="show"><span>화면표시</span>
+			<ul>
+				<li class="big"><a href="">넓게</a></li>
+				<li class="normal"><a href="">보통</a></li>
+				<li class="small"><a href="">좁게</a></li>
+			</ul>
+		</div>
+		<div class="admin">Admin</div>
+	</div>
+
+</div>
+<!-- // 상단메뉴 :  GNB -->
+
+
+
+
+
+
+
+
+<div id="wrap">
+
+
+	<!--  왼쪽메뉴 : LNB -->
+	<nav id="nav">
+		<ul class="u1">
+			<li class="on noneSub"><a href="">대학/담당자 관리</a>
+				<!--<ul class="u2">
+					<li class="on"><a href="">웹관리자 현황</a></li>
+					<li><a href="">부서관리</a></li>
+					<li><a href="">직급관리</a></li>
+					<li><a href="">직원관리</a></li>
+				</ul>-->
+			</li>
+			<li class="noneSub"><a href="">업체/담당자 관리</a>
+				<!--<ul class="u2">
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+				</ul>-->
+			</li>
+			<li class="noneSub"><a href="">대학/업체 부서관리</a>
+				<!--<ul class="u2">
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+				</ul>-->
+			</li>
+			<li class="noneSub"><a href="">대학/업체 직급관리</a>
+				<!--<ul class="u2">
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+					<li><a href="">블라블라</a></li>
+				</ul>-->
+			</li>
+		</ul>
+	</nav>
+	<!-- // 왼쪽메뉴 : LNB -->
+
+
+
+
+
+	<!-- 내용 : 컨텐츠 보여지는 부분 -->
+	<section id="content">
+
+		<!-- 타이틀 -->
+		<h1>대학/담당자 관리</h1>
+		
+
+
+
+		<div class="search">
+			<div class="del grayLine">
+				<a href="">삭제</a>
+			</div>
+			<form class="frm">
+				<select class="sel2" id="" name="">
+					<option value="title">대학명</option>
+				</select>
+				<input type="text" class="text">
+				<input type="submit" class="submit" value="검색하기">
+			</form>
+			<div class="list">
+				<p class="num"><b>278</b> 개 중  <b>1</b> - <b>10</b></p>
+				<div class="btn">
+					<a href="" class="prev">이전</a>
+					<a href="" class="next">다음</a>
+				</div>
+				<p class="register_btn"><a href="#"  >대학추가</a></p>
+			</div>
+		</div>
+
+
+	
+		
+
+
+
+
+
+
+		<div class="tb1">
+			<table>
+				<colgroup>
+					<col style="width:50px;">
+					<col style="width:70px;">
+					<col style="">
+					<col style="width:150px;">
+					<col style="width:150px;">
+					<col style="width:200px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>선택</th>
+						<th>번호</th>
+						<th>대학명</th>
+						<th>연락처</th>
+						<th>팩스</th>
+						<th>관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">10</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">9</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">8</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">7</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">6</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">5</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">4</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">3</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">2</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="checkbox "></td>
+						<td class="num">1</td>
+						<td class="left">중앙대학교</td>
+						<td class="tel">010 - 0000 - 0000</td>
+						<td class="fax">02 - 000 - 0000</td>
+						<td>
+							<div class="gwanri">
+								<a class="btn_chargePop" href="">담당자관리</a>
+								<a href="">보기</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+	</section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

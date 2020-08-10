@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>고교정보 관리시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="stylesheet" type="text/css" href="../css/sincheong.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="../js/respond.js_html5shiv.js" ></script>
+</head>
+<body>
+
+	<!-- 팝업사이즈 : 560 X 695 -->
+	<div id="sincheong4">
+		<div id="header">
+			<h1>신청자 정보수정</h1>
+		</div>
+		<div class="table">
+			<table>
+				<tr>
+					<th>주제선택</th>
+					<td class="pt16">
+						<div class="radios">
+							<input type="radio"  name="juje" id="j1"><label for="j1">입시설명회</label>
+							<input type="radio"  name="juje" id="j2"><label for="j2">모의면접</label>
+							<input type="radio"  name="juje" id="j3"><label for="j3">전공체험</label>
+							<input type="radio"  name="juje" id="j4"><label for="j4">동아리 연계프로그램</label>
+						</div>
+					</td>
+				<tr>
+					<th>학교명</th>
+					<td>
+						<div class="formSch">
+							<input class="input sch" type="text"  value="유웨이고등학교" />	
+							<input type="submit" class="btn_sch"  value="검색" />
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="table">
+			<h2>&bull;담당교사</h2>
+			<table>
+				<tr>
+					<th>성명</th>
+					<td>
+						<input class="input w190" type="text" value="김원광" />	
+					</td>
+				</tr>
+				<tr>
+					<th>전화번호</th>
+					<td>
+						<select class="sel1 phone" >
+							<option value="">02</option>
+						</select>
+						<span class="hp"> - </span>
+						<input class="input phone" type="text"  value="1234"  />	
+						<span class="hp"> - </span>
+						<input class="input phone" type="text"  value="1234"  />	
+					</td>
+				</tr>
+				<tr>
+					<th>휴대전화</th>
+					<td>
+						<select class="sel1 phone" >
+							<option value="">010</option>
+						</select>
+						<span class="hp"> - </span>
+						<input class="input phone" type="text"  value="1234"  />	
+						<span  class="hp"> - </span>
+						<input class="input phone" type="text"  value="1234"  />	
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="table">
+			<h2>&bull;설명회</h2>
+			<table>
+				<tr>
+					<th>일시</th>
+					<td>
+						<div class="formDate">
+							<input class="input sch" type="text"  />	
+							<button class="btn_sch " >일시</button>
+						</div>
+						
+					</td>
+				</tr>
+				<tr>
+					<th>장소</th>
+					<td>
+						<input class="input w230" type="text"  />	
+					</td>
+				</tr>
+				<tr>
+					<th>참여학생수</th>
+					<td>
+						<input class="input w90" type="text"  /> <span class="t">명</span>	
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<p class="desc">※ 일시 및 장소 수정은 학교 관리자에게 문의하시기 바랍니다.</p>
+
+		<div class="btnWrap pt">
+			<input type="submit" class="red" value="신청하기" />
+		</div>
+		
+	</div>
+</body>
+</html>

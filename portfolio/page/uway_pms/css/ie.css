@@ -1,0 +1,16 @@
+.search,.select  {*zoom:1;}
+.search .frm input.submit{padding: 0;}
+.sel,.sel1,.sel2 {background: none;}
+
+.search .list{*zoom:1;}
+.search .list:after {display: block;clear: both;content: '';}
+.search .list .num {float: left;}
+.search .list .btn {float: left;}
+.search .list .register_btn{float: left;}
+
+#nav {height: 100%;border-right: 1px solid #d2d2d2;}
+
+.inputFileWrap{*zoom:1;}
+.inputFileWrap:after {display: block;clear: both;content: '';}
+.inputFileWrap>input {float: left;}
+.inputFileWrap>div{float: right;}

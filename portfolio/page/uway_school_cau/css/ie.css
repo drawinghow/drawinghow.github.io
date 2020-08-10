@@ -1,0 +1,7 @@
+.clearfix {*zoom:1;}
+select {height: auto !important;padding: 10px !important;background: none !important;}
+select.sel1 {}
+.radios2 input[type="radio"] {position: relative;margin:4px 0;width: auto;height: auto;}
+.radios2 input[type="radio"] + label {margin:4px 0;padding: 0 18px 0 5px;}
+.radios2 input[type="radio"] + label:before {display: none;margin: 0;}
+.radios2 input[type='radio']:checked + label::after {display: none;}

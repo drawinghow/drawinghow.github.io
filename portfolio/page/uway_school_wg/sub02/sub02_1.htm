@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>고교정보 관리시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<!--<meta name="viewport" content="user-scalable=no, width=device-width" />	-->
+	<link rel="stylesheet" type="text/css" href="../css/default.css" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="../js/respond.js_html5shiv.js" ></script>
+	<script type="text/javascript" src="../js/jquery.backgroundSize.js" ></script>
+	<script type="text/javascript" src="../js/jquery.matchHeight-min.js" ></script>
+	<script type="text/javascript" src="../js/jquery.bxslider.min.js" ></script>
+	<script type="text/javascript" src="../js/jquery.tm.horizon.min.js" ></script>
+	<script type="text/javascript" src="../js/default.js" ></script>
+	<!--[if lt IE 9]>
+		<script>
+			window.open('ie.html','iePop','width=588,height=281,left=0,top=0')
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+
+	<!-- header -->
+	<div id="top">
+		<div class="center_align clearfix">
+			<h2><img src="../img/common/top_h2.png" alt="고교정보 관리 시스템"></h2>
+			<div class="search">
+				<ul class="clearfix">
+					<li><a href="#">LOGOUT</a></li>
+					<li><a href="#">SITEMAP</a></li>
+					<li><a href="#">MY PAGE</a></li>
+				</ul>
+				<input type="text" />
+				<a class="btnSearchM" href="#"><!-- mobile에서만 보임 --></a>
+				<a class="btnSearch" href="#">검색하기</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="gnb">
+		<div class="center_align clearfix">
+			<h1><img src="../img/common/logo.png" alt="경북대학교"></h1>
+			<ul class="menu celarfix">
+				<li class="m1">
+					<a href="#">서비스 소개</a>
+					<ul>
+						<li><a href="#">서비스 소개</a></li>
+						<li><a href="#">서비스 안내</a></li>
+						<li><a href="#">고교 리스트</a></li>
+					</ul>
+				</li>
+				<li class="m2">
+					<a href="#">학사일정 관리</a>
+					<ul>
+						<li><a href="#">학사일정 관리</a></li>
+					</ul>
+				</li>
+				<li class="m3">
+					<a href="#">고교 정보관리</a>
+					<ul>
+						<li><a href="#">고교 기본정보</a></li>
+						<li><a href="#">통합 비교검색</a></li>
+						<li><a href="#">학업성취도 통계</a></li>
+						<li><a href="#">지원자 통계</a></li>
+						<li><a href="#">합격자 통계</a></li>
+					</ul>
+				</li>
+				<li class="m4">
+					<a href="#">교육활동 관리</a>
+					<ul>
+						<li><a href="#">입학전형 설명회</a></li>
+						<li><a href="#">고교 방문상담</a></li>
+						<li><a href="#">고교 대학연계</a></li>
+					</ul>
+				</li>
+				<li class="m5">
+					<a href="#">자료실</a>
+					<ul>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">모집요강</a></li>
+						<li><a href="#">자료실</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<div id="btnMenu">
+				<a href="#">모바일 메뉴</a>
+				<ul class="celarfix">
+					<li class="m1">
+						<a href="#">서비스 소개</a>
+						<ul>
+							<li><a href="#">서비스 소개</a></li>
+							<li><a href="#">서비스 안내</a></li>
+							<li><a href="#">고교 리스트</a></li>
+						</ul>
+					</li>
+					<li class="m2">
+						<a href="#">학사일정 관리</a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</li>
+					<li class="m3">
+						<a href="#">고교 정보관리</a>
+						<ul>
+							<li><a href="#">고교 기본정보</a></li>
+							<li><a href="#">통합 비교검색</a></li>
+							<li><a href="#">학업성취도 통계</a></li>
+							<li><a href="#">지원자 통계</a></li>
+							<li><a href="#">합격자 통계</a></li>
+						</ul>
+					</li>
+					<li class="m4">
+						<a href="#">교육활동 관리</a>
+						<ul>
+							<li><a href="#">입학전형 설명회</a></li>
+							<li><a href="#">고교 방문상담</a></li>
+							<li><a href="#">고교 대학연계</a></li>
+						</ul>
+					</li>
+					<li class="m5">
+						<a href="#">자료실</a>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="gnbBg"></div>
+	</div>
+	<!--// header -->
+
+
+
+
+	<!-- 서브 시작 -->
+	<div id="sub" class="s2">
+		<div id="topV"><div class="center_align"><h4>입학상담 프로그램</h4></div></div>
+		<div class="center_align clearfix">
+
+
+			<!-- 왼쪽메뉴(Left Menu) -->
+			<div id="lnb">
+				<h3>학사일정 관리</h3>
+				<ul>
+					<li class="on"><a href="#">입학상담 프로그램</a></li>
+				</ul>
+			</div>
+
+
+			<!-- 내용시작 -->
+			<div id="con">
+				
+
+				<div class="tit calendar">
+					<h5>
+						<a href="#" class="prev">이전달</a>
+						<span class="day">2017년 2월</span>
+						<a href="#"  class="next">다음달</a>
+					</h5>
+					<div class="btnR">
+						<a href="#">인쇄</a>
+						<a href="#">엑셀다운로드</a>
+					</div>
+				</div>
+
+
+				<!-- 캘린더:표 -->
+				<div class="table1 cldr">
+					<div class="ov_h">
+
+						<table class="week">
+							<tr>
+								<th class="sun">일</th>
+								<th>월</th>
+								<th>화</th>
+								<th>수</th>
+								<th>목</th>
+								<th>금</th>
+								<th class="sat">토</th>
+							</tr>
+						</table>
+
+						<!-- 1주 -->
+						<div class="row">
+							<table class="date">
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>4</td>
+								</tr>
+							</table>
+							<table class="list">
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="list1">
+										<a href="#Layer_Month2_day0">[정시] 입학설명회</a>
+									</td>
+									<td class="list1"></td>
+									<td class="list1"></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						<!-- 2주 -->
+						<div class="row">
+							<table class="date">
+								<tr>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+									<td>8</td>
+									<td>9</td>
+									<td>10</td>
+									<td>11</td>
+								</tr>
+							</table>
+							<!-- 일정 등록시 table.list 추가 됨-->
+							<table class="list">
+								<tr>
+									<td></td>
+									<td class="list1"><!--  .list1 :주황 / .list2 :초록 / .list3 :파랑  -->
+										<a href="#Layer_Month2_day0">[정시] 입학설명회</a>
+
+										<!-- a 클릭시 레이어팝업 -->
+										<div class="dateLayer" id="Layer_Month2_day0" style="display: block;">
+											<div class="bg"><img src="../img/common/layer_arrow.png" alt="."></div>
+											<div class="box">
+												<div>
+													<p class="date">2017.02.01 (수) ~ 2017.02.03 (화)</p>
+													<div class="con">[정시] 입학설명회</div>
+													<button type="button" class="close">닫기</button>
+												</div>
+											</div>
+										</div> 
+
+									</td>
+									<td class="list1"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+							<table class="list">
+								<tr>
+									<td></td>
+									<td class="list2">
+										<a href="#Layer_Month2_day0">[정시] 입학설명회</a>
+									</td>
+									<td class="list2"></td>
+									<td class="list2"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>	
+							<table class="list">
+								<tr>
+									<td></td>
+									<td class="list2">
+										<a href="#Layer_Month2_day0">[정시] 입학설명회</a>
+									</td>
+									<td class="list2"></td>
+									<td class="list2"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+							<table class="list">
+								<tr>
+									<td></td>
+									<td class="list2">
+										<a href="#Layer_Month2_day0">[정시] 입학설명회</a>
+									</td>
+									<td class="list2"></td>
+									<td class="list2"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						<!-- 3주 -->
+						<div class="row">
+							<table class="date">
+								<tr>
+									<td>12</td>
+									<td>13</td>
+									<td>14</td>
+									<td>15</td>
+									<td>16</td>
+									<td>17</td>
+									<td>18</td>
+								</tr>
+							</table>
+							<table class="list">
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="list3"><a href="#Layer_Month2_day0">[전공체험] 캠퍼스투어</a></td>
+									<td class="list3"></td>
+									<td class="list3"></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						<!-- 4주 -->
+						<div class="row">
+							<table class="date">
+								<tr>
+									<td>19</td>
+									<td>20</td>
+									<td>21</td>
+									<td>22</td>
+									<td>23</td>
+									<td>24</td>
+									<td>25</td>
+								</tr>
+							</table>
+							<table class="list">
+								<tr>
+									<td></td>
+									<td class="list3"><a href="#Layer_Month2_day0">[2017 진로진학박람회] [2017 진로진학박람회]</a></td>
+									<td class="list3"></td>
+									<td class="list3"></td>
+									<td class="list3"></td>
+									<td class="list3"></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						<!-- 5주 -->
+						<div class="row">
+							<table class="date">
+								<tr>
+									<td>26</td>
+									<td>27</td>
+									<td>28</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+							<table class="list">
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+
+					</div>
+				</div><!-- table1 -->
+
+
+
+
+			</div>
+			<!-- //내용끝 //sCon -->
+		</div>
+
+
+
+
+
+	</div>
+	<!-- //서브 -->
+
+
+
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="center_align">
+			<ul class="f_menu clearfix">
+				<li>
+					<div>
+						<a href="#">서비스 소개</a>
+						<ul>
+							<li><a href="#">서비스 소개</a></li>
+							<li><a href="#">서비스 안내</a></li>
+							<li><a href="#">고교 리스트</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">학사일정 관리</a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</div>				
+				</li>
+				<li>
+					<div>
+						<a href="#">고교 정보관리</a>
+						<ul>
+							<li><a href="#">고교 기본정보</a></li>
+							<li><a href="#">통합 비교검색</a></li>
+							<li><a href="#">학업성취도 통계</a></li>
+							<li><a href="#">지원자 통계</a></li>
+							<li><a href="#">합격자 통계</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">교육활동 관리</a>
+						<ul>
+							<li><a href="#">입학전형 설명회</a></li>
+							<li><a href="#">고교 방문상담</a></li>
+							<li><a href="#">고교 대학연계</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">자료실</a>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="bottom">
+			<div class="center_align clearfix">
+				<p class="add">우)54538 전북 익산시 익산대로 460. TEL : 063-850-5114  FAX : 063-850-6666</p>
+				<p class="copy">&copy; 2013 WONKWANG UNIVERSITY. All rights reserved</p>
+			</div>
+		</div>
+
+	</div>
+	<!-- //footer -->
+
+
+
+	<script type="text/javascript" src="../js/init.js"></script>
+
+	
+
+
+
+
+
+	<!-- 승환차장님 여기 추가했어요--->
+	<style type="text/css">
+	.cldr .row table.date {height: 100%;}
+	</style>
+	<script type="text/javascript">
+	$(function(){
+		$('.cldr .row').each(function(i){
+			var lists = $('.cldr .row').eq(i).find($('table.list')).length;
+			if( lists  > 2 ){
+				var tdH = $(this).height();
+				var n = lists-2
+				$(this).css( 'height' , tdH+(30*n) );
+			}
+		});
+
+	})
+	</script>
+	<!-- 승환차장님 여기 추가했어요--->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>고교정보 관리시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="../css/default.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="../js/default.js"></script>
+	<!--[if lt IE 10]>
+		<script type="text/javascript" src="./js/respond.js_html5shiv.js"></script>
+		<script type="text/javascript" src="./js/jquery.backgroundSize.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/ie.css" />
+	<![endif]-->
+</head>
+<body>
+
+
+	<div id="header">
+		<div class="center_align" class="clearfix">
+			<h1 class="logo">
+				<a class="pc" href="#"><img src="../img/common/logo_top.png" alt="중앙대학교 고교정보"></a>
+				<a class="mobile" href="#"><img src="../img/common/logo_m.png" alt="중앙대학교 고교정보"></a>
+			</h1>
+			<div class="rightBt" class="clearfix">
+				<ul class="clearfix">
+					<li class="name"><a href="#">홍길동 님</a></li>
+					<li class="mypage"><a href="#">MYPAGE</a></li>
+					<li><a href="#">LOGOUT</a></li>
+				</ul>
+				<div id="allMenu"><a href="#"><span>전체메뉴</span></a></div>
+			</div>
+		</div>
+	</div><!-- //header -->
+	<div id="nav">
+		<div>
+			<div class="tit">SITEMAP</div>
+			<div class="bt_close"><a href="#">닫기</a></div>
+			<ul class="gnb clearfix">
+				<li>
+					<div>
+						<a href="#">서비스소개<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">서비스 소개</a></li>
+							<li><a href="#">서비스 안내</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">학사일정 관리<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">고교정보 관리<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">고교 기본정보</a></li>
+							<li><a href="#">통합 비교검색</a></li>
+							<li><a href="#">지원자 현황</a></li>
+							<li><a href="#">합격자 현황</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">교육활동 관리<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">입학전형 설명회</a></li>
+							<li><a href="#">고교방문 상담</a></li>
+							<li><a href="#">고교 대학연계</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">자료실<span class="bar"></span></a>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+
+
+
+
+	<!-- 서브 시작 -->
+	<div id="sub" class="s3">
+		<div id="topV"><div class="center_align"><h4>고교공시정보</h4></div></div>
+		<div class="center_align clearfix">
+
+
+			<!-- 왼쪽메뉴(Left Menu) -->
+			<div id="lnb">
+				<h3><span>고교정보관리</span></h3>
+				<ul>
+					<li class="on"><a href="#">고교공시정보</a></li>
+					<li><a href="#">항목 비교검색 </a></li>
+					<li><a href="#">학업성취도 현황</a></li>
+					<li><a href="#">지원자 현황</a></li>
+					<li><a href="#">합격자 현황</a></li>
+					<li><a href="#">대학별 정보 관리</a></li>
+				</ul>
+			</div>
+
+
+			<!-- 내용시작 -->
+			<div id="con">
+				<h4 class="top">고교공시정보</h4>
+				<div id="breadcrumb">
+					<ul class="clearfix">
+						<li><a href="#"><img src="../img/common/breadcrumb_home.png" alt="home"></a></li>
+						<li><a href="#">고교정보관리</a></li>
+						<li><a href="#">고교공시정보</a></li>
+					</ul>
+				</div>
+				<ul class="info2">
+					<li>공시 정보를 제공하는 고등학교 목록입니다.  </li>
+					<li>각 고등학교의 공시 정보를 기반으로 지원자의 응시 환경을 파악할 수 있습니다. </li>
+					<li>다른 학교 위치를 검색하시려면, 고교 정보 관리 > 공시 정보에서 원하는 고등학교를 검색하시면 됩니다. </li>
+				</ul>
+
+
+				<!-- 탭 -->
+				<ul class="tab t4 clearfix">
+					<li class="on"><div><a href="#">기본 정보 </a></div></li>
+					<li><div><a href="#">세부 정보</a></div></li>
+					<li><div><a href="#">학업성취도 통계</a></div></li>
+					<li><div><a href="#">지도로 보기</a></div></li>
+				</ul>
+
+
+				
+
+
+				<div class="tit2">
+					<div class="selbox2">
+						<em>자료기준년월</em>
+						<select class="sel1" name="year" id="year">
+							<option value="">2016년 04월</option>
+						</select>
+					</div>
+					<h5>삼척여자고등학교
+						<span class="redBg">강원</span>
+						<span class="grayBg">일반</span>
+					</h5>
+				</div>
+
+
+
+				<!-- 기본정보 -->
+				<div class="table2">
+					<div class="clearfix">
+						<table class="left">
+							<colgroup>
+								<col style="width:100px" />
+								<col />
+							</colgroup>
+							<tr>
+								<th>도로명주소</th>	
+								<td>강원도 삼척시 남산길 6</td>
+							</tr>
+							<tr>
+								<th>주소</th>	
+								<td>강원도 삼척시 남양동124 번지</td>
+							</tr>
+							<tr>
+								<th>홈페이지</th>	
+								<td>http://sam-g.hs.kr</td>
+							</tr>
+							<tr>
+								<th>진학교사</th>	
+								<td>조현주 (진로교육부장) </td>
+							</tr>
+							<tr>
+								<th>전화</th>	
+								<td>033-570-8700</td>
+							</tr>
+							<tr>
+								<th>FAX</th>	
+								<td>033-572-5569</td>
+							</tr>
+						</table>
+
+						<table class="right">
+							<colgroup>
+								<col style="width:100px" />
+								<col />
+							</colgroup>
+							<tr>
+								<th>관할교육청</th>	
+								<td>강원도 교육청</td>
+							</tr>
+							<tr>
+								<th>공학구분</th>	
+								<td>교과교실제</td>
+							</tr>
+							<tr>
+								<th>설립구분</th>	
+								<td>공립 고등학교</td>
+							</tr>
+							<tr>
+								<th>설립유형</th>	
+								<td>단설</td>
+							</tr>
+							<tr>
+								<th>설립일</th>	
+								<td>1953-04-23</td>
+							</tr>
+							<tr>
+								<th>개교기념일</th>	
+								<td>1953-04-23</td>
+							</tr>
+						</table>
+						
+					</div>
+				</div>
+				<!-- //기본정보 -->
+
+
+
+				
+				<div class="gph clearfix">
+					<div class="left">
+						<h6>학생현황 (2016-04-01)</h6>
+						<div class="graph">
+							<!-- 그래프 영역 -->
+							<img src="../images/ex/g1.png" alt="임시이미지" />
+						</div>
+					</div>
+					<div class="right">
+						<h6>교원 현황 (2016-04-01)</h6>
+						<div class="graph">
+							<!-- 그래프 영역 -->
+							<img src="../images/ex/g2.png" alt="임시이미지" />
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<h6>학생현황 (2016-04-01)</h6>
+				<div class="table1">
+					<div class="ov_h">
+						<table>
+							<tr>
+								<th rowspan="2">학과(과정)</th>
+								<th colspan="2">1학년</th>
+								<th colspan="2">2학년</th>
+								<th colspan="2">3학년</th>
+								<th colspan="2">특수학급</th>
+								<th colspan="2">순회학급</th>
+								<th colspan="2">계</th>
+							</tr>
+							<tr>
+								<th>학급수</th>
+								<th>학생수</th>
+								<th>학급수</th>
+								<th>학생수</th>
+								<th>학급수</th>
+								<th>학생수</th>
+								<th>학급수</th>
+								<th>학생수</th>
+								<th>학급수</th>
+								<th>학생수</th>
+								<th>학급수</th>
+								<th>학생수</th>
+							</tr>
+							<tr>
+								<th>7차 일반</th>
+								<td>7</td>
+								<td>205</td>
+								<td>7</td>
+								<td>198</td>
+								<td>234</td>
+								<td>1</td>
+								<td>4</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>22</td>
+								<td>641</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+
+
+
+				<div class="twoTable clearfix">
+					<div class="left">
+						<h6>교사현황 (2016-04-01)</h6>
+						<div class="table1">
+							<table>
+								<colgroup>
+									<col style="width:50%;" />
+									<col />
+								</colgroup>
+								<tr>
+									<th>일반교실</th>
+									<th>체육집회공간</th>
+								</tr>
+								<tr>
+									<td>22</td>
+									<td>1</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="right">
+						<h6>교원현황 (2016-04-01)</h6>
+						<div class="table1">
+							<table>
+								<colgroup>
+									<col style="width:33.333333%;" />
+									<col style="width:33.333333%;" />
+									<col style="width:33.333333%;" />
+								</colgroup>
+								<tr>
+									<th>전체교원수(남/여)</th>
+									<th>수업 교사수</th>
+									<th>교사1인당 학생수</th>
+								</tr>
+								<tr>
+									<td>16 / 35</td>
+									<td>42</td>
+									<td>15.3</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="twoTable clearfix">
+					<div class="left">
+						<h6>방과후학교 운영현황</h6>
+						<div class="table1">
+							<table>
+								<colgroup>
+									<col style="width:50%;" />
+									<col />
+								</colgroup>
+								<tr>
+									<th>프로그램수</th>
+									<th>참여 학생수</th>
+								</tr>
+								<tr>
+									<td>22</td>
+									<td>1</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					<div class="right">
+						<h6>장학금 수혜 현황</h6>
+						<div class="table1">
+							<table>
+								<colgroup>
+									<col style="width:33.333333%;" />
+									<col style="width:33.333333%;" />
+									<col style="width:33.333333%;" />
+								</colgroup>
+								<tr>
+									<th>구분</th>
+									<th>인원</th>
+									<th>금액</th>
+								</tr>
+								<tr>
+									<td>장학금</td>
+									<td>22</td>
+									<td>27,439,400</td>
+								</tr>
+								<tr>
+									<td>학비지원</td>
+									<td>22</td>
+									<td>27,439,400</td>
+								</tr>
+								<tr>
+									<td>합계</td>
+									<td>22</td>
+									<td>27,439,400</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					
+				</div>
+				
+
+
+
+
+			</div>
+			<!-- //내용끝 //sCon -->
+		</div>
+
+
+
+
+
+	</div>
+	<!-- //서브 -->
+
+
+
+
+	
+
+
+
+	<div id="footer">
+		<div class="fo1">
+			<div class="center_align">
+				<p>06974 서울특별시 동작구 흑석로 84   TEL. (02)813-8158</p>
+				<div class="bt_adm"><a href="#">관리자화면</a></div>
+			</div>
+		</div>
+		<div class="fo2">
+			<div class="center_align clearfix">
+				<ul class="clearfix">
+					<li><a href="">찾아오시는 길</a></li>
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="">이메일무단수집금지</a></li>
+					<li><a href="">전공안내</a></li>
+				</ul>
+				<p class="copy">COPYRIGHT 2017. CHUNG-ANG UNIVERSITY. ALL RIGHTS RESERVED</p>
+			</div>
+		</div>
+	</div><!-- footer -->
+	
+
+
+
+
+
+</body>
+</html>

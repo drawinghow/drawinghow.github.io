@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@import url('./base.css'); 
+@import url('./default.css'); 
+@import url('./sub.css'); 
+@import url("./user1.css");
+@import url("./user2.css");
+@import url('./board_style.css'); 
+@import url('./bbs.css'); 
+

@@ -1,0 +1,177 @@
+@charset "euc-kr";
+
+/* bxslider */
+.stn_mainbig { overflow:hidden; height:480px; }
+.stn_mainbig #bnrbig { display:none; }
+.stn_mainbig .bx-wrapper { overflow:hidden; background:#413c73; height:480px; }
+.stn_mainbig .bx-wrapper .bx-viewport { height:480px; }
+.stn_mainbig .bx-wrapper ul { overflow:hidden; height:480px; }
+.stn_mainbig .bx-wrapper ul li { overflow:hidden; width:100%; height:480px; padding:190px 0 60px; }
+.stn_mainbig .bx-wrapper ul li .mainbig { overflow:hidden; width:1040px; margin:0 auto; }
+.stn_mainbig .bx-wrapper ul li .mainbig a { overflow:hidden; display:block; }
+.stn_mainbig .bx-wrapper ul li .mainbig a .mobnr { display:none; }
+.stn_mainbig .bx-wrapper .bx-controls{ position:relative; z-index:100; overflow:visible; display:none; }
+.stn_mainbig .bx-wrapper .bx-pager { position:absolute; top:-324px; left:50%; z-index:100; width:150px; margin-left:350px; text-align:right; }
+.stn_mainbig .bx-wrapper .bx-pager .bx-pager-item    { display:inline-block; width:10px; height:10px; margin-left:5px; }
+.stn_mainbig .bx-wrapper .bx-pager .bx-pager-item a  { overflow:hidden; display:block; width:10px; height:10px; border-radius:50px; background:rgba(0,0,0,.2); text-indent:-999px; }
+.stn_mainbig .bx-wrapper .bx-pager .bx-pager-item a.active{ background:rgba(0,0,0,.75); }
+.stn_mainbig .bx-wrapper .bx-pager.default { margin-left:90px; }
+.stn_mainside { position:absolute; top:190px; left:50%; z-index:100; overflow:hidden; width:260px; height:290px; margin-left:260px; padding:10px; padding-bottom:0; background:rgba(0,0,0,.15); }
+.stn_mainside .bx-wrapper ul li { overflow:hidden; width:100%; height:270px; padding:0; }
+.stn_mainside .mobnr { display:none; overflow:hidden; width:100%; }
+.stn_mainside .mobnr a { overflow:hidden; display:block; }
+.stn_mainside .bx-wrapper .bx-pager { position:absolute; top:16px; right:20px; z-index:100; text-align:right; }
+.stn_mainside .bx-wrapper .bx-pager .bx-pager-item    { display:inline-block; width:10px; height:10px; margin-left:5px; }
+.stn_mainside .bx-wrapper .bx-pager .bx-pager-item a  { overflow:hidden; display:block; width:10px; height:10px; border-radius:50px; background:rgba(0,0,0,.2); text-indent:-999px; }
+.stn_mainside .bx-wrapper .bx-pager .bx-pager-item a.active{ background:rgba(0,0,0,.75); }
+.stn_mainbig .bx-wrapper ul.default li .mainbig  { padding-right:260px; }
+.stn_mainbig .bx-wrapper .bx-controls-direction,.stn_mainside .bx-wrapper .bx-controls-direction{ display:none; }
+.stn_personal { position:absolute; bottom:0; z-index:200; width:100%; height:60px; padding:10px 0; background:rgba(0,0,0,.15); }
+.stn_personal .bx-wrapper { overflow:visible; width:1040px; margin:0 auto; background:none; }
+.stn_personal #bnrpersonal li a { display:block; height:40px; color:#fff; line-height:38px; text-align:center; opacity:.5; }
+.stn_personal #bnrpersonal li a:hover{ opacity:1; background-color:rgba(255,255,255,.05) }
+.stn_personal #bnrpersonal li a img{ width:30px; height:40px; margin-right:5px; }
+.stn_personal .bx-wrapper .bx-controls-direction{ position:relative; overflow:visible; }
+.stn_personal .bx-wrapper .bx-pager { display:none; }
+.stn_personal .bx-wrapper .bx-controls-direction a { position:absolute; top:-30px; overflow:hidden; display:block; width:20px; height:20px; background:url(http://image.mdnp.co.kr/academy/2017/0619/ic_personal_arrow.png) no-repeat; text-indent:-999px; opacity:.5; }
+.stn_personal .bx-wrapper .bx-controls-direction a:hover{ opacity:1; }
+.stn_personal .bx-wrapper .bx-controls-direction .bx-prev { left:-30px; }
+.stn_personal .bx-wrapper .bx-controls-direction .bx-next { right:-30px; background-position:-20px 0; }
+
+/* Big Banner Nav */
+.bigbnr_nav { position:absolute; top:250px; right:50%; z-index:100; width:170px; margin-right:350px; }
+.bigbnr_nav ul li { overflow:hidden; }
+.bigbnr_nav ul li a { display:block; width:100%; height:31px; padding-left:17px; background-image:url(http://image.mdnp.co.kr/academy/2017/0915/bul_bnrnav_off.png); background-repeat:no-repeat; background-position:10px 14px; color:rgba(255,255,255,.3); line-height:28px; text-align:left; }
+.bigbnr_nav ul li a:hover { color:rgba(255,255,255,1); }
+.bigbnr_nav ul li.on { background-color:rgba(0,0,0,.2); }
+.bigbnr_nav ul li.on a { background-image:url(http://image.mdnp.co.kr/academy/2017/0915/bul_bnrnav_on.png); color:rgba(240,120,0,1); }
+
+.bnrmainspot { overflow:hidden; width:100%; height:70px; min-width:1200px; }
+.bnrmainspot a { overflow:hidden; display:block; width:100%; }
+.bnrmainspot a img { width:320px; }
+
+.main_hotspace { position:relative; overflow:hidden; width:1040px; margin:0 auto; }
+[class^="stnmain_hot"],[class*=" stnmain_hot"]{ position:relative; float:left; overflow:hidden; background:#fff; }
+[class^="stnmain_"] h3,[class*=" stnmain_"] h3{ overflow:hidden; background:url(http://image.mdnp.co.kr/academy/2017/0619/bg_main_boxtitle.png) no-repeat; font-weight:normal; text-align:left; text-indent:-999px; }
+
+/* 공지사항 */
+.stnmain_hotnotice { width:650px; height:240px; margin-right:1px; padding:30px; }
+.stnmain_hotnotice h3{ background-position:-20px -20px; }
+.stnmain_hotnotice .grp_notice { margin-top:22px; }
+.stnmain_hotnotice .grp_notice ul li { position:relative; overflow:hidden; height:27px; text-align:left; }
+.stnmain_hotnotice .grp_notice ul li p,.stnmain_hotnotice .grp_notice ul li a,.stnmain_hotnotice .grp_notice ul li i{ float:left; font-size:13px; line-height:26px; text-align:left; }
+.stnmain_hotnotice .grp_notice ul li p{ position:relative; display:block; width:75px; margin-right:10px; padding-left:9px; font-weight:bold; color:#f07800; letter-spacing:-1px; }
+.stnmain_hotnotice .grp_notice ul li p:before{ content:""; position:absolute; top:13px; left:0; width:3px; height:3px; background:#aaa; }
+.stnmain_hotnotice .grp_notice ul li a       { overflow:hidden; display:inline-block; max-width:415px; color:#555; white-space:nowrap; text-overflow:ellipsis; }
+.stnmain_hotnotice .grp_notice ul li a:hover { color:#f07800; }
+.stnmain_hotnotice .grp_notice ul li i{ float:right; display:inline-block; color:#ccc; }
+.stnmain_hotnotice .grp_notice ul li img{ width:9px; height:9px; margin-left:3px; vertical-align:-4px; }
+
+/* 공지사항 - 캠퍼스 바로가기 */
+.stnmain_hotnotice .grp_selgo { position:absolute; top:20px; right:20px; z-index:10; overflow:hidden; width:160px; height:31px; border:1px solid #e6ebeb; background:#fff; }
+.stnmain_hotnotice .grp_selgo,.stnmain_hotnotice .grp_selgo .formnav:hover   { -webkit-transition:all .5s ease; -moz-transition:all .5s ease; -ms-transition:all .5s ease; -o-transition:all .5s ease; transition:all .5s ease; }
+.stnmain_hotnotice .grp_selgo_open { border:1px solid #333; height:205px; color:#333; }
+.stnmain_hotnotice .grp_selgo .formnav     { overflow:hidden; display:block; width:158px; height:29px; padding:0 0 0 13px; color:#777; text-align:left; line-height:26px; cursor:pointer; }
+.stnmain_hotnotice .grp_selgo_open .formnav{ color:#333; }
+.stnmain_hotnotice .grp_selgo .nav_arrow   { position:absolute; top:14px; right:15px; width:7px; height:4px; background:url(http://image.mdnp.co.kr/academy/2017/0619/bg_selarrow.gif) no-repeat; }
+.stnmain_hotnotice .grp_selgo .down { top:13px; background-position:-7px 0; }
+.stnmain_hotnotice .grp_selgo ul li a { display:block; width:100%; height:24px; padding:0 13px; color:#777; line-height:20px; text-align:left;  }
+.stnmain_hotnotice .grp_selgo ul li a:hover { color:#333; background:#f5f5f5; }
+
+/* 캠퍼스 개강안내 2018.06.27 */
+.stnmain_hotcampus { width:389px; height:240px; padding:30px; background:#fff; background-repeat:no-repeat; background-position:right bottom; background-size:390px 240px; }
+.stnmain_hotcampus h3 { background-position:-20px -50px; }
+.stnmain_hotcampus .grp_campus { margin-top:20px; }
+.stnmain_hotcampus .grp_campus:after { content:""; display: block; clear: both; }
+.stnmain_hotcampus .grp_campus dl { float: left; width:110px; margin-right: 2px; }
+.stnmain_hotcampus .grp_campus dl dt { overflow: hidden; margin-bottom: 10px; font-size: 12px; font-weight: bold; color: #333; text-align: left; }
+.stnmain_hotcampus .grp_campus dl dd { overflow:hidden; width:100px; margin-bottom:2px; }
+.stnmain_hotcampus .grp_campus dl dd a { display:block; height:33px; border:1px solid #e6ebeb; background:#f5f7f7; color:#555; line-height:27px; }
+.stnmain_hotcampus .grp_campus dl dd a:hover { border:1px solid #f07800; background:#fff; color:#f07800; }
+
+/* 실시간 강의 UPDATE */
+.stnmain_hotlive { width:1040px; height:126px; margin-top:1px; padding:30px; }
+.stnmain_hotlive h3{ position:relative; float:left; overflow:visible; display:block; width:135px; height:50px; background-position:-20px -80px; }
+.stnmain_hotlive h3 span{ position:absolute; top:44px; left:0; display:block; width:100px; height:20px; font-size:11px; color:#aaa; text-align:left; text-indent:0; letter-spacing:1px; }
+.stnmain_hotlive .grp_arrbtn { position:absolute; top:15px; right:19px; width:32px; }
+.stnmain_hotlive .grp_arrbtn a{ float:left; overflow:hidden; display:block; width:15px; height:15px; margin-right:1px; border:1px solid #e6ebeb; background:url(http://image.mdnp.co.kr/academy/2017/0619/ic_live_arrow.png) no-repeat -1px -1px; text-indent:-999px; }
+.stnmain_hotlive .grp_arrbtn a.next { background-position:-16px -1px; }
+.stnmain_hotlive .grp_arrbtn a:hover{ border:1px solid #b9bebe; }
+.stnmain_hotlive .grp_live { float:left; overflow:hidden; width:840px; height:70px; }
+.stnmain_hotlive .grp_live .bnrlive li  { float:left; overflow:hidden; width:420px; }
+.stnmain_hotlive .grp_live .bnrlive li a{ overflow:hidden; display:block; margin-bottom:10px; }
+.stnmain_hotlive .grp_live .bnrlive li a p { float:left; overflow:hidden; width:66px; height:66px; margin-right:10px; background:#f7f7f7; }
+.stnmain_hotlive .grp_live .bnrlive li a p img { width:66px; }
+.stnmain_hotlive .grp_live .bnrlive li a .infoarea { float:left; overflow:hidden; width:340px; text-align:left; }
+.stnmain_hotlive .grp_live .bnrlive li a .infoarea .name { display:block; height:16px; margin-bottom:9px; font-size:13px; font-weight:bold; color:#9632b4; line-height:16px; text-align:left; }
+.stnmain_hotlive .grp_live .bnrlive li a .infoarea .info { overflow:hidden; display:inline-block; height:18px; max-width:320px; font-size:12px; color:#555; line-height:16px; text-align:left; white-space:nowrap; text-overflow:ellipsis; }
+.stnmain_hotlive .grp_live .bnrlive li a .infoarea .info i { display:inline-block; margin-right:5px; color:#f07800; }
+.stnmain_hotlive .grp_live .bx-controls { display:none; }
+
+/* 베스트 강좌 */
+.stnmain_best { position:relative; z-index:20; overflow:visible; height:270px; background:url(http://image.mdnp.co.kr/academy/2017/0619/bg_bestofbest.png) no-repeat center center; }
+.stnmain_best h3 { position:absolute; top:40px; left:50%; width:80px; height:20px; margin-left:-490px; background-position:-20px -130px; }
+.stnmain_best .grp_tab { position:absolute; top:35px; right:50%; overflow:hidden; display:inline-block; height:25px; margin-right:-500px; }
+.stnmain_best .grp_tab ul li { float:left; width:70px; height:25px; margin:0 1px; }
+.stnmain_best .grp_tab ul li a { display:block; height:25px; border-radius:13px; background:#e6ebeb; font-size:12px; color:#8c9696; line-height:20px; }
+.stnmain_best .grp_tab ul li a:hover,.stnmain_best .grp_tab ul li a.on { background:#f07800; color:#fff; }
+.stnmain_best .grp_best { width:1050px; margin:0 auto; padding-top:70px; height:270px; }
+.stnmain_best .grp_best .bnrbest li { position:relative; float:left; width:340px; margin:0 5px; }
+.stnmain_best .grp_best .bnrbest li .best { overflow:hidden; display:block; width:340px; height:200px; padding-left:30px; text-align:left; }
+.stnmain_best .grp_best .bnrbest li .best .pic { position:absolute; bottom:0; right:0; overflow:hidden; width:150px; }
+.stnmain_best .grp_best .bnrbest li .best .pic img { width:150px; }
+.stnmain_best .grp_best .bnrbest li .best p { overflow:hidden; width:150px; margin:51px 0 8px; font-size:18px; font-weight:bold; color:#414655; line-height:22px; text-align:left; }
+.stnmain_best .grp_best .bnrbest li .best p i { display:inline-block; margin-right:5px; font-weight:normal; }
+.stnmain_best .grp_best .bnrbest li .best:hover p { color:#9632b4; }
+.stnmain_best .grp_best .bnrbest li .best span { overflow:hidden; display:inline-block; height:40px; max-width:192px; font-size:12px; color:#7d8392; line-height:18px; text-align:left; }
+.stnmain_best .grp_best .bnrbest li .best:hover span { color:#414655; }
+.stnmain_best .grp_best .bnrbest li .best:hover p,.stnmain_best .grp_best .bnrbest li .best:hover span { -webkit-transition:all .5s ease; -moz-transition:all .5s ease; -ms-transition:all .5s ease; -o-transition:all .5s ease; transition:all .5s ease; }
+.stnmain_best .grp_best .bnrbest li .medal,.stnmain_best .grp_best .bnrbest li .sample,.stnmain_best .grp_best .bnrbest li .cafe { position:absolute; z-index:99; overflow:hidden; display:block; text-indent:-999px; }
+.stnmain_best .grp_best .bnrbest li .medal  { top:143px; left:178px; width:62px; height:77px; background:url(http://image.mdnp.co.kr/academy/2017/0619/ic_medal.png) no-repeat; }
+.stnmain_best .grp_best .bnrbest li .sample { top:132px; left:30px; width:45px; height:16px; background:url(http://image.mdnp.co.kr/academy/2017/0619/btn_sample.gif) no-repeat; }
+.stnmain_best .grp_best .bnrbest li .cafe   { top:132px; left:30px; width:58px; height:16px; background:url(http://image.mdnp.co.kr/academy/2017/0619/btn_cafe.gif) no-repeat; }
+.stnmain_best .grp_best .bnrbest li .medal.top01 { background-position:0 0; }
+.stnmain_best .grp_best .bnrbest li .medal.top02 { background-position:-62px 0; }
+.stnmain_best .grp_best .bnrbest li .medal.top03 { background-position:-124px 0; }
+.stnmain_best .grp_best .bx-controls { display:none; }
+
+/* 베스트 교재 */
+.stnmain_books { position:relative; z-index:10; overflow:hidden; height:390px; background:#fff; }
+.stnmain_books h3{ position:absolute; top:80px; left:50%; z-index:10; width:80px; height:20px; margin-left:-490px; background-position:-20px -160px; }
+.stnmain_books .grp_books { overflow:hidden; width:1040px; margin:0 auto; padding:80px 0 0 165px; }
+.stnmain_books .grp_books ul li { float:left; width:180px; margin-right:30px; background:url(http://image.mdnp.co.kr/academy/2017/0619/bg_books_list.gif) no-repeat right top; }
+.stnmain_books .grp_books ul li:last-child{ background:none; }
+.stnmain_books .grp_books ul li a   { overflow:hidden; display:block; width:150px; }
+.stnmain_books .grp_books ul li a p { overflow:hidden; width:120px; margin-bottom:14px; border:1px solid #b9bebe; }
+.stnmain_books .grp_books ul li a p img { width:118px; }
+.stnmain_books .grp_books ul li a .infoarea { float:left; overflow:hidden; width:150px; text-align:left; }
+.stnmain_books .grp_books ul li a .infoarea .name   { display:block; height:16px; font-size:11px; color:#a0a5aa; text-align:left; }
+.stnmain_books .grp_books ul li a .infoarea .name i { display:inline-block; margin-right:5px; color:#f07800; }
+.stnmain_books .grp_books ul li a .infoarea .info   { overflow:hidden; display:inline-block; height:42px; max-width:150px; margin-bottom:10px; font-size:13px; color:#414655; line-height:21px; text-align:left; }
+.stnmain_books .grp_books .bx-controls { display:none; }
+
+/* 캠퍼스 안내 / 고객센터 2018.06.27 */
+.stnmain_campus { position:relative; overflow:hidden; height:150px; background:url(http://image.mdnp.co.kr/academy/2017/0619/bg_maincampus.png) no-repeat center bottom; }
+.stnmain_campus h3 { position:absolute; top:30px; left:50%; width:80px; height:20px; margin-left:-490px; background-position:-20px -190px; }
+.stnmain_campus .inner { width:1040px; margin:0 auto; }
+.stnmain_campus .inner:after { content:""; display: block; clear: both; }
+.stnmain_campus .grp_campus { float:left; overflow:hidden; width:650px; padding:25px 0 0 165px; }
+.stnmain_campus .grp_campus dl { float:left; }
+.stnmain_campus .grp_campus dl dt { overflow: hidden; margin-bottom: 10px; font-size: 12px; font-weight: bold; color: #333; text-align: left; }
+.stnmain_campus .grp_campus dl dd   { overflow:hidden; width:200px; margin-right:10px; }
+.stnmain_campus .grp_campus dl dd a { overflow:hidden; display:block; font-size:12px; color:#414655; text-align:left; }
+.stnmain_campus .grp_campus dl dd a span    { overflow:hidden; display:inline-block; height:24px; text-align:left; }
+.stnmain_campus .grp_campus dl dd a .campus { position:relative; width:60px; padding-left:9px; }
+.stnmain_campus .grp_campus dl dd a .campus.sm { width:50px; margin-left:10px; }
+.stnmain_campus .grp_campus dl dd a .campus:before { content:""; position:absolute; top:9px; left:0; width:3px; height:3px; background:#f07800; }
+.stnmain_campus .grp_customer { float:left; overflow:hidden; width:390px; height:150px; padding:30px 0 0 130px; background:#9b6955 url(http://image.mdnp.co.kr/academy/2017/0619/bg_customercenter.gif) no-repeat; }
+.stnmain_campus .grp_customer h3 { display:none; }
+.stnmain_campus .grp_customer .customernumber { overflow:hidden; display:block; width:190px; height:26px; margin-bottom:15px; background:url(http://image.mdnp.co.kr/academy/2017/0619/customernumber.png) no-repeat; background-size:190px 26px; text-indent:-999px; }
+.stnmain_campus .grp_customer ul li { padding-left:5px; text-align:left; }
+.stnmain_campus .grp_customer ul li span { overflow:hidden; display:inline-block; height:18px; font-size:12px; color:rgba(255,255,255,.5); text-align:left; }
+.stnmain_campus .grp_customer ul li span.day  { width:72px; }
+.stnmain_campus .grp_customer ul li span.time { width:100px; }
+
+/* 스카이 배너 */
+.stnmain_bnrsky { position:absolute; top:30px; left:50%; z-index:50; overflow:hidden; width:120px; margin-left:540px; }
+.stnmain_bnrsky ul li { overflow:hidden; margin-bottom:3px; }

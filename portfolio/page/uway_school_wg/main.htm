@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>고교정보 관리시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<!--<meta name="viewport" content="user-scalable=no, width=device-width" />	-->
+	<link rel="stylesheet" type="text/css" href="./css/default.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.bxslider.css" />
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="./js/respond.js_html5shiv.js" ></script>
+	<script type="text/javascript" src="./js/jquery.backgroundSize.js" ></script>
+	<script type="text/javascript" src="./js/jquery.matchHeight-min.js" ></script>
+	<script type="text/javascript" src="./js/jquery.bxslider.min.js" ></script>
+	<script type="text/javascript" src="./js/jquery.tm.horizon.min.js" ></script>
+	<script type="text/javascript" src="./js/default.js" ></script>
+	<!--[if lt IE 9]>
+		<script>
+			window.open('ie.html','iePop','width=588,height=281,left=0,top=0')
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+
+	<!-- header -->
+	<div id="top">
+		<div class="center_align clearfix">
+			<h2><img src="./img/common/top_h2.png" alt="고교정보 관리 시스템"></h2>
+			<div class="search">
+				<ul class="clearfix">
+					<li><a href="#">LOGOUT</a></li>
+					<li><a href="#">SITEMAP</a></li>
+					<li><a href="#">MY PAGE</a></li>
+				</ul>
+				<input type="text" />
+				<a class="btnSearchM" href="#"><!-- mobile에서만 보임 --></a>
+				<a class="btnSearch" href="#">검색하기</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="gnb">
+		<div class="center_align clearfix">
+			<h1><img src="./img/common/logo.png" alt="경북대학교"></h1>
+			<ul class="menu celarfix">
+				<li class="m1">
+					<a href="#">서비스 소개</a>
+					<ul>
+						<li><a href="#">서비스 소개</a></li>
+						<li><a href="#">서비스 안내</a></li>
+					</ul>
+				</li>
+				<li class="m2">
+					<a href="#">학사일정 관리</a>
+					<ul>
+						<li><a href="#">학사일정 관리</a></li>
+					</ul>
+				</li>
+				<li class="m3">
+					<a href="#">고교 정보관리</a>
+					<ul>
+						<li><a href="#">고교 기본정보</a></li>
+						<li><a href="#">통합 비교검색</a></li>
+						<li><a href="#">지원자 통계</a></li>
+						<li><a href="#">합격자 통계</a></li>
+					</ul>
+				</li>
+				<li class="m4">
+					<a href="#">교육활동 관리</a>
+					<ul>
+						<li><a href="#">입학전형 설명회</a></li>
+						<li><a href="#">고교 방문상담</a></li>
+						<li><a href="#">고교 대학연계</a></li>
+						<li><a href="#">교육활동 정보관리</a></li>
+					</ul>
+				</li>
+				<li class="m5">
+					<a href="#">자료실</a>
+					<ul>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">모집요강</a></li>
+						<li><a href="#">자료실</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<div id="btnMenu">
+				<a href="#">모바일 메뉴</a>
+				<ul class="celarfix">
+					<li class="m1">
+						<a href="#">서비스 소개</a>
+						<ul>
+							<li><a href="#">서비스 소개</a></li>
+							<li><a href="#">서비스 안내</a></li>
+						</ul>
+					</li>
+					<li class="m2">
+						<a href="#">학사일정 관리</a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</li>
+					<li class="m3">
+						<a href="#">고교 정보관리</a>
+						<ul>
+							<li><a href="#">고교 기본정보</a></li>
+							<li><a href="#">통합 비교검색</a></li>
+							<li><a href="#">지원자 통계</a></li>
+							<li><a href="#">합격자 통계</a></li>
+						</ul>
+					</li>
+					<li class="m4">
+						<a href="#">교육활동 관리</a>
+						<ul>
+							<li><a href="#">입학전형 설명회</a></li>
+							<li><a href="#">고교 방문상담</a></li>
+							<li><a href="#">고교 대학연계</a></li>
+							<li><a href="#">교육활동 정보관리</a></li>
+						</ul>
+					</li>
+					<li class="m5">
+						<a href="#">자료실</a>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="gnbBg"></div>
+	</div>
+	<!--// header -->
+
+
+
+
+	<!-- 메인 내용 시작-->
+	<div id="sec1">
+		<div class="center_align clearfix">
+			<div class="box1">
+				<div>	
+					<div class="graph">
+						<h3>2017학년도 수시 지원자 현황</h3>
+						<!-- 그래프 들어가는 부분 -->
+						<img src="./img/main/sample1.png" alt="임시이미지" />
+					</div>
+				</div>
+			</div>
+			<div class="box2">
+				<ul class="clearfix">
+					<li class="long">
+						<a href="#"><img src="./img/main/sec1_box1_long1.png" alt="." />
+							<span>고교 공시 정보</span>
+						</a>
+					</li>
+					<li class="bt1"><a href="#"><span>지원자 현황</span></a></li>
+					<li class="bt2"><a href="#"><span>학업성취도 현황</span></a></li>
+					<li class="bt3"><a href="#"><span>합격자 조회</span></a></li>
+					<li class="bt4"><a href="#"><span>학사일정 관리</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="sec2">
+		<div class="center_align">
+			<div class="tt">교육 프로그램 신청</div>
+			<ul class="slide">
+				<li><a href="#"><img src="./img/main/pr_bt1.png" alt="고교방문 설명회" /><span></span></a><div>고교방문 설명회</div></li>
+				<li><a href="#"><img src="./img/main/pr_bt2.png" alt="고교방문상담" /><span></span></a><div>고교방문상담</div></li>
+				<li><a href="#"><img src="./img/main/pr_bt3.png" alt="고교-대학연계 " /><span></span></a><div>고교-대학연계 </div></li>
+				<li><a href="#"><img src="./img/main/pr_bt4.png" alt="기타 프로그램" /><span></span></a><div>기타 프로그램</div></li>	  
+			</ul>
+		</div>
+	</div>
+
+	<div id="sec3">
+		<div class="center_align clearfix">
+			<div class="box1">
+				<div>
+					<div class="tt">2017학년도 주요일정</div>
+					<a href="#">
+						<span class="t1">2017학년도 <br />학사일정을 확인하세요. </span>
+						<span class="t2">바로가기</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="box2">
+				<div>
+					<div class="bt1"><a href="#">항목 <span>비교검색</span></a></div>
+					<div class="bt2"><a href="#">관심 <span>고교관리</span></a></div>		
+				</div>
+			</div>
+
+			<div class="box3">
+				<div>
+				
+					<ul class="clearfix">
+						<li class="bt on"><a href="#">공지사항</a></li>
+						<li class="bt"><a href="#">자료실</a></li>
+						<li class="bt"><a href="#">업무리스트</a></li>
+						<li class="more"><a href="#">더보기</a></li>
+					</ul>
+					
+					<!-- 공지사항 내용시작 -->
+					<table>
+						<colgroup>
+							<col class="c1" />
+							<col class="c2" />
+						</colgroup>
+						<tr>
+							<td class="title"><a href="#">[편입학] 2016학년도 편입학 전형 2차 추가합격자 공고 <img src="./img/common/newIcon.png" alt="new" /></a></td>
+							<td class="date">16.12.13</td>
+						</tr>
+						<tr>
+							<td class="title"><a href="#">[편입학] 2016학년도 편입학 추가합격자 공고 <img src="./img/common/newIcon.png" alt="new" /></a></td>
+							<td class="date">16.12.13</td>
+						</tr>
+						<tr>
+							<td class="title"><a href="#">[약학대학] 2016학년도 약학대학 입학전형 최종 합격자 공고 </a></td>
+							<td class="date">16.12.13</td>
+						</tr>
+						<tr>
+							<td class="title"><a href="#">[정시] 2016학년도 정시모집 변환표준점수 </a></td>
+							<td class="date">16.12.13</td>
+						</tr>
+						<tr>
+							<td class="title"><a href="#">[약학대학] 2016학년도 약학대학 입학전형 최종 합격자 공고 </a></td>
+							<td class="date">16.12.13</td>
+						</tr>
+						<tr>
+							<td class="title"><a href="#">[정시] 2016학년도 정시모집 변환표준점수 </a></td>
+							<td class="date">16.12.13</td>
+						</tr>
+					</table>
+					<!--// 공지사항 내용끝 -->
+				</div>
+			</div>
+
+		</div><!-- //center_align -->
+	</div>
+	<!-- //메인 내용끝 -->
+
+
+
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="center_align">
+			<ul class="f_menu clearfix">
+				<li>
+					<div>
+						<a href="#">서비스 소개</a>
+						<ul>
+							<li><a href="#">서비스 소개</a></li>
+							<li><a href="#">서비스 안내</a></li>
+							<li><a href="#">고교 리스트</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">학사일정 관리</a>
+						<ul>
+							<li><a href="#">학사일정 관리</a></li>
+						</ul>
+					</div>				
+				</li>
+				<li>
+					<div>
+						<a href="#">고교 정보관리</a>
+						<ul>
+							<li><a href="#">고교 기본정보</a></li>
+							<li><a href="#">통합 비교검색</a></li>
+							<li><a href="#">학업성취도 통계</a></li>
+							<li><a href="#">지원자 통계</a></li>
+							<li><a href="#">합격자 통계</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">교육활동 관리</a>
+						<ul>
+							<li><a href="#">입학전형 설명회</a></li>
+							<li><a href="#">고교 방문상담</a></li>
+							<li><a href="#">고교 대학연계</a></li>
+							<li><a href="#">교육활동 정보관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="#">자료실</a>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">모집요강</a></li>
+							<li><a href="#">자료실</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="bottom">
+			<div class="center_align clearfix">
+				<p class="add">(주)유웨이어플라이｜대표이사 유영산｜사업자등록번호 104-86-28148 ｜통신판매업신고 2010-서울서초-0938호 <br />
+				(06593) 서울특별시 서초구 고무래로 6-6 선경빌딩 5층. TEL : 1588-8988  FAX : 02-2102-2495</p>
+				<p class="copy"> Copyright &copy; ㈜유웨이어플라이 All Rights Reserved</p>
+			</div>
+		</div>
+
+	</div>
+	<!-- //footer -->
+
+	<script type="text/javascript" src="./js/init.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+@charset "euc-kr";
+/* Main CSS */
+
+#sec1 {/*border-bottom: 1px solid #dfdfdf;*/}
+#sec1 ul.mainVisual {}
+#sec1 ul.mainVisual>li {height: 530px;text-align: center;-webkit-background-size: cover;background-size: cover;background-position: center 0;}
+#sec1 ul.mainVisual>li img {margin: 0 auto;}
+#sec1 ul.mainVisual li.v1 {background-image: url(../img/main/mainVisual_bg1.jpg);}
+#sec1 ul.mainVisual li.v1>img {padding-top: 260px;}
+#sec1 ul.mainVisual li.v2 {background-image: url(../img/main/mainVisual_bg2.jpg);}
+#sec1 ul.mainVisual li.v2>img {padding-top: 172px;}
+#sec1 ul.mainVisual li.v3 {background-image: url(../img/main/mainVisual_bg2.jpg);}
+#sec1 ul.mainVisual li.v3 ul {padding-top: 185px;}
+#sec1 ul.mainVisual li.v3 ul li {padding-bottom: 22px;}
+#sec1 .bx-controls  {position: absolute;width: 100%;z-index: 100;bottom: 40px;}
+#sec1 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {width: 51.5%;float: left;text-align: right;}
+#sec1 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {width: 48.5%;float: right;text-align: left;}
+#sec1 .bx-wrapper .bx-pager.bx-default-pager a {width: 23px;height: 23px;background: url(../img/main/visual_btn.png) 0 0 no-repeat;text-align: left;}
+#sec1 .bx-wrapper .bx-pager.bx-default-pager a:hover,#sec1 .bx-wrapper .bx-pager.bx-default-pager a.active {background: url(../img/main/visual_btn_on.png) 0 0 no-repeat;}
+#sec1 .bx-start {display: none;}
+#sec1 .bx-wrapper .bx-controls-auto .bx-stop {width: 23px;height: 23px;background: url(../img/main/visual_btn_stop.png) 0 0 no-repeat;}
+
+
+#sec2 {padding: 40px 0 38px;}
+#sec2>.center_align>div {float: left; overflow-x: hidden;}
+#sec2 .notice {width: 35%;}
+#sec2 .notice>div {padding-left: 25px;}
+#sec2 .notice ul {padding-top: 22px;}
+#sec2 .notice ul li {}
+#sec2 .notice ul li a {display: block;padding: 7px 0;color: #626262;font-size: 14px;}
+#sec2 .notice ul li a:hover {text-decoration: underline;}
+#sec2 .notice ul li a img {vertical-align: middle;margin-left: 8px;}
+
+#sec2 .program {width: 40%;}
+#sec2 .program>div {padding-left: 35px;height: 180px;border-left: 1px solid #d6d6d6;}
+#sec2 .program>div>div  {padding-top: 28px;}
+#sec2 .program>div >div>div {float: left;}
+#sec2 .program .imgWrap {overflow: hidden;width: 162px;height: 120px;}
+#sec2 .program .imgWrap img {}
+#sec2 .program .text {}
+#sec2 .program .text ul {padding-left: 14px;}
+#sec2 .program .text ul li {padding: 4px 0;font-size: 14px;color: #626262;}
+#sec2 .program .text ul li.tt {padding:0 0 10px 0;font-size: 18px;color: #363636;}
+
+#sec2 .model {/*width: 25%;*/width: 23%;}
+#sec2 .model>div {padding-left: 30px;height: 180px;border-left: 1px solid #d6d6d6;}
+#sec2 .model ul {padding-top: 22px;}
+#sec2 .model ul li {padding: 13px 0;background-position: right center;background-repeat: no-repeat;border-bottom: 1px solid #d6d6d6;font-size: 15px;color: #626262;}
+#sec2 .model ul li.a1 {background-image: url(../img/main/sec2_go1.png);}
+#sec2 .model ul li.a2 {background-image: url(../img/main/sec2_go2.png);}
+#sec2 .model ul li.a3 {background-image: url(../img/main/sec2_go3.png);border-bottom: none;}
+#sec2 .model ul li a {}
+
+
+
+#sec3 {padding: 34px 0 48px;background: url(../img/main/sec3_bg.jpg) center 0 no-repeat;-webkit-background-size: cover;background-size: cover;}
+#sec3 ul {}
+#sec3 ul li {float: left;width: 25%;}
+#sec3 ul li a {display: block;position: relative;text-align: center;/*background: url(../img/main/sec3_bt.png) center 0 no-repeat;*/}
+#sec3 ul li .btBg {position: absolute;width: 100%;left: 0;top: 0;text-align: center;}
+#sec3 ul li .btBg img {}
+#sec3 ul li a span {position: relative;z-index: 5;display: block;color: #fff;font-size: 15px;}
+#sec3 ul li .img {width: 156px;height: 151px;margin: 0 auto;}
+#sec3 ul li.bt1 .img {background: url(../img/main/sec3_bt1.png) center center no-repeat;}
+#sec3 ul li.bt2 .img {background: url(../img/main/sec3_bt2.png) center center no-repeat;}
+#sec3 ul li.bt3 .img {background: url(../img/main/sec3_bt3.png) center center no-repeat;}
+#sec3 ul li.bt4 .img {background: url(../img/main/sec3_bt4.png) center center no-repeat;}
+#sec3 ul li a .t {padding-top: 10px;}
+#sec3 ul li a:hover .t {text-decoration: underline;}

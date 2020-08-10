@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/khyay.css);
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+	 RESET 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html { font-size: 10px; }
+body { letter-spacing: .18em; }
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;/*font-size: 100%;*/font: inherit;vertical-align: baseline; font-family: 'Alegreya Sans', Arial, sans-serif; text-transform: uppercase; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ol li, ul li {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+a { text-decoration: none; color: white; }
+
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+	 Common
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after {clear: both;content: '';display: block;}
+.fleft {float: left !important;}
+.fright {float: right !important;}
+.l-left { float: left; }
+.l-right { float: right; }
+.end {	margin-top: 30px;font-size: 3em;font-weight: bold;opacity: 0;-webkit-transform: translateY(300px);-ms-transform: translateY(300px);transform: translateY(300px);-webkit-transition: opacity, -webkit-transform 1s;transition: opacity, transform 1s;-webkit-transition-delay: 1s;transition-delay: 1s;}
+
+.ff_nm {font-family: 'Nanum Myeongjo', serif !important;}
+.ff_nm * {font-family: inherit;}
+.ff_noto {font-family: 'Noto Sans KR',applegothic,'Malgun Gothic',sans-serif !important;}
+.ff_noto * {font-family: inherit;}
+
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+	CUSTOMIZING
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#wrap {/*max-width: 768px;margin: 0 auto;*/overflow: hidden;}
+
+
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+	NAV 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header-top { position: fixed; top: 0; width: 100%;height: 70px; padding: 0 5px; background: rgba(255, 255, 255, .2);  z-index: 12; box-sizing: border-box; }
+.header-top.open-menu {background: rgba(0, 47, 77, .9);}
+
+h1 { line-height: 70px; height: 70px; }
+h1 a { display: block; padding: 0 15px; }
+.toggle-menu { width: 50px;height: 50px;display: inline-block;position: relative;top: 10px;}
+.toggle-menu i {position: absolute;display: block;height: 2px;background: white;width: 30px;left: 10px;-webkit-transition: all .3s;transition: all .3s;}
+.toggle-menu i:nth-child(1) {	top: 16px;}
+.toggle-menu i:nth-child(2) {	top: 24px;}
+.toggle-menu i:nth-child(3) {	top: 32px;}
+.open-menu i:nth-child(1) {	top: 25px;-webkit-transform: rotateZ(45deg);transform: rotateZ(45deg);}
+.open-menu i:nth-child(2) {	background: transparent;}
+.open-menu i:nth-child(3) {	top: 25px;-webkit-transform: rotateZ(-45deg);transform: rotateZ(-45deg);}
+
+nav { height: 0;opacity: 0;box-sizing: border-box;background: rgba(0, 47, 77, .8);position: fixed;top: 70px;width: 100%;-webkit-transition: all 1s;transition: all 1s;}
+.open-menu~nav { opacity: 1;padding: 80px 0;z-index: 15;height: calc(100vh);}
+nav ul { padding: 0 10px;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;}
+nav li { -webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;}
+nav li a { font-size: 2em;display: block;padding: 30px;text-align: center;-webkit-transition: background .3s;transition: background .3s;opacity: .7;}
+nav li.active a, body.fp-viewing-fifthSection-1 #menu li:last-child a {	color: #fff; text-decoration: underline; opacity: 1; font-weight: bold;}
+
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+	SECTION STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+section {	text-align: center;color: #fff; line-height: 1.6;font-family: 'Noto Sans KR',applegothic,'Malgun Gothic',sans-serif;}font-size: 1.5rem;font-weight: 200;}
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {background: white;width: 8px;height: 8px;margin: -4px 0 0 -4px;}
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {width: 16px;height: 16px;margin: -8px 0 0 -8px;background: transparent;box-sizing: border-box;border: 1px solid #24221F;}
+
+
+#fullpage {}
+#fullpage .section {background: #e4d2e0;}
+
+#fullpage .stn_01 {background: #e4d2e0 url(http://minhong.dothome.co.kr/img/flower.jpg) center 0 no-repeat;-webkit-background-size: contain;background-size: contain;color: #fff;}
+#fullpage .stn_01 .title {text-indent: .8rem;font-size: 2.8rem;font-weight: 200;}
+#fullpage .stn_01 .date {font-size: 5.8rem;line-height: 1.1; font-family: 'Khyay', sans-serif;}
+#fullpage .stn_01 .info {padding: 4.5rem 0 4rem;}
+#fullpage .stn_01 .info .fleft {width: 50%;}
+#fullpage .stn_01 .info span {display: block;padding: .1rem 0;color: #fff;font-size: 1.3rem;font-weight: 200;}
+#fullpage .stn_01 .info p {font-weight: 100;font-size: 2.3rem;}
+#fullpage .stn_01 .info2 {position: absolute;left: 0;bottom: 14%;width: 100%;color: #a34662;font-size: 2rem;letter-spacing: -.01rem;}
+
+#fullpage .stn_02 {background: #dbb6cc;letter-spacing: -.002rem;}
+#fullpage .stn_02 .txt1 {margin: 0 0 54%;font-size: 1.62rem;}
+#fullpage .stn_02 .txt1 span {display: block;margin-top: 1rem;opacity: .6;}
+#fullpage .stn_02 .txt2 {position: absolute;left: 0;bottom: 0;width: 100%;padding: 33px 0 55px;background:#ca8298;font-size: 1.7rem;font-weight: 300;}
+
+#fullpage .stn_03 {background: #e4d2e0;}
+#fullpage .stn_03 dl {margin-top: 20px;font-size: 1.8rem;letter-spacing: -.01rem;}
+#fullpage .stn_03 dl dt {font-size: 1.4rem;color: #d398aa;}
+#fullpage .stn_03 dl dd {font-size: 2.3rem;color: #ab526d;font-weight: 300;}
+#fullpage .stn_03 dl dd span {display: block;padding: 1rem 0;font-size: 1.3rem;font-weight: 100;color: #bd8495;}
+#fullpage .stn_03 dl.dl1 {}
+#fullpage .stn_03 dl.dl2 {margin-bottom: 65%;}
+
+#fullpage .map_wrap {position: absolute;left: 0;bottom: 0;width:100%;height: 40%;color: #000;font-size: 1.3rem; background: #fff;}
+#fullpage .map_wrap .btn_map {overflow: visible !important;position: absolute;right: 5px;top: -35px; display: block;height: 30px;line-height: 30px; padding: 0 10px; font-size: 1.2rem; color: #fff;text-align: center;letter-spacing: -.01rem;text-decoration: underline;}
+#fullpage #map {width:100%;height: 100%;overflow: hidden;}
+
+#fullpage .stn_04 {background: #e1c2d4;}
+#fullpage .stn_04 h2 {font-size: 1.5rem; color: #fff;}
+#fullpage .stn_04 .txt {margin-top: 40px;font-size: 1.3rem;color: #d398aa;letter-spacing: -.01rem;}
+#fullpage .stn_04 .txt em {color: #ab526d;}
+#fullpage .photo_wrap {position: relative;width: 88%;height: 50%;margin: 15px auto 0; overflow: hidden; }
+
+
+	/* swiper */
+	#fullpage .swiper-container { width: 100%; height: 90%; margin-left: auto; margin-right: auto;}
+	#fullpage .swiper-slide { background-size: cover; background-position: center;}
+	#fullpage .swiper-slide a {position: relative;display: block;height: 100%;}
+	
+		/*click 유도 이미지*/	
+		#fullpage .swiper-slide a:after {position: absolute;z-index: 100;content: '';right: 10px;bottom: 10px;width: 20px;height: 20px;margin: -30px 0 0 -30px;background: url(http://minhong.dothome.co.kr/img/icon_click.png) 0 0 no-repeat;-webkit-background-size: cover;background-size: cover; -webkit-animation-name: blinker; -webkit-animation-iteration-count: infinite; -webkit-animation-duration: 2s;}
+		@-webkit-keyframes blinker {
+			 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } 
+		} 
+
+		/* video-썸넬 이미지에 재생아이콘 붙이기*/	
+		#fullpage .swiper-slide.video a:after {position: absolute;z-index: 100;content: '';left: 50%;top: 50%;width: 60px;height: 60px;margin: -30px 0 0 -30px;background: url(http://minhong.dothome.co.kr/img/icon_play.png) 0 0 no-repeat;-webkit-background-size: cover;background-size: cover;}
+	
+	#fullpage .gallery-top { width: 100%; height: 70%;}
+	#fullpage .gallery-thumbs { height: 25%; box-sizing: border-box; padding: 10px 0;}
+	#fullpage .gallery-thumbs .swiper-slide { height: 100%;  opacity: 0.4;}
+	#fullpage .gallery-thumbs .swiper-slide-thumb-active { opacity: 1;}
+
+
+
+
+
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––
+ MQ STYLES 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 961px) {
+	#fullpage .stn_02 .txt1 {margin-bottom: 35%;}
+
+	
+	
+}
+@media screen and (max-width: 960px) {
+	html {font-size: 60%;}
+	.header-top {height: 50px;}
+	h1 {line-height: 50px;height: 50px;}
+	.toggle-menu { top: 0;}
+	nav {top:50px}
+	nav ul {-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;}
+	nav li {margin-top: 1px;}
+	nav li a {font-size: 1.8em;}
+
+	
+	
+}
+@media screen and (max-width: 360px) {
+	html {font-size: 50%;}
+	.open-menu~nav { padding: 30px 0; }
+	nav li a { padding: 15px; }
+	
+	
+
+}
