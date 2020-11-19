@@ -549,6 +549,7 @@ header {height: 3.2rem;}
 .top_st1 .logo img {max-width: 80%;max-height: 80%;vertical-align: middle;margin-top: -2px;}
 
 .top_st1 .alarm {float: right;max-width: 72%;padding: 0.6rem 0;}
+.top_st1 .alarm a {display: block;}
 .top_st1 .alarm dl {border: 1px solid #dcdcdc;margin-right: .5rem;}
 .top_st1 .alarm dl:after {clear: both;content: '';display: block;}
 .top_st1 .alarm dt,
@@ -559,10 +560,10 @@ header {height: 3.2rem;}
 .top_st1 .alarm dd {width: 82%;padding-left: 2%;}
 .top_st1 .alarm dd:after {clear: both;content: '';display: block;}
 .top_st1 .alarm dd .t1,
-.top_st1 .alarm dd .t2 {float: left;font-size: .8rem;color: #1c191a;}
+.top_st1 .alarm dd .t2 {display: block;float: left;font-size: .8rem;color: #1c191a;}
 .top_st1 .alarm dd .t1 {}
-.top_st1 .alarm dd .t1 span {display: inline-block;color: #b2b2b2;margin: 0 .15rem 0 .1rem;}
-.top_st1 .alarm dd .t2 {overflow: hidden;width: 72%;white-space: nowrap;text-overflow: ellipsis;}
+.top_st1 .alarm dd .t1 .bar {display: inline-block;color: #b2b2b2;margin: 0 .15rem 0 .1rem;}
+.top_st1 .alarm dd .t2 {overflow: hidden;width: 80%;white-space: nowrap;text-overflow: ellipsis;}
 .top_st1 .alarm dd .t2:before {content: '';position: absolute;left: 0;top: 0;width: 1px;height: 1rem;background: #dcdcdc;}
 
 
