@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Armway EasyPlus</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/font.css" />
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+</head>
+<body>
+
+	<style>
+		.coding_guide {padding: 100px 0;}
+		.coding_guide table {max-width: 800px;margin: 0 auto;}
+		.coding_guide table thead th {background: #333;color: #fff;font-weight: normal;}
+		.coding_guide table th,
+		.coding_guide table td {padding: 6px 10px;font-size: 13px;text-align: center;vertical-align: middle;}
+		.coding_guide table th {color: #000;}
+		.coding_guide table tr {}
+		.coding_guide table td {border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;color: #555;}
+		.coding_guide table td.tal {text-align: left !important;}
+		.coding_guide table .bg1 {background: #eee;}
+		.coding_guide table .bg2 {background: #ddd;}
+		.coding_guide table .bg3 {background: #999;color: #fff;}
+		.coding_guide table a:hover {color: #000;}
+	</style>
+
+	<div class="coding_guide">
+		<table>
+			<colgroup>
+				<col style="width: 13%;">
+				<col style="width: 16%;">
+				<col style="width: 40%;">
+				<col style="width: 22%;">
+				<col style="width: *;">
+			</colgroup>
+			<thead>
+			<tr>
+				<th>구분</th>
+				<th></th>
+				<th></th>
+				<th>링크</th>
+				<th>비고</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td rowspan="" class="bg1 bold">로그인 6p</td>
+				<td class="bold">로그인</td>
+				<td class="tal">팝업 포함</td>
+				<td class="tal"><a href="login.html">login.html</a></td>
+				<td class="tal">3시간</td>
+			</tr>
+			<tr>
+				<td rowspan="" class="bg1 bold">메인화면 8p</td>
+				<td class="bold">메인</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="main.html">main.html</a></td>
+				<td class="tal">4시간</td>
+			</tr>
+			<tr>
+				<td rowspan="2" class="bg1 bold">알림함 9p</td>
+				<td class="bold">list</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="noticebox_list.html">noticebox_list.html</a></td>
+				<td class="tal">3시간</td>
+			</tr>
+			<tr>
+				<td class="bold">view</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="noticebox_view.html">noticebox_view.html</a></td>
+				<td class="tal">1시간</td>
+			</tr>
+			</tbody>
+		</table>
+		<table class="mt20">
+			<colgroup>
+				<col style="width: 13%;">
+				<col style="width: 16%;">
+				<col style="width: 40%;">
+				<col style="width: 22%;">
+				<col style="width: *;">
+			</colgroup>
+			<thead>
+			<tr>
+				<th>1depth</th>
+				<th>2depth</th>
+				<th>3depth ~ 6depth</th>
+				<th>링크</th>
+				<th>비고</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td rowspan="18" class="bg1 bold">업무관리 <br>10p</td>
+				<td class="bold">업무관리 메인</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="business_main.html">business_main.html</a></td>
+				<td class="tal">완료<!--2시간--></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="10">발주현황</td>
+				<td class="tal">발주현황 list (20p,23p,37p)</td>
+				<td class="tal"><a href="order_list.html">order_list.html</a></td>
+				<td class="tal">완료<!--3시간--></td>
+			</tr>
+			<tr>
+				<td class="tal">발주현황 view (22p,24p,38p) / (+팝업:고객이력조회)</td>
+				<td class="tal"><a href="order_view.html">order_view.html</a></td>
+				<td class="tal">완료<!--5시간--></td>
+			</tr>
+			<tr>
+				<td class="tal">스토리보드 입력</td>
+				<td class="tal"><a href="storyboard.html">storyboard.html</a></td>
+				<td class="tal">완료<!--2시간--></td>
+			</tr>
+			<tr>
+				<td class="tal">일정등록 (팝업 포함)</td>
+				<td class="tal"><a href="add_schedule.html">add_schedule.html</a></td>
+				<td class="tal">완료<!--4시간--></td>
+			</tr>
+			<tr>
+				<td class="tal">처리등록 - 기본항목 (+팝업:부품코드등록/스캔x)</td>
+				<td class="tal"><a href="register_1.html">register_1.html</a></td>
+				<td class="tal">완료<!--3시간--></td>
+			</tr>
+			<tr>
+				<td class="tal">처리등록 - 상세항목 (+팝업:달력)</td>
+				<td class="tal"><a href="register_2_write.html">register_2_write.html</a></td>
+				<td class="tal">완료<!--3시간--></td>
+			</tr>
+			<tr>
+				<td class="tal">처리등록 - 결제 (+팝업 2개/서명칸 영역만 잡음)</td>
+				<td class="tal"><a href="register_2_payment.html">register_2_payment.html</a></td>
+				<td class="tal">완료<!--3시간--></td>
+			</tr>
+			<tr>
+				<td class="tal">처리등록 - 고객서명 (서명칸 영역만 잡음)</td>
+				<td class="tal"><a href="register_2_sign.html">register_2_sign.html</a></td>
+				<td class="tal">완료<!--1시간--></td>
+			</tr>
+			<tr>
+				<td class="tal">처리등록 - 상세항목 (결제완료후)</td>
+				<td class="tal"><a href="register_1_edit.html">register_1_edit.html</a></td>
+				<td class="tal">완료<!--1시간--></td>
+			</tr>
+			<tr>
+				<td class="tal">처리등록 - 상세항목 (결제완료후)</td>
+				<td class="tal"><a href="register_2_view.html">register_2_view.html</a></td>
+				<td class="tal">완료<!--1시간--></td>
+			</tr>
+
+			<tr>
+				<td class="bold">업무일정 <!--38p--></td>
+				<td class="tal">+팝업: 일정 날짜 설정</td>
+				<td class="tal"><a href="calendar.html">calendar.html</a></td>
+				<td class="tal">작업중</td>
+			</tr>
+
+			<tr>
+				<td class="bold">케이스검색 <!--40p--></td>
+				<td class="tal">+팝업: 검색 기간 설정</td>
+				<td class="tal"><a href="case_search.html">case_search.html</a></td>
+				<td class="tal"></td>
+			</tr>
+
+			<tr>
+				<td class="bold" rowspan="2">결제 <!--42p--></td>
+				<td class="tal">+팝업: 검색 기간 설정</td>
+				<td class="tal"><a href="payment.html">payment.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="tal">상세 (+팝업 영수증)</td>
+				<td class="tal"><a href="payment_view.html">payment_view.html</a></td>
+				<td class="tal"></td>
+			</tr>
+
+
+			<tr>
+				<td class="bold">회수부품 <!--46p--></td>
+				<td class="tal">+팝업: 검색 기간 설정</td>
+				<td class="tal"><a href="collect.html">collect.html</a></td>
+				<td class="tal"></td>
+			</tr>
+
+			<tr>
+				<td class="bold" rowspan="2">공지사항 <!--47p--></td>
+				<td class="tal">list</td>
+				<td class="tal"><a href="collect.html">collect.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="tal">view</td>
+				<td class="tal"><a href="collect.html">collect.html</a></td>
+				<td class="tal"></td>
+			</tr>
+
+			<!--///-->
+
+			<tr>
+				<td rowspan="2" class="bg1 bold">물류관리 <br>50p</td>
+				<td class="bold">물류관리</td>
+				<td class="tal">물류관리 메인</td>
+				<td class="tal"><a href="distribute_main.html">distribute_main.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="">부품재고</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="stock.html">stock.html</a></td>
+				<td class="tal"></td>
+			</tr>
+
+			<!--///-->
+
+			<tr>
+				<td rowspan="8" class="bg1 bold">공유사항 <br>53p</td>
+				<td class="bold">공유사항</td>
+				<td class="tal">공유사항 메인</td>
+				<td class="tal"><a href="share_main.html">share_main.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="2">공지사항</td>
+				<td class="tal">list</td>
+				<td class="tal"><a href="notice_list.html">notice_list.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="tal">view</td>
+				<td class="tal"><a href="notice_view.html">notice_view.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="3">게시판</td>
+				<td class="tal">list</td>
+				<td class="tal"><a href="board_list.html">board_list.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="tal">view</td>
+				<td class="tal"><a href="board_view.html">board_view.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="tal">write</td>
+				<td class="tal"><a href="board_write.html">board_write.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="">자료실</td>
+				<td class="tal">(파일다운로드 기능추가)</td>
+				<td class="tal"><a href="library.html">library.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="">카이젠</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="kaizen.html">kaizen.html</a></td>
+				<td class="tal"></td>
+			</tr>
+
+			<!--///-->
+
+			<tr>
+				<td rowspan="7" class="bg1 bold">코드조회 <br>69p</td>
+				<td class="bold">코드조회 메인</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="codechk_main.html">codechk_main.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="">제품코드</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="product_code.html">product_code.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="">부품코드</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="component_code.html">component_code.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="">액션코드</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="action_code.html">action_code.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="">증상코드</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="symptom_code.html">symptom_code.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="">진단코드</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="diagnose_code.html">diagnose_code.html</a></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bold" rowspan="">완료코드</td>
+				<td class="tal"></td>
+				<td class="tal"><a href="complete_code.html">complete_code.html</a></td>
+				<td class="tal"></td>
+			</tr>
+
+
+
+			</tbody>
+		</table>
+		<p class="mt20 tcenter" style="color: red;">
+			<!--10/18~10/19 퍼블 수정 작업 (예정)-->
+		</p>
+	</div>
+
+
+
+
+</body>
+</html>
+
