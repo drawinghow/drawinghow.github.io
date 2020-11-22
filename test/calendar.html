@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Armway EasyPlus</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/font.css" />
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+</head>
+<body>
+
+	<div id="wrap">
+
+		<!--상단-->
+		<header class="top_st1">
+			<h1 class="logo"><a href=""><img src="./img/common/top_logo.png" alt="easy+"></a></h1>
+			<div class="alarm">
+				<dl>
+					<dt>
+						<a href="" class="icon">
+							<img src="./img/common/icon_alarm.png" alt="알림"><i class="number">99</i>
+						</a>
+					</dt>
+					<dd>
+						<a href="">
+							<span class="t1">알림 <em class="bar">|</em></span>
+							<span class="t2">기사님들 방문시 마스크는 필수로 착용해야합니다.</span>
+						</a>
+					</dd>
+				</dl>
+			</div>
+		</header>
+
+		<section class="menubar">
+			<ul class="depth1">
+				<li class="on"><a href="">업무관리</a></li><!--활성화시 class="on"-->
+				<li><a href="">물류관리</a></li>
+				<li><a href="">공유사항</a></li>
+				<li><a href="">코드조회</a></li>
+			</ul>
+		</section>
+
+		<section class="menutit">
+			<button class="btn_prev">닫기</button>
+			<h2 class="txt">업무 일정</h2>
+		</section>
+		<!--//상단-->
+
+		<!--내용-->
+		<section class="contents">
+			<table class="tbl_view pd">
+				<colgroup>
+					<col style="width: 25%;">
+					<col>
+				</colgroup>
+				<tr>
+					<th>처리일자</th>
+					<td>
+						<span class="va_m f14">2020/09/02</span>
+						<button class="btn_calendar" onclick="popup_open('pop_calendar')">달력</button>
+					</td>
+				</tr>
+			</table>
+			<h3 class="tit1 mt20">
+				업무 일정 <em class="c_blue2">4</em>건
+			</h3>
+			<table class="tbl_list2 mt10">
+				<colgroup>
+					<col span="5" style="width: 20%;">
+				</colgroup>
+				<thead>
+				<tr>
+					<th>상태</th>
+					<th>고객명</th>
+					<th>제품명</th>
+					<th>액션코드</th>
+					<th>일시</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td><a href="#" class="d_b c_blue2">미접수</a></td>
+					<td>고객명</td>
+					<td>SKU</td>
+					<td>액션코드</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><a href="#" class="d_b c_blue2">미컨택</a></td>
+					<td>고객명</td>
+					<td>SKU</td>
+					<td>액션코드</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><a href="#" class="d_b c_blue2">컨택완료</a></td>
+					<td>고객명</td>
+					<td>SKU</td>
+					<td>액션코드</td>
+					<td>2020.09.16 00:00</td>
+				</tr>
+				<tr>
+					<td><a href="#" class="d_b c_blue2">처리완료</a></td>
+					<td>고객명</td>
+					<td>SKU</td>
+					<td>액션코드</td>
+					<td>2020.09.16 00:00</td>
+				</tr>
+				</tbody>
+			</table>
+		</section><!--//contents-->
+		<!--//내용-->
+
+		<!--팝업: 달력-->
+		<div class="popup_st2 popup" id="pop_calendar"><!--상황에 따라 id 변경하여 사용-->
+			<div class="popup_box">
+				<p class="poptit">검색 기간 설정
+					<button class="btn_close" onclick="popup_close('pop_calendar')">닫기</button>
+				</p>
+				<!--달력 datepicker 자동생성
+				<div id="datepicker"></div>
+				<script>
+                $.datepicker.setDefaults({
+                    showMonthAfterYear : true,
+                    monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의 월 부분 텍스트
+                    ,monthNames: ['.01','.02','.03','.04','.05','.06','.07','.08','.09','.10','.11','.12'] //달력의 월 부분 Tooltip 텍스트
+                    ,dayNamesMin: ['SUN','MON','TUE','WED','THU','FRI','SAT'] //달력의 요일 부분 텍스트
+                    ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
+                });
+
+                $("#datepicker").datepicker({
+                    inline: true
+                });
+				</script>-->
+				<div class="hasDatepicker" id="datepicker">
+					<div class="ui-datepicker ui-widget ui-widget-content">
+						<div class="ui-datepicker-header ui-widget-header">
+							<a class="ui-datepicker-prev"><span class="ui-icon">Prev</span></a>
+							<a class="ui-datepicker-next"><span class="ui-icon">Next</span></a>
+							<div class="ui-datepicker-title">
+								<span class="ui-datepicker-year">2020</span>&nbsp;<span class="ui-datepicker-month">.11</span>
+							</div>
+						</div>
+						<table class="ui-datepicker-calendar">
+							<thead>
+							<tr>
+								<th class="ui-datepicker-week-end"><span title="일요일">SUN</span></th>
+								<th><span title="월요일">MON</span></th>
+								<th><span title="화요일">TUE</span></th>
+								<th><span title="수요일">WED</span></th>
+								<th><span title="목요일">THU</span></th>
+								<th><span title="금요일">FRI</span></th>
+								<th class="ui-datepicker-week-end"><span title="토요일">SAT</span></th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td class="ui-datepicker-week-end">
+									<a class="ui-state-default" href="#">1
+										<span class="number">5</span><!--//건수 추가-->
+									</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">2</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">3</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">4</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">5</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">6</a>
+								</td>
+								<td class="ui-datepicker-week-end">
+									<a class="ui-state-default" href="#">7</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="ui-datepicker-week-end">
+									<a class="ui-state-default" href="#">8</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">9</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">10</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">11</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">12</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">13</a>
+								</td>
+								<td class="ui-datepicker-week-end">
+									<a class="ui-state-default" href="#">14</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="ui-datepicker-week-end">
+									<a class="ui-state-default" href="#">15</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">16</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">17</a>
+								</td>
+								<!--현재날짜-->
+								<td class="ui-datepicker-days-cell-over ui-datepicker-current-day ui-datepicker-today">
+									<a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">18
+
+										<span class="number">4</span><!--//건수 추가-->
+									</a>
+								</td>
+								<!--//현재날짜-->
+								<td>
+									<a class="ui-state-default" href="#">19
+										<span class="number">3</span><!--//건수 추가-->
+									</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">20</a>
+								</td>
+								<td class="ui-datepicker-week-end">
+									<a class="ui-state-default" href="#">21</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="ui-datepicker-week-end">
+									<a class="ui-state-default" href="#">22</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">23</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">24</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">25</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">26</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">27</a>
+								</td>
+								<td class="ui-datepicker-week-end">
+									<a class="ui-state-default" href="#">28</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="ui-datepicker-week-end">
+									<a class="ui-state-default" href="#">29</a>
+								</td>
+								<td>
+									<a class="ui-state-default" href="#">30</a>
+								</td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+								<td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+								<td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!--//달력-->
+				<button class="btn_st1" onclick="popup_close('pop_calendar')">적용</button>
+			</div>
+		</div>
+		<!--//팝업: 달력-->
+
+	</div><!--//wrap-->
+
+
+</body>
+</html>
+
