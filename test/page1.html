@@ -32,6 +32,7 @@
 
 	/* table */
   table label {display: inline-block;margin: .2rem 1rem .2rem 0;}
+  table .bdbn {border-bottom: none !important;}
 
 	.tbl_st1 {border:1px solid #c7c7c7;color:#333;}
 	.tbl_st1 th, .tbl_st1 td {/*padding: .5rem 0;*/border-bottom:1px solid #c7c7c7;color:#333;vertical-align: middle;font-size: .85rem;}
@@ -45,7 +46,7 @@
 	}
 
 
-  /* ul -> table  */
+  /* ul -> table 1  */
 	.tbl_col {display: table;width: 100%;table-layout: fixed;}
   .tbl_col:after {content: '';display: block;clear: both;}
 	.tbl_col>li {display: table-cell;vertical-align: middle;font-size: .85rem;border-right: 1px solid #c7c7c7;padding: .4rem .5rem;}
@@ -72,14 +73,13 @@
   }
 
 
+  /* ul -> table 2 */
   .tbl_col2 {display: table;width: 100%;table-layout: fixed;}
   .tbl_col2:after {content: '';display: block;clear: both;}
   .tbl_col2>li {display: table-cell;vertical-align: middle;font-size: .85rem;border-right: 1px solid #c7c7c7;padding: .4rem .5rem;}
   .tbl_col2>li:last-child {border-right: none;}
   .tbl_col2>li.tit {font-weight: bold;text-align: center;}
   .tbl_col2>li.txt {text-align: left;}
-
-
 
 
   /* dl -> table */
@@ -99,15 +99,17 @@
 			<tr>
 				<td>
 					<ul class="tbl_col col6">
-						<li class="tit bg1 pd1"><p>조사일</p></li>
+						<li class="tit bg1 pd1 "><p>조사일</p></li>
 						<li class="txt"><p><input type="text"></p></li>
 						<li class="tit bg1 pd1"><p>조사자</p></li>
 						<li class="txt"><p><input type="text"></p></li>
-						<li class="tit bg1 pd1"><p>관리번호</p></li>
-						<li class="txt"><p><input type="text"></p></li>
+						<li class="tit bg1 pd1 bdbn"><p>관리번호</p></li>
+						<li class="txt bdbn"><p><input type="text"></p></li>
 					</ul>
 				</td>
 			</tr>
+    </table>
+    <table class="tbl_st1 mt10">
 			<tr>
 				<th><p class="th_tit1">■ 대상자 기본사항</p></th>
 			</tr>
@@ -118,16 +120,16 @@
 						<li class="txt"><p><input type="text"></p></li>
 						<li class="tit"><p>성별</p></li>
 						<li class="txt"><p><label><input type="radio" name="gender"> 남</label><label class="ml20"><input type="radio" name="gender"> 여</label></p></li>
-						<li class="tit"><p>연령</p></li>
-						<li class="txt"><p>만 <input class="w3r" type="text"> 세</p></li>
+						<li class="tit bdbn"><p>연령</p></li>
+						<li class="txt bdbn"><p>만 <input class="w3r" type="text"> 세</p></li>
 					</ul>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<ul class="tbl_col">
-						<li class="tit w16"><p>주민등록번호</p></li>
-						<li class="txt w84"><p><input class="maxw40" type="text"> - <input class="maxw40" type="text"></p></li>
+						<li class="tit w16 bdbn"><p>주민등록번호</p></li>
+						<li class="txt w84 bdbn"><p><input class="maxw40" type="text"> - <input class="maxw40" type="text"></p></li>
 					</ul>
 				</td>
 			</tr>
@@ -136,16 +138,16 @@
           <ul class="tbl_col col4">
             <li class="tit w16"><p>주소</p></li>
             <li class="txt w33"><p><input class="w100" type="text"></p></li>
-            <li class="tit w16"><p>거소</p></li>
-            <li class="txt w33"><p><input class="w100" type="text"></p></li>
+            <li class="tit w16 bdbn"><p>거소</p></li>
+            <li class="txt w33 bdbn"><p><input class="w100" type="text"></p></li>
           </ul>
         </td>
       </tr>
       <tr>
         <td>
           <ul class="tbl_col col2">
-            <li class="tit w16"><p>연락처</p></li>
-            <li class="txt w84">
+            <li class="tit w16 bdbn"><p>연락처</p></li>
+            <li class="txt w84 bdbn">
               <p>
                 <span class="m_db"><input type="text" placeholder="자택"></span>
                 <span class="m_db mr20"><input type="text" placeholder="핸드폰"></span>
@@ -161,8 +163,8 @@
       <tr>
         <td>
           <ul class="tbl_col col2">
-            <li class="tit w16"><p>가구형태</p></li>
-            <li class="txt w84">
+            <li class="tit w16 bdbn"><p>가구형태</p></li>
+            <li class="txt w84 bdbn">
               <p>
                 <label><input type="checkbox"> 독거</label>
                 <label><input type="checkbox"> 부부</label>
@@ -180,8 +182,8 @@
       <tr>
         <td>
           <ul class="tbl_col col2">
-            <li class="tit w16"><p>현 거주지</p></li>
-            <li class="txt w84">
+            <li class="tit w16 bdbn"><p>현 거주지</p></li>
+            <li class="txt w84 bdbn">
               <p>
                 <label><input type="checkbox"> 자가</label>
                 <label><input type="checkbox"> 전세</label>
@@ -198,8 +200,8 @@
       <tr>
         <td>
           <ul class="tbl_col col2">
-            <li class="tit w16"><p>소득계층</p></li>
-            <li class="txt w84">
+            <li class="tit w16 bdbn"><p>소득계층</p></li>
+            <li class="txt w84 bdbn">
               <p>
                 <label><input type="checkbox"> 국민기초생활보장제도</label>
                 <label><input type="checkbox"> 생계급여 수급권자</label>
@@ -216,8 +218,8 @@
       <tr>
         <td>
           <ul class="tbl_col col2">
-            <li class="tit w16"><p>노인장기요양보험 등</p></li>
-            <li class="txt w84">
+            <li class="tit w16 bdbn"><p>노인장기요양보험 등</p></li>
+            <li class="txt w84 bdbn">
               <p>
                 <span class="d_b">장기요양
                   ( <label><input type="checkbox"> 1등급</label>
@@ -243,8 +245,8 @@
       <tr>
         <td>
           <ul class="tbl_col col2">
-            <li class="tit w16"><p>주수발자</p></li>
-            <li class="txt w84">
+            <li class="tit w16 bdbn"><p>주수발자</p></li>
+            <li class="txt w84 bdbn">
               <p>
                 <label><input type="checkbox"> 없음</label>
                 <label><input type="checkbox"> 배우자</label>
@@ -265,8 +267,8 @@
       <tr>
         <td>
           <ul class="tbl_col col2">
-            <li class="tit w16"><p>주수발자의 도움영역</p></li>
-            <li class="txt w84">
+            <li class="tit w16 bdbn"><p>주수발자의 도움영역</p></li>
+            <li class="txt w84 bdbn">
               <p>
                 <label><input type="checkbox"> 신체기능</label>
                 <label><input type="checkbox"> 사회기능</label>
@@ -279,8 +281,8 @@
       <tr>
         <td>
           <ul class="tbl_col col2">
-            <li class="tit w16"><p>가구의 수입원 <span class="d_b f10">(모든 수입원 중복체크)</span></p></li>
-            <li class="txt w84">
+            <li class="tit w16 bdbn"><p>가구의 수입원 <span class="d_b f10">(모든 수입원 중복체크)</span></p></li>
+            <li class="txt w84 bdbn">
               <p>
                 <label><input type="checkbox"> 국민기초 생계비</label>
                 <label><input type="checkbox"> 기초연금</label>
@@ -296,6 +298,9 @@
           </ul>
         </td>
       </tr>
+    </table>
+
+    <table class="tbl_st1 mt10">
       <tr>
         <th><p class="th_tit1">■ 노쇠 정도</p></th>
       </tr>
@@ -344,6 +349,9 @@
           </dl>
         </td>
       </tr>
+    </table>
+
+    <table class="tbl_st1 mt10">
       <tr>
         <th><p class="th_tit1">■ 일상생활 기능</p></th>
       </tr>
@@ -507,6 +515,9 @@
           </ul>
         </td>
       </tr>
+    </table>
+
+    <table class="tbl_st1 mt10">
       <tr>
         <th><p class="th_tit1">■ 현재 받고 있는 급여 (과거 3개월간 평균 횟수•일수 기록)</p></th>
       </tr>
