@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>CODE</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="./js/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+</head>
+<body>
+
+<style>
+  /* layout */
+ 	#container {padding: 2rem 0 4rem;}
+	.center_align {position: relative;width: 840px;margin:0 auto;}
+	@media screen and (max-width: 1024px) {
+		.center_align {width: auto;max-width: 900px;padding: 0 2rem;}
+	}
+	@media screen and (max-width: 760px) {
+		.center_align {width: auto;padding: 0 1.2rem;}
+	}
+
+
+	/* title */
+	.pagetit {padding: 0 0 20px;text-align: center;font-size: 1.15rem;color: #000;}
+	.th_tit1 {padding: .5rem .8rem;text-align: left;font-size: .85rem;color: #000;}
+
+
+
+	/* table */
+  table label {display: inline-block;margin: .2rem 1rem .2rem 0;}
+
+	.tbl_st1 {border:1px solid #c7c7c7;color:#333;}
+	.tbl_st1 th, .tbl_st1 td {/*padding: .5rem 0;*/border-bottom:1px solid #c7c7c7;color:#333;vertical-align: middle;font-size: .85rem;}
+	.tbl_st1 th {background:#f2f2f2;}
+	.tbl_st1 tr:last-child th,
+	.tbl_st1 tr:last-child td,
+	.tbl_st1 .bdb {border-bottom:1px solid #c7c7c7;}
+
+	@media screen and (max-width: 760px) {
+
+	}
+
+
+  /* ul -> table  */
+	.tbl_col {display: table;width: 100%;table-layout: fixed;}
+  .tbl_col:after {content: '';display: block;clear: both;}
+	.tbl_col>li {display: table-cell;vertical-align: middle;font-size: .85rem;border-right: 1px solid #c7c7c7;padding: .4rem .5rem;}
+	.tbl_col>li:last-child {border-right: none;}
+	.tbl_col>li.tit {font-weight: bold;text-align: center;}
+	.tbl_col>li.txt {text-align: left;}
+
+	.tbl_col.col2>li {width: 50%;}
+	.tbl_col.col3>li {width: 33.3333%;}
+	.tbl_col.col4>li {width: 25%;}
+	.tbl_col.col5>li {width: 20%;}
+	.tbl_col.col6>li {width: 16.6666%;}
+
+	.tbl_col>li.bg1 {background:#f2f2f2;}
+	.tbl_col>li.pd1 {padding-top: 1rem;padding-bottom: 1rem;}
+
+	@media screen and (max-width: 760px) {
+    .tbl_col {display: block;}
+		.tbl_col>li {float: left;padding: .1rem .1rem !important;display: table;text-align: center;border-bottom: 1px solid #c7c7c7;}
+    .tbl_col>li.tit {width: 30% !important;}
+    .tbl_col>li.txt {width: 70% !important;border-right: none;}
+    .tbl_col>li>p {display: table-cell;vertical-align: middle;padding: .5rem .5rem;}
+    .tbl_col .m_db+.m_db {margin-top: .5rem;}
+  }
+
+
+  .tbl_col2 {display: table;width: 100%;table-layout: fixed;}
+  .tbl_col2:after {content: '';display: block;clear: both;}
+  .tbl_col2>li {display: table-cell;vertical-align: middle;font-size: .85rem;border-right: 1px solid #c7c7c7;padding: .4rem .5rem;}
+  .tbl_col2>li:last-child {border-right: none;}
+  .tbl_col2>li.tit {font-weight: bold;text-align: center;}
+  .tbl_col2>li.txt {text-align: left;}
+
+
+
+
+  /* dl -> table */
+  .tbl_long {}
+  .tbl_long dt, .tbl_long dd {padding: .8rem;}
+  .tbl_long dt {padding-bottom: .5rem;font-weight: bold;}
+  .tbl_long dd {padding-top: 0;}
+
+
+</style>
+
+<div id="container">
+	<div class="center_align">
+		<h1 class="pagetit">돌봄본부 현장조사지</h1>
+
+		<table class="tbl_st1">
+			<tr>
+				<td>
+					<ul class="tbl_col col6">
+						<li class="tit bg1 pd1"><p>조사일</p></li>
+						<li class="txt"><p><input type="text"></p></li>
+						<li class="tit bg1 pd1"><p>조사자</p></li>
+						<li class="txt"><p><input type="text"></p></li>
+						<li class="tit bg1 pd1"><p>관리번호</p></li>
+						<li class="txt"><p><input type="text"></p></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th><p class="th_tit1">■ 대상자 기본사항</p></th>
+			</tr>
+			<tr>
+				<td>
+					<ul class="tbl_col col6">
+						<li class="tit"><p>성명</p></li>
+						<li class="txt"><p><input type="text"></p></li>
+						<li class="tit"><p>성별</p></li>
+						<li class="txt"><p><label><input type="radio" name="gender"> 남</label><label class="ml20"><input type="radio" name="gender"> 여</label></p></li>
+						<li class="tit"><p>연령</p></li>
+						<li class="txt"><p>만 <input class="w3r" type="text"> 세</p></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<ul class="tbl_col">
+						<li class="tit w16"><p>주민등록번호</p></li>
+						<li class="txt w84"><p><input class="maxw40" type="text"> - <input class="maxw40" type="text"></p></li>
+					</ul>
+				</td>
+			</tr>
+      <tr>
+        <td>
+          <ul class="tbl_col col4">
+            <li class="tit w16"><p>주소</p></li>
+            <li class="txt w33"><p><input class="w100" type="text"></p></li>
+            <li class="tit w16"><p>거소</p></li>
+            <li class="txt w33"><p><input class="w100" type="text"></p></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col col2">
+            <li class="tit w16"><p>연락처</p></li>
+            <li class="txt w84">
+              <p>
+                <span class="m_db"><input type="text" placeholder="자택"></span>
+                <span class="m_db mr20"><input type="text" placeholder="핸드폰"></span>
+                <span class="m_db">
+                  <input type="text" class="maxw40" placeholder="비상연락처">
+                  ( <input type="text" class="maxw40" placeholder="관계"> )
+                </span>
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col col2">
+            <li class="tit w16"><p>가구형태</p></li>
+            <li class="txt w84">
+              <p>
+                <label><input type="checkbox"> 독거</label>
+                <label><input type="checkbox"> 부부</label>
+                <label><input type="checkbox"> 노부모</label>
+                <label><input type="checkbox"> 성인자녀</label>
+                <label><input type="checkbox"> 조손</label>
+                <label><input type="checkbox"> 형제자매</label>
+                <label><input type="checkbox"> 친척</label>
+                <span class="d_b "><label class="mr0"><input type="checkbox"> 기타</label>( <input class="small" type="text"> )</span>
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col col2">
+            <li class="tit w16"><p>현 거주지</p></li>
+            <li class="txt w84">
+              <p>
+                <label><input type="checkbox"> 자가</label>
+                <label><input type="checkbox"> 전세</label>
+                <label><input type="checkbox"> 월세</label>
+                <label><input type="checkbox"> 임대아파트</label>
+                <label><input type="checkbox"> 의탁거주/무상임대</label>
+                <label><input type="checkbox"> 무허가</label>
+                <span class="d_b "><label class="mr0"><input type="checkbox"> 기타</label>( <input class="small" type="text"> )</span>
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col col2">
+            <li class="tit w16"><p>소득계층</p></li>
+            <li class="txt w84">
+              <p>
+                <label><input type="checkbox"> 국민기초생활보장제도</label>
+                <label><input type="checkbox"> 생계급여 수급권자</label>
+                <label><input type="checkbox"> 의료급여 수급권자</label>
+                <label><input type="checkbox"> 차상위 수급권자</label>
+                <label><input type="checkbox"> 기초연금 수급권자</label>
+                <label><input type="checkbox"> 일반가구</label>
+                <span class="d_b "><label class="mr0"><input type="checkbox"> 기타</label>( <input class="small" type="text"> )</span>
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col col2">
+            <li class="tit w16"><p>노인장기요양보험 등</p></li>
+            <li class="txt w84">
+              <p>
+                <span class="d_b">장기요양
+                  ( <label><input type="checkbox"> 1등급</label>
+                  <label><input type="checkbox"> 2등급</label>
+                  <label><input type="checkbox"> 3등급</label>
+                  <label><input type="checkbox"> 4등급</label>
+                  <label><input type="checkbox"> 5등급</label>
+                  <label class="mr0"><input type="checkbox"> 인지지원등급</label> )
+                </span>
+                <span class="d_b">노인맞춤돌봄서비스
+                  ( <label><input type="checkbox"> 일반</label>
+                  <label class="mr0"><input type="checkbox"> 중점</label> )</span>
+                <span>
+                  <label><input type="checkbox"> 재가노인지원</label>
+                  <label><input type="checkbox"> 민간 돌봄서비스</label>
+                  <label><input type="checkbox"> 해당 없음</label>
+                </span>
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col col2">
+            <li class="tit w16"><p>주수발자</p></li>
+            <li class="txt w84">
+              <p>
+                <label><input type="checkbox"> 없음</label>
+                <label><input type="checkbox"> 배우자</label>
+                <label><input type="checkbox"> 자녀(며느리, 사위 포함)</label>
+                <label><input type="checkbox"> 손자녀</label>
+                <label><input type="checkbox"> 친인척</label>
+                <label><input type="checkbox"> 친구‧이웃</label>
+                <label><input type="checkbox"> 사적 간병인</label>
+                <label><input type="checkbox"> 공적 서비스</label>
+                <label><input type="checkbox"> 돌봄제공자</label>
+                <label><input type="checkbox"> 자원봉사자</label>
+                <span class="d_b"><label class="mr0"><input type="checkbox"> 기타</label>( <input class="small" type="text"> )</span>
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col col2">
+            <li class="tit w16"><p>주수발자의 도움영역</p></li>
+            <li class="txt w84">
+              <p>
+                <label><input type="checkbox"> 신체기능</label>
+                <label><input type="checkbox"> 사회기능</label>
+                <label><input type="checkbox"> 정서적 지지</label>
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col col2">
+            <li class="tit w16"><p>가구의 수입원 <span class="d_b f10">(모든 수입원 중복체크)</span></p></li>
+            <li class="txt w84">
+              <p>
+                <label><input type="checkbox"> 국민기초 생계비</label>
+                <label><input type="checkbox"> 기초연금</label>
+                <label><input type="checkbox"> 국민연금</label>
+                <label><input type="checkbox"> 공무원,사학,군인연금</label>
+                <label><input type="checkbox"> 개인연금</label>
+                <label><input type="checkbox"> 임대,저축,주식 등 자산소득</label>
+                <label><input type="checkbox"> 근로소득</label>
+                <label><input type="checkbox"> 자녀지원</label>
+                <span class="d_b "><label class="mr0"><input type="checkbox"> 기타</label>( <input class="small" type="text"> )</span>
+              </p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th><p class="th_tit1">■ 노쇠 정도</p></th>
+      </tr>
+      <tr>
+        <td>
+          <dl class="tbl_long">
+            <dt>1) 도움 없이 300미터를 혼자서 이동하는데 힘이 듭니까?</dt>
+            <dd>
+              <label><input type="radio" name="q1"> 예</label>
+              <label><input type="radio" name="q1"> 아니오</label>
+            </dd>
+          </dl>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <dl class="tbl_long">
+            <dt>2) 의사에게 다음 질병이 있다고 들은 적이 있습니까?</dt>
+            <dd>
+              <label><input type="checkbox"> 없음</label>
+              <label><input type="checkbox"> 치매</label>
+              <label><input type="checkbox"> 중풍(뇌졸중)</label>
+              <label><input type="checkbox"> 고혈압</label>
+              <label><input type="checkbox"> 당뇨</label>
+              <label><input type="checkbox"> 관절염(퇴행성, 류마티스)</label>
+              <label><input type="checkbox"> 요통, 좌골통(디스크탈출증, 척수관협착증)</label>
+              <label><input type="checkbox"> 일상생황에 지장이 있을 정도의 호흡곤란(심부전, 만성폐질환, 천식)</label>
+              <label><input type="checkbox"> 일상생황에 지장이 있을 정도의 호흡곤란(심부전, 만성폐질환, 천식)</label>
+              <label><input type="checkbox"> 백내장, 녹내장 등 시각장애</label>
+              <label><input type="checkbox"> 골절,탈골 등 사고로 인한 후유증</label>
+              <span class="d_ib"><label class="mr0"><input type="checkbox"> 암</label>( <input class="small" type="text" placeholder="진단명"> )</span>
+              <label><input type="checkbox"> 신장질환</label>
+              <label><input type="checkbox"> 고지혈증</label>
+              <span class="d_ib"><label class="mr0"><input type="checkbox"> 기타</label>( <input class="small" type="text" placeholder="진단명"> )</span>
+            </dd>
+          </dl>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <dl class="tbl_long">
+            <dt>3) 현재와 1년 전의 체중은 몇 kg 이었습니까?</dt>
+            <dd>
+              <span class="mr20">(현재) <input type="text" class="maxw20"> kg,</span><span>(1년 전) <input type="text" class="maxw20"> kg</span>
+            </dd>
+          </dl>
+        </td>
+      </tr>
+      <tr>
+        <th><p class="th_tit1">■ 일상생활 기능</p></th>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="tit w70"><p>신체기능(기본적 일상생활 기능) 영역</p></li>
+            <li class="txt w10 tcenter">
+             완전 자립
+            </li>
+            <li class="txt w10 tcenter">
+              부분 도움
+            </li>
+            <li class="txt w10 tcenter">
+              완전 도움
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="txt w70 tcenter">세수하기</li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_1">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_1">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_1">
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="txt w70 tcenter">목욕하기</li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_2">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_2">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_2">
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="txt w70 tcenter">식사하기</li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_3">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_3">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_3">
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="txt w70 tcenter">일어나 앉기</li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_4">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_4">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_4">
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="txt w70 tcenter">방밖으로 나오기</li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_5">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_5">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_5">
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="tit w70">사회생활기능(수단적 일상생활 기능) 영역</li>
+            <li class="txt w10 tcenter">
+              완전 자립
+            </li>
+            <li class="txt w10 tcenter">
+              부분 도움
+            </li>
+            <li class="txt w10 tcenter">
+              완전 도움
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="txt w70 tcenter">집안일 하기</li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_6">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_6">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_6">
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="txt w70 tcenter">식사 준비하기</li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_7">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_7">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_7">
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="tbl_col2">
+            <li class="txt w70 tcenter">빨래하기</li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_8">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_8">
+            </li>
+            <li class="txt w10 tcenter">
+              <input type="radio" name="r3_8">
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th><p class="th_tit1">■ 현재 받고 있는 급여 (과거 3개월간 평균 횟수•일수 기록)</p></th>
+      </tr>
+		</table>
+
+	</div><!--//center_align-->
+</div><!--//container-->
+
+</body>
+</html>
+
