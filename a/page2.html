@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--<link rel="icon" href="./img/ico_icon4.ico">-->
+
+  <title>통합돌봄서비스 플렛폼</title>
+
+  <!-- Bootstrap core CSS-->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--<link href="./css/dashboard.css" rel="stylesheet">-->
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!--<script src="./js/ie-emulation-modes-warning.js"></script>-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <link href="./css/nav.css" rel="stylesheet" type="text/css">
+
+  <!--추가-->
+  <link rel="stylesheet" type="text/css" href="./css/form.css" />
+  <script type="text/javascript" src="./js/jquery-1.8.3.min.js" ></script>
+  <script type="text/javascript" src="./js/jquery.matchHeight-min.js"></script>
+  <script type="text/javascript" src="./js/common.js"></script>
+  <!--//추가-->
+</head>
+<body>
+
+<style>
+</style>
+
+<article id="formst">
+  <div class="pagetit"><b>방문진료 대상자</b> 선정도구</div>
+
+  <table class="tbl_st1">
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w10 bg1 pdtb1"><p>조사일</p></li>
+          <li class="txt w25">
+            <p>
+              <span><input class="w5r" type="text"> 년</span>
+              <span><input class="w3r" type="text"> 월</span>
+              <span><input class="w3r" type="text"> 일</span>
+            </p>
+          </li>
+          <li class="tit w10 bg1 pdtb1"><p>조사자</p></li>
+          <li class="txt w25"><p><input type="text" class="w100"></p></li>
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>관리번호</p></li>
+          <li class="txt w20 bdbn"><p><input type="text" class="w100"></p></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 대상자 기본사항</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col col6">
+          <li class="tit"><p>성명</p></li>
+          <li class="txt"><p><input class="w100" type="text"></p></li>
+          <li class="tit"><p>성별</p></li>
+          <li class="txt tcenter_pc"><p><label><input type="radio" name="gender"> 남</label><label><input type="radio" name="gender"> 여</label></p></li>
+          <li class="tit bdbn"><p>연령</p></li>
+          <li class="txt tcenter_pc bdbn"><p>만 <input class="w4r" type="text"> 세</p></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16"><p>주소</p></li>
+          <li class="txt w33"><p><input class="w100" type="text"></p></li>
+          <li class="tit w16 bdbn"><p>거소</p></li>
+          <li class="txt w33 bdbn"><p><input class="w100" type="text"></p></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>연락처</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <span class="m_db"><input type="text" placeholder="자택"></span>
+              <span class="m_db mr20"><input type="text" placeholder="핸드폰"></span>
+              <span class="m_db">
+                <input type="text" class="maxw50" placeholder="비상연락처">
+                ( <input type="text" class="w5r" placeholder="관계"> )
+              </span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>가구형태</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r1_2"> 독거</label>
+              <label><input type="radio" name="r1_2"> 부부</label>
+              <label><input type="radio" name="r1_2"> 노부모</label>
+              <label><input type="radio" name="r1_2"> 성인자녀</label>
+              <label><input type="radio" name="r1_2"> 조손</label>
+              <label><input type="radio" name="r1_2"> 형제자매</label>
+              <label><input type="radio" name="r1_2"> 친척</label>
+              <span class="m_db"><label class="mr0"><input type="radio" name="r1_2"> 기타</label>( <input class="small w8r w8r" type="text"> )</span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>소득계층</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r1_3"> 국민기초생활보장제도</label>
+              <label><input type="radio" name="r1_3"> 생계급여 수급권자</label>
+              <label><input type="radio" name="r1_3"> 의료급여 수급권자</label>
+              <label><input type="radio" name="r1_3"> 차상위 수급권자</label>
+              <label><input type="radio" name="r1_3"> 기초연금 수급권자</label>
+              <label><input type="radio" name="r1_3"> 일반가구</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>노인 장기요양보험 등</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <span class="d_b">장기요양
+                ( <label><input type="radio" name="r1_4"> 1등급</label>
+                <label><input type="radio" name="r1_4"> 2등급</label>
+                <label><input type="radio" name="r1_4"> 3등급</label>
+                <label><input type="radio" name="r1_4"> 4등급</label>
+                <label><input type="radio" name="r1_4"> 5등급</label>
+                <label class="mr0"><input type="radio" name="r1_4"> 인지지원등급</label> )
+              </span>
+              <span class="m_db mr10">노인맞춤돌봄서비스
+                ( <label><input type="radio" name="r1_4"> 일반</label>
+                <label class="mr0"><input type="radio" name="r1_4"> 중점</label> )
+              </span>
+              <span>
+                <label><input type="radio" name="r1_4"> 재가노인지원</label>
+                <label><input type="radio" name="r1_4"> 민간 돌봄서비스</label>
+                <label><input type="radio" name="r1_4"> 해당 없음</label>
+              </span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 노쇠 정도</p></th>
+    </tr>
+    <tr>
+      <td>
+        <dl class="tbl_long">
+          <dt>1) 도움 없이 300미터를 혼자서 이동하는데 힘이 듭니까?</dt>
+          <dd>
+            <label><input type="radio" name="r2_1"> 예</label>
+            <label><input type="radio" name="r2_1"> 아니오</label>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="tbl_long">
+          <dt>2) 의사에게 다음 질병이 있다고 들은 적이 있습니까?</dt>
+          <dd>
+            <label><input type="radio" name="r2_2"> 없음</label>
+            <label><input type="radio" name="r2_2"> 치매</label>
+            <label><input type="radio" name="r2_2"> 중풍(뇌졸중)</label>
+            <label><input type="radio" name="r2_2"> 고혈압</label>
+            <label><input type="radio" name="r2_2"> 당뇨</label>
+            <label><input type="radio" name="r2_2"> 관절염(퇴행성, 류마티스)</label>
+            <label><input type="radio" name="r2_2"> 요통, 좌골통(디스크탈출증, 척수관협착증)</label>
+            <label><input type="radio" name="r2_2"> 일상생황에 지장이 있을 정도의 호흡곤란(심부전, 만성폐질환, 천식)</label>
+            <label><input type="radio" name="r2_2"> 난청</label>
+            <label><input type="radio" name="r2_2"> 백내장, 녹내장 등 시각장애</label>
+            <label><input type="radio" name="r2_2"> 골절,탈골 등 사고로 인한 후유증</label>
+            <span class="m_db mr10"><label class="mr0"><input type="radio" name="r2_2"> 암</label>( <input class="small w10r" type="text" placeholder="진단명"> )</span>
+            <label><input type="radio" name="r2_2"> 신장질환</label>
+            <label><input type="radio" name="r2_2"> 고지혈증</label>
+            <span class="m_db"><label class="mr0"><input type="radio" name="r2_2"> 기타</label>( <input class="small w10r" type="text"> )</span>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="tbl_long">
+          <dt>3) 현재와 1년 전의 체중은 몇 kg 이었습니까?</dt>
+          <dd>
+            <span class="mr30">현재 <input type="text" class="w4r"> kg,</span><span>1년 전 <input type="text" class="w4r"> kg</span>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 일상생활 기능</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="tit w55 tcenter_pc"><p>신체기능(기본적 일상생활 기능) 영역</p></li>
+          <li class="txt w15 tcenter">
+            완전 자립
+          </li>
+          <li class="txt w15 tcenter">
+            부분 도움
+          </li>
+          <li class="txt w15 tcenter">
+            완전 도움
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w55 tcenter_pc">세수하기</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_1">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_1">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_1">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w55 tcenter_pc">목욕하기</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_2">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_2">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_2">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w55 tcenter_pc">식사하기</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_3">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_3">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_3">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w55 tcenter_pc">일어나 앉기</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_4">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_4">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_4">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w55 tcenter_pc">방밖으로 나오기</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_5">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_5">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_5">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w55 tcenter_pc">화장실 사용하기</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_6">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_6">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_6">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="tit w55 tcenter_pc">사회생활기능(수단적 일상생활 기능) 영역</li>
+          <li class="txt w15 tcenter">
+            완전 자립
+          </li>
+          <li class="txt w15 tcenter">
+            부분 도움
+          </li>
+          <li class="txt w15 tcenter">
+            완전 도움
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w55 tcenter_pc">집안일 하기</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_7">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_7">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_7">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w55 tcenter_pc">식사 준비하기</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_8">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_8">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_8">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w55 tcenter_pc">빨래하기</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_9">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_9">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r3_9">
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th>
+        <ul class="tbl_col2">
+          <li class="tit w70 tleft th_tit1"><p>■ 방문진료 욕구도</p></li>
+          <li class="txt w15 tcenter">예</li>
+          <li class="txt w15 tcenter">아니오</li>
+        </ul>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet"> 1) 외출을 거의 못한다 (주1회 이하)</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_1">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_1">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet"> 2) 정기적으로 참여하는 모임이 없다 (종교단체, 복지관 등)</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_2">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_2">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet"> 3) 나는 모든 일이 힘들게 느껴진다</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_3">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_3">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet"> 4) 악력이 남성 24kg 이하 또는 여성 19kg 이하로 측정되었다</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_4">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_4">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet"> 5) 최근 1년, 입원 또는 응급실을 이용한 경험이 있다</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_5">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_5">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet"> 6) 현재 10가지 이상의 약을 먹고 있다</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_6">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_6">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet"> 7) 최근 1년, 아픈데 병원에 가지 못하고 참았던 적이 있다 </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_7">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_7">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet"> 8) 최근 1년, 다른 사람이 나 대신 병원에서 약을 처방받아준 적이 있다</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_8">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_8">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet"> 9) 현재 다니고 있는 동네의원이 만족스럽지 못하다</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_9">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r4_9">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="pd05">
+          <strong class="d_b mb05">평가</strong>
+          <textarea name="textarea" id="textarea" class="w100" rows="2"></textarea>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th>
+        <p class="th_tit1">
+          ■ 서비스 판단기준
+        </p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p class="pd05 lh18">
+          각 담당 사업별로 선정도구의 선정을 위한 점수기준, 선정대상 기준과 관련된 세부 설명 등을 작성해주시기 바랍니다.
+          <br>
+          ㅇ 공통항목과 각각의 서비스 항목 중에서 담당별 해당 서비스 선정 항목별 세부 선정기준을 설명
+          <br>
+          - 소득은 얼마, 상태가 어떤지 등에 따라 판단기준을 선정
+        </p>
+      </td>
+    </tr>
+  </table>
+</article><!--//formst-->
+
+
+
+</body>
+</html>
+
