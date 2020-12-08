@@ -32,8 +32,8 @@
   <!--추가-->
   <link rel="stylesheet" type="text/css" href="./css/form.css" />
   <script type="text/javascript" src="./js/jquery-1.8.3.min.js" ></script>
-  <script type="text/javascript" src="./js/jquery.matchHeight-min.js"></script>
-  <script type="text/javascript" src="./js/common.js"></script>
+  <script type="text/javascript" src="./js/matchHeight-min.js"></script>
+  <script type="text/javascript" src="./js/form.js"></script>
   <!--//추가-->
 </head>
 <body>
@@ -42,42 +42,74 @@
 </style>
 
 <article id="formst">
-  <div class="pagetit"><b class="m_db">노인돌봄 읍면동</b> 초기상담 체크리스트</div>
+  <div class="pagetit"><b>초기상담</b> 체크리스트</div>
 
   <table class="tbl_st1">
     <tr>
       <td>
         <ul class="tbl_col">
-          <li class="tit w10 bg1 pdtb1"><p>읍면동</p></li>
+          <li class="tit w10 bg1 pdtb1"><p>기관명</p></li>
           <li class="txt w20"><p><input type="text" class="w100"></p></li>
           <li class="tit w10 bg1 pdtb1"><p>진행일자</p></li>
-          <li class="txt w30">
+          <li class="txt w25">
             <p>
-              <span><input class="w6r" type="text"> 년</span>
+              <span><input class="w4r" type="text"> 년</span>
               <span><input class="w3r" type="text"> 월</span>
               <span><input class="w3r" type="text"> 일</span>
             </p>
           </li>
-          <li class="tit w10 bg1 pdtb1 bdbn"><p>관리번호</p></li>
-          <li class="txt w20 bdbn"><p><input type="text" class="w100"></p></li>
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>담당자</p></li>
+          <li class="txt w25 bdbn"><p><input type="text" class="w100"></p></li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>
         <ul class="tbl_col">
-          <li class="tit w10 bg1 pdtb1"><p>대상자명</p></li>
+          <li class="tit w10 bg1 pdtb1"><p>대상자(성명)</p></li>
           <li class="txt w20"><p><input type="text" class="w100"></p></li>
           <li class="tit w10 bg1 pdtb1"><p>연락처</p></li>
-          <li class="txt w30">
+          <li class="txt w25">
+            <p><label><input type="radio" name="gender"> 남</label><label><input type="radio" name="gender"> 여</label></p>
+          </li>
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>생년월일</p></li>
+          <li class="txt w25 bdbn">
             <p>
-              <input class="w5r" type="text"> -
-              <input class="w5r" type="text"> -
-              <input class="w5r" type="text">
+              <span><input class="w4r" type="text"> 년</span>
+              <span><input class="w3r" type="text"> 월</span>
+              <span><input class="w3r" type="text"> 일</span>
             </p>
           </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
           <li class="tit w10 bg1 pdtb1 bdbn"><p>주소지</p></li>
-          <li class="txt w20 bdbn"><p><input type="text" class="w100"></p></li>
+          <li class="txt w54 bdbn"><p><input type="text" class="w100"></p></li>
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>연락처</p></li>
+          <li class="txt w26 bdbn">
+            <p>
+              <input class="w4r" type="text"> -
+              <input class="w4r" type="text"> -
+              <input class="w4r" type="text">
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>보호자</p></li>
+          <li class="txt w90 bdbn">
+            <p>
+              <input type="text" class="w20" placeholder="성명">
+              <input type="text" class="w20" placeholder="연락처">
+              <input type="text" class="w50" placeholder="주소">
+            </p>
+          </li>
         </ul>
       </td>
     </tr>
@@ -108,8 +140,9 @@
               <label><input type="radio" name="r2_2"> 가족</label>
               <label><input type="radio" name="r2_2"> 이웃</label>
               <label><input type="radio" name="r2_2"> 읍면동 공무원</label>
+              <label><input type="radio" name="r2_2"> 건보공단지사</label>
               <label><input type="radio" name="r2_2"> 민간기관 등</label>
-              <span class="m_db"><label class="mr0"><input type="radio" name="r2_2"> 기타</label>( <input class="small w6r" type="text"> )</span>
+              <span class="d_b"><label class="mr0"><input type="radio" name="r2_2"> 기타</label>( <input class="small w6r" type="text"> )</span>
             </p>
           </li>
         </ul>
@@ -127,16 +160,12 @@
           <li class="tit w16 bdbn"><p>현 거주지</p></li>
           <li class="txt w84 bdbn">
             <p>
-              <label><input type="radio" name="r3_1"> 자가(일반)</label>
-              <label><input type="radio" name="r3_1"> 자가(공공실버주택, 민간실버주택 등 서비스지원 주거)</label>
+              <label><input type="radio" name="r3_1"> 자가</label>
               <label><input type="radio" name="r3_1"> 전세</label>
               <label><input type="radio" name="r3_1"> 월세</label>
-              <label><input type="radio" name="r3_1"> 자녀와 집에 함께 거주</label>
-              <label><input type="radio" name="r3_1"> 단기보호시설</label>
-              <label><input type="radio" name="r3_1"> 양로시설</label>
-              <label><input type="radio" name="r3_1"> 노인요양시설(요양원 등)</label>
-              <label><input type="radio" name="r3_1"> 요양병원</label>
-              <label><input type="radio" name="r3_1"> 병원</label>
+              <label><input type="radio" name="r3_1"> 임대아파트</label>
+              <label><input type="radio" name="r3_1"> 의탁거주/무상임대</label>
+              <label><input type="radio" name="r3_1"> 무허가</label>
               <span class="m_db"><label class="mr0"><input type="radio" name="r3_1"> 기타</label>( <input class="small w8r" type="text"> )</span>
             </p>
           </li>
@@ -149,10 +178,13 @@
           <li class="tit w16 bdbn"><p>가구형태</p></li>
           <li class="txt w84 bdbn">
             <p>
-              <label><input type="radio" name="r3_2"> 노인독거가구</label>
-              <label><input type="radio" name="r3_2"> 노인부부가구</label>
-              <label><input type="radio" name="r3_2"> 자녀동거가구</label>
-              <label><input type="radio" name="r3_2"> 기타 동거가구</label>
+              <label><input type="radio" name="r3_2"> 독거</label>
+              <label><input type="radio" name="r3_2"> 부부</label>
+              <label><input type="radio" name="r3_2"> 노부모</label>
+              <label><input type="radio" name="r3_2"> 성인자녀</label>
+              <label><input type="radio" name="r3_2"> 조손</label>
+              <label><input type="radio" name="r3_2"> 형제자매</label>
+              <label><input type="radio" name="r3_2"> 친척</label>
               <span class="m_db"><label class="mr0"><input type="radio" name="r3_2"> 기타</label>( <input class="small w8r w8r" type="text"> )</span>
             </p>
           </li>
@@ -165,9 +197,11 @@
           <li class="tit w16 bdbn"><p>가구 소득계층 사회보장 수급권</p></li>
           <li class="txt w84 bdbn">
             <p>
-              <label><input type="radio" name="r3_3"> 국민기초생활보장제도 생계급여 수급권자</label>
-              <label><input type="radio" name="r3_3"> 의료급여 수급권자 또는 차상위 수급권자</label>
-              <label><input type="radio" name="r3_3"> 기초연금 수급권자</label>
+              <label><input type="radio" name="r3_3"> 국민기초생활보장제도 생계급여</label>
+              <label><input type="radio" name="r3_3"> 의료급여</label>
+              <label><input type="radio" name="r3_3"> 차상위</label>
+              <label><input type="radio" name="r3_3"> 주거급여</label>
+              <label><input type="radio" name="r3_3"> 기초연금</label>
               <label><input type="radio" name="r3_3"> 일반가구</label>
             </p>
           </li>
@@ -186,7 +220,9 @@
               <label><input type="radio" name="r3_4"> 장기요양 4등급</label>
               <label><input type="radio" name="r3_4"> 장기요양 5등급</label>
               <label><input type="radio" name="r3_4"> 장기요양 인지지원등급</label>
-              <label><input type="radio" name="r3_4"> 공공돌봄서비스</label>
+              <label><input type="radio" name="r3_4"> 노인맞춤돌봄서비스 일반</label>
+              <label><input type="radio" name="r3_4"> 노인맞춤돌봄서비스 중점</label>
+              <label><input type="radio" name="r3_4"> 재가노인지원</label>
               <label><input type="radio" name="r3_4"> 민간 돌봄서비스</label>
               <label><input type="radio" name="r3_4"> 해당 없음</label>
             </p>
@@ -218,19 +254,12 @@
     <tr>
       <td>
         <ul class="tbl_col">
-          <li class="tit w16 bdbn"><p>가구의 수입원 <span class="d_b f10">(모든 수입원 중복체크)</span></p></li>
+          <li class="tit w16 bdbn"><p>주수발자의 도움영역</p></li>
           <li class="txt w84 bdbn">
             <p>
-              <label><input type="radio" name="r3_6"> 국민기초 생계비</label>
-              <label><input type="radio" name="r3_6"> 기초연금</label>
-              <label><input type="radio" name="r3_6"> 국민연금</label>
-              <label><input type="radio" name="r3_6"> 공무원,사학,군인연금</label>
-              <label><input type="radio" name="r3_6"> 사회보장급여</label>
-              <label><input type="radio" name="r3_6"> 개인연금</label>
-              <label><input type="radio" name="r3_6"> 임대,저축,주식 등 자산소득</label>
-              <label><input type="radio" name="r3_6"> 근로소득</label>
-              <label><input type="radio" name="r3_6"> 자녀지원</label>
-              <span class="d_b "><label class="mr0"><input type="radio" name="r3_6"> 기타</label>( <input class="small w8r" type="text"> )</span>
+              <label><input type="radio" name="r3_6"> 신체기능</label>
+              <label><input type="radio" name="r3_6"> 사회기능</label>
+              <label><input type="radio" name="r3_6"> 정서적 지지</label>
             </p>
           </li>
         </ul>
@@ -240,7 +269,7 @@
 
   <table class="tbl_st1 mt20">
     <tr>
-      <th><p class="th_tit1">■ 노쇠평가</p></th>
+      <th><p class="th_tit1">■ 노쇠 정도</p></th>
     </tr>
     <tr>
       <td>
@@ -256,20 +285,23 @@
     <tr>
       <td>
         <dl class="tbl_long">
-          <dt>2) 의사에게 다음 질병이 있다고 들은 적이 있습니까?(중복 체크 가능)</dt>
+          <dt>2) 의사에게 다음 질병이 있다고 들은 적이 있습니까?</dt>
           <dd>
+            <label><input type="checkbox"> 없음</label>
+            <label><input type="checkbox"> 치매</label>
+            <label><input type="checkbox"> 중풍(뇌졸중)</label>
             <label><input type="checkbox"> 고혈압</label>
-            <label><input type="checkbox"> 당뇨</label>
-            <label><input type="checkbox"> 암</label>
-            <label><input type="checkbox"> 만성폐질환</label>
-            <label><input type="checkbox"> 심근경색</label>
-            <label><input type="checkbox"> 심부전</label>
-            <label><input type="checkbox"> 협심증</label>
-            <label><input type="checkbox"> 천식</label>
-            <label><input type="checkbox"> 관절염</label>
-            <label><input type="checkbox"> 뇌경색</label>
+            <label><input type="checkbox"> 당뇨병</label>
+            <label><input type="checkbox"> 관절염(퇴행성, 류마티스)</label>
+            <label><input type="checkbox"> 요통, 좌골통(디스크탈출증, 척수관협착증)</label>
+            <label><input type="checkbox"> 일상생황에 지장이 있을 정도의 호흡곤란(심부전, 만성폐질환, 천식)</label>
+            <label><input type="checkbox"> 난청</label>
+            <label><input type="checkbox"> 백내장, 녹내장 등 시각장애</label>
+            <label><input type="checkbox"> 골절,탈골 등 사고로 인한 후유증</label>
+            <span class="m_db"><label class="mr0"><input type="checkbox"> 암</label>( <input class="small w8r" type="text" placeholder="진단명"> )</span>
             <label><input type="checkbox"> 신장질환</label>
             <label><input type="checkbox"> 고지혈증</label>
+            <span class="m_db"><label class="mr0"><input type="checkbox"> 기타</label>( <input class="small w8r" type="text" placeholder="진단명"> )</span>
           </dd>
         </dl>
       </td>
@@ -288,12 +320,12 @@
 
   <table class="tbl_st1 mt20">
     <tr>
-      <th><p class="th_tit1">■ 돌봄 욕구 평가</p></th>
+      <th><p class="th_tit1">■ 돌봄 욕구</p></th>
     </tr>
     <tr>
       <td>
         <dl class="tbl_long">
-          <dt>1) 귀하는 식사하기, 화장실가기, 씻기, 옷입기 등 기본적인 일상생활 동작을 수행하는 데 도움이 필요하십니까? </dt>
+          <dt>1) 식사하기, 화장실가기, 씻기, 옷입기 등 기본적인 일상생활 동작을 수행하는 데 도움이 필요하십니까? </dt>
           <dd>
             <label><input type="radio" name="r5_1"> 완전 혼자 가능</label>
             <label><input type="radio" name="r5_1"> 부분 도움 필요</label>
@@ -305,33 +337,11 @@
     <tr>
       <td>
         <dl class="tbl_long">
-          <dt>2) 귀하는 장보기, 식사준비하기, 청소하기, 빨래하기 등 당신의 일상생활에 필요한 일들을 수행하는데 도움이      필요하십니까? </dt>
+          <dt>2) 장보기, 식사준비하기, 청소하기, 빨래하기 등 당신의 일상생활에 필요한 일들을 수행하는데 도움이 필요하십니까?</dt>
           <dd>
             <label><input type="radio" name="r5_2"> 완전 혼자 가능</label>
             <label><input type="radio" name="r5_2"> 부분 도움 필요</label>
             <label><input type="radio" name="r5_2"> 완전 도움 필요</label>
-          </dd>
-        </dl>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <dl class="tbl_long">
-          <dt>3) 귀하는 자신의 일상적 어려움을 항시 의논할 사람이 있습니까?</dt>
-          <dd>
-            <label><input type="radio" name="r5_3"> 있다</label>
-            <label><input type="radio" name="r5_3"> 없다</label>
-          </dd>
-        </dl>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <dl class="tbl_long">
-          <dt>4) 귀하는 자신의 일상적 어려움을 해결하는 데 실제로 도와줄 사람이 있습니까?</dt>
-          <dd>
-            <label><input type="radio" name="r5_4"> 있다</label>
-            <label><input type="radio" name="r5_4"> 없다</label>
           </dd>
         </dl>
       </td>
@@ -342,7 +352,51 @@
     <tr>
       <th>
         <p class="th_tit1">
-          ■ 대상자 욕구 (당사자 또는 의뢰인이 표현하는 돌봄 욕구)(중복 체크 가능)
+          <span>현재 지자체에서 받고 있는 지원</span>
+          <span class="f14 normal">(과거 3개월간 평균 횟수‧일수 기록)</span>
+        </p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col3">
+          <li class="txt w33">
+            <p>
+              <span class="d_b"><label><input type="checkbox"> 노인돌봄서비스</label></span>
+              <span class="d_b"><label><input type="checkbox"> 치매상담센터</label></span>
+              <span class="d_b"><label><input type="checkbox"> 급식 및 도시락 반찬</label></span>
+              <span class="d_b"><label><input type="checkbox"> 활동보조</label></span>
+              <span class="d_b"><label><input type="checkbox"> 말벗</label></span>
+            </p>
+          </li>
+          <li class="txt w33">
+            <p>
+              <span class="d_b"><label><input type="checkbox"> 보건소 사업</label></span>
+              <span class="d_b"><label><input type="checkbox"> 주거개선사업</label></span>
+              <span class="d_b"><label><input type="checkbox"> 건강운동교실</label></span>
+              <span class="d_b"><label><input type="checkbox"> 목욕•이미용</label></span>
+              <span class="d_b mr0"><label><input type="checkbox"> 기타</label>( <input class="small w8r" type="text"> )</span>
+            </p>
+          </li>
+          <li class="txt w33">
+            <p>
+              <span class="d_b"><label><input type="checkbox"> 노인일자리 사업</label></span>
+              <span class="d_b"><label><input type="checkbox"> 무료진료연계</label></span>
+              <span class="d_b"><label><input type="checkbox"> 가사간병방문도움</label></span>
+              <span class="d_b"><label><input type="checkbox"> 여가, 문화, 교육</label></span>
+              <span class="d_b"><label><input type="checkbox"> 거부</label></span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th>
+        <p class="th_tit1">
+          ■ 대상자 욕구 (당사자 또는 의뢰인이 표현하는 돌봄 욕구)
         </p>
       </th>
     </tr>
@@ -368,14 +422,6 @@
           <li class="tit"><p class="pdtb05_m"><input type="checkbox"></p></li>
           <li class="tit"><p class="pdtb05_m"><input type="checkbox"></p></li>
         </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p class="pd05">
-          <span class="d_b pb05">돌봄 욕구 관련 세부 사항 기입:</span>
-          <input type="text" class="d_b w100">
-        </p>
       </td>
     </tr>
   </table>
