@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--<link rel="icon" href="./img/ico_icon4.ico">-->
+
+  <title>통합돌봄서비스 플렛폼</title>
+
+  <!-- Bootstrap core CSS-->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--<link href="./css/dashboard.css" rel="stylesheet">-->
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!--<script src="./js/ie-emulation-modes-warning.js"></script>-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <link href="./css/nav.css" rel="stylesheet" type="text/css">
+
+  <!--추가-->
+  <link rel="stylesheet" type="text/css" href="./css/form.css" />
+  <script type="text/javascript" src="./js/jquery-1.8.3.min.js" ></script>
+  <script type="text/javascript" src="./js/matchHeight-min.js"></script>
+  <script type="text/javascript" src="./js/form.js"></script>
+  <!--//추가-->
+</head>
+<body>
+
+
+<article id="formst">
+  <div class="pagetit"><b>주거개선 선정</b> 조사지</div>
+
+  <table class="tbl_st1">
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w10 bg1 pdtb1"><p>조사일</p></li>
+          <li class="txt w25">
+            <p>
+              <span><input class="w5r" type="text"> 년</span>
+              <span><input class="w3r" type="text"> 월</span>
+              <span><input class="w3r" type="text"> 일</span>
+            </p>
+          </li>
+          <li class="tit w10 bg1 pdtb1"><p>조사자</p></li>
+          <li class="txt w25"><p><input type="text" class="w100"></p></li>
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>관리번호</p></li>
+          <li class="txt w20 bdbn"><p><input type="text" class="w100"></p></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 대상자 기본사항</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col col6">
+          <li class="tit"><p>성명</p></li>
+          <li class="txt"><p><input class="w100" type="text"></p></li>
+          <li class="tit"><p>성별</p></li>
+          <li class="txt tcenter_pc"><p><label><input type="radio" name="gender"> 남</label><label><input type="radio" name="gender"> 여</label></p></li>
+          <li class="tit bdbn"><p>연령</p></li>
+          <li class="txt tcenter_pc bdbn"><p>만 <input class="w4r" type="text"> 세</p></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16"><p>주소</p></li>
+          <li class="txt w33"><p><input class="w100" type="text"></p></li>
+          <li class="tit w16 bdbn"><p>거소</p></li>
+          <li class="txt w33 bdbn"><p><input class="w100" type="text"></p></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>연락처</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <span><input type="text" class="maxw40" placeholder="자택"></span>
+              <span><input type="text" class="maxw50" placeholder="집전화, 핸드폰"></span>
+              <span class="m_db mt10">
+                <input type="text" class="maxw40" placeholder="비상연락처">
+                ( <input type="text" class="w5r" placeholder="관계"> )
+              </span>
+
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>가구형태</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r1_2"> 독거</label>
+              <label><input type="radio" name="r1_2"> 부부</label>
+              <label><input type="radio" name="r1_2"> 노부모</label>
+              <label><input type="radio" name="r1_2"> 성인자녀</label>
+              <label><input type="radio" name="r1_2"> 조손</label>
+              <label><input type="radio" name="r1_2"> 형제자매</label>
+              <label><input type="radio" name="r1_2"> 친척</label>
+              <span class="m_db"><label class="mr0"><input type="radio" name="r1_2"> 기타</label>( <input class="small w8r" type="text"> )</span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>현 거주지</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r1_2"> 자가</label>
+              <label><input type="radio" name="r1_2"> 전세</label>
+              <label><input type="radio" name="r1_2"> 월세</label>
+              <label><input type="radio" name="r1_2"> 임대아파트</label>
+              <label><input type="radio" name="r1_2"> 의탁거주/무상임대</label>
+              <label><input type="radio" name="r1_2"> 무허가</label>
+              <span class="m_db"><label class="mr0"><input type="radio" name="r1_2"> 기타</label>( <input class="small w8r" type="text"> )</span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>소득계층</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r1_3"> 국민기초생활보장제도 생계급여 수급권자</label>
+              <label><input type="radio" name="r1_3"> 의료급여 수급권자</label>
+              <label><input type="radio" name="r1_3"> 차상위 수급권자</label>
+              <label><input type="radio" name="r1_3"> 기초연금 수급권자</label>
+              <label><input type="radio" name="r1_3"> 일반가구</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>노인 장기요양보험 등</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <span class="d_b">장기요양
+                ( <label><input type="radio" name="r1_4"> 1등급</label>
+                <label><input type="radio" name="r1_4"> 2등급</label>
+                <label><input type="radio" name="r1_4"> 3등급</label>
+                <label><input type="radio" name="r1_4"> 4등급</label>
+                <label><input type="radio" name="r1_4"> 5등급</label>
+                <label class="mr0"><input type="radio" name="r1_4"> 인지지원등급</label> )
+              </span>
+              <span class="m_db mr10">노인맞춤돌봄서비스
+                ( <label><input type="radio" name="r1_4"> 일반</label>
+                <label class="mr0"><input type="radio" name="r1_4"> 중점</label> )
+              </span>
+              <span>
+                <label><input type="radio" name="r1_4"> 재가노인지원</label>
+                <label><input type="radio" name="r1_4"> 민간 돌봄서비스</label>
+                <label><input type="radio" name="r1_4"> 해당 없음</label>
+              </span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 주거사항</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>주거상태</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r2_1"> 노후</label>
+              <label><input type="radio" name="r2_1"> 보통</label>
+              <label><input type="radio" name="r2_1"> 양호</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>주택형태</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r2_2"> 단독주택</label>
+              <label><input type="radio" name="r2_2"> 아파트</label>
+              <label><input type="radio" name="r2_2"> 연립주택</label>
+              <label><input type="radio" name="r2_2"> 다세대주택</label>
+              <label><input type="radio" name="r2_2"> 비주택</label>
+              <span class="m_db"><label class="mr0"><input type="radio" name="r2_2"> 기타</label>( <input class="small w8r" type="text"> )</span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>주거형태 및 환경</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r2_3"> 지하</label>
+              <label><input type="radio" name="r2_3"> 1층</label>
+              <span>
+                <label class="mr0"><input type="radio" name="r2_3"> 2층이상</label>
+                <em class="d_ib va_m mr10">( 계단/승강기</em>
+                <label class="va_m"><input type="radio" name="r2_3-1"> 유</label>
+                <label class="va_m"><input type="radio" name="r2_3-1"> 무</label>
+                <em class="d_ib va_m">)</em>
+              </span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>난방형태</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r2_4"> 가스보일러</label>
+              <label><input type="radio" name="r2_4"> 연탄보일러</label>
+              <label><input type="radio" name="r2_4"> 기름보일러</label>
+              <label><input type="radio" name="r2_4"> 아궁이 (연탄 / 장작)</label>
+              <label><input type="radio" name="r2_4"> 난방없음</label>
+              <span class="m_db"><label class="mr0"><input type="radio" name="r2_4"> 기타</label>( <input class="small w8r" type="text"> )</span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>화장실형태</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r2_5"> 공용</label>
+              <label><input type="radio" name="r2_5"> 전용</label>
+              <em class="va_m mr20">/</em>
+              <label><input type="radio" name="r2_5-1"> 수세식</label>
+              <label><input type="radio" name="r2_5-1"> 재래식</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th>
+        <div class="d_table w100">
+          <p class="d_tcell th_tit1 va_m">■ 일상생활 기능</p>
+          <p class="d_tcell w30 f12 va_m tcenter">■ 주거환경 지원을 통한 개선 가능성</p>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="tit w40"><p>신체기능(기본적 일상생활 기능) 영역</p></li>
+          <li class="tit w10"><p>완전 자립</p></li>
+          <li class="tit w10"><p>부분 도움</p></li>
+          <li class="tit w10"><p>완전 도움</p></li>
+          <li class="tit w30"><p>일상생활기능 개선 가능성</p></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="tit w40 tleft"><p>식사하기, 화장실 가기, 씻기 옷입기 등 기본적인 일상생활 동작을 수행하는데 도움이 필요하십니까?</p></li>
+          <li class="tit w10"><p><input type="radio" name="r3_1" ></p></li>
+          <li class="tit w10"><p><input type="radio" name="r3_1" ></p></li>
+          <li class="tit w10"><p><input type="radio" name="r3_1" ></p></li>
+          <li class="tit w30">
+            <p>
+              <label><input type="radio" name="r3_2"> 있다</label>
+              <label><input type="radio" name="r3_2"> 없다</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="tit w40 tleft"><p>장보기, 식사준비하기, 청소하기, 빨래하기 등 일상 생활에 필요한 일들을 수행하는데 도움이 필요하십니까?</p></li>
+          <li class="tit w10"><p><input type="radio" name="r3_4" ></p></li>
+          <li class="tit w10"><p><input type="radio" name="r3_4" ></p></li>
+          <li class="tit w10"><p><input type="radio" name="r3_4" ></p></li>
+          <li class="tit w30">
+            <p>
+              <label><input type="radio" name="r3_5"> 있다</label>
+              <label><input type="radio" name="r3_5"> 없다</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 현재 받고 있는 급여 (*최근 3년간 지원받은 경우)</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bdbn"><p>장기요양 재가급여</p></li>
+          <li class="txt w80 bdbn">
+            <p>
+              <label><input type="checkbox"> 복지용구</label>
+              (
+              <label><input type="radio" name="r4_1"> 구입</label>
+              <label class="mr0"><input type="radio" name="r4_1"> 대여</label>
+              )
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bdbn"><p>장기요양 재가급여</p></li>
+          <li class="txt w80 bdbn">
+            <p>
+              <label><input type="checkbox"> 주거개선사업</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th>
+        <ul class="tbl_col2">
+          <li class="tit w70 tleft th_tit1"><p>■ 낙상위험도</p></li>
+          <li class="txt w15 tcenter">예</li>
+          <li class="txt w15 tcenter">아니오</li>
+        </ul>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet">1) 지난 6개월동안 쓰러지거나 넘어진 적이 있습니까?</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r5_1">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r5_1">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w70 tlfet">2) 넘어질까봐 무서워서 외출이나 활동을 잘 못하는 경우가 있습니까?</li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r5_2">
+          </li>
+          <li class="txt w15 tcenter">
+            <input type="radio" name="r5_2">
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 주거환경 개선 필요 항목</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w40 tcenter bold">항목</li>
+          <li class="txt w40 tcenter bold">현재 상태</li>
+          <li class="txt w20 tcenter bold">요구순위</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w40">안전 손잡이</li>
+          <li class="txt w40 tcenter">
+            <label><input type="radio" name="r6_1"> 유</label>
+            <label><input type="radio" name="r6_1"> 무</label>
+          </li>
+          <li class="txt w20 tcenter"><input type="text"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w40">경사로</li>
+          <li class="txt w40 tcenter">
+            <label><input type="radio" name="r6_2"> 유</label>
+            <label><input type="radio" name="r6_2"> 무</label>
+          </li>
+          <li class="txt w20 tcenter"><input type="text"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w40">주방 (가스기구, 조리기구 위치)</li>
+          <li class="txt w40 tcenter">
+            <label><input type="radio" name="r6_3"> 양호</label>
+            <label><input type="radio" name="r6_3"> 불량</label>
+          </li>
+          <li class="txt w20 tcenter"><input type="text"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w40">문턱 여부 (현관, 방, 화장실)</li>
+          <li class="txt w40 tcenter">
+            <label><input type="radio" name="r6_4"> 유</label>
+            <label><input type="radio" name="r6_4"> 무</label>
+          </li>
+          <li class="txt w20 tcenter"><input type="text"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w40">미끄럼 방지 마감</li>
+          <li class="txt w40 tcenter">
+            <label><input type="radio" name="r6_5"> 양호</label>
+            <label><input type="radio" name="r6_5"> 불량</label>
+          </li>
+          <li class="txt w20 tcenter"><input type="text"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w40">단차(段差) 제거</li>
+          <li class="txt w40 tcenter">
+            <label><input type="radio" name="r6_6"> 양호</label>
+            <label><input type="radio" name="r6_6"> 불량</label>
+          </li>
+          <li class="txt w20 tcenter"><input type="text"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w40">화재 감지기</li>
+          <li class="txt w40 tcenter">
+            <label><input type="radio" name="r6_7"> 유</label>
+            <label><input type="radio" name="r6_7"> 무</label>
+          </li>
+          <li class="txt w20 tcenter"><input type="text"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w40">그 외 지원필요사항 : </li>
+          <li class="txt w60 tcenter">
+            <input type="text" class="w100">
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="pd05">
+          <strong class="d_b mb05">평가</strong>
+          <textarea name="textarea" id="textarea" class="w100" rows="2"></textarea>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+</article><!--//formst-->
+
+
+
+</body>
+</html>
+

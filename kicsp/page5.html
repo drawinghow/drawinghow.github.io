@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--<link rel="icon" href="./img/ico_icon4.ico">-->
+
+  <title>통합돌봄서비스 플렛폼</title>
+
+  <!-- Bootstrap core CSS-->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--<link href="./css/dashboard.css" rel="stylesheet">-->
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!--<script src="./js/ie-emulation-modes-warning.js"></script>-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <link href="./css/nav.css" rel="stylesheet" type="text/css">
+
+  <!--추가-->
+  <link rel="stylesheet" type="text/css" href="./css/form.css" />
+  <script type="text/javascript" src="./js/jquery-1.8.3.min.js" ></script>
+  <script type="text/javascript" src="./js/matchHeight-min.js"></script>
+  <script type="text/javascript" src="./js/form.js"></script>
+  <!--//추가-->
+</head>
+<body>
+
+
+<article id="formst">
+  <div class="pagetit"><b>이동 및 동행지원</b> 대상자 선정도구</div>
+
+  <table class="tbl_st1">
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w10 bg1 pdtb1"><p>조사일</p></li>
+          <li class="txt w25">
+            <p>
+              <span><input class="w5r" type="text"> 년</span>
+              <span><input class="w3r" type="text"> 월</span>
+              <span><input class="w3r" type="text"> 일</span>
+            </p>
+          </li>
+          <li class="tit w10 bg1 pdtb1"><p>조사자</p></li>
+          <li class="txt w25"><p><input type="text" class="w100"></p></li>
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>관리번호</p></li>
+          <li class="txt w20 bdbn"><p><input type="text" class="w100"></p></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 대상자 기본사항</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col col6">
+          <li class="tit"><p>성명</p></li>
+          <li class="txt"><p><input class="w100" type="text"></p></li>
+          <li class="tit"><p>성별</p></li>
+          <li class="txt tcenter_pc"><p><label><input type="radio" name="gender"> 남</label><label><input type="radio" name="gender"> 여</label></p></li>
+          <li class="tit bdbn"><p>연령</p></li>
+          <li class="txt tcenter_pc bdbn"><p>만 <input class="w4r" type="text"> 세</p></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16"><p>주소</p></li>
+          <li class="txt w33"><p><input class="w100" type="text"></p></li>
+          <li class="tit w16 bdbn"><p>거소</p></li>
+          <li class="txt w33 bdbn"><p><input class="w100" type="text"></p></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>연락처</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <span><input type="text" class="maxw40" placeholder="자택"></span>
+              <span><input type="text" class="maxw50" placeholder="집전화, 핸드폰"></span>
+              <span class="d_b mt10">
+                <input type="text" class="maxw50" placeholder="비상 연락처">
+                ( <input type="text" class="w6r" placeholder="관계"> )
+              </span>
+
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>가구형태</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r1_2"> 독거</label>
+              <label><input type="radio" name="r1_2"> 부부</label>
+              <label><input type="radio" name="r1_2"> 노부모</label>
+              <label><input type="radio" name="r1_2"> 성인자녀</label>
+              <label><input type="radio" name="r1_2"> 조손</label>
+              <label><input type="radio" name="r1_2"> 형제자매</label>
+              <label><input type="radio" name="r1_2"> 친척</label>
+              <span class="m_db"><label class="mr0"><input type="radio" name="r1_2"> 기타</label>( <input class="small w8r w8r" type="text"> )</span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>소득계층</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r1_3"> 국민기초생활보장제도</label>
+              <label><input type="radio" name="r1_3"> 생계급여 수급권자</label>
+              <label><input type="radio" name="r1_3"> 의료급여 수급권자</label>
+              <label><input type="radio" name="r1_3"> 차상위 수급권자</label>
+              <label><input type="radio" name="r1_3"> 기초연금 수급권자</label>
+              <label><input type="radio" name="r1_3"> 일반가구</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>노인 장기요양보험 등</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <span class="d_b">장기요양
+                ( <label><input type="radio" name="r1_4"> 1등급</label>
+                <label><input type="radio" name="r1_4"> 2등급</label>
+                <label><input type="radio" name="r1_4"> 3등급</label>
+                <label><input type="radio" name="r1_4"> 4등급</label>
+                <label><input type="radio" name="r1_4"> 5등급</label>
+                <label class="mr0"><input type="radio" name="r1_4"> 인지지원등급</label> )
+              </span>
+              <span class="m_db mr10">노인맞춤돌봄서비스
+                ( <label><input type="radio" name="r1_4"> 일반</label>
+                <label class="mr0"><input type="radio" name="r1_4"> 중점</label> )
+              </span>
+              <span>
+                <label><input type="radio" name="r1_4"> 재가노인지원</label>
+                <label><input type="radio" name="r1_4"> 민간 돌봄서비스</label>
+                <label><input type="radio" name="r1_4"> 해당 없음</label>
+              </span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 대상자 현황 파악</p></th>
+    </tr>
+    <tr>
+      <td>
+        <dl class="tbl_long">
+          <dt>1) 필수적인 외출 활동(병원진료, 은행, 시장 등)을 도와줄 사람이 있습니까?</dt>
+          <dd>
+            <label><input type="radio" name="r2_1"> 예</label>
+            <label><input type="radio" name="r2_1"> 아니오</label>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="tbl_long">
+          <dt><span class="ml20">1-1) 있다면 누구입니까?</span></dt>
+          <dd>
+            <p class="ml20">
+              <label><input type="radio" name="r2_2"> 가족</label>
+              <label><input type="radio" name="r2_2"> 친인척</label>
+              <label><input type="radio" name="r2_2"> 친구‧이웃</label>
+              <label><input type="radio" name="r2_2"> 공적서비스 돌봄제공자</label>
+              <label><input type="radio" name="r2_2"> 자원봉사자</label>
+              <span class="m_db"><label class="mr0"><input type="radio" name="r2_3"> 기타</label>( <input class="small w8r" type="text"> )</span>
+            </p>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="tbl_long">
+          <dt>2) 보행에 어려움이 있습니까?</dt>
+          <dd>
+            <label><input type="radio" name="r2_3"> 예</label>
+            <label><input type="radio" name="r2_3"> 아니오</label>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="tbl_long">
+          <dt>3) 이동 및 동행 지원이 주로 필요한 경우는 언제입니까?</dt>
+          <dd>
+            <label><input type="radio" name="r2_4"> 병원진료</label>
+            <label><input type="radio" name="r2_4"> 관공서 등</label>
+            <label><input type="radio" name="r2_4"> 시장</label>
+            <span class="m_db"><label class="mr0"><input type="radio" name="r2_4"> 기타</label>( <input class="small w8r" type="text"> )</span>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="tbl_long">
+          <dt>4) 필수적인 외출 활동의 평균 횟수는 몇 회입니까?</dt>
+          <dd>
+            <label><input type="radio" name="r2_5"> 주 1회</label>
+            <label><input type="radio" name="r2_5"> 격주 1회</label>
+            <label><input type="radio" name="r2_5"> 월 1회</label>
+            <span class="m_db"><label class="mr0"><input type="radio" name="r2_5"> 기타</label>( <input class="small w8r" type="text"> )</span>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="tbl_long">
+          <dt>5) 어떤 서비스가 필요하십니까?</dt>
+          <dd>
+            <label><input type="radio" name="r2_6"> 이동지원</label>
+            <label><input type="radio" name="r2_6"> 동행지원</label>
+            <label><input type="radio" name="r2_6"> 이동‧동행지원</label>
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="pd05">
+          <strong class="d_b pb05">평가</strong>
+          <textarea name="textarea" id="textarea" class="w100" rows="3"></textarea>
+        </p>
+      </td>
+    </tr>
+  </table>
+</article><!--//formst-->
+
+
+
+</body>
+</html>
+
