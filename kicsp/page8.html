@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--<link rel="icon" href="./img/ico_icon4.ico">-->
+
+  <title>통합돌봄서비스 플렛폼</title>
+
+  <!-- Bootstrap core CSS-->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--<link href="./css/dashboard.css" rel="stylesheet">-->
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!--<script src="./js/ie-emulation-modes-warning.js"></script>-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <link href="./css/nav.css" rel="stylesheet" type="text/css">
+
+  <!--추가-->
+  <link rel="stylesheet" type="text/css" href="./css/form.css" />
+  <script type="text/javascript" src="./js/jquery-1.8.3.min.js" ></script>
+  <script type="text/javascript" src="./js/matchHeight-min.js"></script>
+  <script type="text/javascript" src="./js/form.js"></script>
+  <!--//추가-->
+
+</head>
+<body>
+
+
+<article id="formst">
+  <div class="pagetit"><b>노인돌봄 서비스</b> 이용 신청서</div>
+
+  <p class="f20 bold">※ 서비스 이용 신청서는 초기판단 및 현장확인 단계에서 이용자에게 서비스 특성과 유의 사항을 안내하기 위한 내용임 </p>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w10 bg1 pdtb1"><p>관리번호</p></li>
+          <li class="txt w20"><p><input type="text" class="w100"></p></li>
+          <li class="tit w10 bg1 pdtb1"><p>진행일자</p></li>
+          <li class="txt w30">
+            <p>
+              <span><input class="w6r" type="text"> 년</span>
+              <span><input class="w3r" type="text"> 월</span>
+              <span><input class="w3r" type="text"> 일</span>
+            </p>
+          </li>
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>담당자명</p></li>
+          <li class="txt w20 bdbn"><p><input type="text" class="w100"></p></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w10 bg1 pdtb1"><p>이용자명</p></li>
+          <li class="txt w20"><p><input type="text" class="w100"></p></li>
+          <li class="tit w10 bg1 pdtb1"><p>연락처</p></li>
+          <li class="txt w30">
+            <p>
+              <input class="w5r" type="text"> -
+              <input class="w5r" type="text"> -
+              <input class="w5r" type="text">
+            </p>
+          </li>
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>주소지</p></li>
+          <li class="txt w20 bdbn"><p><input type="text" class="w100"></p></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <p class="mt40 f23 bold">○ 이용자 확인 및 동의 사항</p>
+  <table class="tbl_st1 mt10">
+    <tr>
+      <th>
+        <ul class="tbl_col2">
+          <li class="tit w80 tleft th_tit1"><p>■ 노인돌봄 서비스 이용 관련 주요 확인 사항</p></li>
+          <li class="txt w20 tcenter">동의<br>확인</li>
+        </ul>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w80 tlfet">
+            <p class="indent">
+              1. 노인돌봄은 긴급한 상황이나 개인적인 해결이 어려운 필요한 돌봄욕구에 대응하기 위한 사업으로서, <br class="view_pc">
+              1인당 서비스의 내용 및 범위, 제공기간 등의 한도가 제한되어 있으며 <strong class="underline">한시적인 서비스</strong>를 제공합니다.
+            </p>
+          </li>
+          <li class="txt w20 tcenter">
+            <label class="m0"><span class="d_b">동의 합니다.</span><input type="checkbox"></label>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w80 tlfet">
+            <p class="indent">
+              2. 노인돌봄 서비스는 돌봄본부에서 계획 수립과 제공 과정을 담당합니다. <br>
+              지자체에서 수립한 돌봄 계획에 따라, <strong class="underline">제공기관이 연계되면 이용계약 후 서비스를 제공</strong>합니다.
+            </p>
+          </li>
+          <li class="txt w20 tcenter">
+            <label class="m0"><span class="d_b">동의 합니다.</span><input type="checkbox"></label>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w80 tlfet">
+            <p class="indent">
+              3. 이용자 상황에 대한 돌봄본부 판단에 따라 노인돌봄 서비스가 <strong class="underline">연계되지 않을 수 있으며,</strong> <br class="view_pc">
+              그러한 경우 이용자 상황에 보다 적합한 제도나 서비스를 안내해드리는 조치를 할 수도 있습니다.
+            </p>
+          </li>
+          <li class="txt w20 tcenter">
+            <label class="m0"><span class="d_b">동의 합니다.</span><input type="checkbox"></label>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w80 tlfet">
+            <p class="indent">
+              4. 서비스 계획과 제공과정에서 공무원‧전문인력 등의 방문과 서비스 제공기관의 절차별 <strong class="underline">방문이 진행됩니다.</strong><br>
+              (제공기관 방문: 서비스 계약을 위한 방문, 서비스 제공을 위한 방문, 결과 확인을 위한 방문) <br>
+              원활한 서비스 진행을 위해 이용자의 <strong class="underline">관련 정보가 서비스 제공기관에 전달</strong>됩니다.
+            </p>
+          </li>
+          <li class="txt w20 tcenter">
+            <label class="m0"><span class="d_b">동의 합니다.</span><input type="checkbox"></label>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w80 tlfet">
+            <p class="indent">
+              5. 방문진료, 식사, 주거서비스 등 제공서비스에 따라 일정금액 본인이 부담하여야 합니다. <br>
+              이 외의 주소지가 관내가 아닌 다른 지역주민이 이용하는 경우에는 서비스가 제한됩니다.
+            </p>
+          </li>
+          <li class="txt w20 tcenter">
+            <label class="m0"><span class="d_b">동의 합니다.</span><input type="checkbox"></label>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col2">
+          <li class="txt w80 tlfet">
+            <p class="indent">
+              6. 서비스 제공과정에서 <strong class="underline">만족도 조사를 위한 기관 등의 전화 또는 방문이 진행됩니다.</strong>
+            </p>
+          </li>
+          <li class="txt w20 tcenter">
+            <label class="m0"><span class="d_b">동의 합니다.</span><input type="checkbox"></label>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <p class="mt40 f22 tcenter">상기 본인은 노인돌봄 서비스 특성 및 유의 사항에 대해서 안내 받고, 서비스 이용을 희망합니다. </p>
+
+  <div class="sign_area mt40">
+    <ul class="sign1">
+      <li>
+        <table>
+          <tr>
+            <td>신청일 :</td>
+            <td class="tright pl10"><input type="text" class="w5r"> 년</td>
+            <td class="tright pl10"><input type="text" class="w3r"> 월</td>
+            <td class="tright pl10"><input type="text" class="w3r"> 일</td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <table>
+          <tr>
+            <td>신청자 :</td>
+            <td class="pl10 tright">
+              신청자와의 관계 (
+              <label class="mt-1">본인 <input class="mt-1" type="radio" name="rrt"></label>,
+              <label class="mt-1 mr0">보호자 <input class="mt-1" type="radio" name="rrt"></label>
+              )
+            </td>
+          </tr>
+        </table>
+      </li>
+      <li class="tright"><a href="#;">( 인 또는 서명 )</a></li>
+    </ul>
+  </div>
+
+</article><!--//formst-->
+
+
+
+</body>
+</html>
+

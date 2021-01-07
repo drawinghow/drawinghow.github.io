@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--<link rel="icon" href="./img/ico_icon4.ico">-->
+
+  <title>통합돌봄서비스 플렛폼</title>
+
+  <!-- Bootstrap core CSS-->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--<link href="./css/dashboard.css" rel="stylesheet">-->
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!--<script src="./js/ie-emulation-modes-warning.js"></script>-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <link href="./css/nav.css" rel="stylesheet" type="text/css">
+
+  <!--추가-->
+  <link rel="stylesheet" type="text/css" href="./css/form.css" />
+  <script type="text/javascript" src="./js/jquery-1.8.3.min.js" ></script>
+  <script type="text/javascript" src="./js/matchHeight-min.js"></script>
+  <script type="text/javascript" src="./js/form.js"></script>
+  <!--//추가-->
+
+</head>
+<body>
+
+
+<article id="formst">
+  <div class="pagetit"><b>돌봄본부 서비스 조정</b> 신청서</div>
+
+  <table class="tbl_st1 mt10">
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w10 bg1 pdtb1"><p>이용자명</p></li>
+          <li class="txt w20"><p><input type="text" class="w100"></p></li>
+          <li class="tit w10 bg1 pdtb1"><p>연락처</p></li>
+          <li class="txt w25 ">
+            <p>
+              <span><input class="w4r" type="text"> -</span>
+              <span><input class="w4r" type="text"> -</span>
+              <span><input class="w4r" type="text"></span>
+            </p>
+          </li>
+          <li class="tit w10 bg1 pdtb1"><p>주소지</p></li>
+          <li class="txt w25">
+            <p><input type="text" class="w100"></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w10 bg1 pdtb1"><p>기관명</p></li>
+          <li class="txt w20"><p><input type="text" class="w100"></p></li>
+          <li class="tit w10 bg1 pdtb1"><p>담당자명</p></li>
+          <li class="txt w25">
+            <p><input type="text" class="w100"></p>
+          </li>
+          <li class="tit w10 bg1 pdtb1 bdbn"><p>연락처</p></li>
+          <li class="txt w25 bdbn">
+            <p>
+              <span><input class="w4r" type="text"> -</span>
+              <span><input class="w4r" type="text"> -</span>
+              <span><input class="w4r" type="text"></span>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 서비스 제공 의뢰 내용</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w10"><p>주요욕구</p></li>
+          <li class="txt w30"><p><input class="w100" type="text"></p></li>
+          <li class="tit w10"><p class="c_blue">제공목표</p></li>
+          <li class="txt w25"><p><input class="w100" type="text"></p></li>
+          <li class="tit w15 bdbn"><p class="c_blue">달성정도(%)</p></li>
+          <li class="txt w10 bdbn"><p><input class="w4r" type="text"> %</p></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st2">
+    <colgroup>
+      <col style="width: 18%;">
+      <col style="width: 18%;">
+      <col style="width: 20%;">
+      <col style="width: 10%;">
+      <col style="width: 10%;">
+      <col style="width: 10%;">
+      <col>
+    </colgroup>
+    <thead>
+    <tr>
+      <th rowspan="3">서비스 종류</th>
+      <th colspan="6">서비스 제공 방법</th>
+    </tr>
+    <tr>
+      <th rowspan="2">서비스 내용</th>
+      <th rowspan="2" >서비스 기간</th>
+      <th colspan="3">서비스 제공량</th>
+      <th rowspan="2">제공기관<br>(예정)</th>
+    </tr>
+    <tr>
+      <th>주기</th>
+      <th>빈도</th>
+      <th>월시간</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>ICT 방문건강관리<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>방문진료사업 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>만성질환관리 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>퇴원환자관리 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>방문간호 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>수시방문 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100" placeholder="방문 확인"></td>
+      <td><input type="text" class="w100" placeholder="‘21.01.01~ ’21.12.31"></td>
+      <td><input type="text" class="w100" placeholder="주"></td>
+      <td><input type="text" class="w100" placeholder="3회"></td>
+      <td><input type="text" class="w100" placeholder="2h"></td>
+      <td><input type="text" class="w100" placeholder="생활 지원사"></td>
+    </tr>
+    <tr>
+      <td>방문요양 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>요양신청<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>이동・동행 지원서비스<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>식사・영양 지원<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>주택개조<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>지원주택<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>노인맞춤돌봄<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>재가노인지원<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>기타<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <table class="tbl_st1">
+    <tr>
+      <td>
+        <ul class="tbl_col col6">
+          <li class="tit w20"><p>세부사항 및 유의 요청사항</p></li>
+          <li class="txt w80">
+            <p><textarea name="textarea" id="textarea" rows="3" class="w100" ></textarea></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+
+  <table class="tbl_st1 mt20">
+    <tr>
+      <th><p class="th_tit1">■ 서비스 조정 신청 내용</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>조정내용</p></li>
+          <li class="txt w84 bdbn">
+            <p>
+              <label><input type="radio" name="r4_1"> 유형 변경</label>
+              <label><input type="radio" name="r4_1"> 기간 변경</label>
+              <label><input type="radio" name="r4_1"> 횟수 변경</label>
+              <label><input type="radio" name="r4_1"> 시간 변경</label>
+              <label><input type="radio" name="r4_1"> 제공 포기</label>
+              <label><input type="radio" name="r4_1"> 기타</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>세부내용</p></li>
+          <li class="txt w84 bdbn">
+            <p><textarea name="textarea" id="textarea1" rows="5" class="w100" placeholder="(조정사항에 대한 구체적인 내용 기록)"></textarea></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w16 bdbn"><p>조정사유</p></li>
+          <li class="txt w84 bdbn">
+            <p><textarea name="textarea" id="textarea2" rows="5" class="w100" placeholder="(서비스 조정을 신청한 사유 상세 기록)"></textarea></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <p class="mt30 tcenter  f20"><input type="text" class="w5r"> 기관은 이용자와 합의하여 서비스 제공에 대해서 위와 같은 내용으로 변경을 신청합니다.</p>
+
+  <div class="sign_area mt40">
+    <ul class="sign1">
+      <li>
+        <table>
+          <tr>
+            <td class="w6r">신청일 :</td>
+            <td class="pl10">
+              <span class="pr10"><input type="text" class="w5r"> 년</span>
+              <span class="pr10"><input type="text" class="w3r"> 월</span>
+              <span class="pr10"><input type="text" class="w3r"> 일</span>
+            </td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <table>
+          <tr>
+            <td class="w6r">이용자 :</td>
+            <td class="pl10">
+              <input type="text" class="w9r">
+              <a href="#;">( 인 또는 서명 )</a>
+            </td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <table>
+          <tr>
+            <td class="w6r">기관명 :</td>
+            <td class="pl10">
+              <input type="text" class="w100">
+            </td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <table>
+          <tr>
+            <td class="w6r">담당자 :</td>
+            <td class="pl10">
+              <input type="text" class="w9r">
+              <a href="#;">( 인 또는 서명 )</a>
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+</article><!--//formst-->
+
+
+
+</body>
+</html>
+

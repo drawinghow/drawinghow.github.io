@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--<link rel="icon" href="./img/ico_icon4.ico">-->
+
+  <title>통합돌봄서비스 플렛폼</title>
+
+  <!-- Bootstrap core CSS-->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--<link href="./css/dashboard.css" rel="stylesheet">-->
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <!--<script src="./js/ie-emulation-modes-warning.js"></script>-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <link href="./css/nav.css" rel="stylesheet" type="text/css">
+
+  <!--추가-->
+  <link rel="stylesheet" type="text/css" href="./css/form.css" />
+  <script type="text/javascript" src="./js/jquery-1.8.3.min.js" ></script>
+  <script type="text/javascript" src="./js/matchHeight-min.js"></script>
+  <script type="text/javascript" src="./js/form.js"></script>
+  <!--//추가-->
+
+</head>
+<body>
+
+
+<article id="formst">
+  <div class="pagetit"><b class="m_db">돌봄본부 서비스 제공(이용)</b> 계약서</div>
+
+  <table class="tbl_st1">
+    <tr>
+      <th colspan="2"><p class="th_tit1">① 서비스 계약자 및 제공자</p></th>
+    </tr>
+    <tr>
+      <td rowspan="3" class="bg1 bdr w6r"><p class="tcenter">서비스<br>이용자</p></td>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bg1 "><p>성명</p></li>
+          <li class="txt w30">
+            <p><input type="text"> (인)</p>
+          </li>
+          <li class="tit w20 bg1 bdbn"><p>성별</p></li>
+          <li class="txt w30 bdbn">
+            <p>
+              <label><input type="radio" name="gender"> 남</label>
+              <label><input type="radio" name="gender"> 여</label>
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bg1"><p>생년월일</p></li>
+          <li class="txt w30 ">
+            <p>
+              <span><input class="w4r" type="text"> 년</span>
+              <span><input class="w3r" type="text"> 월</span>
+              <span><input class="w3r" type="text"> 일</span>
+            </p>
+          </li>
+          <li class="tit w20 bg1  bdbn"><p>연락처</p></li>
+          <li class="txt w30  bdbn">
+            <p>
+              <input class="w4r" type="text"> -
+              <input class="w4r" type="text"> -
+              <input class="w4r" type="text">
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bg1 bdbn"><p>주소</p></li>
+          <li class="txt w80 pdtb1  bdbn">
+            <p><input type="text" class="w100"></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="bg1 bdr w6r"><p class="tcenter">대리인<br>또는<br>보호자</p></td>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bg1"><p>성명</p></li>
+          <li class="txt w30  pdtb1">
+            <p><input type="text"> (인)</p>
+          </li>
+          <li class="tit w20 bg1 bdbn"><p>당사자와의 관계</p></li>
+          <li class="txt w30 bdbn">
+            <p><input type="text"></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bg1"><p>생년월일</p></li>
+          <li class="txt w30  pdtb1">
+            <p>
+              <span><input class="w4r" type="text"> 년</span>
+              <span><input class="w3r" type="text"> 월</span>
+              <span><input class="w3r" type="text"> 일</span>
+            </p>
+          </li>
+          <li class="tit w20 bg1 bdbn"><p>연락처</p></li>
+          <li class="txt w30 bdbn">
+            <p>
+              <input class="w4r" type="text"> -
+              <input class="w4r" type="text"> -
+              <input class="w4r" type="text">
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bg1 bdbn"><p>주소</p></li>
+          <li class="txt w80 bdbn">
+            <p><input type="text" class="w100"></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="bg1 bdr w6r"><p class="tcenter">서비스<br>제공자</p></td>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bg1 bdbn"><p>기관명</p></li>
+          <li class="txt w80 bdbn">
+            <p><input type="text"></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bg1 pdtb1"><p>대표자 성명</p></li>
+          <li class="txt w30  pdtb1">
+            <p>
+              <span><input class="w4r" type="text"> 년</span>
+              <span><input class="w3r" type="text"> 월</span>
+              <span><input class="w3r" type="text"> 일</span>
+            </p>
+          </li>
+          <li class="tit w20 bg1 pdtb1 bdbn"><p>연락처</p></li>
+          <li class="txt w30 bdbn">
+            <p>
+              <input class="w4r" type="text"> -
+              <input class="w4r" type="text"> -
+              <input class="w4r" type="text">
+            </p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit w20 bg1 pdtb1 bdbn"><p>주소</p></li>
+          <li class="txt w80 pdtb1 bdbn">
+            <p><input type="text" class="w100"></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st1">
+    <tr>
+      <th><p class="th_tit1">② 서비스 제공 내용 요약</p></th>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit bg1 w20 bdbn"><p>서비스명</p></li>
+          <li class="txt w80 bdbn"><p><input class="w100" type="text"></p></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="tbl_col">
+          <li class="tit bg1 w20"><p>주요욕구</p></li>
+          <li class="txt w30"><p><input class="w100" type="text"></p></li>
+          <li class="tit bg1 w20 bdbn"><p>제공목표</p></li>
+          <li class="txt w30 bdbn"><p><input class="w100" type="text"></p></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tbl_st2">
+    <colgroup>
+      <col style="width: 20%;">
+      <col style="width: 18%;">
+      <col style="width: 20%;">
+      <col style="width: 10%;">
+      <col style="width: 10%;">
+      <col style="width: 10%;">
+      <col>
+    </colgroup>
+    <thead>
+    <tr>
+      <th rowspan="3">서비스 종류</th>
+      <th colspan="6">서비스 제공 방법</th>
+    </tr>
+    <tr>
+      <th rowspan="2">서비스 내용</th>
+      <th rowspan="2" >서비스 기간</th>
+      <th colspan="3">서비스 제공량</th>
+      <th rowspan="2">제공기관<br>(예정)</th>
+    </tr>
+    <tr>
+      <th>주기</th>
+      <th>빈도</th>
+      <th>월시간</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>ICT 방문건강관리<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>방문진료사업 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>만성질환관리 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>퇴원환자관리 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>방문간호 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>수시방문 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100" placeholder="방문 확인"></td>
+      <td><input type="text" class="w100" placeholder="‘21.01.01~ ’21.12.31"></td>
+      <td><input type="text" class="w100" placeholder="주"></td>
+      <td><input type="text" class="w100" placeholder="3회"></td>
+      <td><input type="text" class="w100" placeholder="2h"></td>
+      <td><input type="text" class="w100" placeholder="생활 지원사"></td>
+    </tr>
+    <tr>
+      <td>방문요양 <br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>요양신청<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>이동・동행 지원서비스<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>식사・영양 지원<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>주택개조<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>지원주택<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>노인맞춤돌봄<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>재가노인지원<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    <tr>
+      <td>기타<br><input type="checkbox"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+      <td><input type="text" class="w100"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <table class="tbl_st1">
+    <tr>
+      <td>
+        <ul class="tbl_col col6">
+          <li class="tit w20 bg1"><p>세부사항</p></li>
+          <li class="txt w80">
+            <p><textarea name="textarea" id="textarea" rows="3" class="w100"></textarea></p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <p class="mt30 c_blue f22">※ 서비스 제공과 관련된 보험 가입 등의 절차 별도 진행</p>
+  <p class="mt20 f19 indent">
+    ❍ 상기 당사자 (이하 ʻʻ서비스이용자ˮ, ʻʻ서비스제공자ˮ 라 한다) 또는 대리인은  ○○기관이 제공하는 돌봄본부의 서비스 이용에 대하여 위와 같은 조건으로 계약을 체결한다.
+  </p>
+  <p class="mt20 f19 indent">
+    ❍ “서비스이용자”, “서비스제공자”, 또는 대리인은 다음 계약 내용에 의거하여 돌봄본부의 서비스 제공(이용) 계약서를 작성하고 기명날인 후, 각각 1통씩 보관한다.
+  </p>
+
+  <div class="sign_area mt40">
+    <ul class="sign1">
+      <li>
+        <table>
+          <tr>
+            <td>계약일 :</td>
+            <td class="tright pl10"><input type="text" class="w5r"> 년</td>
+            <td class="tright pl10"><input type="text" class="w3r"> 월</td>
+            <td class="tright pl10"><input type="text" class="w3r"> 일</td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mt20">
+    <p class="tcenter f24 bold">- 다 &nbsp;&nbsp;&nbsp; 음 -</p>
+    <dl class="dl_lst">
+      <dt>제1조(목적)</dt>
+      <dd class="pl10">
+        살던 곳에서 계속 살기를 희망하지만 부족한 재가서비스, 열악한 주거 등으로 돌봄지원이 필요한 노인에게 욕구와 상황에 맞는 서비스를 제공하여 이용자의 건강증진 및 생활안정을 도모하고 그 가족의 부담을 덜어줌으로써 삶의 질을 향상시키고자 한다.
+      </dd>
+      <dt>제2조 (서비스 제공)</dt>
+      <dd class="pl10">
+        <ul class="lst_indent">
+          <li>① “서비스제공자”는 사회복지사업법 및 사회복지서비스 사업 시행지침에 따른 인력을 배치하고, “서비스이용자”의 일상생활에 필요한 돌봄서비스 (이하 “서비스”라 한다)를 제공한다.</li>
+          <li>② “서비스제공자”는 서비스의 지속성이 최대한 보장되도록 서비스 제공자(제공인력)를 배치한다.</li>
+          <li>③ “서비스제공자”는 돌봄본부가 작성한 ‘서비스 제공 의뢰서’를 참고하여 서비스를 제공하고 그 결과를 ‘서비스 결과 보고서’에 기록한다.</li>
+        </ul>
+      </dd>
+      <dt>제3조 (계약기간 및 계약의 만료 등)</dt>
+      <dd>
+        <ul class="lst_indent">
+          <li>① 이 계약의 효력기간은 상기의 기간 동안 발생하며, 당사자 간 협의에 따라 계약기간을 변경할 수 있다.</li>
+          <li>② 이 계약은 “서비스이용자”의 해약 통지나 사망으로 종료된다.</li>
+          <li>③ 이 계약은 다음 각 호에 해당하는 경우 해약할 수 있다.<br>
+              1. “서비스이용자”가 서비스를 이용할 수 없는 부득이한 사유가 발생하거나, 계약 해지를 통지한 때. <br>
+              2. “서비스제공자”가 서비스를 지속할 수 없는 부득이한 사유가 발생하여 “서비스이용자”에게 통지한 때.
+          </li>
+        </ul>
+      </dd>
+      <dt>제4조 (서비스 비용)</dt>
+      <dd>
+        <ul class="lst_indent">
+          <li>① 서비스 비용은 돌봄본부 및 지자체와 합의된 단가에 의한다.</li>
+          <li>② 서비스 비용 중 본인부담액은 서비스가 시작되기 전까지 “서비스이용자”가 “서비스제공자”에게 납부한다.</li>
+        </ul>
+      </dd>
+      <dt>제5조 (서비스 내용의 변경)</dt>
+      <dd>
+        <ul class="lst_indent">
+          <li>① 서비스 제공 과정에서 ʻʻ서비스제공자ˮ(종사원을 포함한다)의 부주의 또는 실수로 인하여 계약서에 기록된 사항을 충족시키지 못하거나 "서비스이용자"의 합리적인 요구사항을 충족시키지 못하는 경우 돌봄본부는 ʻʻ서비스이용자ˮ의 요구에 따라 ʻʻ서비스제공자ˮ 또는 서비스 내용을 변경할 수 있다.</li>
+          <li>② 다만, 계약서에 포함되지 않은 요구사항이나 서비스 관련 업무 범위에 해당되지 않는 불합리한 요구사항은 변경의 사유로 보지 아니한다.</li>
+          <li>③ 계약기간 및 서비스 비용 등 주요 내용이 변경되는 경우에는 ‘서비스 제공 계약서’를 다시 별도로 작성한다.</li>
+        </ul>
+      </dd>
+      <dt>제6조 (통지사항)</dt>
+      <dd>
+        <ul class="lst_indent">
+          <li>① "서비스제공자"는 "서비스이용자"에 대한 서비스 제공에 있어 응급상황 등 필요한 경우 대리인에게 연락을 취하여야 한다.</li>
+          <li>② "서비스제공자"는 "서비스이용자"의 상태변화 등 서비스의 변경사유가 발생 시에는 "서비스이용자"가 서비스 변경신청 등을 할 수 있도록 조치하여야 한다.</li>
+        </ul>
+      </dd>
+      <dt>제7조 (개인정보 보호의무)</dt>
+      <dd>
+        <ul class="lst_indent">
+          <li>① "서비스제공자"는 "서비스이용자"의 개인정보를 관계 규정에 따라 보호하여야 한다.</li>
+          <li>② "서비스제공자"는 돌봄본부 사업제공에 필요한 "서비스이용자"의 개인정보 자료를 수집하고 활용하며 동 자료를 지자체 등 사업운영 주체 등에게 관계규정에 따라 제출할 수 있다.</li>
+          <li>③ "서비스제공자"의 개인정보 수집 및 활용에 대한 "서비스이용자"의 승낙은 ʻʻ개인정보 수집 및 이용 동의서ˮ로 한다.</li>
+          <li>④ "서비스이용자"는 "서비스제공자"가 수집･관리하는 본인의 개인정보에 대해 알 권리가 있다.</li>
+        </ul>
+      </dd>
+      <dt>제8조 (사고예방 및 손해배상책임)</dt>
+      <dd>
+        서비스 실시 중에 "서비스제공자"(종사원을 포함한다)는 이용자 학대, 신체상해 및 성폭력, 도박행위 및 성매매 상황이 발생하지 않도록 해야 하며, "서비스제공자"(종사원을 포함한다)의 귀책사유로 인하여 발생한 "서비스이용자"의 손해에 대하여는 "서비스제공자"는 "서비스이용자"에게 배상한다. 다만, 천재지변, 제3자의 귀책사유로 인한 손해에 대해서는 배상책임을 지지 아니한다. "서비스이용자"가 "서비스제공자" 에게 손해를 끼친 경우에도 또한 같다.
+      </dd>
+      <dt>제9조 (분쟁해결방법)</dt>
+      <dd>
+        본 서비스 이용계약과 관련하여 발생한 분쟁에 대하여 "서비스이용자"와 "서비스제공자"가 합의에 따라 원만히 처리하며, 만약 당사자 간 합의에 도달하지 못한 경우에는 관련법규나 관례에 따른다.
+      </dd>
+    </dl>
+  </div>
+
+
+
+
+
+
+
+
+
+</article><!--//formst-->
+
+
+
+</body>
+</html>
+

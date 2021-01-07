@@ -9,17 +9,25 @@
 	#formst .pagetit {font-size: 2rem;padding-bottom: 1.6rem;}
 }
 
-#formst * {font-size: inherit;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;-ms-word-break: keep-all;word-break: keep-all;line-height: 1.5;}
+#formst * {font-size: inherit;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;-ms-word-break: keep-all;word-break: keep-all; line-height: 1.5;} /* word-break: keep-all - 띄어쓰기 기준으로 줄바꿈됩니다.*/
 #formst .d_b {display:block !important;}
 #formst .d_ib {display:inline-block !important;}
 #formst .d_n {display:none !important;}
 #formst .d_table {display: table;}
 #formst .d_tcell {display: table-cell;}
 #formst .view_m {display: none;}
+#formst .view_pc {display: block;}
 @media screen and (max-width: 760px) {
+	#formst * {letter-spacing: -.05rem;}
 	#formst .m_db {display:block !important;}
 	#formst .view_m {display: block;}
+	#formst .view_pc {display: none !important;}
 }
+
+
+#formst .indent {text-indent: -1.14rem;padding-left: 1.2rem;}
+#formst .ovx_scroll {overflow-x: auto;}
+#formst .ovy_scroll {overflow-y: auto;}
 
 #formst .clearfix {*zoom: 1;}
 #formst .clearfix:after {display:block;clear:both;content:'';}
@@ -40,6 +48,7 @@
 	#formst .tright_m {text-align: right !important;}
 }
 
+#formst .underline {text-decoration: underline;}
 #formst .bold {font-weight: bold !important;}
 #formst .normal {font-weight: normal !important;}
 #formst .va_t {vertical-align: top !important;}
@@ -78,13 +87,18 @@
 #formst .w30 {width: 30% !important;}
 #formst .w25 {width: 25% !important;}
 #formst .w20 {width: 20% !important;}
+#formst .w17 {width: 17% !important;}
 #formst .w15 {width: 15% !important;}
+#formst .w14 {width: 14% !important;}
 #formst .w10 {width: 10% !important;}
+#formst .w8 {width: 8% !important;}
+#formst .w5 {width: 5% !important;}
 
 
 
 
 /* A+A = 100% */
+#formst .w13 {width: 13.333333% !important;}
 #formst .w16 {width: 16.66% !important;}
 #formst .w84 {width: 83.34% !important;}
 #formst .w54 {width: 54.8% !important;}
@@ -128,6 +142,7 @@
 /*------------------------------------------------------------------------------
 | 여백  16px = 1rem 기준
 |.............................................................................*/
+#formst .mt-1  {margin-top:-.1rem !important;}    #formst .mt-2  {margin-top:-.2rem !important;}
 #formst .mt0  {margin-top: 0 !important;}         #formst .mb0  {margin-bottom: 0 !important;}
 #formst .mt05  {margin-top: 0.5rem !important;}    #formst .mb05  {margin-bottom: 0.5rem !important;}
 #formst .mt10 {margin-top: 0.625rem !important;}   #formst .mb10 {margin-bottom: 0.625rem !important;}
@@ -356,6 +371,7 @@
 #formst table .bdb {border-bottom:1px solid #c7c7c7 !important;}
 #formst table .th_tit1 {padding: .8rem .8rem !important;text-align: left;font-size: 1.2rem;color: #000;}
 
+
 #formst .col2>li {width: 50%;}
 #formst .col3>li {width: 33.3333%;}
 #formst .col4>li {width: 25%;}
@@ -367,6 +383,7 @@
 
 /* TABLE style */
 #formst .tbl_st2 {border:1px solid #c7c7c7;}
+#formst .tbl_st2.tleft td {text-align: left;}
 #formst .tbl_st2 th,
 #formst .tbl_st2 td {padding: .4rem .5rem;border-bottom:1px solid #c7c7c7;color:#333;border-right: 1px solid #c7c7c7;vertical-align: middle;font-size: 1.2rem;text-align: center;}
 #formst .tbl_st2 th {background:#f2f2f2;}
@@ -400,6 +417,7 @@
 	#formst .tbl_col {display: block;}
 	#formst .tbl_col>li {float: left;padding: .1rem .1rem;display: table;text-align: center;border-bottom: 1px solid #c7c7c7;}
 	#formst .tbl_col>li.tit {width: 30% !important;}
+	#formst .tbl_col>li.tit.m_w100 {width: 100% !important;border-right: none;}
 	#formst .tbl_col>li.txt {width: 70% !important;border-right: none;}
 	#formst .tbl_col>li>p {display: table-cell;vertical-align: middle;padding: .5rem .5rem;}
 	#formst .tbl_col .m_db+.m_db {margin-top: .5rem;}
@@ -441,4 +459,46 @@
 #formst .tbl_long dt, #formst .tbl_long dd {padding: .8rem;}
 #formst .tbl_long dt {padding-bottom: .2rem;font-weight: bold;}
 #formst .tbl_long dd {padding-top: 0;}
+
+
+
+
+/* info table */
+#formst .dl_tbl  {position: relative;display: table;border-bottom: 1px solid #c7c7c7;}
+#formst .dl_tbl>.dl_col {display: table-cell;vertical-align: top;height: 100%;}
+#formst .dl_tbl>.dl_col+.dl_col {border-left: 1px solid #c7c7c7;}
+#formst .dl_tbl>.dl_col>dt {padding: .3rem 0;text-align: center;background: #f2f2f2;border-top: 1px solid #c7c7c7;border-bottom: 1px solid #c7c7c7;font-weight: bold;font-size: 1.2rem;}
+#formst .dl_tbl>.dl_col>dd {padding: 1rem;font-size: 1.1rem;}
+#formst .dl_tbl>.dl_col>dd:first-child {border-right: none;}
+@media screen and (max-width: 760px) {
+	#formst .dl_tbl {display: block;}
+	#formst .dl_tbl>.dl_col {display: block;width: 100% !important;border-left: none !important;}
+}
+
+
+
+
+/* list */
+#formst .lst_indent {}
+#formst .lst_indent>li {text-indent: -1rem;padding-left: 1rem;font-size: 1.1rem;}
+#formst .lst_indent>li+li {margin-top: .5rem;}
+
+#formst .dl_lst {}
+#formst .dl_lst dt {font-size: 1.3rem;}
+#formst .dl_lst dd+dt {margin-top: 1.5rem;}
+#formst .dl_lst dd {margin-top: .5rem;font-size: 1.2rem;padding-left: 1rem;}
+#formst .dl_lst dd .lst_indent li {margin-top: .2rem;}
+
+
+	/* 서명 */
+#formst .sign_area {position: relative;padding-bottom: 20px;}
+#formst .sign_area:after {clear: both;content: '';display: block;}
+#formst .sign_area>.sign1 {float: right;}
+#formst .sign_area>.sign1 li {font-size: 1.4rem;}
+#formst .sign_area>.sign1 li:after {clear: both;content: '';display: block;}
+#formst .sign_area>.sign1 li+li {margin-top: .5rem;}
+
+
+
+#formst .agreechk {font-size: 1.3rem; font-weight: bold;}
 
