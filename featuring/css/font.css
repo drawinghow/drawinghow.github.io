@@ -1,0 +1,42 @@
+/*--- 폰트 설정 ----*/
+/*Technasans*/
+@font-face {
+    font-family: TS;
+    src: url(../fonts/TechnaSans.otf) format("opentype"), url(../fonts/TechnaSans.woff) format("woff"), url(../fonts/TechnaSans.ttf) format("ttf");
+}
+
+/*본고딕 Black*/
+@font-face {
+    font-family: NTBL;
+    src: url(../fonts/NotoSansCJKkr-Black.otf) format("opentype"), url(../fonts/NotoSansCJKkr-Black.woff) format("woff"), url(../fonts/NotoSansCJKkr-Black.otf) format("ttf");
+}
+
+/*본고딕 Bold*/
+@font-face {
+    font-family: NTB;
+    src: url(../fonts/NotoSansCJKkr-Bold.otf) format("opentype"), url(../fonts/NotoSansCJKkr-Bold.woff) format("woff"), url(../fonts/NotoSansCJKkr-Bold.otf) format("ttf");
+}
+
+/*본고딕 Medium*/
+@font-face {
+    font-family: NTM;
+    src: url(../fonts/NotoSansCJKkr-Medium.otf) format("opentype"), url(../fonts/NotoSansCJKkr-Medium.woff) format("woff"), url(../fonts/NotoSansCJKkr-Medium.otf) format("ttf");
+}
+
+/*본고딕 Regular*/
+@font-face {
+    font-family: NTR;
+    src: url(../fonts/NotoSansCJKkr-Regular.otf) format("opentype"), url(../fonts/NotoSansCJKkr-Regular.woff) format("woff"), url(../fonts/NotoSansCJKkr-Regular.otf) format("ttf");
+}
+
+/*본고딕 DemiLight*/
+@font-face {
+    font-family: NTDL;
+    src: url(../fonts/NotoSansCJKkr-DemiLight.otf) format("opentype"), url(../fonts/NotoSansCJKkr-DemiLight.woff) format("woff"), url(../fonts/NotoSansCJKkr-DemiLight.otf) format("ttf");
+}
+
+/*본고딕 Light*/
+@font-face {
+    font-family: NTL;
+    src: url(../fonts/NotoSansCJKkr-Light.otf) format("opentype"), url(../fonts/NotoSansCJKkr-Light.woff) format("woff"), url(../fonts/NotoSansCJKkr-Light.otf) format("ttf");
+}

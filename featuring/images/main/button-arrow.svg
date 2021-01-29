@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.428" height="16.334" viewBox="0 0 16.428 16.334">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #6e0fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="바로가기_화살표_copy_2" data-name="바로가기 화살표 copy 2" transform="translate(0 0.667)">
+    <g id="_arrow" data-name="* arrow">
+      <path id="Line" class="cls-1" d="M15,.5H0" transform="translate(0 7)"/>
+      <path id="Path_3" data-name="Path 3" class="cls-1" d="M0,0,6.714,7.5,0,15" transform="translate(8.371)"/>
+    </g>
+  </g>
+</svg>

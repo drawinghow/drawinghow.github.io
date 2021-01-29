@@ -1,0 +1,165 @@
+/*------ 기존 reset css -----*/
+body {
+    line-height: 1;
+}
+
+p {
+    text-decoration: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+input,
+select {
+    outline: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/*----- ul, li, dl 관련 초기화 -----*/
+ul,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+ul::after,
+ol::after,
+.clb::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+li,
+dl {
+    float: left;
+}
+
+
+
+/*----- 이미지 및 텍스트 관련 초기화 -----*/
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+/*----- 기본 태그 초기화 -----*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+    margin: 0;
+    padding: 0;
+/*    vertical-align: baseline;*/
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
