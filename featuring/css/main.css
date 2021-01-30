@@ -30,7 +30,7 @@
 #home_search {overflow: hidden;position: relative;background: #f6f2fd;padding: 9.375rem 0 8.75rem;text-align: center;}
 #home_search>.center-align {}
 #home_search .sub-text2 {margin-top: 1.75rem;}
-#home_search .search-bar {position: relative;width: 82%;margin: 3.125rem auto 0;}
+#home_search .search-bar {position: relative;z-index: 10;width: 82%;margin: 3.125rem auto 0;}
 #home_search .search-bar:after {clear: both;content: '';display: block;}
 #home_search .search-bar .sns-select,
 #home_search .search-bar .btn-search,
