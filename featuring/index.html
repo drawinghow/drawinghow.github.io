@@ -12,83 +12,127 @@
 
 	<style>
 		.coding_guide {padding: 100px 0;}
-		.coding_guide table {max-width: 800px;margin: 0 auto;}
+		.coding_guide table {width: 900px;margin: 0 auto;}
 		.coding_guide table thead th {background: #333;color: #fff;font-weight: normal;}
 		.coding_guide table th,
-		.coding_guide table td {padding: 6px 10px;font-size: 13px;text-align: center;vertical-align: middle;}
+		.coding_guide table td {padding: 8px 10px;font-size: 13px;text-align: center;vertical-align: middle;}
 		.coding_guide table th {color: #000;}
-		.coding_guide table td {border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;color: #555;}
+		.coding_guide table td {border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;color: #555;line-height: 1.5;}
 		.coding_guide table td.tal {text-align: left !important;}
-		.coding_guide table a:hover {color: #000;}
 		.coding_guide table .bg1 {background: #eee;}
 		.coding_guide table .bold {font-weight: bold;color: #111;}
+		.coding_guide table .link {color: #6e0fff;font-weight: bold;}
+		.coding_guide table a:hover {text-decoration: underline;}
 	</style>
 
 	<div class="coding_guide">
 		<table>
 			<colgroup>
+				<col style="width: 10%;">
+				<col style="width: 18%;">
 				<col style="width: 20%;">
-				<col style="width: 22%;">
 				<col style="width: 12%;">
-				<col style="width: 8%;">
+				<col style="width: 12%;">
 				<col style="width: *;">
 			</colgroup>
 			<thead>
 			<tr>
-				<th>메뉴</th>
+				<th>1depth</th>
+				<th>2depth</th>
 				<th>링크</th>
-				<th>진행상태</th>
-				<th>검수</th>
+				<th>진행</th>
+				<th>검수/수정</th>
 				<th>비고</th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
-				<td class="bg1 bold">MAIN</td>
-				<td class="tal"><a href="main.html">main.html</a></td>
-				<td></td>
-				<td></td>
-				<td class="tal"></td>
-			</tr>
-			<tr>
-				<td class="bg1 bold">LAYOUT</td>
-				<td class="tal"><a href="sub_layout.html">sub_layout.html</a></td>
-				<td></td>
-				<td></td>
-				<td class="tal">Header / Footer / GNB</td>
-			</tr>
-			<tr>
-				<td class="bg1 bold">서비스</td>
-				<td class="tal"><a href=""><!--service.html--></a></td>
-				<td></td>
+				<td colspan="2" class="bg1 bold">MAIN</td>
+				<td class="tal link"><a href="main.html">main.html</a></td>
+				<td class="state">1/30 완료</td>
 				<td></td>
 				<td class="tal"></td>
 			</tr>
 			<tr>
-				<td class="bg1 bold">솔루션</td>
-				<td class="tal"><a href=""></a></td>
+				<td colspan="2" class="bg1 bold">LAYOUT</td>
+				<td class="tal link"><a href="sub_layout.html">sub_layout.html</a></td>
+				<td class="state">1/30 완료</td>
 				<td></td>
+				<td class="tal">모바일 Header Footer<br>- 디자인 완료시 수정 필요</td>
+			</tr>
+
+			<tr>
+				<td rowspan="3" class="bg1 bold">서비스</td>
+				<td class="bg1 bold">인스타그램 리포트</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
 				<td></td>
 				<td class="tal"></td>
 			</tr>
 			<tr>
-				<td class="bg1 bold">랭킹</td>
-				<td class="tal"><a href=""></a></td>
-				<td></td>
-				<td></td>
-				<td class="tal"></td>
-			</tr>
-			<tr>
-				<td class="bg1 bold">멤버십</td>
-				<td class="tal"><a href=""></a></td>
-				<td></td>
+				<td class="bg1 bold">유투브 리포트</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
 				<td></td>
 				<td class="tal"></td>
 			</tr>
 			<tr>
-				<td class="bg1 bold">블로그</td>
-				<td class="tal"><a href=""></a></td>
+				<td class="bg1 bold">피처링 공구</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
 				<td></td>
+				<td class="tal"></td>
+			</tr>
+
+			<tr>
+				<td rowspan="5" class="bg1 bold">솔루션</td>
+				<td class="bg1 bold">진짜/가짜 판별</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
+				<td></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bg1 bold">영향력 지수</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
+				<td></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bg1 bold">해시태그 검색</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
+				<td></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bg1 bold">인플루언서 추천</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
+				<td></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bg1 bold">광고 영상 분석</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
+				<td></td>
+				<td class="tal"></td>
+			</tr>
+
+			<tr>
+				<td rowspan="2" class="bg1 bold">랭킹</td>
+				<td class="bg1 bold">인스타그램 랭킹</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
+				<td></td>
+				<td class="tal"></td>
+			</tr>
+			<tr>
+				<td class="bg1 bold">유튜브 랭킹</td>
+				<td class="tal link"><a href=""></a></td>
+				<td class="state"></td>
 				<td></td>
 				<td class="tal"></td>
 			</tr>

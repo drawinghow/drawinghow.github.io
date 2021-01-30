@@ -42,35 +42,47 @@ $(document).ready(function () {
     });
 
 
+
+
+    //CSS-Animation
+    try {
+        var myAOS = function() {
+            AOS.init({
+                easing: 'ease-out-back', //'ease-in'
+                duration: 1300
+            });
+        };
+        myAOS();
+
+    } catch (exception) {
+        //에러시 수행
+        console.log(  'AOS 사용 안함'  );
+    }
+
+
+
+    //Count-Up 숫자 카운팅
+    try {
+        counter = $('.js-counter').counterUp({
+            delay: 10,
+            time: 2000
+        });
+    } catch (exception) {
+        //에러시 수행
+        console.log(  'count 사용 안함 / js-counter 클래스 없음'  );
+    }
+
+
+
+
+
 }); //jQuery
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
+/* 참고
 var mql = window.matchMedia('screen and (max-width: 1024px)');
 mql.addListener(function(e) {
     if (e.matches) {
@@ -85,13 +97,8 @@ mql.addListener(function(e) {
     }
 });
 
-*/
 
 
-
-
-
-/*
 //Focus 함수
 function fnSetFocus(type, type_nm, add_top) {
     if (type.toUpperCase() != 'ID') {
@@ -112,19 +119,8 @@ function fnSetFocus(type, type_nm, add_top) {
 
 
 
-//탭 트리거
-function tabOn(idx) {     //idx = 탭번호(0~)
-    index = idx;
-    $('.js_tab_con').eq(index).addClass('on').siblings().removeClass('on');
-    $('.js_tab_bt li').eq(index).addClass('on').siblings().removeClass('on');
-}
-
-
-
 
 $(document).ready(function () {
-
-
 
     //Mobile GNB
     $('#header_m .toggle a').click(function (e) {
@@ -142,7 +138,6 @@ $(document).ready(function () {
         }
     });
 
-    //2020.11.05 수정
     $('#header_m .gnb_area .gnb>li>a').click(function (e) {
         if($(this).next().hasClass('dep2')){
             e.preventDefault();
@@ -153,8 +148,6 @@ $(document).ready(function () {
             }
         }
     });
-
-
 
 
 
@@ -193,9 +186,5 @@ $(document).ready(function () {
     });
 
 
-
-
 }); //$(document).ready
-
-
 */
