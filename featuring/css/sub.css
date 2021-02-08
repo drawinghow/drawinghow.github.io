@@ -305,12 +305,23 @@
 
 #influencer_recommend_section2 {padding-top: 6.25rem;}
 
-#influencer_recommend_section3 {padding: 8.125rem	0 11rem;}
-#influencer_recommend_section3 .text-area {max-width: 60%;}
-#influencer_recommend_section3 .title-type2 {margin-bottom: 1.4rem;}
-#influencer_recommend_section3 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
-#influencer_recommend_section3 .img-area {position: absolute;left: 58.25%;top: -2.5rem;width: 31.25rem;/*500*/}
-#influencer_recommend_section3 .img-area img {max-width: 100%;}
+#influencer_recommend_section3 {padding-top: 6.5rem;}
+#influencer_recommend_section3 .clearfix {position: relative;}
+#influencer_recommend_section3 .img-area,
+#influencer_recommend_section3 .text-area {height: 25rem;}
+#influencer_recommend_section3 .img-area {position: absolute;left: 0;top: 0;width: 56%;}
+#influencer_recommend_section3 .img-area img {width: 100%;position: absolute;}
+#influencer_recommend_section3 .text-area {position: relative;float: right;width: 48%;display: table;}
+#influencer_recommend_section3 .text-area>p {display: table-cell;width: 100%;height: 100%;background: url(../images/solution/influencer-recommend-section3-2.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;text-align: center;}
+#influencer_recommend_section3 .text-area>p>span {font-family:  NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;font-size: 2.25rem;line-height: 1.4;}
+#influencer_recommend_section3 .btn-area {text-align: center;margin-top: 4rem;}
+
+#influencer_recommend_section4 {padding: 8.125rem	0 11rem;}
+#influencer_recommend_section4 .text-area {max-width: 60%;}
+#influencer_recommend_section4 .title-type2 {margin-bottom: 1.4rem;}
+#influencer_recommend_section4 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
+#influencer_recommend_section4 .img-area {position: absolute;left: 58.25%;top: -2.5rem;width: 31.25rem;/*500*/}
+#influencer_recommend_section4 .img-area img {max-width: 100%;}
 
 
 
@@ -478,10 +489,15 @@
   #influencer_recommend_section1 .title-type1 {font-size: 2.6rem;}
   #influencer_recommend_section1 .sub-text1 {margin: 1.8rem 0 2.5rem;}
   #influencer_recommend_section2 {padding-top: 5rem;}
-  #influencer_recommend_section3 {padding: 6rem 0 6rem;}
-  #influencer_recommend_section3 .text-area {max-width: none;}
-  #influencer_recommend_section3 .sub-text2 {margin-bottom: 3rem;}
-  #influencer_recommend_section3 .img-area {position: relative;top: auto;left: auto;width: 100%;}
+  #influencer_recommend_section3 .img-area, #influencer_recommend_section3 .text-area {height: 20rem;}
+  #influencer_recommend_section3 .img-area {width: 60%;}
+  #influencer_recommend_section3 .img-area img {width: 100%;}
+  #influencer_recommend_section3 .text-area {width: 40%;}
+  #influencer_recommend_section3 .text-area>p>span {padding: 1rem;font-size: 1.5rem;}
+  #influencer_recommend_section4 {padding: 7rem 0 6rem;}
+  #influencer_recommend_section4 .text-area {max-width: none;}
+  #influencer_recommend_section4 .sub-text2 {margin-bottom: 3rem;}
+  #influencer_recommend_section4 .img-area {position: relative;top: auto;left: auto;width: 100%;}
 
 
 
@@ -535,6 +551,10 @@
 
 
   /* 481 솔루션 - 인플루언서 추천 ********************/
+  #influencer_recommend_section3 .img-area, #influencer_recommend_section3 .text-area {height: auto;}
+  #influencer_recommend_section3 .img-area {position: relative;width: 100%;}
+  #influencer_recommend_section3 .text-area {width: 65%;}
+  #influencer_recommend_section3 .text-area>p>span {display: block;padding: 4rem;font-size: 1.25rem;}
 
 
 

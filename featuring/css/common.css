@@ -297,8 +297,12 @@ html.rem-transform {font-size: 14px;}
 .btn-type2-1:before {opacity: 0;content: '';position: absolute;left: 0;top: 0;width: 100%;height: 100%;-webkit-transition: all .3s;-moz-transition: all .3s;-ms-transition: all .3s;-o-transition: all .3s;transition: all .3s;/*background: -moz-linear-gradient(-45deg,  #6e0fff 0%, #2b7592 100%);background: -webkit-linear-gradient(-45deg,  #6e0fff 0%,#2b7592 100%);background: linear-gradient(135deg,  #6e0fff 0%,#2b7592 100%);*/}
 .btn-type2-1:hover:before { opacity: 1;}
 
-/* btn-type2-1 : bg white */
+/* btn-type2-2 : bg white */
 .btn-type2-2 {background: #fff;color: #6e0fff;border-color: #fff;}
+
+/* btn-type2-3 : bg bk */
+.btn-type2-3 {background: #000;color: #fff;border-color: #000;}
+.btn-type2-3:hover {color: #000;background: #fff;}
 
 
 
