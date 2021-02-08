@@ -2,6 +2,386 @@
 
 /* SUB PAGE CSS */
 
+/*------------------------------------------------------------------------------
+| 서비스 - 인스타그램 리포트
+|.............................................................................*/
+/* 인스타그램 리포트 - 공통 */
+.instagram_report {position: relative;padding-bottom:  5.625rem;/*90*/}
+.instagram_report .title-description {margin-bottom: 1.25rem;/*20*/}
+.instagram_report .title-type1 {margin-bottom: 2rem;font-size: 3.75rem;}
+.instagram_report .title-type2 {margin-bottom: 1.25rem;/*20*/}
+
+.instagram_report .sub-text1 {line-height: 1.5;margin-bottom: 5.625rem;}
+.instagram_report .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;/*50*/font-size: 1.375rem;/*22*/}
+
+.instagram_report .text-area {}
+.instagram_report .img-area {position: absolute;}
+.instagram_report .img-area img {max-width: 100%;}
+
+.instagram_report .btn-area {}
+.instagram_report .btn-area button+button {margin-left: 1.125rem;/*18*/}
+
+
+/* 인스타그램 리포트 - 개별섹션 */
+#instagram_report_section1 {padding-top: 7.5rem;/*120*/}
+#instagram_report_section1 .img-area {left: 59.5%;top: 4.063rem;/*65*/width: 33.88rem;/*542*/}
+
+#instagram_report_section2 {text-align: center;}/*gif 영역*/
+#instagram_report_section2>.center-align {max-width: none;}
+#instagram_report_section2 img {max-width: 100%;}
+
+#instagram_report_section3 {padding: 7.5rem 0 5.625rem;/*120 0 90*/}
+#instagram_report_section3 .sub-text2 {width: 50%;}
+#instagram_report_section3 .text-area {}
+#instagram_report_section3 .img-area {left: 58.25%;top: 0;width: 31.25rem;/*500*/}
+
+#instagram_report_section4 {}
+#instagram_report_section4 .sub-text2 {}
+#instagram_report_section4 .text-area {margin-left: 51.3%;}
+#instagram_report_section4 .img-area {left: 0;top: 0;width: 31.25rem;/*500*/}
+
+#instagram_report_section5 {padding-bottom: 7.5rem;/*120*/}
+#instagram_report_section5 .sub-text2 {width: 50%;}
+#instagram_report_section5 .text-area {}
+#instagram_report_section5 .img-area {left: 58.25%;top: 0;width: 31.25rem;/*500*/}
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 서비스 - 유투브 리포트
+|.............................................................................*/
+/* 유투브 리포트 - 공통 */
+
+
+
+/* 유투브 리포트 - 개별섹션 */
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 서비스 - 피처링 공구
+|.............................................................................*/
+/* 피처링 공구 - 공통 */
+.group-purchase {position: relative;}
+.group-purchase .title-description {margin-bottom: 1.25rem;/*20*/}
+.group-purchase .title-type1 {margin-bottom: 1rem;font-size: 3.75rem;}
+.group-purchase .title-type2 {margin-bottom: 1.25rem;/*20*/}
+
+.group-purchase .sub-text1 {line-height: 1.5;margin-bottom: 5.625rem;}
+.group-purchase .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;/*50*/}
+
+.group-purchase .text-area {}
+.group-purchase .img-area {position: absolute;}
+.group-purchase .img-area img {max-width: 100%;}
+
+.group-purchase .btn-area {}
+.group-purchase .btn-area button+button {margin-left: 1.125rem;/*18*/}
+
+
+/* 피처링 공구 - 개별섹션 */
+#group_purchase_section1 {padding : 7.5rem 0 8rem;/*120*/}
+#group_purchase_section1 .img-area {left: 50%;top: 2.813rem;/*45*/width: 46.5rem;/*744*/}
+
+#group_purchase_section2 {text-align: center;}/*gif 영역*/
+#group_purchase_section2>.center-align {max-width: none;}
+#group_purchase_section2 img {max-width: 100%;}
+
+#group_purchase_section3 {padding: 7.5rem 0 9rem;}
+#group_purchase_section3 .sub-text2 {width: 50%;}
+#group_purchase_section3 .text-area {}
+#group_purchase_section3 .img-area {left: 60%;top: -5.313rem;/*85*/width: 30rem;/*480*/}
+
+#group_purchase_section4 {padding-bottom: 8.125rem;/*130*/}
+#group_purchase_section4 .sub-text2 {}
+#group_purchase_section4 .text-area {margin-left: 51.3%;}
+#group_purchase_section4 .img-area {left: 0;top: -4.375rem;/*70*/width: 31.25rem;/*500*/}
+
+#group_purchase_section5 {padding-bottom: 11.25rem;/*180*/}
+#group_purchase_section5 .sub-text2 {width: 50%;}
+#group_purchase_section5 .text-area {}
+#group_purchase_section5 .img-area {left: 60%;top: -2.5rem;/*40*/width: 30.13rem;/*482*/}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 솔루션 공통
+|.............................................................................*/
+/* 검색바 **************************/
+.search-bar-ui {position: relative;z-index: 10;width: 63%;margin: 0 auto;}
+.search-bar-ui:after {clear: both;content: '';display: block;}
+.search-bar-ui .sns-select,
+.search-bar-ui .btn-search,
+.search-bar-ui .autocomplete-box {height: 6.25rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+.search-bar-ui .sns-select {float: left;width: 15%;position: relative;border: 3px solid #000;border-right: none;background: #fff;-webkit-border-radius: 1.875rem 0 0 1.875rem;-moz-border-radius: 1.875rem 0 0 1.875rem;border-radius: 1.875rem 0 0 1.875rem;}
+.search-bar-ui .sns-select .sns-current {display: table;width: 100%;height: 100%;text-align: center;}
+.search-bar-ui .sns-select .sns-icon {display: table-cell;vertical-align: middle;vertical-align: middle;}
+.search-bar-ui .sns-select .sns-icon img {vertical-align: top;}
+.search-bar-ui .sns-select .sns-icon+span {display: inline-block;vertical-align: middle;margin-top: -.5rem;}
+
+.search-bar-ui .autocomplete-box {float: left;width: 85%;background: #fff;border-top: 3px solid #000;border-bottom: 3px solid #000;-webkit-border-radius: 0 1.875rem 1.875rem 0;-moz-border-radius: 0 1.875rem 1.875rem 0;border-radius: 0 1.875rem 1.875rem 0;text-align: left;}
+.search-bar-ui .autocomplete-box .input-text {position: relative;width: 100%;height: 100%;vertical-align: middle;border: none;font-size: 1.625rem;color: #868686;background: transparent;box-sizing: border-box;padding-right: 10rem;}
+
+.search-bar-ui .btn-search {position: absolute;right: 0;top: 0;-webkit-border-radius: 0 1.875rem 1.875rem 0;-moz-border-radius: 0 1.875rem 1.875rem 0;border-radius: 0 1.875rem 1.875rem 0;width: 7.5rem/*120*/;background: #6e0fff url(../images/common/search-btn.png) center center no-repeat;-webkit-background-size: 37%;background-size: 37%;text-align: center;overflow: hidden;}
+.search-bar-ui .btn-search span {position: relative;display: block;height: 100%;}
+.search-bar-ui .btn-search .progress {display: none;position: relative;width: 70%;margin: 0 auto;height: 100%;/*position: absolute;left: 50%;top: 50%;width: 80%;height: 80%;margin: -40% 0 0 -40%;text-align: center;*/}
+.search-bar-ui .btn-search .progress img {position: absolute;margin: auto; width: 100%;min-width: 100%;left: -100%;right: -100%;top: -100%;bottom: -100%;vertical-align: middle;}
+
+
+
+/* 인플루언서 추천 box  **************************/
+.recommend-box {position: relative;padding: .5rem;background: #fff;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;box-sizing: border-box;-webkit-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);}
+.recommend-box .title {display: table;width: 100%;}
+.recommend-box .title .text-area, .recommend-box .title .btn-area {display: table-cell;vertical-align: middle;}
+.recommend-box .title .text-area {}
+.recommend-box .title .text-area:after {clear: both;content: '';display: block;}
+.recommend-box .title .text-area .circle {float: left;display: table;width: 5.188rem;height: 5.188rem;background: #000;-webkit-border-radius: 6.25rem;-moz-border-radius: 6.25rem;border-radius: 6.25rem;color: #fff;}
+.recommend-box .title .text-area .circle b {display: table-cell;vertical-align: middle;text-align: center;font-size: 0.9375rem;font-family: HelveticaNeue, sans-serif;font-weight: 700;}
+.recommend-box .title .text-area .txt {margin-left: 1rem;line-height: 5.188rem;font-size: 1.875rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
+.recommend-box .title .btn-area {width: 8rem;}
+.recommend-box .title .btn-area .btn-filter {font-size: 1.375rem;font-weight: bold;background: transparent;}
+.recommend-box .title .btn-area .btn-filter i {display: inline-block;width: 1.3rem;height: 1.3rem;margin: -.4rem 0 0 .3rem;background: url(../images/common/icon_plus.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;}
+
+.account-list {}
+.account-list:after {clear: both;content: '';display: block;}
+.account-list>li {float: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.account-list.li-2>li {float: left;width: 50%;}
+.account-list.li-3>li {float: left;width: 33.333333%;}
+.account-list .person-ui {padding: 2rem 3.5rem 4rem;text-align: center;}
+.account-list .person-ui .inner {overflow: hidden;max-width: 100%;}
+.account-list .person-ui .inner:after {content: '';clear: both;display: block;}
+.account-list .photo-area,
+.account-list .info-area {float: left;}
+
+.account-list .photo-area {width: 30%;max-width: 10.31rem;/*width: 9.563rem;height: 9.563rem;*/background: #fff;position: relative;}
+.account-list .photo-area .photo {overflow: hidden;width: 100%;height: 100%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
+.account-list .photo-area .photo img {width: 100%;}
+.account-list .photo-area .sns-icon {position: absolute;z-index: 5;right: 0;bottom: 0;display: block;width: 2.875rem;height: 2.875rem;font-size: 0;}
+.account-list .photo-area .sns-icon.instagram {background: url(../images/solution/circle-instagram.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
+.account-list .photo-area .sns-icon.youtube {background: url(../images/solution/circle-youtube.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
+
+.account-list .info-area {width: 70%;padding: 1rem 0 0 2rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;text-align: left;}
+.account-list .info-area .account-name {display: block;overflow: hidden;height: 2.25rem;font-size: 2rem;font-weight: 700;font-family: HelveticaNeue, NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap;}
+.account-list .info-area .account-sort {margin-top: .8rem;}
+.account-list .info-area .account-sort span {display: inline-block;margin-bottom: .2rem;padding: .5rem 1.5rem;font-size: 1.1rem;color: #6e0fff;border: 2px solid #6e0fff;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;}
+.account-list .info-area .account-sort span.off {background: #d8d8d8;border-color: #d8d8d8;color: #fff;}
+.account-list .info-area .account-sort span+span {margin-left: .1rem;}
+.account-list .info-area .account-num {margin-top: 1.2rem;}
+.account-list .info-area .account-num span {display: inline-block;font-size: 1.375rem;}
+.account-list .info-area .account-num span+span {margin-left: 2rem;}
+.account-list .account-info {margin-top: 3rem;font-size: 1.8rem;letter-spacing: -.05rem;}
+
+
+
+/* 필터 **************************/
+.filter-area {}
+.filter-area .display-t {width: 100%;}
+.filter-area .display-t .display-tc {}
+.filter-area .filter {}
+.filter-area .filter .filter-title {margin-bottom: 1rem;font-size: 1.375rem;color: #1b1b1b;}
+.filter-area .filter .select-area {position: relative;}
+.filter-area .filter .select-area .current {position: relative;width: 100%;height: 3.4rem;padding: 0 1rem;border: 2px solid #dedede;-webkit-border-radius: 0.625rem;-moz-border-radius: 0.625rem;border-radius: 0.625rem;background: #fff;color: #333;text-align: left;}
+.filter-area .filter .select-area .current span,
+.filter-area .filter .select-area ul li button {font-family: NTR,'Apple SD Gothic Neo','Malgun gothic', sans-serif;font-size: 1.2rem;}
+.filter-area .filter .select-area .current .arrow {display: inline-block;position: absolute;top: 50%;right: 1rem;width: 1.4rem;height: 1.2rem;margin-top: -.6rem;background: url(../images/common/select-arrow.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
+.filter-area .filter .select-area ul {display: none;position: absolute;z-index: 10;min-width: 100%;padding: .6rem 0 1rem;background: #fff;-webkit-border-radius: 0.625rem;-moz-border-radius: 0.625rem;border-radius: 0.625rem;-webkit-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.15);-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.15);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.15);}
+.filter-area .filter .select-area ul li {float: none;}
+.filter-area .filter .select-area ul li button {display: block;width: 100%;padding: .5rem 1.5rem;background: transparent;color: #868686;text-align: left;}
+.filter-area .filter .select-area ul li button:hover {color: #6e0fff;}
+.filter-area .filter .select-area label {display: inline-block;margin-top: .8rem;}
+.filter-area .filter .select-area label+label {margin-left: .5rem;}
+.filter-area .filter .select-area label * {vertical-align: middle;}
+.filter-area .filter .select-area label input[type="radio"] {width: 1.563rem;height: 1.563rem;}
+.filter-area .filter .select-area label span {margin-left: .1rem;font-size: 1.375rem;color: #1b1b1b;}
+.filter-area .text-desc {margin-top: 3.125rem;font-size: 1.375rem;text-align: center;color: #1b1b1b;line-height: 1.4;}
+.filter-area .filter-btn {margin-top: 2.5rem;text-align: center;}
+.filter-area .filter-btn button {margin: 0 .4rem;}
+
+/* 솔루션 공통 - 필터 layer */
+.filter-area.layer {display: none;position: absolute;z-index: 50;left: 5%;top: 5.5rem;width: 90%;padding: 3rem;background: #fff;-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);-webkit-border-radius: 0.9375rem;-moz-border-radius: 0.9375rem;border-radius: 0.9375rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.filter-area.layer .filter-btn .btn-reset {width: 5rem;height: 5rem;}
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 솔루션 - 진짜/가짜 판별
+|.............................................................................*/
+/* 진짜/가짜 판별 - 공통 */
+
+
+
+/* 진짜/가짜 판별 - 개별섹션 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 솔루션 - 영향력 지수
+|.............................................................................*/
+/* 영향력 지수 - 공통 */
+
+
+
+/* 영향력 지수 - 개별섹션 */
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 솔루션 - 해시태그 검색
+|.............................................................................*/
+/* 해시태그 검색 - 공통 */
+
+
+
+/* 해시태그 검색 - 개별섹션 */
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 솔루션 - 인플루언서 추천
+|.............................................................................*/
+/* 인플루언서 추천 - 공통 */
+.influencer-recommend {background: rgb(247,244,252);background: linear-gradient(180deg, rgba(247,244,252,1) 0%, rgba(255,255,255,1) 100%);}
+.influencer-recommend-bg {position: relative;width: 100%;}
+.influencer-recommend-bg li {position: absolute;z-index: 1;display: block;list-style: none;float: none;}
+.influencer-recommend-bg li img {max-width: 100%;}
+.influencer-recommend-bg li:nth-child(1) {width: 1.875rem;left: 12%;top: 11.88rem;}
+.influencer-recommend-bg li:nth-child(2) {width: 1.875rem;left: 14%;top: 23.13rem;}
+.influencer-recommend-bg li:nth-child(3) {width: 6.25rem;left: 26%;top: 5.625rem;}
+.influencer-recommend-bg li:nth-child(4) {width: 0.9375rem;left: 26%;top: 36.56rem;}
+.influencer-recommend-bg li:nth-child(5) {width: 1.875rem;left: 68%;top: 4.75rem;}
+.influencer-recommend-bg li:nth-child(6) {width: 2.5rem;left: 80%;top: 14.8rem;}
+.influencer-recommend-bg li:nth-child(7) {width: 6.438rem;left: 78.4%;top: 16rem;}
+.influencer-recommend-bg li:nth-child(8) {width: 2.5rem;left: 85.5%;top: 33.44rem;}
+
+
+/* 인플루언서 추천 - 개별섹션 */
+#influencer_recommend_section1 {text-align: center;padding-top: 8.75rem;position: relative;z-index: 2;}
+#influencer_recommend_section1 .title-type1 {margin-top: 1rem;}
+#influencer_recommend_section1 .sub-text1 {margin: 2.3rem 0 3.125rem;color: #484749;}
+
+#influencer_recommend_section2 {padding-top: 6.25rem;}
+
+#influencer_recommend_section3 {padding: 8.125rem	0 11rem;}
+#influencer_recommend_section3 .text-area {max-width: 60%;}
+#influencer_recommend_section3 .title-type2 {margin-bottom: 1.4rem;}
+#influencer_recommend_section3 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
+#influencer_recommend_section3 .img-area {position: absolute;left: 58.25%;top: -2.5rem;width: 31.25rem;/*500*/}
+#influencer_recommend_section3 .img-area img {max-width: 100%;}
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 솔루션 - 광고 영상 분석
+|.............................................................................*/
+/* 광고 영상 분석 - 공통 */
+
+
+
+/* 광고 영상 분석 - 개별섹션 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 랭킹 - 인스타그램 랭킹
+|.............................................................................*/
+/* 인스타그램 랭킹 - 공통 */
+
+
+
+/* 인스타그램 랭킹 - 개별섹션 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+| 랭킹 - 유튜브  랭킹
+|.............................................................................*/
+/* 유튜브  랭킹 - 공통 */
+
+
+
+/* 유튜브  랭킹 - 개별섹션 */
+
+
+
+
+
+
+
+
+
 
 
 
@@ -20,15 +400,88 @@
 
 
 
+
+
 }
 /* Tablet ************************************************/
 @media screen and (max-width: 786px) { /* Tablet to Mobile : 0~786 */
 
 
+  /* 786 서비스 - 인스타그램 리포트 ********************/
+  .instagram_report .text-area {margin: 0 auto !important;}
+  .instagram_report .title-description {font-size: 1.3rem;}
+  .instagram_report .title-type1 {font-size: 2.6rem;}
+  .instagram_report .title-type2 {font-size: 2.5rem;}
+  .instagram_report .sub-text1 {margin-bottom: 3rem;}
+  .instagram_report .sub-text2 {width: auto !important;margin-bottom: 2rem;}
+  .instagram_report .img-area {margin-top: 4rem;position: relative;left: auto !important;top: auto !important;width: auto !important;text-align: center;}
+
+  #instagram_report_section1 {padding-top: 5rem;}
+  #instagram_report_section3 {padding: 5rem 0 5rem;}
 
 
 
 
+  /* 786 서비스 - 피처링 공구 ********************/
+  .group-purchase .text-area {margin: 0 auto !important;}
+  .group-purchase .title-description {font-size: 1.3rem;}
+  .group-purchase .title-type1 {font-size: 2.6rem;}
+  .group-purchase .title-type2 {font-size: 2.5rem;}
+  .group-purchase .sub-text1 {margin-bottom: 3rem;}
+  .group-purchase .sub-text2 {width: auto !important;margin-bottom: 2rem;}
+  .group-purchase .img-area {margin-top: 4rem;position: relative;left: auto !important;top: auto !important;width: auto !important;text-align: center;}
+
+  #group_purchase_section1 {padding: 5rem 0 5rem;}
+  #group_purchase_section3 {padding: 5rem 0 5rem;}
+  #group_purchase_section4 {padding-bottom: 5rem;}
+  #group_purchase_section5 {padding-bottom: 5rem;}
+
+
+
+
+  /* 786 솔루션 공통 ************************************/
+  .search-bar-ui {width: 70%;}
+  .search-bar-ui .sns-select, .search-bar-ui .btn-search, .search-bar-ui .autocomplete-box {height: 4.8rem;}
+  .search-bar-ui .autocomplete-box .input-text {font-size: 1.2rem;text-indent: 0;padding-right: 6rem;}
+  .search-bar-ui .btn-search {width: 5rem;}
+
+  .account-list {text-align: center;}
+  .account-list li {float: none !important;width: 100% !important;display: inline-block;}
+
+  .recommend-box .title .btn-area {width: 6rem;}
+
+  .filter-area.layer {}
+  .filter-area .display-t {display: block;}
+  .filter-area .display-tc {display: block;}
+  .filter-area .filter {margin-bottom: 2.2rem;}
+  .filter-area .filter .select-area {width: auto !important;}
+  .filter-area .filter .select-area select {width: 18rem;}
+  .filter-area .filter .select-area label {margin-top: 0;}
+  .filter-area .text-desc {font-size: 1.2rem;}
+
+
+
+
+
+    /* 786 솔루션 - 인플루언서 추천 ********************/
+  .influencer-recommend {}
+  .influencer-recommend-bg li:nth-child(1) {left: 4%;top: 5rem;}
+  .influencer-recommend-bg li:nth-child(2) {left: 7%;top: 23.13rem;}
+  .influencer-recommend-bg li:nth-child(3) {left: 6%;top: -1rem;}
+  .influencer-recommend-bg li:nth-child(4) {left: 13%;top: 18.56rem;}
+  .influencer-recommend-bg li:nth-child(5) {left: 78%;top: 2rem;}
+  .influencer-recommend-bg li:nth-child(6) {left: 90%;top: 18rem;}
+  .influencer-recommend-bg li:nth-child(7) {left: 88.4%;top: 18rem;}
+  .influencer-recommend-bg li:nth-child(8) {left: 95.5%;top: 33.44rem;}
+
+  #influencer_recommend_section1 {padding-top: 5rem;}
+  #influencer_recommend_section1 .title-type1 {font-size: 2.6rem;}
+  #influencer_recommend_section1 .sub-text1 {margin: 1.8rem 0 2.5rem;}
+  #influencer_recommend_section2 {padding-top: 5rem;}
+  #influencer_recommend_section3 {padding: 6rem 0 6rem;}
+  #influencer_recommend_section3 .text-area {max-width: none;}
+  #influencer_recommend_section3 .sub-text2 {margin-bottom: 3rem;}
+  #influencer_recommend_section3 .img-area {position: relative;top: auto;left: auto;width: 100%;}
 
 
 
@@ -44,8 +497,44 @@
 @media screen and (max-width: 481px) { /* Mobile : 0~481 */
 
 
+  /* 481 서비스 - 인스타그램 리포트 ********************/
+  .instagram_report .btn-area {margin-top: 2rem;}
+
+  #instagram_report_section1 .btn-area {text-align: center;}
+  #instagram_report_section1 button {width: 82%;margin: 0 auto;}
+  #instagram_report_section1 button+button {margin-top: 1rem;}
 
 
+
+
+  /* 481 서비스 - 피처링 공구 ********************/
+  .group-purchase .btn-area {margin-top: 2rem;text-align: center;}
+  #group_purchase_section1 .btn-area {text-align: center;}
+  #group_purchase_section1 button {width: 82%;margin: 0 auto;}
+  #group_purchase_section1 button+button {margin-top: 1rem;}
+
+
+
+
+  /* 481 솔루션 공통 ************************************/
+  .search-bar-ui {width: 100%;}
+  .search-bar-ui .sns-select {width: 20%;}
+  .search-bar-ui .autocomplete-box {width: 80%;}
+  .search-bar-ui .autocomplete-box .input-text {letter-spacing: -.05rem;}
+
+  .account-list .person-ui {padding: 2.5rem 0 3rem;}
+  .account-list .info-area {padding: 0 0 0 2rem;}
+  .account-list .info-area .account-sort span {padding: .4rem 1rem;border-width: 1px;font-size: 1.1rem;}
+  .account-list .info-area .account-num {margin-top: 1rem;}
+  .account-list .info-area .account-num span {display: block;text-align: left;margin: 0 0 .5rem !important;font-size: 1.1rem;}
+  .account-list .account-info {margin-top: 1rem;font-size: 1.5rem;}
+
+  .filter-area.layer {}
+  .filter-area .filter .select-area select {width: 100%;}
+
+
+
+  /* 481 솔루션 - 인플루언서 추천 ********************/
 
 
 

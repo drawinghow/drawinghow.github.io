@@ -40,3 +40,36 @@
     font-family: NTL;
     src: url(../fonts/NotoSansCJKkr-Light.otf) format("opentype"), url(../fonts/NotoSansCJKkr-Light.woff) format("woff"), url(../fonts/NotoSansCJKkr-Light.otf) format("ttf");
 }
+
+
+
+
+
+/* 헬베티카 Helvetica Light */
+@font-face {
+    font-family: HelveticaNeue;
+    font-weight: 300;
+    src: url(../fonts/HelveticaNeueLight.eot) format("opentype"), url(../fonts/HelveticaNeueLight.woff) format("woff");
+}
+
+/* 헬베티카 Helvetica Neue Regular */
+@font-face {
+    font-family: HelveticaNeue;
+    font-weight: 400;
+    src: url(../fonts/HelveticaNeue.eot) format("opentype"), url(../fonts/HelveticaNeueRegular.woff) format("woff");
+}
+
+/* 헬베티카 Helvetica Medium */
+@font-face {
+    font-family: HelveticaNeue;
+    font-weight: 500;
+    src: url(../fonts/HelveticaNeueMedium.eot) format("opentype"), url(../fonts/HelveticaNeueMedium.woff) format("woff");
+}
+
+
+/* 헬베티카 Helvetica Neue Bold */
+@font-face {
+    font-family: HelveticaNeue;
+    font-weight: 700;
+    src: url(../fonts/HelveticaNeueBold.eot) format("opentype"), url(../fonts/HelveticaNeueBold.woff) format("woff");
+}
