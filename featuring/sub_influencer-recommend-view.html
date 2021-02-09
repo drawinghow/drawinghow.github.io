@@ -30,16 +30,16 @@
 	</header>
 
 	<!--Main Contents-->
-	<article id="container" class="influencer-recommend">
-		<ul class="influencer-recommend-bg">
-			<li><img src="./images/solution/influencer-recommend-bg1.png" alt="i"></li>
-			<li><img src="./images/solution/influencer-recommend-bg2.png" alt="i"></li>
-			<li><img src="./images/solution/influencer-recommend-bg3.png" alt="i"></li>
-			<li><img src="./images/solution/influencer-recommend-bg4.png" alt="i"></li>
-			<li><img src="./images/solution/influencer-recommend-bg5.png" alt="i"></li>
-			<li><img src="./images/solution/influencer-recommend-bg6.png" alt="i"></li>
-			<li><img src="./images/solution/influencer-recommend-bg7.png" alt="i"></li>
-			<li><img src="./images/solution/influencer-recommend-bg8.png" alt="i"></li>
+	<article id="container" class="solution-page">
+		<ul class="solution-page-bg">
+			<li><img src="./images/solution/solution-page-bg1.png" alt="i"></li>
+			<li><img src="./images/solution/solution-page-bg2.png" alt="i"></li>
+			<li><img src="./images/solution/solution-page-bg3.png" alt="i"></li>
+			<li><img src="./images/solution/solution-page-bg4.png" alt="i"></li>
+			<li><img src="./images/solution/solution-page-bg5.png" alt="i"></li>
+			<li><img src="./images/solution/solution-page-bg6.png" alt="i"></li>
+			<li><img src="./images/solution/solution-page-bg7.png" alt="i"></li>
+			<li><img src="./images/solution/solution-page-bg8.png" alt="i"></li>
 		</ul>
 
 		<section id="influencer_recommend_section1">
@@ -79,31 +79,25 @@
 				<div class="recommend-box">
 					<div class="title">
 						<p class="text-area">
-							<span class="circle"><b>Example</b></span>
+							<!--<span class="circle"><b>Example</b></span>-->
 							<span class="txt">인플루언서 추천</span>
 						</p>
 						<p class="btn-area">
-							<button class="btn-filter js-filter-toggle-btn">필터<i></i></button>
+							<button class="btn-filter js-filter-layer-toggle-btn">필터<i></i></button>
 						</p>
 						<!--필터 layer-->
-						<div class="filter-area layer">
+						<div class="filter-area2">
 							<div class="display-t">
 								<div class="filter display-tc">
 									<p class="filter-title">리스트업 목적</p>
-									<!-- 토글형태 select box 필요시 사용 ---
 									<div class="select-area width-15r">
-										<button class="current js-togglebtn"><span>공동구매 및 판매</span><i class="arrow"></i></button>
+										<button class="current"><span>공동구매 및 판매</span><i class="arrow"></i></button>
 										<ul>
-											<li><button>텍스트</button></li>
+											<li class="on"><button>공동구매 및 판매</button></li>
 											<li><button>텍스트</button></li>
 											<li><button>텍스트</button></li>
 											<li><button>텍스트</button></li>
 										</ul>
-									</div>-->
-									<div class="select-area width-15r">
-										<select class="selectbox1" name="listup" id="listup">
-											<option value="공동구매 및 판매">공동구매 및 판매</option>
-										</select>
 									</div>
 								</div>
 								<div class="filter display-tc">
@@ -116,38 +110,26 @@
 								</div>
 								<div class="filter display-tc">
 									<p class="filter-title">인플루언서 연령</p>
-									<!--<div class="select-area width-12r">
-										<button class="current js-togglebtn"><span>전체</span><i class="arrow"></i></button>
+									<div class="select-area width-12r">
+										<button class="current"><span>전체</span><i class="arrow"></i></button>
 										<ul>
-											<li><button>텍스트</button></li>
+											<li class="on"><button>전체</button></li>
 											<li><button>텍스트</button></li>
 											<li><button>텍스트</button></li>
 											<li><button>텍스트</button></li>
 										</ul>
-									</div>-->
-									<div class="select-area width-12r">
-										<select class="selectbox1" name="age" id="age">
-											<option value="전체">전체</option>
-											<option value="text">text</option>
-										</select>
 									</div>
 								</div>
 								<div class="filter display-tc">
-									<p class="filter-title"> 팔로워 수</p>
-									<!--<div class="select-area width-12r">
-										<button class="current js-togglebtn"><span>전체</span><i class="arrow"></i></button>
+									<p class="filter-title">팔로워 수</p>
+									<div class="select-area width-12r">
+										<button class="current"><span>전체</span><i class="arrow"></i></button>
 										<ul>
-											<li><button>텍스트</button></li>
+											<li class="on"><button>전체</button></li>
 											<li><button>텍스트</button></li>
 											<li><button>텍스트</button></li>
 											<li><button>텍스트</button></li>
 										</ul>
-									</div>-->
-									<div class="select-area width-12r">
-										<select class="selectbox1" name="follower" id="follower">
-											<option value="전체">전체</option>
-											<option value="text">text</option>
-										</select>
 									</div>
 								</div>
 							</div>
@@ -183,7 +165,7 @@
 									</div>
 								</div>
 								<p class="account-info"><strong>상품</strong>을/를 언급한 적 있는 계정입니다.</p>
-								<div class="margintop-20">
+								<div class="account-btn">
 									<button class="btn-type1"><span>전체 리포트 확인하기</span></button>
 								</div>
 							</div>
@@ -209,7 +191,7 @@
 									</div>
 								</div>
 								<p class="account-info"><strong>상품</strong>을/를 언급한 적 있는 계정입니다.</p>
-								<div class="margintop-20">
+								<div class="account-btn">
 									<button class="btn-type1"><span>전체 리포트 확인하기</span></button>
 								</div>
 							</div>

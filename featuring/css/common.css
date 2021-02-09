@@ -62,6 +62,7 @@ html.rem-transform {font-size: 14px;}
 .width-40 {width: 40% !important;}
 .width-30 {width: 30% !important;}
 .width-20 {width: 20% !important;}
+.width-18 {width: 18% !important;}
 .width-15 {width: 15% !important;}
 .width-10 {width: 10% !important;}
 
@@ -252,7 +253,7 @@ html.rem-transform {font-size: 14px;}
 
 
 /* Text */
-.sub-text1 {line-height: 1.3;font-size: 1.625rem;color: #494949;}
+.sub-text1 {line-height: 1.42;font-size: 1.625rem;color: #494949;}
 .sub-text2 {line-height: 1.3;font-size: 1.25rem;color: #474749;}
 
 
@@ -321,16 +322,18 @@ html.rem-transform {font-size: 14px;}
 
 
 /* btn-reset (필터리셋) */
-.btn-reset {display: inline-block;width: 3.6rem;height: 3.6rem;border: 1px solid #e8e8e8;text-align: center;background: url(../images/common/icon-reset.png) center center no-repeat;-webkit-background-size: 50%;background-size: 50%;font-size: 0;-webkit-border-radius: 0.625rem;-moz-border-radius: 0.625rem;border-radius: 0.625rem;}
+.btn-reset {display: inline-block;width: 3.6rem;height: 3.6rem;border: 1px solid #e8e8e8;text-align: center;background: #fff url(../images/common/icon-reset.png) center center no-repeat;-webkit-background-size: 50%;background-size: 50%;font-size: 0;-webkit-border-radius: 0.625rem;-moz-border-radius: 0.625rem;border-radius: 0.625rem;}
 
-
+/* btn-filter (필터 view-hide toggle)*/
+.btn-filter {font-size: 1.375rem;font-weight: bold;background: transparent;}
+.btn-filter i {display: inline-block;width: 1.3rem;height: 1.3rem;margin: -.4rem 0 0 .3rem;background: url(../images/common/icon_plus.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;}
 
 
 
 /*------------------------------------------------------------------------------
 | FORM Style
 |.............................................................................*/
-select.selectbox1 {width: 100%;height: 3.4rem;padding: 0 1rem;border: 2px solid #dedede;-webkit-border-radius: 0.625rem;-moz-border-radius: 0.625rem;border-radius: 0.625rem;background: #fff;font-size: 1.1rem;color: #333;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: url(../images/common/select-arrow.png) no-repeat 90% 50%;-webkit-background-size: 1.4rem;background-size: 1.4rem;font-weight: bold;}
+select.selectbox1 {width: 100%;height: 3.4rem;padding: 0 1rem;border: 2px solid #dedede;-webkit-border-radius: 0.625rem;-moz-border-radius: 0.625rem;border-radius: 0.625rem;background: #fff;font-size: 1.1rem;color: #333;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: #fff url(../images/common/select-arrow.png) no-repeat 92% 52%;-webkit-background-size: 1.4rem;background-size: 1.4rem;font-weight: bold;}
 select.selectbox1::-ms-expand {display: none;}
 
 
@@ -454,6 +457,7 @@ header .gnb-area .gnb>li>ul>li.on>a .desc  {color: #6e0fff;}
 header .topbtn-area {float: right;height: 100%;display: table;}
 header .topbtn-area .btnwarp {display: table-cell;vertical-align: middle;}
 header .topbtn-area button+button {margin-left: 0.625rem;}
+
 
 /* HEADER - mobile */
 header .mobile-gnb-open  {display: none;}

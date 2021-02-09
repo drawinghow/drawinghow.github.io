@@ -30,29 +30,35 @@
 	</header>
 
 	<style>
-		#container.instagram-ranking {background: #edf9f6;text-align: center;}
-		.instagram-ranking .title-description {}
-		.instagram-ranking .title-description .icon {}
 
-		#instagram_ranking_section1 {padding-top: 140px;}
-		#instagram_ranking_section2 {padding-top: 65px;}
-		#instagram_ranking_section3 {padding: 110px 0 120px;}
 
-		.ranking-filter-area {display: table;width: 100%;}
-		.ranking-filter-area>.filter,
-		.ranking-filter-area>button {display: table-cell;}
+		@media screen and (max-width: 786px) {
 
+
+
+
+		}
 	</style>
 
 	<!--Main Contents-->
-	<article id="container" class="instagram-ranking">
-		<div class="instagram-ranking-bg"></div>
+	<article id="container" class="ranking-page">
+		<ul class="ranking-page-bg">
+			<li><img src="./images/ranking/ranking-page-bg1.png" alt="i"></li>
+			<li><img src="./images/ranking/ranking-page-bg2.png" alt="i"></li>
+			<li><img src="./images/ranking/ranking-page-bg3.png" alt="i"></li>
+			<li><img src="./images/ranking/ranking-page-bg4.png" alt="i"></li>
+			<li><img src="./images/ranking/ranking-page-bg5.png" alt="i"></li>
+			<li><img src="./images/ranking/ranking-page-bg6.png" alt="i"></li>
+			<li><img src="./images/ranking/ranking-page-bg7.png" alt="i"></li>
+			<li><img src="./images/ranking/ranking-page-bg8.png" alt="i"></li>
+		</ul>
 
 		<section id="instagram_ranking_section1">
 			<div class="center-align">
 				<div class="text-area" data-aos="fade-up" data-aos-offset="50">
-					<p class="title-description">
-						<i class="icon"><img src="./images/common/instagram.svg" alt="icon-instagram"></i>Instagram Ranking
+					<p class="title-description2">
+						<i class="icon"><img src="./images/common/sns-instagram.png" alt="icon-instagram"></i>
+						<span class="text">Instagram Ranking</span>
 					</p>
 					<h2 class="title-type1">
 						심층 정보를 반영한 <br>인스타그램 랭킹
@@ -60,106 +66,243 @@
 					<div class="sub-text1">
 						허수 및 가짜 계정들을 자동으로 걸러낸 진짜 영향력 순위! <br>
 						필터링을 통해 원하는 범위 안 인플루언서들을 확인하세요.
-					</div><!--
-					<div class="btn-area" data-aos="fade-up" data-aos-delay="600">
-						<button class="btn-type2-1"><span>지금 시작하기</span></button>
-						<button class="btn-type2"><span>멤버십 알아보기</span></button>
-					</div>-->
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section id="instagram_ranking_section2">
 			<div class="center-align">
-				<div class="ranking-filter-area">
-					<div class="filter">
-						<p class="filter-title">카테고리</p>
-						<div class="selectbox-type1">
-							<button class="current"><span>전체</span><i class="arrow"></i></button>
-							<ul>
-								<li><button>홈리빙1</button></li>
-								<li><button>홈리빙2</button></li>
-								<li><button>홈리빙3</button></li>
-								<li><button>홈리빙4</button></li>
-							</ul>
+				<div class="filter-warp">
+					<p class="mobilebtn-area">
+						<button class="btn-filter js-filter-toggle-btn">필터<i></i></button>
+					</p>
+					<!--필터 -->
+					<div class="filter-area1">
+						<div class="display-t">
+							<div class="filter display-tc width-18">
+								<p class="filter-title">카테고리</p>
+								<div class="select-area">
+									<button class="current"><span>전체</span><i class="arrow"></i></button>
+									<ul>
+										<li class="on"><button>전체</button></li>
+										<li><button>텍스트</button></li>
+										<li><button>텍스트</button></li>
+										<li><button>텍스트</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter display-tc width-18">
+								<p class="filter-title">팔로워 연령대</p>
+								<div class="select-area">
+									<button class="current"><span>전체</span><i class="arrow"></i></button>
+									<ul>
+										<li class="on"><button>전체</button></li>
+										<li><button>텍스트</button></li>
+										<li><button>텍스트</button></li>
+										<li><button>텍스트</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter display-tc width-18">
+								<p class="filter-title">팔로워 성별</p>
+								<div class="select-area">
+									<div class="select-area">
+										<button class="current"><span>전체</span><i class="arrow"></i></button>
+										<ul>
+											<li class="on"><button>전체</button></li>
+											<li><button>텍스트</button></li>
+											<li><button>텍스트</button></li>
+											<li><button>텍스트</button></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="filter display-tc width-18">
+								<p class="filter-title">팔로워 수</p>
+								<div class="select-area">
+									<div class="select-area">
+										<button class="current"><span>전체</span><i class="arrow"></i></button>
+										<ul>
+											<li class="on"><button>전체</button></li>
+											<li><button>텍스트</button></li>
+											<li><button>텍스트</button></li>
+											<li><button>텍스트</button></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="filter-btn display-tc">
+								<button class="btn-type2-1"><span>적용하기</span></button>
+								<button class="btn-reset"><span>reset</span></button>
+							</div>
 						</div>
 					</div>
-
-					<div class="filter">
-						<p class="filter-title">카테고리</p>
-						<div class="selectbox-type1">
-							<button class="current"><span>전체</span><i class="arrow"></i></button>
-							<ul>
-								<li><button>홈리빙1</button></li>
-								<li><button>홈리빙2</button></li>
-								<li><button>홈리빙3</button></li>
-								<li><button>홈리빙4</button></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="filter">
-						<p class="filter-title">카테고리</p>
-						<div class="selectbox-type1">
-							<button class="current"><span>전체</span><i class="arrow"></i></button>
-							<ul>
-								<li><button>홈리빙1</button></li>
-								<li><button>홈리빙2</button></li>
-								<li><button>홈리빙3</button></li>
-								<li><button>홈리빙4</button></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="filter">
-						<p class="filter-title">카테고리</p>
-						<div class="selectbox-type1">
-							<button class="current"><span>전체</span><i class="arrow"></i></button>
-							<ul>
-								<li><button>홈리빙1</button></li>
-								<li><button>홈리빙2</button></li>
-								<li><button>홈리빙3</button></li>
-								<li><button>홈리빙4</button></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="filter">
-						<p class="filter-title">카테고리</p>
-						<div class="selectbox-type1">
-							<button class="current"><span>전체</span><i class="arrow"></i></button>
-							<ul>
-								<li><button>홈리빙1</button></li>
-								<li><button>홈리빙2</button></li>
-								<li><button>홈리빙3</button></li>
-								<li><button>홈리빙4</button></li>
-							</ul>
-						</div>
-					</div>
-
-					<button class="btn-type1-1"><span>적용하기</span></button>
-					<button class="btn-reset"><span>reset</span></button>
+					<!--//필터 -->
 				</div>
 
+				<div class="my-table-wrap">
+					<table class="my-table">
+						<thead>
+						<tr>
+							<th class="col-num">순위</th>
+							<th class="col-profile">프로필 정보</th>
+							<th class="col-category">카테고리</th>
+							<th class="col-effect">
+								<span class="m786-hide">영향력 지수</span>
+								<!--mobile-->
+								<div class="table-filter-mobile">
+									<button class="current-th"><span>영향력 지수</span><i></i></button>
+									<ul class="select-list">
+										<li><button class="click-follower" onclick="viewFollower();">팔로워 수</button></li>
+										<li class="on"><button class="click-effect">영향력 지수</button></li>
+									</ul>
+								</div>
+								<!--//mobile-->
+							</th>
+							<th class="col-follower">
+								<span class="m786-hide">팔로워 수</span>
+								<!--mobile-->
+								<div class="table-filter-mobile">
+									<button class="current-th"><span>팔로워 수</span><i></i></button>
+									<ul class="select-list">
+										<li class="on"><button class="click-follower">팔로워 수</button></li>
+										<li><button class="click-effect" onclick="viewEffect();">영향력 지수</button></li>
+									</ul>
+								</div>
+								<!--//mobile-->
 
-
-				<div>
-					랭킹 테이블
-
-				</div>
-
-				<div>
-
-					페이징
-
+							</th>
+							<th class="col-save">저장</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="col-num"><span>1</span></td>
+							<td class="col-profile">
+								<span class="img-photo"><img src="./images/solution/photo.png" alt="profile"></span>
+								<span class="text-name">@Instagram</span>
+							</td>
+							<td class="col-category">
+								<span class="text-category">엔터테인먼트</span>
+							</td>
+							<td class="col-effect">
+								<span class="text-number">987,654,003</span>
+							</td>
+							<td class="col-follower">
+								<span class="text-number">123,045,000</span>
+							</td>
+							<td class="col-save">
+								<button class="btn-save on"><i>저장</i></button>
+							</td>
+						</tr>
+						<tr>
+							<td class="col-num"><span>2</span></td>
+							<td class="col-profile">
+								<span class="img-photo"><img src="https://featuring-score-web.s3.amazonaws.com/media/profile_images/kyliejenner_0.jpg" alt="profile"></span>
+								<span class="text-name">@kimkardashian</span>
+							</td>
+							<td class="col-category">
+								<span class="text-category">스포츠</span>
+							</td>
+							<td class="col-effect">
+								<span class="text-number">987,654,003</span>
+							</td>
+							<td class="col-follower">
+								<span class="text-number">123,045,000</span>
+							</td>
+							<td class="col-save">
+								<button class="btn-save"><i>저장</i></button>
+							</td>
+						</tr>
+						<tr>
+							<td class="col-num"><span>3</span></td>
+							<td class="col-profile">
+								<span class="img-photo"><img src="./images/solution/photo.png" alt="profile"></span>
+								<span class="text-name">@kyliejenner</span>
+							</td>
+							<td class="col-category">
+								<span class="text-category">팬시완구</span>
+							</td>
+							<td class="col-effect">
+								<span class="text-number">987,654,003</span>
+							</td>
+							<td class="col-follower">
+								<span class="text-number">123,045,000</span>
+							</td>
+							<td class="col-save">
+								<button class="btn-save"><i>저장</i></button>
+							</td>
+						</tr>
+						<tr>
+							<td class="col-num"><span>4</span></td>
+							<td class="col-profile">
+								<span class="img-photo"><img src="./images/solution/photo.png" alt="profile"></span>
+								<span class="text-name">@khioekardashian</span>
+							</td>
+							<td class="col-category">
+								<span class="text-category">디지털</span>
+							</td>
+							<td class="col-effect">
+								<span class="text-number">987,654,003</span>
+							</td>
+							<td class="col-follower">
+								<span class="text-number">123,045,000</span>
+							</td>
+							<td class="col-save">
+								<button class="btn-save"><i>저장</i></button>
+							</td>
+						</tr>
+						<tr>
+							<td class="col-num"><span>5</span></td>
+							<td class="col-profile">
+								<span class="img-photo"><img src="./images/solution/photo.png" alt="profile"></span>
+								<span class="text-name">@Instagram</span>
+							</td>
+							<td class="col-category">
+								<span class="text-category">엔터테인먼트</span>
+							</td>
+							<td class="col-effect">
+								<span class="text-number">987,654,003</span>
+							</td>
+							<td class="col-follower">
+								<span class="text-number">123,045,000</span>
+							</td>
+							<td class="col-save">
+								<button class="btn-save"><i>저장</i></button>
+							</td>
+						</tr>
+						<tr>
+							<td class="col-num"><span>100</span></td>
+							<td class="col-profile">
+								<span class="img-photo"><img src="./images/solution/photo.png" alt="profile"></span>
+								<span class="text-name">@Instagram</span>
+							</td>
+							<td class="col-category">
+								<span class="text-category">스포츠</span>
+							</td>
+							<td class="col-effect">
+								<span class="text-number">987,654,003</span>
+							</td>
+							<td class="col-follower">
+								<span class="text-number">123,045,000</span>
+							</td>
+							<td class="col-save">
+								<button class="btn-save"><i>저장</i></button>
+							</td>
+						</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</section>
 
 		<section id="instagram_ranking_section3">
 			<div class="center-align">
-				<img src="" alt="Apps의 랭킹에서 더 많은 인플루언서를 만날 수 있습니다!">
-				<button class="btn-type2-1"><span>Apps에서 확인하기</span></button>
+				<div class="img-area">
+					<img src="./images/ranking/instagram_ranking_section3.png" alt="Apps의 랭킹에서 더 많은 인플루언서를 만날 수 있습니다!">
+				</div>
+				<button class="btn-type2-3"><span>Apps에서 확인하기</span></button>
 			</div>
 		</section>
 

@@ -1,5 +1,4 @@
 
-
 //Focus 함수
 function fnSetFocus(type, type_nm, add_top) {
     if (type.toUpperCase() != 'ID') {
@@ -17,8 +16,6 @@ function fnSetFocus(type, type_nm, add_top) {
     $('body, html').animate({ scrollTop: intOffsetTop }, 500);
     //Target 고정 처리 E
 }
-
-
 
 
 
@@ -41,16 +38,38 @@ $(document).ready(function () {
 
 
 
+    //필터 select-box toggle
+    $('.filter .select-area .current').click(function (e) {
+        e.preventDefault();
+        if($(this).parent().hasClass('on')){
+            $(this).next().stop().slideUp(200).parent().removeClass('on');
+        }else{
+            $('.filter .select-area.on').removeClass('on').find('ul').stop().slideUp(200);
+            $(this).next().stop().slideDown(200).parent().addClass('on');
+        }
+    });
 
-    //필터 레이어 toggle
+    //ranking - 필터 모바일 toggle
     $('.js-filter-toggle-btn').on('click', function (e) {
         e.preventDefault();
         if($(this).parent().hasClass('on')){
             $(this).parent().removeClass('on');
-            $('.filter-area.layer').stop().slideUp(300);
+            $('.filter-area1').stop().slideUp(300);
         }else{
             $(this).parent().addClass('on');
-            $('.filter-area.layer').stop().slideDown(300);
+            $('.filter-area1').stop().slideDown(300);
+        }
+    });
+
+    //solution - 필터 레이어 toggle
+    $('.js-filter-layer-toggle-btn').on('click', function (e) {
+        e.preventDefault();
+        if($(this).parent().hasClass('on')){
+            $(this).parent().removeClass('on');
+            $('.filter-area2').stop().slideUp(300);
+        }else{
+            $(this).parent().addClass('on');
+            $('.filter-area2').stop().slideDown(300);
         }
     });
 
@@ -87,16 +106,43 @@ $(document).ready(function () {
     });*/
 
 
+
+    //ranking table
+    $('.my-table .current-th').click(function (e) {
+        e.preventDefault();
+        if($(this).hasClass('on')){
+            $(this).removeClass('on').next().stop().slideUp(200);
+        }else{
+            $(this).addClass('on').next().stop().slideDown(200);
+        }
+    });
+
+
+
     //toggle 닫기
     $('body').on('click',function(e) {
         if ( !$(e.target).closest('.js-togglebtn').length ){
             $('.js-togglebtn').next().stop().slideUp(300).parent().removeClass('on');
         }
 
-        if ( !$(e.target).closest('.recommend-box').length ){
-            $('.js-filter-toggle-btn').parent().removeClass('on');
-            $('.filter-area.layer').stop().slideUp(300);
+
+        //필터
+        if ( !$(e.target).closest('.select-area').length ){
+            $('.select-area').removeClass('on');
+            $('.select-area ul').stop().slideUp(200);
         }
+
+        if ( !$(e.target).closest('.recommend-box').length ){
+            $('.js-filter-layer-toggle-btn').parent().removeClass('on');
+            $('.filter-area2').stop().slideUp(300);
+        }
+
+        //ranking table
+        if ( !$(e.target).closest('.table-filter-mobile').length ){
+            $('.table-filter-mobile .current-th').removeClass('on');
+            $('.table-filter-mobile .current-th+ul').css({display:'none'});
+        }
+
     });
 
 
@@ -109,7 +155,7 @@ $(document).ready(function () {
         var myAOS = function() {
             AOS.init({
                 easing: 'ease-in',
-                duration: 500
+                duration: 450
             });
         };
         myAOS();
@@ -121,8 +167,19 @@ $(document).ready(function () {
 
 
 
-
-
 }); //jQuery
 
 
+
+
+//ranking table
+function viewEffect() {
+    $('.my-table .col-effect').css({display: 'table-cell'});
+    $('.my-table .col-follower').css({display: 'none'});
+    $('.my-table .select-list').stop().slideUp(200);
+}
+function viewFollower() {
+    $('.my-table .col-follower').css({display: 'table-cell'});
+    $('.my-table .col-effect').css({display: 'none'});
+    $('.my-table .select-list').stop().slideUp(200);
+}
