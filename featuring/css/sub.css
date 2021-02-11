@@ -187,14 +187,12 @@
 
 .search-bar-ui .btn-search {position: absolute;right: 0;top: 0;-webkit-border-radius: 0 1.875rem 1.875rem 0;-moz-border-radius: 0 1.875rem 1.875rem 0;border-radius: 0 1.875rem 1.875rem 0;width: 7.5rem/*120*/;background: #6e0fff url(../images/common/search-btn.png) center center no-repeat;-webkit-background-size: 37%;background-size: 37%;text-align: center;overflow: hidden;}
 .search-bar-ui .btn-search span {position: relative;display: block;height: 100%;}
-.search-bar-ui .btn-search .progress {display: none;position: relative;width: 70%;margin: 0 auto;height: 100%;/*position: absolute;left: 50%;top: 50%;width: 80%;height: 80%;margin: -40% 0 0 -40%;text-align: center;*/}
-.search-bar-ui .btn-search .progress img {position: absolute;margin: auto; width: 100%;min-width: 100%;left: -100%;right: -100%;top: -100%;bottom: -100%;vertical-align: middle;}
 
 
 
 /* 인플루언서 추천 box  **************************/
-.recommend-box {position: relative;padding: .5rem;background: #fff;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;box-sizing: border-box;-webkit-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);}
-.recommend-box .title {display: table;width: 100%;}
+.recommend-box {position: relative;background: #fff;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;box-sizing: border-box;-webkit-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);}
+.recommend-box .title {display: table;width: 100%;padding: .5rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 .recommend-box .title .text-area, .recommend-box .title .btn-area {display: table-cell;vertical-align: middle;}
 .recommend-box .title .text-area {}
 .recommend-box .title .text-area:after {clear: both;content: '';display: block;}
@@ -202,7 +200,7 @@
 .recommend-box .title .text-area .circle b {display: table-cell;vertical-align: middle;text-align: center;font-size: 0.9375rem;font-family: HelveticaNeue, sans-serif;font-weight: 700;}
 .recommend-box .title .text-area .txt {margin-left: 2rem;line-height: 5.188rem;font-size: 1.875rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
 .recommend-box .title .text-area .circle+.txt {margin-left: 1rem;}
-.recommend-box .title .btn-area {width: 8rem;}
+.recommend-box .title .btn-area {width: 7rem;}
 
 
 
@@ -227,8 +225,8 @@
 .account-list .photo-area .photo {overflow: hidden;width: 100%;height: 100%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
 .account-list .photo-area .photo img {width: 100%;}
 .account-list .photo-area .sns-icon {position: absolute;z-index: 5;right: 0;bottom: 0;display: block;width: 2.875rem;height: 2.875rem;font-size: 0;}
-.account-list .photo-area .sns-icon.instagram {background: url(../images/solution/circle-instagram.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
-.account-list .photo-area .sns-icon.youtube {background: url(../images/solution/circle-youtube.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
+.account-list .photo-area .sns-icon.instagram {background: url(../images/solution/circle-instagram.png) center center no-repeat;-webkit-background-size: 98%;background-size: 98%;}
+.account-list .photo-area .sns-icon.youtube {background: url(../images/solution/circle-youtube.png) center center no-repeat;-webkit-background-size: 98%;background-size: 98%;}
 .account-list .info-area {width: 70%;padding: 1rem 0 0 2rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;text-align: left;}
 .account-list .info-area .account-name {display: block;overflow: hidden;height: 2.25rem;font-size: 2rem;font-weight: 700;font-family: HelveticaNeue, NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap;}
 .account-list .info-area .account-sort {margin-top: .8rem;}
@@ -308,11 +306,6 @@
 
 
 
-
-
-
-
-
 /*------------------------------------------------------------------------------
 | 솔루션 - 영향력 지수
 |.............................................................................*/
@@ -354,8 +347,6 @@
 /*------------------------------------------------------------------------------
 | 솔루션 - 인플루언서 추천
 |.............................................................................*/
-/* 인플루언서 추천 - 공통 */
-
 /* 인플루언서 추천 - 개별섹션 */
 #influencer_recommend_section1 {text-align: center;padding-top: 8.75rem;position: relative;z-index: 2;}
 #influencer_recommend_section1 .title-type1 {margin-top: 1rem;}

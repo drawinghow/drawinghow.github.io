@@ -62,8 +62,6 @@
 
 #home_search .search-bar .btn-search {position: absolute;right: 0;top: 0;-webkit-border-radius: 0 1.875rem 1.875rem 0;-moz-border-radius: 0 1.875rem 1.875rem 0;border-radius: 0 1.875rem 1.875rem 0;width: 7.5rem/*120px*/;background: #6e0fff url(../images/common/search-btn.png) center center no-repeat;-webkit-background-size: 37%;background-size: 37%;text-align: center;overflow: hidden;}
 #home_search .search-bar .btn-search span {position: relative;display: block;height: 100%;}
-#home_search .search-bar .btn-search .progress {display: none;position: relative;width: 70%;margin: 0 auto;height: 100%;/*position: absolute;left: 50%;top: 50%;width: 80%;height: 80%;margin: -40% 0 0 -40%;text-align: center;*/}
-#home_search .search-bar .btn-search .progress img {position: absolute;margin: auto; width: 100%;min-width: 100%;left: -100%;right: -100%;top: -100%;bottom: -100%;vertical-align: middle;}
 
 #home_search .box-list {width: 85%;margin: 3.125rem auto 0;}
 #home_search .box-list li {width: 33.33333%;}

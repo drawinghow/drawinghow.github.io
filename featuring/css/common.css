@@ -223,7 +223,7 @@ html.rem-transform {font-size: 14px;}
 |.............................................................................*/
 
 /* Title */
-.title-type1 {line-height: 1.3;letter-spacing: -.07rem;color: #333;font-size: 4.375rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
+.title-type1 {line-height: 1.3;letter-spacing: -.08rem;color: #333;font-size: 4.375rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
 .title-type2 {line-height: 1.35;letter-spacing: -.07rem;font-size: 3.125rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
 .title-type3 {line-height: 1.4;letter-spacing: -.02rem;font-size: 3.125rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
 
@@ -324,16 +324,23 @@ html.rem-transform {font-size: 14px;}
 /* btn-reset (필터리셋) */
 .btn-reset {display: inline-block;width: 3.6rem;height: 3.6rem;border: 1px solid #e8e8e8;text-align: center;background: #fff url(../images/common/icon-reset.png) center center no-repeat;-webkit-background-size: 50%;background-size: 50%;font-size: 0;-webkit-border-radius: 0.625rem;-moz-border-radius: 0.625rem;border-radius: 0.625rem;}
 
+
 /* btn-filter (필터 view-hide toggle)*/
 .btn-filter {font-size: 1.375rem;font-weight: bold;background: transparent;}
 .btn-filter i {display: inline-block;width: 1.3rem;height: 1.3rem;margin: -.4rem 0 0 .3rem;background: url(../images/common/icon_plus.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;}
+
+
+/* progress loading gif */
+.loading {position: relative;overflow: hidden;}
+.loading .loading-img {display: none;position: absolute;z-index: 2;left: 0;top: 0;width: 100%;height: 100%;background: #6e0fff url(../images/common/search_prograss.gif) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
+.btn-search.loading .loading-img {-webkit-background-size: 70%;background-size: 70%;}
 
 
 
 /*------------------------------------------------------------------------------
 | FORM Style
 |.............................................................................*/
-select.selectbox1 {width: 100%;height: 3.4rem;padding: 0 1rem;border: 2px solid #dedede;-webkit-border-radius: 0.625rem;-moz-border-radius: 0.625rem;border-radius: 0.625rem;background: #fff;font-size: 1.1rem;color: #333;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: #fff url(../images/common/select-arrow.png) no-repeat 92% 52%;-webkit-background-size: 1.4rem;background-size: 1.4rem;font-weight: bold;}
+select.selectbox1 {width: 100%;height: 3.4rem;padding: 0 1rem;border: 2px solid #dedede;-webkit-border-radius: 0.625rem;-moz-border-radius: 0.625rem;border-radius: 0.625rem;font-size: 1.1rem;color: #333;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: #fff url(../images/common/select-arrow.png) no-repeat 92% 52%;-webkit-background-size: 1.4rem;background-size: 1.4rem;font-weight: bold;}
 select.selectbox1::-ms-expand {display: none;}
 
 
@@ -655,8 +662,12 @@ footer .footer2 .info2 .bar {display: inline-block;margin: 0 0.3125rem;}
 
 
 }
-/* mobile - common */
 
+/* Mobile ************************************************/
+@media screen and (max-width: 390px) { /* Mobile : 0~390 */
+	.m390-hide {display: none;}
+
+}
 
 
 

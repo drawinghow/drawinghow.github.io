@@ -29,17 +29,6 @@
 		<div class="center-align" style="text-align: center;">Header Area</div>
 	</header>
 
-	<style>
-
-
-		@media screen and (max-width: 786px) {
-
-
-
-
-		}
-	</style>
-
 	<!--Main Contents-->
 	<article id="container" class="ranking-page">
 		<ul class="ranking-page-bg">
@@ -133,7 +122,10 @@
 								</div>
 							</div>
 							<div class="filter-btn display-tc">
-								<button class="btn-type2-1"><span>적용하기</span></button>
+								<button class="btn-type2-1 loading" onclick="$(this).find('i').css({display:'block'});">
+									<span>적용하기</span>
+									<i class="loading-img"></i>
+								</button>
 								<button class="btn-reset"><span>reset</span></button>
 							</div>
 						</div>
@@ -171,7 +163,6 @@
 									</ul>
 								</div>
 								<!--//mobile-->
-
 							</th>
 							<th class="col-save">저장</th>
 						</tr>
@@ -308,7 +299,7 @@
 
 		<section id="home_start">
 			<div class="center-align">
-				<h3 class="title-type3">피처링을 통한 예측가능한 마케팅,<br class="m481-hide"> 더 이상 망설이지 마세요</h3>
+				<h3 class="title-type3">피처링을 통한 예측가능한 마케팅,<br class="m390-hide"> 더 이상 망설이지 마세요</h3>
 				<div class="btn-area"><button class="btn-type2-2">지금 시작하기</button></div>
 			</div>
 		</section>

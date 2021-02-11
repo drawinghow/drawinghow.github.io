@@ -147,6 +147,15 @@ $(document).ready(function () {
 
 
 
+    //ranking save btn
+    $('.my-table .btn-save').on('click', function (e) {
+        e.preventDefault();
+        if($(this).hasClass('on')){
+            $(this).removeClass('on');
+        }else{
+            $(this).addClass('on');
+        }
+    });
 
 
 
