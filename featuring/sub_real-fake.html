@@ -23,48 +23,6 @@
 </head>
 <body>
 
-
-<style>
-	.real-follower {text-align: center;}
-	.real-follower .real-text1 {margin-bottom: 1.5rem;font-size: 2.25rem;}
-	.real-follower .real-text2 {margin-bottom: 1.8rem;font-size: 4.375rem;font-family: HelveticaNeue, NTB, sans-serif;font-weight: 700;}
-	.real-follower .real-text3 {font-size:  2.563rem;font-family: NTL,'Apple SD Gothic Neo','Malgun gothic','Helvetica','Dotum', sans-serif;}
-
-	.fake-follower {margin-top: 4rem;padding: 4rem 2rem;background: #ededed;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;text-align: center;}
-	.fake-follower .fake-text1 {text-align: center;font-size: 2rem;font-weight: 700;}
-	.fake-follower .standard {margin-top: 2.5rem;}
-	.fake-follower .standard dl {float: none;display: table;width: 100%;margin-top: 2rem;}
-  .fake-follower .standard dt, .fake-follower .standard dd {float: none;display: table-cell;vertical-align: middle;}
-  .fake-follower .standard dt {font-size: 1.625rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic','Helvetica','Dotum', sans-serif;}
-  .fake-follower .standard dd {font-size: 1.375rem;}
-
-  .icon-check {display: inline-block;width: 3.125rem;height: 3.125rem;margin: -.3rem .8rem 0 0;background: url(./images/common/icon-check.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;}
-  .icon-question {display: inline-block;width: 1.625rem;height: 1.625rem;margin: -.1rem 0 0 0.5rem;background: url(./images/common/icon-question.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;}
-  .icon-finger {display: inline-block;width: 2rem;height: 1.875rem;margin: -.3rem .5rem 0 0;background: url(./images/common/icon-finger.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;}
-
-
-  /* 진짜/가짜 판별 - 개별섹션 */
-	#real_fake_section1 {text-align: center;padding-top: 8.75rem;position: relative;z-index: 2;}
-	#real_fake_section1 .txt {letter-spacing: -.05rem;}
-	#real_fake_section1 .title-type1 {margin-top: 1rem;}
-	#real_fake_section1 .sub-text1 {margin: 2.3rem 0 3.125rem;color: #484749;}
-
-	#real_fake_section2 {padding-top: 6.25rem;}
-
-	#real_fake_section3 {padding-top: 6.5rem;}
-	#real_fake_section3 .img-area {position: relative;left: -1.2%;width: 101%;}
-	#real_fake_section3 .img-area img {width: 100%;}
-	#real_fake_section3 .btn-area {text-align: center;margin-top: 5rem;}
-
-	#real_fake_section4 {padding: 8.125rem	0 11rem;}
-	#real_fake_section4 .text-area {max-width: 60%;}
-	#real_fake_section4 .title-type2 {margin-bottom: 1.4rem;}
-	#real_fake_section4 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
-	#real_fake_section4 .img-area {position: absolute;left: 58.25%;top: -2.5rem;width: 31.25rem;/*500*/}
-	#real_fake_section4 .img-area img {max-width: 100%;}
-</style>
-
-
 <div id="wrap">
 	<header>
 		<div class="center-align" style="text-align: center;">Header Area</div>
@@ -123,64 +81,6 @@
 							<span class="circle"><b>Example</b></span>
 							<span class="txt">Fake vs. Real</span>
 						</p>
-						<p class="btn-area">
-							<button class="btn-filter js-filter-layer-toggle-btn">필터<i></i></button>
-						</p>
-						<!--필터 layer-->
-						<div class="filter-area2">
-							<div class="display-t">
-								<div class="filter display-tc">
-									<p class="filter-title">리스트업 목적</p>
-									<div class="select-area width-15r">
-										<button class="current"><span>공동구매 및 판매</span><i class="arrow"></i></button>
-										<ul>
-											<li class="on"><button>공동구매 및 판매</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-										</ul>
-									</div>
-								</div>
-								<div class="filter display-tc">
-									<p class="filter-title">인플루언서 성별</p>
-									<div class="select-area">
-										<label><input type="radio" name="gender"><span>전체</span></label>
-										<label><input type="radio" name="gender"><span>남자</span></label>
-										<label><input type="radio" name="gender"><span>여자</span></label>
-									</div>
-								</div>
-								<div class="filter display-tc">
-									<p class="filter-title">인플루언서 연령</p>
-									<div class="select-area width-12r">
-										<button class="current"><span>전체</span><i class="arrow"></i></button>
-										<ul>
-											<li class="on"><button>전체</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-										</ul>
-									</div>
-								</div>
-								<div class="filter display-tc">
-									<p class="filter-title">팔로워 수</p>
-									<div class="select-area width-12r">
-										<button class="current"><span>전체</span><i class="arrow"></i></button>
-										<ul>
-											<li class="on"><button>전체</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<p class="text-desc">Apps 에서는 8가지 세부 필터링으로 캠페인에 알맞은 인플루언서를 추천합니다.</p>
-							<div class="filter-btn">
-								<button class="btn-type2-1"><span>적용하기</span></button>
-								<button class="btn-reset"><span>reset</span></button>
-							</div>
-						</div>
-						<!--//필터 layer-->
 					</div>
 					<!--계정-->
 					<ul class="account-list li-1"><!-- li-number -->
@@ -217,11 +117,24 @@
 						<p class="fake-text1">피처링이 말하는 Fake란, 마케팅에 유의하지 않은 계정입니다.</p>
 						<div class="standard">
 							<dl>
-                <dt><i class="icon-finger"></i>Fake 분류 기준</dt>
-								<dd>매크로(봇)<i class="icon-question"></i></dd>
-								<dd>비활동 계정<i class="icon-question"></i></dd>
-								<dd>광고 계정<i class="icon-question"></i></dd>
-								<dd>도달불가<i class="icon-question"></i></dd>
+								<dt><i class="icon-finger"></i>Fake 분류 기준</dt>
+								<dd>
+									매크로(봇)
+									<button class="btn-imgview"><i class="icon-question"></i></button>
+									<div class="layer-pop img1"><img src="./images/solution/real-fake-layer-img1.png" alt="img"></div>
+								</dd>
+								<dd>비활동 계정
+									<button class="btn-imgview"><i class="icon-question"></i></button>
+									<div class="layer-pop img2"><img src="./images/solution/real-fake-layer-img2.png" alt="img"></div>
+								</dd>
+								<dd>광고 계정
+									<button class="btn-imgview"><i class="icon-question"></i></button>
+									<div class="layer-pop img3"><img src="./images/solution/real-fake-layer-img3.png" alt="img"></div>
+								</dd>
+								<dd>도달불가
+									<button class="btn-imgview"><i class="icon-question"></i></button>
+									<div class="layer-pop img4"><img src="./images/solution/real-fake-layer-img4.png" alt="img"></div>
+								</dd>
 							</dl>
 						</div>
 					</div>
@@ -230,7 +143,8 @@
 			</div>
 		</section>
 
-		<div id="real_fake_section3">
+		<!--
+		<section id="real_fake_section3">
 			<div class="center-align">
 				<div class="clearfix">
 					<div class="img-area"><img src="./images/solution/real-fake-section3.png" alt="i"></div>
@@ -239,7 +153,7 @@
 					<button class="btn-type2-3"><span>전체 리포트 확인하기</span></button>
 				</div>
 			</div>
-		</div>
+		</section>-->
 
 		<section id="real_fake_section4">
 			<div class="center-align">

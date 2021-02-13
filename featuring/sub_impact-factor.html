@@ -23,11 +23,18 @@
 </head>
 <body>
 
-
 <div id="wrap">
 	<header>
 		<div class="center-align" style="text-align: center;">Header Area</div>
 	</header>
+
+	<style>
+
+@media screen and (max-width: 786px) {
+
+}
+
+	</style>
 
 	<!--Main Contents-->
 	<article id="container" class="solution-page">
@@ -42,15 +49,15 @@
 			<li><img src="./images/solution/solution-page-bg8.png" alt="i"></li>
 		</ul>
 
-		<section id="influencer_recommend_section1">
+		<section id="impact_factor_section1">
 			<div class="center-align">
 				<div class="text-area" data-aos="fade-up" data-aos-offset="50">
 					<p class="title-description2">
 						<i class="icon"><img src="./images/common/sns-instagram.png" alt="icon-instagram"></i>
-						<span class="text">List-up</span>
+						<span class="text">Influence Score</span>
 					</p>
 					<h2 class="title-type1">
-						맞춤형 인플루언서 추천<br> 자동화로 빠른 리스트업
+						피처링 영향력 지수 <br>퍼포먼스를 위한 핵심 지표
 					</h2>
 					<div class="sub-text1">
 						무료로 이용해 보세요.
@@ -64,7 +71,7 @@
 						</p>
 					</div>
 					<div class="autocomplete-box">
-						<input type="text" class="input-text" placeholder="제품 키워드를 입력하세요. (예: 커피포트)">
+						<input type="text" class="input-text" placeholder="인스타그램 계정명을 입력하세요.">
 					</div>
 					<button class="btn-search loading" onclick="$(this).find('i').css({display:'block'});">
 						<i class="loading-img"></i>
@@ -74,74 +81,15 @@
 			</div>
 		</section>
 
-		<section id="influencer_recommend_section2">
+		<section id="impact_factor_section2">
 			<div class="center-align">
 				<div class="recommend-box">
 					<div class="title">
 						<p class="text-area">
-							<!--<span class="circle"><b>Example</b></span>-->
-							<span class="txt">인플루언서 추천</span>
+							<span class="circle"><b>Example</b></span>
+							<span class="txt">영향력 지수</span>
 						</p>
-						<p class="btn-area">
-							<button class="btn-filter js-filter-layer-toggle-btn">필터<i></i></button>
-						</p>
-						<!--필터 layer-->
-						<div class="filter-area2">
-							<div class="display-t">
-								<div class="filter display-tc">
-									<p class="filter-title">리스트업 목적</p>
-									<div class="select-area width-15r">
-										<button class="current"><span>공동구매 및 판매</span><i class="arrow"></i></button>
-										<ul>
-											<li class="on"><button>공동구매 및 판매</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-										</ul>
-									</div>
-								</div>
-								<div class="filter display-tc">
-									<p class="filter-title">인플루언서 성별</p>
-									<div class="select-area">
-										<label><input type="radio" name="gender"><span>전체</span></label>
-										<label><input type="radio" name="gender"><span>남자</span></label>
-										<label><input type="radio" name="gender"><span>여자</span></label>
-									</div>
-								</div>
-								<div class="filter display-tc">
-									<p class="filter-title">인플루언서 연령</p>
-									<div class="select-area width-12r">
-										<button class="current"><span>전체</span><i class="arrow"></i></button>
-										<ul>
-											<li class="on"><button>전체</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-										</ul>
-									</div>
-								</div>
-								<div class="filter display-tc">
-									<p class="filter-title">팔로워 수</p>
-									<div class="select-area width-12r">
-										<button class="current"><span>전체</span><i class="arrow"></i></button>
-										<ul>
-											<li class="on"><button>전체</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<p class="text-desc">Apps 에서는 8가지 세부 필터링으로 캠페인에 알맞은 인플루언서를 추천합니다.</p>
-							<div class="filter-btn">
-								<button class="btn-type2-1"><span>적용하기</span></button>
-								<button class="btn-reset"><span>reset</span></button>
-							</div>
-						</div>
-						<!--//필터 layer-->
 					</div>
-
 					<!--계정-->
 					<ul class="account-list li-1"><!-- li-number -->
 						<li>
@@ -149,7 +97,6 @@
 								<div class="inner">
 									<div class="photo-area">
 										<p class="photo"><img src="./images/solution/photo.png" alt="photo"></p>
-										<i class="sns-icon instagram">instagram</i>
 									</div>
 									<div class="info-area">
 										<p class="account-name">accountname</p>
@@ -164,46 +111,47 @@
 										</p>
 									</div>
 								</div>
-								<p class="account-info"><strong>상품</strong>을/를 언급한 적 있는 계정입니다.</p>
-								<div class="account-btn">
-									<button class="btn-type1"><span>전체 리포트 확인하기</span></button>
-								</div>
 							</div>
 						</li>
 					</ul>
 					<!--//계정-->
+					<!--real & fake-->
+					<div class="real-follower">
+						<p class="real-text2">2,130,000</p>
+						<p class="real-text3">총 2,150,000명이 상품 구매 전환 가능성이 높습니다.</p>
+					</div>
+					<div class="fake-follower">
+						<p class="fake-text1">피처링만의 분석지표, 영향력지수</p>
+						<p class="fake-text2"><i class="icon-finger"></i>영향력 지수는 진짜 팔로워 중에서 캠페인을 통해 다음 행동으로 전환될 수 있는 사람을 예측합니다.</p>
+					</div>
+					<!--//real & fake-->
 				</div>
 			</div>
 		</section>
 
-		<section id="influencer_recommend_section3">
+		<!--<div id="impact_factor_section3">
 			<div class="center-align">
 				<div class="clearfix">
-					<div class="img-area"><img src="./images/solution/influencer-recommend-section3-1.png" alt="i"></div>
-					<div class="text-area">
-						<p><span>Apps의 리스트업은 <br>더 자세한 필터링으로 <br>10명의 인플루언서를 <br>추천해드립니다!</span></p>
-					</div>
+					<div class="img-area"><img src="./images/solution/impact-factor-section3.png" alt="i"></div>
 				</div>
 				<div class="btn-area">
-					<button class="btn-type2-3"><span>Apps에서 확인하기</span></button>
+					<button class="btn-type2-3"><span>전체 리포트 확인하기</span></button>
 				</div>
 			</div>
-		</section>
+		</div>-->
 
-		<section id="influencer_recommend_section4">
+		<section id="impact_factor_section4">
 			<div class="center-align">
 				<div class="text-area aos-init aos-animate" data-aos="fade-up" data-aos-offset="50">
 					<h3 class="title-type2">
-						목적에 맞는 필터링과 <br>엑셀 다운로드 기능
+						영향력이 높다? <br>매출효과가 좋다!
 					</h3>
 					<div class="sub-text2">
-						인플루언서 찾느라 막막하셨나요? 캠페인을 시작 하기 앞서 <br class="m786-hide">
-						내 상품에 딱 맞는 인플루언서를 빠르게 추천 받으세요. <br>
-						대조해보면서 다시 선별하고, 추리고, 추가하는 모든 작업을 <br class="m786-hide">
-						피처링 AI가 대신 해드립니다.
+						피처링의 영향력 지수는 기존 팔로워 숫자로 판단 하지 <br class="m786-hide">
+						않습니다. <br class="m786-view">전체 오디언스 중, 진짜 도달할 사람 들을 알 수 <br class="m786-hide">있는 예측 수치입니다.
 					</div>
 				</div>
-				<div class="img-area"><img src="./images/solution/instagram-report-img1.png" alt="i"></div>
+				<div class="img-area"><img src="./images/solution/impact-factor-section4.png" alt="i"></div>
 			</div>
 		</section>
 

@@ -23,11 +23,11 @@
 </head>
 <body>
 
-
 <div id="wrap">
 	<header>
 		<div class="center-align" style="text-align: center;">Header Area</div>
 	</header>
+
 
 	<!--Main Contents-->
 	<article id="container" class="solution-page">
@@ -42,15 +42,15 @@
 			<li><img src="./images/solution/solution-page-bg8.png" alt="i"></li>
 		</ul>
 
-		<section id="influencer_recommend_section1">
+		<section id="advertisement_section1">
 			<div class="center-align">
 				<div class="text-area" data-aos="fade-up" data-aos-offset="50">
 					<p class="title-description2">
-						<i class="icon"><img src="./images/common/sns-instagram.png" alt="icon-instagram"></i>
-						<span class="text">List-up</span>
+						<i class="icon"><img src="./images/common/sns-youtube.png" alt="icon-youtube"></i>
+						<span class="text">AD Analysis</span>
 					</p>
 					<h2 class="title-type1">
-						맞춤형 인플루언서 추천<br> 자동화로 빠른 리스트업
+						광고 영상 분석 <br>번거로운 수작업과 작별
 					</h2>
 					<div class="sub-text1">
 						무료로 이용해 보세요.
@@ -60,11 +60,11 @@
 				<div class="search-bar-ui"  data-aos="fade-up" data-aos-offset="50">
 					<div class="sns-select">
 						<p class="sns-current">
-							<i class="sns-icon"><img src="./images/common/sns-instagram.png" alt="instagram"></i>
+							<i class="sns-icon"><img src="./images/common/sns-youtube.png" alt="youtube"></i>
 						</p>
 					</div>
 					<div class="autocomplete-box">
-						<input type="text" class="input-text" placeholder="제품 키워드를 입력하세요. (예: 커피포트)">
+						<input type="text" class="input-text" placeholder="계정명을 입력하세요.">
 					</div>
 					<button class="btn-search loading" onclick="$(this).find('i').css({display:'block'});">
 						<i class="loading-img"></i>
@@ -74,74 +74,15 @@
 			</div>
 		</section>
 
-		<section id="influencer_recommend_section2">
+		<section id="advertisement_section2">
 			<div class="center-align">
 				<div class="recommend-box">
 					<div class="title">
 						<p class="text-area">
-							<!--<span class="circle"><b>Example</b></span>-->
-							<span class="txt">인플루언서 추천</span>
+							<span class="circle"><b>Example</b></span>
+							<span class="txt">광고 영상 분석</span>
 						</p>
-						<p class="btn-area">
-							<button class="btn-filter js-filter-layer-toggle-btn">필터<i></i></button>
-						</p>
-						<!--필터 layer-->
-						<div class="filter-area2">
-							<div class="display-t">
-								<div class="filter display-tc">
-									<p class="filter-title">리스트업 목적</p>
-									<div class="select-area width-15r">
-										<button class="current"><span>공동구매 및 판매</span><i class="arrow"></i></button>
-										<ul>
-											<li class="on"><button>공동구매 및 판매</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-										</ul>
-									</div>
-								</div>
-								<div class="filter display-tc">
-									<p class="filter-title">인플루언서 성별</p>
-									<div class="select-area">
-										<label><input type="radio" name="gender"><span>전체</span></label>
-										<label><input type="radio" name="gender"><span>남자</span></label>
-										<label><input type="radio" name="gender"><span>여자</span></label>
-									</div>
-								</div>
-								<div class="filter display-tc">
-									<p class="filter-title">인플루언서 연령</p>
-									<div class="select-area width-12r">
-										<button class="current"><span>전체</span><i class="arrow"></i></button>
-										<ul>
-											<li class="on"><button>전체</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-										</ul>
-									</div>
-								</div>
-								<div class="filter display-tc">
-									<p class="filter-title">팔로워 수</p>
-									<div class="select-area width-12r">
-										<button class="current"><span>전체</span><i class="arrow"></i></button>
-										<ul>
-											<li class="on"><button>전체</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-											<li><button>텍스트</button></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<p class="text-desc">Apps 에서는 8가지 세부 필터링으로 캠페인에 알맞은 인플루언서를 추천합니다.</p>
-							<div class="filter-btn">
-								<button class="btn-type2-1"><span>적용하기</span></button>
-								<button class="btn-reset"><span>reset</span></button>
-							</div>
-						</div>
-						<!--//필터 layer-->
 					</div>
-
 					<!--계정-->
 					<ul class="account-list li-1"><!-- li-number -->
 						<li>
@@ -149,61 +90,94 @@
 								<div class="inner">
 									<div class="photo-area">
 										<p class="photo"><img src="./images/solution/photo.png" alt="photo"></p>
-										<i class="sns-icon instagram">instagram</i>
+										<i class="sns-icon youtube">youtube</i>
 									</div>
 									<div class="info-area">
 										<p class="account-name">accountname</p>
 										<p class="account-sort">
 											<span><b>일상</b></span>
-											<span><b>패션</b></span>
-											<span><b>뷰티</b></span>
+											<span class="off"><b>패션</b></span>
 										</p>
 										<p class="account-num">
-											<span>팔로워 726,666</span>
-											<span>팔로잉 438</span>
+											<span>구독자 81.5만명</span>
 										</p>
 									</div>
 								</div>
 								<p class="account-info"><strong>상품</strong>을/를 언급한 적 있는 계정입니다.</p>
-								<div class="account-btn">
-									<button class="btn-type1"><span>전체 리포트 확인하기</span></button>
-								</div>
 							</div>
 						</li>
 					</ul>
 					<!--//계정-->
+					<!-- 최근광고영상 -->
+					<div class="latest-ad">
+						<p class="latest-ad-title">최근 광고 영상</p>
+						<div class="ad-wrap">
+							<div class="left-area">
+								<p class="l-text1">광고 정보</p>
+								<p class="l-text2"><span>광고타입</span></p>
+								<div class="ad-video">
+									<div class="video-container">
+										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/영상코드?autohide=1&autoplay=0&modestbranding=1&controls=1" frameborder="0"   allowfullscreen></iframe>
+									</div>
+								</div>
+								<div class="ad-video-title">영상타이틀입니다.영상타이틀입니다.영상타이틀입니다.영상타이틀입니다.</div>
+							</div>
+							<div class="right-area">
+								<p class="r-text">
+									<strong>Sponsored by</strong>
+									<span>“광고브랜드” 외 0개</span>
+								</p>
+								<div class="video-info">
+									<dl class="upload">
+										<dt>업로드 날짜</dt>
+										<dd>2000/12/31</dd>
+									</dl>
+									<dl class="length">
+										<dt>영상 길이</dt>
+										<dd>00 : 00</dd>
+									</dl>
+									<dl class="hits">
+										<dt>조회수</dt>
+										<dd>000,000만회</dd>
+									</dl>
+									<dl class="hashtag">
+										<dt>영상 해시태그</dt>
+										<dd>#해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //최근광고영상 -->
 				</div>
 			</div>
 		</section>
 
-		<section id="influencer_recommend_section3">
+		<!--
+		<section id="advertisement_section3">
 			<div class="center-align">
 				<div class="clearfix">
-					<div class="img-area"><img src="./images/solution/influencer-recommend-section3-1.png" alt="i"></div>
-					<div class="text-area">
-						<p><span>Apps의 리스트업은 <br>더 자세한 필터링으로 <br>10명의 인플루언서를 <br>추천해드립니다!</span></p>
-					</div>
+					<div class="img-area"><img src="./images/solution/advertisement-section3.png" alt="i"></div>
 				</div>
 				<div class="btn-area">
-					<button class="btn-type2-3"><span>Apps에서 확인하기</span></button>
+					<button class="btn-type2-3"><span>전체 리포트 확인하기</span></button>
 				</div>
 			</div>
-		</section>
+		</section>-->
 
-		<section id="influencer_recommend_section4">
+		<section id="advertisement_section4">
 			<div class="center-align">
 				<div class="text-area aos-init aos-animate" data-aos="fade-up" data-aos-offset="50">
 					<h3 class="title-type2">
-						목적에 맞는 필터링과 <br>엑셀 다운로드 기능
+						눈으로는 확인하기 어려운 <br>가짜 팔로워 구별
 					</h3>
 					<div class="sub-text2">
-						인플루언서 찾느라 막막하셨나요? 캠페인을 시작 하기 앞서 <br class="m786-hide">
-						내 상품에 딱 맞는 인플루언서를 빠르게 추천 받으세요. <br>
-						대조해보면서 다시 선별하고, 추리고, 추가하는 모든 작업을 <br class="m786-hide">
-						피처링 AI가 대신 해드립니다.
+						피처링은 AI  기술과 수억 건의 데이터 분석을  통해 피드나 <br class="m786-hide">
+						통계로는 확인이 어려운 가짜 팔로워를 걸러내고, 실제 활동 <br class="m786-hide">
+						중이며 마케팅에 유의미한 팔로우 유저들을 알려드립니다.
 					</div>
 				</div>
-				<div class="img-area"><img src="./images/solution/instagram-report-img1.png" alt="i"></div>
+				<div class="img-area"><img src="./images/solution/advertisement-section4.png" alt="i"></div>
 			</div>
 		</section>
 

@@ -176,13 +176,13 @@
 .search-bar-ui .btn-search,
 .search-bar-ui .autocomplete-box {height: 6.25rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
-.search-bar-ui .sns-select {float: left;width: 15%;position: relative;border: 3px solid #000;border-right: none;background: #fff;-webkit-border-radius: 1.875rem 0 0 1.875rem;-moz-border-radius: 1.875rem 0 0 1.875rem;border-radius: 1.875rem 0 0 1.875rem;}
+.search-bar-ui .sns-select {float: left;width: 15%;position: relative;border: 3px solid #333;border-right: none;background: #fff;-webkit-border-radius: 1.875rem 0 0 1.875rem;-moz-border-radius: 1.875rem 0 0 1.875rem;border-radius: 1.875rem 0 0 1.875rem;}
 .search-bar-ui .sns-select .sns-current {display: table;width: 100%;height: 100%;text-align: center;}
 .search-bar-ui .sns-select .sns-icon {display: table-cell;vertical-align: middle;vertical-align: middle;}
 .search-bar-ui .sns-select .sns-icon img {vertical-align: top;}
 .search-bar-ui .sns-select .sns-icon+span {display: inline-block;vertical-align: middle;margin-top: -.5rem;}
 
-.search-bar-ui .autocomplete-box {float: left;width: 85%;background: #fff;border-top: 3px solid #000;border-bottom: 3px solid #000;-webkit-border-radius: 0 1.875rem 1.875rem 0;-moz-border-radius: 0 1.875rem 1.875rem 0;border-radius: 0 1.875rem 1.875rem 0;text-align: left;}
+.search-bar-ui .autocomplete-box {float: left;width: 85%;background: #fff;border-top: 3px solid #333;border-bottom: 3px solid #333;-webkit-border-radius: 0 1.875rem 1.875rem 0;-moz-border-radius: 0 1.875rem 1.875rem 0;border-radius: 0 1.875rem 1.875rem 0;text-align: left;}
 .search-bar-ui .autocomplete-box .input-text {position: relative;width: 100%;height: 100%;vertical-align: middle;border: none;font-size: 1.625rem;color: #868686;background: transparent;box-sizing: border-box;padding-right: 10rem;}
 
 .search-bar-ui .btn-search {position: absolute;right: 0;top: 0;-webkit-border-radius: 0 1.875rem 1.875rem 0;-moz-border-radius: 0 1.875rem 1.875rem 0;border-radius: 0 1.875rem 1.875rem 0;width: 7.5rem/*120*/;background: #6e0fff url(../images/common/search-btn.png) center center no-repeat;-webkit-background-size: 37%;background-size: 37%;text-align: center;overflow: hidden;}
@@ -190,7 +190,7 @@
 
 
 
-/* 인플루언서 추천 box  **************************/
+/* 솔루션 box 공통  **************************/
 .recommend-box {position: relative;background: #fff;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;box-sizing: border-box;-webkit-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);}
 .recommend-box .title {display: table;width: 100%;padding: .5rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 .recommend-box .title .text-area, .recommend-box .title .btn-area {display: table-cell;vertical-align: middle;}
@@ -198,9 +198,35 @@
 .recommend-box .title .text-area:after {clear: both;content: '';display: block;}
 .recommend-box .title .text-area .circle {float: left;display: table;width: 5.188rem;height: 5.188rem;background: #000;-webkit-border-radius: 6.25rem;-moz-border-radius: 6.25rem;border-radius: 6.25rem;color: #fff;}
 .recommend-box .title .text-area .circle b {display: table-cell;vertical-align: middle;text-align: center;font-size: 0.9375rem;font-family: HelveticaNeue, sans-serif;font-weight: 700;}
-.recommend-box .title .text-area .txt {margin-left: 2rem;line-height: 5.188rem;font-size: 1.875rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
+.recommend-box .title .text-area .txt {margin-left: 2rem;line-height: 5.188rem;font-size: 1.875rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;color: #333;}
 .recommend-box .title .text-area .circle+.txt {margin-left: 1rem;}
 .recommend-box .title .btn-area {width: 7rem;}
+
+.recommend-box .real-follower {text-align: center;}
+.recommend-box .real-follower .real-text1 {margin-bottom: 1.5rem;font-size: 2.25rem;color: #1b1b1b;}
+.recommend-box .real-follower .real-text2 {margin-bottom: 1.8rem;font-size: 4.375rem;font-family: HelveticaNeue, NTB, sans-serif;font-weight: 700;color: #1b1b1b;}
+.recommend-box .real-follower .real-text3 {font-size:  2.563rem;font-family: NTL,'Apple SD Gothic Neo','Malgun gothic','Helvetica','Dotum', sans-serif;line-height: 1.3;color: #1b1b1b;}
+.recommend-box .real-follower .icon-check {display: inline-block;width: 3.125rem;height: 3.125rem;margin: -.4rem .8rem 0 0;background: url(../images/common/icon-check.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;}
+
+.recommend-box .fake-follower {position: relative;margin-top: 4rem;padding: 4rem 2rem;background: #ededed;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;text-align: center;}
+.recommend-box .fake-follower .fake-text1 {text-align: center;font-size: 2rem;font-weight: 700;line-height: 1.35;color: #1b1b1b;}
+.recommend-box .fake-follower .fake-text2 {margin-top: 2rem;text-align: center;font-size: 1.625rem;font-weight: 700;line-height: 1.35;color: #1b1b1b;}
+.recommend-box .fake-follower .standard {margin-top: 2.5rem;}
+.recommend-box .fake-follower .standard dl {float: none;display: table;width: 100%;margin-top: 2rem;}
+.recommend-box .fake-follower .standard dt, .fake-follower .standard dd {float: none;display: table-cell;vertical-align: middle;color: #1b1b1b;}
+.recommend-box .fake-follower .standard dt {font-size: 1.625rem;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic','Helvetica','Dotum', sans-serif;}
+.recommend-box .fake-follower .standard dd {font-size: 1.375rem;}
+.recommend-box .fake-follower .icon-finger {display: inline-block;width: 2rem;height: 1.875rem;margin: -.5rem .5rem 0 0;background: url(../images/common/icon-finger.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;}
+.recommend-box .fake-follower .icon-question {display: inline-block;width: 1.625rem;height: 1.625rem;margin: -.4rem 0 0 0.5rem;background: #6e6e6e url(../images/common/icon-question.png) center center no-repeat;-webkit-background-size: 35%;background-size: 35%;vertical-align: middle;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
+.recommend-box .fake-follower .btn-imgview {}
+.recommend-box .fake-follower .btn-imgview:hover .icon-question {background-color: #000;}
+.recommend-box .fake-follower .btn-imgview:hover+.layer-pop {display: block;}
+.recommend-box .fake-follower .layer-pop {display: none;position: absolute;z-index: 10;overflow: hidden;-webkit-border-radius: 1rem;-moz-border-radius: 1rem;border-radius: 1rem;-webkit-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.5);-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.5);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.5);margin-top: 1rem;}
+.recommend-box .fake-follower .layer-pop.img1 {width: 31.25rem;}
+.recommend-box .fake-follower .layer-pop.img2 {width: 31.25rem;}
+.recommend-box .fake-follower .layer-pop.img3 {width: 31.25rem;}
+.recommend-box .fake-follower .layer-pop.img4 {width: 31.25rem;right: 0;}
+.recommend-box .fake-follower .layer-pop img {width: 100%;}
 
 
 
@@ -228,16 +254,17 @@
 .account-list .photo-area .sns-icon.instagram {background: url(../images/solution/circle-instagram.png) center center no-repeat;-webkit-background-size: 98%;background-size: 98%;}
 .account-list .photo-area .sns-icon.youtube {background: url(../images/solution/circle-youtube.png) center center no-repeat;-webkit-background-size: 98%;background-size: 98%;}
 .account-list .info-area {width: 70%;padding: 1rem 0 0 2rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;text-align: left;}
-.account-list .info-area .account-name {display: block;overflow: hidden;height: 2.25rem;font-size: 2rem;font-weight: 700;font-family: HelveticaNeue, NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap;}
+.account-list .info-area .account-name {display: block;overflow: hidden;height: 2.25rem;font-size: 2rem;font-weight: 700;font-family: HelveticaNeue, NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap;color: #1b1b1b;}
 .account-list .info-area .account-sort {margin-top: .8rem;}
 .account-list .info-area .account-sort span {display: inline-block;margin-bottom: .2rem;padding: .5rem 1.5rem;font-size: 1.2rem;color: #6e0fff;border: 2px solid #6e0fff;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;}
 .account-list .info-area .account-sort span.off {background: #d8d8d8;border-color: #d8d8d8;color: #fff;}
 .account-list .info-area .account-sort span+span {margin-left: .1rem;}
 .account-list .info-area .account-num {margin-top: 1.14rem;}
-.account-list .info-area .account-num span {display: inline-block;font-size: 1.375rem;}
+.account-list .info-area .account-num span {display: inline-block;font-size: 1.375rem;color: #1b1b1b;}
 .account-list .info-area .account-num span+span {margin-left: 2rem;}
 .account-list .account-info {margin-top: 1.8rem;font-size: 1.8rem;letter-spacing: -.05rem;}
 .account-list .account-btn {margin-top: 2rem;}
+
 
 
 
@@ -257,7 +284,6 @@
 .filter .select-area label * {vertical-align: middle;}
 .filter .select-area label input[type="radio"] {width: 1.563rem;height: 1.563rem;}
 .filter .select-area label span {margin-left: .1rem;font-size: 1.375rem;color: #1b1b1b;}
-
 
 /* 필터 : 랭킹-page  **************************/
 .filter-warp {}
@@ -292,11 +318,26 @@
 /*------------------------------------------------------------------------------
 | 솔루션 - 진짜/가짜 판별
 |.............................................................................*/
-/* 진짜/가짜 판별 - 공통 */
-
-
-
 /* 진짜/가짜 판별 - 개별섹션 */
+#real_fake_section1 {text-align: center;padding-top: 8.75rem;position: relative;z-index: 2;}
+#real_fake_section1 .txt {letter-spacing: -.05rem;}
+#real_fake_section1 .title-type1 {margin-top: 1rem;}
+#real_fake_section1 .sub-text1 {margin: 2.3rem 0 3.125rem;color: #484749;}
+
+#real_fake_section2 {padding-top: 6.25rem;}
+
+#real_fake_section3 {padding-top: 6.5rem;}
+#real_fake_section3 .img-area {position: relative;left: -1.2%;width: 101%;}
+#real_fake_section3 .img-area img {width: 100%;}
+#real_fake_section3 .btn-area {text-align: center;margin-top: 3rem;}
+
+#real_fake_section4 {padding: 8.125rem	0 11rem;}
+#real_fake_section4 .text-area {max-width: 60%;}
+#real_fake_section4 .title-type2 {margin-bottom: 1.4rem;}
+#real_fake_section4 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
+#real_fake_section4 .img-area {position: absolute;left: 58.25%;top: -2.5rem;width: 31.25rem;/*500*/}
+#real_fake_section4 .img-area img {max-width: 100%;}
+
 
 
 
@@ -309,11 +350,26 @@
 /*------------------------------------------------------------------------------
 | 솔루션 - 영향력 지수
 |.............................................................................*/
-/* 영향력 지수 - 공통 */
+/* 영향력지수 개별섹션 */
+#impact_factor_section1 {text-align: center;padding-top: 8.75rem;position: relative;z-index: 2;}
+#impact_factor_section1 .txt {letter-spacing: -.05rem;}
+#impact_factor_section1 .title-type1 {margin-top: 1rem;}
+#impact_factor_section1 .sub-text1 {margin: 2.3rem 0 3.125rem;color: #484749;}
 
+#impact_factor_section2 {padding-top: 6.25rem;}
 
+#impact_factor_section3 {padding-top: 6.5rem;}
+#impact_factor_section3 .img-area {position: relative;left: 0;top: 0;width: 100%;}
+#impact_factor_section3 .img-area img {width: 100%;}
+#impact_factor_section3 .btn-area {text-align: center;margin-top: 3rem;}
 
-/* 영향력 지수 - 개별섹션 */
+#impact_factor_section4 {padding: 8.125rem	0 6rem;}
+#impact_factor_section4 .text-area {max-width: 60%;}
+#impact_factor_section4 .title-type2 {margin-bottom: 1.4rem;}
+#impact_factor_section4 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
+#impact_factor_section4 .img-area {position: absolute;left: 56.25%;top: 0;width: 34.19rem;}
+#impact_factor_section4 .img-area img {max-width: 100%;}
+
 
 
 
@@ -384,11 +440,54 @@
 /*------------------------------------------------------------------------------
 | 솔루션 - 광고 영상 분석
 |.............................................................................*/
-/* 광고 영상 분석 - 공통 */
+/* 광고 영상 분석 개별섹션 */
+#advertisement_section1 {text-align: center;padding-top: 8.75rem;position: relative;z-index: 2;}
+#advertisement_section1 .txt {letter-spacing: -.05rem;}
+#advertisement_section1 .title-type1 {margin-top: 1rem;}
+#advertisement_section1 .sub-text1 {margin: 2.3rem 0 3.125rem;color: #484749;}
 
+#advertisement_section2 {padding-top: 6.25rem;}
 
+#advertisement_section3 {padding-top: 6.5rem;}
+#advertisement_section3 .img-area {position: relative;left: -1.2%;width: 101%;}
+#advertisement_section3 .img-area img {width: 100%;}
+#advertisement_section3 .btn-area {text-align: center;margin-top: 3rem;}
 
-/* 광고 영상 분석 - 개별섹션 */
+#advertisement_section4 {padding: 8.8rem	0 6rem;}
+#advertisement_section4 .text-area {max-width: 60%;}
+#advertisement_section4 .title-type2 {margin-bottom: 1.4rem;}
+#advertisement_section4 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
+#advertisement_section4 .img-area {position: absolute;left: 58.25%;top: -3rem;width: 31.25rem;/*500*/}
+#advertisement_section4 .img-area img {max-width: 100%;}
+
+.latest-ad {margin-top: 2rem;padding: 4.5rem 3.3rem 6rem;background: #ededed;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;text-align: center;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.latest-ad .latest-ad-title {font-size: 2rem;color: #1b1b1b;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
+.latest-ad .ad-wrap {margin-top: 2.5rem;}
+.latest-ad .ad-wrap:after {clear: both;content: '';display: block;}
+.latest-ad .ad-wrap .left-area {float: left;width: 42%;}
+.latest-ad .ad-wrap .left-area .l-text1 {font-size: 2rem;color: #1b1b1b;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
+.latest-ad .ad-wrap .left-area .l-text2 {margin-top: 1.1rem;text-align: center;}
+.latest-ad .ad-wrap .left-area .l-text2 span {display: inline-block;padding: .5rem 2.5rem .6rem;border: 2px solid #6e0fff;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;font-size: 1.375rem;font-family: NTM,'Apple SD Gothic Neo','Malgun gothic', sans-serif;color: #6e0fff;}
+.latest-ad .ad-wrap .left-area .ad-video {margin-top: 1.5rem;}
+.video-container {position: relative;width: 100%;height: auto;padding-bottom: 56.25% /*16:9*/}
+.video-container iframe {z-index: 1;top: 0;left: 0;position: absolute;width: 100%;height: 100%;}
+.latest-ad .ad-wrap .left-area .ad-video-title {margin-top: 1.5rem;text-align: left;font-size: 1.625rem;color: #1b1b1b;line-height: 1.5;border: 0;}
+
+.latest-ad .ad-wrap .right-area {float: right;width: 45%;}
+.latest-ad .ad-wrap .right-area .r-text {color: #1b1b1b;}
+.latest-ad .ad-wrap .right-area .r-text strong {display: block;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;font-size: 2rem;}
+.latest-ad .ad-wrap .right-area .r-text span {display: block;margin-top: 1.5rem;font-size: 1.625rem;}
+.latest-ad .ad-wrap .right-area .video-info {margin-top: 2rem;text-align: left;}
+.latest-ad .ad-wrap .right-area .video-info dl {float: none;display: table;width: 100%;}
+.latest-ad .ad-wrap .right-area .video-info dl dt, .latest-ad .ad-wrap .right-area .video-info dl dd {display: table-cell; vertical-align: middle;line-height: 1.55;padding-bottom: 2.3rem;}
+.latest-ad .ad-wrap .right-area .video-info dl dt {width: 45%;font-size: 1.625rem;color: #1b1b1b;font-family: NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
+.latest-ad .ad-wrap .right-area .video-info dl dd {font-size: 1.375rem;color: #868686;}
+.latest-ad .ad-wrap .right-area .video-info dl.upload {}
+.latest-ad .ad-wrap .right-area .video-info dl.length {}
+.latest-ad .ad-wrap .right-area .video-info dl.hits {}
+.latest-ad .ad-wrap .right-area .video-info dl.hashtag {display: block;}
+.latest-ad .ad-wrap .right-area .video-info dl.hashtag dt {display: block;width: 100%;padding-bottom: 1rem;}
+.latest-ad .ad-wrap .right-area .video-info dl.hashtag dd {display: block;padding-bottom: 0;}
 
 
 
@@ -476,10 +575,6 @@
 /*------------------------------------------------------------------------------
 | 랭킹 - 유튜브  랭킹
 |.............................................................................*/
-/* 유튜브  랭킹 - 공통 */
-
-
-
 /* 유튜브  랭킹 - 개별섹션 */
 
 
@@ -499,12 +594,6 @@
 |.............................................................................*/
 /* PC *******************************************************/
 @media screen and (max-width: 1024px) {  /* PC to Tablet : 0~1024 */
-
-
-
-
-
-
 
 
 
@@ -562,20 +651,7 @@
 
 
 
-  /* 786 솔루션 공통 ************************************/
-  .search-bar-ui {width: 70%;}
-  .search-bar-ui .sns-select, .search-bar-ui .btn-search, .search-bar-ui .autocomplete-box {height: 4.8rem;}
-  .search-bar-ui .autocomplete-box .input-text {font-size: 1.2rem;text-indent: 0;padding-right: 6rem;}
-  .search-bar-ui .btn-search {width: 5rem;}
-
-  .account-list {text-align: center;}
-  .account-list li {float: none !important;width: 100% !important;display: inline-block;}
-
-  .recommend-box .title .btn-area {width: 6rem;}
-
-
-
-  /* 786 필터 공통 *********************************/
+  /* 786 필터 - 공통 */
   .filter .select-area {width: auto !important;}
   .filter .select-area select {width: 18rem;}
   .filter .select-area label {margin-top: 0;}
@@ -595,7 +671,30 @@
 
 
 
-    /* 786 솔루션 - 인플루언서 추천 ********************/
+  /* 786 솔루션 공통 */
+  .search-bar-ui {width: 70%;}
+  .search-bar-ui .sns-select, .search-bar-ui .btn-search, .search-bar-ui .autocomplete-box {height: 4.8rem;}
+  .search-bar-ui .autocomplete-box .input-text {font-size: 1.2rem;text-indent: 0;padding-right: 6rem;}
+  .search-bar-ui .btn-search {width: 5rem;}
+
+  .account-list {text-align: center;}
+  .account-list li {float: none !important;width: 100% !important;display: inline-block;}
+
+  .recommend-box .title .btn-area {width: 6rem;}
+  .recommend-box .real-follower {padding: 0 1rem;}
+  .recommend-box .real-follower .real-text1 {font-size: 2rem;margin: 1rem 0;}
+  .recommend-box .real-follower .real-text2 {font-size: 3.5rem;}
+  .recommend-box .real-follower .real-text3 {font-size: 2rem;}
+  .recommend-box .fake-follower .fake-text1 {font-size: 1.8rem;}
+  .recommend-box .fake-follower .fake-text2 {font-size: 1.3rem;}
+  .recommend-box .fake-follower .standard dt,
+  .recommend-box .fake-follower .standard dd {display: block;margin-bottom: 1rem;}
+  .recommend-box .fake-follower .standard dt {}
+  .recommend-box .fake-follower .standard dd {float: left;width: 25%;font-size: 1.2rem;margin: 0;}
+  .recommend-box .fake-follower .icon-check {width: 2.6rem;height: 2.6rem;}
+
+
+  /* 786 솔루션 bg - 공통 */
   .solution-page-bg li:nth-child(1) {left: 4%;top: 5rem;}
   .solution-page-bg li:nth-child(2) {left: 7%;top: 23.13rem;}
   .solution-page-bg li:nth-child(3) {left: 6%;top: -3rem;}
@@ -605,6 +704,32 @@
   .solution-page-bg li:nth-child(7) {left: 88.4%;top: 18rem;}
   .solution-page-bg li:nth-child(8) {left: 95.5%;top: 33.44rem;}
 
+
+
+  /* 786 솔루션 - 진짜/가짜 판별 - 개별섹션 */
+  #real_fake_section1 {padding-top: 5rem;}
+  #real_fake_section2 {padding-top: 5rem;}
+  #real_fake_section3 {padding-top: 5rem;}
+  #real_fake_section3 .btn-area {margin-top: 2.5rem;}
+  #real_fake_section4 {padding: 6rem 0 6rem;}
+  #real_fake_section4 .text-area {max-width: none;}
+  #real_fake_section4 .img-area {position: relative;left: auto;top: auto;width: 100%;}
+
+
+
+
+  /* 786 솔루션 - 영향력지수 - 개별섹션 */
+  #impact_factor_section1 .title-type1 {font-size: 2.8rem;}
+  #impact_factor_section1 {padding-top: 5rem;}
+  #impact_factor_section2 {padding-top: 5rem;}
+  #impact_factor_section3 {padding-top: 5rem;}
+  #impact_factor_section3 .btn-area {margin-top: 2.5rem;}
+  #impact_factor_section4 {padding: 6rem 0 6rem;}
+  #impact_factor_section4 .text-area {max-width: none;}
+  #impact_factor_section4 .img-area {position: relative;left: auto;top: auto;width: 100%;}
+
+
+  /* 786 솔루션 - 인플루언서 추천 - 개별섹션*/
   #influencer_recommend_section1 {padding-top: 5rem;}
   #influencer_recommend_section1 .title-type1 {font-size: 2.6rem;}
   #influencer_recommend_section1 .sub-text1 {margin: 1.8rem 0 2.5rem;}
@@ -622,7 +747,19 @@
 
 
 
-  /* 786 랭킹공통 */
+  /* 786 솔루션 - 광고 영상 분석 - 개별섹션 */
+  #advertisement_section1 {padding-top: 5rem;}
+  #advertisement_section2 {padding-top: 5rem;}
+  #advertisement_section3 {padding-top: 5rem;}
+  #advertisement_section3 .btn-area {margin-top: 2.5rem;}
+  #advertisement_section4 {padding: 6rem 0 6rem;}
+  #advertisement_section4 .text-area {max-width: none;}
+  #advertisement_section4 .img-area {position: relative;left: auto;top: auto;width: 100%;}
+
+
+
+
+  /* 786 랭킹 - 공통 */
   .my-table-wrap {margin-top: 1rem;}
   .my-table thead th {font-size: 1.2rem;}
   .my-table tbody td {font-size: 1.3rem;}
@@ -651,8 +788,7 @@
 
 
 
-
-  /* 786 랭킹 - 인스타그램 랭킹 ********************/
+  /* 786 랭킹 - 인스타그램 랭킹 */
   .ranking-page-bg li:nth-child(1) {left: 8%;top: 5rem;}
   .ranking-page-bg li:nth-child(2) {left: 7%;top: 23.13rem;}
   .ranking-page-bg li:nth-child(3) {left: 6%;top: -1rem;}
@@ -671,6 +807,8 @@
 
 
 
+  /* 786 랭킹 - 유튜브 랭킹 */
+
 
 
 
@@ -682,7 +820,7 @@
 @media screen and (max-width: 481px) { /* Mobile : 0~481 */
 
 
-  /* 481 서비스 - 인스타그램 리포트 ********************/
+  /* 481 서비스 - 인스타그램 리포트 */
   .instagram_report .btn-area {margin-top: 2rem;}
 
   #instagram_report_section1 .btn-area {text-align: center;}
@@ -691,7 +829,8 @@
 
 
 
-  /* 481 서비스 - 유튜브 리포트 ********************/
+
+  /* 481 서비스 - 유튜브 리포트 */
   .youtube_report .btn-area {margin-top: 2rem;}
 
   #youtube_report_section1 .btn-area {text-align: center;}
@@ -700,7 +839,8 @@
 
 
 
-  /* 481 서비스 - 피처링 공구 ********************/
+
+  /* 481 서비스 - 피처링 공구 */
   .group-purchase .btn-area {margin-top: 2rem;text-align: center;}
   #group_purchase_section1 .btn-area {text-align: center;}
   #group_purchase_section1 button {width: 82%;margin: 0 auto;}
@@ -709,13 +849,15 @@
 
 
 
-  /* 481 솔루션 공통 ************************************/
+  /* 481 솔루션 - 공통 */
   .search-bar-ui {width: 100%;}
   .search-bar-ui .sns-select {width: 20%;}
   .search-bar-ui .autocomplete-box {width: 80%;}
   .search-bar-ui .autocomplete-box .input-text {letter-spacing: -.05rem;}
 
-  .account-list .person-ui {padding: 2.5rem 2rem 3rem;}
+  .account-list.li-1>li {max-width: 90%;}
+  .account-list.li-1>li .person-ui {padding-top: 2rem;}
+  .account-list .person-ui {padding: 2.5rem 0 3rem;}
   .account-list .info-area {padding: .5rem 0 0 2rem !important;}
   .account-list .info-area .account-name {font-size: 1.9rem !important;}
   .account-list .info-area .account-sort {margin-top: .4rem !important;}
@@ -727,9 +869,13 @@
 
   .filter .select-area select {width: 100%;}
 
+  .recommend-box .fake-follower .btn-imgview {display: block;text-align: center;margin: .5rem auto 0;}
+  .recommend-box .fake-follower .btn-imgview i {margin: 0 !important;}
+  .recommend-box .fake-follower .layer-pop {width: 100% !important;left: 0 !important;right: auto !important;}
 
 
-  /* 481 솔루션 - 인플루언서 추천 ********************/
+
+  /* 481 솔루션 - 인플루언서 추천 */
   #influencer_recommend_section3 .img-area, #influencer_recommend_section3 .text-area {height: auto;}
   #influencer_recommend_section3 .img-area {position: relative;width: 100%;}
   #influencer_recommend_section3 .text-area {width: 65%;}
@@ -737,8 +883,16 @@
 
 
 
+  /* 481 솔루션 - 광고영상분석 */
+  .latest-ad {padding: 4rem 3rem 4rem;}
+  .latest-ad .ad-wrap .left-area, .latest-ad .ad-wrap .right-area {float: none;width: auto;}
+  .latest-ad .ad-wrap .right-area {margin-top: 3.5rem;}
+  .latest-ad .ad-wrap .right-area .video-info dl dt {width: 50%;}
 
 
+
+
+  /* 481 랭킹 - 유튜브 랭킹 */
 
 
 
