@@ -230,6 +230,7 @@
 
 
 
+
 /* 인플루언서 추천 list  **************************/
 .account-list {}
 .account-list:after {clear: both;content: '';display: block;}
@@ -268,6 +269,7 @@
 
 
 
+
 /* 필터 - 솔루션/랭킹 공통 *******************************************/
 /* 필터 select-box **************************/
 .filter .select-area {position: relative;width: 100%;}
@@ -285,7 +287,8 @@
 .filter .select-area label input[type="radio"] {width: 1.563rem;height: 1.563rem;}
 .filter .select-area label span {margin-left: .1rem;font-size: 1.375rem;color: #1b1b1b;}
 
-/* 필터 : 랭킹-page  **************************/
+
+/* 필터 : 랭킹 page  **************************/
 .filter-warp {}
 .filter-area1 {}
 .filter-area1 .display-t {width: 100%;}
@@ -298,9 +301,10 @@
 .filter-area1 .filter-btn button {}
 .filter-area1 .filter-btn .btn-type2-1 {}
 .filter-area1 .filter-btn .btn-reset {width: 5rem;height: 5rem;margin-left: 1rem;}
+.filter-area1 .filter-btn .loading-img {-webkit-background-size: 20%;background-size: 20%;}
 
 
-/* layer 필터 : 솔루션-page  **************************/
+/* layer 필터 : 솔루션 page  **************************/
 .filter-area2 {display: none;position: absolute;z-index: 50;left: 5%;top: 5.5rem;width: 90%;padding: 3rem;background: #fff;-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);-webkit-border-radius: 0.9375rem;-moz-border-radius: 0.9375rem;border-radius: 0.9375rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 .filter-area2 .display-t {width: 100%;}
 .filter-area2 .display-t .display-tc {vertical-align: top;}
@@ -311,6 +315,8 @@
 .filter-area2 .filter-btn button {margin: 0 .4rem;}
 .filter-area2 .filter-btn .btn-type2-1 {}
 .filter-area2 .filter-btn .btn-reset {width: 5rem;height: 5rem;margin-left: 1rem;}
+
+
 
 
 
@@ -337,10 +343,6 @@
 #real_fake_section4 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
 #real_fake_section4 .img-area {position: absolute;left: 58.25%;top: -2.5rem;width: 31.25rem;/*500*/}
 #real_fake_section4 .img-area img {max-width: 100%;}
-
-
-
-
 
 
 
@@ -374,26 +376,45 @@
 
 
 
-
-
-
-
-
-
-
 /*------------------------------------------------------------------------------
 | 솔루션 - 해시태그 검색
 |.............................................................................*/
-/* 해시태그 검색 - 공통 */
-
-
-
 /* 해시태그 검색 - 개별섹션 */
+#hashtag_search_section1 {text-align: center;padding-top: 8.75rem;position: relative;z-index: 2;}
+#hashtag_search_section1 .title-type1 {margin-top: 1rem;}
+#hashtag_search_section1 .sub-text1 {margin: 2.3rem 0 3.125rem;color: #484749;}
+
+#hashtag_search_section2 {padding-top: 6rem;}
+#hashtag_search_section2 .mobilebtn-area {display: none;text-align: right;position: relative;z-index: 5;}
+
+#hashtag_search_section3 {padding-top: 6.5rem;}
+#hashtag_search_section3 .img-area {position: relative;left: -1.2%;top: 0;width: 101%;}
+#hashtag_search_section3 .img-area img {width: 100%;}
+#hashtag_search_section3 .btn-area {text-align: center;margin-top: 3rem;}
+
+#hashtag_search_section4 {padding: 8.125rem	0 8rem;}
+#hashtag_search_section4 .text-area {max-width: 60%;}
+#hashtag_search_section4 .title-type2 {margin-bottom: 1.4rem;}
+#hashtag_search_section4 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
+#hashtag_search_section4 .img-area {position: absolute;left: 58.25%;top: -1.1rem;width: 34.19rem;/*547*/}
+#hashtag_search_section4 .img-area img {max-width: 100%;}
 
 
+.tag-table td span {font-size:1.125rem;}
+.tag-table .col-htag {width: 14.28%;font-weight: 200;}
+.tag-table .col-relatehtag {width: 14.28%;font-weight: 200;}
+.tag-table td.col-relatehtag span {display: block;margin: .2rem 0;}
+.tag-table .col-newlist {width: 14.28%;font-weight: 200;}
+.tag-table .col-likelist {width: 14.28%;font-weight: 200;}
+.tag-table .col-busy {width: 14.28%;}
+.tag-table .col-grow {width: 14.28%;}
+.tag-table .col-influ {width: 14.28%;font-weight: 200;}
 
-
-
+.tag-table .text-category2 {display: inline-block; background:#6e0fff; padding: .4rem 1.5rem .5rem;font-size: 1.1rem;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;color: #fff;font-weight: 400;}
+.tag-table .text-category3 {display: inline-block; background:#18DBA8; padding: .4rem 1.5rem .5rem;font-size: 1.1rem;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;color: #fff;font-weight: 400;}
+.tag-table .img-photo {display: inline-block;width: 2.5rem;height: 2.5rem;margin-top: .2rem;overflow: hidden;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
+.tag-table .img-photo img {width: 100%;height: 100%;}
+.tag-table .account-name {margin-top: .35rem;display: block;word-break: break-all;}
 
 
 
@@ -411,15 +432,9 @@
 #influencer_recommend_section2 {padding-top: 6.25rem;}
 
 #influencer_recommend_section3 {padding-top: 6.5rem;}
-#influencer_recommend_section3 .clearfix {position: relative;}
-#influencer_recommend_section3 .img-area,
-#influencer_recommend_section3 .text-area {height: 25rem;}
-#influencer_recommend_section3 .img-area {position: absolute;left: 0;top: 0;width: 56%;}
-#influencer_recommend_section3 .img-area img {width: 100%;position: absolute;}
-#influencer_recommend_section3 .text-area {position: relative;float: right;width: 48%;display: table;}
-#influencer_recommend_section3 .text-area>p {display: table-cell;width: 100%;height: 100%;background: url(../images/solution/influencer-recommend-section3-2.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;text-align: center;}
-#influencer_recommend_section3 .text-area>p>span {font-family:  NTB,'Apple SD Gothic Neo','Malgun gothic', sans-serif;font-size: 2.25rem;line-height: 1.4;}
-#influencer_recommend_section3 .btn-area {text-align: center;margin-top: 5rem;}
+#influencer_recommend_section3 .img-area {position: relative;left: -1.2%;width: 101%;}
+#influencer_recommend_section3 .img-area img {width: 100%;}
+#influencer_recommend_section3 .btn-area {text-align: center;margin-top: 3rem;}
 
 #influencer_recommend_section4 {padding: 8.125rem	0 11rem;}
 #influencer_recommend_section4 .text-area {max-width: 60%;}
@@ -427,10 +442,6 @@
 #influencer_recommend_section4 .sub-text2 {line-height: 1.6;margin-bottom: 3.125rem;font-size: 1.375rem;}
 #influencer_recommend_section4 .img-area {position: absolute;left: 58.25%;top: -2.5rem;width: 31.25rem;/*500*/}
 #influencer_recommend_section4 .img-area img {max-width: 100%;}
-
-
-
-
 
 
 
@@ -494,9 +505,6 @@
 
 
 
-
-
-
 /*------------------------------------------------------------------------------
 | 랭킹 공통
 |.............................................................................*/
@@ -517,38 +525,25 @@
 
 
 /* ranking table */
-.my-table-wrap {overflow: hidden;margin-top: 3.75rem;-webkit-border-radius: 0.9375rem 0.9375rem 3.125rem 3.125rem;-moz-border-radius: 0.9375rem 0.9375rem 3.125rem 3.125rem;border-radius: 0.9375rem 0.9375rem 3.125rem 3.125rem;-webkit-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.2);}
-.my-table {width: 100%;table-layout: fixed;}
-.my-table thead th {position: relative;background: #333;padding: 1.563rem 0 1.563rem;color: #999;font-size: 1.3rem;text-align: center !important;}
-.my-table tbody td {position: relative;padding: 1.2rem .5rem;background: #fff;vertical-align: middle;border-bottom: 1px solid #ececec;font-size: 1.5rem;color: #1b1b1b;text-align: center;font-family: HelveticaNeue, NTR, sans-serif;font-weight: 600;}
-.my-table tbody tr:last-child td {padding-bottom: 2rem;border-bottom: none;}
-.my-table td * {vertical-align: middle;}
-.my-table .img-photo {display: inline-block;width: 2.5rem;height: 2.5rem;margin-top: .2rem;overflow: hidden;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
-.my-table .img-photo img {width: 100%;height: 100%;}
-.my-table .text-name {max-width: 70%;margin-left: 0.5rem;}
-.my-table .text-category {display: inline-block;padding: .5rem 1.5rem .4rem;font-size: 1.1rem;border: 2px solid #6e0fff;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;color: #6e0fff;font-weight: 400;}
-.my-table .text-number {max-width: 100%;}
-.my-table .text-name, .my-table .text-number {display: inline-block;overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap;}
-.my-table .btn-save {display: inline-block;background: transparent;}
-.my-table .btn-save i {display: block;width: 1.563rem;height: 1.875rem;background: transparent;font-size: 0;background: url(../images/common/btn-save.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
-.my-table .btn-save.on {}
-.my-table .btn-save.on i {background-image: url(../images/common/btn-save-on.png);}
-.my-table .col-num {width: 10%;font-weight: 500;}
-.my-table .col-profile {text-align: left;}
-.my-table .col-category {width: 20%;}
-.my-table .col-effect {width: 16%;}
-.my-table .col-follower {width: 16%;}
-.my-table .col-save {width: 12%;}
-.my-table .table-filter-mobile {display: none;position: absolute;z-index: 5;left: 0;top: 0;width: 100%;}
+.ranking-table .img-photo {display: inline-block;width: 2.5rem;height: 2.5rem;margin-top: .2rem;overflow: hidden;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
+.ranking-table .img-photo img {width: 100%;height: 100%;}
+.ranking-table .text-name {max-width: 70%;margin-left: 0.5rem;}
+.ranking-table .text-category {display: inline-block;padding: .5rem 1.5rem .4rem;font-size: 1.1rem;border: 2px solid #6e0fff;-webkit-border-radius: 3.125rem;-moz-border-radius: 3.125rem;border-radius: 3.125rem;color: #6e0fff;font-weight: 400;}
+.ranking-table .text-number {max-width: 100%;}
+.ranking-table .text-name, .ranking-table .text-number {display: inline-block;overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap;}
+.ranking-table .btn-save {display: inline-block;background: transparent;}
+.ranking-table .btn-save i {display: block;width: 1.563rem;height: 1.875rem;background: transparent;font-size: 0;background: url(../images/common/btn-save.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
+.ranking-table .btn-save.on {}
+.ranking-table .btn-save.on i {background-image: url(../images/common/btn-save-on.png);}
+.ranking-table .col-num {width: 10%;font-weight: 500;}
+.ranking-table .col-profile {text-align: left;}
+.ranking-table .col-category {width: 20%;}
+.ranking-table .col-effect {width: 16%;}
+.ranking-table .col-follower {width: 16%;}
+.ranking-table .col-save {width: 12%;}
 
 
-
-
-
-
-
-
-
+.ranking-page .table-wrap {margin-top: 3.75rem;}
 
 
 /*------------------------------------------------------------------------------
@@ -560,7 +555,6 @@
 #instagram_ranking_section1 .sub-text1 {margin-top: 1.5rem;color: #454747;}
 #instagram_ranking_section2 {padding-top: 4.063rem;}
 #instagram_ranking_section2 .mobilebtn-area {display: none;text-align: right;position: relative;z-index: 5;}
-#instagram_ranking_section2 .mobilebtn-area .btn-filter {}
 #instagram_ranking_section3 {padding: 6.875rem 0 6.875rem;text-align: center;}
 #instagram_ranking_section3 .img-area {position: relative;left: -12.5%;width: 112%;}
 #instagram_ranking_section3 img {max-width: 100%;}
@@ -573,9 +567,20 @@
 
 
 /*------------------------------------------------------------------------------
-| 랭킹 - 유튜브  랭킹
+| 랭킹 - 유튜브 랭킹
 |.............................................................................*/
-/* 유튜브  랭킹 - 개별섹션 */
+/* 유튜브 랭킹 - 개별섹션 */
+#youtube_ranking_section1 {padding-top: 8.75rem;position: relative;z-index: 2;text-align: center;}
+#youtube_ranking_section1 .title-type1 {margin-top: 1rem;}
+#youtube_ranking_section1 .sub-text1 {margin-top: 1.5rem;color: #454747;}
+#youtube_ranking_section2 {padding-top: 4.063rem;}
+#youtube_ranking_section2 .mobilebtn-area {display: none;text-align: right;position: relative;z-index: 5;}
+#youtube_ranking_section2 .mobilebtn-area .btn-filter {}
+#youtube_ranking_section3 {padding: 6.875rem 0 6.875rem;text-align: center;}
+#youtube_ranking_section3 .img-area {position: relative;left: -12.5%;width: 112%;}
+#youtube_ranking_section3 img {max-width: 100%;}
+#youtube_ranking_section3 button {margin-top: 3.375rem;}
+
 
 
 
@@ -604,7 +609,7 @@
 @media screen and (max-width: 786px) { /* Tablet to Mobile : 0~786 */
 
 
-  /* 786 서비스 - 인스타그램 리포트 ********************/
+  /* 786 서비스 - 인스타그램 리포트 */
   .instagram_report .text-area {margin: 0 auto !important;}
   .instagram_report .title-description {font-size: 1.3rem;}
   .instagram_report .title-type1 {font-size: 2.6rem;}
@@ -619,7 +624,7 @@
 
 
 
-  /* 786 서비스 - 유튜브 리포트 ********************/
+  /* 786 서비스 - 유튜브 리포트*/
   .youtube_report .text-area {margin: 0 auto !important;}
   .youtube_report .title-description {font-size: 1.3rem;}
   .youtube_report .title-type1 {font-size: 2.6rem;}
@@ -634,7 +639,7 @@
 
 
 
-  /* 786 서비스 - 피처링 공구 ********************/
+  /* 786 서비스 - 피처링 공구 */
   .group-purchase .text-area {margin: 0 auto !important;}
   .group-purchase .title-description {font-size: 1.3rem;}
   .group-purchase .title-type1 {font-size: 2.6rem;}
@@ -717,7 +722,6 @@
 
 
 
-
   /* 786 솔루션 - 영향력지수 - 개별섹션 */
   #impact_factor_section1 .title-type1 {font-size: 2.8rem;}
   #impact_factor_section1 {padding-top: 5rem;}
@@ -729,21 +733,32 @@
   #impact_factor_section4 .img-area {position: relative;left: auto;top: auto;width: 100%;}
 
 
+
+  /* 786 솔루션 - 해시태그검색 - 개별섹션 */
+  #hashtag_search_section1 .title-type1 {font-size: 2.8rem;}
+  #hashtag_search_section1 {padding-top: 5rem;}
+  #hashtag_search_section2 {padding-top: 5rem;}
+  #hashtag_search_section3 {padding-top: 5rem;}
+  #hashtag_search_section3 .btn-area {margin-top: 2.5rem;}
+  #hashtag_search_section4 {padding: 6rem 0 6rem;}
+  #hashtag_search_section4 .text-area {max-width: none;}
+  #hashtag_search_section4 .img-area {position: relative;left: auto;top: auto;width: 100%;}
+  #hashtag_search_section2 .table-wrap {overflow-x: auto;}
+  #hashtag_search_section2 .table-wrap table {width: 800px;}
+
+
+
   /* 786 솔루션 - 인플루언서 추천 - 개별섹션*/
   #influencer_recommend_section1 {padding-top: 5rem;}
   #influencer_recommend_section1 .title-type1 {font-size: 2.6rem;}
   #influencer_recommend_section1 .sub-text1 {margin: 1.8rem 0 2.5rem;}
   #influencer_recommend_section2 {padding-top: 5rem;}
-  #influencer_recommend_section3 .img-area, #influencer_recommend_section3 .text-area {height: 20rem;}
-  #influencer_recommend_section3 .img-area {width: 60%;}
-  #influencer_recommend_section3 .img-area img {width: 100%;}
-  #influencer_recommend_section3 .text-area {width: 40%;}
-  #influencer_recommend_section3 .text-area>p>span {padding: 1rem;font-size: 1.5rem;}
+  #influencer_recommend_section3 {padding-top: 5rem;}
+  #influencer_recommend_section3 .btn-area {margin-top: 2.5rem;}
   #influencer_recommend_section4 {padding: 7rem 0 6rem;}
   #influencer_recommend_section4 .text-area {max-width: none;}
   #influencer_recommend_section4 .sub-text2 {margin-bottom: 3rem;}
   #influencer_recommend_section4 .img-area {position: relative;top: auto;left: auto;width: 100%;}
-
 
 
 
@@ -760,30 +775,14 @@
 
 
   /* 786 랭킹 - 공통 */
-  .my-table-wrap {margin-top: 1rem;}
-  .my-table thead th {font-size: 1.2rem;}
-  .my-table tbody td {font-size: 1.3rem;}
-  .my-table thead th.off,
-  .my-table tbody td.off {display: none !important;}
-  .my-table thead th.on,
-  .my-table tbody td.on {display: table-cell !important;}
-  .my-table .col-num {width: 12%;}
-  .my-table .col-profile {}
-  .my-table .col-category {width: 0;display: none;}
-  .my-table .col-effect {width: 30%;}
-  .my-table .col-follower {width: 30%;display: none;}
-  .my-table .col-save {width: 16%;}
+  .filter-warp+.table-wrap {margin-top: 1rem;}
+  .ranking-table .col-num {width: 12%;}
+  .ranking-table .col-profile {}
+  .ranking-table .col-category {width: 0;display: none;}
+  .ranking-table .col-effect {width: 30%;}
+  .ranking-table .col-follower {width: 30%;display: none;}
+  .ranking-table .col-save {width: 16%;}
 
-  .my-table .table-filter-mobile {display: block;}
-  .my-table .table-filter-mobile button {background: transparent;}
-  .my-table .table-filter-mobile .current-th {width: 100%;padding: 1.35rem 0 1.35rem;color: #999;font-size: 1.2rem;text-align: center;font-weight: 600;}
-  .my-table .table-filter-mobile .current-th * {display: inline-block;vertical-align: middle;}
-  .my-table .table-filter-mobile .current-th span {}
-  .my-table .table-filter-mobile .current-th i {margin-left: .2rem;width: 1rem;height: 1rem;background: url(../images/common/cmmn-sort-bk.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
-  .my-table .table-filter-mobile ul {display: none;position: absolute;width: 100%;padding: .7rem 0;background: #fff;-webkit-border-radius: 0 0 0.625rem 0.625rem;-moz-border-radius: 0 0 0.625rem 0.625rem;border-radius: 0 0 0.625rem 0.625rem;-webkit-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.5);-moz-box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.5);box-shadow: 0.25rem 0.25rem 0.75rem 0 rgba(0,0,0,.5);}
-  .my-table .table-filter-mobile ul li {float: none;}
-  .my-table .table-filter-mobile ul li.on button {color: #6e0fff;}
-  .my-table .table-filter-mobile ul li button {display: block;width: 100%;padding: .5rem .2rem;font-size: 1.3rem;text-align: center;font-weight: 600;font-family: NTR, sans-serif;}
 
 
 
@@ -808,6 +807,14 @@
 
 
   /* 786 랭킹 - 유튜브 랭킹 */
+  #youtube_ranking_section1 {padding-top: 5rem;}
+  #youtube_ranking_section1 .title-type1 {font-size: 2.6rem;}
+  #youtube_ranking_section1 .sub-text1 {width: 85%;margin: 1.8rem auto 2.5rem;}
+  #youtube_ranking_section1 .sub-text1 br {display: none;}
+  #youtube_ranking_section2 {padding-top: 0;}
+  #youtube_ranking_section2 .mobilebtn-area {display: block;}
+  #youtube_ranking_section3 {padding: 6rem 0;}
+
 
 
 

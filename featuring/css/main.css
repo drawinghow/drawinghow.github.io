@@ -43,7 +43,7 @@
 #home_search .search-bar .sns-select .sns-list li button {font-size: 1.75rem;font-family: HelveticaNeue, sans-serif;font-weight: 700;background: transparent;}
 
 #home_search .search-bar .sns-select .sns-current {display: block;width: 100%;height: 100%;text-align: center;}
-#home_search .search-bar .sns-select .sns-current .arrow {display: inline-block;width: 1.6rem;height: 1.1rem;margin: -0.55rem -1.3rem 0 0.9375rem;background: url(../images/common/arrow.svg) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;-webkit-transition: all .3s;-moz-transition: all .3s;-ms-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+#home_search .search-bar .sns-select .sns-current .arrow {display: inline-block;width: 1.6rem;height: 1.1rem;margin: -0.55rem -1.3rem 0 0.9375rem;background: url(../images/common/search-arrow.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;vertical-align: middle;-webkit-transition: all .3s;-moz-transition: all .3s;-ms-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
 #home_search .search-bar .sns-select.on .sns-current .arrow {-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);}
 
 #home_search .search-bar .sns-select .sns-icon {display: inline-block;width: 1.875rem;height: 1.875rem;margin-right: 0.625rem;margin-top: -.4rem;vertical-align: middle;}
@@ -87,7 +87,7 @@
 #home_quality .quality-list {margin-top: 4.375rem;}
 #home_quality .quality-list li {width: 33.3333%;}
 #home_quality .quality-list li div {position: relative;padding: 2.5rem 0;color: #474747;font-size: 1.625rem;line-height: 1.4;}
-#home_quality .quality-list li div:before {content: '';position: absolute;left: 0;top: 1.563rem;width: 100%;height: 100%;background: url(../images/main/quality_list_bg.svg) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
+#home_quality .quality-list li div:before {content: '';position: absolute;left: 0;top: 1.563rem;width: 100%;height: 100%;background: url(../images/main/quality_list_bg.png) center center no-repeat;-webkit-background-size: contain;background-size: contain;}
 #home_quality .quality-list li div span {position: relative;}
 #home_quality .quality-list li div span b {}
 
@@ -119,6 +119,8 @@
 #home_service1 {padding-top: 10rem;}
 #home_service1 .img-area {left: -12.63rem/*202px*/;top: -1.25rem;width: 51.06rem/*817px*/;}
 #home_service1 .text-area {margin-left: 45rem/*720px*/;}
+#home_service1 i.hand {display: inline-block;position: relative;top: -.4rem;margin-left: .5rem;width: 1.2rem;}
+#home_service1 i.hand img {width: 100%;}
 
 #home_service2 {padding-top: 10rem;}
 #home_service2 .img-area {right: -15.13rem/*242px*/;top: 0;width: 59.63rem/*954px*/;}
