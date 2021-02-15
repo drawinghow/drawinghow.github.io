@@ -435,7 +435,7 @@ header .gnb-area .gnb>li>ul>li>a .desc {display: block;padding: 0.625rem 0 0;fon
 header .gnb-area .gnb>li>ul>li>a,
 header .gnb-area .gnb>li>ul>li>a .desc {-webkit-transition: all .4s;-moz-transition: all .4s;-ms-transition: all .4s;-o-transition: all .4s;transition: all .4s;}
 
-/* active */
+/* on */
 header .gnb-area .gnb>li.on>a {color: #6e0fff;}
 header .gnb-area .gnb>li.on>a:after {width: 100%;}
 header .gnb-area .gnb>li.on>a .arrow:after {margin-top: -0.3125rem;-webkit-transform: rotate(135deg);transform: rotate(135deg);border-left-color: #6e0fff;border-bottom-color: #6e0fff;}
@@ -444,6 +444,11 @@ header .gnb-area .gnb>li>ul>li>a:hover,
 header .gnb-area .gnb>li>ul>li.on>a,
 header .gnb-area .gnb>li>ul>li>a:hover .desc,
 header .gnb-area .gnb>li>ul>li.on>a .desc  {color: #6e0fff;}
+
+/* active */
+header .gnb-area .gnb>li.active>a {color: #6e0fff !important;}
+header .gnb-area .gnb>li.active>a:after {width: 100% !important;}
+header .gnb-area .gnb>li.active>a .arrow:after {border-left-color: #6e0fff !important;border-bottom-color: #6e0fff !important;}
 
 /* login btn */
 header .topbtn-area {float: right;height: 100%;display: table;}

@@ -11,17 +11,17 @@
 	<link rel="stylesheet" type="text/css" href="./css/common.css" /><!-- Header / Footer -->
 	<!--<link rel="stylesheet" type="text/css" href="./css/sub.css" />--><!-- Sub Page CSS -->
 
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/aos.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+
 	<!-- //메인에서만 사용하는 소스 -->
 	<link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="./css/main.css" />
 	<script type="text/javascript" src="./js/swiper-bundle.min.js"></script>
-	<script type="text/javascript" src="./js/waypoints.min.js"></script>
-	<script type="text/javascript" src="./js/counterup.min.js"></script>
+	<script type="text/javascript" src="./js/countUp.js"></script>
 	<!-- 메인에서만 사용하는 소스 -->
 
-	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="./js/aos.js"></script>
-	<script type="text/javascript" src="./js/common.js"></script>
 </head>
 <body>
 
@@ -117,7 +117,7 @@
 
 		<section id="home_brand">
 			<div class="center-align">
-				<h3 class="title-type3">피처링은 <strong class="color-sub1"><span class="js-counter">2265</span>개</strong>의 브랜드와 함께합니다</h3>
+				<h3 class="title-type3">피처링은 <strong class="color-sub1"><span class="js-counter" id="homebrandCount" value="2265">0</span>개</strong>의 브랜드와 함께합니다</h3>
 			</div>
 			<div id="brand_rolling" class="swiper-container">
 				<div class="swiper-wrapper">
@@ -209,7 +209,7 @@
 
 		<section id="home_data">
 			<div class="center-align">
-				<h2 class="title-type3">지금 이 순간에도 피처링 AI앤진은 인플루언서의 <br><strong class="color-sub1"><span  class="js-counter">56,458,443,000</span>건</strong>의 데이터를 분석하고 있습니다</h2>
+				<h2 class="title-type3">지금 이 순간에도 피처링 AI앤진은 인플루언서의 <br><strong class="color-sub1"><span  class="js-counter" id="homedataCount" value="56458443000">0</span>건</strong>의 데이터를 분석하고 있습니다</h2>
 			</div>
 		</section>
 
@@ -446,11 +446,37 @@
 			}
 	});
 
-	//카운팅
-	counter = $('.js-counter').counterUp({
-			delay: 10,
-			time: 500
-	});
+
+
+	//main-counting
+  function isTopInViewport(elem, percent = 0.98) {
+      return elem.getBoundingClientRect().top < window.innerHeight * percent
+  }
+
+  const countUpElems = document.querySelectorAll('.js-counter');
+
+  function startCountUp1() {
+      if (isTopInViewport(countUpElems[0], 0.75)) {
+          counted = true;
+          const countUp1 = new CountUp('homebrandCount', 0, 2265, 0, 1.2);
+          countUp1.start();
+          window.removeEventListener('scroll', startCountUp1)
+
+      }
+  }
+	function startCountUp2() {
+      if (isTopInViewport(countUpElems[1], 0.75)) {
+          counted = true;
+          const countUp2 = new CountUp('homedataCount', 0, 56458443000, 0, 1.2);
+          countUp2.start();
+          window.removeEventListener('scroll', startCountUp2)
+      }
+  }
+  window.addEventListener('scroll', startCountUp1);
+  window.addEventListener('scroll', startCountUp2);
+
+
+
 
 </script>
 <!-- //Main-page 에서만 사용-->
