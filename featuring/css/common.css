@@ -480,7 +480,7 @@ header .gnb-mobile li {float: none;}
 header .gnb-mobile li a {display: block;font-size: 1.6rem;padding-left: 2rem !important;font-family: NTM,'Apple SD Gothic Neo','Malgun gothic', sans-serif;}
 header .gnb-mobile li a:hover {color: #6e0fff;}
 
-header .gnb-mobile>li>a {position: relative;padding: 1.5rem;border-bottom: 1px solid #ebebeb;}
+header .gnb-mobile>li>a {position: relative;padding: 1.8rem;border-bottom: 1px solid #ebebeb;}
 header .gnb-mobile>li>a .arrow {position: absolute;right: 2.5rem;top: 50%;display: inline-block;vertical-align: middle;margin-top: -.1rem;margin-left: 0.75rem;width: 0.7rem;height: 0.7rem;}
 header .gnb-mobile>li>a .arrow:after {content: '';position: absolute;top: 50%;margin-top: -0.75rem;width: 100%;height: 100%;border-left: 2px solid #1b1b1b;border-bottom: 2px solid #1b1b1b;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);-webkit-transition: all .3s;-moz-transition: all .3s;-ms-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
 header .gnb-mobile>li>ul {display: none;padding: 1rem 0 1.4rem;}
