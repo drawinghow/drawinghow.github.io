@@ -23,10 +23,10 @@
 			<h1 class="logo-area"><a href=""><img src="./images/common/header-logo.png" alt="featuring"></a></h1>
 			<div class="gnb-area">
 				<ul class="gnb">
-					<li class="has-sub active"><a href="javascript:void(0);">서비스<i class="arrow"></i></a><!--class="active" : 현재페이지(1depth) 활성화 -->
-						<ul>
+					<li class="has-sub active"><a href="javascript:void(0);">서비스<i class="arrow"></i></a>
+						<ul><!--.on : 활성화 / .active 머무는페이지 -->
 							<li><a href="">인스타그램 리포트<span class="desc">진짜 영향력 분석</span></a></li>
-							<li class="on"><a href="">유튜브 리포트<span class="desc">광고 영상 비교 분석</span></a></li><!--class="on" : 현재페이지(2depth) 활성화 -->
+							<li class="active"><a href="">유튜브 리포트<span class="desc">광고 영상 비교 분석</span></a></li><!--.on : 활성화 / .active 머무는페이지 -->
 							<li><a href="">피처링 공구<span class="desc">인스타 마켓 성공전략</span></a></li>
 						</ul>
 					</li>
@@ -56,16 +56,41 @@
 					<!--<button class="btn-type1-1"><span>Apps</span></button>--><!--로그인 후-->
 				</div>
 			</div>
+
 			<!-- Mobile GNB -->
-			<button class="mobile-gnb-open">open</button>
-			<div class="gnb-area-mobile">
-				<div class="gnbtop">
-					<div class="logo-mobile">featuring</div>
-					<button class="btn-close"><span>닫기</span></button>
-				</div>
+			<button class="gnb-mobile-toggle"><span>menu</span></button>
+			<div class="gnb-mobile-area">
 				<ul class="gnb-mobile">
-					<!--링크 구조 동일-->
+          <li class="has-sub"><a href="javascript:void(0);">서비스<i class="arrow"></i></a><!--.on : 활성화 / .active 머무는페이지 -->
+            <ul>
+              <li><a href="">인스타그램 리포트</a></li>
+              <li><a href="">유튜브 리포트</a></li><!--.on : 활성화 / .active 머무는페이지 -->
+              <li><a href="">피처링 공구</a></li>
+            </ul>
+          </li>
+          <li class="has-sub"><a href="javascript:void(0);">솔루션<i class="arrow"></i></a>
+            <ul>
+              <li><a href="">진짜/가짜 판별</a></li>
+              <li><a href="">영향력 지수</a></li>
+              <li><a href="">해시태그 검색</a></li>
+              <li><a href="">인플루언서 추천</a></li>
+              <li><a href="">광고 영상 분석</a></li>
+            </ul>
+          </li>
+          <li class="has-sub"><a href="javascript:void(0);">랭킹<i class="arrow"></i></a>
+            <ul>
+              <li><a href="">인스타그램 랭킹</a></li>
+              <li><a href="">유튜브 랭킹</a></li>
+            </ul>
+          </li>
+          <li><a href="">멤버십</a></li>
+          <li><a href="">블로그</a></li>
 				</ul>
+        <div class="gnb-mobile-btnwarp">
+          <button class="btn-type2-0"><span>로그인</span></button>
+          <button class="btn-type2-1"><span>지금 시작하기</span></button>
+          <!--<button class="btn-type2-1"><span>Apps</span></button>--><!--로그인 후-->
+        </div>
 			</div>
 			<!--//Mobile GNB -->
 		</div>

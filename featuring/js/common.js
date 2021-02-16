@@ -1,3 +1,18 @@
+var mql = window.matchMedia('screen and (max-width: 980px)'); //header pc-mobile 바뀌는 지점
+mql.addListener(function(e) {
+    if (e.matches) {
+        //980px 이하 (tablet & mobile)
+        console.log('980px 이하');
+
+    } else {
+        //981px 이상 (PC)
+        console.log('981px 이상');
+        $('header .gnb-mobile-toggle').removeClass('on');
+        $('header .gnb-mobile-area').slideUp(100);
+        $('header .gnb-mobile li').removeClass('on').find('ul').slideUp(100);
+    }
+});
+
 
 //Focus 함수
 function fnSetFocus(type, type_nm, add_top) {
@@ -20,6 +35,10 @@ function fnSetFocus(type, type_nm, add_top) {
 
 
 $(document).ready(function () {
+    var headerHeight =$('header').height();
+    $('header .gnb-mobile-area').css({top: headerHeight+1});
+    $('#container').css({'padding-top': headerHeight});
+
 
     //PC GNB
     $('header .gnb-area .gnb>li>a').on('mouseover',function(){
@@ -34,6 +53,23 @@ $(document).ready(function () {
     $('header .gnb-area .gnb>li').mouseleave(function(){
         $('header .gnb-area .gnb>li').removeClass('on');
         $('header .gnb-area .gnb>li ul').stop().slideUp(300);
+    });
+
+    //Mobile GNB
+    $('header .gnb-mobile-toggle').on('click', function() {
+        if($(this).hasClass('on')){
+            $(this).removeClass('on').next('.gnb-mobile-area').stop().slideUp(200);
+        }else{
+            $(this).addClass('on').next('.gnb-mobile-area').stop().slideDown(200);
+        }
+    });
+    $('header .gnb-mobile>li.has-sub>a').on('click',function(){
+        if($(this).parent().hasClass('on')){
+            $(this).next('ul').stop().slideUp(300).parent().removeClass('on');
+        }else{
+            $(this).parent().siblings().removeClass('on').find('ul').stop().slideUp(200);
+            $(this).next('ul').stop().slideDown(300).parent().addClass('on');
+        }
     });
 
 
@@ -148,7 +184,7 @@ $(document).ready(function () {
 
 
     //ranking save btn
-    $('.my-table .btn-save').on('click', function (e) {
+    $('.ranking-table .btn-save').on('click', function (e) {
         e.preventDefault();
         if($(this).hasClass('on')){
             $(this).removeClass('on');
