@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>AIRQUAY</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui-1.9.2.custom.min.js"></script>
+</head>
+<body>
+
+	<style>
+
+		header {position: relative;background: #19a0e5;-webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.25);-moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.25);box-shadow: 0 5px 10px 0 rgba(0,0,0,.25);}
+		header>.center-align {padding: 0 50px;display: table;width: 100%;height: 88px;}
+		header .logo-area,
+		header .user-area {display: table-cell;vertical-align: middle;}
+		header .user-area {color: #fff;text-align: right;}
+		header .user-area [class^="btn_"] {display: inline-block;vertical-align: middle;}
+		header .user-area .btn_user {padding: 5px;text-align: right;font-size: 24px;color: #fff;font-family: 'montsrt','Noto Sans KR','Apple SD Gothic Neo','Malgun gothic','Helvetica','Dotum',sans-serif;}
+		header .user-area .btn_user:after {content: '';display: inline-block;height: 0;margin-left: 10px;margin-top: -1px;border-top: 8px solid #fff;border-left: 5px solid transparent;border-right: 5px solid transparent;vertical-align: middle;}
+		header .user-area .btn_notice_sign {margin-top: -3px;margin-left: 14px;padding: 5px;width: 24px;height: 24px;background: url(./images/common/notice_sign.png) 0 0 no-repeat;font-size: 0;}
+		header .user-area .btn_notice_sign.on {background-position: 0 -24px;}
+
+
+		#contianer {}
+
+
+
+		/* search area */
+		.con_top {position: relative;margin-top: 52px;}
+		.con_top .search_area {position: relative;width: 484px;height: 50px;margin: 0 auto;-webkit-border-radius: 60px;-moz-border-radius: 60px;border-radius: 60px;border: 1px solid #ced4da;}
+		.con_top .search_area input[type="text"] {display: block;width: 80%;margin: 8px 20px;height: 30px;text-indent: 10px;font-size: 18px;border: 0;outline: none;}
+		.con_top .search_area .btn_search {display: block;position: absolute;right: 10px;top: 0;width: 60px;height: 100%;background: url(./images/common/icon_search.png) center center no-repeat;border: none;}
+
+		/* list view mode */
+		.con_top .list_view_type {position: absolute;right: 52px;top: 0;display: table;width: 216px;height: 32px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+		.con_top .list_view_type li {display: table-cell;vertical-align: middle;width: 33.3333%;position: relative;border-top: 1px solid #ced4da;border-bottom: 1px solid #ced4da;border-right: 1px solid #ced4da;}
+		.con_top .list_view_type li:first-child {border-left: 1px solid #ced4da;}
+		.con_top .list_view_type li.type1 {-webkit-border-radius: 4px 0 0 4px;-moz-border-radius: 4px 0 0 4px;border-radius: 4px 0 0 4px;}
+		.con_top .list_view_type li.type2 {}
+		.con_top .list_view_type li.type3 {-webkit-border-radius: 0 4px 4px 0;-moz-border-radius: 0 4px 4px 0;border-radius: 0 4px 4px 0;}
+		.con_top .list_view_type li .btn {display: block;width: 100%;text-align: center;}
+		.con_top .list_view_type li .btn i {display: inline-block;width: 32px;height: 32px;vertical-align: middle;background: url(./images/common/list_view_type.png) 0 0 no-repeat;font-size: 0;}
+		.con_top .list_view_type li.type1 .btn i {}
+		.con_top .list_view_type li.type2 .btn i {-ms-background-position-x: -32px;background-position-x: -32px;}
+		.con_top .list_view_type li.type3 .btn i {-ms-background-position-x: -64px;background-position-x: -64px;}
+
+		.con_top .list_view_type li.on {border-color: #19a0e5;}
+		.con_top .list_view_type li.on .btn {background: #19a0e5;}
+		.con_top .list_view_type li.on .btn i {-ms-background-position-y: -32px;background-position-y: -32px;}
+
+
+
+	</style>
+	<script>
+		$(document).ready(function () {
+			$('.list_view_type li button').click(function () {
+				$(this).parent().addClass('on').siblings().removeClass('on');
+      });
+    });
+	</script>
+
+
+
+
+<div id="wrap">
+	<header>
+		<div class="center-align">
+			<div class="logo-area"><a href=""><img src="./images/common/header_logo.png" alt="AIRQUAY"></a></div>
+			<div class="user-area">
+				<button class="btn_user">User</button>
+				<button class="btn_notice_sign">알림</button><!--class="on" 추가시 활성화-->
+			</div>
+		</div>
+	</header>
+
+	<section id="container" class="">
+
+		<article class="con_top">
+			<div class="search_area">
+				<input type="text">
+				<button class="btn_search">검색</button>
+			</div>
+			<ul class="list_view_type">
+				<li class="type1 on"><button class="btn"><i>type1</i></button></li>
+				<li class="type2"><button class="btn"><i>type2</i></button></li>
+				<li class="type3"><button class="btn"><i>type3</i></button></li>
+			</ul>
+		</article>
+
+
+		<style>
+			.networkboxs {margin-top: 52px;padding: 0 52px;}
+			.networkboxs:after {clear: both;content: '';display: block;}
+
+			/* list view mode */
+			.view_mode1 {}
+			.view_mode2 {}
+			.view_mode3 {}
+
+
+			.n_box {width: 584px;height: 362px;/*사이즈 수정*/-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;overflow: hidden;-webkit-box-shadow: 1px 1px 6px 0 #cfd8dc;-moz-box-shadow: 1px 1px 6px 0 #cfd8dc;box-shadow: 1px 1px 6px 0 #cfd8dc;}
+			.n_box .boxtop {display: table;width: 100%;height: 56px;background: #19a0e5;color: #fff;}
+			.n_box .boxtop .tit, .n_box .boxtop .sort {display: table-cell;vertical-align: middle;font-family: 'montsrt','Noto Sans KR','Apple SD Gothic Neo','Malgun gothic','Helvetica','Dotum',sans-serif;}
+			.n_box .boxtop .tit {padding-left: 28px;font-size: 20px;}
+			.n_box .boxtop .sort {padding-right: 28px;font-weight: 200;}
+
+
+
+		</style>
+
+		<div class="networkboxs view_mode1">
+			<article class="n_box">
+				<div class="boxtop">
+					<p class="tit">AirQuay_HQ_Korea01</p>
+					<p class="sort">
+						<span>IDS <i></i></span>
+						<span>IPS <i></i></span>
+						<span>AMP <i></i></span>
+					</p>
+				</div>
+				<div class="boxmiddle">
+					<div>
+						<ul>
+							<li>
+								<p><i></i></p>
+								<p>MX</p>
+							</li>
+							<li>
+								<p><i></i></p>
+								<p>MS</p>
+							</li>
+							<li>
+								<p><i></i></p>
+								<p>MR</p>
+							</li>
+							<li>
+								<p><i></i></p>
+								<p>MV</p>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<p>
+							<span><em>67</em> ms</span>
+							<span>지연시간</span>
+						</p>
+						<p>
+							<span><em>88</em> %</span>
+							<span>회선상태</span>
+						</p>
+					</div>
+				</div>
+				<div class="boxbottom">
+					<p>
+						<span><em>3.40</em> Mb/s</span>
+						<span>N/W 트래픽</span>
+					</p>
+					<p>
+						<span>12</span>
+						<span>33</span>
+						<span>18</span>
+						<span>클라이언트</span>
+					</p>
+					<p>
+						<span><em>636.16</em> GB</span>
+						<span>데이터사용량</span>
+					</p>
+				</div>
+			</article>
+		</div><!--//boxs_wrap-->
+	</section>
+</div><!--//wrap-->
+
+</body>
+</html>
+
