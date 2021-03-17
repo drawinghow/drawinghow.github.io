@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>AIRQUAY</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./css/font.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/nanoscroller.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<script type="text/javascript" src="./js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.nanoscroller.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+</head>
+<body>
+
+
+<div id="wrap">
+	<!--gnb-->
+	<section id="gnb_wrap">
+		<div id="gnb">
+			<div class="user_area">
+				<a href="javascript:;" class="icon_networklist"></a>
+				<span class="user">User</span>
+				<!--notice-->
+				<div id="gnb_notice_area">
+					<button class="gnb_notice on">알림</button><!--on : 활성화-->
+					<div id="gnb_notice_box">
+						<p class="top_notice_tit">네트워크 통합 알림</p>
+						<table class="tbl_st1">
+							<colgroup>
+								<col style="width: 45%;">
+								<col style="width: 20%;">
+								<col>
+							</colgroup>
+							<tr>
+								<th>종류</th>
+								<th>발생일자</th>
+								<th>네트워크 이름</th>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea02</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea05</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">게이트웨이 오프라인</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea01</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--//notice-->
+			</div>
+			<!--gnb menu-->
+			<ul class="gnb_menu">
+				<li class="dashboard"><a href="javascript:;"><span class="text">통합 대시보드</span></a></li>
+				<li class="client"><a href="javascript:;"><span class="text">클라이언트</span></a></li>
+				<li class="equipment"><a href="javascript:;"><span class="text">장비</span></a></li>
+				<li class="topology"><a href="javascript:;"><span class="text">토폴로지</span></a></li>
+				<li class="notice"><a href="javascript:;"><span class="text">알림설정</span></a></li>
+				<li class="log on"><a href="javascript:;"><span class="text">로그</span></a></li><!--li.on 메뉴 활성화-->
+				<li class="systemlog"><a href="javascript:;"><span class="text">시스템 로그</span></a></li>
+			</ul>
+			<!--//gnb menu-->
+			<div class="logout"><a href="javascript:;">logout</a></div>
+			<button class="btn_gnb_control on">gnb-fold</button>
+		</div>
+	</section>
+	<!--//gnb-->
+
+	<!--contents-->
+	<section id="contents">
+		<div class="subtop">
+			<h1 class=" tit1">AirQuay_HQ_Korea</h1>
+		</div>
+
+		<article class="line">
+			<div class="tit2">
+				<span>로그</span>
+				<span class="txt ml10 va_0">전체 : 27개</span>
+				<div class="filter">
+					<button class="btn_st2 fleft" onclick="popup_open('pop_search')">로그 검색</button>
+					<div class="selectbox_area">
+						<button class="btn_toggle"><span>View 30</span><i class="arrow"></i></button>
+						<ul>
+							<li class="on"><button>View 30</button></li>
+							<li><button>View 50</button></li>
+							<li><button>View 100</button></li>
+						</ul>
+					</div><!--//selectbox-->
+
+					<!--로그검색내용-->
+					<ul class="sch_add_area">
+						<li>
+							<span class="inputs">
+								<em class="text">
+									<b class="t1">종류</b>
+									<b class="t2">: air marshal</b>
+								</em>
+								<button class="btn_delete"></button>
+							</span>
+						</li>
+						<li>
+							<span class="inputs">
+								<em class="text">
+									<b class="t1">장비 MAC</b>
+									<b class="t2">: 00:0:00:00:00:00</b>
+								</em>
+								<button class="btn_delete"></button>
+							</span>
+						</li>
+						<li>
+							<span class="inputs">
+								<em class="text">
+									<b class="t1">장비 시리얼 번호</b>
+									<b class="t2">: Q2kn-u3hx-facy</b>
+								</em>
+								<button class="btn_delete"></button>
+							</span>
+						</li>
+						<li>
+							<span class="inputs">
+								<em class="text">
+									<b class="t1">장비명</b>
+									<b class="t2">: ap01_rnd</b>
+								</em>
+								<button class="btn_delete"></button>
+							</span>
+						</li>
+					</ul>
+					<!--//로그검색내용-->
+				</div>
+				<!--//filter-->
+			</div>
+
+			<div class="box_st1 w100 mt20">
+        <!--thead-->
+				<table class="tbl_st4">
+					<colgroup>
+						<col style="width: 18%;">
+						<col>
+						<col style="width: 21%;">
+						<col style="width: 15%;">
+						<col style="width: 15%;">
+						<col style="width: 12%;">
+					</colgroup>
+					<tr>
+						<th>발생 시간<i class="arr"></i></th>
+						<th>종류<i class="arr"></i></th>
+						<th>내용<i class="arr"></i></th>
+						<th>장비 MAC<i class="arr"></i></th>
+						<th>장비 시리얼 번호<i class="arr"></i></th>
+						<th>장비명<i class="arr"></i></th>
+					</tr>
+        </table>
+        <!--//thead-->
+        <!--tbody-->
+				<div class="js-scrollbar nano tbl_st4_view15">
+					<div class="nano-content">
+						<table class="tbl_st4">
+							<colgroup>
+								<col style="width: 18%;">
+								<col>
+								<col style="width: 21%;">
+								<col style="width: 15%;">
+								<col style="width: 15%;">
+								<col style="width: 12%;">
+							</colgroup>
+							<tr>
+								<td>2020-07-24 13:45:22</td>
+								<td>Air Marshal - 악성 AP 발견</td>
+								<td>00:00:00:44:44:44 / seen on LAN</td>
+								<td>00:0:00:00:00:00</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>ap01_rnd</td>
+							</tr>
+							<tr>
+								<td>2020-07-24 13:45:22</td>
+								<td>Air Marshal - 악성 AP 발견</td>
+								<td>00:00:00:44:44:44 / seen on LAN</td>
+								<td>00:0:00:00:00:00</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>ap01_rnd</td>
+							</tr>
+							<tr>
+								<td>2020-07-24 13:45:22</td>
+								<td>Air Marshal - 악성 AP 발견</td>
+								<td>00:00:00:44:44:44 / seen on LAN</td>
+								<td>00:0:00:00:00:00</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>ap01_rnd</td>
+							</tr>
+							<tr>
+								<td>2020-07-24 13:45:22</td>
+								<td>Air Marshal - 악성 AP 발견</td>
+								<td>00:00:00:44:44:44 / seen on LAN</td>
+								<td>00:0:00:00:00:00</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>ap01_rnd</td>
+							</tr>
+							<tr>
+								<td>2020-07-24 13:45:22</td>
+								<td>Air Marshal - 악성 AP 발견</td>
+								<td>00:00:00:44:44:44 / seen on LAN</td>
+								<td>00:0:00:00:00:00</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>ap01_rnd</td>
+							</tr>
+							<tr>
+								<td>2020-07-24 13:45:22</td>
+								<td>Air Marshal - 악성 AP 발견</td>
+								<td>00:00:00:44:44:44 / seen on LAN</td>
+								<td>00:0:00:00:00:00</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>ap01_rnd</td>
+							</tr>
+							<tr>
+								<td>2020-07-24 13:45:22</td>
+								<td>Air Marshal - 악성 AP 발견</td>
+								<td>00:00:00:44:44:44 / seen on LAN</td>
+								<td>00:0:00:00:00:00</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>ap01_rnd</td>
+							</tr>
+						</table>
+					</div>
+        </div>
+        <!--//tbody-->
+				<!--paging-->
+				<article class="paging_area pt25 pb30">
+					<ul class="paging">
+						<li class="prev"><button class="btn_prev">이전</button></li>
+						<li class="number">
+							<input type="text" value="1" class="this_page"><span class="bar">/</span><span class="all_page">10</span>
+						</li>
+						<li class="next"><button class="btn_next">다음</button></li>
+					</ul>
+				</article>
+				<!--//paging-->
+			</div>
+		</article>
+
+	</section>
+	<!--//contents-->
+
+
+  <!--팝업-->
+  <div id="pop_search" class="text_popup popup"><!-- 개발시 style="display: block;" 삭제 // id 변경 가능-->
+    <p class="popbg" onclick="popup_close('pop_search')"></p>
+    <div class="pop_in">
+      <div class="search_area">
+        <p class="tit3"><span class="txt1">발생날짜</span></p>
+        <div class="date_area">
+          <div class="d_tcell">
+            <input type="text" id="StartDate" readonly>
+            <button id="btn_date1" class="btn_calendar">달력</button>
+            <!--팝업-->
+            <div id="pop_date1" class="pop_calendar" style="visibility: hidden;">
+              <div class="date1" data-altfield="#StartDate"><!--date1 달력--></div>
+            </div>
+            <!--//팝업-->
+          </div>
+          <p class="d_tcell bar">~</p>
+          <div class="d_tcell">
+            <input type="text" id="EndDate" readonly>
+            <button id="btn_date2" class="btn_calendar">달력</button>
+            <!--팝업-->
+            <div id="pop_date2" class="pop_calendar" style="visibility: hidden;">
+              <div class="date2" data-altfield="#EndDate"><!--date2 달력--></div>
+            </div>
+            <!--//팝업-->
+          </div>
+        </div>
+        <!--//date_area-->
+        <div class="sch_input clearfix">
+          <dl class="fleft">
+            <dt>종류</dt>
+            <dd><input type="text"></dd>
+          </dl>
+          <dl class="fright">
+            <dt>장비 MAC</dt>
+            <dd><input type="text"></dd>
+          </dl>
+        </div>
+        <div class="sch_input">
+          <dl class="fleft">
+            <dt>장비 시리얼 번호</dt>
+            <dd><input type="text"></dd>
+          </dl>
+          <dl class="fright">
+            <dt>장비명</dt>
+            <dd><input type="text"></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="btns_area">
+        <button class="pop_btn" onclick="popup_close('pop_search')">취소</button>
+        <button class="pop_btn" onclick="">적용</button>
+      </div>
+    </div>
+  </div>
+  <!--//팝업-->
+
+</div><!--//wrap-->
+
+<!-- datepicker 스크립트 - 개발시 수정하여 사용 -->
+<script>
+
+  var pop_date1 = document.all.pop_date1;
+  var pop_date2 = document.all.pop_date2;
+
+  //팝업- view/hidden
+  function popupDate1() {
+      if( pop_date1.style.visibility == 'hidden' ){
+          pop_date1.style.visibility = 'visible';
+          $('#btn_date1').addClass('on');
+      }else{
+          pop_date1.style.visibility = 'hidden';
+          $('#btn_date1').removeClass('on');
+      }
+  }
+
+  function popupDate2() {
+      if( pop_date2.style.visibility == 'hidden' ){
+          pop_date2.style.visibility = 'visible';
+          $('#btn_date2').addClass('on');
+      }else{
+          pop_date2.style.visibility = 'hidden';
+          $('#btn_date2').removeClass('on');
+      }
+  }
+
+
+  $(document).ready(function () {
+
+      //팝업실행
+      $('#btn_date1').click(function () {
+          var StartDate = $('#StartDate').val();  //시작일-변경해서 쓰세요
+          date1calendar(StartDate);
+      });
+
+      $('#btn_date2').click(function () {
+          var EndDate = $('#EndDate').val();  //시작일-변경해서 쓰세요
+          date2calendar(EndDate);
+      });
+
+
+      //datepicker.js
+      function date1calendar(StartDate) {
+          //새로운 디폴트 날짜 적용 위해 옵션 없애기
+          $('.date1').datepicker('destroy');
+
+          //시작일 달력
+          $('.date1').each(function () {
+              var $d = $(this);
+              $d.datepicker({
+                  altField: $d.data('altfield'),  //선택한 날짜가 해당 폼에 입력된다.
+                  dateFormat:'yy-mm-dd',
+                  showMonthAfterYear : true,
+                  monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'], //달력의 월 부분 텍스트
+                  monthNames: ['.01','.02','.03','.04','.05','.06','.07','.08','.09','.10','.11','.12'] ,//달력의 월 부분 Tooltip 텍스트
+                  dayNamesMin: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], //달력의 요일 부분 텍스트
+                  defaultDate: StartDate,
+                  onSelect: function(dateText) {
+                      popupDate1();
+                      //참고: alert("Selected date: " + dateText + "; input's current value: " + this.value);
+                  }// 날짜 선택시 이벤트
+              });
+          });
+          popupDate1();
+      } //datepicker1
+
+
+      function date2calendar(EndDate) {
+          //새로운 디폴트 날짜 적용 위해 옵션 없애기
+          $('.date2').datepicker('destroy');
+
+          //시작일 달력
+          $('.date2').each(function () {
+              var $d = $(this);
+              $d.datepicker({
+                  altField: $d.data('altfield'),  //선택한 날짜가 해당 폼에 입력된다.
+                  dateFormat:'yy-mm-dd',
+                  showMonthAfterYear : true,
+                  monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'], //달력의 월 부분 텍스트
+                  monthNames: ['.01','.02','.03','.04','.05','.06','.07','.08','.09','.10','.11','.12'] ,//달력의 월 부분 Tooltip 텍스트
+                  dayNamesMin: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], //달력의 요일 부분 텍스트
+                  defaultDate: EndDate,
+                  onSelect: function(dateText) {
+                      popupDate2();
+                      //참고: alert("Selected date: " + dateText + "; input's current value: " + this.value);
+                  }// 날짜 선택시 이벤트
+              });
+          });
+          popupDate2();
+      } //datepicker2
+
+
+  });//$(document).ready
+</script>
+<!-- //datepicker 스크립트 - 개발시 수정하여 사용 -->
+
+
+
+</body>
+</html>
+

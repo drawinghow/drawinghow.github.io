@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>AIRQUAY</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./css/font.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/nanoscroller.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<script type="text/javascript" src="./js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.nanoscroller.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+</head>
+<body>
+
+
+<div id="wrap">
+	<!--gnb-->
+	<section id="gnb_wrap">
+		<div id="gnb">
+			<div class="user_area">
+				<a href="javascript:;" class="icon_networklist"></a>
+				<span class="user">User</span>
+				<!--notice-->
+				<div id="gnb_notice_area">
+					<button class="gnb_notice on">알림</button><!--on : 활성화-->
+					<div id="gnb_notice_box">
+						<p class="top_notice_tit">네트워크 통합 알림</p>
+						<table class="tbl_st1">
+							<colgroup>
+								<col style="width: 45%;">
+								<col style="width: 20%;">
+								<col>
+							</colgroup>
+							<tr>
+								<th>종류</th>
+								<th>발생일자</th>
+								<th>네트워크 이름</th>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea02</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea05</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">게이트웨이 오프라인</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea01</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--//notice-->
+			</div>
+			<!--gnb menu-->
+			<ul class="gnb_menu">
+				<li class="dashboard"><a href="javascript:;"><span class="text">통합 대시보드</span></a></li>
+				<li class="client"><a href="javascript:;"><span class="text">클라이언트</span></a></li>
+				<li class="equipment"><a href="javascript:;"><span class="text">장비</span></a></li>
+				<li class="topology on"><a href="javascript:;"><span class="text">토폴로지</span></a></li><!--li.on 메뉴 활성화-->
+				<li class="notice"><a href="javascript:;"><span class="text">알림설정</span></a></li>
+				<li class="log"><a href="javascript:;"><span class="text">로그</span></a></li>
+				<li class="systemlog"><a href="javascript:;"><span class="text">시스템 로그</span></a></li>
+			</ul>
+			<!--//gnb menu-->
+			<div class="logout"><a href="javascript:;">logout</a></div>
+			<button class="btn_gnb_control on">gnb-fold</button>
+		</div>
+	</section>
+	<!--//gnb-->
+
+	<!--contents-->
+	<section id="contents">
+		<div class="subtop">
+			<h1 class=" tit1">AirQuay_HQ_Korea</h1>
+		</div>
+
+		<div id="node_wrap" class=""><!--class="edit_mode" 일 때 삭제버튼 노출-->
+
+			<ul class="depth1">
+				<li>
+					<!--
+					* node 에러 : mark_red 클래스 추가
+
+					* node 삭제 위치 변경&추가시 바꿔줘야 하는 클래스
+            - node 라인 클래스 변경 : r_line1 ~ r_line2 / l_line1 ~ l_line3
+            - node 높이 변경('margin-top') : row1~row5
+          -->
+					<div class="node row3 r_line1 row1">
+						<a href="javascript:;" class="btn_node">
+							<div class="icon_area">
+								<i class="mx"></i>
+								<p class="i_t">MX84</p>
+							</div>
+							<div class="txt_area">
+								<p class="t1">RnD001</p>
+								<p class="t2">Qhid-ordj-when</p>
+								<p class="t3">ff:6j:12:95:gy:3h</p>
+							</div>
+						</a>
+						<button class="btn_delete">삭제</button>
+					</div>
+
+					<ul class="depth2">
+						<li>
+							<div class="node row2 r_line1 l_line1">
+								<a href="javascript:;" class="btn_node">
+									<div class="icon_area">
+										<i class="ms"></i>
+										<p class="i_t">Mr220-24p</p>
+									</div>
+									<div class="txt_area">
+										<p class="t1">RnD_SW</p>
+										<p class="t2">Qhid-ordj-when</p>
+										<p class="t3">ff:6j:12:95:gy:3h</p>
+									</div>
+								</a>
+								<button class="btn_delete">삭제</button>
+							</div>
+
+							<ul class="depth3">
+									<li>
+										<div class="node l_line1">
+											<a href="javascript:;" class="btn_node">
+												<div class="icon_area">
+													<i class="mr"></i>
+													<p class="i_t">Mr34</p>
+												</div>
+												<div class="txt_area">
+													<p class="t1">대회의실_AP</p>
+													<p class="t2">Qhid-ordj-when</p>
+													<p class="t3">ff:6j:12:95:gy:3h</p>
+												</div>
+											</a>
+											<button class="btn_delete">삭제</button>
+										</div>
+									</li>
+									<li>
+										<div class="node l_line3">
+											<a href="javascript:;" class="btn_node">
+												<div class="icon_area">
+													<i class="mr"></i>
+													<p class="i_t">Mr34</p>
+												</div>
+												<div class="txt_area">
+													<p class="t1">대회의실_AP</p>
+													<p class="t2">Qhid-ordj-when</p>
+													<p class="t3">ff:6j:12:95:gy:3h</p>
+												</div>
+											</a>
+											<button class="btn_delete">삭제</button>
+										</div>
+									</li>
+									<li>
+										<div class="node l_line2">
+											<a href="javascript:;" class="btn_node">
+												<div class="icon_area">
+													<i class="mr"></i>
+													<p class="i_t">Mr34</p>
+												</div>
+												<div class="txt_area">
+													<p class="t1">서버실_AP</p>
+													<p class="t2">Qhid-ordj-when</p>
+													<p class="t3">ff:6j:12:95:gy:3h</p>
+												</div>
+											</a>
+											<button class="btn_delete">삭제</button>
+										</div>
+									</li>
+									<li>
+										<div class="node l_line2 mark_red"><!--mark_red 추가시 에러-->
+											<a href="javascript:;" class="btn_node">
+												<div class="icon_area">
+													<i class="mr"></i>
+													<p class="i_t">Mr34</p>
+												</div>
+												<div class="txt_area">
+													<p class="t1">MAIN_AP</p>
+													<p class="t2">Qhid-ordj-when</p>
+													<p class="t3">ff:6j:12:95:gy:3h</p>
+												</div>
+											</a>
+											<button class="btn_delete">삭제</button>
+										</div>
+									</li>
+								</ul><!--//depth3-->
+
+						</li>
+						<li>
+							<div class="node l_line2">
+								<a href="javascript:;" class="btn_node">
+									<div class="icon_area">
+										<i class="ms"></i>
+										<p class="i_t">Mr220-24p</p>
+									</div>
+									<div class="txt_area">
+										<p class="t1">테스트_스위치</p>
+										<p class="t2">Qhid-ordj-when</p>
+										<p class="t3">ff:6j:12:95:gy:3h</p>
+									</div>
+								</a>
+								<button class="btn_delete">삭제</button>
+							</div>
+
+							<ul class="depth3">
+								<li>
+									<div class="node l_line3">
+										<a href="javascript:;" class="btn_node">
+											<div class="icon_area">
+												<i class="mv"></i>
+												<p class="i_t">Mv32</p>
+											</div>
+											<div class="txt_area">
+												<p class="t1">연구소카메라</p>
+												<p class="t2">Qhid-ordj-when</p>
+												<p class="t3">ff:6j:12:95:gy:3h</p>
+											</div>
+										</a>
+										<button class="btn_delete">삭제</button>
+									</div>
+								</li>
+							</ul><!--//depth3-->
+						</li>
+					</ul><!--//depth2-->
+
+				</li>
+			</ul><!--//depth1-->
+
+		</div><!--//node_wrap-->
+
+		<!-- 우측 장비목록 -->
+		<article id="equip_list">
+			<div class="tit"><span>장비목록</span></div>
+			<div class="edit_control">
+				<button class="btn_edit on">편집</button>
+				<button class="btn_complete">완료</button>
+			</div>
+			<dl class="list_wrap">
+				<dt class="on"><button class="btn_toggle mr">MR</button></dt>
+				<dd>
+					<ul id="sortable_mr" class="sortable">
+						<li>
+							<p><span class="t1">MR33</span><span class="t2">서버실_기술_테스트_AP1</span></p>
+							<p class="t3"><span>Qhid-ordj-when</span><span>ff:6j:12:95:gy:3h</span></p>
+						</li>
+					</ul>
+				</dd>
+				<dt class="on"><button class="btn_toggle mv">MV</button></dt>
+				<dd>
+					<ul id="sortable_mv" class="sortable">
+						<li>
+							<p><span class="t1">MV22</span><span class="t2">서버실_기술_테스트_AP1</span></p>
+							<p class="t3"><span>Qhid-ordj-when</span><span>ff:6j:12:95:gy:3h</span></p>
+						</li>
+						<li>
+							<p><span class="t1">MV20</span><span class="t2">서버실_기술_테스트_AP1</span></p>
+							<p class="t3"><span>Qhid-ordj-when</span><span>ff:6j:12:95:gy:3h</span></p>
+						</li>
+						<li>
+							<p><span class="t1">MV34</span><span class="t2">서버실_기술_테스트_AP1</span></p>
+							<p class="t3"><span>Qhid-ordj-when</span><span>ff:6j:12:95:gy:3h</span></p>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+		</article>
+		<!-- //우측 장비목록 -->
+
+
+	</section>
+	<!--//contents-->
+</div><!--//wrap-->
+
+</body>
+</html>
+

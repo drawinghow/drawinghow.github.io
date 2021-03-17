@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>AIRQUAY</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./css/font.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/nanoscroller.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<script type="text/javascript" src="./js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.nanoscroller.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!--gnb-->
+	<section id="gnb_wrap">
+		<div id="gnb">
+			<div class="user_area">
+				<a href="javascript:;" class="icon_networklist"></a>
+				<span class="user">User</span>
+				<!--notice-->
+				<div id="gnb_notice_area">
+					<button class="gnb_notice on">알림</button><!--on : 활성화-->
+					<div id="gnb_notice_box">
+						<p class="top_notice_tit">네트워크 통합 알림</p>
+						<table class="tbl_st1">
+							<colgroup>
+								<col style="width: 45%;">
+								<col style="width: 20%;">
+								<col>
+							</colgroup>
+							<tr>
+								<th>종류</th>
+								<th>발생일자</th>
+								<th>네트워크 이름</th>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea02</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea05</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">게이트웨이 오프라인</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea01</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--//notice-->
+			</div>
+			<!--gnb menu-->
+			<ul class="gnb_menu">
+				<li class="dashboard on"><a href="javascript:;"><span class="text">통합 대시보드</span></a></li><!--li.on 메뉴 활성화-->
+				<li class="client"><a href="javascript:;"><span class="text">클라이언트</span></a></li>
+				<li class="equipment"><a href="javascript:;"><span class="text">장비</span></a></li>
+				<li class="topology"><a href="javascript:;"><span class="text">토폴로지</span></a></li>
+				<li class="notice"><a href="javascript:;"><span class="text">알림설정</span></a></li>
+				<li class="log"><a href="javascript:;"><span class="text">로그</span></a></li>
+				<li class="systemlog"><a href="javascript:;"><span class="text">시스템 로그</span></a></li>
+			</ul>
+			<!--//gnb menu-->
+			<div class="logout"><a href="javascript:;">logout</a></div>
+			<button class="btn_gnb_control on">gnb-fold</button>
+		</div>
+	</section>
+	<!--//gnb-->
+
+	<!--contents-->
+	<section id="contents">
+		<div class="subtop">
+			<h1 class=" tit1">AirQuay_HQ_Korea</h1>
+		</div>
+
+		<article class="line">
+			<div class="l_box w484">
+				<h2 class="tit2"><span>알림</span><a href="javascript:;" class="btn_more">더보기</a></h2>
+				<div class="box_st1">
+					<table class="tbl_st2">
+						<colgroup>
+							<col>
+							<col style="width: 20%;">
+							<col style="width: 15%;">
+						</colgroup>
+						<tr>
+							<th>종류<i class="arr"></i></th>
+							<th>발생일자<i class="arr"></i></th>
+							<th>상태<i class="arr"></i></th>
+						</tr>
+						<tr>
+							<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+							<td><span>2020.04.02</span></td>
+							<td><span>확인중</span></td>
+						</tr>
+						<tr>
+							<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+							<td><span>2020.04.02</span></td>
+							<td><span>확인중</span></td>
+						</tr>
+						<tr>
+							<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+							<td><span>2020.04.02</span></td>
+							<td><span>미확인</span></td>
+						</tr>
+						<tr>
+							<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+							<td><span>2020.04.02</span></td>
+							<td><span>미확인</span></td>
+						</tr>
+						<tr>
+							<td><a href="javascript:;"><span class="ellipsis">게이트웨이 오프라인</span></a></td>
+							<td><span>2020.04.02</span></td>
+							<td><span>미확인</span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--//알림-->
+			<div class="l_box w484">
+				<h2 class="tit2"><span>장비</span><a href="javascript:;" class="btn_more">더보기</a></h2>
+				<div class="box_st1">
+					<table class="tbl_st2 eqm">
+						<colgroup>
+							<col style="width: 17%;">
+							<col style="width: 22%;">
+							<col style="width: 28%;">
+							<col>
+						</colgroup>
+						<tr>
+							<th>장비<i class="arr"></i></th>
+							<th>모델<i class="arr"></i></th>
+							<th>이름<i class="arr"></i></th>
+							<th>시리얼번호<i class="arr"></i></th>
+						</tr>
+						<tr class="mark_red">
+							<td><i class="ic mr_red"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">Mr32</span></a></td>
+							<td><span class="ellipsis">Sales_HQ_AP</span></td>
+							<td><span class="ellipsis">q2jd-7BJP-BQJS</span></td>
+						</tr>
+						<tr>
+							<td><i class="ic mx_blue"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">MX84</span></a></td>
+							<td><span class="ellipsis">Mx84#1</span></td>
+							<td><span class="ellipsis">q2jd-7BJP-BQJS</span></td>
+						</tr>
+						<tr>
+							<td><i class="ic mr_blue"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">Mr320_24p</span></a></td>
+							<td><span class="ellipsis">MS320_office</span></td>
+							<td><span class="ellipsis">q2jd-7BJP-BQJS</span></td>
+						</tr>
+						<tr>
+							<td><i class="ic mr_blue"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">Mr34</span></a></td>
+							<td><span class="ellipsis">TechTeamAP</span></td>
+							<td><span class="ellipsis">q2jd-7BJP-BQJS</span></td>
+						</tr>
+						<tr>
+							<td><i class="ic mv_gray"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">Mv22</span></a></td>
+							<td><span class="ellipsis">EntranceMV22</span></td>
+							<td><span class="ellipsis">q2jd-7BJP-BQJS</span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--//장비-->
+			<div class="l_box w484">
+				<h2 class="tit2"><span>장비현황</span></h2>
+				<div class="boxs_4">
+					<div class="box_4_1 bg_skyblue">
+						<i class="icon mx_s"></i>
+						<p class="num">
+							<em>00</em>
+							<span>MX</span>
+						</p>
+					</div>
+					<div class="box_4_2">
+						<i class="icon ms_s"></i>
+						<p class="num">
+							<em>03</em>
+							<span>MS</span>
+						</p>
+					</div>
+					<div class="box_4_3 bg_red">
+						<i class="icon mr_s"></i>
+						<p class="num">
+							<em>11</em>
+							<span>MR</span>
+						</p>
+					</div>
+					<div class="box_4_4">
+						<i class="icon mv_s"></i>
+						<p class="num">
+							<em>06</em>
+							<span>MV</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--//장비현황-->
+		</article>
+
+		<article class="line">
+			<div class="l_box w1000">
+				<h2 class="tit2"><span>클라이언트</span><a href="javascript:;" class="btn_more">더보기</a></h2>
+				<div class="box_st1">
+					<table class="tbl_st2">
+						<colgroup>
+							<col style="width: 10%;">
+							<col>
+							<col style="width: 14%;">
+							<col style="width: 12%;">
+							<col style="width: 15%;">
+							<col style="width: 12%;">
+							<col style="width: 12%;">
+							<col style="width: 8%;">
+						</colgroup>
+						<tr>
+							<th>타입<i class="arr"></i></th>
+							<th>상세<i class="arr"></i></th>
+							<th>MAC<i class="arr"></i></th>
+							<th>IP<i class="arr"></i></th>
+							<th>최근 발견 시간<i class="arr"></i></th>
+							<th>데이터 사용량<i class="arr"></i></th>
+							<th>OS<i class="arr"></i></th>
+							<th>제조사<i class="arr"></i></th>
+						</tr>
+						<tr>
+							<td><i class="ic map_gray"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">DESKTOP-UF6IE84</span></a></td>
+							<td>00:0:00:00:00:00</td>
+							<td>192.168.5.10</td>
+							<td>2020-07-24 13:45</td>
+							<td>152.7M</td>
+							<td>Windows 10</td>
+							<td>ASUS</td>
+						</tr>
+						<tr>
+							<td><i class="ic box_red"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">DESKTOP-UF6IE84</span></a></td>
+							<td>00:0:00:00:00:00</td>
+							<td>192.168.5.10</td>
+							<td>2020-07-24 13:45</td>
+							<td>152.7M</td>
+							<td>Windows 10</td>
+							<td>ASUS</td>
+						</tr>
+						<tr>
+							<td><i class="ic wifi_blue"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">DESKTOP-UF6IE84</span></a></td>
+							<td>00:0:00:00:00:00</td>
+							<td>192.168.5.10</td>
+							<td>2020-07-24 13:45</td>
+							<td>152.7M</td>
+							<td>Windows 10</td>
+							<td>ASUS</td>
+						</tr>
+						<tr>
+							<td><i class="ic wifi_gray"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">DESKTOP-UF6IE84</span></a></td>
+							<td>00:0:00:00:00:00</td>
+							<td>192.168.5.10</td>
+							<td>2020-07-24 13:45</td>
+							<td>152.7M</td>
+							<td>Windows 10</td>
+							<td>ASUS</td>
+						</tr>
+						<tr>
+							<td><i class="ic box_gray"></i></td>
+							<td><a href="javascript:;"><span class="ellipsis">DESKTOP-UF6IE84</span></a></td>
+							<td>00:0:00:00:00:00</td>
+							<td>192.168.5.10</td>
+							<td>2020-07-24 13:45</td>
+							<td>152.7M</td>
+							<td>Windows 10</td>
+							<td>ASUS</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--//클라이언트-->
+			<div class="l_box">
+				<h2 class="tit2"><span>LINE HEALTH</span></h2>
+				<div class="boxs_2">
+					<div class="boxs_2_1">
+						<p class="trow num">
+							<b class="tcell">
+								<em>62</em><span>ms</span>
+							</b>
+						</p>
+						<p class="trow txt">
+							<b class="tcell">
+								<i class="graph_w"></i><span>지연시간</span>
+							</b>
+						</p>
+					</div>
+					<div class="boxs_2_2">
+						<p class="trow num">
+							<b class="tcell">
+								<em>88</em><span>%</span>
+							</b>
+						</p>
+						<p class="trow txt">
+							<b class="tcell">
+								<i class="rotate_w"></i><span>회선상태</span>
+							</b>
+						</p>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<article class="line">
+			<div class="tit2">
+				<span>네트워크 트래픽</span>
+				<div class="filter">
+					<ul class="tab_st1">
+						<li class="on"><button class="btn">라이브</button></li><!--on 활성화-->
+						<li><button class="btn">스냅샷</button></li>
+					</ul>
+					<div class="selectbox_area">
+						<button class="btn_toggle"><span>지난 6시간 동안</span><i class="arrow"></i></button>
+						<ul>
+							<li><button>지난 3시간 동안</button></li>
+							<li class="on"><button>지난 6시간 동안</button></li>
+							<li><button>지난 12시간 동안</button></li>
+							<li><button>이전 1일</button></li>
+						</ul>
+					</div><!--//selectbox-->
+				</div>
+			</div>
+			<div class="box_st1 w100 pd10">
+				<div class="graph_wrap" style="height: 205px;">
+					그래프 영역 <!--1496X205-->
+				</div>
+			</div>
+		</article>
+
+	</section>
+	<!--//contents-->
+</div><!--//wrap-->
+
+</body>
+</html>
+

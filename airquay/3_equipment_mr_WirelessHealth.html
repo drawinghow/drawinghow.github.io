@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>AIRQUAY</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./css/font.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/nanoscroller.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<script type="text/javascript" src="./js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.nanoscroller.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+</head>
+<body>
+
+
+<div id="wrap">
+	<!--gnb-->
+	<section id="gnb_wrap">
+		<div id="gnb">
+			<div class="user_area">
+				<a href="javascript:;" class="icon_networklist"></a>
+				<span class="user">User</span>
+				<!--notice-->
+				<div id="gnb_notice_area">
+					<button class="gnb_notice on">알림</button><!--on : 활성화-->
+					<div id="gnb_notice_box">
+						<p class="top_notice_tit">네트워크 통합 알림</p>
+						<table class="tbl_st1">
+							<colgroup>
+								<col style="width: 45%;">
+								<col style="width: 20%;">
+								<col>
+							</colgroup>
+							<tr>
+								<th>종류</th>
+								<th>발생일자</th>
+								<th>네트워크 이름</th>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea02</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea05</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">게이트웨이 오프라인</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea01</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--//notice-->
+			</div>
+			<!--gnb menu-->
+			<ul class="gnb_menu">
+				<li class="dashboard"><a href="javascript:;"><span class="text">통합 대시보드</span></a></li>
+				<li class="client"><a href="javascript:;"><span class="text">클라이언트</span></a></li>
+				<li class="equipment on"><a href="javascript:;"><span class="text">장비</span></a></li><!--li.on 메뉴 활성화-->
+				<li class="topology"><a href="javascript:;"><span class="text">토폴로지</span></a></li>
+				<li class="notice"><a href="javascript:;"><span class="text">알림설정</span></a></li>
+				<li class="log"><a href="javascript:;"><span class="text">로그</span></a></li>
+				<li class="systemlog"><a href="javascript:;"><span class="text">시스템 로그</span></a></li>
+			</ul>
+			<!--//gnb menu-->
+			<div class="logout"><a href="javascript:;">logout</a></div>
+			<button class="btn_gnb_control on">gnb-fold</button>
+		</div>
+	</section>
+	<!--//gnb-->
+
+	<!--contents-->
+	<section id="contents">
+		<div class="subtop">
+			<h1 class=" tit1">AirQuay_HQ_Korea</h1>
+		</div>
+
+		<article class="line">
+			<div class="tit2">
+				<span>디바이스</span>
+				<span class="txt ml10 va_0">전체 : 27개</span>
+				<div class="filter">
+					<div class="selectbox_area">
+						<button class="btn_toggle"><span>MS</span><i class="arrow"></i></button>
+						<ul>
+							<li class="on"><button>MS</button></li>
+							<li><button>MR</button></li>
+							<li><button>MX</button></li>
+							<li><button>MV</button></li>
+						</ul>
+					</div><!--//selectbox-->
+
+					<div class="search_area2">
+						<input type="text">
+						<button class="btn_search">검색</button>
+					</div>
+
+					<div class="selectbox_area">
+						<button class="btn_toggle"><span>View 30</span><i class="arrow"></i></button>
+						<ul>
+							<li class="on"><button>View 30</button></li>
+							<li><button>View 50</button></li>
+							<li><button>View 100</button></li>
+						</ul>
+					</div><!--//selectbox-->
+				</div>
+			</div>
+			<div class="box_st1 w100 mt20">
+				<!--thead-->
+				<table class="tbl_st1">
+					<colgroup>
+						<col style="width: 6.5%;">
+						<col style="width: 13%;">
+						<col style="width: 12%;">
+						<col style="width: 9%;">
+						<col style="width: 12%;">
+						<col style="width: 10.5%;">
+						<col style="width: 10.2%;">
+						<col style="width: 9%;">
+						<col style="width: 7.5%;">
+						<col>
+					</colgroup>
+					<tr>
+						<th>타입<i class="arr"></i></th>
+						<th>상세<i class="arr"></i></th>
+						<th>MAC<i class="arr"></i></th>
+						<th>모델<i class="arr"></i></th>
+						<th>시리얼번호<i class="arr"></i></th>
+						<th>펌웨어<i class="arr"></i></th>
+						<th>공통 IP<i class="arr"></i></th>
+						<th>데이터 사용량<i class="arr"></i></th>
+						<th>클라이언트 수<i class="arr"></i></th>
+						<th>설정 적용 시간<i class="arr"></i></th>
+					</tr>
+				</table>
+				<!--//thead-->
+				<!--tbody-->
+				<div class="js-scrollbar nano tbl_st4_view15" id="tbl_equipment">
+					<div class="nano-content">
+						<table class="tbl_st4">
+							<colgroup>
+								<col style="width: 6.5%;">
+								<col style="width: 13%;">
+								<col style="width: 12%;">
+								<col style="width: 9%;">
+								<col style="width: 12%;">
+								<col style="width: 10.5%;">
+								<col style="width: 10.2%;">
+								<col style="width: 9%;">
+								<col style="width: 7.5%;">
+								<col>
+							</colgroup>
+							<tr>
+								<td><i class="ic mv_blue"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Swithch-12-17</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mr_gray"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Ms220-24p</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr class="mark_red"><!-- tr에 mark_red 추가시 에러-->
+								<td><i class="ic ms_red"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>-</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mr_gray"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mr_gray"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mr_gray"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mr_gray"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mr_gray"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mr_blue"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>-</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic ms_blue"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>-</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr class="mark_red"><!-- tr에 mark_red 추가시 에러-->
+								<td><i class="ic mv_red"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Swithch-12-17</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mv_blue"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mv_blue"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mv_blue"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mv_blue"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mv_blue"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+							<tr>
+								<td><i class="ic mv_blue"></i></td>
+								<td><span class="ellipsis">DESKTOP-UF6IE84</span></td>
+								<td>00:0:00:00:00:00</td>
+								<td>Mx64</td>
+								<td>Q2kn-u3hx-facy</td>
+								<td>Wired14-42</td>
+								<td>192.168.5.10</td>
+								<td>152.7M</td>
+								<td>82</td>
+								<td>2020-07-24 13:45:22</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--//tbody-->
+				<!--paging-->
+				<article class="paging_area">
+					<ul class="paging">
+						<li class="prev"><button class="btn_prev">이전</button></li>
+						<li class="number">
+							<input type="text" value="1" class="this_page"><span class="bar">/</span><span class="all_page">10</span>
+						</li>
+						<li class="next"><button class="btn_next">다음</button></li>
+					</ul>
+				</article>
+				<!--//paging-->
+			</div>
+		</article>
+	</section>
+	<!--//contents-->
+
+
+	<!--팝업-->
+	<div id="pop_equipment" class="popup_st1 popup" style="display: block;"><!-- 개발시 style="display: block;" 삭제 // id 변경 가능-->
+		<p class="popbg"  onclick="popup_close('pop_equipment')"></p>
+		<div class="pop_in">
+			<div class="left_area">
+				<div class="name_area">
+					<p class="n1"><i class="dot blue"></i>대회의실_AP</p><!--클래스명 = 오류 발생시: red / 오프라인: gray /  정상: blue-->
+					<p class="n2"><em>Mr220-24p</em><span>88:15:44:73:96:00</span></p>
+				</div>
+				<ul class="info">
+					<li><span>LAN IP</span><em>192.168.5.10</em></li>
+					<li><span>PUBLIC IP</span><em>58.110.240.154</em></li>
+					<li><span>GATEWAY</span><em>192.168.5.10</em></li>
+					<li><span>DNS</span><em>8.8.8.8</em><em>168.126.63.1</em></li>
+				</ul>
+				<div class="comp2">
+					<div class="img_area">
+						<!--<p class="noimg">NO IMAGE</p>  !--이미지 없을 때 노출-->
+						<a href="javascript:;" onclick="popup_open('img_pop')"><img src="./images/etc/test.jpg" alt="test"></a>
+					</div>
+					<button class="btn_st1">장비 재부팅</button>
+				</div>
+			</div>
+			<!--//left_area-->
+
+			<!--이미지 팝업-->
+			<div id="img_pop" class="img_popup">
+				<p class="img"><img src="./images/etc/test.jpg" alt="test"></p>
+				<p class="btn_area"><button onclick="popup_close('img_pop')">닫기</button></p>
+			</div>
+			<!--//이미지 팝업-->
+
+
+			<div class="right_area">
+				<!--탭-->
+				<ul class="tab_st2">
+					<li class="on"><button class="btn">Wireless Health</button></li><!--on 활성화-->
+					<li class=""><button class="btn">클라이언트</button></li>
+				</ul>
+				<!--//탭-->
+				<!--탭 컨텐츠 : tabcon_2-->
+				<div id="tabcon_2">
+					<div class="boxs_wrap">
+						<div class="box_3_1">
+							<div class="box_st2 pd20">
+								<p class="tit3"><span class="txt2">접속 성공률</span></p>
+								<div class="graph_area" style="height: 144px;">
+									그래프 영역
+									<!--303 X 144-->
+								</div>
+							</div>
+						</div>
+						<div class="box_3_1">
+							<div class="box_st2 pd20">
+								<p class="tit3"><span class="txt2">접속 단계별 실패율</span></p>
+								<div class="graph_area" style="height: 144px;">
+									그래프 영역
+									<!--303 X 144-->
+								</div>
+							</div>
+						</div>
+						<div class="box_3_1">
+							<div class="box_st2 pd20">
+								<p class="tit3"><span class="txt2">최다 접속 실패</span></p>
+								<dl class="info_st1 mt30">
+									<dt><span>SSID</span></dt>
+									<dd><em>Air-Meraki</em></dd>
+								</dl>
+								<dl class="info_st1 mt25">
+									<dt><span>클라이언트</span></dt>
+									<dd><em>60:83:73:55:3d:fc</em></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+
+					<div class="box_st2 mt30">
+						<div class="tit3 mt20 mr20 ml20 mb10">
+							<span class="txt2">연결 실패 목록</span>
+							<span class="txt3 ml10 va_0">전체 : 27개</span>
+							<div class="filter">
+								<div class="search_area2">
+									<input type="text">
+									<button class="btn_search">검색</button>
+								</div>
+
+								<div class="selectbox_area">
+									<button class="btn_toggle"><span>View 30</span><i class="arrow"></i></button>
+									<ul>
+										<li class="on"><button>View 30</button></li>
+										<li><button>View 50</button></li>
+										<li><button>View 100</button></li>
+									</ul>
+								</div><!--//selectbox-->
+							</div>
+						</div>
+						<!--thead-->
+						<table class="tbl_st5">
+							<colgroup>
+								<col style="width: 20%;">
+								<col style="width: 13%;">
+								<col style="width: 12%;">
+								<col style="width: 13%;">
+								<col>
+							</colgroup>
+							<tr>
+								<th>Connection Time<i class="arr"></i></th>
+								<th>Client<i class="arr"></i></th>
+								<th>SSID<i class="arr"></i></th>
+								<th>Failure Stage<i class="arr"></i></th>
+								<th>Reason<i class="arr"></i></th>
+							</tr>
+						</table>
+						<!--//thead-->
+						<!--tbody-->
+						<div class="js-scrollbar nano tbl_st5_view8">
+							<div class="nano-content">
+								<table class="tbl_st5">
+									<colgroup>
+										<col style="width: 20%;">
+										<col style="width: 13%;">
+										<col style="width: 12%;">
+										<col style="width: 13%;">
+										<col>
+									</colgroup>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+									<tr>
+										<td>2020-07-24 13:45:22</td>
+										<td>GJs-iPhone</td>
+										<td>AirQuay</td>
+										<td>Autentication</td>
+										<td>
+											Clinent failed 802. 1X authentication to the RADIUS server.
+											<p class="t_weak">Type=‘802.1X auth fail’ num_eap=‘0’ associated=‘true’ radio=‘1’ vap=‘5’</p>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!--//tbody-->
+						<!--paging-->
+						<article class="paging_area pt15 pb20">
+							<ul class="paging">
+								<li class="prev"><button class="btn_prev">이전</button></li>
+								<li class="number">
+									<input type="text" value="1" class="this_page"><span class="bar">/</span><span class="all_page">10</span>
+								</li>
+								<li class="next"><button class="btn_next">다음</button></li>
+							</ul>
+						</article>
+						<!--//paging-->
+					</div><!--//box_st2-->
+				</div>
+				<!--//탭 컨텐츠 : tabcon_2-->
+			</div><!--//right-area-->
+			<button class="btn_popup_close" onclick="popup_close('pop_equipment')"><span>닫기</span></button>
+		</div>
+	</div>
+	<!--//팝업-->
+
+
+</div><!--//wrap-->
+
+</body>
+</html>
+

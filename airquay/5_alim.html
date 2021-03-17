@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>AIRQUAY</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./css/font.css" />
+  <link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.9.2.custom.css" />
+  <link rel="stylesheet" type="text/css" href="./css/nanoscroller.css">
+  <link rel="stylesheet" type="text/css" href="./css/common.css" />
+  <script type="text/javascript" src="./js/jquery-2.0.0.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.nanoscroller.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.matchHeight-min.js"></script>
+  <script type="text/javascript" src="./js/common.js"></script>
+</head>
+<body>
+
+
+<div id="wrap">
+	<!--gnb-->
+	<section id="gnb_wrap">
+		<div id="gnb">
+			<div class="user_area">
+				<a href="javascript:;" class="icon_networklist"></a>
+				<span class="user">User</span>
+				<!--notice-->
+				<div id="gnb_notice_area">
+					<button class="gnb_notice on">알림</button><!--on : 활성화-->
+					<div id="gnb_notice_box">
+						<p class="top_notice_tit">네트워크 통합 알림</p>
+						<table class="tbl_st1">
+							<colgroup>
+								<col style="width: 45%;">
+								<col style="width: 20%;">
+								<col>
+							</colgroup>
+							<tr>
+								<th>종류</th>
+								<th>발생일자</th>
+								<th>네트워크 이름</th>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea02</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">스위치 전원 꺼짐</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea03</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">네트워크 트래픽 임계치 초과</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea05</td>
+							</tr>
+							<tr>
+								<td><a href="javascript:;"><span class="ellipsis">게이트웨이 오프라인</span></a></td>
+								<td>2020.04.02</td>
+								<td>AirQuay_HQ_Korea01</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--//notice-->
+			</div>
+			<!--gnb menu-->
+			<ul class="gnb_menu">
+				<li class="dashboard"><a href="javascript:;"><span class="text">통합 대시보드</span></a></li>
+				<li class="client"><a href="javascript:;"><span class="text">클라이언트</span></a></li>
+				<li class="equipment"><a href="javascript:;"><span class="text">장비</span></a></li>
+				<li class="topology"><a href="javascript:;"><span class="text">토폴로지</span></a></li>
+				<li class="notice on"><a href="javascript:;"><span class="text">알림설정</span></a></li><!--li.on 메뉴 활성화-->
+				<li class="log"><a href="javascript:;"><span class="text">로그</span></a></li>
+				<li class="systemlog"><a href="javascript:;"><span class="text">시스템 로그</span></a></li>
+			</ul>
+			<!--//gnb menu-->
+			<div class="logout"><a href="javascript:;">logout</a></div>
+			<button class="btn_gnb_control on">gnb-fold</button>
+		</div>
+	</section>
+	<!--//gnb-->
+
+	<!--contents-->
+	<section id="contents">
+		<div class="subtop">
+			<h1 class=" tit1">AirQuay_HQ_Korea</h1>
+		</div>
+
+		<div class="tit2">
+			<span class="va_m">기본 수신자 등록</span>
+			<button class="btn_st3 ml20" id="btn_alim_email">E-mail</button><!--on 클래스 추가시 활성화-->
+			<button class="btn_st3 ml5" id="btn_alim_sms">SMS</button><!--on 클래스 추가시 활성화-->
+		</div>
+
+		<!--기본수신자등록-->
+		<div class="alim_con clearfix">
+			<article class="fleft"><!--on 클래스 추가시 노출-->
+				<div id="alim_email" class="chk_type2">
+					<p class="tt1"><span>E-mail</span></p>
+					<p class="box_st2_2">
+						<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button>
+							<!-- <input type="text"> hidden 상태임 / 수정시 노출되고, em+button 은 숨김처리 -->
+						</span>
+						<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button>
+							<!-- <input type="text"> hidden 상태임 / 수정시 노출되고, em+button 은 숨김처리 -->
+						</span>
+						<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button>
+							<!-- <input type="text"> hidden 상태임 / 수정시 노출되고, em+button 은 숨김처리 -->
+						</span>
+						<span class="inputs"><em class="text">외 4명</em></span>
+						<!--
+							<input type="text" class="input_text" style="width: ;">
+							//box 내 컨텐츠 두줄 이상일 때, 입력창 숨김 (입력창 width 값 스크립트로 조절) -->
+					</p>
+				</div>
+			</article>
+			<!--//E-mail-->
+			<article class="fleft"><!--on 클래스 추가시 노출-->
+				<div id="alim_sms" class="chk_type2">
+					<p class="tt1"><span>SMS</span></p>
+					<p class="box_st2_2">
+						<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button>
+							<!-- <input type="text"> hidden 상태임 / 수정시 노출되고, em+button 은 숨김처리 -->
+						</span>
+						<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button>
+							<!-- <input type="text"> hidden 상태임 / 수정시 노출되고, em+button 은 숨김처리 -->
+						</span>
+						<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button>
+							<!-- <input type="text"> hidden 상태임 / 수정시 노출되고, em+button 은 숨김처리 -->
+						</span>
+						<input type="text" class="input_text" style="width: 180px;"><!-- width 값 스크립트로 조절-->
+					</p>
+				</div>
+			</article>
+			<!--//SMS-->
+		</div>
+		<!--//기본수신자등록-->
+
+		<div class="alim_con mt15 clearfix">
+			<article class="fleft">
+				<div class="box_st1_2">
+					<!--네트워크-->
+					<div class="alim_area pd20">
+						<p class="tit3"><span class="txt2">네트워크</span></p>
+						<dl class="alim_list">
+							<dt><label class="chk_type1"><input type="checkbox"><i></i><em>Configuration 설정 변경</em></label></dt>
+							<dd>
+								<div class="chk_type2">
+									<p class="tt2"><label><input type="checkbox"><i></i>E-mail</label></p>
+									<p class="box_st2_2">
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<input type="text" class="input_text" style="width: 30px;"><!-- width 값 스크립트로 조절-->
+									</p>
+								</div>
+								<div class="chk_type2">
+									<p class="tt2"><label><input type="checkbox"><i></i>SMS</label></p>
+									<p class="box_st2_2">
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<input type="text" class="input_text" style="width: 100px;"><!-- width 값 스크립트로 조절-->
+									</p>
+								</div>
+							</dd>
+
+							<dt><label class="chk_type1"><input type="checkbox"><i></i><em>VPN 연결 상태 변경</em></label></dt>
+							<dd>
+								<div class="chk_type2">
+									<p class="tt2"><label><input type="checkbox"><i></i>E-mail</label></p>
+									<p class="box_st2_2">
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<input type="text" class="input_text" style="width: 30px;"><!-- width 값 스크립트로 조절-->
+									</p>
+								</div>
+								<div class="chk_type2">
+									<p class="tt2"><label><input type="checkbox"><i></i>SMS</label></p>
+									<p class="box_st2_2">
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<input type="text" class="input_text" style="width: 100px;"><!-- width 값 스크립트로 조절-->
+								</div>
+							</dd>
+
+							<dt><label class="chk_type1"><input type="checkbox"><i></i><em>비인가 AP 감지</em></label></dt>
+							<dd>
+								<div class="chk_type2">
+									<p class="tt2"><label><input type="checkbox"><i></i>E-mail</label></p>
+									<p class="box_st2_2">
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<input type="text" class="input_text" style="width: 30px;"><!-- width 값 스크립트로 조절-->
+									</p>
+								</div>
+								<div class="chk_type2">
+									<p class="tt2"><label><input type="checkbox"><i></i>SMS</label></p>
+									<p class="box_st2_2">
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<input type="text" class="input_text" style="width: 100px;"><!-- width 값 스크립트로 조절-->
+									</p>
+								</div>
+							</dd>
+
+							<dt>
+                <label class="chk_type1 fleft"><input type="checkbox"><i></i></label>
+								<div class="fleft">
+									<em>네트워크 사용량이</em>
+									<div class="selectbox_area w90px">
+										<button class="btn_toggle"><span>20분</span><i class="arrow"></i></button>
+										<ul>
+											<li class="on"><button>20분</button></li>
+											<li class=""><button>4시간</button></li>
+											<li class=""><button>1일</button></li>
+										</ul>
+									</div>
+									<em>동안</em>
+									<div class="selectbox_area w90px">
+										<button class="btn_toggle"><span>100</span><i class="arrow"></i></button>
+										<ul>
+											<li class="on"><button>100</button></li>
+											<li class=""><button>text</button></li>
+											<li class=""><button>text</button></li>
+										</ul>
+									</div>
+									<div class="selectbox_area w90px">
+										<button class="btn_toggle"><span>GB</span><i class="arrow"></i></button>
+										<ul>
+											<li class=""><button>KB</button></li>
+											<li class=""><button>MB</button></li>
+											<li class="on"><button>GB</button></li>
+										</ul>
+									</div>
+									<em>를 초과</em>
+								</div>
+							</dt>
+							<dd>
+								<div class="chk_type2">
+									<p class="tt2"><label><input type="checkbox"><i></i>E-mail</label></p>
+									<p class="box_st2_2">
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">user@ariquay.com</em><button class="btn_delete"></button></span>
+										<input type="text" class="input_text" style="width: 30px;"><!-- width 값 스크립트로 조절-->
+									</p>
+								</div>
+								<div class="chk_type2">
+									<p class="tt2"><label><input type="checkbox"><i></i>SMS</label></p>
+									<p class="box_st2_2">
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<span class="inputs"><em class="text">010-0000-0000</em><button class="btn_delete"></button></span>
+										<input type="text" class="input_text" style="width: 100px;"><!-- width 값 스크립트로 조절-->
+									</p>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<!--//네트워크-->
+					<!--보안-->
+					<div class="alim_area pd20">
+						<p class="tit3"><span class="txt2">보안</span></p>
+						<ul class="alim_list">
+							<li>
+								<label class="chk_type1 fleft"><input type="checkbox"><i></i></label>
+								<div class="fleft">
+									<em>보안 어플라이언스가</em>
+									<div class="selectbox_area w90px">
+										<button class="btn_toggle"><span>60분</span><i class="arrow"></i></button>
+										<ul>
+											<li class=""><button>5분</button></li>
+											<li class=""><button>10분</button></li>
+											<li class=""><button>15분</button></li>
+											<li class=""><button>30분</button></li>
+											<li class="on"><button>60분</button></li>
+										</ul>
+									</div>
+									<em>동안 오프라인 상태</em>
+								</div>
+							</li>
+							<li><label class="chk_type1"><input type="checkbox"><i></i><em>기본 uplink 상태가 변경됨</em></label></li>
+							<li><label class="chk_type1"><input type="checkbox"><i></i><em>DHCP 임대 풀 소진</em></label></li>
+							<li><label class="chk_type1"><input type="checkbox"><i></i><em>IP 충돌 감지</em></label></li>
+							<li><label class="chk_type1"><input type="checkbox"><i></i><em>비인가 DHCP 서버 감지</em></label></li>
+							<li><label class="chk_type1"><input type="checkbox"><i></i><em>Warm spare 장애 조치 발생</em></label></li>
+							<li><label class="chk_type1"><input type="checkbox"><i></i><em>Malware가 다운로드 됨</em></label></li>
+						</ul>
+					</div>
+					<!--//보안-->
+				</div>
+				<!--//box_st1_2-->
+			</article>
+			<!--//fleft-->
+
+			<article class="fright">
+				<div class="box_st1_2">
+					<!--무선-->
+					<div class="alim_area pd20">
+						<p class="tit3"><span class="txt2">무선</span></p>
+            <ul class="alim_list">
+              <li>
+                <label class="chk_type1 fleft"><input type="checkbox"><i></i></label>
+                <div class="fleft">
+                  <em>게이트웨이가</em>
+                  <div class="selectbox_area w90px">
+                    <button class="btn_toggle"><span>5분</span><i class="arrow"></i></button>
+                    <ul>
+                      <li class="on"><button>5분</button></li>
+                      <li class=""><button>10분</button></li>
+                      <li class=""><button>15분</button></li>
+                      <li class=""><button>30분</button></li>
+                      <li class=""><button>60분</button></li>
+                    </ul>
+                  </div>
+                  <em>동안 오프라인 상태</em>
+                </div>
+              </li>
+            </ul>
+					</div>
+					<!--//무선-->
+					<!--스위치-->
+					<div class="alim_area pd20">
+						<p class="tit3"><span class="txt2">스위치</span></p>
+            <ul class="alim_list">
+              <li>
+                <label class="chk_type1 fleft"><input type="checkbox"><i></i></label>
+                <div class="fleft">
+                  <em>스위치가</em>
+                  <div class="selectbox_area w90px">
+										<button class="btn_toggle"><span>5분</span><i class="arrow"></i></button>
+										<ul>
+											<li class="on"><button>5분</button></li>
+											<li class=""><button>10분</button></li>
+											<li class=""><button>15분</button></li>
+											<li class=""><button>30분</button></li>
+											<li class=""><button>60분</button></li>
+                    </ul>
+                  </div>
+                  <em>동안 오프라인 상태</em>
+                </div>
+              </li>
+              <li>
+                <label class="chk_type1 fleft"><input type="checkbox"><i></i></label>
+                <div class="fleft">
+                  <div class="selectbox_area w100px">
+                    <button class="btn_toggle"><span>모든포트</span><i class="arrow"></i></button>
+                    <ul>
+											<li class="on"><button>모든포트</button></li>
+											<li><button>1번</button></li>
+											<li><button>2번</button></li>
+											<li><button>3번</button></li>
+											<li><button>4번</button></li>
+											<li><button>5번</button></li>
+											<li><button>6번</button></li>
+											<li><button>7번</button></li>
+											<li><button>8번</button></li>
+											<li><button>9번</button></li>
+											<li><button>10번</button></li>
+											<li><button>11번</button></li>
+											<li><button>12번</button></li>
+											<li><button>13번</button></li>
+											<li><button>14번</button></li>
+											<li><button>15번</button></li>
+											<li><button>16번</button></li>
+											<li><button>17번</button></li>
+											<li><button>18번</button></li>
+											<li><button>19번</button></li>
+											<li><button>20번</button></li>
+											<li><button>21번</button></li>
+											<li><button>22번</button></li>
+											<li><button>23번</button></li>
+											<li><button>24번</button></li>
+                    </ul>
+                  </div>
+                  <em>가</em>
+                  <div class="selectbox_area w90px">
+										<button class="btn_toggle"><span>5분</span><i class="arrow"></i></button>
+										<ul>
+											<li class="on"><button>5분</button></li>
+											<li class=""><button>10분</button></li>
+											<li class=""><button>15분</button></li>
+											<li class=""><button>30분</button></li>
+											<li class=""><button>60분</button></li>
+                    </ul>
+                  </div>
+                  <em>동안 오프라인 상태</em>
+                </div>
+              </li>
+              <li>
+                <label class="chk_type1 fleft"><input type="checkbox"><i></i></label>
+                <div class="fleft">
+                  <div class="selectbox_area w100px">
+                    <button class="btn_toggle"><span>모든포트</span><i class="arrow"></i></button>
+                    <ul>
+											<li class="on"><button>모든포트</button></li>
+											<li><button>1번</button></li>
+											<li><button>2번</button></li>
+											<li><button>3번</button></li>
+											<li><button>4번</button></li>
+											<li><button>5번</button></li>
+											<li><button>6번</button></li>
+											<li><button>7번</button></li>
+											<li><button>8번</button></li>
+											<li><button>9번</button></li>
+											<li><button>10번</button></li>
+											<li><button>11번</button></li>
+											<li><button>12번</button></li>
+											<li><button>13번</button></li>
+											<li><button>14번</button></li>
+											<li><button>15번</button></li>
+											<li><button>16번</button></li>
+											<li><button>17번</button></li>
+											<li><button>18번</button></li>
+											<li><button>19번</button></li>
+											<li><button>20번</button></li>
+											<li><button>21번</button></li>
+											<li><button>22번</button></li>
+											<li><button>23번</button></li>
+											<li><button>24번</button></li>
+                    </ul>
+                  </div>
+                  <em>의 오류 감지</em>
+                </div>
+              </li>
+              <li><label class="chk_type1"><input type="checkbox"><i></i><em>스위치 전원 꺼짐</em></label></li>
+              <li><label class="chk_type1"><input type="checkbox"><i></i><em>포트에 단방향 링크 감지 오류가 있을 때</em></label></li>
+              <li><label class="chk_type1"><input type="checkbox"><i></i><em>스위치가 이상 온도에서 작동 중일 때</em></label></li>
+            </ul>
+					</div>
+					<!--//스위치-->
+					<!--카메라-->
+					<div class="alim_area pd20">
+						<p class="tit3"><span class="txt2">카메라</span></p>
+            <ul class="alim_list">
+              <li>
+                <label class="chk_type1 fleft"><input type="checkbox"><i></i></label>
+                <div class="fleft">
+                  <em>카메라가</em>
+                  <div class="selectbox_area w90px">
+										<button class="btn_toggle"><span>5분</span><i class="arrow"></i></button>
+										<ul>
+											<li class="on"><button>5분</button></li>
+											<li class=""><button>10분</button></li>
+											<li class=""><button>15분</button></li>
+											<li class=""><button>30분</button></li>
+											<li class=""><button>60분</button></li>
+                    </ul>
+                  </div>
+                  <em>동안 오프라인 상태</em>
+                </div>
+              </li>
+              <li><label class="chk_type1"><input type="checkbox"><i></i><em>모션 알림 수신자 설정</em></label></li>
+              <li><label class="chk_type1"><input type="checkbox"><i></i><em>카메라에 치명적인 하드웨어 오류가 있을 때</em></label></li>
+            </ul>
+					</div>
+					<!--//카메라-->
+				</div>
+				<!--//box_st1_2-->
+			</article>
+      <!--//fright-->
+		</div>
+    <!--//alim_con-->
+
+    <div class="mt30">
+      <button class="btn_st1 btn_alim_save off">저장</button>
+    </div>
+
+	</section>
+	<!--//contents-->
+</div><!--//wrap-->
+
+</body>
+</html>
+

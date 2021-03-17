@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #46b2ea;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="그룹_6037" data-name="그룹 6037" transform="translate(-548.846 -537)">
+    <g id="그룹_6035" data-name="그룹 6035" transform="translate(-159 431)">
+      <rect id="사각형_882" data-name="사각형 882" class="cls-1" width="32" height="32" rx="2" transform="translate(707.846 106)"/>
+      <path id="패스_298" data-name="패스 298" class="cls-2" d="M-116.125,1814.48v-5.713a.536.536,0,0,0-.537-.537h-9.65a.536.536,0,0,0-.536.537v5.713a.536.536,0,0,1-.536.536h-5.629a.536.536,0,0,0-.537.536v16.268a.536.536,0,0,0,.537.536h23.053a.536.536,0,0,0,.536-.536v-16.268a.536.536,0,0,0-.536-.536h-5.629A.536.536,0,0,1-116.125,1814.48Z" transform="translate(845.332 -1698.293)"/>
+    </g>
+    <path id="Icon_awesome-long-arrow-alt-up" data-name="Icon awesome-long-arrow-alt-up" class="cls-1" d="M3.8,7.038V17.821a.432.432,0,0,0,.436.429H6.275a.432.432,0,0,0,.436-.429V7.038H8.385A.855.855,0,0,0,9,5.575L5.875,2.5a.882.882,0,0,0-1.233,0L1.515,5.575a.855.855,0,0,0,.617,1.463Z" transform="translate(559.742 544.304)"/>
+  </g>
+</svg>

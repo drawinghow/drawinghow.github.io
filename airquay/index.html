@@ -2,12 +2,19 @@
 <html lang="ko">
 <head>
 	<title>AIRQUAY</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./css/font.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/nanoscroller.css">
 	<link rel="stylesheet" type="text/css" href="./css/common.css" />
-	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-2.0.0.min.js"></script>
 	<script type="text/javascript" src="./js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.nanoscroller.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
 </head>
 <body>
 
@@ -21,23 +28,22 @@
 	.coding_guide table td {border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;color: #555;line-height: 1.5;}
 	.coding_guide table td.tal {text-align: left !important;}
 	.coding_guide table .page {background: #eee;font-weight: bold;text-align: left;}
-	.coding_guide table .link {color: #6e0fff;font-weight: bold;}
+	.coding_guide table .link {color: #19A0E5;font-weight: bold;}
 	.coding_guide table a:hover {text-decoration: underline;}
 </style>
 
 <div class="coding_guide">
 	<table>
 		<colgroup>
-			<col style="width: 25 %;">
-			<col style="width: 10%;">
-			<col style="">
+			<col style="width: 13%;">
+			<col style="width: 26%;">
+			<col style="width: 35%;">
 			<col style="width: 12%;">
-			<col style="width: 20%;">
+			<col style="">
 		</colgroup>
 		<thead>
 		<tr>
-			<th>page</th>
-			<th>-</th>
+			<th colspan="2">page</th>
 			<th>link</th>
 			<th>진행</th>
 			<th>비고</th>
@@ -45,149 +51,164 @@
 		</thead>
 		<tbody>
 		<tr>
-			<td class="page">로그인</td>
-			<td class=""></td>
+			<td colspan="2" class="page">로그인</td>
 			<td class="tal link"><a href="0_login.html">0_login.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
-			<td class="page">네트워크 목록</td>
-			<td class=""></td>
+			<td colspan="2" class="page">네트워크 목록</td>
 			<td class="tal link"><a href="0_network_list.html">0_network_list.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
+			<td rowspan="2" class="page">통합 대시보드</td>
 			<td class="page">통합 대시보드</td>
-			<td class=""></td>
-			<td class="tal link"><a href="0_">0_</a></td>
+			<td class="tal link"><a href="1_dashboard.html">1_dashboard.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
-			<td class="page">통합 대시보드 (네트워크 트래픽 스냅샷모드)</td>
-			<td class=""></td>
-			<td class="tal link"><a href="1_">1_</a></td>
+			<td class="page">네트워크 트래픽 스냅샷모드</td>
+			<td class="tal link"><a href="1_dashboard2.html">1_dashboard2.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
-			<td class="page">클라이언트</td>
-			<td class=""></td>
-			<td class="tal link"><a href="2_">2_</a></td>
+			<td colspan="2" class="page">클라이언트</td>
+			<td class="tal link"><a href="2_client.html">2_client.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
+			<td rowspan="9" class="page">장비</td>
 			<td class="page">장비</td>
-			<td class=""></td>
-			<td class="tal link"><a href="3_">3_</a></td>
+			<td class="tal link"><a href="3_equipment.html">3_equipment.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
 			<td class="page">장비 상세(MX)</td>
-			<td class=""></td>
-			<td class="tal link"><a href="3_">3_</a></td>
+			<td class="tal link"><a href="3_equipment_mx.html">3_equipment_mx.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
 			<td class="page">장비 상세(MS) 포트</td>
-			<td class=""></td>
-			<td class="tal link"><a href="3_">3_</a></td>
+			<td class="tal link"><a href="3_equipment_ms_port.html">3_equipment_ms_port.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
 			<td class="page">장비 상세(MS) - 클라이언트</td>
-			<td class=""></td>
-			<td class="tal link"><a href="3_">3_</a></td>
+			<td class="tal link"><a href="3_equipment_ms_client.html">3_equipment_ms_client.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
 			<td class="page">장비 상세(MR) - Wireless Health</td>
-			<td class=""></td>
-			<td class="tal link"><a href="3_">3_</a></td>
+			<td class="tal link"><a href="3_equipment_mr_WirelessHealth.html">3_equipment_mr_WirelessHealth.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
 			<td class="page">장비 상세(MR) - 클라이언트</td>
-			<td class=""></td>
-			<td class="tal link"><a href="3_">3_</a></td>
+			<td class="tal link"><a href="3_equipment_mr_client.html">3_equipment_mr_client.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
 			<td class="page">장비 상세(MV)</td>
-			<td class=""></td>
-			<td class="tal link"><a href="3_">3_</a></td>
+			<td class="tal link"><a href="3_equipment_detail.html">3_equipment_detail.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
-			<td class="page">토폴로지</td>
-			<td class=""></td>
-			<td class="tal link"><a href="4_">4_</a></td>
+			<td class="page">장비 재부팅 팝업(진행중)</td>
+			<td class="tal link"><a href="3_equipment_pop_reboot.html">3_equipment_pop_reboot.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
-			<td class="page">토폴로지 (편집모드)</td>
-			<td class=""></td>
-			<td class="tal link"><a href="4_">4_</a></td>
+			<td class="page">장비 재부팅 팝업(완료)</td>
+			<td class="tal link"><a href="3_equipment_pop_reboot2.html">3_equipment_pop_reboot2.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
+			<td rowspan="3" class="page">토폴로지</td>
+			<td class="page">토폴로지 (+편집모드)</td>
+			<td class="tal link"><a href="4_topology.html">4_topology.html</a></td>
+			<td class="state"></td>
+			<td class="tal"></td>
+		</tr>
+		<tr>
+			<td class="page">장비 상세</td>
+			<td class="tal link"><a href="4_topology_detail.html">4_topology_detail.html</a></td>
+			<td class="state"></td>
+			<td class="tal"></td>
+		</tr>
+		<tr>
+			<td class="page">페이지 이탈(팝업)</td>
+			<td class="tal link"><a href="4_topology_popup.html">4_topology_popup.html</a></td>
+			<td class="state"></td>
+			<td class="tal"></td>
+		</tr>
+		<tr>
+			<td rowspan="4" class="page">알림설정</td>
 			<td class="page">알림설정</td>
-			<td class=""></td>
-			<td class="tal link"><a href="5_">5_</a></td>
+			<td class="tal link"><a href="5_alim.html">5_alim.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
-			<td class="page">알림설정 (참고1)</td>
-			<td class=""></td>
-			<td class="tal link"><a href="5_">5_</a></td>
+			<td class="page">입력상황 예시1</td>
+			<td class="tal link"><a href="5_alim_ex1.html">5_alim_ex1.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
-			<td class="page">알림설정 (참고2)</td>
-			<td class=""></td>
-			<td class="tal link"><a href="5_">5_</a></td>
+			<td class="page">입력상황 예시2</td>
+			<td class="tal link"><a href="5_alim_ex2.html">5_alim_ex2.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
+			<td class="page">페이지 이탈(팝업)</td>
+			<td class="tal link"><a href="5_alim_popup.html">5_alim_popup.html</a></td>
+			<td class="state"></td>
+			<td class="tal"></td>
+		</tr>
+		<tr>
+			<td rowspan="3" class="page">로그</td>
 			<td class="page">로그</td>
-			<td class=""></td>
-			<td class="tal link"><a href="6_">6_</a></td>
+			<td class="tal link"><a href="6_log.html">6_log.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
-			<td class="page">로그 - 조건검색</td>
-			<td class=""></td>
-			<td class="tal link"><a href="6_">6_</a></td>
+			<td class="page">조건검색</td>
+			<td class="tal link"><a href="6_log_popup.html">6_log_popup.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
+			<td class="page">입력 결과</td>
+			<td class="tal link"><a href="6_log_result.html">6_log_result.html</a></td>
+			<td class="state"></td>
+			<td class="tal"></td>
+		</tr>
+		<tr>
+			<td rowspan="2" class="page">시스템로그</td>
 			<td class="page">시스템로그</td>
-			<td class=""></td>
-			<td class="tal link"><a href="7_">7_</a></td>
+			<td class="tal link"><a href="7_systemlog.html">7_systemlog.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>
 		<tr>
-			<td class="page">시스템로그 - 조건검색</td>
-			<td class=""></td>
-			<td class="tal link"><a href="7_">7_</a></td>
+			<td class="page">조건검색</td>
+			<td class="tal link"><a href="7_systemlog_popup.html">7_systemlog_popup.html</a></td>
 			<td class="state"></td>
 			<td class="tal"></td>
 		</tr>

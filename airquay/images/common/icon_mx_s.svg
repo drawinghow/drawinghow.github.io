@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="그룹_630" data-name="그룹 630" transform="translate(-1357.318 -1058.98)">
+    <rect id="사각형_788" data-name="사각형 788" width="48" height="48" transform="translate(1357.318 1058.98)" fill="none"/>
+    <g id="그룹_629" data-name="그룹 629" transform="translate(1365.25 1062.947)">
+      <circle id="타원_82" data-name="타원 82" cx="1.785" cy="1.785" r="1.785" transform="translate(14.081 20.03)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+      <path id="패스_241" data-name="패스 241" d="M1387.277,1080.493v2.38h-4.76v-2.38a2.38,2.38,0,1,1,4.76,0Z" transform="translate(-1369.032 -1065.818)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+      <path id="패스_242" data-name="패스 242" d="M1396.554,1069.255l-12.883-5.378a3,3,0,0,0-2.3,0l-12.884,5.378a2.989,2.989,0,0,0-1.836,2.757v15.429a15.869,15.869,0,1,0,31.739,0v-15.429A2.989,2.989,0,0,0,1396.554,1069.255Zm-6.9,20.967a1.188,1.188,0,0,1-1.19,1.19h-11.9a1.188,1.188,0,0,1-1.19-1.19v-8.33a1.189,1.189,0,0,1,1.19-1.19h1.19v-2.38a4.76,4.76,0,1,1,9.519,0v2.38h1.19a1.188,1.188,0,0,1,1.19,1.19Z" transform="translate(-1366.651 -1063.648)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+      <g id="그룹_628" data-name="그룹 628" transform="translate(13.485 12.295)">
+        <circle id="타원_83" data-name="타원 83" cx="1.785" cy="1.785" r="1.785" transform="translate(0.595 7.735)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+        <path id="패스_243" data-name="패스 243" d="M1387.277,1080.493v2.38h-4.76v-2.38a2.38,2.38,0,1,1,4.76,0Z" transform="translate(-1382.517 -1078.113)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+        <path id="패스_244" data-name="패스 244" d="M1387.277,1080.493v2.38h-4.76v-2.38a2.38,2.38,0,1,1,4.76,0Z" transform="translate(-1382.517 -1078.113)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+        <circle id="타원_84" data-name="타원 84" cx="1.785" cy="1.785" r="1.785" transform="translate(0.595 7.735)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>
